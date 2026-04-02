@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Card, { CardHeader, StatusBadge } from "@/components/Card";
+import Card, { StatusBadge } from "@/components/Card";
 import type { MarketBriefing, BriefingSection, ScenarioAnalysis } from "@/lib/types";
 
 const LOADING_STEPS = [
@@ -14,6 +14,29 @@ const LOADING_STEPS = [
   "Compiling briefing...",
 ];
 
+interface StoredBriefing {
+  id: string;
+  date: string;
+  generatedAt: string;
+  model: string;
+  summary: string;
+  marketCondition: "bullish" | "bearish" | "neutral" | "volatile";
+  sections: BriefingSection[];
+  scenarios: ScenarioAnalysis[];
+  accuracy?: {
+    scoredAt: string;
+    marketConditionCorrect: boolean;
+    scenarioOutcomes: {
+      event: string;
+      predictedCondition: string;
+      actualOutcome: string;
+      accurate: boolean;
+    }[];
+    overallScore: number;
+    notes: string;
+  };
+}
+
 export default function BriefingPage() {
   const [briefing, setBriefing] = useState<MarketBriefing | null>(null);
   const [loading, setLoading] = useState(false);
@@ -21,6 +44,18 @@ export default function BriefingPage() {
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set());
   const [loadingStep, setLoadingStep] = useState(0);
   const [elapsed, setElapsed] = useState(0);
+
+  // History state
+  const [showHistory, setShowHistory] = useState(false);
+  const [historyDates, setHistoryDates] = useState<string[]>([]);
+  const [historyBriefing, setHistoryBriefing] = useState<StoredBriefing | null>(null);
+  const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [loadingHistory, setLoadingHistory] = useState(false);
+
+  // Try to load latest briefing from KV on mount
+  useEffect(() => {
+    loadLatestBriefing();
+  }, []);
 
   // Animated loading steps
   useEffect(() => {
@@ -34,6 +69,65 @@ export default function BriefingPage() {
     return () => { clearInterval(stepInterval); clearInterval(timerInterval); };
   }, [loading]);
 
+  const loadLatestBriefing = async () => {
+    try {
+      const res = await fetch("/api/briefing");
+      if (res.ok) {
+        const data: StoredBriefing = await res.json();
+        setBriefing({
+          id: data.id,
+          timestamp: data.generatedAt,
+          summary: data.summary,
+          marketCondition: data.marketCondition,
+          sections: data.sections,
+          scenarios: data.scenarios,
+        });
+        setHistoryBriefing(data);
+      }
+    } catch {
+      // KV not configured or no briefings — that's fine, user can generate on-demand
+    }
+  };
+
+  const loadHistory = async () => {
+    setLoadingHistory(true);
+    try {
+      const res = await fetch("/api/briefing?history=true");
+      if (res.ok) {
+        const data = await res.json();
+        setHistoryDates(data.dates || []);
+      }
+    } catch {
+      // KV not available
+    } finally {
+      setLoadingHistory(false);
+    }
+  };
+
+  const loadDateBriefing = async (date: string) => {
+    setSelectedDate(date);
+    setLoadingHistory(true);
+    try {
+      const res = await fetch(`/api/briefing?date=${date}`);
+      if (res.ok) {
+        const data: StoredBriefing = await res.json();
+        setHistoryBriefing(data);
+        setBriefing({
+          id: data.id,
+          timestamp: data.generatedAt,
+          summary: data.summary,
+          marketCondition: data.marketCondition,
+          sections: data.sections,
+          scenarios: data.scenarios,
+        });
+      }
+    } catch {
+      setError("Failed to load briefing for that date");
+    } finally {
+      setLoadingHistory(false);
+    }
+  };
+
   const toggleSection = (i: number) => {
     setExpandedSections((prev) => {
       const next = new Set(prev);
@@ -46,6 +140,9 @@ export default function BriefingPage() {
   const generateBriefing = async () => {
     setLoading(true);
     setError(null);
+    setShowHistory(false);
+    setHistoryBriefing(null);
+    setSelectedDate(null);
 
     try {
       const now = new Date();
@@ -98,7 +195,7 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
               content: "Generate today's morning market briefing. Search for current market data, futures, economic calendar, earnings, VIX, yields, dollar index, commodities, crypto, sector performance, breaking news, and prediction market odds for key events.",
             },
           ],
-          max_tokens: 8192,
+          max_tokens: 4096,
         }),
       });
 
@@ -130,7 +227,6 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
 
           try {
             const event = JSON.parse(payload);
-            // content_block_delta with text
             if (event.type === "content_block_delta" && event.delta?.type === "text_delta") {
               textContent += event.delta.text;
             }
@@ -176,27 +272,84 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
     }
   };
 
+  const accuracyColor = (score: number) => {
+    if (score >= 70) return "text-ios-green";
+    if (score >= 50) return "text-ios-orange";
+    return "text-ios-red";
+  };
+
   return (
-    <div className="px-4 pt-14">
+    <div className="px-4 pt-14 pb-28">
       {/* Header */}
-      <div className="mb-6">
-        <h1 className="text-2xl font-bold tracking-tight">Morning Briefing</h1>
-        <p className="text-sm text-ios-gray mt-1">
-          {new Date().toLocaleDateString("en-US", {
-            weekday: "long",
-            month: "long",
-            day: "numeric",
-          })}
-        </p>
+      <div className="mb-6 flex items-center justify-between">
+        <div>
+          <h1 className="text-2xl font-bold tracking-tight">Morning Briefing</h1>
+          <p className="text-sm text-ios-gray mt-1">
+            {selectedDate
+              ? new Date(selectedDate + "T12:00:00").toLocaleDateString("en-US", {
+                  weekday: "long",
+                  month: "long",
+                  day: "numeric",
+                })
+              : new Date().toLocaleDateString("en-US", {
+                  weekday: "long",
+                  month: "long",
+                  day: "numeric",
+                })}
+          </p>
+        </div>
+        <button
+          onClick={() => {
+            setShowHistory(!showHistory);
+            if (!showHistory && historyDates.length === 0) loadHistory();
+          }}
+          className="text-ios-blue text-sm font-medium"
+        >
+          {showHistory ? "Close" : "History"}
+        </button>
       </div>
 
-      {/* Generate Button */}
+      {/* History Panel */}
+      {showHistory && (
+        <Card className="mb-4">
+          <h3 className="text-sm font-semibold mb-3">Previous Briefings</h3>
+          {loadingHistory && historyDates.length === 0 && (
+            <p className="text-xs text-ios-gray">Loading...</p>
+          )}
+          {historyDates.length === 0 && !loadingHistory && (
+            <p className="text-xs text-ios-gray">
+              No history yet. Briefings are stored automatically when scheduled generation is active (requires Vercel KV).
+            </p>
+          )}
+          <div className="space-y-1">
+            {historyDates.map((date) => (
+              <button
+                key={date}
+                onClick={() => loadDateBriefing(date)}
+                className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
+                  selectedDate === date
+                    ? "bg-ios-blue/20 text-ios-blue"
+                    : "bg-ios-elevated text-white/80 active:bg-ios-gray-3"
+                }`}
+              >
+                {new Date(date + "T12:00:00").toLocaleDateString("en-US", {
+                  weekday: "short",
+                  month: "short",
+                  day: "numeric",
+                })}
+              </button>
+            ))}
+          </div>
+        </Card>
+      )}
+
+      {/* Generate / Refresh Button */}
       <button
         onClick={generateBriefing}
         disabled={loading}
         className="w-full bg-ios-blue text-white font-semibold py-3.5 rounded-ios mb-6 active:opacity-80 transition-opacity disabled:opacity-50"
       >
-        {loading ? "Analyzing Markets..." : "Generate Briefing"}
+        {loading ? "Analyzing Markets..." : briefing ? "Refresh Briefing" : "Generate Briefing"}
       </button>
 
       {/* Loading State */}
@@ -249,8 +402,72 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
         </Card>
       )}
 
+      {/* Accuracy Card (for stored briefings) */}
+      {historyBriefing?.accuracy && (
+        <Card className="mb-4 border border-ios-gray/20">
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-sm font-semibold">Accuracy Score</h3>
+            <span className={`text-2xl font-bold ${accuracyColor(historyBriefing.accuracy.overallScore)}`}>
+              {historyBriefing.accuracy.overallScore}
+            </span>
+          </div>
+          <div className="w-full bg-ios-gray-3 rounded-full h-2 mb-3">
+            <div
+              className={`h-2 rounded-full transition-all ${
+                historyBriefing.accuracy.overallScore >= 70
+                  ? "bg-ios-green"
+                  : historyBriefing.accuracy.overallScore >= 50
+                  ? "bg-ios-orange"
+                  : "bg-ios-red"
+              }`}
+              style={{ width: `${historyBriefing.accuracy.overallScore}%` }}
+            />
+          </div>
+          <p className="text-sm text-white/80 mb-3">{historyBriefing.accuracy.notes}</p>
+
+          {/* Market Condition */}
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-xs text-ios-gray">Market Direction:</span>
+            {historyBriefing.accuracy.marketConditionCorrect ? (
+              <span className="text-xs text-ios-green font-medium">Correct</span>
+            ) : (
+              <span className="text-xs text-ios-red font-medium">Incorrect</span>
+            )}
+          </div>
+
+          {/* Scenario Outcomes */}
+          {historyBriefing.accuracy.scenarioOutcomes.length > 0 && (
+            <div className="space-y-2">
+              <p className="text-[11px] text-ios-gray uppercase tracking-wider">Scenario Outcomes</p>
+              {historyBriefing.accuracy.scenarioOutcomes.map((outcome, i) => (
+                <div key={i} className="bg-ios-elevated rounded-lg p-2.5">
+                  <div className="flex items-center gap-2 mb-1">
+                    {outcome.accurate ? (
+                      <svg className="w-3.5 h-3.5 text-ios-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    ) : (
+                      <svg className="w-3.5 h-3.5 text-ios-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    )}
+                    <span className="text-xs font-medium">{outcome.event}</span>
+                  </div>
+                  <p className="text-[11px] text-white/60 ml-5.5">
+                    Predicted: {outcome.predictedCondition}
+                  </p>
+                  <p className="text-[11px] text-white/80 ml-5.5">
+                    Actual: {outcome.actualOutcome}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </Card>
+      )}
+
       {/* Briefing Content */}
-      {briefing && (
+      {briefing && !loading && (
         <div className="space-y-3">
           {/* Summary Card */}
           <Card>
@@ -262,6 +479,11 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
                   minute: "2-digit",
                 })}
               </span>
+              {historyBriefing?.model && (
+                <span className="text-[10px] text-ios-gray/60 ml-auto">
+                  {historyBriefing.model.includes("opus") ? "Opus" : "Sonnet"}
+                </span>
+              )}
             </div>
             <p className="text-[15px] leading-relaxed text-white/90">
               {briefing.summary}
@@ -336,7 +558,7 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
           </div>
           <h3 className="text-lg font-semibold mb-1">No Briefing Yet</h3>
           <p className="text-sm text-ios-gray max-w-[260px]">
-            Tap Generate Briefing to get today&apos;s market analysis with real-time data
+            Tap Generate Briefing for today&apos;s market analysis, or check History for previous days
           </p>
         </div>
       )}
