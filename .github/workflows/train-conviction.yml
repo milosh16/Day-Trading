@@ -37,6 +37,11 @@ jobs:
           restore-keys: |
             training-state-
 
+      - name: Configure git for mid-run commits
+        run: |
+          git config user.name "SIGNAL Training Bot"
+          git config user.email "signal-bot@users.noreply.github.com"
+
       - name: Run conviction training
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

@@ -339,6 +339,17 @@ async function main(): Promise<void> {
         log(`  Rolling avg (last 10): ${avg10.toFixed(1)}`);
         log(`  Best overall: ${state.bestScore}`);
         log("");
+
+        // Commit diary to repo every 10 trials (so progress is visible live)
+        if (process.env.CI) {
+          try {
+            const { execSync } = await import("child_process");
+            execSync('git add training/results/training-diary.md training/results/optimized-weights.json training/results/conviction-update.ts 2>/dev/null; git diff --staged --quiet || git commit -m "Training diary: ' + trialNum + '/' + TOTAL_TRIALS + ' trials complete" && git push origin claude/conviction-training', { stdio: "pipe" });
+            log(`  Diary committed to repo (trial ${trialNum})`);
+          } catch {
+            log(`  (Could not push diary update — will retry next milestone)`);
+          }
+        }
       }
 
       // Save after every trial (restart-safe)
