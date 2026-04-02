@@ -79,11 +79,12 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
         }),
       });
 
-      if (!response.ok) {
-        throw new Error(`API error: ${response.status}`);
-      }
-
       const data = await response.json();
+
+      if (!response.ok) {
+        const detail = data?.error || JSON.stringify(data);
+        throw new Error(`API ${response.status}: ${detail}`);
+      }
 
       // Extract text content from Claude's response
       let textContent = "";
