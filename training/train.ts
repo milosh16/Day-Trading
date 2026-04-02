@@ -68,6 +68,19 @@ function saveState(state: TrainingState): void {
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
 }
 
+// Graceful shutdown: save state on SIGTERM/SIGINT (GitHub Actions sends SIGTERM on timeout)
+let currentState: TrainingState | null = null;
+function handleShutdown(signal: string): void {
+  console.log(`\nReceived ${signal} — saving state and exiting gracefully...`);
+  if (currentState) {
+    saveState(currentState);
+    console.log(`State saved at trial ${currentState.currentTrial}. Will resume on next run.`);
+  }
+  process.exit(0);
+}
+process.on("SIGTERM", () => handleShutdown("SIGTERM"));
+process.on("SIGINT", () => handleShutdown("SIGINT"));
+
 function weightsToPrompt(weights: ConvictionWeights): string {
   return Object.entries(weights)
     .map(([key, val]) => `- ${key}: ${(val * 100).toFixed(1)}%`)
@@ -260,6 +273,7 @@ async function main(): Promise<void> {
 
   // Load or initialize state
   const state = loadState();
+  currentState = state; // expose to shutdown handler
   log(`Resuming from trial ${state.currentTrial}/${state.totalTrials}`);
   log(`Best score so far: ${state.bestScore}`);
 
