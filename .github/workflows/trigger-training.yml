@@ -1,0 +1,22 @@
+name: Trigger Training
+
+on:
+  push:
+    branches:
+      - claude/conviction-training
+    paths:
+      - '.github/workflows/trigger-training.yml'
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger conviction training
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run train-conviction.yml \
+            --repo milosh16/Day-Trading \
+            --ref claude/conviction-training \
+            -f trials=500
+          echo "Training triggered!"
