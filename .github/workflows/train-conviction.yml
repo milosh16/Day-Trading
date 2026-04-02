@@ -1,6 +1,12 @@
 name: Conviction Training
 
 on:
+  push:
+    branches:
+      - claude/conviction-training
+    paths:
+      - '.github/workflows/train-conviction.yml'
+      - 'training/**'
   workflow_dispatch:
     inputs:
       trials:
