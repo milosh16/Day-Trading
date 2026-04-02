@@ -16,6 +16,9 @@
 
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import { callClaude, extractJson } from "./lib/api.ts";
 import { scoreRecommendations, calculateScores, analyzeDimensions } from "./lib/scorer.ts";
 import { optimizeWeights, optimizeThreshold, summarizeChanges, DEFAULT_WEIGHTS } from "./lib/optimizer.ts";
@@ -25,8 +28,8 @@ import type { TradeRecommendation, TrialResult, TrainingState, ConvictionWeights
 
 // ---- Configuration ----
 const TOTAL_TRIALS = 500;
-const STATE_FILE = path.join(import.meta.dirname!, "results", "training-state.json");
-const LOG_FILE = path.join(import.meta.dirname!, "results", "training-log.txt");
+const STATE_FILE = path.join(__dirname, "results", "training-state.json");
+const LOG_FILE = path.join(__dirname, "results", "training-log.txt");
 // Optimize weights every N trials
 const OPTIMIZE_EVERY = 10;
 // Date range for historical testing
@@ -377,7 +380,7 @@ function printSummary(state: TrainingState): void {
 }
 
 function exportOptimizedWeights(state: TrainingState): void {
-  const exportPath = path.join(import.meta.dirname!, "results", "optimized-weights.json");
+  const exportPath = path.join(__dirname, "results", "optimized-weights.json");
   const data = {
     exportedAt: new Date().toISOString(),
     trialsCompleted: state.currentTrial,
@@ -391,7 +394,7 @@ function exportOptimizedWeights(state: TrainingState): void {
   log(`\nOptimized weights exported to: ${exportPath}`);
 
   // Also generate the TypeScript code to update conviction.ts
-  const tsPath = path.join(import.meta.dirname!, "results", "conviction-update.ts");
+  const tsPath = path.join(__dirname, "results", "conviction-update.ts");
   const tsCode = `// Auto-generated from training run (${state.currentTrial} trials)
 // Best score: ${state.bestScore}/100
 // Generated at: ${new Date().toISOString()}

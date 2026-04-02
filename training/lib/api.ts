@@ -5,9 +5,18 @@
 // Designed to run for hours without hitting API limits.
 // ============================================================
 
-const API_URL = "https://api.anthropic.com/v1/messages";
+// Use direct Anthropic API if ANTHROPIC_API_KEY is set locally,
+// otherwise go through the Vercel-deployed proxy
+const DIRECT_API = "https://api.anthropic.com/v1/messages";
+const PROXY_API = process.env.SIGNAL_APP_URL
+  ? `${process.env.SIGNAL_APP_URL}/api/anthropic`
+  : "https://day-trading-sigma.vercel.app/api/anthropic";
 const API_VERSION = "2023-06-01";
 const MODEL = "claude-sonnet-4-6";
+
+function useDirectApi(): boolean {
+  return !!process.env.ANTHROPIC_API_KEY;
+}
 
 // Rate limiting: minimum gap between requests
 const MIN_REQUEST_GAP_MS = 6000; // 6 seconds between requests (10 RPM safe)
@@ -43,8 +52,9 @@ export async function callClaude(opts: {
   maxTokens?: number;
   useWebSearch?: boolean;
 }): Promise<ApiResponse> {
+  const direct = useDirectApi();
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) throw new Error("ANTHROPIC_API_KEY not set");
+  if (!direct && !PROXY_API) throw new Error("No API key and no proxy URL configured");
 
   const { system, messages, maxTokens = 4096, useWebSearch = true } = opts;
 
@@ -54,25 +64,39 @@ export async function callClaude(opts: {
     ? [{ type: "web_search_20260209", name: "web_search" }]
     : [];
 
-  const body: Record<string, unknown> = {
-    model: MODEL,
-    max_tokens: maxTokens,
-    system,
-    messages,
-    stream: true,
-    ...(tools.length > 0 ? { tools } : {}),
+  // Build request body
+  const body: Record<string, unknown> = direct
+    ? {
+        model: MODEL,
+        max_tokens: maxTokens,
+        system,
+        messages,
+        stream: true,
+        ...(tools.length > 0 ? { tools } : {}),
+      }
+    : {
+        // Proxy mode — proxy adds model, tools, and streams
+        system,
+        messages,
+        max_tokens: maxTokens,
+        ...(tools.length > 0 ? { tools } : {}),
+      };
+
+  const url = direct ? DIRECT_API : PROXY_API;
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
   };
+  if (direct) {
+    headers["x-api-key"] = apiKey!;
+    headers["anthropic-version"] = API_VERSION;
+  }
 
   const maxRetries = 4;
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
     try {
-      const response = await fetch(API_URL, {
+      const response = await fetch(url, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-api-key": apiKey,
-          "anthropic-version": API_VERSION,
-        },
+        headers,
         body: JSON.stringify(body),
       });
 
