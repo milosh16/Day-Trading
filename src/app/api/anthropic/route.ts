@@ -30,11 +30,11 @@ export async function POST(req: NextRequest) {
 
     if (system) requestBody.system = system;
 
-    // Always include web_search tool
+    // Always include web_search tool for real-time market data
     const allTools = [
       {
         type: "web_search_20250305",
-        max_uses: 10,
+        name: "web_search",
       },
       ...(tools || []),
     ];
