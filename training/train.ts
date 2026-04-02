@@ -24,6 +24,7 @@ import { scoreRecommendations, calculateScores, analyzeDimensions } from "./lib/
 import { optimizeWeights, optimizeThreshold, summarizeChanges, DEFAULT_WEIGHTS } from "./lib/optimizer.ts";
 import { getRandomTradingDays } from "./lib/dates.ts";
 import { verifyRecommendations } from "./lib/anti-leakage.ts";
+import { writeDiaryHeader, appendTrialEntry, appendMilestoneSummary } from "./lib/diary.ts";
 import type { TradeRecommendation, TrialResult, TrainingState, ConvictionWeights } from "./lib/types.ts";
 
 // ---- Configuration ----
@@ -286,6 +287,11 @@ async function main(): Promise<void> {
   log(`Selected ${dates.length} dates for testing`);
   log(`Current weights:\n${weightsToPrompt(state.weights)}`);
 
+  // Initialize diary if starting fresh
+  if (state.currentTrial === 0) {
+    writeDiaryHeader(state);
+  }
+
   // Run trials
   for (let i = 0; i < dates.length; i++) {
     const trialNum = state.currentTrial + 1;
@@ -298,6 +304,9 @@ async function main(): Promise<void> {
       state.results.push(result);
       state.currentTrial = trialNum;
       state.totalTokensUsed += result.totalTokensUsed;
+
+      // Write diary entry for this day
+      appendTrialEntry(result, trialNum, TOTAL_TRIALS);
 
       if (result.scores.totalScore > state.bestScore) {
         state.bestScore = result.scores.totalScore;
@@ -320,6 +329,9 @@ async function main(): Promise<void> {
           weights: { ...state.weights },
           score: result.scores.totalScore,
         });
+
+        // Write milestone summary to diary
+        appendMilestoneSummary(trialNum, state, oldWeights, state.weights);
 
         // Print rolling stats
         const last10 = state.results.slice(-10);

@@ -1,5 +1,7 @@
-# Training results (large files, generated)
-results/*.json
-results/*.txt
-results/*.ts
+# Training results (large state files, generated)
+results/training-state.json
+results/training-log.txt
+!results/training-diary.md
+!results/optimized-weights.json
+!results/conviction-update.ts
 !results/.gitkeep
