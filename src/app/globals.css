@@ -104,3 +104,12 @@ body {
 .spinner {
   animation: spin 1s linear infinite;
 }
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.5); }
+}
+
+.pulse {
+  animation: pulse-dot 1.5s ease-in-out infinite;
+}

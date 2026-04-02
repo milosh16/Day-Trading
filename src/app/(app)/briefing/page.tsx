@@ -1,15 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useBriefingStore } from "@/lib/store";
 import { useSettingsStore } from "@/lib/store";
 import Card, { CardHeader, StatusBadge } from "@/components/Card";
 import type { MarketBriefing, BriefingSection, ScenarioAnalysis } from "@/lib/types";
 import { v4 as uuid } from "uuid";
 
+const LOADING_STEPS = [
+  "Connecting to Claude Opus...",
+  "Searching market futures...",
+  "Scanning economic calendar...",
+  "Analyzing VIX and yields...",
+  "Checking sector performance...",
+  "Reviewing breaking news...",
+  "Compiling briefing...",
+];
+
 export default function BriefingPage() {
   const { briefing, loading, error, setBriefing, setLoading, setError } = useBriefingStore();
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set());
+  const [loadingStep, setLoadingStep] = useState(0);
+  const [elapsed, setElapsed] = useState(0);
+
+  // Animated loading steps
+  useEffect(() => {
+    if (!loading) { setLoadingStep(0); setElapsed(0); return; }
+    const stepInterval = setInterval(() => {
+      setLoadingStep((s) => (s < LOADING_STEPS.length - 1 ? s + 1 : s));
+    }, 8000);
+    const timerInterval = setInterval(() => {
+      setElapsed((e) => e + 1);
+    }, 1000);
+    return () => { clearInterval(stepInterval); clearInterval(timerInterval); };
+  }, [loading]);
 
   const toggleSection = (i: number) => {
     setExpandedSections((prev) => {
@@ -149,17 +173,51 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
         disabled={loading}
         className="w-full bg-ios-blue text-white font-semibold py-3.5 rounded-ios mb-6 active:opacity-80 transition-opacity disabled:opacity-50"
       >
-        {loading ? (
-          <span className="flex items-center justify-center gap-2">
-            <svg className="spinner w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" strokeLinecap="round" />
-            </svg>
-            Analyzing Markets...
-          </span>
-        ) : (
-          "Generate Briefing"
-        )}
+        {loading ? "Analyzing Markets..." : "Generate Briefing"}
       </button>
+
+      {/* Loading State */}
+      {loading && (
+        <Card className="mb-4">
+          <div className="flex flex-col items-center py-4">
+            <div className="relative w-16 h-16 mb-4">
+              <svg className="spinner w-16 h-16" viewBox="0 0 50 50">
+                <circle cx="25" cy="25" r="20" fill="none" stroke="rgba(59,130,246,0.2)" strokeWidth="4" />
+                <circle cx="25" cy="25" r="20" fill="none" stroke="#3B82F6" strokeWidth="4"
+                  strokeDasharray="31.4 94.2" strokeLinecap="round" />
+              </svg>
+            </div>
+            <p className="text-[15px] font-medium text-white mb-1">
+              {LOADING_STEPS[loadingStep]}
+            </p>
+            <p className="text-xs text-ios-gray">
+              {elapsed}s elapsed — Opus typically takes 30-60s
+            </p>
+            <div className="w-full mt-4 space-y-1.5">
+              {LOADING_STEPS.map((step, i) => (
+                <div key={i} className="flex items-center gap-2">
+                  {i < loadingStep ? (
+                    <svg className="w-4 h-4 text-ios-green flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  ) : i === loadingStep ? (
+                    <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
+                      <div className="w-2 h-2 bg-ios-blue rounded-full pulse" />
+                    </div>
+                  ) : (
+                    <div className="w-4 h-4 flex-shrink-0 flex items-center justify-center">
+                      <div className="w-1.5 h-1.5 bg-ios-gray/40 rounded-full" />
+                    </div>
+                  )}
+                  <span className={`text-xs ${i < loadingStep ? "text-ios-green" : i === loadingStep ? "text-white" : "text-ios-gray/50"}`}>
+                    {step}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Card>
+      )}
 
       {/* Error */}
       {error && (
