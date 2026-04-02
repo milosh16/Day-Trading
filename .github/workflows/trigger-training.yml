@@ -14,6 +14,10 @@ on:
         required: false
         default: '500'
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   train:
     runs-on: ubuntu-latest
@@ -59,12 +63,70 @@ jobs:
           restore-keys: |
             conviction-training-
 
+      - name: Verify API key
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          mkdir -p training/results
+          echo "=== API Diagnostics ===" > training/results/diagnostic.log
+          echo "Timestamp: $(date -u)" >> training/results/diagnostic.log
+          echo "Node: $(node -v)" >> training/results/diagnostic.log
+          echo "API key set: $([ -n "$ANTHROPIC_API_KEY" ] && echo 'yes' || echo 'NO - THIS IS THE PROBLEM')" >> training/results/diagnostic.log
+          echo "API key length: ${#ANTHROPIC_API_KEY}" >> training/results/diagnostic.log
+          echo "API key prefix: ${ANTHROPIC_API_KEY:0:7}..." >> training/results/diagnostic.log
+
+          # Quick API test
+          echo "" >> training/results/diagnostic.log
+          echo "=== API Test ===" >> training/results/diagnostic.log
+          RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
+            https://api.anthropic.com/v1/messages \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -d '{
+              "model": "claude-sonnet-4-6",
+              "max_tokens": 32,
+              "messages": [{"role": "user", "content": "Say OK"}]
+            }' 2>&1)
+
+          HTTP_STATUS=$(echo "$RESPONSE" | tail -1 | sed 's/HTTP_STATUS://')
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          echo "HTTP Status: $HTTP_STATUS" >> training/results/diagnostic.log
+          echo "Response (first 500 chars): ${BODY:0:500}" >> training/results/diagnostic.log
+
+          # Test web search tool
+          echo "" >> training/results/diagnostic.log
+          echo "=== Web Search Tool Test ===" >> training/results/diagnostic.log
+          WS_RESPONSE=$(curl -s -w "\nHTTP_STATUS:%{http_code}" \
+            https://api.anthropic.com/v1/messages \
+            -H "Content-Type: application/json" \
+            -H "x-api-key: $ANTHROPIC_API_KEY" \
+            -H "anthropic-version: 2023-06-01" \
+            -d '{
+              "model": "claude-sonnet-4-6",
+              "max_tokens": 256,
+              "stream": true,
+              "messages": [{"role": "user", "content": "What is AAPL stock price today?"}],
+              "tools": [{"type": "web_search_20260209", "name": "web_search"}]
+            }' 2>&1)
+
+          WS_STATUS=$(echo "$WS_RESPONSE" | tail -1 | sed 's/HTTP_STATUS://')
+          WS_BODY=$(echo "$WS_RESPONSE" | sed '$d')
+          echo "HTTP Status: $WS_STATUS" >> training/results/diagnostic.log
+          echo "Response (first 500 chars): ${WS_BODY:0:500}" >> training/results/diagnostic.log
+
+          cat training/results/diagnostic.log
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "::error::API test failed with status $HTTP_STATUS"
+          fi
+
       - name: Run conviction training
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TOTAL_TRIALS: ${{ github.event.inputs.trials || '500' }}
           CI: 'true'
-        run: npx tsx training/train.ts
+        run: npx tsx training/train.ts 2>&1 | tee -a training/results/training-log.txt
         timeout-minutes: 350
 
       - name: Save state to cache
@@ -116,6 +178,8 @@ jobs:
         if: always()
         run: |
           echo "=== Training Summary ==="
+          cat training/results/diagnostic.log 2>/dev/null || echo "No diagnostic log"
+          echo ""
           if [ -f training/results/training-state.json ]; then
             node -e "
               const s = require('./training/results/training-state.json');
@@ -124,4 +188,6 @@ jobs:
               console.log('Tokens:', s.totalTokensUsed?.toLocaleString());
             "
           fi
-          tail -30 training/results/training-log.txt 2>/dev/null || echo "No log"
+          echo ""
+          echo "=== Last 50 lines of training log ==="
+          tail -50 training/results/training-log.txt 2>/dev/null || echo "No log"
