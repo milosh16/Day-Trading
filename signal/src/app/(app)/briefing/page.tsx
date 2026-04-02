@@ -1,0 +1,263 @@
+"use client";
+
+import { useState } from "react";
+import { useBriefingStore } from "@/lib/store";
+import { useSettingsStore } from "@/lib/store";
+import Card, { CardHeader, StatusBadge } from "@/components/Card";
+import type { MarketBriefing, BriefingSection, ScenarioAnalysis } from "@/lib/types";
+import { v4 as uuid } from "uuid";
+
+export default function BriefingPage() {
+  const { briefing, loading, error, setBriefing, setLoading, setError } = useBriefingStore();
+  const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set());
+
+  const toggleSection = (i: number) => {
+    setExpandedSections((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
+  };
+
+  const generateBriefing = async () => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      const now = new Date();
+      const dateStr = now.toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      });
+
+      const response = await fetch("/api/anthropic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateStr}. Generate a comprehensive morning market briefing by searching for current market data. Be factual and concise. Do not use emojis.
+
+You MUST use the web_search tool to find current, real-time market data. Search for multiple topics to build a complete picture.
+
+Return your briefing as a JSON object with this exact structure:
+{
+  "summary": "2-3 sentence market overview",
+  "marketCondition": "bullish" | "bearish" | "neutral" | "volatile",
+  "sections": [
+    { "title": "Section Title", "content": "Detailed content...", "importance": "high" | "medium" | "low" }
+  ],
+  "scenarios": [
+    {
+      "event": "Event name",
+      "scenarios": [
+        { "condition": "If X happens...", "implication": "Then Y...", "trade": "Consider Z..." }
+      ]
+    }
+  ]
+}
+
+Sections to include:
+1. Index Futures & Overnight Moves (importance: high)
+2. Economic Calendar & Earnings (importance: high if major events, medium otherwise)
+3. VIX / Yields / Dollar / Commodities / Crypto (importance: medium)
+4. Sector Sentiment (importance: medium)
+5. Breaking News & Key Developments (importance: high if significant)
+6. Prediction Market Signals (importance: medium)
+
+For EVERY high-importance event today, provide scenario analysis with at least 2 scenarios.
+
+IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}</json>`,
+          messages: [
+            {
+              role: "user",
+              content: "Generate today's morning market briefing. Search for current market data, futures, economic calendar, earnings, VIX, yields, dollar index, commodities, crypto, sector performance, breaking news, and prediction market odds for key events.",
+            },
+          ],
+          max_tokens: 8192,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      // Extract text content from Claude's response
+      let textContent = "";
+      if (data.content) {
+        for (const block of data.content) {
+          if (block.type === "text") {
+            textContent += block.text;
+          }
+        }
+      }
+
+      // Parse JSON from response
+      const jsonMatch = textContent.match(/<json>([\s\S]*?)<\/json>/);
+      let briefingData;
+      if (jsonMatch) {
+        briefingData = JSON.parse(jsonMatch[1]);
+      } else {
+        // Try to find JSON in the response
+        const jsonStart = textContent.indexOf("{");
+        const jsonEnd = textContent.lastIndexOf("}");
+        if (jsonStart !== -1 && jsonEnd !== -1) {
+          briefingData = JSON.parse(textContent.slice(jsonStart, jsonEnd + 1));
+        } else {
+          throw new Error("Could not parse briefing response");
+        }
+      }
+
+      const marketBriefing: MarketBriefing = {
+        id: uuid(),
+        timestamp: new Date().toISOString(),
+        summary: briefingData.summary || "Market briefing generated.",
+        sections: briefingData.sections || [],
+        scenarios: briefingData.scenarios || [],
+        marketCondition: briefingData.marketCondition || "neutral",
+      };
+
+      setBriefing(marketBriefing);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to generate briefing");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="px-4 pt-14">
+      {/* Header */}
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold tracking-tight">Morning Briefing</h1>
+        <p className="text-sm text-ios-gray mt-1">
+          {new Date().toLocaleDateString("en-US", {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+          })}
+        </p>
+      </div>
+
+      {/* Generate Button */}
+      <button
+        onClick={generateBriefing}
+        disabled={loading}
+        className="w-full bg-ios-blue text-white font-semibold py-3.5 rounded-ios mb-6 active:opacity-80 transition-opacity disabled:opacity-50"
+      >
+        {loading ? (
+          <span className="flex items-center justify-center gap-2">
+            <svg className="spinner w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" strokeLinecap="round" />
+            </svg>
+            Analyzing Markets...
+          </span>
+        ) : (
+          "Generate Briefing"
+        )}
+      </button>
+
+      {/* Error */}
+      {error && (
+        <Card className="mb-4 border border-ios-red/30">
+          <p className="text-ios-red text-sm">{error}</p>
+        </Card>
+      )}
+
+      {/* Briefing Content */}
+      {briefing && (
+        <div className="space-y-3">
+          {/* Summary Card */}
+          <Card>
+            <div className="flex items-center gap-2 mb-3">
+              <StatusBadge status={briefing.marketCondition} size="md" />
+              <span className="text-xs text-ios-gray">
+                {new Date(briefing.timestamp).toLocaleTimeString("en-US", {
+                  hour: "numeric",
+                  minute: "2-digit",
+                })}
+              </span>
+            </div>
+            <p className="text-[15px] leading-relaxed text-white/90">
+              {briefing.summary}
+            </p>
+          </Card>
+
+          {/* Sections */}
+          {briefing.sections.map((section: BriefingSection, i: number) => (
+            <Card key={i} onClick={() => toggleSection(i)} className="cursor-pointer">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <StatusBadge status={section.importance} />
+                  <h3 className="text-[15px] font-semibold">{section.title}</h3>
+                </div>
+                <svg
+                  className={`w-4 h-4 text-ios-gray transition-transform ${
+                    expandedSections.has(i) ? "rotate-180" : ""
+                  }`}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                >
+                  <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </div>
+              {expandedSections.has(i) && (
+                <p className="mt-3 text-sm text-white/80 leading-relaxed whitespace-pre-line">
+                  {section.content}
+                </p>
+              )}
+            </Card>
+          ))}
+
+          {/* Scenario Analysis */}
+          {briefing.scenarios.length > 0 && (
+            <div className="mt-4">
+              <h2 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3 px-1">
+                Scenario Analysis
+              </h2>
+              {briefing.scenarios.map((scenario: ScenarioAnalysis, i: number) => (
+                <Card key={i} className="mb-3">
+                  <h3 className="text-[15px] font-semibold mb-3">{scenario.event}</h3>
+                  <div className="space-y-3">
+                    {scenario.scenarios.map((s, j) => (
+                      <div
+                        key={j}
+                        className="bg-ios-elevated rounded-lg p-3"
+                      >
+                        <p className="text-sm font-medium text-ios-blue mb-1">
+                          {s.condition}
+                        </p>
+                        <p className="text-sm text-white/80 mb-1">{s.implication}</p>
+                        <p className="text-sm text-ios-green">{s.trade}</p>
+                      </div>
+                    ))}
+                  </div>
+                </Card>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Empty State */}
+      {!briefing && !loading && !error && (
+        <div className="flex flex-col items-center justify-center pt-20 text-center">
+          <div className="w-16 h-16 rounded-full bg-ios-card flex items-center justify-center mb-4">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-ios-gray">
+              <path d="M4 6h16M4 10h16M4 14h10M4 18h8" strokeLinecap="round" />
+            </svg>
+          </div>
+          <h3 className="text-lg font-semibold mb-1">No Briefing Yet</h3>
+          <p className="text-sm text-ios-gray max-w-[260px]">
+            Tap Generate Briefing to get today&apos;s market analysis with real-time data
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
