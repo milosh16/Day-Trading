@@ -1,0 +1,84 @@
+name: Conviction Training
+
+on:
+  workflow_dispatch:
+    inputs:
+      trials:
+        description: 'Number of trials to run'
+        required: false
+        default: '500'
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360  # 6 hours max
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: claude/conviction-training
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download previous training state
+        uses: actions/cache/restore@v4
+        with:
+          path: training/results/
+          key: training-state-${{ github.run_number }}
+          restore-keys: |
+            training-state-
+
+      - name: Run conviction training
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOTAL_TRIALS: ${{ github.event.inputs.trials || '500' }}
+        run: |
+          echo "Starting conviction training ($TOTAL_TRIALS trials)..."
+          npx tsx training/train.ts
+        timeout-minutes: 350
+
+      - name: Save training state
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: training/results/
+          key: training-state-${{ github.run_number }}
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: training-results-${{ github.run_number }}
+          path: |
+            training/results/training-state.json
+            training/results/training-log.txt
+            training/results/optimized-weights.json
+            training/results/conviction-update.ts
+          retention-days: 90
+
+      - name: Print summary
+        if: always()
+        run: |
+          echo "=== Training Summary ==="
+          if [ -f training/results/training-state.json ]; then
+            node -e "
+              const s = require('./training/results/training-state.json');
+              console.log('Trials completed:', s.currentTrial);
+              console.log('Best score:', s.bestScore);
+              console.log('Total tokens:', s.totalTokensUsed?.toLocaleString());
+              console.log('Best weights:', JSON.stringify(s.bestWeights, null, 2));
+            "
+          else
+            echo "No training state found"
+          fi
+          echo ""
+          echo "=== Last 30 log lines ==="
+          tail -30 training/results/training-log.txt 2>/dev/null || echo "No log"

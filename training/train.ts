@@ -27,7 +27,7 @@ import { verifyRecommendations } from "./lib/anti-leakage.ts";
 import type { TradeRecommendation, TrialResult, TrainingState, ConvictionWeights } from "./lib/types.ts";
 
 // ---- Configuration ----
-const TOTAL_TRIALS = 500;
+const TOTAL_TRIALS = parseInt(process.env.TOTAL_TRIALS || "500", 10);
 const STATE_FILE = path.join(__dirname, "results", "training-state.json");
 const LOG_FILE = path.join(__dirname, "results", "training-log.txt");
 // Optimize weights every N trials
