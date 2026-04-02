@@ -268,8 +268,16 @@ async function runTrial(
 }
 
 async function main(): Promise<void> {
+  // Ensure results directory exists
+  const resultsDir = path.join(__dirname, "results");
+  if (!fs.existsSync(resultsDir)) {
+    fs.mkdirSync(resultsDir, { recursive: true });
+  }
+
   log("=== SIGNAL Conviction Training Engine ===");
   log(`Target: ${TOTAL_TRIALS} trials`);
+  log(`API mode: ${process.env.ANTHROPIC_API_KEY ? "direct" : "proxy"}`);
+  log(`Node: ${process.version}`);
 
   // Load or initialize state
   const state = loadState();
@@ -354,23 +362,34 @@ async function main(): Promise<void> {
         log(`  Best overall: ${state.bestScore}`);
         log("");
 
-        // Commit diary to repo every 10 trials (so progress is visible live)
-        if (process.env.CI) {
-          try {
-            const { execSync } = await import("child_process");
-            execSync('git add training/results/training-diary.md training/results/optimized-weights.json training/results/conviction-update.ts 2>/dev/null; git diff --staged --quiet || git commit -m "Training diary: ' + trialNum + '/' + TOTAL_TRIALS + ' trials complete" && git push origin claude/conviction-training', { stdio: "pipe" });
-            log(`  Diary committed to repo (trial ${trialNum})`);
-          } catch {
-            log(`  (Could not push diary update — will retry next milestone)`);
-          }
-        }
+        // (Diary commit handled below in the unified commit block)
       }
 
       // Save after every trial (restart-safe)
       saveState(state);
 
+      // Commit to repo: first trial (to verify it works), then every 10 trials
+      const shouldCommit = trialNum === 1 || trialNum % OPTIMIZE_EVERY === 0;
+      if (shouldCommit && process.env.CI) {
+        try {
+          const { execSync } = await import("child_process");
+          execSync(
+            'git pull origin claude/conviction-training --rebase 2>/dev/null || true; ' +
+            'git add training/results/ 2>/dev/null; ' +
+            'git diff --staged --quiet || ' +
+            '(git commit -m "Training progress: ' + trialNum + '/' + TOTAL_TRIALS + ' trials complete" && ' +
+            'git push origin claude/conviction-training)',
+            { stdio: "pipe", timeout: 60000 }
+          );
+          log(`  Results committed to repo (trial ${trialNum})`);
+        } catch {
+          log(`  (Could not push update — will retry next milestone)`);
+        }
+      }
+
     } catch (error) {
-      log(`  ERROR on trial ${trialNum}: ${error instanceof Error ? error.message : error}`);
+      const msg = error instanceof Error ? error.message : String(error);
+      log(`  ERROR on trial ${trialNum}: ${msg}`);
       // Save state even on error so we can resume
       saveState(state);
       // Wait a bit before continuing (might be a transient API issue)
