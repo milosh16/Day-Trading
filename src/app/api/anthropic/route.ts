@@ -34,7 +34,6 @@ export async function POST(req: NextRequest) {
     const allTools = [
       {
         type: "web_search_20250305",
-        name: "web_search",
         max_uses: 10,
       },
       ...(tools || []),
