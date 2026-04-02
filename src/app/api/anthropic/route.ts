@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     const { messages, system, tools, max_tokens = 4096 } = body;
 
     const requestBody: Record<string, unknown> = {
-      model: "claude-sonnet-4-6",
+      model: "claude-opus-4-6",
       max_tokens,
       messages,
     };
