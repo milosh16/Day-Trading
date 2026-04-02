@@ -46,15 +46,17 @@ export default function BriefingPage() {
   const [elapsed, setElapsed] = useState(0);
 
   // History state
+  const [kvReady, setKvReady] = useState(false);
   const [showHistory, setShowHistory] = useState(false);
   const [historyDates, setHistoryDates] = useState<string[]>([]);
   const [historyBriefing, setHistoryBriefing] = useState<StoredBriefing | null>(null);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [loadingHistory, setLoadingHistory] = useState(false);
 
-  // Try to load latest briefing from KV on mount
+  // Try to load latest briefing from KV on mount (once)
   useEffect(() => {
     loadLatestBriefing();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Animated loading steps
@@ -72,8 +74,10 @@ export default function BriefingPage() {
   const loadLatestBriefing = async () => {
     try {
       const res = await fetch("/api/briefing");
-      if (res.ok) {
-        const data: StoredBriefing = await res.json();
+      const data = await res.json();
+      if (!data.available) return; // KV not configured
+      setKvReady(true);
+      if (data.id) {
         setBriefing({
           id: data.id,
           timestamp: data.generatedAt,
@@ -82,10 +86,10 @@ export default function BriefingPage() {
           sections: data.sections,
           scenarios: data.scenarios,
         });
-        setHistoryBriefing(data);
+        setHistoryBriefing(data as StoredBriefing);
       }
     } catch {
-      // KV not configured or no briefings — that's fine, user can generate on-demand
+      // KV not configured or network error — that's fine
     }
   };
 
@@ -298,15 +302,17 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
                 })}
           </p>
         </div>
-        <button
-          onClick={() => {
-            setShowHistory(!showHistory);
-            if (!showHistory && historyDates.length === 0) loadHistory();
-          }}
-          className="text-ios-blue text-sm font-medium"
-        >
-          {showHistory ? "Close" : "History"}
-        </button>
+        {kvReady && (
+          <button
+            onClick={() => {
+              setShowHistory(!showHistory);
+              if (!showHistory && historyDates.length === 0) loadHistory();
+            }}
+            className="text-ios-blue text-sm font-medium"
+          >
+            {showHistory ? "Close" : "History"}
+          </button>
+        )}
       </div>
 
       {/* History Panel */}

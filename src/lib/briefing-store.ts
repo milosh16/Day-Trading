@@ -5,8 +5,6 @@
 // Falls back gracefully when KV is not configured.
 // ============================================================
 
-import { kv } from "@vercel/kv";
-
 export interface StoredBriefing {
   id: string;
   date: string; // YYYY-MM-DD
@@ -27,7 +25,6 @@ export interface StoredBriefing {
       trade: string;
     }[];
   }[];
-  // Accuracy tracking (filled in after market close)
   accuracy?: {
     scoredAt: string;
     marketConditionCorrect: boolean;
@@ -44,15 +41,26 @@ export interface StoredBriefing {
 
 const LATEST_KEY = "briefing:latest";
 const HISTORY_PREFIX = "briefing:date:";
-const HISTORY_INDEX_KEY = "briefing:dates"; // sorted set of dates
+const HISTORY_INDEX_KEY = "briefing:dates";
 
-function kvAvailable(): boolean {
+export function kvAvailable(): boolean {
   return !!(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
 }
 
-// Store a briefing
+// Lazy-load @vercel/kv only when actually needed
+async function getKv() {
+  if (!kvAvailable()) return null;
+  try {
+    const { kv } = await import("@vercel/kv");
+    return kv;
+  } catch {
+    return null;
+  }
+}
+
 export async function storeBriefing(briefing: StoredBriefing): Promise<boolean> {
-  if (!kvAvailable()) return false;
+  const kv = await getKv();
+  if (!kv) return false;
 
   try {
     await Promise.all([
@@ -67,9 +75,9 @@ export async function storeBriefing(briefing: StoredBriefing): Promise<boolean> 
   }
 }
 
-// Get the latest briefing
 export async function getLatestBriefing(): Promise<StoredBriefing | null> {
-  if (!kvAvailable()) return null;
+  const kv = await getKv();
+  if (!kv) return null;
 
   try {
     return await kv.get<StoredBriefing>(LATEST_KEY);
@@ -78,9 +86,9 @@ export async function getLatestBriefing(): Promise<StoredBriefing | null> {
   }
 }
 
-// Get briefing for a specific date
 export async function getBriefingByDate(date: string): Promise<StoredBriefing | null> {
-  if (!kvAvailable()) return null;
+  const kv = await getKv();
+  if (!kv) return null;
 
   try {
     return await kv.get<StoredBriefing>(`${HISTORY_PREFIX}${date}`);
@@ -89,9 +97,9 @@ export async function getBriefingByDate(date: string): Promise<StoredBriefing | 
   }
 }
 
-// Get list of all briefing dates (most recent first)
 export async function getBriefingDates(limit = 30): Promise<string[]> {
-  if (!kvAvailable()) return [];
+  const kv = await getKv();
+  if (!kv) return [];
 
   try {
     const dates = await kv.zrange(HISTORY_INDEX_KEY, 0, limit - 1, { rev: true });
@@ -101,12 +109,12 @@ export async function getBriefingDates(limit = 30): Promise<string[]> {
   }
 }
 
-// Store accuracy score for a date
 export async function storeAccuracy(
   date: string,
   accuracy: StoredBriefing["accuracy"]
 ): Promise<boolean> {
-  if (!kvAvailable()) return false;
+  const kv = await getKv();
+  if (!kv) return false;
 
   try {
     const briefing = await getBriefingByDate(date);
@@ -115,7 +123,6 @@ export async function storeAccuracy(
     briefing.accuracy = accuracy;
     await kv.set(`${HISTORY_PREFIX}${date}`, briefing);
 
-    // Also update latest if it's today's
     const latest = await getLatestBriefing();
     if (latest && latest.date === date) {
       latest.accuracy = accuracy;

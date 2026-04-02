@@ -11,38 +11,40 @@ import {
   getLatestBriefing,
   getBriefingByDate,
   getBriefingDates,
+  kvAvailable,
 } from "@/lib/briefing-store";
 
 export async function GET(req: NextRequest) {
+  if (!kvAvailable()) {
+    return NextResponse.json({ available: false, error: "KV not configured" }, { status: 200 });
+  }
+
   const { searchParams } = new URL(req.url);
   const date = searchParams.get("date");
   const history = searchParams.get("history");
 
   try {
-    // Return list of briefing dates
     if (history === "true") {
       const dates = await getBriefingDates(30);
-      return NextResponse.json({ dates });
+      return NextResponse.json({ available: true, dates });
     }
 
-    // Return specific date's briefing
     if (date) {
       const briefing = await getBriefingByDate(date);
       if (!briefing) {
-        return NextResponse.json({ error: "No briefing for that date" }, { status: 404 });
+        return NextResponse.json({ available: true, error: "No briefing for that date" }, { status: 404 });
       }
-      return NextResponse.json(briefing);
+      return NextResponse.json({ available: true, ...briefing });
     }
 
-    // Return latest briefing
     const latest = await getLatestBriefing();
     if (!latest) {
-      return NextResponse.json({ error: "No briefings stored yet" }, { status: 404 });
+      return NextResponse.json({ available: true, error: "No briefings stored yet" }, { status: 404 });
     }
-    return NextResponse.json(latest);
+    return NextResponse.json({ available: true, ...latest });
   } catch (error) {
     return NextResponse.json(
-      { error: `Failed to fetch briefing: ${error instanceof Error ? error.message : "Unknown"}` },
+      { available: false, error: `Failed: ${error instanceof Error ? error.message : "Unknown"}` },
       { status: 500 }
     );
   }
