@@ -1,4 +1,4 @@
-name: Trigger Training
+name: Conviction Training
 
 on:
   push:
@@ -6,17 +6,121 @@ on:
       - claude/conviction-training
     paths:
       - '.github/workflows/trigger-training.yml'
+  workflow_dispatch:
+    inputs:
+      trials:
+        description: 'Number of trials to run'
+        required: false
+        default: '500'
 
 jobs:
-  trigger:
+  train:
     runs-on: ubuntu-latest
+    timeout-minutes: 360
+
     steps:
-      - name: Trigger conviction training
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: claude/conviction-training
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure git
+        run: |
+          git config user.name "SIGNAL Training Bot"
+          git config user.email "signal-bot@users.noreply.github.com"
+
+      - name: Pull latest state from repo
+        run: |
+          git pull origin claude/conviction-training --rebase || true
+          if [ -f training/results/training-state.json ]; then
+            TRIALS=$(node -e "console.log(require('./training/results/training-state.json').currentTrial)" 2>/dev/null || echo "0")
+            echo "Resuming from trial $TRIALS"
+          else
+            echo "Starting fresh"
+          fi
+
+      - name: Restore state from cache
+        uses: actions/cache/restore@v4
+        with:
+          path: training/results/
+          key: conviction-training-state
+          restore-keys: |
+            conviction-training-
+
+      - name: Run conviction training
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOTAL_TRIALS: ${{ github.event.inputs.trials || '500' }}
+          CI: 'true'
+        run: npx tsx training/train.ts
+        timeout-minutes: 350
+
+      - name: Save state to cache
+        uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: training/results/
+          key: conviction-training-state-${{ github.run_id }}
+
+      - name: Commit results to repo
+        if: always()
+        run: |
+          git pull origin claude/conviction-training --rebase || true
+          git add training/results/ 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            TRIALS=$(node -e "try{console.log(require('./training/results/training-state.json').currentTrial)}catch{console.log('?')}" 2>/dev/null || echo "?")
+            git commit -m "Training checkpoint: ${TRIALS} trials complete"
+            git push origin claude/conviction-training || echo "Push failed"
+          fi
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: training-results-${{ github.run_id }}
+          path: training/results/
+          retention-days: 90
+
+      - name: Auto-restart if incomplete
+        if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOTAL_TRIALS: ${{ github.event.inputs.trials || '500' }}
         run: |
-          gh workflow run train-conviction.yml \
-            --repo milosh16/Day-Trading \
-            --ref claude/conviction-training \
-            -f trials=500
-          echo "Training triggered!"
+          if [ -f training/results/training-state.json ]; then
+            DONE=$(node -e "const s=require('./training/results/training-state.json');console.log(s.currentTrial>=parseInt(process.env.TOTAL_TRIALS||'500')?'yes':'no')" 2>/dev/null || echo "no")
+            if [ "$DONE" = "no" ]; then
+              echo "Training incomplete — auto-restarting in 30s..."
+              sleep 30
+              gh workflow run trigger-training.yml --ref claude/conviction-training || echo "Auto-restart failed. Trigger manually."
+            else
+              echo "Training complete!"
+            fi
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "=== Training Summary ==="
+          if [ -f training/results/training-state.json ]; then
+            node -e "
+              const s = require('./training/results/training-state.json');
+              console.log('Trials:', s.currentTrial, '/', s.totalTrials);
+              console.log('Best score:', s.bestScore);
+              console.log('Tokens:', s.totalTokensUsed?.toLocaleString());
+            "
+          fi
+          tail -30 training/results/training-log.txt 2>/dev/null || echo "No log"
