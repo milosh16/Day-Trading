@@ -102,21 +102,46 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
         }),
       });
 
-      const data = await response.json();
-
       if (!response.ok) {
-        const detail = data?.error || JSON.stringify(data);
-        throw new Error(`API ${response.status}: ${detail}`);
+        const errText = await response.text();
+        throw new Error(`API ${response.status}: ${errText.slice(0, 300)}`);
       }
 
-      // Extract text content from Claude's response
+      // Read the SSE stream and extract text deltas
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error("No response stream");
+
+      const decoder = new TextDecoder();
       let textContent = "";
-      if (data.content) {
-        for (const block of data.content) {
-          if (block.type === "text") {
-            textContent += block.text;
+      let buffer = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split("\n");
+        buffer = lines.pop() || "";
+
+        for (const line of lines) {
+          if (!line.startsWith("data: ")) continue;
+          const payload = line.slice(6).trim();
+          if (payload === "[DONE]") continue;
+
+          try {
+            const event = JSON.parse(payload);
+            // content_block_delta with text
+            if (event.type === "content_block_delta" && event.delta?.type === "text_delta") {
+              textContent += event.delta.text;
+            }
+          } catch {
+            // skip unparseable SSE lines
           }
         }
+      }
+
+      if (!textContent) {
+        throw new Error("No text content in response");
       }
 
       // Parse JSON from response
@@ -125,7 +150,6 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       if (jsonMatch) {
         briefingData = JSON.parse(jsonMatch[1]);
       } else {
-        // Try to find JSON in the response
         const jsonStart = textContent.indexOf("{");
         const jsonEnd = textContent.lastIndexOf("}");
         if (jsonStart !== -1 && jsonEnd !== -1) {

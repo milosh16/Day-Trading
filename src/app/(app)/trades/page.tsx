@@ -92,13 +92,35 @@ If no setups meet the threshold, return: <json>[]</json>`,
         }),
       });
 
-      if (!response.ok) throw new Error(`API error: ${response.status}`);
-      const data = await response.json();
+      if (!response.ok) {
+        const errText = await response.text();
+        throw new Error(`API ${response.status}: ${errText.slice(0, 300)}`);
+      }
 
+      // Read the SSE stream and extract text deltas
+      const reader = response.body?.getReader();
+      if (!reader) throw new Error("No response stream");
+
+      const decoder = new TextDecoder();
       let textContent = "";
-      if (data.content) {
-        for (const block of data.content) {
-          if (block.type === "text") textContent += block.text;
+      let streamBuffer = "";
+
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        streamBuffer += decoder.decode(value, { stream: true });
+        const lines = streamBuffer.split("\n");
+        streamBuffer = lines.pop() || "";
+        for (const line of lines) {
+          if (!line.startsWith("data: ")) continue;
+          const payload = line.slice(6).trim();
+          if (payload === "[DONE]") continue;
+          try {
+            const event = JSON.parse(payload);
+            if (event.type === "content_block_delta" && event.delta?.type === "text_delta") {
+              textContent += event.delta.text;
+            }
+          } catch { /* skip */ }
         }
       }
 

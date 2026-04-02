@@ -1,13 +1,13 @@
 // ============================================================
-// SIGNAL - Anthropic Claude API Proxy
+// SIGNAL - Anthropic Claude API Proxy (Streaming)
 // ============================================================
 // Server-side proxy to keep Anthropic API key hidden.
-// Supports web_search tool for real-time data retrieval.
+// Uses streaming to avoid Vercel serverless timeout limits.
 // ============================================================
 
 import { NextRequest, NextResponse } from "next/server";
 
-export const maxDuration = 120;
+export const maxDuration = 300;
 
 // GET handler for quick diagnostics
 export async function GET() {
@@ -59,6 +59,7 @@ export async function POST(req: NextRequest) {
       model: "claude-opus-4-6",
       max_tokens,
       messages,
+      stream: true,
     };
 
     if (system) requestBody.system = system;
@@ -91,8 +92,22 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const data = await response.json();
-    return NextResponse.json(data);
+    // Stream the response through to the client
+    const stream = response.body;
+    if (!stream) {
+      return NextResponse.json(
+        { error: "No response stream from Anthropic" },
+        { status: 502 }
+      );
+    }
+
+    return new Response(stream, {
+      headers: {
+        "Content-Type": "text/event-stream",
+        "Cache-Control": "no-cache",
+        Connection: "keep-alive",
+      },
+    });
   } catch (error) {
     return NextResponse.json(
       { error: `Proxy error: ${error instanceof Error ? error.message : "Unknown"}` },
