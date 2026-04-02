@@ -1,11 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useBriefingStore } from "@/lib/store";
-import { useSettingsStore } from "@/lib/store";
 import Card, { CardHeader, StatusBadge } from "@/components/Card";
 import type { MarketBriefing, BriefingSection, ScenarioAnalysis } from "@/lib/types";
-import { v4 as uuid } from "uuid";
 
 const LOADING_STEPS = [
   "Connecting to Claude Opus...",
@@ -18,7 +15,9 @@ const LOADING_STEPS = [
 ];
 
 export default function BriefingPage() {
-  const { briefing, loading, error, setBriefing, setLoading, setError } = useBriefingStore();
+  const [briefing, setBriefing] = useState<MarketBriefing | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set());
   const [loadingStep, setLoadingStep] = useState(0);
   const [elapsed, setElapsed] = useState(0);
@@ -137,7 +136,7 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       }
 
       const marketBriefing: MarketBriefing = {
-        id: uuid(),
+        id: crypto.randomUUID(),
         timestamp: new Date().toISOString(),
         summary: briefingData.summary || "Market briefing generated.",
         sections: briefingData.sections || [],
