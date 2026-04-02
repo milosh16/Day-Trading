@@ -3,7 +3,7 @@
 // ============================================================
 // Evaluates trade quality across 7 independent dimensions.
 // Minimum threshold: 72/100 (top ~30% of setups).
-// Calibrated to produce 0-2 recommendations on an average day.
+// No artificial cap on trade count - recommend all that pass threshold.
 // ============================================================
 
 import { ConvictionScore, ConvictionDimension } from "./types";
@@ -91,12 +91,12 @@ ${dimensionList}
 
 CRITICAL RULES:
 - Minimum threshold to recommend: ${CONVICTION_THRESHOLD}/100 weighted score
-- If no setups reach ${CONVICTION_THRESHOLD}, return ZERO recommendations. This is correct behavior.
-- On an average day, 0-2 trades should pass. If you're recommending 3+, your threshold is too loose.
+- If no setups reach ${CONVICTION_THRESHOLD}, return ZERO recommendations. Zero trades on a day is perfectly fine.
+- There is NO cap on the number of recommendations. If 20 setups genuinely pass the threshold, recommend all 20.
 - A score of 50 means "average/neutral" - NOT good enough to trade.
 - A score of 70 means "above average but marginal" - borderline.
 - A score of 80+ means "strong conviction across multiple dimensions."
-- Do NOT inflate scores to produce recommendations. Empty is better than wrong.
+- Do NOT inflate scores to fabricate recommendations. But do NOT suppress valid ones either.
 - Every recommendation MUST have a specific catalyst (not "could go up").
 - Every recommendation MUST have exact entry, target, and stop-loss prices.
 

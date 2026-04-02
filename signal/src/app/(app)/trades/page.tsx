@@ -42,10 +42,10 @@ Portfolio size: $${portfolioValue.toFixed(2)}. Cash available: $${cashAvailable.
 
 Your job: scan markets for high-conviction trade setups. You MUST use web_search to find real-time data - current prices, news, catalysts, and technical levels.
 
-CRITICAL SELECTIVITY RULES:
-- On an average day, 0-2 setups deserve recommendation. Most days, ZERO is correct.
-- If nothing looks compelling, return an empty array. This is the RIGHT answer.
-- Do NOT fabricate trades to appear useful. An empty list is a feature.
+CRITICAL RULES:
+- There is NO limit on the number of recommendations. If 20 setups pass the conviction threshold, recommend all 20.
+- If nothing looks compelling, return an empty array. Zero trades is a valid result.
+- Do NOT fabricate or hallucinate trades. Every recommendation must be backed by real data from web search.
 - Every trade MUST have a specific, imminent catalyst (not "could go up").
 - Every trade MUST have exact entry price, target price, and stop loss based on REAL current prices.
 - Minimum conviction threshold: ${CONVICTION_THRESHOLD}/100.
@@ -441,7 +441,7 @@ If no setups meet the threshold, return: <json>[]</json>`,
           </div>
           <h3 className="text-lg font-semibold mb-1">No Active Recommendations</h3>
           <p className="text-sm text-ios-gray max-w-[280px]">
-            Tap Scan for Trades to search for high-conviction setups. Zero recommendations is a valid result.
+            Tap Scan for Trades to search for high-conviction setups across all markets. Zero recommendations on a given day is fine.
           </p>
         </div>
       )}
