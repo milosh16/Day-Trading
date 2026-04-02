@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
     const { messages, system, tools, max_tokens = 4096 } = body;
 
     const requestBody: Record<string, unknown> = {
-      model: "claude-sonnet-4-20250514",
+      model: "claude-sonnet-4-6",
       max_tokens,
       messages,
     };
@@ -33,7 +33,7 @@ export async function POST(req: NextRequest) {
     // Always include web_search tool for real-time market data
     const allTools = [
       {
-        type: "web_search_20250305",
+        type: "web_search_20260209",
         name: "web_search",
       },
       ...(tools || []),
@@ -45,7 +45,7 @@ export async function POST(req: NextRequest) {
       headers: {
         "Content-Type": "application/json",
         "x-api-key": apiKey,
-        "anthropic-version": "2025-01-01",
+        "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify(requestBody),
     });
