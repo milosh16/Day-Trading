@@ -25,7 +25,7 @@ export async function GET() {
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
-        model: "claude-opus-4-6",
+        model: "claude-sonnet-4-6",
         max_tokens: 32,
         messages: [{ role: "user", content: "Say OK" }],
       }),
@@ -36,7 +36,7 @@ export async function GET() {
       return NextResponse.json({ status: "error", code: response.status, detail: err });
     }
 
-    return NextResponse.json({ status: "ok", model: "claude-opus-4-6" });
+    return NextResponse.json({ status: "ok", model: "claude-sonnet-4-6" });
   } catch (e) {
     return NextResponse.json({ status: "error", detail: String(e) });
   }
@@ -56,8 +56,8 @@ export async function POST(req: NextRequest) {
     const { messages, system, tools, max_tokens = 4096 } = body;
 
     const requestBody: Record<string, unknown> = {
-      model: "claude-opus-4-6",
-      max_tokens,
+      model: "claude-sonnet-4-6",
+      max_tokens: Math.min(max_tokens, 4096),
       messages,
       stream: true,
     };

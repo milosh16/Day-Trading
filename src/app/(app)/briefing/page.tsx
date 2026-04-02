@@ -5,7 +5,7 @@ import Card, { CardHeader, StatusBadge } from "@/components/Card";
 import type { MarketBriefing, BriefingSection, ScenarioAnalysis } from "@/lib/types";
 
 const LOADING_STEPS = [
-  "Connecting to Claude Opus...",
+  "Connecting to Claude...",
   "Searching market futures...",
   "Scanning economic calendar...",
   "Analyzing VIX and yields...",
@@ -214,7 +214,7 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
               {LOADING_STEPS[loadingStep]}
             </p>
             <p className="text-xs text-ios-gray">
-              {elapsed}s elapsed — Opus typically takes 30-60s
+              {elapsed}s elapsed
             </p>
             <div className="w-full mt-4 space-y-1.5">
               {LOADING_STEPS.map((step, i) => (
