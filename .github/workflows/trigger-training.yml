@@ -6,6 +6,7 @@ on:
       - claude/conviction-training
     paths:
       - '.github/workflows/trigger-training.yml'
+      - 'training/**'
   workflow_dispatch:
     inputs:
       trials:
