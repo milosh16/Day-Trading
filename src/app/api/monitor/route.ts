@@ -8,8 +8,18 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
+  let body;
   try {
-    const { positions, ntfyTopic } = await req.json();
+    body = await req.json();
+  } catch {
+    return NextResponse.json(
+      { error: "Malformed request body" },
+      { status: 400 }
+    );
+  }
+
+  try {
+    const { positions, ntfyTopic } = body;
 
     if (!positions || !Array.isArray(positions) || !ntfyTopic) {
       return NextResponse.json({ alerts: [] });
@@ -37,7 +47,7 @@ export async function POST(req: NextRequest) {
             Tags: "warning,chart_with_downwards_trend",
           },
           body: `${symbol} hit stop loss at $${currentPrice.toFixed(2)} (stop: $${stopLoss.toFixed(2)}). Consider closing position.`,
-        }).catch(() => {});
+        }).catch((err) => { console.error(`Failed to send stop-hit notification for ${symbol}:`, err); });
       }
 
       if (targetPrice && currentPrice >= targetPrice) {
@@ -55,7 +65,7 @@ export async function POST(req: NextRequest) {
             Tags: "white_check_mark,chart_with_upwards_trend",
           },
           body: `${symbol} reached target at $${currentPrice.toFixed(2)} (target: $${targetPrice.toFixed(2)}). Consider taking profits.`,
-        }).catch(() => {});
+        }).catch((err) => { console.error(`Failed to send target-hit notification for ${symbol}:`, err); });
       }
     }
 

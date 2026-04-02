@@ -51,8 +51,17 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  let body;
   try {
-    const body = await req.json();
+    body = await req.json();
+  } catch {
+    return NextResponse.json(
+      { error: "Malformed request body" },
+      { status: 400 }
+    );
+  }
+
+  try {
     const { messages, system, tools, max_tokens = 4096 } = body;
 
     const requestBody: Record<string, unknown> = {

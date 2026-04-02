@@ -24,9 +24,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Alpaca keys not provided" }, { status: 401 });
   }
 
+  let body;
   try {
-    const body = await req.json();
+    body = await req.json();
+  } catch {
+    return NextResponse.json(
+      { error: "Malformed request body" },
+      { status: 400 }
+    );
+  }
 
+  try {
     const response = await fetch(`${config.baseUrl}/v2/orders`, {
       method: "POST",
       headers: config.headers,

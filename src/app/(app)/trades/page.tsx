@@ -7,7 +7,7 @@ import { assessTradeRisk, RISK_RULES } from "@/lib/risk";
 import Card, { StatusBadge, PnlDisplay } from "@/components/Card";
 import type { TradeRecommendation, Trade, ConvictionScore, Position } from "@/lib/types";
 import type { DimensionKey } from "@/lib/conviction";
-import { v4 as uuid } from "uuid";
+
 
 export default function TradesPage() {
   const { recommendations, trades, loading, error, setRecommendations, addTrade, setLoading, setError } = useTradesStore();
@@ -184,7 +184,7 @@ If no setups meet the threshold, return: <json>[]</json>`,
           // Use adjusted position size if available
           if (riskAssessment.adjustedPositionSize) {
             processedRecs.push({
-              id: uuid(),
+              id: crypto.randomUUID(),
               timestamp: new Date().toISOString(),
               symbol: rec.symbol as string,
               assetClass: rec.assetClass as TradeRecommendation["assetClass"],
@@ -206,7 +206,7 @@ If no setups meet the threshold, return: <json>[]</json>`,
         }
 
         processedRecs.push({
-          id: uuid(),
+          id: crypto.randomUUID(),
           timestamp: new Date().toISOString(),
           symbol: rec.symbol as string,
           assetClass: rec.assetClass as TradeRecommendation["assetClass"],
@@ -268,7 +268,7 @@ If no setups meet the threshold, return: <json>[]</json>`,
       const orderData = await response.json();
 
       const trade: Trade = {
-        id: uuid(),
+        id: crypto.randomUUID(),
         recommendationId: rec.id,
         symbol: rec.symbol,
         assetClass: rec.assetClass,

@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useSettingsStore } from "@/lib/store";
 import Card from "@/components/Card";
 
 export default function SettingsPage() {
+  const router = useRouter();
   const { settings, updateAlpacaKeys, updateNotifications, clearSettings } = useSettingsStore();
   const [apiKey, setApiKey] = useState(settings.alpacaKeys?.apiKey || "");
   const [secretKey, setSecretKey] = useState(settings.alpacaKeys?.secretKey || "");
@@ -253,7 +255,7 @@ export default function SettingsPage() {
       </Card>
 
       {/* Backtest Link */}
-      <Card className="mb-4" onClick={() => window.location.href = "/backtest"}>
+      <Card className="mb-4" onClick={() => router.push("/backtest")}>
         <div className="flex items-center justify-between">
           <div>
             <h3 className="text-sm font-semibold">Backtest Engine</h3>

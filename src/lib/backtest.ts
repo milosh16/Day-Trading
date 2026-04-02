@@ -7,7 +7,7 @@
 // ============================================================
 
 import { BacktestResult, BacktestParameters, BacktestTrade, BacktestIteration, PerformanceMetrics } from "./types";
-import { v4 as uuid } from "uuid";
+
 
 // Realistic market return distributions (based on historical S&P 500 data)
 const MARKET_PARAMS = {
@@ -155,7 +155,7 @@ function runSingleBacktest(params: BacktestParameters): BacktestResult {
   const metrics = calculateMetrics(allTrades, params, capital, sp500, maxDrawdown);
 
   return {
-    id: uuid(),
+    id: crypto.randomUUID(),
     timestamp: new Date().toISOString(),
     parameters: params,
     metrics,

@@ -135,7 +135,15 @@ Search for what actually happened in markets today and score the accuracy of the
       return NextResponse.json({ error: "Could not parse accuracy response" }, { status: 500 });
     }
 
-    const accuracyData = JSON.parse(jsonMatch[1]);
+    let accuracyData;
+    try {
+      accuracyData = JSON.parse(jsonMatch[1]);
+    } catch {
+      return NextResponse.json(
+        { error: "Failed to parse accuracy JSON", raw: jsonMatch[1].slice(0, 500) },
+        { status: 500 }
+      );
+    }
     const accuracy = {
       scoredAt: new Date().toISOString(),
       ...accuracyData,

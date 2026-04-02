@@ -137,19 +137,26 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
     // Parse the briefing JSON
     const jsonMatch = textContent.match(/<json>([\s\S]*?)<\/json>/);
     let briefingData;
-    if (jsonMatch) {
-      briefingData = JSON.parse(jsonMatch[1]);
-    } else {
-      const jsonStart = textContent.indexOf("{");
-      const jsonEnd = textContent.lastIndexOf("}");
-      if (jsonStart !== -1 && jsonEnd !== -1) {
-        briefingData = JSON.parse(textContent.slice(jsonStart, jsonEnd + 1));
+    try {
+      if (jsonMatch) {
+        briefingData = JSON.parse(jsonMatch[1]);
       } else {
-        return NextResponse.json(
-          { error: "Could not parse briefing", raw: textContent.slice(0, 500) },
-          { status: 500 }
-        );
+        const jsonStart = textContent.indexOf("{");
+        const jsonEnd = textContent.lastIndexOf("}");
+        if (jsonStart !== -1 && jsonEnd !== -1) {
+          briefingData = JSON.parse(textContent.slice(jsonStart, jsonEnd + 1));
+        } else {
+          return NextResponse.json(
+            { error: "Could not parse briefing", raw: textContent.slice(0, 500) },
+            { status: 500 }
+          );
+        }
       }
+    } catch {
+      return NextResponse.json(
+        { error: "Failed to parse briefing JSON", raw: textContent.slice(0, 500) },
+        { status: 500 }
+      );
     }
 
     const storedBriefing: StoredBriefing = {
