@@ -427,3 +427,65 @@
 
 ---
 
+## v2 Trial 7 — Tuesday, February 18, 2025 (Post-Presidents' Day, Earnings Day)
+
+**Context:** Markets reopened after Presidents' Day (Feb 17 closed). Feb 14 saw broad rally: S&P +1%, Nasdaq +1.5%, all sectors green. January CPI came in hot (+0.5% MoM vs 0.3% est). Rate cut expectations pushed to Sep 2025. Three earnings reports scheduled after close: TOL, BMBL, and later in the week WMT (Feb 20).
+
+### Recommendations (3 — after v2 filtering)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| NVDA | long | $141.20 | $152.00 | $135.50 | 78 | Pre-earnings drift play — Q4 FY2025 earnings Feb 26, Blackwell ramp, 17/18 analysts Buy |
+| TOL | short | $130.81 | $119.50 | $135.50 | 76 | Homebuilder reporting into hot CPI/elevated mortgage rates (7%); consensus bar too high |
+| BMBL | short | $8.50 | $7.00 | $9.20 | 73 | Paying users declining; app discontinuations pre-announced Jan 28; guidance overhang |
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| NVDA | ~$141 | — | — | $139.36 | Wrong | No | No | -1.30% |
+| TOL | ~$131 | — | — | $122.05* | Correct | No | No | +6.70% |
+| BMBL | ~$8.50 | — | — | ~$7.05* | Correct | Yes | No | +17.60% |
+
+*TOL and BMBL closes are from Feb 19 (earnings released after Feb 18 close; moves realized next day)
+
+- **NVDA:** Underperformed despite green market. Pre-earnings drift thesis required more than 8 days for statistical edge. Profit-taking after +3.2% prior Friday.
+- **TOL:** Q1 EPS $1.75 vs $2.04 est (-12.1% miss). Stock fell 6.67%. Target of $119.50 missed by $2.55 — a 6% target would have hit.
+- **BMBL:** Q1 2025 guidance $242-248M vs $257M consensus. Fell ~17% after-hours. Short thesis validated exactly.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 66.7% |
+| Target Hit Rate | 33.3% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 66.7% |
+| Avg Return | +7.67% |
+| Profit Factor | 18.69 |
+| **Composite Score** | **68.4/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 82.5 | 82.0 | 50 (neutral) |
+| technicalSetup | 70.0 | 75.0 | 45 (inverse!) |
+| riskReward | 76.0 | 70.0 | 56 (moderate) |
+| volumeLiquidity | 63.5 | 95.0 | 18 (strong inverse!) |
+| marketAlignment | 62.5 | 78.0 | 34 (strong inverse!) |
+| informationEdge | 77.0 | 72.0 | 55 (moderate) |
+| timingUrgency | 86.5 | 80.0 | 57 (moderate) |
+
+### Key Learnings
+
+1. **Earnings-event shorts dominated.** Both profitable trades were shorts into same-day earnings with clear fundamental headwinds. Catalyst specificity + timing urgency = strongest edge.
+2. **marketAlignment is INVERSE for earnings shorts.** Winners had lowest alignment (62.5 avg) because they went against the bullish tape. For earnings-event shorts, catalyst quality > tape direction.
+3. **volumeLiquidity is INVERSE for small-cap earnings.** BMBL's low liquidity (55) amplified the post-earnings move. For volatile small-caps on earnings, illiquidity is a feature for shorts.
+4. **informationEdge + timingUrgency = most predictive combination.** Winners scored higher on both. The cleanest pre-trade theses (verifiable data, specific catalysts) outperformed generic momentum plays.
+5. **Target calibration needs work.** Only 1/3 targets hit despite 2/3 winners. TOL fell 6.7% vs 8.6% target — more modest targets improve hit rate.
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 15.0% | informationEdge: 15.0% | timingUrgency: 10.0%*
+
+---
+
