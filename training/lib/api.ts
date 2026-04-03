@@ -150,9 +150,13 @@ export async function callClaude(opts: {
 
       return { text: textContent, inputTokens, outputTokens };
     } catch (err) {
-      if (attempt === maxRetries) throw err;
+      const msg = err instanceof Error ? `${err.message} (${err.cause || ''})` : String(err);
+      if (attempt === maxRetries) {
+        console.error(`  FATAL after ${maxRetries + 1} attempts: ${msg}`);
+        throw err;
+      }
       const backoff = Math.pow(2, attempt + 1) * 2000;
-      console.log(`  Error: ${err instanceof Error ? err.message : err}, retrying in ${backoff / 1000}s...`);
+      console.log(`  Error [attempt ${attempt + 1}/${maxRetries + 1}]: ${msg}, retrying in ${backoff / 1000}s...`);
       await sleep(backoff);
     }
   }

@@ -18,6 +18,10 @@ permissions:
   contents: write
   actions: write
 
+concurrency:
+  group: conviction-training
+  cancel-in-progress: true
+
 jobs:
   train:
     runs-on: ubuntu-latest
