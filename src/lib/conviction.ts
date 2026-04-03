@@ -6,7 +6,7 @@
 // No artificial cap on trade count - recommend all that pass threshold.
 // ============================================================
 
-import { ConvictionScore, ConvictionDimension } from "./types";
+import { ConvictionScore, ConvictionDimension, TradeDirection } from "./types";
 
 export const CONVICTION_THRESHOLD = 72;
 
@@ -34,16 +34,37 @@ export const DIMENSION_DESCRIPTIONS: Record<DimensionKey, string> = {
   timingUrgency: "Timing Urgency - Why this trade must be taken now",
 };
 
+export interface ConvictionOptions {
+  direction?: TradeDirection;
+  catalystAgeHours?: number;
+}
+
 export function calculateConviction(
-  dimensions: Record<DimensionKey, { score: number; reasoning: string }>
+  dimensions: Record<DimensionKey, { score: number; reasoning: string }>,
+  options?: ConvictionOptions,
 ): ConvictionScore {
   const scored: ConvictionDimension[] = Object.entries(dimensions).map(
-    ([key, { score, reasoning }]) => ({
-      name: DIMENSION_DESCRIPTIONS[key as DimensionKey],
-      score: Math.max(0, Math.min(100, score)),
-      weight: DIMENSION_WEIGHTS[key as DimensionKey],
-      reasoning,
-    })
+    ([key, { score, reasoning }]) => {
+      let adjustedScore = Math.max(0, Math.min(100, score));
+      let weight = DIMENSION_WEIGHTS[key as DimensionKey];
+
+      // timingUrgency decay: discount when catalyst is stale (>24h old)
+      // Training insight: urgency 85+ → near-100% win rate, but only when fresh
+      if (key === "timingUrgency" && options?.catalystAgeHours != null) {
+        const age = options.catalystAgeHours;
+        if (age > 24) {
+          const decay = Math.max(0.5, 1 - (age - 24) / 48);
+          adjustedScore = Math.round(adjustedScore * decay);
+        }
+      }
+
+      return {
+        name: DIMENSION_DESCRIPTIONS[key as DimensionKey],
+        score: adjustedScore,
+        weight,
+        reasoning,
+      };
+    },
   );
 
   const total = scored.reduce((sum, d) => sum + d.score * d.weight, 0);
@@ -100,6 +121,14 @@ CRITICAL RULES:
 - Do NOT inflate scores to fabricate recommendations. But do NOT suppress valid ones either.
 - Every recommendation MUST have a specific catalyst (not "could go up").
 - Every recommendation MUST have exact entry, target, and stop-loss prices.
+- Day trade targets should be 3-5% from entry, NOT 8-15%. Tighter targets hit more often.
+
+TRAINING-DERIVED INSIGHTS (apply when scoring):
+- Timing Urgency 85+ with a fresh catalyst (<24h) → near-100% historical win rate. Score high only when the window is truly NOW.
+- On paradigm-shift or macro-shock days, Technical Setup is noise — weight it less mentally.
+- Second-derivative plays (e.g., power stocks during an AI scare) often outperform the obvious direct target. Consider non-obvious beneficiaries/casualties.
+- For SHORT trades, lower Volume/Liquidity can mean BIGGER moves (illiquid names gap harder in panics). Do not penalize shorts for moderate liquidity.
+- Catalyst Clarity above 85 has diminishing returns — the "most obvious" trade often gets front-run in pre-market.
 
 For each dimension, provide a 1-sentence reasoning.
 
