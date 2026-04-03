@@ -10,8 +10,8 @@ import { NextRequest, NextResponse } from "next/server";
 export const maxDuration = 300;
 
 // GET handler for quick diagnostics
-export async function GET() {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+export async function GET(req: NextRequest) {
+  const apiKey = process.env.ANTHROPIC_API_KEY || req.headers.get("x-anthropic-key");
   if (!apiKey) {
     return NextResponse.json({ status: "error", reason: "ANTHROPIC_API_KEY not set" });
   }

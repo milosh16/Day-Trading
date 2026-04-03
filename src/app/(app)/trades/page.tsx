@@ -53,9 +53,14 @@ export default function TradesPage() {
         regimeSection += `\n\n${regimeData.indicatorPrompt}`;
       }
 
+      const fetchHeaders: Record<string, string> = { "Content-Type": "application/json" };
+      if (settings.anthropicApiKey) {
+        fetchHeaders["x-anthropic-key"] = settings.anthropicApiKey;
+      }
+
       const response = await fetch("/api/anthropic", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: fetchHeaders,
         body: JSON.stringify({
           system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateStr}.
 Portfolio size: $${portfolioValue.toFixed(2)}. Cash available: $${cashAvailable.toFixed(2)}.

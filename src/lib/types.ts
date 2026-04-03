@@ -206,6 +206,7 @@ export interface NotificationSettings {
 
 export interface AppSettings {
   alpacaKeys: AlpacaKeys | null;
+  anthropicApiKey: string | null;
   notifications: NotificationSettings;
   dailyLossHaltActive: boolean;
   dailyLossHaltResetDate: string | null;

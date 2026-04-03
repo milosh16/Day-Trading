@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Card, { StatusBadge } from "@/components/Card";
+import { useSettingsStore } from "@/lib/store";
 import type { MarketBriefing, BriefingSection, ScenarioAnalysis } from "@/lib/types";
 
 const LOADING_STEPS = [
@@ -38,6 +39,7 @@ interface StoredBriefing {
 }
 
 export default function BriefingPage() {
+  const { settings } = useSettingsStore();
   const [briefing, setBriefing] = useState<MarketBriefing | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -195,9 +197,14 @@ export default function BriefingPage() {
         day: "numeric",
       });
 
+      const headers: Record<string, string> = { "Content-Type": "application/json" };
+      if (settings.anthropicApiKey) {
+        headers["x-anthropic-key"] = settings.anthropicApiKey;
+      }
+
       const response = await fetch("/api/anthropic", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers,
         body: JSON.stringify({
           system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateStr}. Generate a comprehensive morning market briefing by searching for current market data. Be factual and concise. Do not use emojis.
 

@@ -7,13 +7,15 @@ import Card from "@/components/Card";
 
 export default function SettingsPage() {
   const router = useRouter();
-  const { settings, updateAlpacaKeys, updateNotifications, clearSettings } = useSettingsStore();
+  const { settings, updateAlpacaKeys, updateAnthropicKey, updateNotifications, clearSettings } = useSettingsStore();
   const [apiKey, setApiKey] = useState(settings.alpacaKeys?.apiKey || "");
   const [secretKey, setSecretKey] = useState(settings.alpacaKeys?.secretKey || "");
   const [paperTrading, setPaperTrading] = useState(settings.alpacaKeys?.paperTrading ?? true);
+  const [anthropicKey, setAnthropicKey] = useState(settings.anthropicApiKey || "");
   const [ntfyTopic, setNtfyTopic] = useState(settings.notifications.ntfyTopic);
   const [saved, setSaved] = useState(false);
   const [testResult, setTestResult] = useState<string | null>(null);
+  const [anthropicTestResult, setAnthropicTestResult] = useState<string | null>(null);
 
   const saveAlpacaKeys = () => {
     if (apiKey && secretKey) {
@@ -166,6 +168,69 @@ export default function SettingsPage() {
 
         <p className="text-[11px] text-ios-gray-2 mt-3">
           Keys are stored on-device only (localStorage). Never sent to our servers or stored server-side.
+        </p>
+      </Card>
+
+      {/* Anthropic API Key */}
+      <Card className="mb-4">
+        <h3 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-4">
+          Claude AI (Anthropic)
+        </h3>
+        <p className="text-xs text-ios-gray-2 mb-3">
+          Powers briefings, trade scanning, and regime analysis. Required for on-demand generation.
+        </p>
+        <div>
+          <label className="text-xs text-ios-gray block mb-1">API Key</label>
+          <input
+            type="password"
+            value={anthropicKey}
+            onChange={(e) => setAnthropicKey(e.target.value)}
+            placeholder="sk-ant-..."
+            className="w-full bg-ios-elevated rounded-lg px-3 py-2.5 text-sm text-white placeholder-ios-gray-2 outline-none focus:ring-1 focus:ring-ios-blue"
+          />
+        </div>
+        <div className="flex gap-2 mt-3">
+          <button
+            onClick={() => {
+              updateAnthropicKey(anthropicKey || null);
+              setSaved(true);
+              setTimeout(() => setSaved(false), 2000);
+            }}
+            className="flex-1 bg-ios-blue text-white font-semibold py-2.5 rounded-ios text-sm active:opacity-80"
+          >
+            {saved ? "Saved" : "Save Key"}
+          </button>
+          <button
+            onClick={async () => {
+              if (!anthropicKey) { setAnthropicTestResult("Enter API key first"); return; }
+              setAnthropicTestResult("Testing...");
+              try {
+                const res = await fetch("/api/anthropic", {
+                  headers: { "x-anthropic-key": anthropicKey },
+                });
+                if (res.ok) {
+                  const data = await res.json();
+                  setAnthropicTestResult(`Connected. Model: ${data.model}`);
+                } else {
+                  const data = await res.json();
+                  setAnthropicTestResult(`Failed: ${data.reason || data.error}`);
+                }
+              } catch {
+                setAnthropicTestResult("Connection failed");
+              }
+            }}
+            className="flex-1 bg-ios-elevated text-ios-blue font-semibold py-2.5 rounded-ios text-sm active:opacity-80"
+          >
+            Test
+          </button>
+        </div>
+        {anthropicTestResult && (
+          <p className={`text-xs mt-2 ${anthropicTestResult.includes("Connected") ? "text-ios-green" : anthropicTestResult.includes("Testing") ? "text-ios-gray" : "text-ios-red"}`}>
+            {anthropicTestResult}
+          </p>
+        )}
+        <p className="text-[11px] text-ios-gray-2 mt-3">
+          Stored on-device only (localStorage). Sent to Anthropic API via server proxy — never logged or stored server-side.
         </p>
       </Card>
 
