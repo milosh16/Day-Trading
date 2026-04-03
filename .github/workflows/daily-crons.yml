@@ -1,0 +1,96 @@
+name: Daily Market Crons
+
+on:
+  schedule:
+    # Regime assessment: 6:15 AM ET (10:15 UTC) weekdays
+    - cron: '15 10 * * 1-5'
+    # Briefing generation: 6:30 AM ET (10:30 UTC) weekdays
+    - cron: '30 10 * * 1-5'
+    # Accuracy scoring: 5:30 PM ET (21:30 UTC) weekdays
+    - cron: '30 21 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      cron:
+        description: 'Which cron to run (regime, briefing, accuracy, all)'
+        required: false
+        default: 'all'
+
+jobs:
+  regime:
+    if: github.event.schedule == '15 10 * * 1-5' || github.event.inputs.cron == 'regime' || github.event.inputs.cron == 'all'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Trigger regime assessment
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          APP_URL: ${{ vars.APP_URL || 'https://day-trading-sigma.vercel.app' }}
+        run: |
+          echo "Triggering regime cron at $APP_URL..."
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            "$APP_URL/api/cron/regime" \
+            -H "Authorization: Bearer $CRON_SECRET" \
+            -H "x-anthropic-key: $ANTHROPIC_API_KEY" \
+            --max-time 300)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          echo "Status: $HTTP_CODE"
+          echo "Response: $BODY"
+          if [ "$HTTP_CODE" -ge 400 ]; then
+            echo "::error::Regime cron failed with status $HTTP_CODE"
+            exit 1
+          fi
+
+  briefing:
+    if: github.event.schedule == '30 10 * * 1-5' || github.event.inputs.cron == 'briefing' || github.event.inputs.cron == 'all'
+    needs: [regime]
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Trigger briefing generation
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          APP_URL: ${{ vars.APP_URL || 'https://day-trading-sigma.vercel.app' }}
+        run: |
+          echo "Triggering briefing cron at $APP_URL..."
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            "$APP_URL/api/cron/briefing" \
+            -H "Authorization: Bearer $CRON_SECRET" \
+            -H "x-anthropic-key: $ANTHROPIC_API_KEY" \
+            --max-time 300)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          echo "Status: $HTTP_CODE"
+          echo "Response: $BODY"
+          if [ "$HTTP_CODE" -ge 400 ]; then
+            echo "::error::Briefing cron failed with status $HTTP_CODE"
+            exit 1
+          fi
+
+  accuracy:
+    if: github.event.schedule == '30 21 * * 1-5' || github.event.inputs.cron == 'accuracy' || github.event.inputs.cron == 'all'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Trigger accuracy scoring
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          APP_URL: ${{ vars.APP_URL || 'https://day-trading-sigma.vercel.app' }}
+        run: |
+          echo "Triggering accuracy cron at $APP_URL..."
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            "$APP_URL/api/cron/accuracy" \
+            -H "Authorization: Bearer $CRON_SECRET" \
+            -H "x-anthropic-key: $ANTHROPIC_API_KEY" \
+            --max-time 300)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          echo "Status: $HTTP_CODE"
+          echo "Response: $BODY"
+          if [ "$HTTP_CODE" -ge 400 ]; then
+            echo "::error::Accuracy cron failed with status $HTTP_CODE"
+            exit 1
+          fi

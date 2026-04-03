@@ -108,7 +108,8 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  // Accept API key from env (Vercel) or header (GitHub Actions caller)
+  const apiKey = process.env.ANTHROPIC_API_KEY || req.headers.get("x-anthropic-key");
   if (!apiKey) {
     return NextResponse.json({ error: "ANTHROPIC_API_KEY not set" }, { status: 500 });
   }
