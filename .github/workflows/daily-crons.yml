@@ -12,7 +12,7 @@ on:
         default: 'briefing'
   push:
     branches:
-      - claude/signal-trading-platform-lRjct
+      - main
     paths:
       - '.github/workflows/daily-crons.yml'
       - 'scripts/generate-briefing.ts'
@@ -32,7 +32,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: claude/signal-trading-platform-lRjct
+          ref: ${{ github.ref_name || 'main' }}
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
@@ -85,7 +85,7 @@ jobs:
             git commit -m "data: market intelligence ${DATE}"
             # Retry push up to 4 times with backoff
             for i in 1 2 3 4; do
-              if git push origin claude/signal-trading-platform-lRjct; then
+              if git push origin ${GITHUB_REF_NAME:-main}; then
                 echo "Push succeeded on attempt $i"
                 break
               fi
@@ -96,7 +96,7 @@ jobs:
               WAIT=$((2 ** i))
               echo "Push failed, retrying in ${WAIT}s..."
               sleep $WAIT
-              git pull origin claude/signal-trading-platform-lRjct --rebase
+              git pull origin ${GITHUB_REF_NAME:-main} --rebase
             done
           fi
 
@@ -109,7 +109,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: claude/signal-trading-platform-lRjct
+          ref: ${{ github.ref_name || 'main' }}
 
       - name: Score accuracy
         env:

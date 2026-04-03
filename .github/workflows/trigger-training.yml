@@ -3,6 +3,7 @@ name: Conviction Training
 on:
   push:
     branches:
+      - main
       - claude/conviction-training
       - claude/signal-trading-platform-lRjct
     paths:
