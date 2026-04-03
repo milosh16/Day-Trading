@@ -1,6 +1,11 @@
 name: Daily Market Crons
 
 on:
+  push:
+    branches:
+      - claude/signal-trading-platform-lRjct
+    paths:
+      - '.github/workflows/daily-crons.yml'
   schedule:
     # Regime assessment: 6:15 AM ET (10:15 UTC) weekdays
     - cron: '15 10 * * 1-5'
@@ -17,7 +22,11 @@ on:
 
 jobs:
   regime:
-    if: github.event.schedule == '15 10 * * 1-5' || github.event.inputs.cron == 'regime' || github.event.inputs.cron == 'all'
+    if: >-
+      github.event_name == 'push' ||
+      github.event.schedule == '15 10 * * 1-5' ||
+      github.event.inputs.cron == 'regime' ||
+      github.event.inputs.cron == 'all'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -43,7 +52,11 @@ jobs:
           fi
 
   briefing:
-    if: github.event.schedule == '30 10 * * 1-5' || github.event.inputs.cron == 'briefing' || github.event.inputs.cron == 'all'
+    if: >-
+      github.event_name == 'push' ||
+      github.event.schedule == '30 10 * * 1-5' ||
+      github.event.inputs.cron == 'briefing' ||
+      github.event.inputs.cron == 'all'
     needs: [regime]
     runs-on: ubuntu-latest
     timeout-minutes: 10
@@ -70,7 +83,10 @@ jobs:
           fi
 
   accuracy:
-    if: github.event.schedule == '30 21 * * 1-5' || github.event.inputs.cron == 'accuracy' || github.event.inputs.cron == 'all'
+    if: >-
+      github.event.schedule == '30 21 * * 1-5' ||
+      github.event.inputs.cron == 'accuracy' ||
+      github.event.inputs.cron == 'all'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
