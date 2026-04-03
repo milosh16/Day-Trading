@@ -25,6 +25,8 @@ export interface StoredBriefing {
       trade: string;
     }[];
   }[];
+  regimeType?: string; // e.g., "risk-on", "crisis" — from regime cron
+  regimeConfidence?: number;
   accuracy?: {
     scoredAt: string;
     marketConditionCorrect: boolean;
@@ -106,6 +108,49 @@ export async function getBriefingDates(limit = 30): Promise<string[]> {
     return dates as string[];
   } catch {
     return [];
+  }
+}
+
+// --- Regime Storage ---
+
+const REGIME_LATEST_KEY = "regime:latest";
+const REGIME_HISTORY_PREFIX = "regime:date:";
+
+export async function storeRegime(date: string, regime: Record<string, unknown>): Promise<boolean> {
+  const kv = await getKv();
+  if (!kv) return false;
+
+  try {
+    await Promise.all([
+      kv.set(REGIME_LATEST_KEY, regime),
+      kv.set(`${REGIME_HISTORY_PREFIX}${date}`, regime),
+    ]);
+    return true;
+  } catch (e) {
+    console.error("Failed to store regime:", e);
+    return false;
+  }
+}
+
+export async function getLatestRegime(): Promise<Record<string, unknown> | null> {
+  const kv = await getKv();
+  if (!kv) return null;
+
+  try {
+    return await kv.get<Record<string, unknown>>(REGIME_LATEST_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export async function getRegimeByDate(date: string): Promise<Record<string, unknown> | null> {
+  const kv = await getKv();
+  if (!kv) return null;
+
+  try {
+    return await kv.get<Record<string, unknown>>(`${REGIME_HISTORY_PREFIX}${date}`);
+  } catch {
+    return null;
   }
 }
 

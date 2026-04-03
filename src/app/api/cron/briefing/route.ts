@@ -7,7 +7,7 @@
 // ============================================================
 
 import { NextRequest, NextResponse } from "next/server";
-import { storeBriefing, type StoredBriefing } from "@/lib/briefing-store";
+import { storeBriefing, getLatestRegime, type StoredBriefing } from "@/lib/briefing-store";
 
 export const maxDuration = 300; // 5 min — works on Pro plan
 
@@ -37,11 +37,20 @@ export async function GET(req: NextRequest) {
   const dateKey = now.toISOString().split("T")[0]; // YYYY-MM-DD
 
   try {
+    // Load today's regime assessment if available (regime cron runs first)
+    let regimeContext = "";
+    try {
+      const regime = await getLatestRegime();
+      if (regime && typeof regime.regimePrompt === "string") {
+        regimeContext = `\n\n--- REGIME ASSESSMENT (auto-generated) ---\n${regime.regimePrompt}\n--- END REGIME ASSESSMENT ---\n\nIncorporate this regime assessment into your briefing. Reference the regime type, key factors, and sector tilts in your analysis. If the regime suggests raising conviction thresholds or penalizing a direction, mention this in the briefing.`;
+      }
+    } catch { /* regime not available, proceed without */ }
+
     const requestBody = {
       model: MODEL,
       max_tokens: MODEL.includes("opus") ? 8192 : 4096,
       stream: true,
-      system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateStr}. Generate a comprehensive morning market briefing by searching for current market data. Be factual and concise. Do not use emojis.
+      system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateStr}. Generate a comprehensive morning market briefing by searching for current market data. Be factual and concise. Do not use emojis.${regimeContext}
 
 You MUST use the web_search tool to find current, real-time market data. Search for multiple topics to build a complete picture.
 
@@ -159,6 +168,17 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       );
     }
 
+    // Attach regime metadata if available
+    let regimeType: string | undefined;
+    let regimeConfidence: number | undefined;
+    try {
+      const regime = await getLatestRegime();
+      if (regime) {
+        regimeType = regime.regime as string;
+        regimeConfidence = regime.confidence as number;
+      }
+    } catch { /* ok */ }
+
     const storedBriefing: StoredBriefing = {
       id: crypto.randomUUID(),
       date: dateKey,
@@ -168,6 +188,8 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       marketCondition: briefingData.marketCondition || "neutral",
       sections: briefingData.sections || [],
       scenarios: briefingData.scenarios || [],
+      regimeType,
+      regimeConfidence,
     };
 
     // Store in KV

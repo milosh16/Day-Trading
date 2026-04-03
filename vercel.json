@@ -2,6 +2,10 @@
   "framework": "nextjs",
   "crons": [
     {
+      "path": "/api/cron/regime",
+      "schedule": "15 10 * * 1-5"
+    },
+    {
       "path": "/api/cron/briefing",
       "schedule": "30 10 * * 1-5"
     },
