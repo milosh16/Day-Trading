@@ -53,11 +53,40 @@ export default function BriefingPage() {
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
   const [loadingHistory, setLoadingHistory] = useState(false);
 
+  // Regime state
+  const [regime, setRegime] = useState<{
+    regime: string;
+    volatilityRegime: string;
+    confidence: number;
+    directionalBias: number;
+    keyFactors: string[];
+    sectorTilts: { sector: string; bias: string; reason: string }[];
+    convictionModifiers: {
+      longPenalty: number;
+      shortPenalty: number;
+      targetMultiplier: number;
+      minConvictionOverride?: number;
+    };
+  } | null>(null);
+
   // Try to load latest briefing from KV on mount (once)
   useEffect(() => {
     loadLatestBriefing();
+    loadRegime();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const loadRegime = async () => {
+    try {
+      const res = await fetch("/api/regime");
+      if (res.ok) {
+        const data = await res.json();
+        if (data.available !== false && data.regime) {
+          setRegime(data);
+        }
+      }
+    } catch { /* regime not available */ }
+  };
 
   // Animated loading steps
   useEffect(() => {
@@ -495,6 +524,71 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
               {briefing.summary}
             </p>
           </Card>
+
+          {/* Regime Card */}
+          {regime && (
+            <Card>
+              <div className="flex items-center justify-between mb-3">
+                <div className="flex items-center gap-2">
+                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
+                    regime.regime === "risk-on" ? "bg-ios-green/20 text-ios-green" :
+                    regime.regime === "risk-off" ? "bg-ios-red/20 text-ios-red" :
+                    regime.regime === "crisis" ? "bg-ios-red/30 text-ios-red" :
+                    regime.regime === "event-driven" ? "bg-ios-orange/20 text-ios-orange" :
+                    "bg-ios-gray/20 text-ios-gray"
+                  }`}>
+                    {regime.regime.toUpperCase()}
+                  </span>
+                  <span className="text-xs text-ios-gray">
+                    {regime.volatilityRegime} vol
+                  </span>
+                </div>
+                <span className="text-sm font-semibold">
+                  {regime.confidence}% conf
+                </span>
+              </div>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+                  <p className="text-[10px] text-ios-gray mb-0.5">Bias</p>
+                  <p className={`text-sm font-bold ${regime.directionalBias > 0 ? "text-ios-green" : regime.directionalBias < 0 ? "text-ios-red" : "text-ios-gray"}`}>
+                    {regime.directionalBias > 0 ? "+" : ""}{regime.directionalBias}
+                  </p>
+                </div>
+                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+                  <p className="text-[10px] text-ios-gray mb-0.5">Long Pen.</p>
+                  <p className="text-sm font-bold text-ios-red">-{regime.convictionModifiers.longPenalty}</p>
+                </div>
+                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+                  <p className="text-[10px] text-ios-gray mb-0.5">Short Pen.</p>
+                  <p className="text-sm font-bold text-ios-red">-{regime.convictionModifiers.shortPenalty}</p>
+                </div>
+                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+                  <p className="text-[10px] text-ios-gray mb-0.5">Target</p>
+                  <p className="text-sm font-bold">{regime.convictionModifiers.targetMultiplier.toFixed(1)}x</p>
+                </div>
+              </div>
+              {regime.keyFactors.length > 0 && (
+                <div className="space-y-1">
+                  {regime.keyFactors.map((f, i) => (
+                    <p key={i} className="text-xs text-white/70">- {f}</p>
+                  ))}
+                </div>
+              )}
+              {regime.sectorTilts.length > 0 && (
+                <div className="mt-2 pt-2 border-t border-ios-gray/10 flex flex-wrap gap-1.5">
+                  {regime.sectorTilts.map((t, i) => (
+                    <span key={i} className={`text-[10px] px-1.5 py-0.5 rounded ${
+                      t.bias === "overweight" ? "bg-ios-green/15 text-ios-green" :
+                      t.bias === "underweight" ? "bg-ios-red/15 text-ios-red" :
+                      "bg-ios-gray/15 text-ios-gray"
+                    }`}>
+                      {t.sector} {t.bias === "overweight" ? "OW" : t.bias === "underweight" ? "UW" : "N"}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </Card>
+          )}
 
           {/* Sections */}
           {briefing.sections.map((section: BriefingSection, i: number) => (
