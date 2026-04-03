@@ -1356,3 +1356,44 @@ Israel struck Isfahan overnight but damage limited, Iran downplayed. S&P -0.9%, 
 
 ---
 
+## v2 Trial 19 — 2024-10-10 (Hot September CPI — Bull Market Shrug)
+
+**Market Context:** S&P 500 at ~5,792 (near ATH). VIX ~21 (elevated). Hurricane Milton making landfall in Florida. September CPI due 8:30 AM (consensus +0.1% MoM). Initial jobless claims also at 8:30 AM. Q3 earnings season about to kick off (JPM, WFC next day).
+
+### Recommendations
+
+| # | Symbol | Direction | Entry | Target | Stop | Conviction |
+|---|--------|-----------|-------|--------|------|------------|
+| 1 | SPY | SHORT | $578.50 | $567.00 | $583.50 | 72.5 |
+| 2 | QQQ | SHORT | $494.00 | $483.00 | $499.50 | 75.0 |
+
+### Outcomes
+
+CPI: +0.2% MoM (vs +0.1%), core +0.3% (vs +0.2%). BUT jobless claims 258K (vs 230K, hurricane distortion). Market shrugged off hot CPI.
+
+| Symbol | Open | Close | Direction | Target | Stop | Return |
+|--------|------|-------|-----------|--------|------|--------|
+| SPY | ~$574 | ~$575.50 | ❌ | ❌ | ✅ | ~-0.2% |
+| QQQ | ~$493 | ~$495.50 | ❌ | ❌ | ✅ | ~-0.3% |
+
+### Scoring
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| **Composite Score** | **15.0/100** |
+
+### Key Learnings
+
+1. **CPI reaction is ASYMMETRIC.** Soft CPI → reliable rally (Trial 13). Hot CPI → NOT reliable selloff in bull markets. Market finds excuses to dismiss bad inflation data.
+2. **Concurrent catalyst conflict:** Hot CPI + spiking jobless claims cancelled out. Market cherry-picked the dovish signal.
+3. **Shorting at ATH without confirmed distribution = low probability.** Conviction 72-75 was too high for a coin-flip.
+4. **NEW RULE: Hot CPI shorts get -5 conviction penalty** in a bull market. Structural asymmetry.
+
+*Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
+
+---
+
