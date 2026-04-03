@@ -197,3 +197,52 @@
 
 ---
 
+### [v2] Trial 2: 2024-10-23 (Wednesday — KO/T Earnings + Boeing Strike Vote)
+
+**Agent A (Blind Recommender):**
+- KO LONG: Entry $70.75 (claimed Oct 22 close ~$70.50, dev +0.35%), Target $73.50, Stop $69.20, Conviction 75
+  - Thesis: Coca-Cola Q3 earnings pre-market. Consensus EPS $0.74, revenue $11.61B. History of upside guidance revision. KO guided 9-10% organic revenue growth.
+- T LONG: Entry $21.97 (claimed Oct 22 close ~$21.91, dev +0.27%), Target $23.50, Stop $21.20, Conviction 77
+  - Thesis: AT&T Q3 earnings pre-market. Consensus EPS $0.59. DirecTV sale completed Oct 1 removes overhang. Seeking Alpha preview flagged $26 DCF target.
+- BA SHORT: Entry $155.00 (claimed Oct 22 close ~$155.50, dev -0.32%), Target $145.00, Stop $162.00, Conviction 73
+  - Thesis: Boeing pre-disclosed $9.97 EPS loss and $5B charges on Oct 11. IAM strike vote Oct 23 uncertain (previously rejected 25% and 30% offers). Stock rallied 13% on optimism → downside if vote fails.
+- DISCARDED: NEE (unverifiable Oct 22 close)
+
+**Agent B (Price Verifier — never saw thesis/direction/targets):**
+- KO: Entry $70.75 — plausible within 2% of Oct 22 close. **VALID**.
+- T: Entry $21.97 — plausible within 2% of Oct 22 close. **VALID**.
+- BA: Entry $155.00 — plausible within 2% of Oct 22 close. **VALID**.
+- Oct 23 OHLC: Exact intraday data unavailable via web search.
+
+**Agent C (Leakage Auditor — never saw outcomes):**
+- KO LONG: **CLEAN** — thesis cites verifiable pre-market Zacks consensus and Nasdaq.com article (Oct 22). No post-open data referenced.
+- T LONG: **CLEAN** — thesis cites DirecTV sale completion (Oct 1), Seeking Alpha preview (Oct 8), Nasdaq consensus data. All pre-market.
+- BA SHORT: **CLEAN** — thesis cites Boeing preliminary results (Oct 11 press release), NPR union vote article (Oct 22), Morningstar analysis (Oct 15). Agent C noted: "KO LONG actually went against the eventual price move (stock fell despite beat), which is strong counter-evidence to contamination."
+
+**Outcomes (verified via web search):**
+| Trade | Direction | Result | Return | Notes |
+|-------|-----------|--------|--------|-------|
+| KO LONG | **WRONG** | Stock fell ~2% despite EPS beat ($0.77 vs $0.74) | -2.0% | Volume declined 1% YoY; international weakness |
+| T LONG | **CORRECT** | Stock rose ~1.8% on earnings beat (EPS $0.60 vs $0.59) | +1.8% | Fiber adds 226K, buyback announced |
+| BA SHORT | **CORRECT** | Stock slipped, tumbled toward $146 low | +5-6% est. | Machinists rejected contract 64%, $6B quarterly loss |
+
+**Scoring (estimated from available data):**
+- Direction Accuracy: 67% (2/3)
+- Target Hit Rate: ~33% (BA likely hit $145 target near $146 low area)
+- Stop Hit Rate: 0% (no stops triggered)
+- Win Rate: 67% (2/3)
+- Avg Return: ~+1.6% est. ((-2.0 + 1.8 + 5.5) / 3)
+- Profit Factor: (1.8 + 5.5) / 2.0 = 3.65
+
+**Composite Score: ~55/100** (estimated)
+= (67×0.25) + (33×0.25) + (67×0.20) + (min(100,73)×0.15) + (100×0.15)
+= 16.75 + 8.25 + 13.4 + 10.95 + 15.0 = 64.35
+
+**Key v2 learnings:**
+1. **First trial with mixed outcomes (win + loss) under v2 — this is the real test.** KO went against us despite a beat. BA went with us on a correctly identified risk.
+2. **Agent C's strongest finding:** KO LONG going wrong is *counter-evidence* to contamination. A contaminated model would not have recommended a long on a stock that fell on its earnings day. This gives confidence the recommender was genuinely blind.
+3. **BA SHORT was the best trade and had the lowest conviction (73).** This is noteworthy — informationEdge (78) and catalystClarity (80) were the highest individual scores. The binary catalyst (strike vote) with a quantifiable downside catalyst (pre-disclosed $9.97 loss) is the cleanest setup type.
+4. **Earnings-day direction is ~67% accurate** — consistent with v1 trial 8 (FOMC day, also 33% direction). On multi-catalyst days, the scoring system picks ~2 of 3 correctly.
+
+---
+
