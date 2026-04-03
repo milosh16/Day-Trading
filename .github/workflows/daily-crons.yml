@@ -30,6 +30,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/signal-trading-platform-lRjct
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Trigger regime assessment
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -45,10 +50,37 @@ jobs:
           HTTP_CODE=$(echo "$RESPONSE" | tail -1)
           BODY=$(echo "$RESPONSE" | sed '$d')
           echo "Status: $HTTP_CODE"
-          echo "Response: $BODY"
+          echo "Response preview: $(echo "$BODY" | head -c 500)"
+
           if [ "$HTTP_CODE" -ge 400 ]; then
             echo "::error::Regime cron failed with status $HTTP_CODE"
             exit 1
+          fi
+
+          # Extract and persist regime data as static JSON
+          mkdir -p public/data
+          echo "$BODY" | jq -r '.fullRegime // empty' > /tmp/regime_full.json 2>/dev/null
+          if [ -s /tmp/regime_full.json ] && [ "$(cat /tmp/regime_full.json)" != "null" ]; then
+            cp /tmp/regime_full.json public/data/regime-latest.json
+            DATE=$(echo "$BODY" | jq -r '.date')
+            cp /tmp/regime_full.json "public/data/regime-${DATE}.json"
+            echo "✅ Regime data saved to public/data/"
+          else
+            # Fallback: save the full response
+            echo "$BODY" > public/data/regime-latest.json
+            echo "⚠️ No fullRegime in response, saved raw response"
+          fi
+
+      - name: Commit regime data
+        run: |
+          git config user.name "SIGNAL Bot"
+          git config user.email "signal-bot@users.noreply.github.com"
+          git add public/data/regime-*.json
+          if git diff --cached --quiet; then
+            echo "No regime data changes to commit"
+          else
+            git commit -m "data: regime assessment $(date +%Y-%m-%d)"
+            git push origin claude/signal-trading-platform-lRjct
           fi
 
   briefing:
@@ -61,6 +93,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/signal-trading-platform-lRjct
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull latest (regime may have pushed)
+        run: git pull origin claude/signal-trading-platform-lRjct --rebase
+
       - name: Trigger briefing generation
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -76,10 +116,38 @@ jobs:
           HTTP_CODE=$(echo "$RESPONSE" | tail -1)
           BODY=$(echo "$RESPONSE" | sed '$d')
           echo "Status: $HTTP_CODE"
-          echo "Response: $BODY"
+          echo "Response preview: $(echo "$BODY" | head -c 500)"
+
           if [ "$HTTP_CODE" -ge 400 ]; then
             echo "::error::Briefing cron failed with status $HTTP_CODE"
             exit 1
+          fi
+
+          # Extract and persist briefing data as static JSON
+          mkdir -p public/data
+          echo "$BODY" | jq -r '.briefing // empty' > /tmp/briefing_full.json 2>/dev/null
+          if [ -s /tmp/briefing_full.json ] && [ "$(cat /tmp/briefing_full.json)" != "null" ]; then
+            cp /tmp/briefing_full.json public/data/briefing-latest.json
+            DATE=$(echo "$BODY" | jq -r '.date')
+            cp /tmp/briefing_full.json "public/data/briefing-${DATE}.json"
+            echo "✅ Briefing data saved to public/data/"
+          else
+            echo "::error::No briefing data in response"
+            echo "$BODY" > /tmp/briefing-debug.json
+            cat /tmp/briefing-debug.json
+            exit 1
+          fi
+
+      - name: Commit briefing data
+        run: |
+          git config user.name "SIGNAL Bot"
+          git config user.email "signal-bot@users.noreply.github.com"
+          git add public/data/briefing-*.json
+          if git diff --cached --quiet; then
+            echo "No briefing data changes to commit"
+          else
+            git commit -m "data: morning briefing $(date +%Y-%m-%d)"
+            git push origin claude/signal-trading-platform-lRjct
           fi
 
   accuracy:

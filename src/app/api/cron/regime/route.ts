@@ -296,6 +296,15 @@ export async function GET(req: NextRequest) {
       indicatorPrompt,
     });
 
+    // Full regime payload for GitHub Actions to persist as static JSON
+    const fullRegime = {
+      ...regime,
+      globalSignals: signals,
+      regimePrompt: buildRegimePrompt(regime),
+      leadingIndicators: indicators,
+      indicatorPrompt,
+    };
+
     return NextResponse.json({
       success: true,
       stored,
@@ -315,6 +324,7 @@ export async function GET(req: NextRequest) {
         patternsDetected: indicators.patterns.length,
         patterns: indicators.patterns.map(p => ({ name: p.name, severity: p.severity })),
       },
+      fullRegime,
     });
   } catch (error) {
     return NextResponse.json(

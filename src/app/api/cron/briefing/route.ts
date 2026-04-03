@@ -198,9 +198,10 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       regimeConfidence,
     };
 
-    // Store in KV
+    // Store in KV (may silently fail if KV not configured)
     const stored = await storeBriefing(storedBriefing);
 
+    // Always return full briefing data so GitHub Actions can persist it
     return NextResponse.json({
       success: true,
       stored,
@@ -208,6 +209,7 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       model: MODEL,
       sectionsCount: storedBriefing.sections.length,
       scenariosCount: storedBriefing.scenarios.length,
+      briefing: storedBriefing,
     });
   } catch (error) {
     return NextResponse.json(
