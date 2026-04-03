@@ -37,12 +37,18 @@ export async function GET(req: NextRequest) {
   const dateKey = now.toISOString().split("T")[0]; // YYYY-MM-DD
 
   try {
-    // Load today's regime assessment if available (regime cron runs first)
+    // Load today's regime assessment and leading indicators if available (regime cron runs first)
     let regimeContext = "";
     try {
       const regime = await getLatestRegime();
       if (regime && typeof regime.regimePrompt === "string") {
-        regimeContext = `\n\n--- REGIME ASSESSMENT (auto-generated) ---\n${regime.regimePrompt}\n--- END REGIME ASSESSMENT ---\n\nIncorporate this regime assessment into your briefing. Reference the regime type, key factors, and sector tilts in your analysis. If the regime suggests raising conviction thresholds or penalizing a direction, mention this in the briefing.`;
+        regimeContext = `\n\n--- REGIME ASSESSMENT (auto-generated) ---\n${regime.regimePrompt}\n--- END REGIME ASSESSMENT ---`;
+      }
+      if (regime && typeof regime.indicatorPrompt === "string") {
+        regimeContext += `\n\n--- LEADING INDICATORS (multi-day trends) ---\n${regime.indicatorPrompt}\n--- END LEADING INDICATORS ---`;
+      }
+      if (regimeContext) {
+        regimeContext += `\n\nIncorporate both the regime assessment AND multi-day leading indicators into your briefing. Reference the regime type, key factors, sector tilts, and any detected patterns (stress accumulation, credit stress, oversold bounce setups, etc.) in your analysis. Leading indicator patterns are especially important — they show what is BUILDING over days/weeks.`;
       }
     } catch { /* regime not available, proceed without */ }
 

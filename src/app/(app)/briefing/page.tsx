@@ -67,6 +67,15 @@ export default function BriefingPage() {
       targetMultiplier: number;
       minConvictionOverride?: number;
     };
+    leadingIndicators?: {
+      stressIndex: number;
+      stressIndexTrend: string;
+      stressDaysRising: number;
+      riskAppetiteIndex: number;
+      riskAppetiteTrend: string;
+      daysOfHistory: number;
+      patterns: { name: string; severity: string; description: string; actionableInsight: string }[];
+    };
   } | null>(null);
 
   // Try to load latest briefing from KV on mount (once)
@@ -586,6 +595,84 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
                     </span>
                   ))}
                 </div>
+              )}
+            </Card>
+          )}
+
+          {/* Leading Indicators Card */}
+          {regime?.leadingIndicators && (
+            <Card>
+              <div className="flex items-center justify-between mb-3">
+                <h3 className="text-[15px] font-semibold">Leading Indicators</h3>
+                <span className="text-xs text-ios-gray">
+                  {regime.leadingIndicators.daysOfHistory}d history
+                </span>
+              </div>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+                  <p className="text-[10px] text-ios-gray mb-0.5">Stress</p>
+                  <p className={`text-sm font-bold ${
+                    regime.leadingIndicators.stressIndex > 60 ? "text-ios-red" :
+                    regime.leadingIndicators.stressIndex > 35 ? "text-ios-orange" :
+                    "text-ios-green"
+                  }`}>
+                    {regime.leadingIndicators.stressIndex}
+                  </p>
+                  <p className={`text-[10px] ${
+                    regime.leadingIndicators.stressIndexTrend === "building" ? "text-ios-red" :
+                    regime.leadingIndicators.stressIndexTrend === "easing" ? "text-ios-green" :
+                    "text-ios-gray"
+                  }`}>
+                    {regime.leadingIndicators.stressIndexTrend}
+                    {regime.leadingIndicators.stressDaysRising > 0 && ` (${regime.leadingIndicators.stressDaysRising}d)`}
+                  </p>
+                </div>
+                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+                  <p className="text-[10px] text-ios-gray mb-0.5">Risk Appetite</p>
+                  <p className={`text-sm font-bold ${
+                    regime.leadingIndicators.riskAppetiteIndex > 60 ? "text-ios-green" :
+                    regime.leadingIndicators.riskAppetiteIndex < 40 ? "text-ios-red" :
+                    "text-ios-gray"
+                  }`}>
+                    {regime.leadingIndicators.riskAppetiteIndex}
+                  </p>
+                  <p className={`text-[10px] ${
+                    regime.leadingIndicators.riskAppetiteTrend === "improving" ? "text-ios-green" :
+                    regime.leadingIndicators.riskAppetiteTrend === "deteriorating" ? "text-ios-red" :
+                    "text-ios-gray"
+                  }`}>
+                    {regime.leadingIndicators.riskAppetiteTrend}
+                  </p>
+                </div>
+              </div>
+              {regime.leadingIndicators.patterns.length > 0 && (
+                <div className="space-y-2">
+                  {regime.leadingIndicators.patterns.map((p, i) => (
+                    <div key={i} className={`rounded-lg p-2 ${
+                      p.severity === "critical" ? "bg-ios-red/15 border border-ios-red/30" :
+                      p.severity === "high" ? "bg-ios-orange/15 border border-ios-orange/30" :
+                      p.severity === "medium" ? "bg-ios-blue/10 border border-ios-blue/20" :
+                      "bg-ios-elevated"
+                    }`}>
+                      <div className="flex items-center gap-1.5 mb-1">
+                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                          p.severity === "critical" ? "bg-ios-red/30 text-ios-red" :
+                          p.severity === "high" ? "bg-ios-orange/30 text-ios-orange" :
+                          p.severity === "medium" ? "bg-ios-blue/20 text-ios-blue" :
+                          "bg-ios-gray/20 text-ios-gray"
+                        }`}>
+                          {p.severity.toUpperCase()}
+                        </span>
+                        <span className="text-xs font-semibold">{p.name}</span>
+                      </div>
+                      <p className="text-[11px] text-white/70 mb-1">{p.description}</p>
+                      <p className="text-[11px] text-ios-blue">{p.actionableInsight}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {regime.leadingIndicators.patterns.length === 0 && (
+                <p className="text-xs text-ios-gray text-center">No significant multi-day patterns detected</p>
               )}
             </Card>
           )}

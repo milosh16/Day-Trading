@@ -34,21 +34,24 @@ export default function TradesPage() {
         day: "numeric",
       });
 
-      // Fetch today's regime assessment (may not exist yet)
-      let regimeData: (RegimeAssessment & { regimePrompt?: string }) | null = null;
+      // Fetch today's regime assessment and leading indicators (may not exist yet)
+      let regimeData: (RegimeAssessment & { regimePrompt?: string; indicatorPrompt?: string }) | null = null;
       try {
         const regimeRes = await fetch("/api/regime");
         if (regimeRes.ok) {
           const regimeJson = await regimeRes.json();
           if (regimeJson.available !== false && regimeJson.regime) {
-            regimeData = regimeJson as RegimeAssessment & { regimePrompt?: string };
+            regimeData = regimeJson as RegimeAssessment & { regimePrompt?: string; indicatorPrompt?: string };
           }
         }
       } catch { /* regime not available, proceed without */ }
 
-      const regimeSection = regimeData?.regimePrompt
+      let regimeSection = regimeData?.regimePrompt
         ? `\n\n${regimeData.regimePrompt}`
         : "";
+      if (regimeData?.indicatorPrompt) {
+        regimeSection += `\n\n${regimeData.indicatorPrompt}`;
+      }
 
       const response = await fetch("/api/anthropic", {
         method: "POST",

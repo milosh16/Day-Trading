@@ -10,13 +10,25 @@
 // ============================================================
 
 import { NextRequest, NextResponse } from "next/server";
-import { storeRegime } from "@/lib/briefing-store";
+import {
+  storeRegime,
+  storeSignalHistory,
+  getSignalHistory,
+  storeLeadingIndicators,
+} from "@/lib/briefing-store";
 import {
   classifyRegime,
   buildRegimePrompt,
   type GlobalSignals,
   type RegimeAssessment,
 } from "@/lib/market-regime";
+import {
+  computeLeadingIndicators,
+  computeStressIndex,
+  computeRiskAppetiteIndex,
+  buildLeadingIndicatorPrompt,
+  type DailySignalRecord,
+} from "@/lib/leading-indicators";
 
 export const maxDuration = 300;
 
@@ -203,11 +215,41 @@ export async function GET(req: NextRequest) {
     // Step 3: Run local regime classification (no LLM needed)
     const regime: RegimeAssessment = classifyRegime(signals);
 
-    // Step 4: Store in KV
+    // Step 4: Compute stress and risk appetite for today
+    const stressIndex = computeStressIndex(signals);
+    const riskAppetiteIndex = computeRiskAppetiteIndex(signals);
+
+    // Step 5: Store daily signal record for leading indicator history
+    const dailyRecord: DailySignalRecord = {
+      date: dateKey,
+      signals,
+      regime: regime.regime,
+      stressIndex,
+      riskAppetiteIndex,
+    };
+    await storeSignalHistory(dateKey, dailyRecord as unknown as Record<string, unknown>);
+
+    // Step 6: Compute leading indicators from signal history
+    const rawHistory = await getSignalHistory(20);
+    const history = rawHistory
+      .filter((r): r is Record<string, unknown> & DailySignalRecord =>
+        r != null && "date" in r && "signals" in r)
+      .filter(r => r.date !== dateKey) as DailySignalRecord[]; // Exclude today (already in 'signals')
+
+    const indicators = computeLeadingIndicators(history, signals, dateKey);
+    const indicatorPrompt = buildLeadingIndicatorPrompt(indicators);
+    await storeLeadingIndicators({
+      ...indicators,
+      indicatorPrompt,
+    } as unknown as Record<string, unknown>);
+
+    // Step 7: Store regime in KV (now includes leading indicator prompt)
     const stored = await storeRegime(dateKey, {
       ...regime,
       globalSignals: signals,
       regimePrompt: buildRegimePrompt(regime),
+      leadingIndicators: indicators,
+      indicatorPrompt,
     });
 
     return NextResponse.json({
@@ -221,6 +263,14 @@ export async function GET(req: NextRequest) {
       keyFactors: regime.keyFactors,
       sectorTilts: regime.sectorTilts,
       convictionModifiers: regime.convictionModifiers,
+      leadingIndicators: {
+        stressIndex: indicators.stressIndex,
+        stressIndexTrend: indicators.stressIndexTrend,
+        riskAppetiteIndex: indicators.riskAppetiteIndex,
+        riskAppetiteTrend: indicators.riskAppetiteTrend,
+        patternsDetected: indicators.patterns.length,
+        patterns: indicators.patterns.map(p => ({ name: p.name, severity: p.severity })),
+      },
     });
   } catch (error) {
     return NextResponse.json(

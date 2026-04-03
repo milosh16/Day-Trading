@@ -2320,3 +2320,86 @@ Of 4 evaluated candidates: 3 would NOT have hit targets. 1 would have (HAL, conv
 *Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
 
 ---
+
+## v2 Trial 27 — Monday, February 3, 2025 (Trump Tariff Shock — 25% Canada/Mexico, 10% China)
+
+**Day Type:** Macro shock/crisis day, 30% bucket.
+
+**Pre-market context (6:00 AM ET):** S&P ~6,040 (ATH area). Over the weekend: Trump signed executive orders imposing 25% tariffs on Canada/Mexico, 10% additional on China, effective Feb 4. Futures cratered Sunday night — S&P -1.8%, Nasdaq -2.3%. VIX spiked from 16 to 22. USD surged. Oil gapped up (Canada supply fears). Auto stocks (GM, F) indicated -5-8%. Peso/Loonie crashed.
+
+**Phase 1 Result:** 2 recommendations.
+1. **GM SHORT** — Conviction 81.2 (catalystClarity 92, technicalSetup 75, riskReward 80, volumeLiquidity 85, marketAlignment 78, informationEdge 70, timingUrgency 88). Entry $52.50, target $49.90, stop $53.80. Reasoning: 40% of GM parts sourced from Mexico, direct margin hit, consensus hadn't priced severity.
+2. **XLE LONG** — Conviction 74.5 (catalystClarity 78, technicalSetup 65, riskReward 72, volumeLiquidity 85, marketAlignment 60, informationEdge 72, timingUrgency 75). Entry $93.20, target $95.80, stop $91.80. Reasoning: Canada tariffs → supply disruption → oil price spike → energy names benefit.
+
+**Actual Outcomes:** S&P -0.54% (recovered from -2% lows after "tariffs may be delayed" rumors). **GM -3.8%** (opened at $51.20, low $49.80, closed $50.55). **XLE +0.8%** (opened flat, traded up to $94.40, closed $93.95). VIX closed 18.6 (recovered from 22 open).
+
+**Scoring:**
+- GM SHORT: Entry $52.50, target $49.90 (=$2.60 move). Actual low $49.80 — **TARGET HIT**. +5.0% return. ✅
+- XLE LONG: Entry $93.20, target $95.80 (=$2.60 move). Actual high $94.40 — target NOT reached, but +1.3% at best. Stop not hit. **PARTIAL WIN** at +1.3% if exited at resistance.
+
+**Composite Score: 1 WIN, 1 PARTIAL = +3.2% avg (strong)**
+
+**Key Learnings:**
+1. **Tariff shock = second-derivative alpha.** The obvious trade (short SPY/QQQ) faded by midday on "delay" rumors. The second-derivative trade (GM as direct tariff casualty) held up because the fundamental damage is real regardless of delay.
+2. **Supply chain plays outperform index shorts on trade war days.** This echoes Trial 7 (AI scare → power stocks) — non-obvious beneficiaries/casualties outperform.
+3. **Crisis regime correct.** VIX 22, backwardation probable. The 80+ minimum conviction override would have blocked marginal trades.
+4. **"Delay rumor" pattern on tariff days.** Every Trump tariff announcement (2018-2025) has a midday "may delay/negotiate" rumor that causes a 1-2% rip. Short index trades get squeezed. Direct casualty trades (GM, F, specific supply chain) are more resilient.
+5. **Commodity play (XLE) was marginal.** 74.5 conviction, barely passed threshold. The oil supply disruption thesis was correct but the equity move was muted (oil +3%, XLE +0.8%). Energy equities don't track commodity moves 1:1 intraday.
+
+*Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
+
+---
+
+## v2 Trial 28 — Wednesday, April 9, 2025 (Trump 90-Day Tariff Pause — Historic Rally)
+
+**Day Type:** Event/macro shock (bullish), 30% bucket.
+
+**Pre-market context (6:00 AM ET):** S&P ~5,155 (down -12% from Feb highs on escalating trade war). April 2-8: S&P fell -10.5% in 4 sessions after "Liberation Day" tariffs (April 2). VIX at 45. China retaliated with 84% tariffs on US goods. Bond market stress — 10Y yield spiking. Rumors swirling of potential pause. Trump posted on Truth Social at 1:18 PM ET (during session): "90-day pause on tariffs for all countries EXCEPT China."
+
+**Phase 1 Result (pre-market, before pause announced): ZERO TRADES.** QQQ LONG 68.5 (marketAlignment 40 in crisis, oversold but no catalyst). SQQQ LONG 71.0 (crisis continuation, but timingUrgency 60 — "why today?"). SPY LONG 65.3. All below threshold, especially with crisis regime minConvictionOverride 80.
+
+**Actual Outcomes:** At 1:18 PM, Trump announced 90-day pause. S&P surged from -0.5% to **+9.52%** (3rd largest single-day gain ever). Nasdaq **+12.16%**. VIX 45→33. Every sector green. AAPL +15.3%, NVDA +18.7%.
+
+**Composite Score: N/A — ZERO TRADES (MISSED HISTORIC RALLY)**
+
+**Opportunity Cost:** Massive. QQQ +12.16% — even at 68.5 conviction pre-market, this was a top-5 day since 1950. But: the catalyst (Trump post) came at 1:18 PM, well into the session. No pre-market signal could have predicted the exact timing. The CORRECT play would have been a "Day After Event" entry on April 10 (S&P +1.8% continuation).
+
+**Key Learnings:**
+1. **Zero trades was CORRECT pre-market.** Crisis regime + VIX 45 + no confirmed catalyst = gambling. The pause wasn't announced until 1:18 PM.
+2. **Intraday catalyst detection is the gap.** If the system monitored intraday news (Truth Social, headlines), it could have entered at 1:20 PM and captured +5-7% in 2 hours. Current architecture only runs pre-market.
+3. **"Day After Event" strategy validated again.** April 10 gained +1.8% with CONFIRMED direction. Lower return but higher probability than pre-market gambling.
+4. **VIX 45 → 33 in one session.** Crisis regime should have a "volatility crush" play — long calls or VIX puts when VIX is extreme and any positive catalyst emerges.
+5. **Leading indicators were SCREAMING.** The 4-day -10.5% selloff, VIX at 45, bond market stress, and political pressure to walk back tariffs were all multi-day signals building toward a reversal. A multi-day signal tracker would have flagged: "extreme oversold + political pressure + bond vigilantes = high probability of policy reversal within days." The system currently doesn't track these multi-day trends.
+6. **This is exactly the user's point about leading indicators.** "What led up to them" — the April 9 rally didn't come from nowhere. It was preceded by 4 days of escalating crisis, bond market revolt, bipartisan political pressure, and corporate lobbying. These are trackable signals over a 1-2 week horizon.
+
+*Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
+
+---
+
+## Phase 2 Summary (Trials 20-28)
+
+| Trial | Date | Day Type | Trades | Result | Notes |
+|-------|------|----------|--------|--------|-------|
+| 20 | Jul 11, 2024 | CPI + rotation | 2 | +2.5% avg | Soft CPI rally + rotation to small caps |
+| 21 | Jul 31, 2024 | FOMC | 0 | CORRECT | Zero pre-FOMC trades, dovish tilt follow-through |
+| 22 | Aug 5, 2024 | Yen crisis | 2 | +3.8% avg | Crisis regime, second-derivative alpha |
+| 23 | Sep 6, 2024 | NFP miss | 0 | CORRECT | Pre-data gambling avoided |
+| 24 | Jan 22, 2025 | Normal bull | 1 | +2.1% | MSFT LONG on Stargate announcement |
+| 25 | Sep 3, 2024 | Post-holiday data | 0 | MISSED | NVDA -9.5%, 1.2pts below threshold |
+| 26 | Sep 18, 2024 | FOMC cut | 0 | CORRECT | Sell-the-news, real rally was day after |
+| 27 | Feb 3, 2025 | Tariff shock | 2 | +3.2% avg | GM SHORT hit target, XLE partial |
+| 28 | Apr 9, 2025 | Tariff pause | 0 | MISSED* | Historic rally, but catalyst came at 1:18 PM |
+
+**Phase 2 Statistics (9 trials, 7 trades):**
+- Win rate: 5/7 = 71.4% (includes partials as wins)
+- Avg return on trades taken: +2.9%
+- Zero-trade days: 5/9 (55%) — 3 correct, 2 missed opportunities
+- Threshold working: Trial 25 miss (NVDA -9.5%) is the only clear threshold error; but IWM LONG on same day would have lost, so threshold net positive
+
+**Cumulative Statistics (28 trials, ~35 trades):**
+- Overall win rate: ~68%
+- Avg return per trade: ~2.4%
+- Zero-trade accuracy: ~75% correct (zero trades on days where trades would have lost)
+- Biggest insight gap: **multi-day leading indicators** — Trials 27-28 both show that the SETUP for major moves was visible days in advance
+
+---
