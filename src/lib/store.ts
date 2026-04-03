@@ -29,7 +29,6 @@ export function useHydrated() {
 interface SettingsState {
   settings: AppSettings;
   updateAlpacaKeys: (keys: AppSettings["alpacaKeys"]) => void;
-  updateAnthropicKey: (key: string | null) => void;
   updateNotifications: (n: AppSettings["notifications"]) => void;
   setDailyLossHalt: (active: boolean, resetDate?: string) => void;
   clearSettings: () => void;
@@ -37,7 +36,6 @@ interface SettingsState {
 
 const defaultSettings: AppSettings = {
   alpacaKeys: null,
-  anthropicApiKey: null,
   notifications: {
     enabled: false,
     ntfyTopic: "",
@@ -55,8 +53,6 @@ export const useSettingsStore = create<SettingsState>()(
       settings: defaultSettings,
       updateAlpacaKeys: (keys) =>
         set((s) => ({ settings: { ...s.settings, alpacaKeys: keys } })),
-      updateAnthropicKey: (key) =>
-        set((s) => ({ settings: { ...s.settings, anthropicApiKey: key } })),
       updateNotifications: (n) =>
         set((s) => ({ settings: { ...s.settings, notifications: n } })),
       setDailyLossHalt: (active, resetDate) =>
