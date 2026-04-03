@@ -20,6 +20,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: daily-intelligence
+  cancel-in-progress: true
+
 jobs:
   briefing:
     if: >-
