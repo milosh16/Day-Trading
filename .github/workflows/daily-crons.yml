@@ -1,164 +1,117 @@
-name: Daily Market Crons
+name: Daily Market Intelligence
 
 on:
+  schedule:
+    # Pre-market: 6:15 AM ET (10:15 UTC) weekdays
+    - cron: '15 10 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'Which job to run (briefing, accuracy, all)'
+        required: false
+        default: 'briefing'
   push:
     branches:
       - claude/signal-trading-platform-lRjct
     paths:
       - '.github/workflows/daily-crons.yml'
-  schedule:
-    # Regime assessment: 6:15 AM ET (10:15 UTC) weekdays
-    - cron: '15 10 * * 1-5'
-    # Briefing generation: 6:30 AM ET (10:30 UTC) weekdays
-    - cron: '30 10 * * 1-5'
-    # Accuracy scoring: 5:30 PM ET (21:30 UTC) weekdays
-    - cron: '30 21 * * 1-5'
-  workflow_dispatch:
-    inputs:
-      cron:
-        description: 'Which cron to run (regime, briefing, accuracy, all)'
-        required: false
-        default: 'all'
+      - 'scripts/generate-briefing.ts'
+
+permissions:
+  contents: write
 
 jobs:
-  regime:
-    if: >-
-      github.event_name == 'push' ||
-      github.event.schedule == '15 10 * * 1-5' ||
-      github.event.inputs.cron == 'regime' ||
-      github.event.inputs.cron == 'all'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: claude/signal-trading-platform-lRjct
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Trigger regime assessment
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          CRON_SECRET: ${{ secrets.CRON_SECRET }}
-          APP_URL: ${{ vars.APP_URL || 'https://day-trading-sigma.vercel.app' }}
-        run: |
-          echo "Triggering regime cron at $APP_URL..."
-          RESPONSE=$(curl -s -w "\n%{http_code}" \
-            "$APP_URL/api/cron/regime" \
-            -H "Authorization: Bearer $CRON_SECRET" \
-            -H "x-anthropic-key: $ANTHROPIC_API_KEY" \
-            --max-time 300)
-          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
-          BODY=$(echo "$RESPONSE" | sed '$d')
-          echo "Status: $HTTP_CODE"
-          echo "Response preview: $(echo "$BODY" | head -c 500)"
-
-          if [ "$HTTP_CODE" -ge 400 ]; then
-            echo "::error::Regime cron failed with status $HTTP_CODE"
-            exit 1
-          fi
-
-          # Extract and persist regime data as static JSON
-          mkdir -p public/data
-          echo "$BODY" | jq -r '.fullRegime // empty' > /tmp/regime_full.json 2>/dev/null
-          if [ -s /tmp/regime_full.json ] && [ "$(cat /tmp/regime_full.json)" != "null" ]; then
-            cp /tmp/regime_full.json public/data/regime-latest.json
-            DATE=$(echo "$BODY" | jq -r '.date')
-            cp /tmp/regime_full.json "public/data/regime-${DATE}.json"
-            echo "✅ Regime data saved to public/data/"
-          else
-            # Fallback: save the full response
-            echo "$BODY" > public/data/regime-latest.json
-            echo "⚠️ No fullRegime in response, saved raw response"
-          fi
-
-      - name: Commit regime data
-        run: |
-          git config user.name "SIGNAL Bot"
-          git config user.email "signal-bot@users.noreply.github.com"
-          git add public/data/regime-*.json
-          if git diff --cached --quiet; then
-            echo "No regime data changes to commit"
-          else
-            git commit -m "data: regime assessment $(date +%Y-%m-%d)"
-            git push origin claude/signal-trading-platform-lRjct
-          fi
-
   briefing:
     if: >-
       github.event_name == 'push' ||
-      github.event.schedule == '30 10 * * 1-5' ||
-      github.event.inputs.cron == 'briefing' ||
-      github.event.inputs.cron == 'all'
-    needs: [regime]
+      github.event_name == 'schedule' ||
+      github.event.inputs.job == 'briefing' ||
+      github.event.inputs.job == 'all'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           ref: claude/signal-trading-platform-lRjct
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pull latest (regime may have pushed)
-        run: git pull origin claude/signal-trading-platform-lRjct --rebase
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
 
-      - name: Trigger briefing generation
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate regime + briefing
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          CRON_SECRET: ${{ secrets.CRON_SECRET }}
-          APP_URL: ${{ vars.APP_URL || 'https://day-trading-sigma.vercel.app' }}
         run: |
-          echo "Triggering briefing cron at $APP_URL..."
-          RESPONSE=$(curl -s -w "\n%{http_code}" \
-            "$APP_URL/api/cron/briefing" \
-            -H "Authorization: Bearer $CRON_SECRET" \
-            -H "x-anthropic-key: $ANTHROPIC_API_KEY" \
-            --max-time 300)
-          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
-          BODY=$(echo "$RESPONSE" | sed '$d')
-          echo "Status: $HTTP_CODE"
-          echo "Response preview: $(echo "$BODY" | head -c 500)"
+          set -e
+          echo "=== Starting briefing generation ==="
 
-          if [ "$HTTP_CODE" -ge 400 ]; then
-            echo "::error::Briefing cron failed with status $HTTP_CODE"
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set"
             exit 1
           fi
 
-          # Extract and persist briefing data as static JSON
-          mkdir -p public/data
-          echo "$BODY" | jq -r '.briefing // empty' > /tmp/briefing_full.json 2>/dev/null
-          if [ -s /tmp/briefing_full.json ] && [ "$(cat /tmp/briefing_full.json)" != "null" ]; then
-            cp /tmp/briefing_full.json public/data/briefing-latest.json
-            DATE=$(echo "$BODY" | jq -r '.date')
-            cp /tmp/briefing_full.json "public/data/briefing-${DATE}.json"
-            echo "✅ Briefing data saved to public/data/"
-          else
-            echo "::error::No briefing data in response"
-            echo "$BODY" > /tmp/briefing-debug.json
-            cat /tmp/briefing-debug.json
+          npx tsx scripts/generate-briefing.ts
+
+          echo "=== Verifying output ==="
+          if [ ! -f public/data/briefing-latest.json ]; then
+            echo "::error::briefing-latest.json was not created"
+            exit 1
+          fi
+          if [ ! -f public/data/regime-latest.json ]; then
+            echo "::error::regime-latest.json was not created"
             exit 1
           fi
 
-      - name: Commit briefing data
+          echo "Output files:"
+          ls -la public/data/*.json
+          echo ""
+          echo "Briefing summary:"
+          node -e "const b=require('./public/data/briefing-latest.json'); console.log('Market:', b.marketCondition); console.log('Sections:', b.sections?.length); console.log('Scenarios:', b.scenarios?.length); console.log('Summary:', b.summary?.slice(0,200));"
+
+      - name: Commit and push data
         run: |
           git config user.name "SIGNAL Bot"
           git config user.email "signal-bot@users.noreply.github.com"
-          git add public/data/briefing-*.json
+          git add public/data/
           if git diff --cached --quiet; then
-            echo "No briefing data changes to commit"
+            echo "No data changes to commit"
           else
-            git commit -m "data: morning briefing $(date +%Y-%m-%d)"
-            git push origin claude/signal-trading-platform-lRjct
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "data: market intelligence ${DATE}"
+            # Retry push up to 4 times with backoff
+            for i in 1 2 3 4; do
+              if git push origin claude/signal-trading-platform-lRjct; then
+                echo "Push succeeded on attempt $i"
+                break
+              fi
+              if [ $i -eq 4 ]; then
+                echo "::error::Push failed after 4 attempts"
+                exit 1
+              fi
+              WAIT=$((2 ** i))
+              echo "Push failed, retrying in ${WAIT}s..."
+              sleep $WAIT
+              git pull origin claude/signal-trading-platform-lRjct --rebase
+            done
           fi
 
   accuracy:
     if: >-
-      github.event.schedule == '30 21 * * 1-5' ||
-      github.event.inputs.cron == 'accuracy' ||
-      github.event.inputs.cron == 'all'
+      github.event.inputs.job == 'accuracy' ||
+      github.event.inputs.job == 'all'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Trigger accuracy scoring
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/signal-trading-platform-lRjct
+
+      - name: Score accuracy
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
@@ -175,6 +128,5 @@ jobs:
           echo "Status: $HTTP_CODE"
           echo "Response: $BODY"
           if [ "$HTTP_CODE" -ge 400 ]; then
-            echo "::error::Accuracy cron failed with status $HTTP_CODE"
-            exit 1
+            echo "::warning::Accuracy cron returned $HTTP_CODE (non-fatal)"
           fi

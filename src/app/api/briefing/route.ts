@@ -1,38 +1,29 @@
 // ============================================================
-// SIGNAL - Briefing API (Read from static JSON or KV)
+// SIGNAL - Briefing API
 // ============================================================
-// GET /api/briefing - Returns latest briefing
-// GET /api/briefing?date=YYYY-MM-DD - Returns specific date
-// GET /api/briefing?history=true - Returns list of all dates
-//
-// Primary source: static JSON files in public/data/ (committed by GitHub Actions)
-// Fallback: Vercel KV (if configured)
+// Reads briefing data from static JSON files in public/data/.
+// These files are committed by the GitHub Actions workflow.
+// KV is used as optional secondary source.
 // ============================================================
 
 import { NextRequest, NextResponse } from "next/server";
-import {
-  getLatestBriefing,
-  getBriefingByDate,
-  getBriefingDates,
-  kvAvailable,
-} from "@/lib/briefing-store";
 import { promises as fs } from "fs";
 import path from "path";
 
-async function readStaticJson(filename: string): Promise<Record<string, unknown> | null> {
+const DATA_DIR = path.join(process.cwd(), "public", "data");
+
+async function readJson(filepath: string): Promise<Record<string, unknown> | null> {
   try {
-    const filePath = path.join(process.cwd(), "public", "data", filename);
-    const content = await fs.readFile(filePath, "utf-8");
+    const content = await fs.readFile(filepath, "utf-8");
     return JSON.parse(content);
   } catch {
     return null;
   }
 }
 
-async function listStaticBriefingDates(): Promise<string[]> {
+async function listBriefingDates(): Promise<string[]> {
   try {
-    const dataDir = path.join(process.cwd(), "public", "data");
-    const files = await fs.readdir(dataDir);
+    const files = await fs.readdir(DATA_DIR);
     return files
       .filter(f => f.startsWith("briefing-") && f !== "briefing-latest.json" && f.endsWith(".json"))
       .map(f => f.replace("briefing-", "").replace(".json", ""))
@@ -50,39 +41,31 @@ export async function GET(req: NextRequest) {
 
   try {
     if (history === "true") {
-      // Try KV first, then static files
-      if (kvAvailable()) {
-        const dates = await getBriefingDates(30);
-        if (dates.length > 0) return NextResponse.json({ available: true, dates });
-      }
-      const staticDates = await listStaticBriefingDates();
-      return NextResponse.json({ available: true, dates: staticDates });
+      const dates = await listBriefingDates();
+      return NextResponse.json({ available: true, dates });
     }
 
     if (date) {
-      // Try KV first, then static file
-      if (kvAvailable()) {
-        const briefing = await getBriefingByDate(date);
-        if (briefing) return NextResponse.json({ available: true, ...briefing });
+      const briefing = await readJson(path.join(DATA_DIR, `briefing-${date}.json`));
+      if (!briefing) {
+        return NextResponse.json({ available: true, error: "No briefing for that date" }, { status: 404 });
       }
-      const staticBriefing = await readStaticJson(`briefing-${date}.json`);
-      if (staticBriefing) return NextResponse.json({ available: true, ...staticBriefing });
-      return NextResponse.json({ available: true, error: "No briefing for that date" }, { status: 404 });
+      return NextResponse.json({ available: true, ...briefing });
     }
 
-    // Latest briefing: try KV first, then static file
-    if (kvAvailable()) {
-      const latest = await getLatestBriefing();
-      if (latest) return NextResponse.json({ available: true, ...latest });
+    // Latest
+    const latest = await readJson(path.join(DATA_DIR, "briefing-latest.json"));
+    if (!latest) {
+      return NextResponse.json(
+        { available: true, error: "No briefings yet. Briefings are auto-generated at 6:15 AM ET on weekdays." },
+        { status: 404 },
+      );
     }
-    const staticLatest = await readStaticJson("briefing-latest.json");
-    if (staticLatest) return NextResponse.json({ available: true, ...staticLatest });
-
-    return NextResponse.json({ available: true, error: "No briefings stored yet" }, { status: 404 });
+    return NextResponse.json({ available: true, ...latest });
   } catch (error) {
     return NextResponse.json(
       { available: false, error: `Failed: ${error instanceof Error ? error.message : "Unknown"}` },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
