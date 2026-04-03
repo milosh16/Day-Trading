@@ -546,17 +546,23 @@ async function main(): Promise<void> {
       if (shouldCommit && process.env.CI) {
         try {
           const { execSync } = await import("child_process");
+          // Detect current branch dynamically
+          const branch = process.env.GITHUB_REF_NAME ||
+            execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf-8' }).trim() ||
+            'main';
+          log(`  Committing checkpoint to ${branch}...`);
           execSync(
-            'git pull origin claude/conviction-training --rebase 2>/dev/null || true; ' +
-            'git add training/results/ 2>/dev/null; ' +
-            'git diff --staged --quiet || ' +
-            '(git commit -m "Training progress: ' + trialNum + '/' + TOTAL_TRIALS + ' trials complete" && ' +
-            'git push origin claude/conviction-training)',
-            { stdio: "pipe", timeout: 60000 }
+            `git add training/results/ 2>/dev/null; ` +
+            `git diff --staged --quiet || ` +
+            `(git commit -m "Training checkpoint: ${trialNum}/${TOTAL_TRIALS} trials — best: ${state.bestScore}" && ` +
+            `git pull origin ${branch} --rebase 2>/dev/null; ` +
+            `git push origin HEAD:${branch})`,
+            { stdio: "pipe", timeout: 120000 }
           );
-          log(`  Results committed to repo (trial ${trialNum})`);
-        } catch {
-          log(`  (Could not push update — will retry next milestone)`);
+          log(`  Checkpoint committed and pushed (trial ${trialNum})`);
+        } catch (e) {
+          log(`  Checkpoint push failed: ${e instanceof Error ? e.message : String(e)}`);
+          log(`  (Will retry next milestone)`);
         }
       }
 
