@@ -2068,7 +2068,7 @@ Composite: (100x0.25) + (100x0.25) + (100x0.20) + (min(0.9/4x100, 100)x0.15) + (
 
 ---
 
-## v2 Trial 23 — 2025-01-22 (Wednesday — Netflix Record Earnings Gap + Trump Stargate AI Announcement)
+## v2 Trial 24 — 2025-01-22 (Wednesday — Netflix Record Earnings Gap + Trump Stargate AI Announcement)
 
 **Day Type:** Selected as "boring/random day" (70% bucket). **Surprise: NOT a quiet day.** Two major catalysts: (1) Netflix blowout Q4 2024 earnings reported after-hours January 21 — record 18.91M subscriber additions, nearly 2x consensus — stock surged +14% after-hours; (2) President Trump announced $500B "Stargate" AI infrastructure JV (Oracle, OpenAI, SoftBank) during the morning of January 22. Despite major headlines, the 6 AM assessment window produced zero tradeable setups.
 
@@ -2278,24 +2278,6 @@ Of 4 evaluated candidates: 3 would NOT have hit targets. 1 would have (HAL, conv
 8. **The "quiet day" assumption was wrong — but the outcome was still correct.** Jan 22, 2025 was NOT quiet (Netflix + Stargate). But the system handled it correctly: events either already priced (NFLX) or unknowable (Stargate). Day-type categorization matters less than the conviction framework's real-time assessment.
 
 9. **New training data point: post-earnings gap-chase expected returns.** NFLX gapped up 14%, then gained only ~1.5% intraday from the open. This adds to the dataset: post-earnings gap-chase intraday returns are typically 1-3% (low) relative to gap-fill risk (high). The R/R is structurally unfavorable unless there is a secondary catalyst during the session.
-
-*Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
-
----
-
-## v2 Trial 24 — Tuesday, June 25, 2024 (Normal Summer Tuesday — NVDA Bounce, Narrow Market)
-
-**Day Type:** Normal day, 70% bucket.
-
-**Pre-market context (6:00 AM ET):** S&P ~5,447. NVDA fell -6.7% on Jun 24 (rotation out of AI). Consumer Confidence at 10 AM. No major earnings. Quiet setup.
-
-**Phase 1 Result: ZERO TRADES.** Highest candidate NVDA LONG at 63.0 (catalystClarity 55, informationEdge 45 — "stock bounced" is not a thesis). XLK LONG 63.1, XLV LONG 58.0.
-
-**Actual Outcomes:** S&P +0.39%, Dow -0.76% (narrow market). NVDA +3.5%. XLK +1.8%. NVDA target would have hit. But breadth was terrible — only mega-cap tech drove the index.
-
-**Composite Score: N/A — ZERO TRADES (CORRECT OUTPUT)**
-
-**Key Learnings:** (1) Normal summer days confirm zero-trade discipline. (2) NVDA bounce without catalyst is mean-reversion, not alpha (~55% win rate). (3) Narrow markets are untradeable for broad strategies. (4) Consumer Confidence doesn't move markets. (5) Two boring-day zero-trade outputs now — the "where is the daily alpha" question is real.
 
 *Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
 
