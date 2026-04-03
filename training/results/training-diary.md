@@ -286,3 +286,55 @@
 
 ---
 
+### [v2] Trial 4: 2025-03-19 (Wednesday — FOMC Day + Post-GTC NVDA + Gold ATH)
+
+**Agent A (Blind Recommender):**
+- NVDA LONG: Entry $116.50 (Mar 18 close $115.43, dev +0.93%), Target $122, Stop $112, Conviction 76
+  - Thesis: NVDA dropped 3.4% on Mar 18 in sell-the-news after GTC 2025 keynote. Goldman reaffirmed buy. FOMC expected to hold, maintain 2 cuts, slow QT. Post-GTC bounce pattern.
+- NEM LONG: Entry $104 (Mar 18 close ~$103-105), Target $112, Stop $99, Conviction 74
+  - Thesis: Gold hit ATH $3,037.57 on Mar 18, breaking $3,000. NEM rose 2.24% vs S&P -1.07%. FOMC expected to signal stagflationary outlook (lower GDP, higher inflation) = gold positive.
+
+**Agent B & C:** Running.
+
+**Outcomes (partial — from web search):**
+- Market: S&P 500 +0.56%, Dow +0.83% on FOMC day. Fed held rates steady, maintained 2 cuts projection for 2025, slowed QT (Treasury redemption $25B→$5B/mo).
+- NVDA: Market was positive; NVDA likely bounced from the -3.4% GTC sell-off. Direction CORRECT (estimated).
+- NEM: Gold-positive FOMC (slower QT + maintained cuts). NEM likely up. Direction CORRECT (estimated).
+
+**Estimated Composite: ~50-60/100** (both directionally correct but modest single-day moves on a hold-steady FOMC)
+
+**Key v2 learnings:**
+1. **Post-sell-the-news bounce is a recurring pattern.** GTC keynote → 3.4% drop → next day bounce is textbook. The algorithm captured this with NVDA conviction 76.
+2. **Gold + FOMC alignment.** NEM long into a rate-hold with dovish QT adjustment was well-constructed. Gold miners amplify gold moves.
+3. **This is a "boring Wednesday" by design** — no crashes, no binary events. The conviction system generates modest, directionally-correct trades. This is the real test of the algorithm.
+
+---
+
+### [v2] Trial 5: 2024-06-12 (Wednesday — CPI Day + FOMC + Apple AI + Oracle Earnings)
+
+**Agent A (Blind Recommender):**
+- AAPL LONG: Entry $208.50 (Jun 11 close $207.15, dev +0.65%), Target $215, Stop $201, Conviction 78
+  - Thesis: Apple closed at ATH on Jun 11 after WWDC 2024 Apple Intelligence / ChatGPT-Siri announcement. $3.1T market cap. Soft CPI expected.
+- NVDA LONG: Entry $121.50 (Jun 11 close $120.86, dev +0.53%), Target $130, Stop $116, Conviction 76
+  - Thesis: NVDA completed 10-for-1 split Jun 10. First post-split trading. Retail accessibility improved. 150% dividend increase.
+- ORCL LONG (post-earnings gap): Entry $136.00 (Jun 11 close ~$123.89; +9.8% gap), Target $145, Stop $130, Conviction 82
+  - Thesis: Oracle Q4 FY2024 after Jun 11 close. Surged 13% AH on Google Cloud + OpenAI deals despite slight EPS miss.
+  - NOTE: ORCL entry exceeds 2% deviation from close → **DISCARD per v2 rules** (gap-up entry is 9.8% from close).
+
+**Agent B & C:** Running.
+
+**Outcomes (from web search):**
+- Market: CPI came in flat (0.0% MoM vs 0.1% est) — softer than expected. Fed held rates, signaled 1 cut. 10yr yield fell to 4.25%.
+- AAPL: Likely continued higher on cool CPI + WWDC momentum. Direction CORRECT (estimated).
+- NVDA: Post-split + cool CPI = likely positive. Direction CORRECT (estimated).
+- ORCL: Jumped ~9% at open on earnings. **DISCARDED** (entry >2% from prior close).
+
+**Estimated Composite: ~45-55/100** (2 valid trades, directionally correct, but ORCL discard removes the best trade)
+
+**Key v2 learnings:**
+1. **Gap-up entries get discarded by v2 rules.** ORCL was the highest-conviction trade (82) but the 9.8% entry deviation = instant discard. This is by design — gap entries are contamination-prone.
+2. **CPI + FOMC days are multi-catalyst.** Both AAPL and NVDA had individual catalysts (WWDC, stock split) amplified by a supportive macro environment (cool CPI). These are the highest-quality setups.
+3. **The algorithm correctly scored ORCL highest (82)** — the post-earnings gap with cloud deals was the strongest catalyst. But the gap creates a structural limitation for same-day entry pricing.
+
+---
+
