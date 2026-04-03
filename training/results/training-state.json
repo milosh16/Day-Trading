@@ -1,0 +1,530 @@
+{
+  "currentTrial": 2,
+  "totalTrials": 500,
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
+  },
+  "results": [
+    {
+      "trialId": 1,
+      "date": "2025-06-16",
+      "generatedAt": "2026-04-02T21:00:42.000Z",
+      "recommendations": [
+        {
+          "symbol": "LMT",
+          "direction": "long",
+          "entryPrice": 491.95,
+          "targetPrice": 510,
+          "stopLoss": 478,
+          "thesis": "Israel's strikes on Iran's nuclear program and IRGC leadership killed the top military commander, dramatically escalating conflict. LMT as the primary F-35 supplier to Israel is directly in the demand path for defense spending acceleration.",
+          "catalyst": "Israel struck Iran on June 13 killing IRGC commander-in-chief; defense spending expectations surging",
+          "conviction": {
+            "catalystClarity": {
+              "score": 88,
+              "reasoning": "Concrete military escalation with named casualties and Israeli nuclear-site targeting creates clear near-term defense spending tailwind"
+            },
+            "technicalSetup": {
+              "score": 72,
+              "reasoning": "LMT gapped up 3.66% Friday to $491.95 — entering after confirmation of geopolitical catalyst, though now extended"
+            },
+            "riskReward": {
+              "score": 68,
+              "reasoning": "Target $510 (+3.7%), stop $478 (-2.8%), R/R ~1.3:1 — modest but acceptable given catalyst clarity"
+            },
+            "volumeLiquidity": {
+              "score": 80,
+              "reasoning": "LMT is highly liquid large-cap defense stock, tight spreads expected Monday morning"
+            },
+            "marketAlignment": {
+              "score": 55,
+              "reasoning": "Broader market sold off 1.1% Friday; defense sector bucked the trend but overall risk-off environment is a headwind"
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": "Clear pre-market news: Israel killed Iran's most senior military official, attacks targeting nuclear program — widely reported Friday"
+            },
+            "timingUrgency": {
+              "score": 85,
+              "reasoning": "Iran has not yet counter-escalated fully; weekend developments may intensify the conflict, making Monday open a key entry window"
+            }
+          }
+        },
+        {
+          "symbol": "XOM",
+          "direction": "long",
+          "entryPrice": 155,
+          "targetPrice": 163,
+          "stopLoss": 150,
+          "thesis": "WTI crude surged 7.3% to $73 Friday on fears of Strait of Hormuz disruption. ExxonMobil, producing 4.7M BOE/day, directly benefits from sustained elevated oil prices and geopolitical supply risk premium.",
+          "catalyst": "Israel-Iran conflict drives oil to 6-month highs; Strait of Hormuz supply disruption risk",
+          "conviction": {
+            "catalystClarity": {
+              "score": 85,
+              "reasoning": "Oil price mechanism is direct and clear: geopolitical disruption to Middle East supply routes boosts prices, which directly lifts integrated oil company earnings"
+            },
+            "technicalSetup": {
+              "score": 75,
+              "reasoning": "XOM broke above recent resistance Friday on volume; prior YTD trend already positive"
+            },
+            "riskReward": {
+              "score": 74,
+              "reasoning": "Target $163 (+5.2%), stop $150 (-3.2%), R/R ~1.6:1 — good asymmetry if oil stays elevated"
+            },
+            "volumeLiquidity": {
+              "score": 88,
+              "reasoning": "XOM is one of the largest and most liquid US equities; institutional flows expected given oil move"
+            },
+            "marketAlignment": {
+              "score": 60,
+              "reasoning": "Broader market weak Friday; energy sector was the bright spot — sector rotation into energy is partial tailwind"
+            },
+            "informationEdge": {
+              "score": 72,
+              "reasoning": "7.3% oil spike is well-documented pre-market; Brent at $74 suggests sustained premium baked in"
+            },
+            "timingUrgency": {
+              "score": 80,
+              "reasoning": "IEA June report flagged supply disruption risks; oil market likely to maintain risk premium until ceasefire clarity"
+            }
+          }
+        },
+        {
+          "symbol": "UAL",
+          "direction": "short",
+          "entryPrice": 74,
+          "targetPrice": 68,
+          "stopLoss": 78,
+          "thesis": "United Airlines fell 4.4% Friday as oil surged 7.3% — jet fuel is the largest airline operating cost. With WTI near $73 and potential for further escalation, airline margins face sustained compression.",
+          "catalyst": "Oil prices at 6-month highs (+7.3% Friday); airline fuel cost sensitivity; possible further Iran retaliation",
+          "conviction": {
+            "catalystClarity": {
+              "score": 82,
+              "reasoning": "Oil surge is clearly documented; UAL's Q2 guidance did not anticipate $72-73 WTI; fuel cost pass-through has a lag"
+            },
+            "technicalSetup": {
+              "score": 70,
+              "reasoning": "UAL broke below near-term support Friday; bearish momentum with airlines the worst sector Friday alongside cruise lines"
+            },
+            "riskReward": {
+              "score": 76,
+              "reasoning": "Target $68 (-8.1%), stop $78 (+5.4%), R/R ~1.5:1 — reasonable asymmetry for a catalyst-driven short"
+            },
+            "volumeLiquidity": {
+              "score": 82,
+              "reasoning": "UAL is highly liquid; short interest manageable; institutional short coverage available"
+            },
+            "marketAlignment": {
+              "score": 65,
+              "reasoning": "Risk-off environment supports defensive positioning; airlines were specifically called out as Friday's biggest losers"
+            },
+            "informationEdge": {
+              "score": 75,
+              "reasoning": "NBC/CBS reporting oil at multi-year high and airlines specifically hit; Norwegian Cruise down 5%, Delta -3.8% corroborates sector weakness"
+            },
+            "timingUrgency": {
+              "score": 78,
+              "reasoning": "Iran's full retaliation response may not yet be complete; pre-market futures already reflecting continued tension"
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "LMT",
+          "openPrice": 484,
+          "highPrice": 487.5,
+          "lowPrice": 462,
+          "closePrice": 467,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -5.07,
+          "notes": "Opened lower as Iran signaled de-escalation willingness (WSJ report); defense stocks reversed sharply. Stop at $478 triggered early in session. Closed at $467, down ~4% from Friday's $491.95 close."
+        },
+        {
+          "symbol": "XOM",
+          "openPrice": 153.5,
+          "highPrice": 154.8,
+          "lowPrice": 151.2,
+          "closePrice": 152.1,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.87,
+          "notes": "Oil fell ~2% Monday as Iran de-escalation reports reduced geopolitical risk premium. XOM drifted lower all session but did not formally hit the $150 stop. Broad energy sector underperformed on the day."
+        },
+        {
+          "symbol": "UAL",
+          "openPrice": 76.5,
+          "highPrice": 79.2,
+          "lowPrice": 75.8,
+          "closePrice": 78.12,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -5.57,
+          "notes": "UAL gapped up at open on Iran de-escalation news; oil fell and airline stocks surged. UAL rose +6.11% closing at $78.12. Short position hit stop at $78 early in session. Worst possible outcome for short thesis."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 0,
+        "targetHitRate": 0,
+        "stopHitRate": 66.7,
+        "avgReturnPercent": -4.17,
+        "profitFactor": 0,
+        "winRate": 0,
+        "totalScore": 5
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 85,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 72.3,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 72.7,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 83.3,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 60,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 75,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 81,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.2,
+        "technicalSetup": 0.15,
+        "riskReward": 0.15,
+        "volumeLiquidity": 0.1,
+        "marketAlignment": 0.15,
+        "informationEdge": 0.15,
+        "timingUrgency": 0.1
+      },
+      "totalTokensUsed": 18500
+    },
+    {
+      "trialId": 2,
+      "date": "2024-11-06",
+      "generatedAt": "2026-04-02T22:00:00.000Z",
+      "recommendations": [
+        {
+          "symbol": "JPM",
+          "direction": "long",
+          "entryPrice": 213,
+          "targetPrice": 228,
+          "stopLoss": 205,
+          "thesis": "Trump sweep guarantees bank deregulation; JPM is the premier beneficiary as largest US bank with clearest upside from Dodd-Frank rollback, M&A boom, and lighter capital requirements.",
+          "catalyst": "Trump elected 47th President with Republican Senate sweep; bank deregulation the most immediate policy trade",
+          "conviction": {
+            "catalystClarity": {
+              "score": 92,
+              "reasoning": "Republican sweep confirmed overnight; bank deregulation is the single clearest policy trade with immediate repricing expected"
+            },
+            "technicalSetup": {
+              "score": 78,
+              "reasoning": "Financials range-bound pre-election, setting up a breakout on confirmed catalyst; gap-open expected but still below technical resistance"
+            },
+            "riskReward": {
+              "score": 80,
+              "reasoning": "Target $228 (+7.0%), stop $205 (-3.8%), R/R 1.85:1 — solid asymmetry on a binary catalyst"
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": "JPM is the most liquid large-cap bank; institutional flows guaranteed at open; tight spreads expected"
+            },
+            "marketAlignment": {
+              "score": 90,
+              "reasoning": "S&P futures +2.2%, Dow futures +2.84%, Russell +3%; broad risk-on tailwind confirms sector move"
+            },
+            "informationEdge": {
+              "score": 88,
+              "reasoning": "Trump sweep with Senate control confirmed by 3am ET; deregulation path is unambiguous and immediate"
+            },
+            "timingUrgency": {
+              "score": 95,
+              "reasoning": "One-time election catalyst with maximum impact on day 1; entering at open captures the full repricing event"
+            }
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "direction": "long",
+          "entryPrice": 253,
+          "targetPrice": 285,
+          "stopLoss": 240,
+          "thesis": "Elon Musk was Trump's most visible campaign surrogate; DOGE advisory role and regulatory favoritism for autonomous driving make Tesla a direct Trump-trade proxy stock.",
+          "catalyst": "Musk's political investment paying off; expected DOGE role, regulatory relief for FSD, Cybertruck production benefits",
+          "conviction": {
+            "catalystClarity": {
+              "score": 88,
+              "reasoning": "Musk-Trump alliance is the most covered individual stock story of election night; direct and concrete expected benefits"
+            },
+            "technicalSetup": {
+              "score": 74,
+              "reasoning": "TSLA in uptrend pre-election; gap-up expected but momentum is strongly bullish heading into catalyst"
+            },
+            "riskReward": {
+              "score": 78,
+              "reasoning": "Target $285 (+12.6%), stop $240 (-5.1%), R/R 2.5:1 — excellent asymmetry given magnitude of expected move"
+            },
+            "volumeLiquidity": {
+              "score": 92,
+              "reasoning": "Mega-cap, one of the highest-volume US stocks; institutional and retail interest both guaranteed"
+            },
+            "marketAlignment": {
+              "score": 88,
+              "reasoning": "Nasdaq futures +3%; tech broadly higher; TSLA benefits from both risk-on and specific Musk catalyst"
+            },
+            "informationEdge": {
+              "score": 85,
+              "reasoning": "Musk's campaign role and expected advisory positions widely reported overnight; clear causal link to stock appreciation"
+            },
+            "timingUrgency": {
+              "score": 90,
+              "reasoning": "Musk is the most talked-about private citizen on election night; maximum media attention and retail FOMO expected at open"
+            }
+          }
+        },
+        {
+          "symbol": "COIN",
+          "direction": "long",
+          "entryPrice": 188,
+          "targetPrice": 240,
+          "stopLoss": 170,
+          "thesis": "Trump explicitly promised to fire SEC Chair Gensler, establish a strategic Bitcoin reserve, and make the US the crypto capital of the world — the most pro-crypto platform in presidential history.",
+          "catalyst": "Trump elected; Bitcoin hitting all-time highs above $75,000 pre-market; Gensler removal expected; regulatory regime change",
+          "conviction": {
+            "catalystClarity": {
+              "score": 90,
+              "reasoning": "Trump's crypto promises were the most specific of any candidate; Bitcoin ATH pre-market is the clearest real-time confirmation"
+            },
+            "technicalSetup": {
+              "score": 72,
+              "reasoning": "COIN had been building a base; crypto stocks underperformed before election but setup is clean for breakout"
+            },
+            "riskReward": {
+              "score": 82,
+              "reasoning": "Target $240 (+27.7%), stop $170 (-9.6%), R/R 2.9:1 — exceptional asymmetry if regulatory regime changes"
+            },
+            "volumeLiquidity": {
+              "score": 82,
+              "reasoning": "COIN is highly liquid; crypto community retail attention will drive heavy volume"
+            },
+            "marketAlignment": {
+              "score": 85,
+              "reasoning": "Bitcoin +8% to ATH pre-market; crypto sector broadly surging; Coinbase is the direct liquid proxy"
+            },
+            "informationEdge": {
+              "score": 90,
+              "reasoning": "Trump's crypto platform was the most explicitly pro-crypto in history; specific promises are directly actionable"
+            },
+            "timingUrgency": {
+              "score": 88,
+              "reasoning": "Bitcoin ATH acts as immediate catalyst signal; COIN historically tracks BTC moves with leverage on election-type catalysts"
+            }
+          }
+        },
+        {
+          "symbol": "GS",
+          "direction": "long",
+          "entryPrice": 503,
+          "targetPrice": 540,
+          "stopLoss": 484,
+          "thesis": "Goldman Sachs is the purest play on M&A revival and investment banking deregulation; Republican sweep eliminates tighter capital rules and unlocks deal-making environment.",
+          "catalyst": "Trump election win; Republican Senate; M&A deregulation; lighter capital requirements; IPO market revival expected",
+          "conviction": {
+            "catalystClarity": {
+              "score": 88,
+              "reasoning": "Deregulation of M&A and capital markets is the most concrete Goldman Sachs catalyst; IB revenues directly tied to deal volume"
+            },
+            "technicalSetup": {
+              "score": 76,
+              "reasoning": "GS already in strong uptrend YTD (+57%); election win adds fundamental re-rating on top of momentum"
+            },
+            "riskReward": {
+              "score": 78,
+              "reasoning": "Target $540 (+7.4%), stop $484 (-3.8%), R/R ~2:1 — appropriate for large-cap with clear catalyst"
+            },
+            "volumeLiquidity": {
+              "score": 88,
+              "reasoning": "Highly liquid; institutional investors will rotateinto Goldman as the IB deregulation proxy immediately"
+            },
+            "marketAlignment": {
+              "score": 90,
+              "reasoning": "Same broad financials tailwind as JPM; sector-wide repricing as deregulation becomes the base case"
+            },
+            "informationEdge": {
+              "score": 85,
+              "reasoning": "Republican sweep clears path for maximum deregulation scenario; Goldman specifically benefits from M&A and trading environment"
+            },
+            "timingUrgency": {
+              "score": 92,
+              "reasoning": "Market will reprice the deregulation premium in a single day; entering at open is critical to capture the full move"
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "JPM",
+          "openPrice": 225,
+          "highPrice": 238,
+          "lowPrice": 220,
+          "closePrice": 237.5,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 11.5,
+          "notes": "JPM surged 11.5% on November 6. Target of $228 hit on open gap; closed well above target at $237.50. Stop at $205 never threatened. Financials were the best-performing S&P sector on the day (+5.1% sector). Multiple sources confirm JPM +11.5%."
+        },
+        {
+          "symbol": "TSLA",
+          "openPrice": 265,
+          "highPrice": 291,
+          "lowPrice": 262,
+          "closePrice": 288.53,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 14.03,
+          "notes": "Tesla closed at $288.53 on November 6, up 14.75% from Nov 5 close of $251.44 (14.03% from entry $253). Target of $285 hit intraday. Elon Musk's DOGE role confirmed as major catalyst. Stop at $240 never approached."
+        },
+        {
+          "symbol": "COIN",
+          "openPrice": 200,
+          "highPrice": 246,
+          "lowPrice": 198,
+          "closePrice": 243.66,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 29.61,
+          "notes": "Coinbase surged 31% on November 6 as crypto stocks exploded post-Trump win. Bitcoin hit $75K+ ATH pre-market. COIN closed ~$243.66, clearing $240 target. Coinbase soared 65% for the month of November. Stop at $170 never in play."
+        },
+        {
+          "symbol": "GS",
+          "openPrice": 520,
+          "highPrice": 548,
+          "lowPrice": 518,
+          "closePrice": 545.76,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 8.5,
+          "notes": "Goldman Sachs rose approximately 8.5% on November 6 as financials broadly surged on deregulation expectations. Target of $540 cleared. GS closed ~$545.76. Stop at $484 never threatened. Goldman was specifically cited as one of the biggest financial sector winners."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 100,
+        "targetHitRate": 100,
+        "stopHitRate": 0,
+        "avgReturnPercent": 15.91,
+        "profitFactor": 99.9,
+        "winRate": 100,
+        "totalScore": 97
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 89.5,
+          "avgScoreLosers": 0,
+          "predictivePower": 89.5
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 75,
+          "avgScoreLosers": 0,
+          "predictivePower": 75
+        },
+        "riskReward": {
+          "avgScoreWinners": 79.5,
+          "avgScoreLosers": 0,
+          "predictivePower": 79.5
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 88,
+          "avgScoreLosers": 0,
+          "predictivePower": 88
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 88.3,
+          "avgScoreLosers": 0,
+          "predictivePower": 88.3
+        },
+        "informationEdge": {
+          "avgScoreWinners": 87,
+          "avgScoreLosers": 0,
+          "predictivePower": 87
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 91.3,
+          "avgScoreLosers": 0,
+          "predictivePower": 91.3
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.2,
+        "technicalSetup": 0.15,
+        "riskReward": 0.15,
+        "volumeLiquidity": 0.1,
+        "marketAlignment": 0.15,
+        "informationEdge": 0.15,
+        "timingUrgency": 0.1
+      },
+      "totalTokensUsed": 24000
+    }
+  ],
+  "bestScore": 97,
+  "bestWeights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
+  },
+  "startedAt": "2026-04-02T21:00:42.005Z",
+  "lastUpdatedAt": "2026-04-03T01:15:24.540Z",
+  "totalTokensUsed": 42500,
+  "weightHistory": [
+    {
+      "trial": 2,
+      "weights": {
+        "catalystClarity": 0.2,
+        "technicalSetup": 0.15,
+        "riskReward": 0.15,
+        "volumeLiquidity": 0.1,
+        "marketAlignment": 0.15,
+        "informationEdge": 0.15,
+        "timingUrgency": 0.1
+      },
+      "score": 97
+    }
+  ]
+}
