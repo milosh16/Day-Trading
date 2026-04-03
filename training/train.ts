@@ -510,8 +510,8 @@ async function main(): Promise<void> {
         log(`  Best overall: ${state.bestScore}`);
         log("");
 
-        // Opus algorithm review every 50 trials
-        if (trialNum % 50 === 0) {
+        // Opus algorithm review every 10 trials (same cadence as weight optimization)
+        {
           log(`\n=== Opus Algorithm Review (trial ${trialNum}) ===`);
           try {
             const reviewResult = await opusAlgorithmReview(state);
