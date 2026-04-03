@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - claude/conviction-training
+      - claude/signal-trading-platform-lRjct
     paths:
       - '.github/workflows/trigger-training.yml'
       - 'training/**'
@@ -31,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: claude/conviction-training
+          ref: ${{ github.ref }}
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
 
@@ -51,7 +52,7 @@ jobs:
 
       - name: Pull latest state from repo
         run: |
-          git pull origin claude/conviction-training --rebase || true
+          git pull origin ${{ github.ref_name }} --rebase || true
           if [ -f training/results/training-state.json ]; then
             TRIALS=$(node -e "console.log(require('./training/results/training-state.json').currentTrial)" 2>/dev/null || echo "0")
             echo "Resuming from trial $TRIALS"
@@ -143,14 +144,14 @@ jobs:
       - name: Commit results to repo
         if: always()
         run: |
-          git pull origin claude/conviction-training --rebase || true
+          git pull origin ${{ github.ref_name }} --rebase || true
           git add training/results/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
             TRIALS=$(node -e "try{console.log(require('./training/results/training-state.json').currentTrial)}catch{console.log('?')}" 2>/dev/null || echo "?")
             git commit -m "Training checkpoint: ${TRIALS} trials complete"
-            git push origin claude/conviction-training || echo "Push failed"
+            git push origin HEAD:${{ github.ref_name }} || echo "Push failed"
           fi
 
       - name: Upload artifacts
@@ -172,7 +173,7 @@ jobs:
             if [ "$DONE" = "no" ]; then
               echo "Training incomplete — auto-restarting in 30s..."
               sleep 30
-              gh workflow run trigger-training.yml --ref claude/conviction-training || echo "Auto-restart failed. Trigger manually."
+              gh workflow run trigger-training.yml --ref ${{ github.ref_name }} || echo "Auto-restart failed. Trigger manually."
             else
               echo "Training complete!"
             fi
