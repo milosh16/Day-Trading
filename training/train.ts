@@ -87,6 +87,154 @@ function weightsToPrompt(weights: ConvictionWeights): string {
     .join("\n");
 }
 
+// ---- Opus Algorithm Review ----
+// Every 50 trials, Opus reviews all results and suggests improvements
+// to the algorithm, weights, threshold, and trading strategy.
+async function opusAlgorithmReview(
+  state: TrainingState
+): Promise<{ insights: string; weightAdjustments?: Record<string, number> }> {
+  const withTrades = state.results.filter((r) => r.recommendations.length > 0);
+  const noTrades = state.results.filter((r) => r.recommendations.length === 0);
+  const avgScore = withTrades.length > 0
+    ? withTrades.reduce((s, r) => s + r.scores.totalScore, 0) / withTrades.length : 0;
+  const avgWinRate = withTrades.length > 0
+    ? withTrades.reduce((s, r) => s + r.scores.winRate, 0) / withTrades.length : 0;
+  const avgPF = withTrades.length > 0
+    ? withTrades.reduce((s, r) => s + r.scores.profitFactor, 0) / withTrades.length : 0;
+
+  // Build dimension analysis summary
+  const dimSummary: Record<string, { avgPredictivePower: number; count: number }> = {};
+  for (const r of state.results) {
+    for (const [dim, analysis] of Object.entries(r.dimensionAnalysis)) {
+      if (!dimSummary[dim]) dimSummary[dim] = { avgPredictivePower: 0, count: 0 };
+      dimSummary[dim].avgPredictivePower += analysis.predictivePower;
+      dimSummary[dim].count++;
+    }
+  }
+  const dimReport = Object.entries(dimSummary)
+    .map(([dim, d]) => `  ${dim}: avg predictive power ${(d.avgPredictivePower / d.count).toFixed(1)}/100 (${d.count} samples)`)
+    .join("\n");
+
+  // Best and worst trials
+  const sorted = [...withTrades].sort((a, b) => b.scores.totalScore - a.scores.totalScore);
+  const best5 = sorted.slice(0, 5).map(r =>
+    `  Trial ${r.trialId} (${r.date}): score=${r.scores.totalScore}, win=${r.scores.winRate}%, PF=${r.scores.profitFactor}, trades=${r.recommendations.length} [${r.recommendations.map(rec => `${rec.symbol} ${rec.direction}`).join(", ")}]`
+  ).join("\n");
+  const worst5 = sorted.slice(-5).map(r =>
+    `  Trial ${r.trialId} (${r.date}): score=${r.scores.totalScore}, win=${r.scores.winRate}%, PF=${r.scores.profitFactor}, trades=${r.recommendations.length} [${r.recommendations.map(rec => `${rec.symbol} ${rec.direction}`).join(", ")}]`
+  ).join("\n");
+
+  // Common failure patterns
+  const stopHits = withTrades.flatMap(r => r.outcomes.filter(o => o.hitStop));
+  const avgStopReturn = stopHits.length > 0
+    ? stopHits.reduce((s, o) => s + o.actualReturnPercent, 0) / stopHits.length : 0;
+
+  const response = await callClaude({
+    system: `You are an elite quantitative trading algorithm reviewer. You are Claude Opus — the most capable model — tasked with reviewing and IMPROVING a conviction-based day trading algorithm after ${state.currentTrial} trials of backtesting.
+
+Your job is NOT to summarize. Your job is to find SPECIFIC, ACTIONABLE improvements to the algorithm. Think like a quant PM reviewing their junior analyst's model.
+
+Return your analysis as JSON wrapped in <json> tags:
+<json>{
+  "insights": "Your full analysis (3-5 paragraphs). Be specific. Name exact trials, patterns, failure modes.",
+  "weightAdjustments": {
+    "catalystClarity": 0.XX,
+    "technicalSetup": 0.XX,
+    "riskReward": 0.XX,
+    "volumeLiquidity": 0.XX,
+    "marketAlignment": 0.XX,
+    "informationEdge": 0.XX,
+    "timingUrgency": 0.XX
+  },
+  "thresholdRecommendation": 72,
+  "strategyChanges": [
+    "Specific change 1",
+    "Specific change 2"
+  ],
+  "blindSpots": [
+    "Pattern the algorithm is missing"
+  ]
+}</json>`,
+    messages: [{
+      role: "user",
+      content: `ALGORITHM REVIEW — ${state.currentTrial} TRIALS COMPLETE
+
+CURRENT WEIGHTS:
+${weightsToPrompt(state.weights)}
+
+PERFORMANCE SUMMARY:
+- Trials with trades: ${withTrades.length}
+- No-trade days: ${noTrades.length} (${((noTrades.length / state.results.length) * 100).toFixed(1)}%)
+- Average composite score: ${avgScore.toFixed(1)}/100
+- Average win rate: ${avgWinRate.toFixed(1)}%
+- Average profit factor: ${avgPF.toFixed(2)}
+- Best score: ${state.bestScore}
+- Stop-loss hits: ${stopHits.length} total, avg return on stopped trades: ${avgStopReturn.toFixed(2)}%
+
+DIMENSION PREDICTIVE POWER (across all trials):
+${dimReport}
+
+WEIGHT EVOLUTION:
+${state.weightHistory.map(w => `  Trial ${w.trial}: score=${w.score} | ${Object.entries(w.weights).map(([k, v]) => `${k.slice(0, 6)}=${(v * 100).toFixed(1)}%`).join(" ")}`).join("\n")}
+
+BEST 5 TRIALS:
+${best5}
+
+WORST 5 TRIALS:
+${worst5}
+
+Review this data. Identify:
+1. Which dimensions are actually predictive vs noise?
+2. Are the weights converging toward the right values?
+3. What types of trades consistently win vs lose?
+4. What blind spots does the algorithm have?
+5. Should the conviction threshold change?
+6. What specific changes would improve the next 50 trials?
+
+Be brutally honest. This algorithm manages real money.`,
+    }],
+    maxTokens: 4096,
+    useWebSearch: false,
+  });
+
+  const parsed = extractJson<{
+    insights: string;
+    weightAdjustments?: Record<string, number>;
+    thresholdRecommendation?: number;
+    strategyChanges?: string[];
+    blindSpots?: string[];
+  }>(response.text);
+
+  // Save the full review
+  const reviewPath = path.join(__dirname, "results", `opus-review-trial-${state.currentTrial}.json`);
+  fs.writeFileSync(reviewPath, JSON.stringify({
+    trial: state.currentTrial,
+    reviewedAt: new Date().toISOString(),
+    tokensUsed: response.inputTokens + response.outputTokens,
+    ...parsed,
+    rawResponse: response.text,
+  }, null, 2));
+
+  log(`  Opus review saved to: ${reviewPath}`);
+  if (parsed?.strategyChanges) {
+    log(`  Strategy changes recommended:`);
+    for (const change of parsed.strategyChanges) {
+      log(`    - ${change}`);
+    }
+  }
+  if (parsed?.blindSpots) {
+    log(`  Blind spots identified:`);
+    for (const spot of parsed.blindSpots) {
+      log(`    - ${spot}`);
+    }
+  }
+
+  return {
+    insights: parsed?.insights || response.text,
+    weightAdjustments: parsed?.weightAdjustments,
+  };
+}
+
 // ---- Core Training Loop ----
 async function generateRecommendations(
   date: string,
@@ -361,6 +509,31 @@ async function main(): Promise<void> {
         log(`  Rolling avg (last 10): ${avg10.toFixed(1)}`);
         log(`  Best overall: ${state.bestScore}`);
         log("");
+
+        // Opus algorithm review every 50 trials
+        if (trialNum % 50 === 0) {
+          log(`\n=== Opus Algorithm Review (trial ${trialNum}) ===`);
+          try {
+            const reviewResult = await opusAlgorithmReview(state);
+            log(`  Review complete. Insights saved.`);
+            if (reviewResult.weightAdjustments) {
+              log(`  Opus recommended weight adjustments — applying...`);
+              for (const [dim, adj] of Object.entries(reviewResult.weightAdjustments)) {
+                if (dim in state.weights && typeof adj === "number") {
+                  (state.weights as Record<string, number>)[dim] = Math.max(0.05, Math.min(0.35, adj));
+                }
+              }
+              // Re-normalize
+              const total = Object.values(state.weights).reduce((s, v) => s + v, 0);
+              for (const dim of Object.keys(state.weights)) {
+                (state.weights as Record<string, number>)[dim] /= total;
+              }
+              log(`  Adjusted weights:\n${weightsToPrompt(state.weights)}`);
+            }
+          } catch (e) {
+            log(`  Opus review failed: ${e instanceof Error ? e.message : String(e)}`);
+          }
+        }
 
         // (Diary commit handled below in the unified commit block)
       }

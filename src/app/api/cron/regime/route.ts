@@ -32,7 +32,7 @@ import {
 
 export const maxDuration = 300;
 
-const MODEL = process.env.BRIEFING_MODEL || "claude-sonnet-4-6";
+const MODEL = process.env.BRIEFING_MODEL || "claude-opus-4-6";
 
 const GLOBAL_SIGNALS_PROMPT = `You are SIGNAL's market regime scanner. Your job is to gather real-time global market data and return it as a structured JSON object.
 

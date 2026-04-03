@@ -12,7 +12,7 @@ const PROXY_API = process.env.SIGNAL_APP_URL
   ? `${process.env.SIGNAL_APP_URL}/api/anthropic`
   : "https://day-trading-sigma.vercel.app/api/anthropic";
 const API_VERSION = "2023-06-01";
-const MODEL = "claude-sonnet-4-6";
+const MODEL = process.env.TRAINING_MODEL || "claude-opus-4-6";
 
 function useDirectApi(): boolean {
   return !!process.env.ANTHROPIC_API_KEY;

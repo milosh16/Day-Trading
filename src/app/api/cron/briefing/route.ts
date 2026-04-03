@@ -12,7 +12,7 @@ import { storeBriefing, getLatestRegime, type StoredBriefing } from "@/lib/brief
 export const maxDuration = 300; // 5 min — works on Pro plan
 
 // Use Opus in prod (Pro plan), Sonnet in testing (Hobby)
-const MODEL = process.env.BRIEFING_MODEL || "claude-sonnet-4-6";
+const MODEL = process.env.BRIEFING_MODEL || "claude-opus-4-6";
 
 export async function GET(req: NextRequest) {
   // Verify cron secret to prevent unauthorized triggers

@@ -10,7 +10,7 @@ import { getBriefingByDate, storeAccuracy } from "@/lib/briefing-store";
 
 export const maxDuration = 300;
 
-const MODEL = process.env.BRIEFING_MODEL || "claude-sonnet-4-6";
+const MODEL = process.env.BRIEFING_MODEL || "claude-opus-4-6";
 
 export async function GET(req: NextRequest) {
   const authHeader = req.headers.get("authorization");
