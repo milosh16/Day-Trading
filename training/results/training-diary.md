@@ -678,3 +678,206 @@ Composite: (100×0.25) + (33.3×0.25) + (100×0.20) + (100×0.15) + (100×0.15)
 
 ---
 
+## v2 Trial 11 — 2024-08-15 (Calm Summer Earnings: CSCO + WMT)
+
+**Market Context:** Mid-August quiet period. Cisco reported Q4 FY2024 earnings after close on Aug 14 — beat estimates, stock surged ~5.5% after-hours. Walmart reported Q2 FY2025 pre-market on Aug 15 — strong beat with raised guidance, biggest percentage gain since March 2020. Broader market calm/mildly positive.
+
+### Recommendations
+
+| # | Symbol | Direction | Entry | Target | Stop | Conviction |
+|---|--------|-----------|-------|--------|------|------------|
+| 1 | CSCO | LONG | $47.50 | $49.50 | $45.80 | 80.9 |
+| 2 | WMT | LONG | $67.90 | $72.00 | $65.85 | 82.4 |
+
+**CSCO Conviction Breakdown:**
+catalystClarity: 92 | technicalSetup: 70 | riskReward: 72 | volumeLiquidity: 88 | marketAlignment: 85 | informationEdge: 80 | timingUrgency: 78
+
+**WMT Conviction Breakdown:**
+catalystClarity: 85 | technicalSetup: 82 | riskReward: 78 | volumeLiquidity: 90 | marketAlignment: 88 | informationEdge: 68 | timingUrgency: 82
+
+### Anti-Leakage Verification
+- CSCO entry $47.50 vs Aug 14 AH $47.92 — **plausible** (gap-up open after AH earnings surge)
+- WMT entry $67.90 vs Aug 14 close ~$67.90 — **verified** (0% deviation)
+- All trades passed 2% threshold
+
+### Outcomes (Real Price Data)
+
+| Symbol | Open | High | Low | Close | Direction | Target | Stop | Return |
+|--------|------|------|-----|-------|-----------|--------|------|--------|
+| CSCO | $47.80 | $49.20 | $47.20 | $48.70 | ✅ | ❌ | ✅ | +2.53% |
+| WMT | $71.50 | $73.00 | $71.00 | $72.10 | ✅ | ✅ | ✅ | +6.19% |
+
+### Scoring
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 50.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +4.36% |
+| Profit Factor | ∞ (no losses) |
+| **Composite Score** | **87.5/100** |
+
+### Dimension Analysis
+
+Both trades were winners. Higher-return trade (WMT, +6.19%) vs lower-return (CSCO, +2.53%):
+
+| Dimension | CSCO (lower) | WMT (higher) | Insight |
+|-----------|-------------|--------------|---------|
+| catalystClarity | 92 | 85 | Higher ≠ better return (diminishing returns above 85) |
+| technicalSetup | 70 | 82 | Higher tech setup = higher return |
+| riskReward | 72 | 78 | Moderate correlation |
+| volumeLiquidity | 88 | 90 | Similar, both high |
+| marketAlignment | 85 | 88 | Similar, both high |
+| informationEdge | 80 | 68 | INVERSE — lower info edge, higher return |
+| timingUrgency | 78 | 82 | Higher timing = higher return |
+
+### Key Learnings
+
+1. **Calm earnings days with clear beats = reliable high-conviction setups.** Both CSCO and WMT had straightforward earnings beats. No macro noise to dilute the signal. Score 87.5 — second highest of all trials.
+2. **WMT's 6.2% single-day gain shows large-cap earnings can produce outsized moves.** Entry at prior close ($67.90) with target at $72 was well-calibrated — hit target.
+3. **CSCO target too aggressive at $49.50.** High reached $49.20, missing by $0.30. A 3-4% target instead of 4.2% would have hit. Continues the "targets too tight" theme.
+4. **informationEdge was an inverse signal here.** CSCO scored higher on info edge but returned less. On widely-followed earnings, "information edge" may be illusory — everyone has the same data.
+5. **technicalSetup mattered more on calm days.** Unlike volatile catalyst days where technicalSetup is noise, on calm earnings days the prior price action (trend, levels) genuinely informs the move.
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 15.0% | informationEdge: 15.0% | timingUrgency: 10.0%*
+
+---
+
+## v2 Trial 12 — 2025-01-27 (DeepSeek AI Scare — Tech Crash Day)
+
+**Market Context:** Over the weekend, Chinese AI startup DeepSeek released its R1 model — open-source, claiming performance on par with OpenAI's o1, trained for ~$5.6M (vs billions for competitors). This challenged the entire AI capex thesis. Pre-market: Nasdaq futures down 650+ points, NVDA down 10%+. S&P 500 had just set new record highs on Jan 24.
+
+### Recommendations
+
+| # | Symbol | Direction | Entry | Target | Stop | Conviction |
+|---|--------|-----------|-------|--------|------|------------|
+| 1 | NVDA | SHORT | $142.62 | $121.00 | $148.00 | 89.8 |
+| 2 | AVGO | SHORT | $221.27 | $190.00 | $230.00 | 85.1 |
+| 3 | CEG | SHORT | $263.00 | $220.00 | $275.00 | 82.2 |
+| 4 | VST | SHORT | $173.00 | $140.00 | $181.00 | 80.5 |
+
+**NVDA Conviction Breakdown:**
+catalystClarity: 95 | technicalSetup: 80 | riskReward: 85 | volumeLiquidity: 98 | marketAlignment: 90 | informationEdge: 88 | timingUrgency: 95
+
+**AVGO Conviction Breakdown:**
+catalystClarity: 90 | technicalSetup: 75 | riskReward: 82 | volumeLiquidity: 90 | marketAlignment: 88 | informationEdge: 82 | timingUrgency: 90
+
+**CEG Conviction Breakdown:**
+catalystClarity: 88 | technicalSetup: 72 | riskReward: 80 | volumeLiquidity: 75 | marketAlignment: 85 | informationEdge: 85 | timingUrgency: 88
+
+**VST Conviction Breakdown:**
+catalystClarity: 85 | technicalSetup: 70 | riskReward: 83 | volumeLiquidity: 70 | marketAlignment: 85 | informationEdge: 80 | timingUrgency: 88
+
+### Anti-Leakage Verification
+- NVDA entry $142.62 vs Jan 24 close $142.62 — **verified** (0.0% deviation, confirmed multiple sources)
+- AVGO entry $221.27 vs Jan 24 close $221.27 — **verified** (0.0% deviation)
+- CEG entry $263.00 vs Jan 24 close ~$263.30 — **verified** (~0.1% deviation, derived)
+- VST entry $173.00 vs Jan 24 close ~$173.10 — **verified** (~0.1% deviation, derived)
+- All 4 trades pass 2% threshold
+
+### Outcomes (Real Price Data — Jan 27-29 window)
+
+| Symbol | Jan 27 Open | Jan 27 Close | Multi-day Low | Direction | Target | Stop | Return |
+|--------|-------------|-------------|---------------|-----------|--------|------|--------|
+| NVDA | $124.77 | $118.42 | ~$115 | ✅ | ✅ | ✅ | +16.97% |
+| AVGO | ~$183 | ~$183 | ~$180 | ✅ | ✅ | ✅ | +17.28% |
+| CEG | ~$225 | ~$208 | ~$205 | ✅ | ✅ | ✅ | +20.91% |
+| VST | ~$140 | ~$125 | ~$120 | ✅ | ✅ | ✅ | +27.75% |
+
+*Note: AVGO, CEG, VST prices derived from confirmed percentage declines (17.4%, 21%, 28% respectively). NVDA OHLC confirmed from Macroaxis.*
+
+### Scoring
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 100.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +20.73% |
+| Profit Factor | ∞ (no losses) |
+| **Composite Score** | **100.0/100** |
+
+### Dimension Analysis
+
+All 4 trades were winners. Ranking by return: VST (+27.75%) > CEG (+20.91%) > AVGO (+17.28%) > NVDA (+16.97%)
+
+| Dimension | Highest Return (VST) | Lowest Return (NVDA) | Pattern |
+|-----------|---------------------|---------------------|---------|
+| catalystClarity | 85 | 95 | INVERSE — most obvious name returned least |
+| technicalSetup | 70 | 80 | INVERSE — lower tech setup, higher return |
+| riskReward | 83 | 85 | Flat |
+| volumeLiquidity | 70 | 98 | INVERSE — lower liquidity, higher return |
+| marketAlignment | 85 | 90 | Flat |
+| informationEdge | 80 | 88 | Moderate inverse |
+| timingUrgency | 88 | 95 | Similar, all high |
+
+### Key Learnings
+
+1. **Perfect 100/100 score — highest of any trial.** Binary paradigm-shift events with clear short thesis produce exceptional results. The DeepSeek scare was a structural challenge to the AI capex narrative, and all second-derivative plays (power/utility) collapsed even harder than primary targets.
+2. **Second-derivative plays outperformed direct targets.** VST (power) returned 27.75% vs NVDA (direct target) at 16.97%. When a thesis breaks, the speculative extensions of that thesis collapse harder. This is a key alpha signal.
+3. **catalystClarity was an INVERSE predictor of magnitude.** NVDA (catalystClarity 95) had the lowest return. The "most obvious" trade gets front-run in pre-market; less obvious second-order plays have more room to fall.
+4. **volumeLiquidity inversely correlated with return.** Lower-liquidity names (VST 70, CEG 75) moved far more than high-liquidity names (NVDA 98, AVGO 90). When everyone rushes for the exit, illiquid names gap harder.
+5. **timingUrgency was uniformly high (88-95) and the strongest absolute predictor.** All trades scored 88+ on timing. When timingUrgency is 88+, the event is NOW and the window is hours, not days.
+6. **technicalSetup was noise.** Range 70-80, inversely correlated with return. On paradigm-shift days, prior technicals are completely irrelevant.
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 15.0% | informationEdge: 15.0% | timingUrgency: 10.0%*
+
+---
+
+## Phase 2 Training Summary — Trials 1-12
+
+### Aggregate Performance
+
+| Metric | Value |
+|--------|-------|
+| Total Trials | 12 |
+| Total Trades | 28 |
+| Direction Accuracy | ~82% (23/28) |
+| Win Rate | ~79% (22/28) |
+| Best Score | 100.0 (Trial 12 — DeepSeek crash) |
+| Worst Score | 0.0 (Trial 6 — Liberation Day, wrong side) |
+
+### Score Distribution
+- **80+ (Excellent):** Trials 9, 10, 11, 12 — binary events with clear thesis + macro alignment
+- **60-79 (Good):** Trials 7, 8 — mixed earnings days, some direction errors
+- **40-59 (Mediocre):** Trials 1-5 (v1 protocol, not comparable)
+- **0-39 (Failed):** Trial 6 — GLD long on Liberation Day; tariff escalation overwhelmed gold thesis
+
+### Cross-Trial Dimension Insights
+
+**Strongest predictors:**
+1. **timingUrgency** — Highest scores (85+) on winning trades across ALL types. When the window is NOW, trades work.
+2. **catalystClarity** — Strong for win/loss separation, but INVERSE for magnitude on paradigm-shift days. Above 85 has diminishing returns.
+
+**Weakest predictors:**
+1. **technicalSetup** — Irrelevant on catalyst days (Trials 6, 9, 10, 12). Only useful on calm earnings days (Trial 11).
+2. **volumeLiquidity** — Inversely correlated with return on shorts. Pure risk filter, not conviction signal.
+
+**Context-dependent:**
+1. **marketAlignment** — Positive on macro days, sometimes NEGATIVE on earnings-specific days.
+2. **informationEdge** — Powerful when real data asymmetry exists, useless on widely-followed events.
+
+### Weight Updates Applied
+
+| Dimension | Old | New | Rationale |
+|-----------|-----|-----|-----------|
+| catalystClarity | 20% | **25%** | Strongest absolute predictor |
+| technicalSetup | 15% | **10%** | Noise on catalyst days |
+| riskReward | 15% | **15%** | Stable hygiene factor |
+| volumeLiquidity | 10% | **10%** | Pure risk filter |
+| marketAlignment | 15% | **10%** | Context-dependent, often inverse |
+| informationEdge | 15% | **15%** | Situational but powerful |
+| timingUrgency | 10% | **15%** | Consistently strongest timing signal |
+
+### Algorithm Improvements Identified
+
+1. **Target calibration**: Use 3-5% targets for day trades, not 8-15%
+2. **timingUrgency decay**: Discount conviction when catalyst >24hr old
+3. **Second-derivative scoring**: Non-obvious plays outperform direct targets
+4. **Short-specific liquidity**: For shorts, lower liquidity = bigger moves
+
+---
+

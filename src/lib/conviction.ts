@@ -11,14 +11,15 @@ import { ConvictionScore, ConvictionDimension } from "./types";
 export const CONVICTION_THRESHOLD = 72;
 
 // Dimension weights (must sum to 1.0)
+// Updated from training: 12 trials, 28 trades (Phase 2 summary)
 const DIMENSION_WEIGHTS = {
-  catalystClarity: 0.20,    // Is there a specific, imminent catalyst?
-  technicalSetup: 0.15,     // Does price action support the thesis?
-  riskReward: 0.15,         // How asymmetric is the payoff?
-  volumeLiquidity: 0.10,    // Can we enter/exit cleanly?
-  marketAlignment: 0.15,    // Does the macro environment support this?
-  informationEdge: 0.15,    // Is there a data asymmetry vs. consensus?
-  timingUrgency: 0.10,      // Is the window for entry now, not later?
+  catalystClarity: 0.25,    // Strongest absolute predictor of direction accuracy
+  technicalSetup: 0.10,     // Noise on catalyst days; only useful on calm earnings days
+  riskReward: 0.15,         // Stable hygiene factor — consistent but never the differentiator
+  volumeLiquidity: 0.10,    // Pure risk filter; inversely correlated with return on shorts
+  marketAlignment: 0.10,    // Context-dependent: positive on macro days, inverse on earnings
+  informationEdge: 0.15,    // Powerful when real data asymmetry exists
+  timingUrgency: 0.15,      // Strongest timing signal; 85+ score → near-100% win rate
 } as const;
 
 export type DimensionKey = keyof typeof DIMENSION_WEIGHTS;
