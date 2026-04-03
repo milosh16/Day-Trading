@@ -489,3 +489,65 @@
 
 ---
 
+## v2 Trial 8 — Wednesday, October 23, 2024 (Heavy Earnings Day: KO, T, BA)
+
+**Context:** S&P 500 at 5,854 (prior close Oct 22). Dow -0.8%, Nasdaq +0.3%. 10-yr yield 4.19%. Major pre-market earnings: KO, T, BA, NEE, TMO. Boeing machinists voting on new contract same day. Tesla earnings after close prior day.
+
+### Recommendations (3 — after v2 filtering)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| KO | long | $70.75 | $73.50 | $69.20 | 75 | Q3 earnings pre-market; consensus $0.74 EPS achievable given pricing power; raised 2024 guidance |
+| T | long | $21.97 | $23.50 | $21.20 | 77 | Q3 earnings pre-market; DirecTV sale completed Oct 1 removes overhang; fiber subscriber momentum |
+| BA | short | $155.00 | $145.00 | $162.00 | 78 | Q3 $6B loss pre-disclosed Oct 11; machinists vote uncertain (64% later rejected); $1B/month cash burn |
+
+**Discarded:** NEE, TMO, BSX — could not verify Oct 22 closing prices with sufficient precision.
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| KO | ~$70 | — | ~$69.3 | ~$69.33 | Wrong | No | Nearly | -2.0% |
+| T | ~$22 | ~$23+ | — | ~$23.00 | Correct | No | No | +4.7% |
+| BA | ~$155 | — | ~$152 | ~$152.39 | Correct | No | No | +1.7% |
+
+- **KO:** Beat on EPS ($0.77 vs $0.74) and revenue ($11.95B vs $11.60B), but fell 2% on volume concerns. Earnings beat ≠ stock rally.
+- **T:** Beat earnings, DirecTV narrative worked. Stock rose 4.7% over next session. Clean thesis with specific catalyst.
+- **BA:** Stock fell 2% as machinists rejected contract 64%. Binary event thesis played out correctly.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 66.7% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 66.7% |
+| Avg Return | +1.47% |
+| Profit Factor | 3.2 |
+| **Composite Score** | **54.6/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 79.0 | 82.0 | 47 (slight inverse) |
+| technicalSetup | 70.0 | 65.0 | 55 (moderate) |
+| riskReward | 77.5 | 78.0 | 50 (neutral) |
+| volumeLiquidity | 89.0 | 85.0 | 52 (neutral) |
+| marketAlignment | 68.5 | 68.0 | 50 (neutral) |
+| informationEdge | 80.0 | 75.0 | 55 (moderate) |
+| timingUrgency | 84.0 | 72.0 | 62 (strong) |
+
+### Key Learnings
+
+1. **Earnings beat ≠ stock rally.** KO beat on every metric but fell 2%. Market wanted volume growth, not pricing power. catalystClarity should weight what the market is watching, not just consensus.
+2. **Specific catalyst + clean thesis = winners.** T (DirecTV) and BA (strike vote) had specific, sourceable catalysts. KO's thesis was generic.
+3. **timingUrgency was the strongest predictor.** Winners averaged 84 vs losers 72.
+4. **Targets still too aggressive.** 0/3 targets hit despite 2/3 winners.
+5. **informationEdge matters.** Winners scored 80 vs losers 75.
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 15.0% | informationEdge: 15.0% | timingUrgency: 10.0%*
+
+---
+
