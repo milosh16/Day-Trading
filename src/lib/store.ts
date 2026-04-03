@@ -4,6 +4,7 @@
 
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import { useState, useEffect } from "react";
 import {
   TradeRecommendation,
   Trade,
@@ -15,6 +16,14 @@ import {
   BacktestIteration,
   PerformanceMetrics,
 } from "./types";
+
+// --- Hydration-safe hook for SSR ---
+// Prevents hydration mismatch when persisted stores load from localStorage
+export function useHydrated() {
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => { setHydrated(true); }, []);
+  return hydrated;
+}
 
 // --- Settings Store (persisted to localStorage) ---
 interface SettingsState {
