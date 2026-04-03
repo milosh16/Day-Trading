@@ -936,3 +936,54 @@ June CPI: **-0.1% MoM** (first negative since May 2020). Massive rotation trigge
 
 ---
 
+## v2 Trial 14 — 2024-03-08 (NFP Friday — Earnings Gap Conflict)
+
+**Market Context:** S&P 500 at new ATH ~5,157. AI/semiconductor rally in full swing. Powell testimony (Mar 7) was dovish — "not far" from confidence to cut. After-hours Mar 7: AVGO beat on AI revenue ($2.3B), GPS massive turnaround beat, COST modest beat. NFP due 8:30 AM (consensus +200K).
+
+### Recommendations Generated
+
+| # | Symbol | Direction | Entry | Target | Stop | Conviction | Status |
+|---|--------|-----------|-------|--------|------|------------|--------|
+| 1 | AVGO | LONG | $1,406 | $1,460 | $1,365 | 84.7 | Adjusted to $1,396 |
+| 2 | GPS | LONG | $27.50 | $28.90 | $26.30 | 78.7 | DISCARDED (13.5% gap) |
+| 3 | COST | LONG | $728 | $750 | $714 | 68.0 | Below threshold |
+
+**AVGO Conviction:** catalystClarity: 92 | technicalSetup: 80 | riskReward: 75 | volumeLiquidity: 90 | marketAlignment: 85 | informationEdge: 78 | timingUrgency: 88
+
+### Anti-Leakage Verification
+- AVGO entry $1,406 vs Mar 7 close $1,369 — **2.67% deviation → adjusted to $1,396** (within 2%)
+- GPS entry $27.50 vs Mar 7 close $24.23 — **13.5% deviation → DISCARDED**
+- COST was already below threshold
+
+### Outcomes (AVGO only — market-on-open execution at ~$1,416)
+
+| Symbol | Open | High | Low | Close | Direction | Target | Stop | Return |
+|--------|------|------|-----|-------|-----------|--------|------|--------|
+| AVGO | $1,416 | $1,438 | $1,390 | $1,406 | ❌ | ❌ | ✅ | -0.70% |
+
+*NFP came in at +275K (above +200K consensus). Market absorbed it; S&P closed higher. But AVGO faded from its gap-up open.*
+
+### Scoring
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% (0/1) |
+| Target Hit Rate | 0.0% (0/1) |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% (0/1) |
+| Profit Factor | 0.0 |
+| **Composite Score** | **15.0/100** |
+
+### Key Learnings
+
+1. **Post-earnings gap-ups fundamentally conflict with the 2% entry rule.** If the catalyst IS the earnings beat, the stock will gap beyond 2% for any meaningful beat, making the trade untradeable under strict rules. This is a structural blindspot.
+2. **The 2% rule correctly filtered GPS** (13.5% gap) where chasing would have been risky. But it also killed the correct AVGO thesis — the stock DID gap up on legitimate AI revenue acceleration.
+3. **Gap-up fades are common on earnings.** AVGO opened at $1,416 and closed at $1,406. The "move" happened in after-hours and pre-market. By market open, the information edge was gone.
+4. **timingUrgency should be DISCOUNTED for earnings gap-ups.** High urgency pushes you to chase gaps where the move is already priced in. Urgency 88 was too high for this setup.
+5. **STRUCTURAL RECOMMENDATION: Two-tier entry tolerance.** (a) 2% for non-earnings catalysts, (b) Allow gap-up entries for earnings plays BUT apply a "gap fade probability" discount to conviction and use the open price as the realistic entry.
+6. **Generating zero recommendations is sometimes correct.** On this date, the highest-conviction plays all gapped beyond tolerance. The proper output was arguably 0 trades.
+
+*Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
+
+---
+
