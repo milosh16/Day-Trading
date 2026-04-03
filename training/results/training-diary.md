@@ -381,3 +381,49 @@
 
 ---
 
+## v2 Trial 6 — Monday, April 7, 2025 (Liberation Day Crash, Session 3)
+
+**Context:** Third session of the 2025 tariff crash. S&P 500 had lost ~10% in 2 days. China announced 34% retaliatory tariffs. VIX near 50+. Sunday futures deeply negative.
+
+### Recommendations (1 — after v2 filtering)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| GLD | long | $299.00 | $315.00 | $291.00 | 75 | Gold sold off -1.54% on Apr 4 due to forced margin liquidation, not deteriorating fundamentals. Trade war confirmed → structural gold demand. |
+
+**Discarded (3 candidates):**
+- **NKE:** Conviction 68.9 < 72 threshold (Vietnam tariff negotiation signal was specific but market headwinds too strong)
+- **NVDA:** April 4 close unverifiable to required precision → DISCARDED per v2 price rules
+- **SH:** April 4 close unverifiable → DISCARDED per v2 price rules
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| GLD | $293.76 | ~$294 | ~$289.62 | ~$289.62 | Wrong | No | Yes | -3.14% |
+
+- **GLD:** "Dash to cash" phenomenon — in extreme multi-day liquidation, gold does NOT function as safe haven for 1-3 sessions. Forced selling of liquid assets dominates. Gold later surged to $3,500 by April 21 — thesis was right, timing was wrong.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 100.0% |
+| Win Rate | 0.0% |
+| Avg Return | -3.14% |
+| Profit Factor | 0 |
+| **Composite Score** | **0/100** |
+
+### Key Learnings
+
+1. **VIX >50 = widen stops.** A 2.7% stop on GLD was inadequate when daily moves are 3-5%. In extreme volatility regimes, stops must be sized for 3-5x normal vol.
+2. **marketAlignment was the weakest dimension (62) and the most predictive.** Sub-65 marketAlignment in a crash should be a hard filter.
+3. **3/4 candidates discarded = data quality signal.** When most recommendations fail price verification, it means the data access is poor, not the opportunity set.
+4. **Thesis was ultimately correct.** Gold hit $3,500 by April 21. The system needs a "hold through volatility" mechanism for high-conviction macro trades.
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 15.0% | informationEdge: 15.0% | timingUrgency: 10.0%*
+
+---
+
