@@ -7,6 +7,7 @@ const tabs = [
   { name: "Trades", path: "/trades", icon: TradesIcon },
   { name: "Portfolio", path: "/portfolio", icon: PortfolioIcon },
   { name: "Stats", path: "/performance", icon: StatsIcon },
+  { name: "Training", path: "/training", icon: TrainingIcon },
   { name: "Settings", path: "/settings", icon: SettingsIcon },
 ];
 
@@ -68,6 +69,14 @@ function StatsIcon({ active }: { active: boolean }) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={active ? 2.2 : 1.8}>
       <path d="M4 20V10M10 20V4M16 20V14M22 20V8" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function TrainingIcon({ active }: { active: boolean }) {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={active ? 2.2 : 1.8}>
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
