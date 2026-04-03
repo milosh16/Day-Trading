@@ -135,6 +135,9 @@ TRAINING-DERIVED INSIGHTS (apply when scoring):
 - Second-derivative plays (e.g., power stocks during an AI scare) often outperform the obvious direct target. Consider non-obvious beneficiaries/casualties.
 - For SHORT trades, lower Volume/Liquidity can mean BIGGER moves (illiquid names gap harder in panics). Do not penalize shorts for moderate liquidity.
 - Catalyst Clarity above 85 has diminishing returns — the "most obvious" trade often gets front-run in pre-market.
+- CPI reaction asymmetry: soft CPI reliably rallies in bull markets, but hot CPI does NOT reliably sell off. Do not short on "hot CPI" alone.
+- Scheduled data day discipline: if the primary catalyst is an unreleased data print (CPI, NFP, FOMC), pre-data conviction is inherently capped. Zero trades before the print is often correct.
+- Target calibration by instrument: leveraged ETFs 6-8%, individual stocks 3-5%, broad ETFs 1.5-2.5%, low-beta blue chips 1-2%. Never use one-size-fits-all targets.
 
 For each dimension, provide a 1-sentence reasoning.
 

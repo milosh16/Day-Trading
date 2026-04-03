@@ -249,6 +249,11 @@ function buildEventDrivenRegime(
   factors: string[],
 ): RegimeAssessment {
   const bias = (signals.spFuturesChange + signals.nasdaqFuturesChange) / 2 * 15;
+  // Training insight: pre-data trades on CPI/NFP days are gambling (Trials 13, 19, 21).
+  // Soft CPI reliably rallies but hot CPI does NOT reliably sell off.
+  // Apply a -5 penalty to all directions on scheduled data days.
+  const dataDayPenalty = signals.hasMajorEconData ? 5 : 0;
+
   return {
     regime: "event-driven",
     volatilityRegime: volRegime,
@@ -256,10 +261,10 @@ function buildEventDrivenRegime(
     directionalBias: Math.round(bias),
     sectorTilts: [],
     convictionModifiers: {
-      longPenalty: 0,
-      shortPenalty: 0,
+      longPenalty: dataDayPenalty,
+      shortPenalty: dataDayPenalty,
       targetMultiplier: signals.hasMajorEconData ? 1.2 : 1.0,
-      // Don't override threshold — event days can produce high-conviction trades
+      minConvictionOverride: signals.hasMajorEconData ? 77 : undefined,
     },
     keyFactors: factors,
     timestamp: new Date().toISOString(),
@@ -391,6 +396,7 @@ REGIME RULES:
 ${regime.convictionModifiers.minConvictionOverride ? `- Minimum conviction RAISED to ${regime.convictionModifiers.minConvictionOverride} today (${regime.regime} regime)` : ""}
 ${regime.regime === "range-bound" ? "- RANGE-BOUND DAY: Consider outputting ZERO trades. Forcing trades on boring days is a losing strategy." : ""}
 ${regime.regime === "crisis" ? "- CRISIS MODE: Only take trades with 80+ conviction. Prefer shorts or defensive longs." : ""}
+${regime.regime === "event-driven" ? "- EVENT DAY: Pre-data trades are gambling. If the primary catalyst is a scheduled release (CPI, NFP, FOMC), apply extra scrutiny. Soft CPI reliably rallies but hot CPI does NOT reliably sell off in bull markets." : ""}
 
 Use this regime context when scoring conviction dimensions. Do NOT fight the regime.
 `;
