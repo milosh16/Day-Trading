@@ -987,3 +987,70 @@ June CPI: **-0.1% MoM** (first negative since May 2020). Massive rotation trigge
 
 ---
 
+## v2 Trial 15 — 2024-12-18 (FOMC Hawkish Cut — Dot Plot Shock)
+
+**Market Context:** S&P 500 at ~6,050, near ATH. Fed widely expected to cut 25bps (95% CME probability). Real focus was on dot plot for 2025 — market pricing 3-4 cuts, but sticky inflation and strong labor data suggested fewer. 10Y yield already rising despite prior cuts. Retail sales Dec 17 came in hot.
+
+### Recommendations
+
+| # | Symbol | Direction | Entry | Target | Stop | Conviction |
+|---|--------|-----------|-------|--------|------|------------|
+| 1 | SQQQ | LONG (3x inverse QQQ) | $30.50 | $31.90 | $29.70 | 82.0 |
+| 2 | TLT | SHORT | $87.50 | $84.90 | $89.00 | 80.7 |
+| 3 | UUP | LONG (dollar bull) | $28.20 | $29.10 | $27.80 | 75.1 |
+
+**SQQQ Conviction:** catalystClarity: 88 | technicalSetup: 70 | riskReward: 80 | volumeLiquidity: 90 | marketAlignment: 75 | informationEdge: 78 | timingUrgency: 85
+**TLT Conviction:** catalystClarity: 85 | technicalSetup: 78 | riskReward: 75 | volumeLiquidity: 88 | marketAlignment: 82 | informationEdge: 76 | timingUrgency: 80
+**UUP Conviction:** catalystClarity: 82 | technicalSetup: 74 | riskReward: 68 | volumeLiquidity: 65 | marketAlignment: 80 | informationEdge: 72 | timingUrgency: 78
+
+### Anti-Leakage Verification
+- SQQQ entry $30.50 vs Dec 17 close ~$30.20 — **verified** (1.0%)
+- TLT entry $87.50 vs Dec 17 close ~$87.22 — **verified** (0.3%)
+- UUP entry $28.20 vs Dec 17 close ~$28.10 — **verified** (0.4%)
+
+### Outcomes
+
+Fed cut 25bps as expected. **Dot plot: only 2 cuts in 2025** (down from 4 in September). Powell press conference notably hawkish. S&P 500 dropped ~2.9%, Nasdaq -3.6%. One of worst FOMC days in years.
+
+| Symbol | Open | High | Low | Close | Direction | Target | Stop | Return |
+|--------|------|------|-----|-------|-----------|--------|------|--------|
+| SQQQ | ~$30.50 | ~$34.00 | ~$30.00 | ~$33.50 | ✅ | ✅ | ✅ | +9.84% |
+| TLT | ~$87.50 | ~$87.80 | ~$85.20 | ~$85.60 | ✅ | ❌ | ✅ | +2.17% |
+| UUP | ~$28.20 | ~$28.55 | ~$28.15 | ~$28.50 | ✅ | ❌ | ✅ | +1.06% |
+
+### Scoring
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 33.3% (1/3) |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +4.36% |
+| Profit Factor | ∞ (no losses) |
+| **Composite Score** | **83.3/100** |
+
+### Dimension Analysis
+
+| Dimension | SQQQ (best, +9.8%) | UUP (worst, +1.1%) | Pattern |
+|-----------|--------------------|--------------------|---------|
+| catalystClarity | 88 | 82 | Correlated — higher clarity, higher return |
+| technicalSetup | 70 | 74 | Slight inverse — less relevant |
+| riskReward | 80 | 68 | Correlated |
+| volumeLiquidity | 90 | 65 | **STRONG correlation** — low liquidity = muted move |
+| marketAlignment | 75 | 80 | Slight inverse |
+| informationEdge | 78 | 72 | Mild correlation |
+| timingUrgency | 85 | 78 | Correlated |
+
+### Key Learnings
+
+1. **"Hawkish cut" framework is a high-conviction macro setup.** When the rate action is priced but the messaging is not, the dot plot surprise creates outsized moves. Composite 83.3 with all directions correct.
+2. **Leveraged ETF targets need wider ranges on FOMC days.** SQQQ target was 4.6% but actual move was +9.8%. For 3x leveraged instruments on binary events, use 6-8% targets.
+3. **volumeLiquidity was the strongest return predictor this trial.** SQQQ (90) → +9.8%, TLT (88) → +2.2%, UUP (65) → +1.1%. Low-liquidity instruments are poor day-trade vehicles regardless of thesis correctness.
+4. **UUP is a bad day-trade vehicle.** Despite a correct thesis (DXY surged 1%+), UUP captured only +1.1%. For dollar exposure, use currency futures or FXE puts.
+5. **TLT target too aggressive at -3.0%.** Bonds move more slowly than equities on FOMC days because the rate cut itself partially offsets hawkish guidance. -2.0% would have hit.
+
+*Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
+
+---
+
