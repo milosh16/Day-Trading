@@ -616,3 +616,65 @@ Composite: (100×0.25) + (33.3×0.25) + (100×0.20) + (100×0.15) + (100×0.15)
 
 ---
 
+## v2 Trial 10 — Wednesday, January 15, 2025 (Big Bank Earnings + December CPI)
+
+**Context:** S&P 500 at ~5,843 (Jan 14 close). Soft Dec PPI on Jan 14 (+0.2% vs +0.4% est) sparked financial sector rally — KBE, KRE both up 3%+. Dec CPI due 8:30 AM Jan 15. Five major banks reporting pre-market: JPM, GS, WFC, BAC, C.
+
+### Recommendations (3 — after v2 filtering)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| GS | long | $580.00 | $610.00 | $562.00 | 84 | Q4 earnings pre-market; surging IB and trading revenue; soft PPI sets favorable rate backdrop; banks +3% on Jan 14 |
+| WFC | long | $73.50 | $78.00 | $70.50 | 81 | Q4 earnings pre-market; NII recovery + Fed asset cap lift expectations under Trump admin; sector momentum |
+| JPM | long | $238.00 | $252.00 | $230.00 | 77 | Q4 earnings pre-market; most profitable US bank; strong IB pipeline; but "sell the news" risk after massive 2024 run |
+
+**Discarded:** NVDA (tech lagging, no catalyst), AAPL (no catalyst), META (contra-trend), UNH (price unverifiable).
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| GS | ~$590 | ~$610 | — | ~$609 | Correct | Yes | No | +5.0% |
+| WFC | ~$75 | ~$78 | — | ~$77.18 | Correct | No | No | +5.0% |
+| JPM | ~$242 | ~$248 | — | ~$245 | Correct | No | No | +2.9% |
+
+- **GS:** EPS $11.95 vs $8.22 est — massive beat (+45%). Stock surged ~5%. Target $610 hit. Best trade of the set.
+- **WFC:** EPS $1.43 vs $1.34 est. NII guidance 1-3% higher. Stock jumped 5%. Target $78 narrowly missed.
+- **JPM:** EPS $4.81 vs $4.11 est, revenue $43.74B vs $41.73B. Huge beat but stock rose only ~3% — "sell the news" dynamic after 2024's massive run, as thesis warned.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 33.3% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +4.3% |
+| Profit Factor | ∞ (no losses) |
+| **Composite Score** | **83.3/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 85.0 | N/A | All winners |
+| technicalSetup | 73.3 | N/A | All winners |
+| riskReward | 80.0 | N/A | All winners |
+| volumeLiquidity | 93.3 | N/A | All winners |
+| marketAlignment | 86.7 | N/A | All winners |
+| informationEdge | 75.6 | N/A | All winners |
+| timingUrgency | 86.7 | N/A | All winners |
+
+### Key Learnings
+
+1. **Sector-wide earnings days with macro tailwinds = highest-conviction setup.** Soft PPI (Jan 14) + bank earnings (Jan 15) + soft CPI (Jan 15) = triple tailwind. All 3 trades won.
+2. **GS outperformed on magnitude of beat.** EPS $11.95 vs $8.22 est was a 45% beat — the largest of the three banks. Conviction score was highest (84) and returns were highest (+5%). The system correctly ranked it #1.
+3. **JPM "sell the news" correctly flagged.** Thesis warned about this risk, and JPM rose only 2.9% despite the biggest absolute beat. Conviction was lowest (77) — appropriate calibration.
+4. **marketAlignment (87) was the strongest dimension.** When macro data AND sector momentum AND earnings all align, direction accuracy approaches 100%.
+5. **Target calibration improving.** GS hit $610 target. WFC missed $78 by <$1. JPM missed $252 by $7. Still room to tighten but much better than prior trials.
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 15.0% | informationEdge: 15.0% | timingUrgency: 10.0%*
+
+---
+
