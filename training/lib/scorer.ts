@@ -1,14 +1,15 @@
 // ============================================================
 // Training - Outcome Scorer
 // ============================================================
-// Uses Claude with web search to look up real outcomes for
-// trade recommendations, then scores accuracy.
+// Scores trade recommendations against REAL Yahoo Finance data.
+// Zero tokens, zero leakage — deterministic price lookups.
 // ============================================================
 
-import { callClaude, extractJson } from "./api.ts";
 import type { TradeRecommendation, RealOutcome, ConvictionWeights } from "./types.ts";
+import { getMultiDayOHLC, type OHLC } from "./market-data.ts";
 
-// Ask Claude to look up real prices for a given date and score outcomes
+// Score recommendations against REAL price data from Yahoo Finance API.
+// No LLM involved — deterministic, zero tokens, zero leakage risk.
 export async function scoreRecommendations(
   date: string,
   recommendations: TradeRecommendation[]
@@ -17,54 +18,75 @@ export async function scoreRecommendations(
     return { outcomes: [], tokensUsed: 0 };
   }
 
-  const symbolList = recommendations.map((r) =>
-    `${r.symbol}: ${r.direction} @ $${r.entryPrice}, target $${r.targetPrice}, stop $${r.stopLoss}`
-  ).join("\n");
+  const outcomes: RealOutcome[] = [];
 
-  const response = await callClaude({
-    system: `You are a financial data analyst. Your job is to look up REAL historical stock price data and score trade predictions. Be precise and factual. Only report data you can verify through web search.
+  for (const rec of recommendations) {
+    // Get OHLC for trading day + next 2 days (3-day window for trade to play out)
+    const bars = await getMultiDayOHLC(rec.symbol, date, 3);
 
-For each trade below, search for the ACTUAL price data on ${date} (and the following 1-3 trading days if the trade was meant to play out over multiple days).
+    if (bars.length === 0) {
+      console.log(`    ${rec.symbol}: no price data from Yahoo Finance`);
+      outcomes.push({
+        symbol: rec.symbol,
+        openPrice: 0,
+        highPrice: 0,
+        lowPrice: 0,
+        closePrice: 0,
+        hitTarget: false,
+        hitStop: false,
+        directionCorrect: false,
+        actualReturnPercent: 0,
+        notes: "data unavailable",
+      });
+      continue;
+    }
 
-Return a JSON array with one entry per trade. Wrap in <json> tags.
+    // Use first day as primary bar
+    const primary = bars[0];
 
-<json>[
-  {
-    "symbol": "TICKER",
-    "openPrice": 123.45,
-    "highPrice": 125.00,
-    "lowPrice": 121.00,
-    "closePrice": 124.00,
-    "hitTarget": true/false,
-    "hitStop": true/false,
-    "directionCorrect": true/false,
-    "actualReturnPercent": 2.5,
-    "notes": "Brief explanation of what actually happened"
+    // Check target/stop across entire multi-day window
+    const allTimeHigh = Math.max(...bars.map((b) => b.high));
+    const allTimeLow = Math.min(...bars.map((b) => b.low));
+    const lastClose = bars[bars.length - 1].close;
+
+    const isLong = rec.direction === "long";
+    const hitTarget = isLong
+      ? allTimeHigh >= rec.targetPrice
+      : allTimeLow <= rec.targetPrice;
+    const hitStop = isLong
+      ? allTimeLow <= rec.stopLoss
+      : allTimeHigh >= rec.stopLoss;
+    const directionCorrect = isLong
+      ? lastClose > rec.entryPrice
+      : lastClose < rec.entryPrice;
+
+    // Return from entry to last close
+    const returnPct = isLong
+      ? ((lastClose - rec.entryPrice) / rec.entryPrice) * 100
+      : ((rec.entryPrice - lastClose) / rec.entryPrice) * 100;
+
+    const daysStr = bars.map((b) => b.date).join(", ");
+    const notes = `${bars.length}-day window (${daysStr}). Open $${primary.open}, High $${allTimeHigh}, Low $${allTimeLow}, Close $${lastClose}.`;
+
+    outcomes.push({
+      symbol: rec.symbol,
+      openPrice: primary.open,
+      highPrice: allTimeHigh,
+      lowPrice: allTimeLow,
+      closePrice: lastClose,
+      hitTarget,
+      hitStop,
+      directionCorrect,
+      actualReturnPercent: Math.round(returnPct * 100) / 100,
+      notes,
+    });
+
+    console.log(`    ${rec.symbol}: open=$${primary.open} high=$${allTimeHigh} low=$${allTimeLow} close=$${lastClose} | target=${hitTarget} stop=${hitStop} dir=${directionCorrect} ret=${returnPct.toFixed(2)}%`);
   }
-]</json>
-
-Rules:
-- hitTarget: true if at any point the stock reached or exceeded the target price (for longs) or fell below it (for shorts)
-- hitStop: true if at any point the stock hit the stop loss level
-- directionCorrect: true if the stock moved in the predicted direction from the entry price
-- actualReturnPercent: calculate from entry to close price, positive for gains, negative for losses
-- If you cannot find reliable data for a symbol, set actualReturnPercent to 0 and note "data unavailable"
-- Use REAL data only. Do not fabricate prices.`,
-    messages: [
-      {
-        role: "user",
-        content: `Look up the actual price data for these trades on ${date}:\n\n${symbolList}`,
-      },
-    ],
-    maxTokens: 4096,
-    useWebSearch: true,
-  });
-
-  const outcomes = extractJson<RealOutcome[]>(response.text, true) || [];
 
   return {
     outcomes,
-    tokensUsed: response.inputTokens + response.outputTokens,
+    tokensUsed: 0, // No API tokens — deterministic Yahoo Finance lookup
   };
 }
 

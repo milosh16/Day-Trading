@@ -8,6 +8,7 @@
 // ============================================================
 
 import { callClaude, extractJson } from "./api.ts";
+import { getPriorClose } from "./market-data.ts";
 import type { TradeRecommendation } from "./types.ts";
 
 interface PriceCheck {
@@ -28,6 +29,8 @@ interface AuditResult {
 }
 
 // Step 1: Verify entry prices match real prior-day close prices
+// Uses Yahoo Finance API — deterministic, no tokens, no web search.
+// This is the HARD structural separation: Agent B gets ONLY symbols + prices + date.
 export async function verifyPrices(
   date: string,
   recommendations: TradeRecommendation[]
@@ -36,60 +39,44 @@ export async function verifyPrices(
     return { checks: [], tokensUsed: 0 };
   }
 
-  const priorDate = getPriorTradingDate(date);
-  const symbols = recommendations.map((r) => r.symbol).join(", ");
+  // Fetch prior close for each symbol via Yahoo Finance API (parallel)
+  const checks: PriceCheck[] = await Promise.all(
+    recommendations.map(async (rec) => {
+      const priorClose = await getPriorClose(rec.symbol, date);
 
-  const response = await callClaude({
-    system: `You are a financial data verification tool. Look up the CLOSING prices for the given stocks on the specified date. Return only factual data.
+      if (priorClose === null) {
+        console.log(`    ${rec.symbol}: prior close unavailable (API)`);
+        return {
+          symbol: rec.symbol,
+          priorClose: -1,
+          entryPrice: rec.entryPrice,
+          deviation: 0,
+          plausible: true, // can't verify, give benefit of doubt
+        };
+      }
 
-Return JSON wrapped in <json> tags:
-<json>{
-  "prices": {
-    "TICKER": 123.45,
-    "TICKER2": 67.89
-  }
-}</json>
+      const deviation = Math.abs((rec.entryPrice - priorClose) / priorClose) * 100;
+      const MAX_DEVIATION = 2; // v2 protocol: 2% max, not 5%
 
-If you cannot find the closing price for a stock, use -1.`,
-    messages: [
-      {
-        role: "user",
-        content: `What were the closing prices for these stocks on ${priorDate}: ${symbols}`,
-      },
-    ],
-    maxTokens: 1024,
-    useWebSearch: true,
-  });
+      if (deviation > MAX_DEVIATION) {
+        console.log(`    ${rec.symbol}: DISCARD — entry $${rec.entryPrice} vs prior close $${priorClose} (${deviation.toFixed(1)}% deviation > ${MAX_DEVIATION}%)`);
+      } else {
+        console.log(`    ${rec.symbol}: OK — entry $${rec.entryPrice} vs prior close $${priorClose} (${deviation.toFixed(1)}%)`);
+      }
 
-  const data = extractJson<{ prices: Record<string, number> }>(response.text);
-  const prices = data?.prices || {};
-
-  const checks: PriceCheck[] = recommendations.map((rec) => {
-    const priorClose = prices[rec.symbol] || -1;
-    if (priorClose === -1) {
       return {
         symbol: rec.symbol,
-        priorClose: -1,
+        priorClose,
         entryPrice: rec.entryPrice,
-        deviation: 0,
-        plausible: true, // can't verify, give benefit of doubt
+        deviation: Math.round(deviation * 100) / 100,
+        plausible: deviation <= MAX_DEVIATION,
       };
-    }
-
-    const deviation = Math.abs((rec.entryPrice - priorClose) / priorClose) * 100;
-    // Entry price should be within 5% of prior close (allowing for pre-market moves)
-    return {
-      symbol: rec.symbol,
-      priorClose,
-      entryPrice: rec.entryPrice,
-      deviation: Math.round(deviation * 100) / 100,
-      plausible: deviation <= 5,
-    };
-  });
+    })
+  );
 
   return {
     checks,
-    tokensUsed: response.inputTokens + response.outputTokens,
+    tokensUsed: 0, // No API tokens used — deterministic lookup
   };
 }
 
