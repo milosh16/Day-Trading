@@ -34,72 +34,116 @@ export const maxDuration = 300;
 
 const MODEL = process.env.BRIEFING_MODEL || "claude-opus-4-6";
 
-const GLOBAL_SIGNALS_PROMPT = `You are SIGNAL's market regime scanner. Your job is to gather real-time global market data and return it as a structured JSON object.
+const GLOBAL_SIGNALS_PROMPT = `You are SIGNAL's market regime scanner. Your job is to gather comprehensive real-time global market data — over 100 data points — and return it as a structured JSON object.
 
-Search for ALL of the following data points. Use the web_search tool multiple times to find each category.
+Search THOROUGHLY using multiple web_search calls. Cover every category below. This data feeds directly into regime classification, leading indicator tracking, and conviction scoring. Missing data = missed alpha.
 
-Required data points:
-1. S&P 500 futures % change from prior close
-2. Nasdaq futures % change from prior close
-3. Dow futures % change from prior close
-4. VIX current level and % change from prior close
-5. VIX term structure: is VIX futures curve in contango, flat, or backwardation?
-6. 10-year Treasury yield (level and basis point change)
-7. 2-year Treasury yield
-8. US Dollar Index (DXY) level and % change
-9. WTI Oil price and % change
-10. Gold price and % change
-11. Copper % change
-12. Nikkei 225 % change (today's session)
-13. DAX % change (today's session)
-14. Shanghai Composite % change (today's session)
-15. High-yield credit spread (HY-IG) and change in bps
-16. Bitcoin % change (24h)
-17. Is there major economic data today? (CPI, NFP, FOMC, GDP)
-18. Are there market-moving earnings today? (mega-cap or bellwether)
-19. Is this options expiration week?
-20. Is this month-end?
-21. Days until next FOMC meeting
-22. S&P 500 consecutive up/down days and 5-day return
+CATEGORY 1 — INDEX FUTURES (pre-market):
+- S&P 500, Nasdaq, Dow, Russell 2000 futures % change from prior close
+- VIX futures % change
 
-Return ONLY a JSON object wrapped in <signals> tags with this EXACT structure (use 0 for any value you cannot find):
+CATEGORY 2 — VOLATILITY & OPTIONS:
+- VIX level and % change, VIX term structure (contango/flat/backwardation)
+- VIX9D (9-day), VIX3M (3-month)
+- CBOE SKEW index (tail risk, normal ~120, elevated >130)
+- Total equity put/call ratio
+- Dealer gamma exposure (positive/neutral/negative)
+
+CATEGORY 3 — RATES & YIELD CURVE:
+- 2Y, 10Y, 30Y Treasury yields and changes (bps)
+- 3-month T-bill yield
+- 2s10s spread, 3mo-10Y spread
+- 10Y TIPS yield (real yield)
+- Fed funds rate, next meeting implied rate from futures
+
+CATEGORY 4 — DOLLAR & CURRENCIES:
+- DXY level and % change
+- EUR/USD, USD/JPY, USD/CNY levels and % changes
+
+CATEGORY 5 — COMMODITIES:
+- WTI & Brent oil prices and % changes
+- Natural gas % change
+- Gold price and % change, silver % change
+- Copper, iron ore % changes
+- Wheat % change
+- Uranium % change
+- Baltic Dry Index level and % change
+
+CATEGORY 6 — INTERNATIONAL EQUITY:
+- Nikkei, DAX, FTSE, Shanghai, Hang Seng, KOSPI % changes
+- MSCI EM % change, Euro Stoxx 50 % change
+
+CATEGORY 7 — CREDIT & FIXED INCOME:
+- HY-IG spread and change (bps)
+- IG spread and change
+- CDX NA IG (CDS index)
+- TED spread (or SOFR-T-bill spread)
+- 30Y MBS spread
+
+CATEGORY 8 — EQUITY BREADTH:
+- NYSE advance/decline ratio
+- Net new 52-week highs minus lows
+- % of S&P 500 above 200-day and 50-day moving averages
+- McClellan Oscillator
+
+CATEGORY 9 — SECTOR PERFORMANCE (prior day % change):
+- XLK, XLF, XLE, XLV, XLP, XLU, XLRE, XLI, XLB, XLC, XLY, SMH
+
+CATEGORY 10 — SENTIMENT & FLOWS:
+- AAII bull-bear spread
+- CNN Fear & Greed Index (0-100)
+- NAAIM Exposure Index
+- Margin debt trend (increasing/flat/decreasing)
+- Equity ETF flows (inflows/flat/outflows)
+
+CATEGORY 11 — CRYPTO:
+- Bitcoin and Ethereum % change (24h)
+- BTC dominance %
+- Total crypto market cap % change
+
+CATEGORY 12 — LIQUIDITY & MONETARY:
+- SOFR rate
+- Overnight repo rate
+- Fed balance sheet trend (expanding/flat/contracting)
+- Treasury General Account trend (increasing/flat/decreasing)
+
+CATEGORY 13 — CALENDAR & EVENTS:
+- Major economic data today (CPI/NFP/FOMC/GDP/ISM/PPI) — which specific release
+- Market-moving earnings today — which companies
+- Is it OPEX week? OPEX day? Month-end? Quarter-end?
+- Days until next FOMC, CPI, NFP
+- Heavy ex-dividend day?
+- Geopolitical risk level and active situations
+
+CATEGORY 14 — RECENT CONTEXT (multi-day):
+- S&P consecutive up/down days, 5-day and 20-day returns
+- Nasdaq vs Russell 5-day divergence
+- S&P position in 52-week range (0-100)
+- S&P distance from 200-day and 50-day moving averages (%)
+
+Return ONLY a JSON object wrapped in <signals> tags. Use 0 for numbers you cannot find, "" for strings, false for booleans. EVERY field must be present.
 
 <signals>
 {
-  "spFuturesChange": <number>,
-  "nasdaqFuturesChange": <number>,
-  "dowFuturesChange": <number>,
-  "vix": <number>,
-  "vixChange": <number>,
-  "vixTermStructure": "contango" | "flat" | "backwardation",
-  "tenYearYield": <number>,
-  "tenYearYieldChange": <number>,
-  "twoYearYield": <number>,
-  "dollarIndex": <number>,
-  "dollarIndexChange": <number>,
-  "oilWTI": <number>,
-  "oilChange": <number>,
-  "goldPrice": <number>,
-  "goldChange": <number>,
-  "copperChange": <number>,
-  "nikkeiChange": <number>,
-  "daxChange": <number>,
-  "shanghaiChange": <number>,
-  "highYieldSpread": <number>,
-  "spreadChange": <number>,
-  "bitcoinChange": <number>,
-  "hasMajorEconData": <boolean>,
-  "hasEarningsOfNote": <boolean>,
-  "isOpexWeek": <boolean>,
-  "isMonthEnd": <boolean>,
-  "daysToFOMC": <number>,
-  "spConsecutiveUpDays": <number>,
-  "spConsecutiveDownDays": <number>,
-  "sp5DayReturn": <number>
+  "spFuturesChange": 0, "nasdaqFuturesChange": 0, "dowFuturesChange": 0, "russellFuturesChange": 0, "vixFuturesChange": 0,
+  "vix": 0, "vixChange": 0, "vixTermStructure": "contango", "vix9d": 0, "vix3m": 0, "skewIndex": 0, "putCallRatio": 0, "spxGammaExposure": "neutral",
+  "tenYearYield": 0, "tenYearYieldChange": 0, "twoYearYield": 0, "twoYearYieldChange": 0, "thirtyYearYield": 0, "threeMonthYield": 0, "twoTenSpread": 0, "threeMoTenYrSpread": 0, "realYield10Y": 0, "fedFundsRate": 0, "fedFundsExpected": 0,
+  "dollarIndex": 0, "dollarIndexChange": 0, "eurUsd": 0, "eurUsdChange": 0, "usdJpy": 0, "usdJpyChange": 0, "usdCny": 0, "usdCnyChange": 0,
+  "oilWTI": 0, "oilChange": 0, "brentOil": 0, "brentOilChange": 0, "natGasChange": 0, "goldPrice": 0, "goldChange": 0, "silverChange": 0, "copperChange": 0, "ironOreChange": 0, "wheatChange": 0, "uraniumChange": 0, "balticDryIndex": 0, "balticDryChange": 0,
+  "nikkeiChange": 0, "daxChange": 0, "ftseChange": 0, "shanghaiChange": 0, "hangSengChange": 0, "kospiChange": 0, "emChange": 0, "euroStoxx50Change": 0,
+  "highYieldSpread": 0, "spreadChange": 0, "igSpread": 0, "igSpreadChange": 0, "cdsIndex": 0, "tedSpread": 0, "mbs30YrSpread": 0,
+  "advanceDeclineRatio": 0, "newHighsNewLows": 0, "percentAbove200DMA": 0, "percentAbove50DMA": 0, "mcclellanOscillator": 0,
+  "xlkChange": 0, "xlfChange": 0, "xleChange": 0, "xlvChange": 0, "xlpChange": 0, "xluChange": 0, "xlreChange": 0, "xliChange": 0, "xlbChange": 0, "xlcChange": 0, "xlyChange": 0, "smhChange": 0,
+  "aaiiBullBear": 0, "cnnFearGreed": 0, "naaim": 0, "marginDebt": "flat", "etfFlows": "flat",
+  "bitcoinChange": 0, "ethereumChange": 0, "btcDominance": 0, "cryptoTotalMarketCapChange": 0,
+  "sofr": 0, "repoRate": 0, "fedBalanceSheet": "flat", "tgaBalance": "flat",
+  "hasMajorEconData": false, "econDataType": "", "hasEarningsOfNote": false, "earningsNames": "", "isOpexWeek": false, "isOpexDay": false, "isMonthEnd": false, "isQuarterEnd": false, "daysToFOMC": 0, "daysToNextCPI": 0, "daysToNextNFP": 0, "isExDividendHeavy": false,
+  "geopoliticalRisk": "low", "geopoliticalEvents": "",
+  "spConsecutiveUpDays": 0, "spConsecutiveDownDays": 0, "sp5DayReturn": 0, "sp20DayReturn": 0, "nasdaqVsRussell5d": 0, "sp52WeekRange": 0, "spDistanceFrom200DMA": 0, "spDistanceFrom50DMA": 0
 }
 </signals>
 
-Search thoroughly. Accuracy matters more than speed. The regime classification depends on these numbers being correct.`;
+Search MULTIPLE times. Do NOT guess — look up real data. Accuracy is everything.`;
 
 export async function GET(req: NextRequest) {
   const authHeader = req.headers.get("authorization");

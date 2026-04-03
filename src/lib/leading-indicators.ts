@@ -46,6 +46,7 @@ export interface LeadingIndicatorReport {
   trends: {
     vix: SignalTrend;
     tenYearYield: SignalTrend;
+    twoTenSpread: SignalTrend;
     highYieldSpread: SignalTrend;
     dollarIndex: SignalTrend;
     sp5DayReturn: SignalTrend;
@@ -53,6 +54,10 @@ export interface LeadingIndicatorReport {
     oilWTI: SignalTrend;
     copperChange: SignalTrend;    // Dr. Copper = growth bellwether
     bitcoinChange: SignalTrend;   // Risk sentiment proxy
+    putCallRatio: SignalTrend;    // Options sentiment
+    percentAbove200DMA: SignalTrend; // Breadth health
+    cnnFearGreed: SignalTrend;    // Retail sentiment
+    usdJpy: SignalTrend;          // Carry trade / risk proxy
   };
 
   // Pattern detection
@@ -111,6 +116,7 @@ export function computeLeadingIndicators(
   const trends = {
     vix: computeTrend(sorted.map(r => r.signals.vix), today.vix),
     tenYearYield: computeTrend(sorted.map(r => r.signals.tenYearYield), today.tenYearYield),
+    twoTenSpread: computeTrend(sorted.map(r => r.signals.twoTenSpread), today.twoTenSpread),
     highYieldSpread: computeTrend(sorted.map(r => r.signals.highYieldSpread), today.highYieldSpread),
     dollarIndex: computeTrend(sorted.map(r => r.signals.dollarIndex), today.dollarIndex),
     sp5DayReturn: computeTrend(sorted.map(r => r.signals.sp5DayReturn), today.sp5DayReturn),
@@ -118,6 +124,10 @@ export function computeLeadingIndicators(
     oilWTI: computeTrend(sorted.map(r => r.signals.oilWTI), today.oilWTI),
     copperChange: computeTrend(sorted.map(r => r.signals.copperChange), today.copperChange),
     bitcoinChange: computeTrend(sorted.map(r => r.signals.bitcoinChange), today.bitcoinChange),
+    putCallRatio: computeTrend(sorted.map(r => r.signals.putCallRatio), today.putCallRatio),
+    percentAbove200DMA: computeTrend(sorted.map(r => r.signals.percentAbove200DMA), today.percentAbove200DMA),
+    cnnFearGreed: computeTrend(sorted.map(r => r.signals.cnnFearGreed), today.cnnFearGreed),
+    usdJpy: computeTrend(sorted.map(r => r.signals.usdJpy), today.usdJpy),
   };
 
   // Detect patterns
@@ -143,29 +153,70 @@ export function computeLeadingIndicators(
 export function computeStressIndex(signals: GlobalSignals): number {
   let stress = 0;
 
-  // VIX contribution (0-35 points)
-  if (signals.vix >= 35) stress += 35;
-  else if (signals.vix >= 25) stress += 20 + (signals.vix - 25) * 1.5;
-  else if (signals.vix >= 18) stress += 8 + (signals.vix - 18) * 1.7;
-  else if (signals.vix >= 14) stress += (signals.vix - 14) * 2;
+  // VIX contribution (0-25 points)
+  if (signals.vix >= 35) stress += 25;
+  else if (signals.vix >= 25) stress += 15 + (signals.vix - 25) * 1.0;
+  else if (signals.vix >= 18) stress += 6 + (signals.vix - 18) * 1.3;
+  else if (signals.vix >= 14) stress += (signals.vix - 14) * 1.5;
 
-  // VIX change contribution (0-15 points)
-  if (signals.vixChange > 0) stress += Math.min(15, signals.vixChange * 0.75);
+  // VIX spike (0-8 points)
+  if (signals.vixChange > 0) stress += Math.min(8, signals.vixChange * 0.5);
 
-  // Credit spread contribution (0-20 points)
-  // Normal HY spread ~350bps, stress >500bps
-  if (signals.highYieldSpread > 500) stress += 20;
-  else if (signals.highYieldSpread > 400) stress += 10 + (signals.highYieldSpread - 400) * 0.1;
-  else if (signals.highYieldSpread > 350) stress += (signals.highYieldSpread - 350) * 0.2;
+  // VIX term structure inversion (0-5 points)
+  if (signals.vixTermStructure === "backwardation") stress += 5;
+  else if (signals.vixTermStructure === "flat") stress += 2;
 
-  // Spread widening (0-10 points)
-  if (signals.spreadChange > 0) stress += Math.min(10, signals.spreadChange * 0.5);
+  // SKEW index — tail risk pricing (0-5 points)
+  if (signals.skewIndex > 140) stress += 5;
+  else if (signals.skewIndex > 130) stress += 3;
+  else if (signals.skewIndex > 120) stress += 1;
 
-  // Gold as fear proxy (0-10 points)
-  if (signals.goldChange > 0) stress += Math.min(10, signals.goldChange * 3);
+  // Credit spread contribution (0-12 points)
+  if (signals.highYieldSpread > 500) stress += 12;
+  else if (signals.highYieldSpread > 400) stress += 6 + (signals.highYieldSpread - 400) * 0.06;
+  else if (signals.highYieldSpread > 350) stress += (signals.highYieldSpread - 350) * 0.12;
 
-  // Dollar surge = flight to safety (0-10 points)
-  if (signals.dollarIndexChange > 0) stress += Math.min(10, signals.dollarIndexChange * 5);
+  // IG spreads widening (0-5 points)
+  if (signals.igSpreadChange > 0) stress += Math.min(5, signals.igSpreadChange * 0.3);
+
+  // CDS index stress (0-5 points)
+  if (signals.cdsIndex > 80) stress += 5;
+  else if (signals.cdsIndex > 65) stress += 3;
+
+  // TED/SOFR spread — interbank stress (0-4 points)
+  if (signals.tedSpread > 0.5) stress += 4;
+  else if (signals.tedSpread > 0.3) stress += 2;
+
+  // Spread widening (0-5 points)
+  if (signals.spreadChange > 0) stress += Math.min(5, signals.spreadChange * 0.3);
+
+  // Gold as fear proxy (0-5 points)
+  if (signals.goldChange > 0) stress += Math.min(5, signals.goldChange * 2);
+
+  // Dollar surge = flight to safety (0-5 points)
+  if (signals.dollarIndexChange > 0) stress += Math.min(5, signals.dollarIndexChange * 3);
+
+  // Yield curve inversion stress (0-5 points)
+  // Deeply inverted = recession risk building
+  if (signals.twoTenSpread < -50) stress += 5;
+  else if (signals.twoTenSpread < -25) stress += 3;
+  else if (signals.twoTenSpread < 0) stress += 1;
+
+  // Breadth deterioration (0-5 points)
+  if (signals.percentAbove200DMA < 30) stress += 5;
+  else if (signals.percentAbove200DMA < 50) stress += 2;
+
+  // Advance/decline weakness (0-3 points)
+  if (signals.advanceDeclineRatio < 0.5) stress += 3;
+  else if (signals.advanceDeclineRatio < 0.8) stress += 1;
+
+  // Sentiment extremes as stress confirmation (0-4 points)
+  if (signals.cnnFearGreed < 20) stress += 4;
+  else if (signals.cnnFearGreed < 35) stress += 2;
+
+  // Put/call ratio elevated (0-3 points)
+  if (signals.putCallRatio > 1.2) stress += 3;
+  else if (signals.putCallRatio > 1.0) stress += 1;
 
   return Math.min(100, Math.round(stress));
 }
@@ -176,25 +227,56 @@ export function computeStressIndex(signals: GlobalSignals): number {
 export function computeRiskAppetiteIndex(signals: GlobalSignals): number {
   let appetite = 50; // Neutral baseline
 
-  // Futures (±15 points)
+  // Futures direction (±10 points)
   const avgFutures = (signals.spFuturesChange + signals.nasdaqFuturesChange) / 2;
-  appetite += Math.max(-15, Math.min(15, avgFutures * 10));
+  appetite += Math.max(-10, Math.min(10, avgFutures * 8));
 
-  // Crypto sentiment (±10 points)
-  appetite += Math.max(-10, Math.min(10, signals.bitcoinChange * 2));
+  // Russell vs S&P divergence — small-cap risk appetite (±4 points)
+  const smallCapPremium = signals.russellFuturesChange - signals.spFuturesChange;
+  appetite += Math.max(-4, Math.min(4, smallCapPremium * 4));
 
-  // Copper = growth bellwether (±8 points)
-  appetite += Math.max(-8, Math.min(8, signals.copperChange * 3));
+  // Crypto sentiment (±6 points)
+  appetite += Math.max(-6, Math.min(6, signals.bitcoinChange * 1.5));
 
-  // International markets (±8 points)
-  const intlAvg = (signals.nikkeiChange + signals.daxChange + signals.shanghaiChange) / 3;
-  appetite += Math.max(-8, Math.min(8, intlAvg * 4));
+  // Ethereum outperforming BTC = risk-on within crypto (±3 points)
+  const ethVsBtc = signals.ethereumChange - signals.bitcoinChange;
+  appetite += Math.max(-3, Math.min(3, ethVsBtc));
 
-  // VIX inverse (±9 points) — low VIX = high appetite
-  if (signals.vix < 14) appetite += 9;
-  else if (signals.vix < 18) appetite += 4;
-  else if (signals.vix > 25) appetite -= 9;
-  else if (signals.vix > 20) appetite -= 4;
+  // Copper = growth bellwether (±5 points)
+  appetite += Math.max(-5, Math.min(5, signals.copperChange * 2));
+
+  // International markets breadth (±6 points)
+  const intlAvg = (signals.nikkeiChange + signals.daxChange + signals.shanghaiChange +
+    signals.ftseChange + signals.hangSengChange + signals.kospiChange) / 6;
+  appetite += Math.max(-6, Math.min(6, intlAvg * 3));
+
+  // EM performance (±4 points) — risk appetite barometer
+  appetite += Math.max(-4, Math.min(4, signals.emChange * 2));
+
+  // VIX inverse (±6 points)
+  if (signals.vix < 14) appetite += 6;
+  else if (signals.vix < 18) appetite += 3;
+  else if (signals.vix > 25) appetite -= 6;
+  else if (signals.vix > 20) appetite -= 3;
+
+  // Sector rotation signal: cyclicals vs defensives (±5 points)
+  const cyclicals = (signals.xlyChange + signals.xliChange + signals.xlbChange) / 3;
+  const defensives = (signals.xlpChange + signals.xluChange + signals.xlvChange) / 3;
+  const rotationSignal = cyclicals - defensives;
+  appetite += Math.max(-5, Math.min(5, rotationSignal * 3));
+
+  // SMH (semis) as risk-on bellwether (±4 points)
+  appetite += Math.max(-4, Math.min(4, signals.smhChange * 2));
+
+  // CNN Fear & Greed (±5 points) — centered around 50
+  appetite += Math.max(-5, Math.min(5, (signals.cnnFearGreed - 50) * 0.1));
+
+  // USD/JPY rising = carry trade on = risk-on (±3 points)
+  appetite += Math.max(-3, Math.min(3, signals.usdJpyChange * 2));
+
+  // Credit spreads narrowing = risk-on (±3 points)
+  if (signals.spreadChange < 0) appetite += Math.min(3, Math.abs(signals.spreadChange) * 0.3);
+  else if (signals.spreadChange > 0) appetite -= Math.min(3, signals.spreadChange * 0.3);
 
   return Math.max(0, Math.min(100, Math.round(appetite)));
 }
@@ -375,6 +457,113 @@ function detectPatterns(
       actionableInsight: isUp
         ? "Reduce long exposure. Don't initiate new longs. Watch for first red day as reversal signal."
         : "Prepare bounce trades but keep them small. Oversold doesn't mean bottom.",
+    });
+  }
+
+  // 10. Yield curve inversion progression
+  if (trends.twoTenSpread.direction === "falling" && today.twoTenSpread < 0) {
+    const deepening = trends.twoTenSpread.change5d < -5;
+    patterns.push({
+      name: "Yield Curve Inversion Deepening",
+      severity: deepening ? "high" : "medium",
+      description: `2s10s spread at ${today.twoTenSpread}bps, ${deepening ? "deepening" : "persisting"} (5d change: ${trends.twoTenSpread.change5d.toFixed(0)}bps)`,
+      historicalContext: "Yield curve inversion has preceded every recession since 1970. The UN-inversion (steepening from inverted) is actually the more immediate sell signal — it means the Fed is about to cut because economy is breaking.",
+      actionableInsight: deepening
+        ? "Recession probability rising. Favor defensive sectors. Watch for credit market contagion."
+        : "Maintain awareness but don't panic — inversions can persist for 12-18 months before recession hits.",
+    });
+  }
+
+  // 11. Yield curve steepening from inversion (un-inversion = imminent recession signal)
+  if (trends.twoTenSpread.direction === "rising" && today.twoTenSpread > -10 && today.twoTenSpread < 20) {
+    const wasInverted = history.slice(-10).some(r => r.signals.twoTenSpread < -10);
+    if (wasInverted) {
+      patterns.push({
+        name: "Yield Curve Un-Inversion",
+        severity: "critical",
+        description: `2s10s spread un-inverting to ${today.twoTenSpread}bps after period of inversion`,
+        historicalContext: "Historically the most reliable recession timing signal. Un-inversion means the bond market expects Fed cuts because the economy is breaking. Recessions have followed within 3-6 months.",
+        actionableInsight: "Maximum defensiveness. Reduce equity exposure. Favor cash, Treasuries, and quality defensive names. This is the 'get out' signal, not the 'buy the dip' signal.",
+      });
+    }
+  }
+
+  // 12. Breadth divergence — market rising on narrow leadership
+  if (today.percentAbove200DMA < 50 && today.sp5DayReturn > 1) {
+    patterns.push({
+      name: "Breadth Divergence",
+      severity: today.percentAbove200DMA < 35 ? "high" : "medium",
+      description: `S&P up ${today.sp5DayReturn.toFixed(1)}% over 5d but only ${today.percentAbove200DMA}% of stocks above 200 DMA`,
+      historicalContext: "Narrow leadership (few stocks driving index) is a late-cycle warning. The 2021 and 2007 tops both featured deteriorating breadth while indices made new highs.",
+      actionableInsight: "Avoid chasing the index. The average stock is weaker than the headline suggests. Favor names with strong individual technicals.",
+    });
+  }
+
+  // 13. Sentiment extreme — contrarian setup
+  if (today.cnnFearGreed <= 15 || today.cnnFearGreed >= 85) {
+    const isExtremeFear = today.cnnFearGreed <= 15;
+    patterns.push({
+      name: isExtremeFear ? "Extreme Fear Sentiment" : "Extreme Greed Sentiment",
+      severity: "high",
+      description: `CNN Fear & Greed at ${today.cnnFearGreed} — ${isExtremeFear ? "extreme fear" : "extreme greed"}`,
+      historicalContext: isExtremeFear
+        ? "Extreme fear readings (<15) have preceded 70%+ of 5-day rallies >3%. Contrarian buy signal when combined with oversold breadth."
+        : "Extreme greed readings (>85) precede corrections within 2-4 weeks ~65% of the time. Not an immediate sell signal but risk management is critical.",
+      actionableInsight: isExtremeFear
+        ? "Contrarian long bias. Scale into longs on further weakness. Best setups come when fear is maximal AND a policy/catalyst response is likely."
+        : "Tighten all stops. Reduce position sizes. Do NOT initiate new longs without strong conviction. Consider protective hedges.",
+    });
+  }
+
+  // 14. Carry trade unwind signal (JPY strengthening rapidly)
+  if (today.usdJpyChange < -1 && trends.usdJpy.direction === "falling") {
+    patterns.push({
+      name: "Carry Trade Unwind",
+      severity: today.usdJpyChange < -2 ? "critical" : "high",
+      description: `USD/JPY down ${today.usdJpyChange.toFixed(2)}% with yen strengthening trend`,
+      historicalContext: "Trial 22: Aug 5, 2024 — yen carry trade unwind caused a global equity crash. JPY strengthening forces leveraged carry positions to unwind, creating cascading liquidation across all risk assets.",
+      actionableInsight: "Immediate de-risk. Carry unwinds cause correlated selloffs across all risk assets. Reduce exposure, widen stops, avoid leveraged positions. Watch for BOJ policy signals.",
+    });
+  }
+
+  // 15. Liquidity stress (repo/SOFR spike)
+  if (today.repoRate > today.fedFundsRate + 0.1 || today.tedSpread > 0.4) {
+    patterns.push({
+      name: "Liquidity Stress",
+      severity: today.tedSpread > 0.6 ? "high" : "medium",
+      description: `Repo rate elevated (${today.repoRate.toFixed(2)}%), TED spread at ${today.tedSpread.toFixed(2)}%`,
+      historicalContext: "Sept 2019 repo crisis preceded by subtle liquidity stress signals. When overnight rates spike above fed funds, it means cash is scarce and banks are hoarding reserves.",
+      actionableInsight: "Watch for Fed intervention (repo facility). Liquidity stress amplifies any existing selloff. Reduce leveraged positions.",
+    });
+  }
+
+  // 16. Negative gamma environment
+  if (today.spxGammaExposure === "negative" && today.vix > 20) {
+    patterns.push({
+      name: "Negative Gamma Regime",
+      severity: "high",
+      description: `Dealer gamma negative with VIX at ${today.vix} — moves will be amplified`,
+      historicalContext: "When dealers are short gamma, they must sell into declines and buy into rallies (delta hedging), amplifying moves in both directions. This creates the 'tail wagging the dog' dynamic.",
+      actionableInsight: "Expect outsized moves. Use wider stops. Reduce size. If going long, wait for dealer gamma to flip back to positive (intraday gamma flip level).",
+    });
+  }
+
+  // 17. Risk-on/risk-off sector divergence (cyclicals massively outperforming defensives or vice versa)
+  const cyclicalAvg = (today.xlyChange + today.xliChange + today.xlbChange + today.smhChange) / 4;
+  const defensiveAvg = (today.xlpChange + today.xluChange + today.xlvChange) / 3;
+  const sectorDivergence = Math.abs(cyclicalAvg - defensiveAvg);
+  if (sectorDivergence > 1.5) {
+    const riskOn = cyclicalAvg > defensiveAvg;
+    patterns.push({
+      name: riskOn ? "Strong Risk-On Rotation" : "Strong Defensive Rotation",
+      severity: sectorDivergence > 2.5 ? "high" : "medium",
+      description: `Cyclicals ${riskOn ? "outperforming" : "underperforming"} defensives by ${sectorDivergence.toFixed(1)}pp`,
+      historicalContext: riskOn
+        ? "Strong cyclical outperformance confirms broad risk appetite. Follow-through is likely for 2-3 sessions."
+        : "Strong defensive rotation signals institutional de-risking. Often precedes broader market weakness by 1-2 days.",
+      actionableInsight: riskOn
+        ? "Lean into cyclical/growth longs. Momentum is confirmed by sector internals."
+        : "Reduce cyclical exposure. The 'smart money' is already rotating to safety.",
     });
   }
 

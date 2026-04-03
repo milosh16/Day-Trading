@@ -25,53 +25,148 @@ export type MarketRegime =
 export type VolatilityRegime = "compressed" | "normal" | "elevated" | "extreme";
 
 export interface GlobalSignals {
-  // Index futures (pre-market)
+  // ---- INDEX FUTURES (pre-market) ----
   spFuturesChange: number;     // S&P 500 futures % change from prior close
   nasdaqFuturesChange: number;
   dowFuturesChange: number;
+  russellFuturesChange: number; // Small-cap sentiment divergence
+  vixFuturesChange: number;    // VIX futures % change
 
-  // Volatility
+  // ---- VOLATILITY & OPTIONS ----
   vix: number;
   vixChange: number;           // % change from prior close
-  vixTermStructure: "contango" | "flat" | "backwardation"; // backwardation = fear
+  vixTermStructure: "contango" | "flat" | "backwardation";
+  vix9d: number;               // 9-day VIX (near-term fear)
+  vix3m: number;               // 3-month VIX (longer-term fear)
+  skewIndex: number;           // CBOE SKEW — tail risk pricing (>130 = elevated)
+  putCallRatio: number;        // Total equity put/call ratio (>1.0 = bearish sentiment)
+  spxGammaExposure: "positive" | "neutral" | "negative"; // Dealer gamma: positive = suppressed vol, negative = amplified vol
 
-  // Rates & Dollar
+  // ---- RATES & YIELD CURVE ----
   tenYearYield: number;
   tenYearYieldChange: number;  // bps change
   twoYearYield: number;
+  twoYearYieldChange: number;
+  thirtyYearYield: number;
+  threeMonthYield: number;
+  twoTenSpread: number;        // 2Y-10Y spread (negative = inverted)
+  threeMoTenYrSpread: number;  // 3M-10Y spread (Fed's preferred recession indicator)
+  realYield10Y: number;        // 10Y TIPS yield (real rate)
+  fedFundsRate: number;
+  fedFundsExpected: number;    // Next meeting implied rate (Fed Funds futures)
+
+  // ---- DOLLAR & CURRENCIES ----
   dollarIndex: number;
   dollarIndexChange: number;
+  eurUsd: number;
+  eurUsdChange: number;
+  usdJpy: number;
+  usdJpyChange: number;        // Yen carry trade indicator
+  usdCny: number;
+  usdCnyChange: number;        // China devaluation signal
 
-  // Commodities
+  // ---- COMMODITIES ----
   oilWTI: number;
   oilChange: number;
+  brentOil: number;
+  brentOilChange: number;
+  natGasChange: number;        // Weather/energy demand proxy
   goldPrice: number;
   goldChange: number;
+  silverChange: number;
   copperChange: number;        // Dr. Copper = economic bellwether
+  ironOreChange: number;       // China construction/industrial demand
+  wheatChange: number;         // Food inflation signal
+  uraniumChange: number;       // Nuclear/energy transition signal
+  balticDryIndex: number;      // Global shipping/trade demand
+  balticDryChange: number;
 
-  // International
+  // ---- INTERNATIONAL EQUITY ----
   nikkeiChange: number;
   daxChange: number;
+  ftseChange: number;
   shanghaiChange: number;
+  hangSengChange: number;      // Hong Kong/China tech proxy
+  kospiChange: number;         // South Korea semiconductor proxy
+  emChange: number;            // MSCI EM index % change
+  euroStoxx50Change: number;
 
-  // Credit
+  // ---- CREDIT & FIXED INCOME ----
   highYieldSpread: number;     // HY-IG spread; widening = stress
   spreadChange: number;
+  igSpread: number;            // Investment grade spread
+  igSpreadChange: number;
+  cdsIndex: number;            // CDX NA IG spread (credit default swaps)
+  tedSpread: number;           // T-bill vs LIBOR/SOFR spread (bank stress)
+  mbs30YrSpread: number;       // Mortgage-backed securities spread (housing/bank stress)
 
-  // Crypto
+  // ---- EQUITY BREADTH ----
+  advanceDeclineRatio: number; // NYSE advance/decline ratio (>1.5 = strong breadth, <0.5 = weak)
+  newHighsNewLows: number;     // Net new 52-week highs minus lows
+  percentAbove200DMA: number;  // % of S&P 500 stocks above 200-day MA
+  percentAbove50DMA: number;   // % of S&P 500 stocks above 50-day MA
+  mcclellanOscillator: number; // Breadth thrust indicator (-100 to +100)
+
+  // ---- SECTOR PERFORMANCE (prior day % change) ----
+  xlkChange: number;           // Tech
+  xlfChange: number;           // Financials
+  xleChange: number;           // Energy
+  xlvChange: number;           // Healthcare
+  xlpChange: number;           // Consumer Staples (defensive)
+  xluChange: number;           // Utilities (defensive/rate-sensitive)
+  xlreChange: number;          // Real Estate (rate-sensitive)
+  xliChange: number;           // Industrials (cyclical)
+  xlbChange: number;           // Materials (cyclical)
+  xlcChange: number;           // Communications
+  xlyChange: number;           // Consumer Discretionary
+  smhChange: number;           // Semiconductors (AI/tech bellwether)
+
+  // ---- SENTIMENT & FLOWS ----
+  aaiiBullBear: number;        // AAII bull-bear spread (contrarian: extreme = fade)
+  cnnFearGreed: number;        // CNN Fear & Greed Index (0-100)
+  naaim: number;               // NAAIM Exposure Index (active manager equity exposure 0-200)
+  marginDebt: "increasing" | "flat" | "decreasing"; // NYSE margin debt trend
+  etfFlows: "inflows" | "flat" | "outflows"; // Broad equity ETF flow direction
+
+  // ---- CRYPTO ----
   bitcoinChange: number;
+  ethereumChange: number;
+  btcDominance: number;        // BTC dominance % (>50 = risk-off within crypto)
+  cryptoTotalMarketCapChange: number;
 
-  // Calendar
+  // ---- LIQUIDITY & MONETARY ----
+  sofr: number;                // Secured Overnight Financing Rate
+  repoRate: number;            // Overnight repo rate (liquidity stress)
+  fedBalanceSheet: "expanding" | "flat" | "contracting"; // QE/QT indicator
+  tgaBalance: "increasing" | "flat" | "decreasing"; // Treasury General Account (liquidity drain/inject)
+
+  // ---- CALENDAR & EVENTS ----
   hasMajorEconData: boolean;   // CPI, NFP, FOMC, GDP
+  econDataType: string;        // Specific: "CPI", "NFP", "FOMC", "GDP", "ISM", "PPI", etc.
   hasEarningsOfNote: boolean;  // Mega-cap or market-moving earnings
+  earningsNames: string;       // Which companies: "AAPL, MSFT, AMZN"
   isOpexWeek: boolean;         // Options expiration week
+  isOpexDay: boolean;          // Specific OPEX day (quadruple witching, monthly)
   isMonthEnd: boolean;
+  isQuarterEnd: boolean;
   daysToFOMC: number;
+  daysToNextCPI: number;
+  daysToNextNFP: number;
+  isExDividendHeavy: boolean;  // Heavy ex-dividend day (index rebalance effect)
 
-  // Recent context
+  // ---- GEOPOLITICAL ----
+  geopoliticalRisk: "low" | "moderate" | "elevated" | "high"; // Overall geopolitical tension
+  geopoliticalEvents: string;  // Brief description of any active geopolitical situations
+
+  // ---- RECENT CONTEXT (multi-day) ----
   spConsecutiveUpDays: number;
   spConsecutiveDownDays: number;
   sp5DayReturn: number;        // % return over last 5 sessions
+  sp20DayReturn: number;       // % return over last 20 sessions (monthly trend)
+  nasdaqVsRussell5d: number;   // Nasdaq minus Russell 5-day return (growth vs value divergence)
+  sp52WeekRange: number;       // Where S&P sits in 52-week range (0-100, 100=high)
+  spDistanceFrom200DMA: number; // % distance from 200-day MA (>5 = extended, <-5 = oversold)
+  spDistanceFrom50DMA: number;  // % distance from 50-day MA
 }
 
 export interface RegimeAssessment {
@@ -128,53 +223,119 @@ export function classifyRegime(signals: GlobalSignals): RegimeAssessment {
   // Step 4: Assess directional bias from global signals
   let bias = 0;
 
-  // Futures direction
+  // Futures direction (±20 points)
   const avgFutures = (signals.spFuturesChange + signals.nasdaqFuturesChange) / 2;
-  bias += avgFutures * 20; // Each 1% in futures = 20 points of bias
+  bias += avgFutures * 15;
   if (Math.abs(avgFutures) > 0.3) factors.push(`Futures ${avgFutures > 0 ? "+" : ""}${avgFutures.toFixed(2)}%`);
 
-  // Yield moves
+  // Small-cap divergence — Russell leading/lagging signals breadth (±5 points)
+  const russellDivergence = signals.russellFuturesChange - avgFutures;
+  if (Math.abs(russellDivergence) > 0.3) {
+    bias += russellDivergence * 5;
+    factors.push(`Russell ${russellDivergence > 0 ? "leading" : "lagging"} by ${Math.abs(russellDivergence).toFixed(2)}pp`);
+  }
+
+  // Yield moves (±10 points)
   if (Math.abs(signals.tenYearYieldChange) > 5) {
-    bias -= signals.tenYearYieldChange * 1.5; // Rising yields = bearish for equities
+    bias -= signals.tenYearYieldChange * 1.2;
     factors.push(`10Y yield ${signals.tenYearYieldChange > 0 ? "+" : ""}${signals.tenYearYieldChange}bps`);
   }
 
-  // Dollar strength
+  // Dollar strength (±8 points)
   if (Math.abs(signals.dollarIndexChange) > 0.3) {
-    bias -= signals.dollarIndexChange * 10; // Strong dollar = headwind for equities
+    bias -= signals.dollarIndexChange * 8;
     factors.push(`Dollar ${signals.dollarIndexChange > 0 ? "+" : ""}${signals.dollarIndexChange.toFixed(2)}%`);
   }
 
-  // International signals
-  const intlAvg = (signals.nikkeiChange + signals.daxChange + signals.shanghaiChange) / 3;
-  bias += intlAvg * 8;
+  // International signals — expanded to 6 markets (±8 points)
+  const intlAvg = (signals.nikkeiChange + signals.daxChange + signals.shanghaiChange +
+    signals.ftseChange + signals.hangSengChange + signals.kospiChange) / 6;
+  bias += intlAvg * 6;
   if (Math.abs(intlAvg) > 0.5) factors.push(`International avg ${intlAvg > 0 ? "+" : ""}${intlAvg.toFixed(2)}%`);
 
-  // Copper as economic signal
+  // Copper as economic signal (±5 points)
   if (Math.abs(signals.copperChange) > 1) {
-    bias += signals.copperChange * 5;
+    bias += signals.copperChange * 4;
     factors.push(`Copper ${signals.copperChange > 0 ? "+" : ""}${signals.copperChange.toFixed(1)}%`);
   }
 
-  // Credit spreads
+  // Credit spreads (±8 points)
   if (signals.spreadChange > 5) {
-    bias -= signals.spreadChange * 2;
+    bias -= signals.spreadChange * 1.5;
     factors.push(`HY spreads widening +${signals.spreadChange}bps`);
+  } else if (signals.spreadChange < -5) {
+    bias += Math.abs(signals.spreadChange) * 0.5;
+    factors.push(`HY spreads tightening ${signals.spreadChange}bps`);
   }
 
-  // Gold as fear signal
+  // Gold as fear signal (±5 points)
   if (signals.goldChange > 1) {
-    bias -= 5; // Gold up = fear
+    bias -= 4;
     factors.push(`Gold +${signals.goldChange.toFixed(1)}%`);
   }
 
-  // Recent momentum
+  // Equity breadth (±8 points)
+  if (signals.percentAbove200DMA > 70) {
+    bias += 5;
+    factors.push(`Strong breadth: ${signals.percentAbove200DMA}% above 200 DMA`);
+  } else if (signals.percentAbove200DMA < 40) {
+    bias -= 5;
+    factors.push(`Weak breadth: ${signals.percentAbove200DMA}% above 200 DMA`);
+  }
+  if (signals.advanceDeclineRatio > 2.0) {
+    bias += 3;
+  } else if (signals.advanceDeclineRatio < 0.5) {
+    bias -= 3;
+  }
+
+  // Sector internals: cyclicals vs defensives (±5 points)
+  const cyclicalAvg = (signals.xlyChange + signals.xliChange + signals.xlbChange) / 3;
+  const defensiveAvg = (signals.xlpChange + signals.xluChange + signals.xlvChange) / 3;
+  if (cyclicalAvg - defensiveAvg > 0.5) {
+    bias += 4;
+    factors.push("Cyclicals outperforming defensives");
+  } else if (defensiveAvg - cyclicalAvg > 0.5) {
+    bias -= 4;
+    factors.push("Defensives outperforming cyclicals");
+  }
+
+  // Sentiment (±5 points) — contrarian at extremes
+  if (signals.cnnFearGreed < 20) {
+    bias += 3; // Extreme fear = contrarian bullish
+    factors.push(`Extreme fear (F&G: ${signals.cnnFearGreed})`);
+  } else if (signals.cnnFearGreed > 80) {
+    bias -= 3; // Extreme greed = contrarian bearish
+    factors.push(`Extreme greed (F&G: ${signals.cnnFearGreed})`);
+  }
+
+  // Crypto as risk sentiment (±4 points)
+  if (Math.abs(signals.bitcoinChange) > 3) {
+    bias += signals.bitcoinChange > 0 ? 3 : -3;
+    factors.push(`Bitcoin ${signals.bitcoinChange > 0 ? "+" : ""}${signals.bitcoinChange.toFixed(1)}%`);
+  }
+
+  // Yen as risk proxy (±4 points) — JPY strengthening = risk-off
+  if (Math.abs(signals.usdJpyChange) > 0.5) {
+    bias += signals.usdJpyChange * 3; // JPY weakening (USD/JPY up) = risk-on
+    factors.push(`USD/JPY ${signals.usdJpyChange > 0 ? "+" : ""}${signals.usdJpyChange.toFixed(2)}%`);
+  }
+
+  // Recent momentum (±5 points)
   if (signals.spConsecutiveUpDays >= 5) {
-    bias -= 5; // Mean reversion risk
+    bias -= 5;
     factors.push(`${signals.spConsecutiveUpDays} consecutive up days — overbought`);
   } else if (signals.spConsecutiveDownDays >= 5) {
-    bias += 5; // Bounce likely
+    bias += 5;
     factors.push(`${signals.spConsecutiveDownDays} consecutive down days — oversold`);
+  }
+
+  // 52-week range positioning (±3 points)
+  if (signals.sp52WeekRange > 90) {
+    bias -= 2; // Near highs — extended
+    factors.push("S&P near 52-week high");
+  } else if (signals.sp52WeekRange < 20) {
+    bias += 2; // Near lows — potential bounce
+    factors.push("S&P near 52-week low");
   }
 
   // Clamp bias to -100..100
@@ -182,14 +343,30 @@ export function classifyRegime(signals: GlobalSignals): RegimeAssessment {
 
   // Step 5: Classify regime from bias + context
   let regime: MarketRegime;
-  if (Math.abs(bias) < 15 && volRegime === "normal") {
+
+  // Rotation detection: sectors diverging significantly while index is flat
+  const sectorChanges = [
+    signals.xlkChange, signals.xlfChange, signals.xleChange, signals.xlvChange,
+    signals.xlpChange, signals.xluChange, signals.xlreChange, signals.xliChange,
+    signals.xlbChange, signals.xlcChange, signals.xlyChange, signals.smhChange,
+  ].filter(v => v !== 0);
+  const sectorDispersion = sectorChanges.length > 2
+    ? Math.max(...sectorChanges) - Math.min(...sectorChanges)
+    : 0;
+  const isRotating = sectorDispersion > 2.0 && Math.abs(avgFutures) < 0.5;
+
+  if (Math.abs(bias) < 15 && volRegime === "normal" && !isRotating) {
     regime = "range-bound";
+  } else if (isRotating && Math.abs(bias) < 30) {
+    regime = "rotation";
+    factors.push(`Sector dispersion ${sectorDispersion.toFixed(1)}pp with flat futures — rotation day`);
   } else if (bias > 25) {
     regime = "risk-on";
   } else if (bias < -25) {
     regime = "risk-off";
+  } else if (Math.abs(bias) < 15) {
+    regime = "range-bound";
   } else {
-    // Check for rotation signals: sectors diverging
     regime = "rotation";
   }
 
@@ -317,9 +494,11 @@ function buildSectorTilts(
     tilts.push({ sector: "tech", bias: "overweight", reason: "Risk-on favors growth/momentum" });
     tilts.push({ sector: "consumer-discretionary", bias: "overweight", reason: "Risk appetite" });
     tilts.push({ sector: "utilities", bias: "underweight", reason: "Defensive rotation out" });
+    if (signals.smhChange > 1) tilts.push({ sector: "semiconductors", bias: "overweight", reason: `SMH +${signals.smhChange.toFixed(1)}%, AI/tech bellwether leading` });
   } else if (regime === "risk-off") {
     tilts.push({ sector: "utilities", bias: "overweight", reason: "Defensive haven" });
     tilts.push({ sector: "healthcare", bias: "overweight", reason: "Defensive haven" });
+    tilts.push({ sector: "staples", bias: "overweight", reason: "Defensive rotation" });
     tilts.push({ sector: "tech", bias: "underweight", reason: "De-risking from high-beta" });
   }
 
@@ -327,6 +506,7 @@ function buildSectorTilts(
   if (signals.tenYearYieldChange > 5) {
     tilts.push({ sector: "financials", bias: "overweight", reason: "Rising yields boost NIM" });
     tilts.push({ sector: "real-estate", bias: "underweight", reason: "Rising rates pressure REITs" });
+    tilts.push({ sector: "utilities", bias: "underweight", reason: "Bond proxy underperforms when yields rise" });
   } else if (signals.tenYearYieldChange < -5) {
     tilts.push({ sector: "real-estate", bias: "overweight", reason: "Falling rates boost REITs" });
     tilts.push({ sector: "utilities", bias: "overweight", reason: "Bond proxy rally" });
@@ -339,6 +519,26 @@ function buildSectorTilts(
   } else if (signals.oilChange < -2) {
     tilts.push({ sector: "airlines", bias: "overweight", reason: "Fuel cost tailwind" });
     tilts.push({ sector: "consumer-discretionary", bias: "overweight", reason: "Lower gas prices" });
+  }
+
+  // Semiconductor momentum — AI capex cycle
+  if (signals.smhChange > 2 || signals.kospiChange > 1.5) {
+    tilts.push({ sector: "semiconductors", bias: "overweight", reason: "Semi momentum + Korea leading (fab demand)" });
+  } else if (signals.smhChange < -2) {
+    tilts.push({ sector: "semiconductors", bias: "underweight", reason: `SMH ${signals.smhChange.toFixed(1)}%, semi weakness` });
+  }
+
+  // Materials/industrials — copper and Baltic Dry driven
+  if (signals.copperChange > 1.5 || signals.balticDryChange > 2) {
+    tilts.push({ sector: "materials", bias: "overweight", reason: "Copper/shipping demand rising — industrial expansion" });
+    tilts.push({ sector: "industrials", bias: "overweight", reason: "Cyclical expansion signal" });
+  } else if (signals.copperChange < -1.5) {
+    tilts.push({ sector: "materials", bias: "underweight", reason: "Dr. Copper declining — growth concerns" });
+  }
+
+  // China-sensitive tilts
+  if (signals.shanghaiChange > 1 || signals.hangSengChange > 1.5) {
+    tilts.push({ sector: "materials", bias: "overweight", reason: "China recovery trade" });
   }
 
   return tilts;
