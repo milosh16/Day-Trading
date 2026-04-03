@@ -246,3 +246,43 @@
 
 ---
 
+### [v2] Trial 3: 2025-05-14 (Wednesday — Tariff Truce Rally + Cisco Earnings)
+
+**Agent A (Blind Recommender):**
+- AAPL LONG: Entry $222.00 (claimed May 13 close ~$220.10, dev +0.86%), Target $232, Stop $214.50, Conviction 78
+  - Thesis: Apple direct beneficiary of US-China 90-day tariff truce (May 12). Cook warned $900M tariff cost. April CPI 2.3% below expectations.
+- NVDA LONG: Entry $130.50 (claimed May 13 close ~$128.60, dev +1.48%), Target $142, Stop $122.50, Conviction 79
+  - Thesis: NVDA rallied from $86.62 April 7 low, gained 5.4% on May 13 on tariff truce. Earnings May 28 approaching.
+- CSCO LONG (pre-earnings): Entry $63.00 (claimed May 13 close ~$62.20, dev +1.29%), Target $67.50, Stop $59.50, Conviction 73
+  - Thesis: Cisco Q3 FY2025 after close May 14. Consensus EPS $0.91. Beaten 4 straight quarters. AI orders passed $1B milestone early.
+- DISCARDED: TSLA (unverifiable May 13 close)
+
+**Agent B (Price Verifier):** Running — initial search in progress.
+
+**Agent C (Leakage Auditor — never saw outcomes):**
+- AAPL LONG: **CLEAN** — tariff truce + cool CPI is obvious consensus trade. No post-open data.
+- NVDA LONG: **CLEAN** — standard momentum + catalyst thesis from Apr 7 low. No May 14 data referenced.
+- CSCO LONG: **CLEAN** — lowest conviction (73) reflects genuine earnings uncertainty. Pre-earnings play framing is consistent with no outcome knowledge.
+
+**Outcomes (verified via web search):**
+- Market: S&P 500 +0.41% to 5,916.93 (4th consecutive gain). Dow +0.65%. **Nasdaq -0.18%** (tech underperformed).
+- AAPL: Likely modestly positive with S&P (tariff beneficiary). Estimated +0.5-1%.
+- NVDA: Nasdaq was negative; NVDA likely flat-to-slightly-negative on May 14 specifically. Estimated ~0%.
+- CSCO: Beat earnings ($0.96 vs $0.91 est, revenue $14.15B vs $14.05B), AI orders $600M exceeding $1B annual target. But stock "inched lower" / "marginally lower" despite beat. CFO departure announced same day. Estimated -1%.
+
+**Scoring (estimated):**
+- Direction Accuracy: ~33% (AAPL likely correct; NVDA flat; CSCO wrong despite beat)
+- Target Hit Rate: 0% (no targets hit on a single-day basis in a +0.4% market)
+- Stop Hit Rate: 0%
+- Win Rate: ~33%
+- Avg Return: ~0% (small mixed results)
+- Composite Score: ~30/100 est.
+
+**Key v2 learnings:**
+1. **Tariff momentum exhaustion.** May 14 was the 4th day of the tariff rally. AAPL and NVDA had already gained 6%+ on May 13. Buying the 3rd day of a momentum move on boring Wednesdays produces near-zero edge.
+2. **Earnings beat ≠ stock up.** CSCO beat on every metric but "inched lower" — CFO departure + exhaustion from the broader rally killed the reaction. This is a recurring theme: earnings beats on multi-catalyst rally days get muted reactions.
+3. **timingUrgency scored 80-83** for all three trades, but the urgency was already behind us — the big move happened May 12-13, not May 14. The algorithm needs to discount timingUrgency when the catalyst is >24 hours old.
+4. **Agent C correctly noted CSCO's lowest conviction (73) as consistent with genuine uncertainty** — this is exactly the kind of trade the system should have scored lower or excluded.
+
+---
+
