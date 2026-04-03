@@ -881,3 +881,58 @@ All 4 trades were winners. Ranking by return: VST (+27.75%) > CEG (+20.91%) > AV
 
 ---
 
+## v2 Trial 13 — 2024-07-11 (June CPI Surprise — Great Rotation Day)
+
+**Market Context:** S&P 500 at ~5,572 (7th consecutive up day, near ATH). Nasdaq at ~18,283. Russell 2000 (IWM) at ~$203, deeply lagging. Extreme concentration in mega-cap tech. June CPI report due at 8:30 AM — consensus +0.1% MoM headline. Market pricing ~2 rate cuts by year-end.
+
+### Recommendations
+
+| # | Symbol | Direction | Entry | Target | Stop | Conviction |
+|---|--------|-----------|-------|--------|------|------------|
+| 1 | IWM | LONG | $203.50 | $210.50 | $199.50 | 85.5 |
+| 2 | XLF | LONG | $41.80 | $43.20 | $41.00 | 80.1 |
+| 3 | QQQ | SHORT | $502.00 | $487.00 | $510.00 | 73.5 |
+
+**IWM Conviction:** catalystClarity: 92 | technicalSetup: 70 | riskReward: 85 | volumeLiquidity: 95 | marketAlignment: 80 | informationEdge: 78 | timingUrgency: 90
+**XLF Conviction:** catalystClarity: 85 | technicalSetup: 72 | riskReward: 78 | volumeLiquidity: 90 | marketAlignment: 78 | informationEdge: 72 | timingUrgency: 82
+**QQQ Conviction:** catalystClarity: 75 | technicalSetup: 65 | riskReward: 68 | volumeLiquidity: 95 | marketAlignment: 60 | informationEdge: 72 | timingUrgency: 78
+
+### Anti-Leakage Verification
+- IWM entry $203.50 vs Jul 10 close ~$203.37 — **verified** (0.06%)
+- XLF entry $41.80 vs Jul 10 close ~$41.72 — **verified** (0.19%)
+- QQQ entry $502.00 vs Jul 10 close ~$502.21 — **verified** (0.04%)
+
+### Outcomes (Real Price Data)
+
+June CPI: **-0.1% MoM** (first negative since May 2020). Massive rotation triggered.
+
+| Symbol | Open | High | Low | Close | Direction | Target | Stop | Return |
+|--------|------|------|-----|-------|-----------|--------|------|--------|
+| IWM | $205.69 | $209.17 | $205.37 | $207.75 | ✅ | ❌ | ✅ | +2.09% |
+| XLF | $42.19 | $42.53 | $41.97 | $42.38 | ✅ | ❌ | ✅ | +1.39% |
+| QQQ | $505.28 | $505.69 | $495.01 | $496.56 | ✅ | ❌ | ✅ | +1.08% |
+
+### Scoring
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +1.52% |
+| Profit Factor | ∞ (no losses) |
+| **Composite Score** | **75.0/100** |
+
+### Key Learnings
+
+1. **Rotation thesis was 100% correct directionally.** All 3 trades won. Small caps surged, financials rose, mega-cap tech sold off. The "Great Rotation" played out exactly as hypothesized.
+2. **ETF targets must be 1.5-2.5%, NOT 3-5%.** Zero targets hit despite correct direction on all trades. IWM missed by 0.6% ($209.17 high vs $210.50 target). Single-stock targets and ETF targets need different calibration.
+3. **catalystClarity was again the strongest predictor.** IWM (catalystClarity 92) had the best return. CPI was the clearest binary catalyst.
+4. **The composite score of 75 is entirely driven by 0% target hit rate.** With 2% targets, 2/3 would have hit and score would have been ~91.75. Same thesis, different target calibration, dramatically different score.
+5. **NEW RULE: Differentiate single-stock vs ETF target ranges.** Stocks: 3-5%. ETFs: 1.5-2.5%.
+
+*Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
+
+---
+

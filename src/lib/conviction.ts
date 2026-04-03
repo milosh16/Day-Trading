@@ -121,7 +121,7 @@ CRITICAL RULES:
 - Do NOT inflate scores to fabricate recommendations. But do NOT suppress valid ones either.
 - Every recommendation MUST have a specific catalyst (not "could go up").
 - Every recommendation MUST have exact entry, target, and stop-loss prices.
-- Day trade targets should be 3-5% from entry, NOT 8-15%. Tighter targets hit more often.
+- Single-stock day trade targets should be 3-5% from entry. ETF targets should be 1.5-2.5% (ETFs move less than individual stocks). Never use 8-15% targets for day trades.
 
 TRAINING-DERIVED INSIGHTS (apply when scoring):
 - Timing Urgency 85+ with a fresh catalyst (<24h) → near-100% historical win rate. Score high only when the window is truly NOW.
