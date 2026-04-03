@@ -1300,3 +1300,59 @@ Composite: (100x0.25) + (40x0.25) + (100x0.20) + (100x0.15) + (100x0.15)
 
 ---
 
+## v2 Trial 18 — 2024-04-19 (Iran-Israel Week — Risk-Off Tape)
+
+**Market Context:** Iran launched ~300 drones/missiles at Israel Apr 13-14 (most intercepted). Markets sold off Mon Apr 15, partially recovered. Israel struck back overnight Apr 18-19 (Isfahan, limited). Powell Apr 16: "higher for longer." VIX ~19. S&P -3% from March highs. TSMC beat earnings Apr 18 but sold off -3.5%. Netflix blowout earnings after close Apr 18 (+8% AH).
+
+### Recommendations
+
+| # | Symbol | Direction | Entry | Target | Stop | Conviction |
+|---|--------|-----------|-------|--------|------|------------|
+| 1 | NFLX | LONG | $605 | $626 | $590 | 82.3 |
+| 2 | TSM | LONG | $137.50 | $143 | $133.50 | 74.2 |
+| 3 | ASML | SHORT | $878 | $845 | $905 | 75.5 |
+
+**NFLX Conviction:** catalystClarity: 95 | technicalSetup: 70 | riskReward: 72 | volumeLiquidity: 90 | marketAlignment: **55** | informationEdge: 85 | timingUrgency: 90
+**TSM Conviction:** catalystClarity: 80 | technicalSetup: 60 | riskReward: 78 | volumeLiquidity: 85 | marketAlignment: 55 | informationEdge: 75 | timingUrgency: 75
+**ASML Conviction:** catalystClarity: 82 | technicalSetup: 80 | riskReward: 70 | volumeLiquidity: 80 | marketAlignment: 72 | informationEdge: 72 | timingUrgency: 70
+
+### Anti-Leakage Verification
+- NFLX: Gap-up entry $605 after AH earnings — **valid** (earnings reported after close)
+- TSM entry $137.50 vs Apr 18 close ~$136.78 — **verified** (0.5%)
+- ASML entry $878 vs Apr 18 close ~$878.31 — **verified** (0.0%)
+
+### Outcomes
+
+Israel struck Isfahan overnight but damage limited, Iran downplayed. S&P -0.9%, Nasdaq -2.0%.
+
+| Symbol | Open | High | Low | Close | Direction | Target | Stop | Return |
+|--------|------|------|-----|-------|-----------|--------|------|--------|
+| NFLX | ~$609 | ~$615 | ~$594 | ~$598 | ❌ | ❌ | ✅ | -1.5% |
+| TSM | ~$134.50 | ~$135.80 | ~$132.50 | ~$134.30 | NO FILL | — | — | — |
+| ASML | ~$870 | ~$874 | ~$851 | ~$856 | ✅ | ❌ | ✅ | +2.5% |
+
+*TSM gapped down below entry — limit order at $137.50 not filled. Marked as no-fill.*
+
+### Scoring (2 executed trades)
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 50.0% (1/2) |
+| Target Hit Rate | 0.0% (0/2) |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 50.0% (1/2) |
+| Profit Factor | 1.67 |
+| **Composite Score** | **42.5/100** |
+
+### Key Learnings
+
+1. **Market Alignment below 60 should VETO long trades.** NFLX scored 55 on marketAlignment — the lowest dimension — yet overall conviction of 82.3 overrode it. The stock faded from its gap-up in the weak tape. A marketAlignment floor of 60 for longs would have prevented this loss.
+2. **Post-earnings gap-ups in weak tapes are unreliable.** April 19 was the 5th consecutive down day for Nasdaq. Even Netflix's blowout (9.3M subs vs 4.8M expected) couldn't overcome the macro headwind.
+3. **Short-side trades with clear catalysts in downtrends are the highest-quality setups in risk-off environments.** ASML short was the only winner. Established downtrend + earnings miss + sector weakness = textbook.
+4. **No-fills are information.** TSM gapping below entry was itself a signal that the long thesis was wrong. The system should track no-fills as implicit directional signals.
+5. **Geopolitical uncertainty requires tighter targets.** VIX ~19 with binary geopolitical risk — reduce targets by 25-30%.
+
+*Weights used: catalystClarity: 25.0% | technicalSetup: 10.0% | riskReward: 15.0% | volumeLiquidity: 10.0% | marketAlignment: 10.0% | informationEdge: 15.0% | timingUrgency: 15.0%*
+
+---
+

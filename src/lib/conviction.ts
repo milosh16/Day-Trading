@@ -70,11 +70,17 @@ export function calculateConviction(
   const total = scored.reduce((sum, d) => sum + d.score * d.weight, 0);
   const rounded = Math.round(total * 10) / 10;
 
+  // Market Alignment veto: long trades with marketAlignment < 60 are demoted
+  // Training: NFLX long (Trial 18) had 82 conviction but marketAlignment 55 → faded in weak tape
+  const marketAlignmentScore = dimensions.marketAlignment?.score ?? 100;
+  const isLong = options?.direction === "long";
+  const marketAlignmentVeto = isLong && marketAlignmentScore < 60;
+
   return {
     total: rounded,
     dimensions: scored,
     grade: getGrade(rounded),
-    passesThreshold: rounded >= CONVICTION_THRESHOLD,
+    passesThreshold: rounded >= CONVICTION_THRESHOLD && !marketAlignmentVeto,
   };
 }
 
