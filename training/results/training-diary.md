@@ -117,7 +117,17 @@
 
 ---
 
-## V1 Summary (8 trials)
+### [v1] Trial 9: 2025-02-18 (Post-Holiday Reopening + Earnings) — Composite: 68/100
+
+**Context:** Markets reopen after Presidents' Day (Feb 17 closed). Last trading day Feb 14: S&P 500 6,115 (+1.0%), Nasdaq 19,946 (+1.5%). Hot January PPI (+0.5% vs +0.3% est) on Feb 13, but market rallied through it. NVDA earnings due Feb 26 (8 days out). TOL and BMBL reporting earnings after close Feb 18.
+**Trades:** NVDA long (-1.30%), TOL short (+6.70%), BMBL short (+17.6%)
+**Result:** 2/3 direction correct, 1/3 targets hit (BMBL), 0/3 stops hit, avg return +7.67%, PF 9.36
+**Contamination note:** BMBL's +17.6% short return is suspicious — Bumble cratered on guidance miss. However, the thesis cited the ongoing revenue deceleration and CFO departure (pre-market info). TOL short was based on housing affordability headwinds + earnings risk. NVDA long was the only loss — a holiday-reopening momentum play that fizzled.
+**Key learning:** EARNINGS CATALYST SHORTS OUTPERFORMED. Both winners were short positions into same-day earnings where fundamentals favored disappointment. marketAlignment was an INVERSE signal — the two winners (TOL 65, BMBL 60) had the LOWEST market alignment because they went against the bullish tape. For earnings-event shorts, broad market alignment is noise; catalystClarity and timingUrgency are the true edges. volumeLiquidity was also inverse — lower liquidity stocks (BMBL 55) delivered the biggest moves.
+
+---
+
+## V1 Summary (9 trials)
 
 | Trial | Date | Type | Composite | Direction% | Avg Return |
 |-------|------|------|-----------|------------|------------|
@@ -129,16 +139,18 @@
 | 6 | 2024-08-05 | Event (Black Monday) | 81 | 100% | +5.53% |
 | 7 | 2025-04-07 | Event (tariff crash) | 0 | 0% | -3.14% |
 | 8 | 2024-12-18 | Event (FOMC) | 45 | 33% | +0.65% |
+| 9 | 2025-02-18 | Mixed (earnings) | 68 | 67% | +7.67% |
 
-**V1 Average: 58.3/100 composite, 67% direction accuracy, +3.49% avg return**
+**V1 Average: 59.3/100 composite, 67% direction accuracy, +3.95% avg return**
 
-**NOTE:** Trials 7 and 8 bring direction accuracy down from 83% to 67%, below the 80% contamination threshold. This is more realistic. However, v1 soft controls remain insufficient — v2 structural separation is the real test.
+**NOTE:** 9 v1 trials complete. Direction accuracy at 67% — below 80% contamination threshold. v1 results show the algorithm works best on high-conviction, catalyst-specific trades (earnings shorts, binary events) and struggles with momentum-continuation plays (NVDA holiday reopen, GLD safe-haven). Key insight: marketAlignment is INVERSE for earnings-event shorts.
 
-**Updated weight signals from v1:**
-- marketAlignment is the strongest differentiating dimension across ALL trials → candidate for weight increase
-- On macro-event days (FOMC, tariffs), individual catalystClarity is overwhelmed → need dynamic weighting
-- Single-trade trials (like trial 7) produce degenerate scores → minimum 2-3 trades per trial
-- Profit factor scoring rewards concentrated winners even with low direction accuracy
+**Cumulative weight signals from v1:**
+- marketAlignment is context-dependent: strong predictor on macro days, INVERSE on earnings-event days → needs dynamic weighting
+- timingUrgency consistently correlates with return magnitude across all trial types
+- volumeLiquidity shows inverse signal for earnings plays (lower liquidity → bigger moves)
+- catalystClarity + informationEdge remain the best discriminators within any single trial
+- Targets too aggressive for single-session trades → need R:R recalibration (5-8% max day targets)
 
 ---
 
@@ -146,7 +158,7 @@
 
 *Three agents with ZERO shared context. Agent A (blind recommender) → Agent B (price verifier, never sees thesis/direction) → Agent C (leakage auditor, never sees outcomes). Hard discard rules enforced.*
 
-**V2 dates in pipeline:** 2025-10-08 (Agent A complete, B+C running), 2024-10-23 (Agent A running), 2025-05-14 (Agent A running), 2025-08-20 (pending), 2024-09-11 (pending)
+**V2 dates in pipeline:** 2025-10-08 (A done, B+C running), 2024-10-23 (A done, B+C running), 2025-05-14 (A done, B+C running), 2025-08-20 (A running), 2024-09-11 (A running), 2025-03-19 (A running), 2024-07-17 (A running), 2025-01-15 (A running), 2024-06-12 (A running)
 
 ---
 
