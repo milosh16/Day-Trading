@@ -85,27 +85,7 @@
 
 ---
 
-## V1 Summary (5 trials)
-
-| Trial | Date | Type | Composite | Direction% | Avg Return |
-|-------|------|------|-----------|------------|------------|
-| 1 | 2025-06-16 | Event (geo) | 5 | 0% | -4.17% |
-| 2 | 2025-09-22 | Event (mixed) | 81 | 100% | +3.45% |
-| 3 | 2024-11-06 | Event (election) | 97 | 100% | +15.91% |
-| 4 | 2025-03-10 | Event (recession fear) | 83 | 100% | +6.67% |
-| 5 | 2025-01-27 | Event (DeepSeek) | 74 | 100% | +3.0% |
-| 6 | 2024-08-05 | Event (Black Monday) | 81 | 100% | +5.53% |
-
-**V1 Average: 70.2/100 composite, 83% direction accuracy, +4.23% avg return**
-
-**CRITICAL NOTE:** 80% direction accuracy across 5 trials exceeds the 80% contamination threshold. These results are unreliable for weight optimization. V2 structural separation required.
-
-**Preliminary weight signals (to be validated by v2):**
-- timingUrgency consistently correlated with return magnitude → candidate for weight increase
-- volumeLiquidity showed no predictive power → candidate for weight decrease
-- catalystClarity + informationEdge discriminated best within winners → maintain or increase
-- technicalSetup irrelevant on binary catalyst days but important filter on normal days → keep but consider dynamic weighting
-- Targets consistently too aggressive for single-session trades → need R:R recalibration
+## V1 Summary (8 trials) — See updated table below Trial 8
 
 ---
 
@@ -117,13 +97,56 @@
 **Contamination note:** Black Monday 2024 is a well-known event. 100% short accuracy expected given model knowledge of the crash.
 **Key learning:** Even on crash days, targets set 14-15% below entry didn't hit intraday — 1-day targets should be 5-8% max. INTC (highest catalystClarity 88, highest informationEdge 85) and NVDA tied for best return. AMZN had weakest thesis (guidance miss vs structural crisis) = weakest return.
 
+### [v1] Trial 7: 2025-04-07 (Liberation Day Tariff Crash) — Composite: 0/100
+
+**Context:** Trump's "Liberation Day" tariffs announced April 2. S&P 500 crashed -5.97% on April 4 to 5,074. China retaliated with 34% counter-tariffs. VIX above 50. Nasdaq in bear market. Gold pulled back from $3,170 ATH to $3,114 on April 4 due to margin-call liquidation.
+**Trades:** GLD long (-3.14%). Two other candidates (NKE long, SH long) discarded for unverifiable entry prices.
+**Result:** 0/1 direction correct, 0/1 targets hit, 1/1 stops hit, avg return -3.14%
+**Contamination note:** April 7, 2025 tariff crash is in model training data. However, the agent correctly discarded 2 of 3 candidates for unverifiable prices (strict protocol). GLD's thesis (safe-haven bid) was reasonable but wrong — forced margin-call liquidation overwhelmed safe-haven demand.
+**Key learning:** In VIX >50 regimes, forced selling overwhelms ALL narratives including safe havens for 1-3 sessions. marketAlignment scored lowest (62) and proved most predictive — when macro alignment is weak, don't fight the liquidation cascade. Single-trade trials produce binary 0 or 100 composite scores — need minimum 3 trades for meaningful scoring.
+
+---
+
+### [v1] Trial 8: 2024-12-18 (FOMC Day + Micron Earnings) — Composite: 45/100
+
+**Context:** FOMC rate decision at 2 PM ET (consensus: 25bp cut). Micron (MU) earnings after close. Alphabet (GOOGL) riding quantum computing "Willow" chip momentum from Dec 10 announcement. Nasdaq at record highs. S&P 500 at record close of ~6,074 on Dec 17.
+**Trades:** MU long (-0.68%), NVDA short (+3.40%), GOOGL long (-0.78%)
+**Result:** 1/3 direction correct, 1/3 targets hit (NVDA), 0/3 stops hit, avg return +0.65%
+**Contamination note:** FOMC December 2024 hawkish cut is well-documented. NVDA short thesis (high-valuation tech vulnerable on FOMC day) was correct and arguably predictable from pre-market info. MU long was a legitimate pre-earnings play that failed due to after-hours guidance miss (unknowable pre-market). GOOGL long was weak — quantum narrative couldn't override FOMC macro pressure.
+**Key learning:** MACRO EVENT PRIMACY — on FOMC days, macro outcome dominates individual stock catalysts. marketAlignment was the only differentiating dimension (winner: 72 vs losers: 65). Earnings on FOMC day = compounded binary risk. Don't fight macro events with individual catalysts rated below 80 catalystClarity. Profit factor of 2.33 saved the composite despite only 33% direction accuracy.
+
+---
+
+## V1 Summary (8 trials)
+
+| Trial | Date | Type | Composite | Direction% | Avg Return |
+|-------|------|------|-----------|------------|------------|
+| 1 | 2025-06-16 | Event (geo) | 5 | 0% | -4.17% |
+| 2 | 2025-09-22 | Event (mixed) | 81 | 100% | +3.45% |
+| 3 | 2024-11-06 | Event (election) | 97 | 100% | +15.91% |
+| 4 | 2025-03-10 | Event (recession fear) | 83 | 100% | +6.67% |
+| 5 | 2025-01-27 | Event (DeepSeek) | 74 | 100% | +3.0% |
+| 6 | 2024-08-05 | Event (Black Monday) | 81 | 100% | +5.53% |
+| 7 | 2025-04-07 | Event (tariff crash) | 0 | 0% | -3.14% |
+| 8 | 2024-12-18 | Event (FOMC) | 45 | 33% | +0.65% |
+
+**V1 Average: 58.3/100 composite, 67% direction accuracy, +3.49% avg return**
+
+**NOTE:** Trials 7 and 8 bring direction accuracy down from 83% to 67%, below the 80% contamination threshold. This is more realistic. However, v1 soft controls remain insufficient — v2 structural separation is the real test.
+
+**Updated weight signals from v1:**
+- marketAlignment is the strongest differentiating dimension across ALL trials → candidate for weight increase
+- On macro-event days (FOMC, tariffs), individual catalystClarity is overwhelmed → need dynamic weighting
+- Single-trade trials (like trial 7) produce degenerate scores → minimum 2-3 trades per trial
+- Profit factor scoring rewards concentrated winners even with low direction accuracy
+
 ---
 
 ## Protocol v2 Trials (structural separation)
 
-*In progress — Agent A (blind recommender) running for 5 boring Wednesdays. Agent B (verifier) and Agent C (auditor) launch as each Agent A completes.*
+*Three agents with ZERO shared context. Agent A (blind recommender) → Agent B (price verifier, never sees thesis/direction) → Agent C (leakage auditor, never sees outcomes). Hard discard rules enforced.*
 
-**V2 dates in pipeline:** 2025-10-08, 2024-10-23, 2025-05-14, 2025-08-20, 2024-09-11
+**V2 dates in pipeline:** 2025-10-08 (Agent A complete, B+C running), 2024-10-23 (Agent A running), 2025-05-14 (Agent A running), 2025-08-20 (pending), 2024-09-11 (pending)
 
 ---
 
