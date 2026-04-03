@@ -34,10 +34,33 @@ export interface RealOutcome {
   notes: string;
 }
 
+// Briefing generated for each training day
+export interface TrainingBriefing {
+  summary: string;
+  marketCondition: "bullish" | "bearish" | "neutral" | "volatile";
+  sections: { title: string; content: string; importance: "high" | "medium" | "low" }[];
+  scenarios: { event: string; scenarios: { condition: string; implication: string; trade: string }[] }[];
+}
+
+// Regime classification for each training day
+export interface TrainingRegime {
+  regime: string;
+  confidence: number;
+  directionalBias: string;
+  volatilityRegime: string;
+  stressIndex: number;
+  riskAppetiteIndex: number;
+  sectorTilts: Record<string, string>;
+}
+
 export interface TrialResult {
   trialId: number;
   date: string;
   generatedAt: string;
+  // Full pipeline outputs
+  signals?: Record<string, unknown>;       // 100+ GlobalSignals fields
+  regime?: TrainingRegime;                  // Regime classification
+  briefing?: TrainingBriefing;              // Daily briefing
   recommendations: TradeRecommendation[];
   outcomes: RealOutcome[];
   scores: {
@@ -58,6 +81,30 @@ export interface TrialResult {
   };
   weights: ConvictionWeights;
   totalTokensUsed: number;
+  // Opus-revised recommendations (populated after every 10-trial review)
+  revisedRecommendations?: TradeRecommendation[];
+  opusReviewNotes?: string;
+}
+
+// Full training day record — written to public/data/training/ for app display
+export interface TrainingDayRecord {
+  trialId: number;
+  date: string;
+  dateDisplay: string;
+  generatedAt: string;
+  pipeline: {
+    signals: Record<string, unknown>;
+    regime: TrainingRegime;
+    briefing: TrainingBriefing;
+  };
+  recommendations: TradeRecommendation[];
+  outcomes: RealOutcome[];
+  scores: TrialResult["scores"];
+  dimensionAnalysis: TrialResult["dimensionAnalysis"];
+  weights: ConvictionWeights;
+  revisedRecommendations?: TradeRecommendation[];
+  opusReviewNotes?: string;
+  opusReviewTrial?: number; // which Opus review batch this was part of
 }
 
 export interface ConvictionWeights {
