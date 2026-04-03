@@ -10,7 +10,7 @@ import { getBriefingByDate, storeAccuracy } from "@/lib/briefing-store";
 
 export const maxDuration = 300;
 
-const MODEL = process.env.BRIEFING_MODEL || "claude-sonnet-4-6";
+const MODEL = process.env.BRIEFING_MODEL || "claude-opus-4-6";
 
 export async function GET(req: NextRequest) {
   const authHeader = req.headers.get("authorization");
@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.ANTHROPIC_API_KEY || req.headers.get("x-anthropic-key");
   if (!apiKey) {
     return NextResponse.json({ error: "ANTHROPIC_API_KEY not set" }, { status: 500 });
   }

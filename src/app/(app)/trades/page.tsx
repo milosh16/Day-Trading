@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTradesStore, usePortfolioStore, useSettingsStore } from "@/lib/store";
 import { buildConvictionPrompt, calculateConviction, convictionToPositionPercent, CONVICTION_THRESHOLD } from "@/lib/conviction";
+import { applyRegimeModifiers, type RegimeAssessment } from "@/lib/market-regime";
 import { assessTradeRisk, RISK_RULES } from "@/lib/risk";
 import Card, { StatusBadge, PnlDisplay } from "@/components/Card";
 import type { TradeRecommendation, Trade, ConvictionScore, Position } from "@/lib/types";
@@ -33,6 +34,25 @@ export default function TradesPage() {
         day: "numeric",
       });
 
+      // Fetch today's regime assessment and leading indicators (may not exist yet)
+      let regimeData: (RegimeAssessment & { regimePrompt?: string; indicatorPrompt?: string }) | null = null;
+      try {
+        const regimeRes = await fetch("/api/regime");
+        if (regimeRes.ok) {
+          const regimeJson = await regimeRes.json();
+          if (regimeJson.available !== false && regimeJson.regime) {
+            regimeData = regimeJson as RegimeAssessment & { regimePrompt?: string; indicatorPrompt?: string };
+          }
+        }
+      } catch { /* regime not available, proceed without */ }
+
+      let regimeSection = regimeData?.regimePrompt
+        ? `\n\n${regimeData.regimePrompt}`
+        : "";
+      if (regimeData?.indicatorPrompt) {
+        regimeSection += `\n\n${regimeData.indicatorPrompt}`;
+      }
+
       const response = await fetch("/api/anthropic", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -53,7 +73,7 @@ CRITICAL RULES:
 - Maximum position size: ${RISK_RULES.MAX_POSITION_PERCENT}% of portfolio.
 - Maximum loss per trade: ${RISK_RULES.MAX_LOSS_PER_TRADE_PERCENT}% of portfolio.
 
-${convictionPrompt}
+${convictionPrompt}${regimeSection}
 
 Scan across: US equities, ETFs (including leveraged), and crypto available on Alpaca.
 
@@ -142,16 +162,34 @@ If no setups meet the threshold, return: <json>[]</json>`,
       const processedRecs: TradeRecommendation[] = [];
 
       for (const rec of recsData as Record<string, unknown>[]) {
+        const direction = rec.direction as "long" | "short";
+
         const conviction: ConvictionScore = calculateConviction(
-          rec.conviction as Record<DimensionKey, { score: number; reasoning: string }>
+          rec.conviction as Record<DimensionKey, { score: number; reasoning: string }>,
+          { direction }
         );
 
+        // Apply regime modifiers if regime is available
+        let effectiveConviction = conviction.total;
+        if (regimeData && conviction.passesThreshold) {
+          const { adjustedConviction } = applyRegimeModifiers(
+            conviction.total,
+            direction,
+            regimeData as RegimeAssessment,
+          );
+          effectiveConviction = adjustedConviction;
+
+          // Check regime's minimum conviction override
+          const minOverride = regimeData.convictionModifiers?.minConvictionOverride;
+          if (minOverride && effectiveConviction < minOverride) continue;
+        }
+
         if (!conviction.passesThreshold) continue;
+        if (effectiveConviction < CONVICTION_THRESHOLD) continue;
 
         const entryPrice = rec.entryPrice as number;
         const targetPrice = rec.targetPrice as number;
         const stopLoss = rec.stopLoss as number;
-        const direction = rec.direction as "long" | "short";
 
         const positionPercent = convictionToPositionPercent(conviction.total);
         const positionSizeDollars = Math.min(

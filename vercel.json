@@ -1,13 +1,3 @@
 {
-  "framework": "nextjs",
-  "crons": [
-    {
-      "path": "/api/cron/briefing",
-      "schedule": "30 10 * * 1-5"
-    },
-    {
-      "path": "/api/cron/accuracy",
-      "schedule": "30 21 * * 1-5"
-    }
-  ]
+  "framework": "nextjs"
 }

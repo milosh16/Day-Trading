@@ -1,0 +1,132 @@
+name: Daily Market Intelligence
+
+on:
+  schedule:
+    # Pre-market: 6:15 AM ET (10:15 UTC) weekdays
+    - cron: '15 10 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      job:
+        description: 'Which job to run (briefing, accuracy, all)'
+        required: false
+        default: 'briefing'
+  push:
+    branches:
+      - claude/signal-trading-platform-lRjct
+    paths:
+      - '.github/workflows/daily-crons.yml'
+      - 'scripts/generate-briefing.ts'
+
+permissions:
+  contents: write
+
+jobs:
+  briefing:
+    if: >-
+      github.event_name == 'push' ||
+      github.event_name == 'schedule' ||
+      github.event.inputs.job == 'briefing' ||
+      github.event.inputs.job == 'all'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/signal-trading-platform-lRjct
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate regime + briefing
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -e
+          echo "=== Starting briefing generation ==="
+
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set"
+            exit 1
+          fi
+
+          npx tsx scripts/generate-briefing.ts
+
+          echo "=== Verifying output ==="
+          if [ ! -f public/data/briefing-latest.json ]; then
+            echo "::error::briefing-latest.json was not created"
+            exit 1
+          fi
+          if [ ! -f public/data/regime-latest.json ]; then
+            echo "::error::regime-latest.json was not created"
+            exit 1
+          fi
+
+          echo "Output files:"
+          ls -la public/data/*.json
+          echo ""
+          echo "Briefing summary:"
+          node -e "const b=require('./public/data/briefing-latest.json'); console.log('Market:', b.marketCondition); console.log('Sections:', b.sections?.length); console.log('Scenarios:', b.scenarios?.length); console.log('Summary:', b.summary?.slice(0,200));"
+
+      - name: Commit and push data
+        run: |
+          git config user.name "SIGNAL Bot"
+          git config user.email "signal-bot@users.noreply.github.com"
+          git add public/data/
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+          else
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "data: market intelligence ${DATE}"
+            # Retry push up to 4 times with backoff
+            for i in 1 2 3 4; do
+              if git push origin claude/signal-trading-platform-lRjct; then
+                echo "Push succeeded on attempt $i"
+                break
+              fi
+              if [ $i -eq 4 ]; then
+                echo "::error::Push failed after 4 attempts"
+                exit 1
+              fi
+              WAIT=$((2 ** i))
+              echo "Push failed, retrying in ${WAIT}s..."
+              sleep $WAIT
+              git pull origin claude/signal-trading-platform-lRjct --rebase
+            done
+          fi
+
+  accuracy:
+    if: >-
+      github.event.inputs.job == 'accuracy' ||
+      github.event.inputs.job == 'all'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/signal-trading-platform-lRjct
+
+      - name: Score accuracy
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+          APP_URL: ${{ vars.APP_URL || 'https://day-trading-sigma.vercel.app' }}
+        run: |
+          echo "Triggering accuracy cron at $APP_URL..."
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            "$APP_URL/api/cron/accuracy" \
+            -H "Authorization: Bearer $CRON_SECRET" \
+            -H "x-anthropic-key: $ANTHROPIC_API_KEY" \
+            --max-time 300)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          echo "Status: $HTTP_CODE"
+          echo "Response: $BODY"
+          if [ "$HTTP_CODE" -ge 400 ]; then
+            echo "::warning::Accuracy cron returned $HTTP_CODE (non-fatal)"
+          fi

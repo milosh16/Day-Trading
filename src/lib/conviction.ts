@@ -6,19 +6,20 @@
 // No artificial cap on trade count - recommend all that pass threshold.
 // ============================================================
 
-import { ConvictionScore, ConvictionDimension } from "./types";
+import { ConvictionScore, ConvictionDimension, TradeDirection } from "./types";
 
 export const CONVICTION_THRESHOLD = 72;
 
 // Dimension weights (must sum to 1.0)
+// Updated from training: 12 trials, 28 trades (Phase 2 summary)
 const DIMENSION_WEIGHTS = {
-  catalystClarity: 0.20,    // Is there a specific, imminent catalyst?
-  technicalSetup: 0.15,     // Does price action support the thesis?
-  riskReward: 0.15,         // How asymmetric is the payoff?
-  volumeLiquidity: 0.10,    // Can we enter/exit cleanly?
-  marketAlignment: 0.15,    // Does the macro environment support this?
-  informationEdge: 0.15,    // Is there a data asymmetry vs. consensus?
-  timingUrgency: 0.10,      // Is the window for entry now, not later?
+  catalystClarity: 0.25,    // Strongest absolute predictor of direction accuracy
+  technicalSetup: 0.10,     // Noise on catalyst days; only useful on calm earnings days
+  riskReward: 0.15,         // Stable hygiene factor — consistent but never the differentiator
+  volumeLiquidity: 0.10,    // Pure risk filter; inversely correlated with return on shorts
+  marketAlignment: 0.10,    // Context-dependent: positive on macro days, inverse on earnings
+  informationEdge: 0.15,    // Powerful when real data asymmetry exists
+  timingUrgency: 0.15,      // Strongest timing signal; 85+ score → near-100% win rate
 } as const;
 
 export type DimensionKey = keyof typeof DIMENSION_WEIGHTS;
@@ -33,26 +34,53 @@ export const DIMENSION_DESCRIPTIONS: Record<DimensionKey, string> = {
   timingUrgency: "Timing Urgency - Why this trade must be taken now",
 };
 
+export interface ConvictionOptions {
+  direction?: TradeDirection;
+  catalystAgeHours?: number;
+}
+
 export function calculateConviction(
-  dimensions: Record<DimensionKey, { score: number; reasoning: string }>
+  dimensions: Record<DimensionKey, { score: number; reasoning: string }>,
+  options?: ConvictionOptions,
 ): ConvictionScore {
   const scored: ConvictionDimension[] = Object.entries(dimensions).map(
-    ([key, { score, reasoning }]) => ({
-      name: DIMENSION_DESCRIPTIONS[key as DimensionKey],
-      score: Math.max(0, Math.min(100, score)),
-      weight: DIMENSION_WEIGHTS[key as DimensionKey],
-      reasoning,
-    })
+    ([key, { score, reasoning }]) => {
+      let adjustedScore = Math.max(0, Math.min(100, score));
+      let weight = DIMENSION_WEIGHTS[key as DimensionKey];
+
+      // timingUrgency decay: discount when catalyst is stale (>24h old)
+      // Training insight: urgency 85+ → near-100% win rate, but only when fresh
+      if (key === "timingUrgency" && options?.catalystAgeHours != null) {
+        const age = options.catalystAgeHours;
+        if (age > 24) {
+          const decay = Math.max(0.5, 1 - (age - 24) / 48);
+          adjustedScore = Math.round(adjustedScore * decay);
+        }
+      }
+
+      return {
+        name: DIMENSION_DESCRIPTIONS[key as DimensionKey],
+        score: adjustedScore,
+        weight,
+        reasoning,
+      };
+    },
   );
 
   const total = scored.reduce((sum, d) => sum + d.score * d.weight, 0);
   const rounded = Math.round(total * 10) / 10;
 
+  // Market Alignment veto: long trades with marketAlignment < 60 are demoted
+  // Training: NFLX long (Trial 18) had 82 conviction but marketAlignment 55 → faded in weak tape
+  const marketAlignmentScore = dimensions.marketAlignment?.score ?? 100;
+  const isLong = options?.direction === "long";
+  const marketAlignmentVeto = isLong && marketAlignmentScore < 60;
+
   return {
     total: rounded,
     dimensions: scored,
     grade: getGrade(rounded),
-    passesThreshold: rounded >= CONVICTION_THRESHOLD,
+    passesThreshold: rounded >= CONVICTION_THRESHOLD && !marketAlignmentVeto,
   };
 }
 
@@ -99,6 +127,17 @@ CRITICAL RULES:
 - Do NOT inflate scores to fabricate recommendations. But do NOT suppress valid ones either.
 - Every recommendation MUST have a specific catalyst (not "could go up").
 - Every recommendation MUST have exact entry, target, and stop-loss prices.
+- Single-stock day trade targets should be 3-5% from entry. ETF targets should be 1.5-2.5% (ETFs move less than individual stocks). Never use 8-15% targets for day trades.
+
+TRAINING-DERIVED INSIGHTS (apply when scoring):
+- Timing Urgency 85+ with a fresh catalyst (<24h) → near-100% historical win rate. Score high only when the window is truly NOW.
+- On paradigm-shift or macro-shock days, Technical Setup is noise — weight it less mentally.
+- Second-derivative plays (e.g., power stocks during an AI scare) often outperform the obvious direct target. Consider non-obvious beneficiaries/casualties.
+- For SHORT trades, lower Volume/Liquidity can mean BIGGER moves (illiquid names gap harder in panics). Do not penalize shorts for moderate liquidity.
+- Catalyst Clarity above 85 has diminishing returns — the "most obvious" trade often gets front-run in pre-market.
+- CPI reaction asymmetry: soft CPI reliably rallies in bull markets, but hot CPI does NOT reliably sell off. Do not short on "hot CPI" alone.
+- Scheduled data day discipline: if the primary catalyst is an unreleased data print (CPI, NFP, FOMC), pre-data conviction is inherently capped. Zero trades before the print is often correct.
+- Target calibration by instrument: leveraged ETFs 6-8%, individual stocks 3-5%, broad ETFs 1.5-2.5%, low-beta blue chips 1-2%. Never use one-size-fits-all targets.
 
 For each dimension, provide a 1-sentence reasoning.
 

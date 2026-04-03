@@ -7,12 +7,12 @@
 // ============================================================
 
 import { NextRequest, NextResponse } from "next/server";
-import { storeBriefing, type StoredBriefing } from "@/lib/briefing-store";
+import { storeBriefing, getLatestRegime, type StoredBriefing } from "@/lib/briefing-store";
 
 export const maxDuration = 300; // 5 min — works on Pro plan
 
 // Use Opus in prod (Pro plan), Sonnet in testing (Hobby)
-const MODEL = process.env.BRIEFING_MODEL || "claude-sonnet-4-6";
+const MODEL = process.env.BRIEFING_MODEL || "claude-opus-4-6";
 
 export async function GET(req: NextRequest) {
   // Verify cron secret to prevent unauthorized triggers
@@ -22,7 +22,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.ANTHROPIC_API_KEY || req.headers.get("x-anthropic-key");
   if (!apiKey) {
     return NextResponse.json({ error: "ANTHROPIC_API_KEY not set" }, { status: 500 });
   }
@@ -37,11 +37,26 @@ export async function GET(req: NextRequest) {
   const dateKey = now.toISOString().split("T")[0]; // YYYY-MM-DD
 
   try {
+    // Load today's regime assessment and leading indicators if available (regime cron runs first)
+    let regimeContext = "";
+    try {
+      const regime = await getLatestRegime();
+      if (regime && typeof regime.regimePrompt === "string") {
+        regimeContext = `\n\n--- REGIME ASSESSMENT (auto-generated) ---\n${regime.regimePrompt}\n--- END REGIME ASSESSMENT ---`;
+      }
+      if (regime && typeof regime.indicatorPrompt === "string") {
+        regimeContext += `\n\n--- LEADING INDICATORS (multi-day trends) ---\n${regime.indicatorPrompt}\n--- END LEADING INDICATORS ---`;
+      }
+      if (regimeContext) {
+        regimeContext += `\n\nIncorporate both the regime assessment AND multi-day leading indicators into your briefing. Reference the regime type, key factors, sector tilts, and any detected patterns (stress accumulation, credit stress, oversold bounce setups, etc.) in your analysis. Leading indicator patterns are especially important — they show what is BUILDING over days/weeks.`;
+      }
+    } catch { /* regime not available, proceed without */ }
+
     const requestBody = {
       model: MODEL,
       max_tokens: MODEL.includes("opus") ? 8192 : 4096,
       stream: true,
-      system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateStr}. Generate a comprehensive morning market briefing by searching for current market data. Be factual and concise. Do not use emojis.
+      system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateStr}. Generate a comprehensive morning market briefing by searching for current market data. Be factual and concise. Do not use emojis.${regimeContext}
 
 You MUST use the web_search tool to find current, real-time market data. Search for multiple topics to build a complete picture.
 
@@ -159,6 +174,17 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       );
     }
 
+    // Attach regime metadata if available
+    let regimeType: string | undefined;
+    let regimeConfidence: number | undefined;
+    try {
+      const regime = await getLatestRegime();
+      if (regime) {
+        regimeType = regime.regime as string;
+        regimeConfidence = regime.confidence as number;
+      }
+    } catch { /* ok */ }
+
     const storedBriefing: StoredBriefing = {
       id: crypto.randomUUID(),
       date: dateKey,
@@ -168,11 +194,14 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       marketCondition: briefingData.marketCondition || "neutral",
       sections: briefingData.sections || [],
       scenarios: briefingData.scenarios || [],
+      regimeType,
+      regimeConfidence,
     };
 
-    // Store in KV
+    // Store in KV (may silently fail if KV not configured)
     const stored = await storeBriefing(storedBriefing);
 
+    // Always return full briefing data so GitHub Actions can persist it
     return NextResponse.json({
       success: true,
       stored,
@@ -180,6 +209,7 @@ IMPORTANT: Wrap your final JSON in <json> tags like this: <json>{"summary": ...}
       model: MODEL,
       sectionsCount: storedBriefing.sections.length,
       scenariosCount: storedBriefing.scenarios.length,
+      briefing: storedBriefing,
     });
   } catch (error) {
     return NextResponse.json(

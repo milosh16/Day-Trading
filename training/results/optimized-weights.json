@@ -1,0 +1,53 @@
+{
+  "exportedAt": "2026-04-03T02:00:00.000Z",
+  "trialsCompleted": 12,
+  "bestScore": 100,
+  "bestWeights": {
+    "catalystClarity": 0.25,
+    "technicalSetup": 0.10,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.10,
+    "marketAlignment": 0.10,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.15
+  },
+  "currentWeights": {
+    "catalystClarity": 0.25,
+    "technicalSetup": 0.10,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.10,
+    "marketAlignment": 0.10,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.15
+  },
+  "recommendedThreshold": 72,
+  "weightHistory": [
+    {
+      "trial": 2,
+      "weights": {
+        "catalystClarity": 0.20,
+        "technicalSetup": 0.15,
+        "riskReward": 0.15,
+        "volumeLiquidity": 0.10,
+        "marketAlignment": 0.15,
+        "informationEdge": 0.15,
+        "timingUrgency": 0.10
+      },
+      "score": 97
+    },
+    {
+      "trial": 12,
+      "weights": {
+        "catalystClarity": 0.25,
+        "technicalSetup": 0.10,
+        "riskReward": 0.15,
+        "volumeLiquidity": 0.10,
+        "marketAlignment": 0.10,
+        "informationEdge": 0.15,
+        "timingUrgency": 0.15
+      },
+      "score": 100,
+      "notes": "Phase 2 optimization: 12 trials, 28 trades. catalystClarity+5%, technicalSetup-5%, marketAlignment-5%, timingUrgency+5%"
+    }
+  ]
+}

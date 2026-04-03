@@ -25,6 +25,8 @@ export interface StoredBriefing {
       trade: string;
     }[];
   }[];
+  regimeType?: string; // e.g., "risk-on", "crisis" — from regime cron
+  regimeConfidence?: number;
   accuracy?: {
     scoredAt: string;
     marketConditionCorrect: boolean;
@@ -106,6 +108,121 @@ export async function getBriefingDates(limit = 30): Promise<string[]> {
     return dates as string[];
   } catch {
     return [];
+  }
+}
+
+// --- Regime Storage ---
+
+const REGIME_LATEST_KEY = "regime:latest";
+const REGIME_HISTORY_PREFIX = "regime:date:";
+
+export async function storeRegime(date: string, regime: Record<string, unknown>): Promise<boolean> {
+  const kv = await getKv();
+  if (!kv) return false;
+
+  try {
+    await Promise.all([
+      kv.set(REGIME_LATEST_KEY, regime),
+      kv.set(`${REGIME_HISTORY_PREFIX}${date}`, regime),
+    ]);
+    return true;
+  } catch (e) {
+    console.error("Failed to store regime:", e);
+    return false;
+  }
+}
+
+export async function getLatestRegime(): Promise<Record<string, unknown> | null> {
+  const kv = await getKv();
+  if (!kv) return null;
+
+  try {
+    return await kv.get<Record<string, unknown>>(REGIME_LATEST_KEY);
+  } catch {
+    return null;
+  }
+}
+
+export async function getRegimeByDate(date: string): Promise<Record<string, unknown> | null> {
+  const kv = await getKv();
+  if (!kv) return null;
+
+  try {
+    return await kv.get<Record<string, unknown>>(`${REGIME_HISTORY_PREFIX}${date}`);
+  } catch {
+    return null;
+  }
+}
+
+// --- Signal History Storage (for leading indicators) ---
+
+const SIGNAL_HISTORY_PREFIX = "signals:daily:";
+const SIGNAL_INDEX_KEY = "signals:dates";
+const LEADING_INDICATOR_KEY = "indicators:latest";
+
+export async function storeSignalHistory(
+  date: string,
+  record: Record<string, unknown>,
+): Promise<boolean> {
+  const kv = await getKv();
+  if (!kv) return false;
+
+  try {
+    await Promise.all([
+      kv.set(`${SIGNAL_HISTORY_PREFIX}${date}`, record),
+      kv.zadd(SIGNAL_INDEX_KEY, { score: new Date(date).getTime(), member: date }),
+    ]);
+    return true;
+  } catch (e) {
+    console.error("Failed to store signal history:", e);
+    return false;
+  }
+}
+
+export async function getSignalHistory(
+  days: number = 20,
+): Promise<Record<string, unknown>[]> {
+  const kv = await getKv();
+  if (!kv) return [];
+
+  try {
+    // Get most recent N dates from sorted set
+    const dates = await kv.zrange(SIGNAL_INDEX_KEY, 0, days - 1, { rev: true }) as string[];
+    if (!dates.length) return [];
+
+    // Fetch all records in parallel
+    const records = await Promise.all(
+      dates.map(d => kv.get<Record<string, unknown>>(`${SIGNAL_HISTORY_PREFIX}${d}`))
+    );
+    return records.filter((r): r is Record<string, unknown> => r !== null);
+  } catch {
+    return [];
+  }
+}
+
+export async function storeLeadingIndicators(
+  report: Record<string, unknown>,
+): Promise<boolean> {
+  const kv = await getKv();
+  if (!kv) return false;
+
+  try {
+    await kv.set(LEADING_INDICATOR_KEY, report);
+    return true;
+  } catch (e) {
+    console.error("Failed to store leading indicators:", e);
+    return false;
+  }
+}
+
+export async function getLeadingIndicators(): Promise<Record<string, unknown> | null> {
+  const kv = await getKv();
+  if (!kv) return null;
+
+  try {
+    return await kv.get<Record<string, unknown>>(LEADING_INDICATOR_KEY);
+  } catch {
+    return null;
   }
 }
 

@@ -10,8 +10,8 @@ import { NextRequest, NextResponse } from "next/server";
 export const maxDuration = 300;
 
 // GET handler for quick diagnostics
-export async function GET() {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+export async function GET(req: NextRequest) {
+  const apiKey = process.env.ANTHROPIC_API_KEY || req.headers.get("x-anthropic-key");
   if (!apiKey) {
     return NextResponse.json({ status: "error", reason: "ANTHROPIC_API_KEY not set" });
   }
@@ -25,7 +25,7 @@ export async function GET() {
         "anthropic-version": "2023-06-01",
       },
       body: JSON.stringify({
-        model: "claude-sonnet-4-6",
+        model: "claude-opus-4-6",
         max_tokens: 32,
         messages: [{ role: "user", content: "Say OK" }],
       }),
@@ -36,14 +36,14 @@ export async function GET() {
       return NextResponse.json({ status: "error", code: response.status, detail: err });
     }
 
-    return NextResponse.json({ status: "ok", model: "claude-sonnet-4-6" });
+    return NextResponse.json({ status: "ok", model: "claude-opus-4-6" });
   } catch (e) {
     return NextResponse.json({ status: "error", detail: String(e) });
   }
 }
 
 export async function POST(req: NextRequest) {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
+  const apiKey = process.env.ANTHROPIC_API_KEY || req.headers.get("x-anthropic-key");
   if (!apiKey) {
     return NextResponse.json(
       { error: "Anthropic API key not configured" },
@@ -65,8 +65,8 @@ export async function POST(req: NextRequest) {
     const { messages, system, tools, max_tokens = 4096 } = body;
 
     const requestBody: Record<string, unknown> = {
-      model: "claude-sonnet-4-6",
-      max_tokens: Math.min(max_tokens, 4096),
+      model: "claude-opus-4-6",
+      max_tokens: Math.min(max_tokens, 8192),
       messages,
       stream: true,
     };
