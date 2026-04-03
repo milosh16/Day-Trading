@@ -158,7 +158,42 @@
 
 *Three agents with ZERO shared context. Agent A (blind recommender) → Agent B (price verifier, never sees thesis/direction) → Agent C (leakage auditor, never sees outcomes). Hard discard rules enforced.*
 
-**V2 dates in pipeline:** 2025-10-08 (A done, B+C running), 2024-10-23 (A done, B+C running), 2025-05-14 (A done, B+C running), 2025-08-20 (A running), 2024-09-11 (A running), 2025-03-19 (A running), 2024-07-17 (A running), 2025-01-15 (A running), 2024-06-12 (A running)
+**V2 dates in pipeline:** 2024-10-23 (B+C running), 2025-05-14 (B+C running), 2025-08-20 (A running), 2024-09-11 (A running), 2025-03-19 (A running), 2024-07-17 (A running), 2025-01-15 (A running), 2024-06-12 (A running)
+
+---
+
+### [v2] Trial 1: 2025-10-08 (Wednesday — AMD/OpenAI Deal + Comerica Merger Arb)
+
+**Agent A (Blind Recommender):**
+- AMD LONG: Entry $205.50 (claimed Oct 7 close $203.71), Target $240, Stop $190, Conviction 80
+  - Thesis: Jefferies upgrade to Buy/$300 PT on Oct 7 after AMD/OpenAI multi-year GPU supply deal announced Oct 6. Multiple analyst upgrades ($270-$310 targets). CNBC reported "up 43% this week" pre-market Oct 8.
+- CMA LONG (merger arb): Entry $80.50 (claimed Oct 7 close $80.20), Target $82.50, Stop $77.50, Conviction 74
+  - Thesis: Fifth Third Bancorp acquiring Comerica for $10.9B all-stock (1.8663x exchange, implied $82.88). 3.3% arb spread.
+- DISCARDED: NVDA (unverifiable Oct 7 close), FITB (unverifiable), XLK (unverifiable)
+
+**Agent B (Price Verifier — never saw thesis/direction/targets):**
+- AMD: Verified Oct 7 close was **$213.27** (not $203.71 as claimed). $203.71 appears to be the Oct 6 close. Agent A's entry of $205.50 deviates **-3.6%** from verified close → **DISCARD** (exceeds 2% rule).
+  - Oct 8 OHLC: Open ~$218, High ~$230+, Close ~$226-230 (up ~6%)
+- CMA: Verified Oct 7 close was **$80.20** ✓. Entry $80.50, deviation +0.37% → **VALID**.
+  - Oct 8 OHLC: **Data unavailable** — specific Oct 8 price data could not be verified.
+
+**Agent C (Leakage Auditor — never saw outcomes):**
+- AMD LONG: **CLEAN** — thesis cites verifiable pre-market sources (Jefferies upgrade Oct 7, Bloomberg, TechCrunch). Momentum continuation after +24% is standard practice, not evidence of foreknowledge.
+- CMA LONG: **CLEAN** — textbook merger arb. Direction inherent in the spread, not a prediction.
+
+**V2 Protocol Results:**
+| Trade | Agent A | Agent B Entry Check | Agent C Audit | Final Status |
+|-------|---------|-------------------|---------------|-------------|
+| AMD LONG | Conv 80 | **DISCARD** (-3.6% entry deviation) | CLEAN | **DISCARDED** |
+| CMA LONG | Conv 74 | VALID (+0.37%) | CLEAN | Data unavailable for scoring |
+
+**Composite Score: INCOMPLETE** — AMD discarded by Agent B price check. CMA passed all gates but Oct 8 OHLC unavailable. No scoreable trades this trial.
+
+**Key v2 learnings:**
+1. **The protocol worked.** Agent B independently caught a $10 entry price error that would have slipped through v1 soft controls. $203.71 was the Oct 6 close, not Oct 7. This is exactly what structural separation is designed to catch.
+2. **Price verification is the hardest gate.** Of 5 candidates Agent A considered, 3 were discarded for unverifiable closes, and the one with a "verified" close was wrong. Web search financial data is unreliable for precise close prices.
+3. **Merger arb trades are the cleanest** — deal terms are public, direction is mechanical, and entry prices are verifiable from merger announcements. Low contamination risk by design.
+4. **Data availability limits scoring.** Even when a trade passes all gates, finding precise OHLC data for scoring is difficult via web search. Future improvement: integrate a financial data API (Polygon.io, Yahoo Finance API) for Agent B.
 
 ---
 
