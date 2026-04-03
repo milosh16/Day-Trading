@@ -94,8 +94,9 @@
 | 3 | 2024-11-06 | Event (election) | 97 | 100% | +15.91% |
 | 4 | 2025-03-10 | Event (recession fear) | 83 | 100% | +6.67% |
 | 5 | 2025-01-27 | Event (DeepSeek) | 74 | 100% | +3.0% |
+| 6 | 2024-08-05 | Event (Black Monday) | 81 | 100% | +5.53% |
 
-**V1 Average: 68/100 composite, 80% direction accuracy, +4.97% avg return**
+**V1 Average: 70.2/100 composite, 83% direction accuracy, +4.23% avg return**
 
 **CRITICAL NOTE:** 80% direction accuracy across 5 trials exceeds the 80% contamination threshold. These results are unreliable for weight optimization. V2 structural separation required.
 
@@ -108,9 +109,21 @@
 
 ---
 
+### [v1] Trial 6: 2024-08-05 (Black Monday / Yen Carry Unwind) — Composite: 81/100
+
+**Context:** July NFP +114K vs +175K expected, unemployment 4.3% (Sahm Rule triggered). BOJ hiked to 0.25% (largest since 2007), yen carry trade unwinding. Intel -26% after catastrophic Q2. Amazon -8.7% on guidance miss. Nikkei crashing. VIX at 38.57.
+**Trades:** INTC short (+6.4%), AMZN short (+3.8%), NVDA short (+6.4%)
+**Result:** 3/3 direction correct, 0/3 targets hit, avg return +5.53%
+**Contamination note:** Black Monday 2024 is a well-known event. 100% short accuracy expected given model knowledge of the crash.
+**Key learning:** Even on crash days, targets set 14-15% below entry didn't hit intraday — 1-day targets should be 5-8% max. INTC (highest catalystClarity 88, highest informationEdge 85) and NVDA tied for best return. AMZN had weakest thesis (guidance miss vs structural crisis) = weakest return.
+
+---
+
 ## Protocol v2 Trials (structural separation)
 
-*Pending — Agent A results being compiled. Agent B and C to follow for each date.*
+*In progress — Agent A (blind recommender) running for 5 boring Wednesdays. Agent B (verifier) and Agent C (auditor) launch as each Agent A completes.*
+
+**V2 dates in pipeline:** 2025-10-08, 2024-10-23, 2025-05-14, 2025-08-20, 2024-09-11
 
 ---
 
