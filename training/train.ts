@@ -1,17 +1,18 @@
 #!/usr/bin/env npx tsx
 // ============================================================
-// SIGNAL - Conviction Algorithm Training Engine
+// SIGNAL - Conviction Algorithm Training Engine (v2)
 // ============================================================
-// Runs real-world backtesting against historical trading days.
-// For each day:
-//   1. Generate trade recommendations (Claude + web search)
-//   2. Look up real outcomes (Claude + web search)
-//   3. Score predictions vs reality
-//   4. Analyze which conviction dimensions predicted winners
-//   5. Optimize weights
+// Full production pipeline per trial:
+//   Phase 1: Signal Gathering (100+ fields via Claude + web search)
+//   Phase 2: Regime Classification (local computation)
+//   Phase 3: Daily Briefing (Claude + web search)
+//   Phase 4: Trade Recommendations with regime context
+//   Phase 5: Anti-Leakage Verification (Yahoo Finance + audit)
+//   Phase 6: Outcome Scoring (Yahoo Finance, deterministic)
+//   Phase 7: Store to App (public/data/training/)
 //
-// Designed to run for hours. Progress is saved after each trial.
-// Restart-safe: resumes from last completed trial.
+// Every 10 trials: Opus reviews full pipeline + revises recs
+// Designed to run for hours. Restart-safe.
 // ============================================================
 
 import * as fs from "fs";
@@ -19,13 +20,22 @@ import * as path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const PROJECT_ROOT = path.join(__dirname, "..");
+const APP_DATA_DIR = path.join(PROJECT_ROOT, "public", "data", "training");
+
 import { callClaude, extractJson } from "./lib/api.ts";
 import { scoreRecommendations, calculateScores, analyzeDimensions } from "./lib/scorer.ts";
 import { optimizeWeights, optimizeThreshold, summarizeChanges, DEFAULT_WEIGHTS } from "./lib/optimizer.ts";
 import { getRandomTradingDays } from "./lib/dates.ts";
 import { verifyRecommendations } from "./lib/anti-leakage.ts";
 import { writeDiaryHeader, appendTrialEntry, appendMilestoneSummary } from "./lib/diary.ts";
-import type { TradeRecommendation, TrialResult, TrainingState, ConvictionWeights } from "./lib/types.ts";
+import { classifyRegime, buildRegimePrompt } from "../src/lib/market-regime.ts";
+import type { GlobalSignals, RegimeAssessment } from "../src/lib/market-regime.ts";
+import { computeStressIndex, computeRiskAppetiteIndex } from "../src/lib/leading-indicators.ts";
+import type {
+  TradeRecommendation, TrialResult, TrainingState, ConvictionWeights,
+  TrainingBriefing, TrainingRegime, TrainingDayRecord,
+} from "./lib/types.ts";
 
 // ---- Configuration ----
 const TOTAL_TRIALS = parseInt(process.env.TOTAL_TRIALS || "500", 10);
@@ -87,6 +97,200 @@ function weightsToPrompt(weights: ConvictionWeights): string {
     .join("\n");
 }
 
+// ---- Phase 1: Signal Gathering ----
+async function generateSignals(
+  date: string
+): Promise<{ signals: GlobalSignals; tokensUsed: number }> {
+  const tradingDate = new Date(date + "T12:00:00Z");
+  const priorDate = new Date(tradingDate);
+  priorDate.setUTCDate(priorDate.getUTCDate() - 1);
+  while (priorDate.getUTCDay() === 0 || priorDate.getUTCDay() === 6) {
+    priorDate.setUTCDate(priorDate.getUTCDate() - 1);
+  }
+  const priorDateStr = priorDate.toISOString().split("T")[0];
+  const dateDisplay = tradingDate.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+
+  const response = await callClaude({
+    system: `You are SIGNAL's market regime scanner. Gather comprehensive global market data for the close of ${priorDateStr} (the day before trading on ${dateDisplay}).
+
+TEMPORAL CONSTRAINT: Only data available BEFORE market open on ${dateDisplay}. Search for "${priorDateStr} market data", "${priorDateStr} stock market close", "${priorDateStr} VIX close", etc.
+
+Return a JSON object in <json> tags with ALL these fields (use 0 for unknown numbers, "" for unknown strings, false for unknown booleans):
+
+<json>{
+  "spFuturesChange": 0, "nasdaqFuturesChange": 0, "dowFuturesChange": 0, "russellFuturesChange": 0, "vixFuturesChange": 0,
+  "vix": 0, "vixChange": 0, "vixTermStructure": "contango", "vix9d": 0, "vix3m": 0, "skewIndex": 0, "putCallRatio": 0, "spxGammaExposure": "neutral",
+  "tenYearYield": 0, "tenYearYieldChange": 0, "twoYearYield": 0, "twoYearYieldChange": 0, "thirtyYearYield": 0, "threeMonthYield": 0, "twoTenSpread": 0, "threeMoTenYrSpread": 0, "realYield10Y": 0, "fedFundsRate": 0, "fedFundsExpected": 0,
+  "dollarIndex": 0, "dollarIndexChange": 0, "eurUsd": 0, "eurUsdChange": 0, "usdJpy": 0, "usdJpyChange": 0, "usdCny": 0, "usdCnyChange": 0,
+  "oilWTI": 0, "oilChange": 0, "brentOil": 0, "brentOilChange": 0, "natGasChange": 0, "goldPrice": 0, "goldChange": 0, "silverChange": 0, "copperChange": 0, "ironOreChange": 0, "wheatChange": 0, "uraniumChange": 0, "balticDryIndex": 0, "balticDryChange": 0,
+  "nikkeiChange": 0, "daxChange": 0, "ftseChange": 0, "shanghaiChange": 0, "hangSengChange": 0, "kospiChange": 0, "emChange": 0, "euroStoxx50Change": 0,
+  "highYieldSpread": 0, "spreadChange": 0, "igSpread": 0, "igSpreadChange": 0, "cdsIndex": 0, "tedSpread": 0, "mbs30YrSpread": 0,
+  "advanceDeclineRatio": 0, "newHighsNewLows": 0, "percentAbove200DMA": 0, "percentAbove50DMA": 0, "mcclellanOscillator": 0,
+  "xlkChange": 0, "xlfChange": 0, "xleChange": 0, "xlvChange": 0, "xlpChange": 0, "xluChange": 0, "xlreChange": 0, "xliChange": 0, "xlbChange": 0, "xlcChange": 0, "xlyChange": 0, "smhChange": 0,
+  "aaiiBullBear": 0, "cnnFearGreed": 0, "naaim": 0, "marginDebt": "flat", "etfFlows": "flat",
+  "bitcoinChange": 0, "ethereumChange": 0, "btcDominance": 0, "cryptoTotalMarketCapChange": 0,
+  "sofr": 0, "repoRate": 0, "fedBalanceSheet": "flat", "tgaBalance": "flat",
+  "hasMajorEconData": false, "econDataType": "", "hasEarningsOfNote": false, "earningsNames": "", "isOpexWeek": false, "isOpexDay": false, "isMonthEnd": false, "isQuarterEnd": false, "daysToFOMC": 0, "daysToNextCPI": 0, "daysToNextNFP": 0, "isExDividendHeavy": false,
+  "geopoliticalRisk": "low", "geopoliticalEvents": "",
+  "spConsecutiveUpDays": 0, "spConsecutiveDownDays": 0, "sp5DayReturn": 0, "sp20DayReturn": 0, "nasdaqVsRussell5d": 0, "sp52WeekRange": 0, "spDistanceFrom200DMA": 0, "spDistanceFrom50DMA": 0
+}</json>
+
+Search MULTIPLE times. Cover: futures, VIX, yields, dollar, commodities, international markets, credit, breadth, sectors, sentiment, crypto, liquidity, calendar events, and multi-day context. Accuracy matters — do NOT guess.`,
+    messages: [{
+      role: "user",
+      content: `Gather all global market signals as of the close on ${priorDateStr} (pre-market for ${dateDisplay}). Search thoroughly for each category.`,
+    }],
+    maxTokens: 6144,
+    useWebSearch: true,
+  });
+
+  const DEFAULT_SIGNALS: GlobalSignals = {
+    spFuturesChange: 0, nasdaqFuturesChange: 0, dowFuturesChange: 0, russellFuturesChange: 0, vixFuturesChange: 0,
+    vix: 16, vixChange: 0, vixTermStructure: "contango", vix9d: 0, vix3m: 0, skewIndex: 120, putCallRatio: 0.8, spxGammaExposure: "neutral",
+    tenYearYield: 4.0, tenYearYieldChange: 0, twoYearYield: 4.5, twoYearYieldChange: 0, thirtyYearYield: 4.2, threeMonthYield: 5.0, twoTenSpread: -0.5, threeMoTenYrSpread: -1.0, realYield10Y: 1.8, fedFundsRate: 5.25, fedFundsExpected: 5.25,
+    dollarIndex: 104, dollarIndexChange: 0, eurUsd: 1.08, eurUsdChange: 0, usdJpy: 150, usdJpyChange: 0, usdCny: 7.2, usdCnyChange: 0,
+    oilWTI: 75, oilChange: 0, brentOil: 78, brentOilChange: 0, natGasChange: 0, goldPrice: 2000, goldChange: 0, silverChange: 0, copperChange: 0, ironOreChange: 0, wheatChange: 0, uraniumChange: 0, balticDryIndex: 1500, balticDryChange: 0,
+    nikkeiChange: 0, daxChange: 0, ftseChange: 0, shanghaiChange: 0, hangSengChange: 0, kospiChange: 0, emChange: 0, euroStoxx50Change: 0,
+    highYieldSpread: 350, spreadChange: 0, igSpread: 100, igSpreadChange: 0, cdsIndex: 60, tedSpread: 0.2, mbs30YrSpread: 150,
+    advanceDeclineRatio: 1.0, newHighsNewLows: 0, percentAbove200DMA: 50, percentAbove50DMA: 50, mcclellanOscillator: 0,
+    xlkChange: 0, xlfChange: 0, xleChange: 0, xlvChange: 0, xlpChange: 0, xluChange: 0, xlreChange: 0, xliChange: 0, xlbChange: 0, xlcChange: 0, xlyChange: 0, smhChange: 0,
+    aaiiBullBear: 0, cnnFearGreed: 50, naaim: 60, marginDebt: "flat", etfFlows: "flat",
+    bitcoinChange: 0, ethereumChange: 0, btcDominance: 50, cryptoTotalMarketCapChange: 0,
+    sofr: 5.3, repoRate: 5.3, fedBalanceSheet: "flat", tgaBalance: "flat",
+    hasMajorEconData: false, econDataType: "", hasEarningsOfNote: false, earningsNames: "", isOpexWeek: false, isOpexDay: false, isMonthEnd: false, isQuarterEnd: false, daysToFOMC: 15, daysToNextCPI: 15, daysToNextNFP: 15, isExDividendHeavy: false,
+    geopoliticalRisk: "low", geopoliticalEvents: "",
+    spConsecutiveUpDays: 0, spConsecutiveDownDays: 0, sp5DayReturn: 0, sp20DayReturn: 0, nasdaqVsRussell5d: 0, sp52WeekRange: 50, spDistanceFrom200DMA: 0, spDistanceFrom50DMA: 0,
+  };
+
+  const parsed = extractJson<Partial<GlobalSignals>>(response.text);
+  const signals: GlobalSignals = { ...DEFAULT_SIGNALS, ...(parsed || {}) };
+
+  return {
+    signals,
+    tokensUsed: response.inputTokens + response.outputTokens,
+  };
+}
+
+// ---- Phase 3: Daily Briefing ----
+async function generateBriefing(
+  date: string,
+  regimePrompt: string,
+  stressIndex: number,
+  riskAppetite: number,
+): Promise<{ briefing: TrainingBriefing; tokensUsed: number }> {
+  const dateDisplay = new Date(date + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  const priorDate = new Date(date + "T12:00:00Z");
+  priorDate.setUTCDate(priorDate.getUTCDate() - 1);
+  while (priorDate.getUTCDay() === 0 || priorDate.getUTCDay() === 6) priorDate.setUTCDate(priorDate.getUTCDate() - 1);
+  const priorDateDisplay = priorDate.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+
+  const response = await callClaude({
+    system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateDisplay}. Generate a pre-market morning briefing using ONLY information available before market open.
+
+--- REGIME ASSESSMENT ---
+${regimePrompt}
+--- END REGIME ---
+Stress Index: ${stressIndex}/100 | Risk Appetite: ${riskAppetite}/100
+
+TEMPORAL CONSTRAINT: Only use data from ${priorDateDisplay} and earlier. Do NOT reference anything that happened during or after ${dateDisplay}.
+
+Return JSON in <json> tags:
+<json>{
+  "summary": "2-3 sentence market overview",
+  "marketCondition": "bullish" | "bearish" | "neutral" | "volatile",
+  "sections": [
+    { "title": "Section Title", "content": "Detailed content", "importance": "high" | "medium" | "low" }
+  ],
+  "scenarios": [
+    { "event": "Event", "scenarios": [{ "condition": "If X", "implication": "Then Y", "trade": "Consider Z" }] }
+  ]
+}</json>`,
+    messages: [{
+      role: "user",
+      content: `Generate the morning market briefing for ${dateDisplay}. Search for overnight news, futures, economic calendar, earnings, and key developments from ${priorDateDisplay}. Incorporate the regime assessment.`,
+    }],
+    maxTokens: 4096,
+    useWebSearch: true,
+  });
+
+  const parsed = extractJson<TrainingBriefing>(response.text);
+  const briefing: TrainingBriefing = parsed || {
+    summary: "Briefing generation failed — insufficient data.",
+    marketCondition: "neutral",
+    sections: [],
+    scenarios: [],
+  };
+
+  return {
+    briefing,
+    tokensUsed: response.inputTokens + response.outputTokens,
+  };
+}
+
+// ---- Phase 7: Write App Data ----
+function writeAppData(result: TrialResult): void {
+  fs.mkdirSync(APP_DATA_DIR, { recursive: true });
+
+  const dateDisplay = new Date(result.date + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+
+  const record: TrainingDayRecord = {
+    trialId: result.trialId,
+    date: result.date,
+    dateDisplay,
+    generatedAt: result.generatedAt,
+    pipeline: {
+      signals: result.signals || {},
+      regime: result.regime || { regime: "unknown", confidence: 0, directionalBias: "neutral", volatilityRegime: "normal", stressIndex: 0, riskAppetiteIndex: 0, sectorTilts: {} },
+      briefing: result.briefing || { summary: "", marketCondition: "neutral", sections: [], scenarios: [] },
+    },
+    recommendations: result.recommendations,
+    outcomes: result.outcomes,
+    scores: result.scores,
+    dimensionAnalysis: result.dimensionAnalysis,
+    weights: result.weights,
+    revisedRecommendations: result.revisedRecommendations,
+    opusReviewNotes: result.opusReviewNotes,
+  };
+
+  // Write individual trial file
+  const trialFile = path.join(APP_DATA_DIR, `day-${result.trialId}-${result.date}.json`);
+  fs.writeFileSync(trialFile, JSON.stringify(record, null, 2));
+
+  // Update index
+  updateAppIndex(result);
+}
+
+function updateAppIndex(result: TrialResult): void {
+  const indexPath = path.join(APP_DATA_DIR, "index.json");
+  let index: { totalTrials: number; lastUpdated: string; bestScore: number; currentWeights: ConvictionWeights; trials: { trialId: number; date: string; regime: string; score: number; winRate: number; profitFactor: number; numRecs: number; hasOpusReview: boolean }[] };
+
+  if (fs.existsSync(indexPath)) {
+    index = JSON.parse(fs.readFileSync(indexPath, "utf-8"));
+  } else {
+    index = { totalTrials: 0, lastUpdated: "", bestScore: 0, currentWeights: result.weights, trials: [] };
+  }
+
+  // Remove existing entry for this trial (idempotent)
+  index.trials = index.trials.filter(t => t.trialId !== result.trialId);
+  index.trials.push({
+    trialId: result.trialId,
+    date: result.date,
+    regime: result.regime?.regime || "unknown",
+    score: result.scores.totalScore,
+    winRate: result.scores.winRate,
+    profitFactor: result.scores.profitFactor,
+    numRecs: result.recommendations.length,
+    hasOpusReview: !!result.opusReviewNotes,
+  });
+  index.trials.sort((a, b) => a.trialId - b.trialId);
+  index.totalTrials = index.trials.length;
+  index.lastUpdated = new Date().toISOString();
+  index.bestScore = Math.max(index.bestScore, result.scores.totalScore);
+  index.currentWeights = result.weights;
+
+  fs.writeFileSync(indexPath, JSON.stringify(index, null, 2));
+}
+
 // ---- Opus Algorithm Review ----
 // Every 50 trials, Opus reviews all results and suggests improvements
 // to the algorithm, weights, threshold, and trading strategy.
@@ -129,35 +333,44 @@ async function opusAlgorithmReview(
   const avgStopReturn = stopHits.length > 0
     ? stopHits.reduce((s, o) => s + o.actualReturnPercent, 0) / stopHits.length : 0;
 
+  // Build per-trial pipeline summaries for the last 10 trials
+  const last10 = state.results.slice(-10);
+  const trialSummaries = last10.map(r => {
+    const regimeStr = r.regime ? `${r.regime.regime} (${r.regime.confidence}% conf, stress=${r.regime.stressIndex}, appetite=${r.regime.riskAppetiteIndex})` : "N/A";
+    const briefStr = r.briefing ? `${r.briefing.marketCondition} — ${r.briefing.summary?.slice(0, 100)}` : "N/A";
+    const recsStr = r.recommendations.map(rec => `${rec.symbol} ${rec.direction}`).join(", ") || "No trades";
+    const outStr = r.outcomes.map(o => `${o.symbol}: ${o.directionCorrect ? "correct" : "WRONG"} ${o.actualReturnPercent > 0 ? "+" : ""}${o.actualReturnPercent}%`).join(", ") || "N/A";
+    return `  Trial ${r.trialId} (${r.date}): regime=${regimeStr} | briefing=${briefStr} | recs=[${recsStr}] | outcomes=[${outStr}] | score=${r.scores.totalScore}`;
+  }).join("\n");
+
   const response = await callClaude({
     system: `You are an elite quantitative trading algorithm reviewer. You are Claude Opus — the most capable model — tasked with reviewing and IMPROVING a conviction-based day trading algorithm after ${state.currentTrial} trials of backtesting.
 
-Your job is NOT to summarize. Your job is to find SPECIFIC, ACTIONABLE improvements to the algorithm. Think like a quant PM reviewing their junior analyst's model.
+Your job is NOT to summarize. Your job is to find SPECIFIC, ACTIONABLE improvements to the FULL PIPELINE: signal gathering → regime classification → daily briefing → trade recommendations → outcome scoring.
 
-Return your analysis as JSON wrapped in <json> tags:
+For each of the last 10 trials, you can see the complete pipeline output. Analyze:
+- Did the regime classification match reality? (e.g., classified as "risk-on" but everything sold off)
+- Did the briefing identify the right themes that actually moved markets?
+- Were trade recommendations aligned with the regime? (e.g., shorting in risk-on)
+- Which conviction dimensions actually predicted winners vs losers?
+
+You MUST also provide REVISED trade recommendations for the last 10 trials — what SHOULD have been recommended given the regime context and what we now know about how the algorithm performs.
+
+Return JSON in <json> tags:
 <json>{
-  "insights": "Your full analysis (3-5 paragraphs). Be specific. Name exact trials, patterns, failure modes.",
-  "weightAdjustments": {
-    "catalystClarity": 0.XX,
-    "technicalSetup": 0.XX,
-    "riskReward": 0.XX,
-    "volumeLiquidity": 0.XX,
-    "marketAlignment": 0.XX,
-    "informationEdge": 0.XX,
-    "timingUrgency": 0.XX
-  },
+  "insights": "3-5 paragraphs. Be specific. Name trials, patterns, failure modes.",
+  "weightAdjustments": { "catalystClarity": 0.XX, "technicalSetup": 0.XX, "riskReward": 0.XX, "volumeLiquidity": 0.XX, "marketAlignment": 0.XX, "informationEdge": 0.XX, "timingUrgency": 0.XX },
   "thresholdRecommendation": 72,
-  "strategyChanges": [
-    "Specific change 1",
-    "Specific change 2"
-  ],
-  "blindSpots": [
-    "Pattern the algorithm is missing"
-  ]
+  "strategyChanges": ["Change 1", "Change 2"],
+  "blindSpots": ["Pattern being missed"],
+  "pipelineIssues": ["Issue with signals/regime/briefing"],
+  "revisedRecommendations": {
+    "trialId_here": [{ "symbol": "TICK", "direction": "long", "reasoning": "Why this was better" }]
+  }
 }</json>`,
     messages: [{
       role: "user",
-      content: `ALGORITHM REVIEW — ${state.currentTrial} TRIALS COMPLETE
+      content: `FULL PIPELINE REVIEW — ${state.currentTrial} TRIALS COMPLETE
 
 CURRENT WEIGHTS:
 ${weightsToPrompt(state.weights)}
@@ -169,9 +382,9 @@ PERFORMANCE SUMMARY:
 - Average win rate: ${avgWinRate.toFixed(1)}%
 - Average profit factor: ${avgPF.toFixed(2)}
 - Best score: ${state.bestScore}
-- Stop-loss hits: ${stopHits.length} total, avg return on stopped trades: ${avgStopReturn.toFixed(2)}%
+- Stop-loss hits: ${stopHits.length} total, avg return: ${avgStopReturn.toFixed(2)}%
 
-DIMENSION PREDICTIVE POWER (across all trials):
+DIMENSION PREDICTIVE POWER:
 ${dimReport}
 
 WEIGHT EVOLUTION:
@@ -183,17 +396,23 @@ ${best5}
 WORST 5 TRIALS:
 ${worst5}
 
-Review this data. Identify:
-1. Which dimensions are actually predictive vs noise?
-2. Are the weights converging toward the right values?
-3. What types of trades consistently win vs lose?
-4. What blind spots does the algorithm have?
-5. Should the conviction threshold change?
-6. What specific changes would improve the next 50 trials?
+LAST 10 TRIALS — FULL PIPELINE OUTPUT:
+${trialSummaries}
+
+Review the FULL pipeline. For each of the last 10 trials:
+1. Was the regime classification accurate?
+2. Did the briefing capture the right market narrative?
+3. Were trade recommendations aligned with the regime?
+4. What SHOULD have been recommended instead?
+
+Then globally:
+5. Which dimensions are predictive vs noise?
+6. What blind spots does the algorithm have?
+7. What specific pipeline changes would improve the next 10 trials?
 
 Be brutally honest. This algorithm manages real money.`,
     }],
-    maxTokens: 4096,
+    maxTokens: 6144,
     useWebSearch: false,
   });
 
@@ -203,6 +422,8 @@ Be brutally honest. This algorithm manages real money.`,
     thresholdRecommendation?: number;
     strategyChanges?: string[];
     blindSpots?: string[];
+    pipelineIssues?: string[];
+    revisedRecommendations?: Record<string, { symbol: string; direction: string; reasoning: string }[]>;
   }>(response.text);
 
   // Save the full review
@@ -216,21 +437,29 @@ Be brutally honest. This algorithm manages real money.`,
   }, null, 2));
 
   log(`  Opus review saved to: ${reviewPath}`);
+  if (parsed?.pipelineIssues) {
+    log(`  Pipeline issues:`);
+    for (const issue of parsed.pipelineIssues) log(`    - ${issue}`);
+  }
   if (parsed?.strategyChanges) {
     log(`  Strategy changes recommended:`);
-    for (const change of parsed.strategyChanges) {
-      log(`    - ${change}`);
-    }
+    for (const change of parsed.strategyChanges) log(`    - ${change}`);
   }
   if (parsed?.blindSpots) {
     log(`  Blind spots identified:`);
-    for (const spot of parsed.blindSpots) {
-      log(`    - ${spot}`);
-    }
+    for (const spot of parsed.blindSpots) log(`    - ${spot}`);
+  }
+
+  // Store Opus review notes on the last 10 trials and update app data
+  const insightsText = parsed?.insights || response.text;
+  for (const result of last10) {
+    result.opusReviewNotes = insightsText;
+    // Update the app-visible JSON with review notes
+    writeAppData(result);
   }
 
   return {
-    insights: parsed?.insights || response.text,
+    insights: insightsText,
     weightAdjustments: parsed?.weightAdjustments,
   };
 }
@@ -238,7 +467,9 @@ Be brutally honest. This algorithm manages real money.`,
 // ---- Core Training Loop ----
 async function generateRecommendations(
   date: string,
-  weights: ConvictionWeights
+  weights: ConvictionWeights,
+  regimeContext?: string,
+  briefingSummary?: string,
 ): Promise<{ recs: TradeRecommendation[]; tokensUsed: number }> {
   const dateDisplay = new Date(date + "T12:00:00Z").toLocaleDateString("en-US", {
     weekday: "long",
@@ -274,7 +505,17 @@ Pretend it is 6:00 AM Eastern on ${dateDisplay}. The market has not opened yet.
 Search for news and data from "${priorDateStr}" and the days leading up to "${date}".
 
 Your job: based on pre-market information only, generate trade recommendations for ${dateDisplay}.
+${regimeContext ? `
+--- REGIME ASSESSMENT (auto-generated) ---
+${regimeContext}
+--- END REGIME ---
+` : ""}${briefingSummary ? `
+--- MORNING BRIEFING CONTEXT ---
+${briefingSummary}
+--- END BRIEFING ---
 
+Use the regime assessment and briefing to inform your trade selection. Recommendations should ALIGN with regime type and directional bias.
+` : ""}
 CONVICTION SCORING: Score each recommendation on 7 dimensions (0-100). Current dimension weights:
 ${weightsToPrompt(weights)}
 
@@ -332,87 +573,97 @@ async function runTrial(
   date: string,
   weights: ConvictionWeights
 ): Promise<TrialResult> {
-  log(`--- Trial ${trialNum} | ${date} ---`);
+  log(`\n=== Trial ${trialNum} | ${date} ===`);
+  let totalTokens = 0;
 
-  // Step 1: Generate recommendations
-  log(`  Generating recommendations...`);
-  const { recs, tokensUsed: genTokens } = await generateRecommendations(date, weights);
-  log(`  Got ${recs.length} recommendations`);
+  // Phase 1: Signal Gathering
+  log(`  Phase 1: Gathering 100+ global signals...`);
+  const { signals, tokensUsed: sigTokens } = await generateSignals(date);
+  totalTokens += sigTokens;
+  const signalCount = Object.values(signals).filter(v => v !== 0 && v !== "" && v !== false && v !== "flat" && v !== "neutral" && v !== "contango" && v !== "low").length;
+  log(`  Signals: ${signalCount} non-default fields populated`);
+
+  // Phase 2: Regime Classification (local computation — zero tokens)
+  log(`  Phase 2: Classifying regime...`);
+  const regimeResult: RegimeAssessment = classifyRegime(signals);
+  const stressIndex = computeStressIndex(signals);
+  const riskAppetite = computeRiskAppetiteIndex(signals);
+  const regimePromptStr = buildRegimePrompt(regimeResult);
+  const regime: TrainingRegime = {
+    regime: regimeResult.regime,
+    confidence: regimeResult.confidence,
+    directionalBias: String(regimeResult.directionalBias),
+    volatilityRegime: regimeResult.volatilityRegime,
+    stressIndex,
+    riskAppetiteIndex: riskAppetite,
+    sectorTilts: Object.fromEntries(regimeResult.sectorTilts.map(t => [t.sector, t.bias])),
+  };
+  log(`  Regime: ${regime.regime} (${regime.confidence}%) | Bias: ${regime.directionalBias} | Stress: ${stressIndex} | Risk Appetite: ${riskAppetite}`);
+
+  // Phase 3: Daily Briefing
+  log(`  Phase 3: Generating daily briefing...`);
+  const { briefing, tokensUsed: briefTokens } = await generateBriefing(date, regimePromptStr, stressIndex, riskAppetite);
+  totalTokens += briefTokens;
+  log(`  Briefing: ${briefing.marketCondition} | ${briefing.sections.length} sections | ${briefing.scenarios.length} scenarios`);
+
+  // Phase 4: Trade Recommendations (with regime + briefing context)
+  log(`  Phase 4: Generating trade recommendations...`);
+  const briefingContext = `${briefing.summary}\nMarket condition: ${briefing.marketCondition}\nKey themes: ${briefing.sections.filter(s => s.importance === "high").map(s => s.title).join(", ")}`;
+  const { recs, tokensUsed: genTokens } = await generateRecommendations(date, weights, regimePromptStr, briefingContext);
+  totalTokens += genTokens;
+  log(`  Recommendations: ${recs.length} trades`);
+
+  // Build empty result for no-rec days
+  const emptyResult = (extraTokens: number): TrialResult => ({
+    trialId: trialNum, date, generatedAt: new Date().toISOString(),
+    signals: signals as unknown as Record<string, unknown>,
+    regime, briefing, recommendations: [], outcomes: [],
+    scores: { directionAccuracy: 0, targetHitRate: 0, stopHitRate: 0, avgReturnPercent: 0, profitFactor: 0, winRate: 0, totalScore: 50 },
+    dimensionAnalysis: {}, weights: { ...weights }, totalTokensUsed: totalTokens + extraTokens,
+  });
 
   if (recs.length === 0) {
     log(`  No recommendations — scoring as neutral`);
-    return {
-      trialId: trialNum,
-      date,
-      generatedAt: new Date().toISOString(),
-      recommendations: [],
-      outcomes: [],
-      scores: {
-        directionAccuracy: 0,
-        targetHitRate: 0,
-        stopHitRate: 0,
-        avgReturnPercent: 0,
-        profitFactor: 0,
-        winRate: 0,
-        totalScore: 50, // neutral — no trades is acceptable
-      },
-      dimensionAnalysis: {},
-      weights: { ...weights },
-      totalTokensUsed: genTokens,
-    };
+    const result = emptyResult(0);
+    writeAppData(result);
+    return result;
   }
 
-  // Step 2: Anti-leakage verification (price check + hindsight audit)
-  log(`  Verifying against data leakage (${recs.length} recs)...`);
+  // Phase 5: Anti-Leakage Verification
+  log(`  Phase 5: Verifying against data leakage (${recs.length} recs)...`);
   const { cleanRecs, flaggedCount, tokensUsed: verifyTokens } = await verifyRecommendations(date, recs);
-  if (flaggedCount > 0) {
-    log(`  Filtered ${flaggedCount} trades for possible leakage → ${cleanRecs.length} clean`);
-  }
+  totalTokens += verifyTokens;
+  if (flaggedCount > 0) log(`  Filtered ${flaggedCount} trades for leakage → ${cleanRecs.length} clean`);
 
-  // Use only verified clean recommendations
-  const verifiedRecs = cleanRecs.length > 0 ? cleanRecs : recs.slice(0, 0); // empty if all flagged
-
+  const verifiedRecs = cleanRecs.length > 0 ? cleanRecs : [];
   if (verifiedRecs.length === 0) {
     log(`  All recommendations flagged — scoring as neutral`);
-    return {
-      trialId: trialNum,
-      date,
-      generatedAt: new Date().toISOString(),
-      recommendations: recs, // keep original for analysis
-      outcomes: [],
-      scores: {
-        directionAccuracy: 0, targetHitRate: 0, stopHitRate: 0,
-        avgReturnPercent: 0, profitFactor: 0, winRate: 0, totalScore: 50,
-      },
-      dimensionAnalysis: {},
-      weights: { ...weights },
-      totalTokensUsed: genTokens + verifyTokens,
-    };
+    const result = emptyResult(0);
+    result.recommendations = recs; // keep originals for analysis
+    writeAppData(result);
+    return result;
   }
 
-  // Step 3: Score against real outcomes
-  log(`  Looking up real outcomes for ${verifiedRecs.length} verified trades...`);
+  // Phase 6: Outcome Scoring (Yahoo Finance — deterministic, zero tokens)
+  log(`  Phase 6: Scoring against real outcomes (${verifiedRecs.length} trades)...`);
   const { outcomes, tokensUsed: scoreTokens } = await scoreRecommendations(date, verifiedRecs);
-  log(`  Got ${outcomes.length} outcomes`);
-
-  // Step 4: Calculate scores
+  totalTokens += scoreTokens;
   const scores = calculateScores(verifiedRecs, outcomes);
+  const dimensionAnalysis = analyzeDimensions(verifiedRecs, outcomes);
   log(`  Score: ${scores.totalScore} | Win: ${scores.winRate}% | Dir: ${scores.directionAccuracy}% | PF: ${scores.profitFactor}`);
 
-  // Step 5: Analyze dimensions
-  const dimensionAnalysis = analyzeDimensions(verifiedRecs, outcomes);
-
-  return {
-    trialId: trialNum,
-    date,
-    generatedAt: new Date().toISOString(),
-    recommendations: verifiedRecs,
-    outcomes,
-    scores,
-    dimensionAnalysis,
-    weights: { ...weights },
-    totalTokensUsed: genTokens + verifyTokens + scoreTokens,
+  const result: TrialResult = {
+    trialId: trialNum, date, generatedAt: new Date().toISOString(),
+    signals: signals as unknown as Record<string, unknown>,
+    regime, briefing, recommendations: verifiedRecs, outcomes,
+    scores, dimensionAnalysis, weights: { ...weights }, totalTokensUsed: totalTokens,
   };
+
+  // Phase 7: Store to App
+  log(`  Phase 7: Writing to app data...`);
+  writeAppData(result);
+
+  return result;
 }
 
 async function main(): Promise<void> {
@@ -552,7 +803,7 @@ async function main(): Promise<void> {
             'main';
           log(`  Committing checkpoint to ${branch}...`);
           execSync(
-            `git add training/results/ 2>/dev/null; ` +
+            `git add training/results/ public/data/training/ 2>/dev/null; ` +
             `git diff --staged --quiet || ` +
             `(git commit -m "Training checkpoint: ${trialNum}/${TOTAL_TRIALS} trials — best: ${state.bestScore}" && ` +
             `git pull origin ${branch} --rebase 2>/dev/null; ` +
