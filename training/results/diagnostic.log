@@ -1,0 +1,17 @@
+=== API Diagnostics ===
+Timestamp: Sat Apr  4 19:01:28 UTC 2026
+Node: v22.22.2
+API key set: yes
+API key length: 108
+API key prefix: sk-ant-...
+
+=== API Test ===
+HTTP Status: 200
+Response (first 500 chars): {"model":"claude-sonnet-4-6","id":"msg_01BJLt91xcdSNu4JbBSWYFDh","type":"message","role":"assistant","content":[{"type":"text","text":"OK"}],"stop_reason":"end_turn","stop_sequence":null,"stop_details":null,"usage":{"input_tokens":9,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":4,"service_tier":"standard","inference_geo":"global"}}
+
+=== Web Search Tool Test ===
+HTTP Status: 200
+Response (first 500 chars): event: message_start
+data: {"type":"message_start","message":{"model":"claude-sonnet-4-6","id":"msg_01VRS7SfusFrZ7Zg43bp2fG6","type":"message","role":"assistant","content":[],"stop_reason":null,"stop_sequence":null,"stop_details":null,"usage":{"input_tokens":4390,"cache_creation_input_tokens":0,"cache_read_input_tokens":0,"cache_creation":{"ephemeral_5m_input_tokens":0,"ephemeral_1h_input_tokens":0},"output_tokens":51,"service_tier":"standard","inference_geo":"global"}}    }
+
+event: content_bloc
