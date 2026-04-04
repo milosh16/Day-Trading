@@ -673,7 +673,7 @@ async function main(): Promise<void> {
     fs.mkdirSync(resultsDir, { recursive: true });
   }
 
-  log("=== SIGNAL Conviction Training Engine ===");
+  log("=== SIGNAL Conviction Training Engine v2 (full pipeline) ===");
   log(`Target: ${TOTAL_TRIALS} trials`);
   log(`API mode: ${process.env.ANTHROPIC_API_KEY ? "direct" : "proxy"}`);
   log(`Node: ${process.version}`);

@@ -61,7 +61,8 @@ jobs:
             echo "Starting fresh"
           fi
 
-      - name: Restore state from cache
+      - name: Restore state from cache (only if repo has no state)
+        if: ${{ hashFiles('training/results/training-state.json') == '' }}
         uses: actions/cache/restore@v4
         with:
           path: training/results/
