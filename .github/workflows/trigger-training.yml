@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/conviction-training
-      - claude/signal-trading-platform-lRjct
     paths:
       - '.github/workflows/trigger-training.yml'
       - 'training/**'
@@ -61,14 +59,12 @@ jobs:
             echo "Starting fresh"
           fi
 
-      - name: Restore state from cache (only if repo has no state)
-        if: ${{ hashFiles('training/results/training-state.json') == '' }}
-        uses: actions/cache/restore@v4
-        with:
-          path: training/results/
-          key: conviction-training-v2-state
-          restore-keys: |
-            conviction-training-v2-
+      # Cache restore disabled for v2 launch — repo state is authoritative
+      # - name: Restore state from cache
+      #   uses: actions/cache/restore@v4
+      #   with:
+      #     path: training/results/
+      #     key: conviction-training-v2-state
 
       - name: Verify API key
         env:
@@ -172,12 +168,15 @@ jobs:
         run: |
           if [ -f training/results/training-state.json ]; then
             DONE=$(node -e "const s=require('./training/results/training-state.json');console.log(s.currentTrial>=parseInt(process.env.TOTAL_TRIALS||'500')?'yes':'no')" 2>/dev/null || echo "no")
-            if [ "$DONE" = "no" ]; then
+            # Only auto-restart on main branch
+            if [ "$DONE" = "no" ] && [ "${{ github.ref_name }}" = "main" ]; then
               echo "Training incomplete — auto-restarting in 30s..."
               sleep 30
-              gh workflow run trigger-training.yml --ref ${{ github.ref_name }} || echo "Auto-restart failed. Trigger manually."
-            else
+              gh workflow run trigger-training.yml --ref main || echo "Auto-restart failed. Trigger manually."
+            elif [ "$DONE" = "yes" ]; then
               echo "Training complete!"
+            else
+              echo "Not on main branch — skipping auto-restart"
             fi
           fi
 
