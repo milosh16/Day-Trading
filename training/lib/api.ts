@@ -12,14 +12,17 @@ const PROXY_API = process.env.SIGNAL_APP_URL
   ? `${process.env.SIGNAL_APP_URL}/api/anthropic`
   : "https://day-trading-sigma.vercel.app/api/anthropic";
 const API_VERSION = "2023-06-01";
-const MODEL = process.env.TRAINING_MODEL || "claude-opus-4-6";
+// Sonnet for per-trial work (signals, briefing, recs) — fast + cost-effective
+// Opus for algorithm reviews every 10 trials — deep analysis
+const TRAINING_MODEL = process.env.TRAINING_MODEL || "claude-sonnet-4-6";
+const REVIEW_MODEL = process.env.REVIEW_MODEL || "claude-opus-4-6";
 
 function useDirectApi(): boolean {
   return !!process.env.ANTHROPIC_API_KEY;
 }
 
 // Rate limiting: minimum gap between requests
-const MIN_REQUEST_GAP_MS = 6000; // 6 seconds between requests (10 RPM safe)
+const MIN_REQUEST_GAP_MS = 3000; // 3 seconds between requests (Sonnet handles higher throughput)
 let lastRequestTime = 0;
 
 export interface Message {
@@ -51,12 +54,14 @@ export async function callClaude(opts: {
   messages: Message[];
   maxTokens?: number;
   useWebSearch?: boolean;
+  useOpus?: boolean; // true = use Opus (for algorithm reviews), false/default = Sonnet
 }): Promise<ApiResponse> {
   const direct = useDirectApi();
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!direct && !PROXY_API) throw new Error("No API key and no proxy URL configured");
 
-  const { system, messages, maxTokens = 4096, useWebSearch = true } = opts;
+  const { system, messages, maxTokens = 4096, useWebSearch = true, useOpus = false } = opts;
+  const model = useOpus ? REVIEW_MODEL : TRAINING_MODEL;
 
   await waitForRateLimit();
 
@@ -67,7 +72,7 @@ export async function callClaude(opts: {
   // Build request body
   const body: Record<string, unknown> = direct
     ? {
-        model: MODEL,
+        model,
         max_tokens: maxTokens,
         system,
         messages,

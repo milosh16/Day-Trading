@@ -414,6 +414,7 @@ Be brutally honest. This algorithm manages real money.`,
     }],
     maxTokens: 6144,
     useWebSearch: false,
+    useOpus: true,
   });
 
   const parsed = extractJson<{
@@ -676,6 +677,8 @@ async function main(): Promise<void> {
   log("=== SIGNAL Conviction Training Engine v2 (full pipeline) ===");
   log(`Target: ${TOTAL_TRIALS} trials`);
   log(`API mode: ${process.env.ANTHROPIC_API_KEY ? "direct" : "proxy"}`);
+  log(`Training model: ${process.env.TRAINING_MODEL || "claude-sonnet-4-6"}`);
+  log(`Review model: ${process.env.REVIEW_MODEL || "claude-opus-4-6"}`);
   log(`Node: ${process.version}`);
 
   // Load or initialize state
