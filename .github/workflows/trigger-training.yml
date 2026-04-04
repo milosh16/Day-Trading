@@ -127,10 +127,10 @@ jobs:
       - name: Run conviction training
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          TOTAL_TRIALS: ${{ github.event.inputs.trials || '1' }}
+          TOTAL_TRIALS: ${{ github.event.inputs.trials || '500' }}
           CI: 'true'
         run: |
-          echo "TOTAL_TRIALS=$TOTAL_TRIALS (set to 1 for initial v2 validation)"
+          echo "TOTAL_TRIALS=$TOTAL_TRIALS"
           # Validate v2 is running
           V2_CHECK=$(grep -c "v2 (full pipeline)" training/train.ts || echo "0")
           if [ "$V2_CHECK" = "0" ]; then
@@ -173,7 +173,7 @@ jobs:
         if: always()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TOTAL_TRIALS: ${{ github.event.inputs.trials || '1' }}
+          TOTAL_TRIALS: ${{ github.event.inputs.trials || '500' }}
         run: |
           if [ -f training/results/training-state.json ]; then
             DONE=$(node -e "const s=require('./training/results/training-state.json');console.log(s.currentTrial>=parseInt(process.env.TOTAL_TRIALS||'500')?'yes':'no')" 2>/dev/null || echo "no")
