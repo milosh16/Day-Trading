@@ -1,8 +1,8 @@
 {
-  "trialId": 1,
-  "date": "2026-03-13",
-  "dateDisplay": "Friday, March 13, 2026",
-  "generatedAt": "2026-04-04T19:20:40.905Z",
+  "trialId": 7,
+  "date": "2024-07-19",
+  "dateDisplay": "Friday, July 19, 2024",
+  "generatedAt": "2026-04-04T21:08:51.971Z",
   "pipeline": {
     "signals": {
       "spFuturesChange": 0,
@@ -135,7 +135,47 @@
       "scenarios": []
     }
   },
-  "recommendations": [],
+  "recommendations": [
+    {
+      "symbol": "CRWD",
+      "direction": "short",
+      "entryPrice": 295,
+      "targetPrice": 262,
+      "stopLoss": 313,
+      "thesis": "CrowdStrike's faulty Falcon sensor update caused a catastrophic global IT outage affecting 8.5 million Windows devices, crashing airlines, hospitals, banks, and government systems worldwide. Reputational damage is severe and immediate, with the stock gapping down ~12% in pre-market from Thursday's $343.05 close. Sell-the-gap short into further institutional distribution as the scope of the disaster becomes clearer at the open.",
+      "catalyst": "July 19, 2024 pre-market: CrowdStrike faulty content update caused global Windows BSOD outage. Stock down ~12% pre-market to ~$270-$300 range from $343.05 close. Competitors PANW +2.3%, SentinelOne +6% confirming rotation away from CRWD. Story breaking at scale across all media.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": "Extremely clear and concrete catalyst: a faulty software update crashed 8.5 million Windows machines globally, disrupting airlines, hospitals, banks, and 911 centers. CEO confirmed the issue publicly on X. The outage is real, documented, and the fix requires manual intervention on every affected device — the damage is not quickly reversible. Score starts at 95, −5 regime penalty."
+        },
+        "technicalSetup": {
+          "score": 75,
+          "reasoning": "CRWD opened a massive gap-down from $343 to the ~$270-$300 range — a 12%+ pre-market breakdown through all near-term support. Gap-down on catastrophic event news with volume expected to be extreme. Downside continuation bias is clear. Score starts at 80, −5 regime penalty."
+        },
+        "riskReward": {
+          "score": 77,
+          "reasoning": "Entry ~$295 (mid pre-market range), target $262 (~11% further downside to key support), stop $313 (~6% above entry). R/R approximately 1.8:1. In a range-bound regime target distances scaled by 0.7x, limiting upside. Score starts at 82, −5 regime penalty."
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": "CRWD is a large-cap liquid cybersecurity stock with average daily volume in the tens of millions. On an event of this magnitude, volume will likely be 5-10x normal, ensuring no slippage on short entry or exit. Score starts at 90, −5 regime penalty."
+        },
+        "marketAlignment": {
+          "score": 65,
+          "reasoning": "The broader market is range-bound and in a mild tech selloff, which is loosely supportive of a CRWD short. However, the range-bound regime means no strong directional macro tailwind exists. The trade is event-specific, not macro-driven. Score starts at 70, −5 regime penalty."
+        },
+        "informationEdge": {
+          "score": 85,
+          "reasoning": "The outage news broke in the early morning hours of July 19 and is rapidly developing. At 6 AM ET, the full scope is just becoming apparent — flights grounded, hospitals disrupted, emergency services down. The information edge is very high in the first hours of trading before full institutional reassessment is complete. Score starts at 90, −5 regime penalty."
+        },
+        "timingUrgency": {
+          "score": 87,
+          "reasoning": "This is a time-sensitive gap-and-go event. The first 60-90 minutes of trading will see peak fear and maximum downside momentum before any stabilization or bounce. Acting at the open or within the first 15 minutes captures the highest-probability continuation window. Score starts at 92, −5 regime penalty."
+        }
+      }
+    }
+  ],
   "outcomes": [],
   "scores": {
     "directionAccuracy": 0,

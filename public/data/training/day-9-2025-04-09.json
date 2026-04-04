@@ -1,0 +1,300 @@
+{
+  "trialId": 9,
+  "date": "2025-04-09",
+  "dateDisplay": "Wednesday, April 9, 2025",
+  "generatedAt": "2026-04-04T21:47:25.942Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0,
+      "nasdaqFuturesChange": 0,
+      "dowFuturesChange": 0,
+      "russellFuturesChange": 0,
+      "vixFuturesChange": 0,
+      "vix": 16,
+      "vixChange": 0,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 0,
+      "skewIndex": 120,
+      "putCallRatio": 0.8,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4,
+      "tenYearYieldChange": 0,
+      "twoYearYield": 4.5,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.2,
+      "threeMonthYield": 5,
+      "twoTenSpread": -0.5,
+      "threeMoTenYrSpread": -1,
+      "realYield10Y": 1.8,
+      "fedFundsRate": 5.25,
+      "fedFundsExpected": 5.25,
+      "dollarIndex": 104,
+      "dollarIndexChange": 0,
+      "eurUsd": 1.08,
+      "eurUsdChange": 0,
+      "usdJpy": 150,
+      "usdJpyChange": 0,
+      "usdCny": 7.2,
+      "usdCnyChange": 0,
+      "oilWTI": 75,
+      "oilChange": 0,
+      "brentOil": 78,
+      "brentOilChange": 0,
+      "natGasChange": 0,
+      "goldPrice": 2000,
+      "goldChange": 0,
+      "silverChange": 0,
+      "copperChange": 0,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 1500,
+      "balticDryChange": 0,
+      "nikkeiChange": 0,
+      "daxChange": 0,
+      "ftseChange": 0,
+      "shanghaiChange": 0,
+      "hangSengChange": 0,
+      "kospiChange": 0,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 350,
+      "spreadChange": 0,
+      "igSpread": 100,
+      "igSpreadChange": 0,
+      "cdsIndex": 60,
+      "tedSpread": 0.2,
+      "mbs30YrSpread": 150,
+      "advanceDeclineRatio": 1,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 50,
+      "percentAbove50DMA": 50,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0,
+      "xlfChange": 0,
+      "xleChange": 0,
+      "xlvChange": 0,
+      "xlpChange": 0,
+      "xluChange": 0,
+      "xlreChange": 0,
+      "xliChange": 0,
+      "xlbChange": 0,
+      "xlcChange": 0,
+      "xlyChange": 0,
+      "smhChange": 0,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 50,
+      "naaim": 60,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0,
+      "ethereumChange": 0,
+      "btcDominance": 50,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 5.3,
+      "repoRate": 5.3,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 15,
+      "daysToNextCPI": 15,
+      "daysToNextNFP": 15,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 0,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": 0,
+      "sp52WeekRange": 50,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 30,
+      "directionalBias": "0",
+      "volatilityRegime": "normal",
+      "stressIndex": 4,
+      "riskAppetiteIndex": 53,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "Briefing generation failed — insufficient data.",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "AAPL",
+      "direction": "short",
+      "entryPrice": 169.21,
+      "targetPrice": 155,
+      "stopLoss": 178,
+      "thesis": "Apple's supply chain is catastrophically exposed to the new 104% China tariff regime — with manufacturing in China, Vietnam, and India, all three of which face severe new tariffs. AAPL has already lost 23% in 4 days (worst since 2000), and the tariff going live overnight removes any 'hope' premium that was supporting the stock near its lows. Further analyst downgrades and earnings revision risk make this a high-conviction continuation short.",
+      "catalyst": "104% cumulative China tariff effective midnight April 9 directly hits Apple's primary manufacturing country. Simultaneous tariffs on Vietnam and India eliminate supply chain diversification optionality. Stock already at confirmed 52-week low of $169.21 on April 8 with Bloomberg noting 'investor skepticism about its ability to navigate' these tariffs.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": "Extremely clear: 104% tariff on China effective tonight directly and quantifiably impacts Apple's COGS. Bloomberg reported the rout reflects 'investor skepticism about its ability to navigate' tariffs on China, Vietnam, and India — all three of Apple's key manufacturing hubs. The cost pass-through math is stark."
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": "AAPL hit its 52-week low of $169.21 on April 8 — a breakdown from all prior support. Stock is in freefall (-31% YTD). However, extreme oversold conditions (RSI likely sub-20) create snapback risk. Short entry at the confirmed low is higher risk technically than shorting into a bounce."
+        },
+        "riskReward": {
+          "score": 74,
+          "reasoning": "Entry $169.21, target $155 (-8.4%), stop $178 (+5.2%) = R:R of ~1.6:1. Target of $155 represents a further ~8% decline from an already oversold level — plausible given the tariff reality but not a wide margin. Stop at $178 gives room for a 5% bounce before cutting loss."
+        },
+        "volumeLiquidity": {
+          "score": 90,
+          "reasoning": "AAPL is the world's most traded stock by dollar volume. In the current high-volatility environment, volume has been enormous (29 billion shares traded across the market on April 8). Execution risk is minimal. Bid-ask spreads negligible."
+        },
+        "marketAlignment": {
+          "score": 71,
+          "reasoning": "Bearish macro regime fully aligned with this short — tariff shock, tech bear market, China supply chain crisis. Regime penalty of -5 applied. However, AAPL's specific tariff exposure makes this more of a stock-specific trade than a pure macro play, partially offsetting the regime headwind."
+        },
+        "informationEdge": {
+          "score": 82,
+          "reasoning": "Deep, well-documented edge: Apple's supply chain geography is public knowledge and directly maps to the countries hit hardest by tonight's tariff implementation. Bloomberg, Morningstar, and AppleInsider all confirm the specific manufacturing exposure. Cost impact is quantifiable — not speculative."
+        },
+        "timingUrgency": {
+          "score": 85,
+          "reasoning": "High urgency: the tariff trigger event happened overnight. AAPL will likely gap lower at the open as analysts reprice cost structure with 104% China tariff baked in. Pre-market positioning ahead of the open is the optimal entry window before the gap is fully reflected."
+        }
+      }
+    },
+    {
+      "symbol": "GLD",
+      "direction": "long",
+      "entryPrice": 279,
+      "targetPrice": 294,
+      "stopLoss": 268,
+      "thesis": "Gold is the only major asset class providing shelter in this tariff storm. With both equities AND bonds selling off simultaneously (10-year yields spiked from <4% to 4.5% in 4 days), gold has emerged as the true safe haven. The 104% China tariff activation this morning removes any deescalation hope and reinforces gold's bid. GLD offers a liquid, non-leveraged way to capture continued safe haven flows.",
+      "catalyst": "Simultaneous collapse in stocks AND bonds (10-yr yield +50bps in 4 days to 4.5%; 30-yr topped 5%) eliminates traditional safe-haven Treasury bid, channeling institutional capital into gold. 104% China tariff implementation overnight confirms no near-term trade war resolution. Gold surged in 2025 driven by tariff uncertainty per J.P. Morgan Global Research.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": "Clear multi-factor catalyst: bond market is NOT providing safety (yields spiking), equities in freefall, dollar credibility questioned. Gold fills the vacuum. The tariff-driven macro uncertainty is the explicit driver cited by J.P. Morgan, UBS, and Goldman Sachs for gold's surge above $3,000."
+        },
+        "technicalSetup": {
+          "score": 80,
+          "reasoning": "Gold has been in a strong, confirmed uptrend throughout the 2025 tariff escalation. GLD holding well above prior resistance while all other risk assets collapse — a powerful relative strength signal. The trend is established and intact, not a speculative breakout."
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": "Entry $279, target $294 (+5.4%), stop $268 (-3.9%) = R:R ~1.38:1. Below ideal R:R, but gold's low-volatility, directional nature in this environment justifies the tighter range. The asymmetric risk here is that a sudden deescalation announcement could slam gold hard — hence the tighter stop."
+        },
+        "volumeLiquidity": {
+          "score": 90,
+          "reasoning": "GLD is the world's largest physically-backed gold ETF with daily volume in the billions. Institutional-grade liquidity. In risk-off environments like this, GLD volume surges as institutions rotate into it. Execution risk essentially zero."
+        },
+        "marketAlignment": {
+          "score": 67,
+          "reasoning": "Gold is the primary safe-haven beneficiary in this environment, but the RANGE-BOUND regime designation creates a -5 penalty. Gold's alignment is with the broader macro deterioration, not the equities market direction. Still positive but regime dampens the score."
+        },
+        "informationEdge": {
+          "score": 78,
+          "reasoning": "Strong informational edge: the bond-equity correlation breakdown (both selling together) is a well-documented signal for gold inflows. This dynamic is confirmed by Brookings, Morningstar, and J.P. Morgan analysis. Central bank demand + ETF inflows + safe haven demand = multi-factor tailwind."
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": "Moderate-high urgency. Gold's trend is persistent (not a one-day spike catalyst), so the entry today benefits from the overnight tariff news but is not purely a gap-trade. The 104% China tariff going live this morning is a near-term accelerant for safe haven flows."
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "AAPL",
+      "openPrice": 171.95,
+      "highPrice": 200.61,
+      "lowPrice": 171.89,
+      "closePrice": 198.15,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -17.1,
+      "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $171.95, High $200.61, Low $171.89, Close $198.15."
+    },
+    {
+      "symbol": "GLD",
+      "openPrice": 282.22,
+      "highPrice": 299.27,
+      "lowPrice": 281.04,
+      "closePrice": 297.93,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.78,
+      "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $282.22, High $299.27, Low $281.04, Close $297.93."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 50,
+    "targetHitRate": 50,
+    "stopHitRate": 50,
+    "avgReturnPercent": -5.16,
+    "profitFactor": 0.4,
+    "winRate": 50,
+    "totalScore": 43.7
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 85,
+      "avgScoreLosers": 88,
+      "predictivePower": 47
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 80,
+      "avgScoreLosers": 72,
+      "predictivePower": 58
+    },
+    "riskReward": {
+      "avgScoreWinners": 72,
+      "avgScoreLosers": 74,
+      "predictivePower": 48
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 90,
+      "avgScoreLosers": 90,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 67,
+      "avgScoreLosers": 71,
+      "predictivePower": 46
+    },
+    "informationEdge": {
+      "avgScoreWinners": 78,
+      "avgScoreLosers": 82,
+      "predictivePower": 46
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 75,
+      "avgScoreLosers": 85,
+      "predictivePower": 40
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
+  },
+  "opusReviewNotes": "This algorithm is fundamentally broken at the infrastructure level, not the strategy level. The most glaring failure is that the regime classification system outputs IDENTICAL values across all 10 trials — regime=range-bound, 30% confidence, stress=4, appetite=53 — regardless of whether the actual date was July 2024 (CrowdStrike outage day, massive tech sell-off), April 9 2025 (extreme tariff-driven volatility, one of the most violent days in recent market history), or December 2025. This is not a regime classifier; it is a hardcoded default. The system is literally not reading market data. On Trial 9 (2025-04-09), the regime should have been classified as extreme-stress/risk-off (VIX likely spiked above 40, S&P dropped ~5% intraday on Trump tariff escalation), yet it was labeled range-bound with stress=4 and appetite=53. The AAPL short was directionally correct for a risk-off day but got stopped out at -17.1%, suggesting either the stop was too tight or the entry was poorly timed during a massive reversal day. GLD long was correct (+6.78%) — the one trade that aligned with what a proper risk-off regime would have recommended. This tells us the rare correct call came from accidentally matching a flight-to-safety trade, not from systematic regime awareness.\n\nThe briefing pipeline failed in 8 of 10 trials with 'insufficient data,' meaning the data ingestion layer is non-functional for most dates. Only Trial 3 (2025-12-09) produced a partial briefing mentioning the Fed. This means the entire conviction scoring system is operating blind — catalystClarity, informationEdge, and marketAlignment scores are being generated without actual market context. The 70% no-trade rate is actually the algorithm's saving grace: by defaulting to no-trade when data is missing, it avoided catastrophic losses. But this is not a strategy — it's a broken system accidentally not losing money.\n\nOn predictive dimensions: with only 2 samples showing actual trade outcomes, no dimension has demonstrated meaningful predictive power (all cluster around 20-29/100). However, the one successful trade (GLD long on 2025-04-09) was a macro flight-to-safety play, suggesting that marketAlignment and catalystClarity should be weighted much more heavily IF the regime classifier actually works. The technicalSetup score of 29/100 being the 'highest' predictor is misleading — it's noise from 2 samples. The CRWD short on 2024-07-19 had no recorded outcome, which is another data pipeline failure. That was the day of the CrowdStrike global IT outage — a short would have been spectacularly correct (CRWD dropped ~11% that day), yet the system either didn't track the outcome or the trade wasn't executed.\n\nThe weight evolution shows zero adaptation across 10 trials — the weights in Trial 10 are identical to what appears to be the starting configuration. The learning loop is not learning. Combined with the static regime classification, this suggests the feedback mechanism that should adjust weights based on outcomes is either not connected or not receiving outcome data. The algorithm needs to be rebuilt from the data layer up before any weight optimization is meaningful.\n\nThe stop-loss calibration is critically flawed. The single recorded stop-loss hit was -17.1% on AAPL. For a day trading algorithm, a 17% stop loss is not a stop loss — it's a catastrophe. Day trading stops should be 1-3% maximum for individual equity positions. Either the position sizing is wrong, the stop placement is wrong, or this was a gap-through scenario on a historically volatile day that should have been flagged as untradeable by a functioning regime classifier."
+}

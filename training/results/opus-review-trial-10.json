@@ -1,0 +1,155 @@
+{
+  "trial": 10,
+  "reviewedAt": "2026-04-04T22:10:22.722Z",
+  "tokensUsed": 5480,
+  "insights": "This algorithm is fundamentally broken at the infrastructure level, not the strategy level. The most glaring failure is that the regime classification system outputs IDENTICAL values across all 10 trials — regime=range-bound, 30% confidence, stress=4, appetite=53 — regardless of whether the actual date was July 2024 (CrowdStrike outage day, massive tech sell-off), April 9 2025 (extreme tariff-driven volatility, one of the most violent days in recent market history), or December 2025. This is not a regime classifier; it is a hardcoded default. The system is literally not reading market data. On Trial 9 (2025-04-09), the regime should have been classified as extreme-stress/risk-off (VIX likely spiked above 40, S&P dropped ~5% intraday on Trump tariff escalation), yet it was labeled range-bound with stress=4 and appetite=53. The AAPL short was directionally correct for a risk-off day but got stopped out at -17.1%, suggesting either the stop was too tight or the entry was poorly timed during a massive reversal day. GLD long was correct (+6.78%) — the one trade that aligned with what a proper risk-off regime would have recommended. This tells us the rare correct call came from accidentally matching a flight-to-safety trade, not from systematic regime awareness.\n\nThe briefing pipeline failed in 8 of 10 trials with 'insufficient data,' meaning the data ingestion layer is non-functional for most dates. Only Trial 3 (2025-12-09) produced a partial briefing mentioning the Fed. This means the entire conviction scoring system is operating blind — catalystClarity, informationEdge, and marketAlignment scores are being generated without actual market context. The 70% no-trade rate is actually the algorithm's saving grace: by defaulting to no-trade when data is missing, it avoided catastrophic losses. But this is not a strategy — it's a broken system accidentally not losing money.\n\nOn predictive dimensions: with only 2 samples showing actual trade outcomes, no dimension has demonstrated meaningful predictive power (all cluster around 20-29/100). However, the one successful trade (GLD long on 2025-04-09) was a macro flight-to-safety play, suggesting that marketAlignment and catalystClarity should be weighted much more heavily IF the regime classifier actually works. The technicalSetup score of 29/100 being the 'highest' predictor is misleading — it's noise from 2 samples. The CRWD short on 2024-07-19 had no recorded outcome, which is another data pipeline failure. That was the day of the CrowdStrike global IT outage — a short would have been spectacularly correct (CRWD dropped ~11% that day), yet the system either didn't track the outcome or the trade wasn't executed.\n\nThe weight evolution shows zero adaptation across 10 trials — the weights in Trial 10 are identical to what appears to be the starting configuration. The learning loop is not learning. Combined with the static regime classification, this suggests the feedback mechanism that should adjust weights based on outcomes is either not connected or not receiving outcome data. The algorithm needs to be rebuilt from the data layer up before any weight optimization is meaningful.\n\nThe stop-loss calibration is critically flawed. The single recorded stop-loss hit was -17.1% on AAPL. For a day trading algorithm, a 17% stop loss is not a stop loss — it's a catastrophe. Day trading stops should be 1-3% maximum for individual equity positions. Either the position sizing is wrong, the stop placement is wrong, or this was a gap-through scenario on a historically volatile day that should have been flagged as untradeable by a functioning regime classifier.",
+  "weightAdjustments": {
+    "catalystClarity": 0.25,
+    "technicalSetup": 0.1,
+    "riskReward": 0.2,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.1,
+    "timingUrgency": 0.05
+  },
+  "thresholdRecommendation": 65,
+  "strategyChanges": [
+    "CRITICAL: Fix the regime classification system — it currently outputs hardcoded defaults (range-bound/30%/stress=4/appetite=53) for every date. Must ingest real VIX, breadth, sector rotation, and intermarket data before any trade decisions are made.",
+    "CRITICAL: Fix the data ingestion pipeline — briefings failed in 80% of trials due to 'insufficient data.' No conviction scoring is valid without market context. Add fallback data sources and health checks that block trading when data quality is below threshold.",
+    "Implement hard stop-loss caps at 3% for individual equity day trades and 1.5% for portfolio-level daily drawdown. The -17.1% AAPL loss should be structurally impossible.",
+    "Add a regime-conditional trade filter: in genuine risk-off/high-stress regimes, only allow short equity + long safe-haven (gold, treasuries, USD) trades. In risk-on, only allow long equity + short volatility. Never allow counter-regime trades above conviction threshold.",
+    "Implement the feedback/learning loop — weights did not change across 10 trials despite outcome data. Connect trade outcomes to Bayesian weight updates with a minimum learning rate of 0.02 per trial.",
+    "Add a data quality gate: if briefing generation fails or regime confidence is below 50%, force no-trade. Do not allow trade recommendations to be generated from default/placeholder regime data.",
+    "On extreme volatility days (VIX > 30 or daily range > 3%), reduce position sizes by 50% and tighten stops to 1.5% maximum."
+  ],
+  "blindSpots": [
+    "The algorithm cannot distinguish between a calm range-bound market and a crisis day — it classified April 9, 2025 (tariff shock, ~5% S&P drop) identically to a quiet December Tuesday.",
+    "No macro event detection: CrowdStrike outage (Trial 7), Fed meetings (Trial 3), tariff escalations (Trial 9) were not incorporated into regime or conviction scoring.",
+    "No intraday volatility awareness: day trading on a +/-5% day requires fundamentally different position sizing and stop placement than a 0.3% range day.",
+    "No sector/factor rotation detection: the algorithm treats all equities the same regardless of whether defensives are outperforming cyclicals (key regime signal).",
+    "Survivorship bias in no-trade scoring: assigning score=50 to no-trade days masks the fact that the system is non-functional — it creates the illusion of median performance when nothing is happening.",
+    "Missing outcome tracking: Trial 7 (CRWD short on outage day) shows no outcome, meaning either the trade wasn't executed or the P&L tracking failed. Either way, critical data is lost."
+  ],
+  "pipelineIssues": [
+    "SIGNAL GATHERING: Completely broken. Data ingestion fails 80% of the time. The system cannot generate briefings, which means all downstream scoring is garbage-in-garbage-out.",
+    "REGIME CLASSIFICATION: Hardcoded/default output. Every trial shows identical regime parameters regardless of actual market conditions. This is the single most critical failure — everything downstream depends on accurate regime classification.",
+    "DAILY BRIEFING: Fails to generate in 8/10 trials. The one partial success (Trial 3) shows it CAN work but the data dependencies are fragile. Needs redundant data sources and graceful degradation.",
+    "TRADE RECOMMENDATIONS: Generated from default regime data, making conviction scores meaningless. The system recommended a short on AAPL during a massive sell-off day (directionally correct) but with a stop loss that allowed -17.1% loss — suggesting no volatility-adjusted position sizing.",
+    "OUTCOME SCORING: Missing outcomes for Trial 7 (CRWD). Score=50 default for no-trade days inflates apparent performance. The actual realized performance is 16.7% win rate and 0.13 profit factor — catastrophically unprofitable.",
+    "WEIGHT LEARNING: Non-functional. Weights are identical across all trials. The evolutionary/Bayesian update mechanism is either disconnected or receiving no signal from outcomes.",
+    "FEEDBACK LOOP: No evidence that any trial's outcome influenced subsequent trial behavior. Trials 8 and 9 had actual outcomes but Trial 10's weights and regime were unchanged."
+  ],
+  "revisedRecommendations": {
+    "trial_1_2026-03-13": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Mid-March 2026 — without functioning data, the conservative play is a small SPY long if regime is genuinely range-bound, targeting mean reversion to upper range. However, the honest recommendation is NO TRADE until the data pipeline is fixed."
+      }
+    ],
+    "trial_2_2025-04-28": [
+      {
+        "symbol": "GLD",
+        "direction": "long",
+        "reasoning": "Late April 2025 was still in the aftermath of the April tariff shock. Gold was in a strong uptrend as a safe-haven bid. A regime-aware system should have detected elevated stress and recommended safe-haven exposure."
+      },
+      {
+        "symbol": "TLT",
+        "direction": "long",
+        "reasoning": "Treasury bonds were rallying on flight-to-quality flows. A functioning regime classifier showing high stress would have flagged this as a high-conviction long."
+      }
+    ],
+    "trial_3_2025-12-09": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Pre-Fed meeting positioning in December 2025 — the briefing correctly identified Fed as the key catalyst. Historical pattern: markets tend to drift higher into Fed decisions when rate cuts are expected. Small long SPY with tight stop at support."
+      },
+      {
+        "symbol": "GLD",
+        "direction": "long",
+        "reasoning": "Gold as a hedge into Fed uncertainty. If Fed is dovish, gold rallies on lower real rates. If hawkish, gold provides portfolio protection."
+      }
+    ],
+    "trial_4_2025-02-14": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Valentine's Day 2025 — pre-tariff escalation, markets were still in a risk-on regime. S&P was trending higher. A functioning regime classifier should have shown risk-on, supporting long equity exposure."
+      }
+    ],
+    "trial_5_2024-09-12": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "September 12, 2024 — markets were digesting CPI data and anticipating the September Fed meeting where the first rate cut cycle began. Risk appetite was improving. Long SPY with a catalyst of imminent rate cuts."
+      },
+      {
+        "symbol": "TLT",
+        "direction": "long",
+        "reasoning": "Treasuries were rallying into the September 2024 rate cut. High-conviction long duration trade."
+      }
+    ],
+    "trial_6_2024-12-20": [
+      {
+        "symbol": "SPY",
+        "direction": "short",
+        "reasoning": "December 20, 2024 was the day after the hawkish Fed cut (Dec 18 FOMC). Markets sold off sharply. A functioning regime classifier should have detected stress spike and risk-off conditions. Short SPY or long VIX calls."
+      },
+      {
+        "symbol": "GLD",
+        "direction": "long",
+        "reasoning": "Gold as safe-haven on post-hawkish-Fed risk-off. Real rates repriced higher but uncertainty supported gold."
+      }
+    ],
+    "trial_7_2024-07-19": [
+      {
+        "symbol": "CRWD",
+        "direction": "short",
+        "reasoning": "The algorithm actually got this right — CRWD experienced a massive global IT outage on July 19, 2024 and dropped ~11%. The short was correct. But the regime should have been classified as sector-specific-stress, not range-bound. Stop should have been at -2% (it was a high-conviction catalyst-driven trade). CRITICAL: the system failed to track the outcome of what was likely its best trade."
+      },
+      {
+        "symbol": "PANW",
+        "direction": "long",
+        "reasoning": "Cybersecurity competitors like Palo Alto benefited from CrowdStrike's outage as enterprises considered diversifying vendors. Long PANW as a pair trade against short CRWD."
+      }
+    ],
+    "trial_8_2026-03-10": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Instead of the speculative XENE long (small-cap biotech with no clear catalyst — lost 6.61%), a regime-aware system should have either stayed flat or traded liquid large-caps. XENE had poor liquidity and no identifiable catalyst, making it a low-conviction trade that should never have passed the threshold."
+      }
+    ],
+    "trial_9_2025-04-09": [
+      {
+        "symbol": "GLD",
+        "direction": "long",
+        "reasoning": "The algorithm got GLD long correct (+6.78%). This was the highest-conviction trade of the day — tariff escalation drove massive flight to safety. Should have been the ONLY trade, sized up significantly."
+      },
+      {
+        "symbol": "TLT",
+        "direction": "long",
+        "reasoning": "Treasuries also rallied on the tariff shock as a safe-haven. Long TLT as a second safe-haven play, complementing GLD."
+      },
+      {
+        "symbol": "AAPL",
+        "direction": "short",
+        "reasoning": "AAPL short was directionally correct for a risk-off day BUT the -17.1% stop-loss hit means the execution was catastrophic. If shorting on a 5% down day, the stop MUST be at -2% max. The position should have been 1/4 the size. In hindsight, avoid single-stock shorts on days with this level of volatility — the intraday reversals are too violent. The correct play was to short SPY or QQQ instead for more predictable drawdown characteristics."
+      }
+    ],
+    "trial_10_2025-09-18": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "September 18, 2025 — likely near or on an FOMC decision day. If the Fed was cutting, risk-on positioning was appropriate. A functioning system should have detected the Fed catalyst and generated at least a conditional trade recommendation."
+      },
+      {
+        "symbol": "GLD",
+        "direction": "long",
+        "reasoning": "Gold tends to perform well on Fed decision days regardless of outcome. Low-risk catalyst-driven trade that the system should have identified."
+      }
+    ]
+  },
+  "rawResponse": "\n\n<json>\n{\n  \"insights\": \"This algorithm is fundamentally broken at the infrastructure level, not the strategy level. The most glaring failure is that the regime classification system outputs IDENTICAL values across all 10 trials — regime=range-bound, 30% confidence, stress=4, appetite=53 — regardless of whether the actual date was July 2024 (CrowdStrike outage day, massive tech sell-off), April 9 2025 (extreme tariff-driven volatility, one of the most violent days in recent market history), or December 2025. This is not a regime classifier; it is a hardcoded default. The system is literally not reading market data. On Trial 9 (2025-04-09), the regime should have been classified as extreme-stress/risk-off (VIX likely spiked above 40, S&P dropped ~5% intraday on Trump tariff escalation), yet it was labeled range-bound with stress=4 and appetite=53. The AAPL short was directionally correct for a risk-off day but got stopped out at -17.1%, suggesting either the stop was too tight or the entry was poorly timed during a massive reversal day. GLD long was correct (+6.78%) — the one trade that aligned with what a proper risk-off regime would have recommended. This tells us the rare correct call came from accidentally matching a flight-to-safety trade, not from systematic regime awareness.\\n\\nThe briefing pipeline failed in 8 of 10 trials with 'insufficient data,' meaning the data ingestion layer is non-functional for most dates. Only Trial 3 (2025-12-09) produced a partial briefing mentioning the Fed. This means the entire conviction scoring system is operating blind — catalystClarity, informationEdge, and marketAlignment scores are being generated without actual market context. The 70% no-trade rate is actually the algorithm's saving grace: by defaulting to no-trade when data is missing, it avoided catastrophic losses. But this is not a strategy — it's a broken system accidentally not losing money.\\n\\nOn predictive dimensions: with only 2 samples showing actual trade outcomes, no dimension has demonstrated meaningful predictive power (all cluster around 20-29/100). However, the one successful trade (GLD long on 2025-04-09) was a macro flight-to-safety play, suggesting that marketAlignment and catalystClarity should be weighted much more heavily IF the regime classifier actually works. The technicalSetup score of 29/100 being the 'highest' predictor is misleading — it's noise from 2 samples. The CRWD short on 2024-07-19 had no recorded outcome, which is another data pipeline failure. That was the day of the CrowdStrike global IT outage — a short would have been spectacularly correct (CRWD dropped ~11% that day), yet the system either didn't track the outcome or the trade wasn't executed.\\n\\nThe weight evolution shows zero adaptation across 10 trials — the weights in Trial 10 are identical to what appears to be the starting configuration. The learning loop is not learning. Combined with the static regime classification, this suggests the feedback mechanism that should adjust weights based on outcomes is either not connected or not receiving outcome data. The algorithm needs to be rebuilt from the data layer up before any weight optimization is meaningful.\\n\\nThe stop-loss calibration is critically flawed. The single recorded stop-loss hit was -17.1% on AAPL. For a day trading algorithm, a 17% stop loss is not a stop loss — it's a catastrophe. Day trading stops should be 1-3% maximum for individual equity positions. Either the position sizing is wrong, the stop placement is wrong, or this was a gap-through scenario on a historically volatile day that should have been flagged as untradeable by a functioning regime classifier.\",\n\n  \"weightAdjustments\": {\n    \"catalystClarity\": 0.25,\n    \"technicalSetup\": 0.10,\n    \"riskReward\": 0.20,\n    \"volumeLiquidity\": 0.10,\n    \"marketAlignment\": 0.20,\n    \"informationEdge\": 0.10,\n    \"timingUrgency\": 0.05\n  },\n\n  \"thresholdRecommendation\": 65,\n\n  \"strategyChanges\": [\n    \"CRITICAL: Fix the regime classification system — it currently outputs hardcoded defaults (range-bound/30%/stress=4/appetite=53) for every date. Must ingest real VIX, breadth, sector rotation, and intermarket data before any trade decisions are made.\",\n    \"CRITICAL: Fix the data ingestion pipeline — briefings failed in 80% of trials due to 'insufficient data.' No conviction scoring is valid without market context. Add fallback data sources and health checks that block trading when data quality is below threshold.\",\n    \"Implement hard stop-loss caps at 3% for individual equity day trades and 1.5% for portfolio-level daily drawdown. The -17.1% AAPL loss should be structurally impossible.\",\n    \"Add a regime-conditional trade filter: in genuine risk-off/high-stress regimes, only allow short equity + long safe-haven (gold, treasuries, USD) trades. In risk-on, only allow long equity + short volatility. Never allow counter-regime trades above conviction threshold.\",\n    \"Implement the feedback/learning loop — weights did not change across 10 trials despite outcome data. Connect trade outcomes to Bayesian weight updates with a minimum learning rate of 0.02 per trial.\",\n    \"Add a data quality gate: if briefing generation fails or regime confidence is below 50%, force no-trade. Do not allow trade recommendations to be generated from default/placeholder regime data.\",\n    \"On extreme volatility days (VIX > 30 or daily range > 3%), reduce position sizes by 50% and tighten stops to 1.5% maximum.\"\n  ],\n\n  \"blindSpots\": [\n    \"The algorithm cannot distinguish between a calm range-bound market and a crisis day — it classified April 9, 2025 (tariff shock, ~5% S&P drop) identically to a quiet December Tuesday.\",\n    \"No macro event detection: CrowdStrike outage (Trial 7), Fed meetings (Trial 3), tariff escalations (Trial 9) were not incorporated into regime or conviction scoring.\",\n    \"No intraday volatility awareness: day trading on a +/-5% day requires fundamentally different position sizing and stop placement than a 0.3% range day.\",\n    \"No sector/factor rotation detection: the algorithm treats all equities the same regardless of whether defensives are outperforming cyclicals (key regime signal).\",\n    \"Survivorship bias in no-trade scoring: assigning score=50 to no-trade days masks the fact that the system is non-functional — it creates the illusion of median performance when nothing is happening.\",\n    \"Missing outcome tracking: Trial 7 (CRWD short on outage day) shows no outcome, meaning either the trade wasn't executed or the P&L tracking failed. Either way, critical data is lost.\"\n  ],\n\n  \"pipelineIssues\": [\n    \"SIGNAL GATHERING: Completely broken. Data ingestion fails 80% of the time. The system cannot generate briefings, which means all downstream scoring is garbage-in-garbage-out.\",\n    \"REGIME CLASSIFICATION: Hardcoded/default output. Every trial shows identical regime parameters regardless of actual market conditions. This is the single most critical failure — everything downstream depends on accurate regime classification.\",\n    \"DAILY BRIEFING: Fails to generate in 8/10 trials. The one partial success (Trial 3) shows it CAN work but the data dependencies are fragile. Needs redundant data sources and graceful degradation.\",\n    \"TRADE RECOMMENDATIONS: Generated from default regime data, making conviction scores meaningless. The system recommended a short on AAPL during a massive sell-off day (directionally correct) but with a stop loss that allowed -17.1% loss — suggesting no volatility-adjusted position sizing.\",\n    \"OUTCOME SCORING: Missing outcomes for Trial 7 (CRWD). Score=50 default for no-trade days inflates apparent performance. The actual realized performance is 16.7% win rate and 0.13 profit factor — catastrophically unprofitable.\",\n    \"WEIGHT LEARNING: Non-functional. Weights are identical across all trials. The evolutionary/Bayesian update mechanism is either disconnected or receiving no signal from outcomes.\",\n    \"FEEDBACK LOOP: No evidence that any trial's outcome influenced subsequent trial behavior. Trials 8 and 9 had actual outcomes but Trial 10's weights and regime were unchanged.\"\n  ],\n\n  \"revisedRecommendations\": {\n    \"trial_1_2026-03-13\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Mid-March 2026 — without functioning data, the conservative play is a small SPY long if regime is genuinely range-bound, targeting mean reversion to upper range. However, the honest recommendation is NO TRADE until the data pipeline is fixed.\"}\n    ],\n    \"trial_2_2025-04-28\": [\n      {\"symbol\": \"GLD\", \"direction\": \"long\", \"reasoning\": \"Late April 2025 was still in the aftermath of the April tariff shock. Gold was in a strong uptrend as a safe-haven bid. A regime-aware system should have detected elevated stress and recommended safe-haven exposure.\"},\n      {\"symbol\": \"TLT\", \"direction\": \"long\", \"reasoning\": \"Treasury bonds were rallying on flight-to-quality flows. A functioning regime classifier showing high stress would have flagged this as a high-conviction long.\"}\n    ],\n    \"trial_3_2025-12-09\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Pre-Fed meeting positioning in December 2025 — the briefing correctly identified Fed as the key catalyst. Historical pattern: markets tend to drift higher into Fed decisions when rate cuts are expected. Small long SPY with tight stop at support.\"},\n      {\"symbol\": \"GLD\", \"direction\": \"long\", \"reasoning\": \"Gold as a hedge into Fed uncertainty. If Fed is dovish, gold rallies on lower real rates. If hawkish, gold provides portfolio protection.\"}\n    ],\n    \"trial_4_2025-02-14\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Valentine's Day 2025 — pre-tariff escalation, markets were still in a risk-on regime. S&P was trending higher. A functioning regime classifier should have shown risk-on, supporting long equity exposure.\"}\n    ],\n    \"trial_5_2024-09-12\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"September 12, 2024 — markets were digesting CPI data and anticipating the September Fed meeting where the first rate cut cycle began. Risk appetite was improving. Long SPY with a catalyst of imminent rate cuts.\"},\n      {\"symbol\": \"TLT\", \"direction\": \"long\", \"reasoning\": \"Treasuries were rallying into the September 2024 rate cut. High-conviction long duration trade.\"}\n    ],\n    \"trial_6_2024-12-20\": [\n      {\"symbol\": \"SPY\", \"direction\": \"short\", \"reasoning\": \"December 20, 2024 was the day after the hawkish Fed cut (Dec 18 FOMC). Markets sold off sharply. A functioning regime classifier should have detected stress spike and risk-off conditions. Short SPY or long VIX calls.\"},\n      {\"symbol\": \"GLD\", \"direction\": \"long\", \"reasoning\": \"Gold as safe-haven on post-hawkish-Fed risk-off. Real rates repriced higher but uncertainty supported gold.\"}\n    ],\n    \"trial_7_2024-07-19\": [\n      {\"symbol\": \"CRWD\", \"direction\": \"short\", \"reasoning\": \"The algorithm actually got this right — CRWD experienced a massive global IT outage on July 19, 2024 and dropped ~11%. The short was correct. But the regime should have been classified as sector-specific-stress, not range-bound. Stop should have been at -2% (it was a high-conviction catalyst-driven trade). CRITICAL: the system failed to track the outcome of what was likely its best trade.\"},\n      {\"symbol\": \"PANW\", \"direction\": \"long\", \"reasoning\": \"Cybersecurity competitors like Palo Alto benefited from CrowdStrike's outage as enterprises considered diversifying vendors. Long PANW as a pair trade against short CRWD.\"}\n    ],\n    \"trial_8_2026-03-10\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Instead of the speculative XENE long (small-cap biotech with no clear catalyst — lost 6.61%), a regime-aware system should have either stayed flat or traded liquid large-caps. XENE had poor liquidity and no identifiable catalyst, making it a low-conviction trade that should never have passed the threshold.\"}\n    ],\n    \"trial_9_2025-04-09\": [\n      {\"symbol\": \"GLD\", \"direction\": \"long\", \"reasoning\": \"The algorithm got GLD long correct (+6.78%). This was the highest-conviction trade of the day — tariff escalation drove massive flight to safety. Should have been the ONLY trade, sized up significantly.\"},\n      {\"symbol\": \"TLT\", \"direction\": \"long\", \"reasoning\": \"Treasuries also rallied on the tariff shock as a safe-haven. Long TLT as a second safe-haven play, complementing GLD.\"},\n      {\"symbol\": \"AAPL\", \"direction\": \"short\", \"reasoning\": \"AAPL short was directionally correct for a risk-off day BUT the -17.1% stop-loss hit means the execution was catastrophic. If shorting on a 5% down day, the stop MUST be at -2% max. The position should have been 1/4 the size. In hindsight, avoid single-stock shorts on days with this level of volatility — the intraday reversals are too violent. The correct play was to short SPY or QQQ instead for more predictable drawdown characteristics.\"}\n    ],\n    \"trial_10_2025-09-18\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"September 18, 2025 — likely near or on an FOMC decision day. If the Fed was cutting, risk-on positioning was appropriate. A functioning system should have detected the Fed catalyst and generated at least a conditional trade recommendation.\"},\n      {\"symbol\": \"GLD\", \"direction\": \"long\", \"reasoning\": \"Gold tends to perform well on Fed decision days regardless of outcome. Low-risk catalyst-driven trade that the system should have identified.\"}\n    ]\n  }\n}\n</json>"
+}

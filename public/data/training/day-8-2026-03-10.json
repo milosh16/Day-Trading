@@ -1,8 +1,8 @@
 {
-  "trialId": 1,
-  "date": "2026-03-13",
-  "dateDisplay": "Friday, March 13, 2026",
-  "generatedAt": "2026-04-04T19:20:40.905Z",
+  "trialId": 8,
+  "date": "2026-03-10",
+  "dateDisplay": "Tuesday, March 10, 2026",
+  "generatedAt": "2026-04-04T21:30:37.242Z",
   "pipeline": {
     "signals": {
       "spFuturesChange": 0,
@@ -135,18 +135,107 @@
       "scenarios": []
     }
   },
-  "recommendations": [],
-  "outcomes": [],
+  "recommendations": [
+    {
+      "symbol": "XENE",
+      "direction": "long",
+      "entryPrice": 62,
+      "targetPrice": 70,
+      "stopLoss": 55.5,
+      "thesis": "XENE's Phase 3 X-TOLE2 trial delivered a clean beat on Monday March 9, with azetukalner halving seizure frequency vs. placebo — exceeding analyst expectations and triggering an institutional discovery event. Day 2 of large biotech Phase 3 wins typically sees continued accumulation as sell-side analysts initiate and institutions build positions; the NDA filing path in Q3 2026 provides a clear next catalyst horizon.",
+      "catalyst": "Phase 3 X-TOLE2 topline results announced March 9, 2026: azetukalner met primary endpoint with strong seizure reduction vs. placebo. NDA filing with FDA planned for Q3 2026. Stifel raising peak sales estimates. Stock a pure idiosyncratic biotech catalyst, fully independent of Iran war/macro headwinds.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 95,
+          "reasoning": "Binary Phase 3 readout is the clearest possible catalyst in biotech. Primary endpoint met, data exceeded analyst expectations (Stifel upgrading estimates), and the NDA filing timeline (Q3 2026) is explicitly confirmed by management. First KV7 potassium channel opener for epilepsy = novel drug class status. No ambiguity in the data — this is a go/no-go event with a clear 'go' outcome."
+        },
+        "technicalSetup": {
+          "score": 76,
+          "reasoning": "Stock closed at $61.45 near day highs after gapping from $41.94 — a bullish close that suggests buyers absorbed all supply through the session. No overhead technical resistance above $62 (stock had not traded at these levels before). Gap-up with high-volume close is a constructive Day 2 setup. Slight discount: no defined prior technical structure above $62 makes target-setting less precise."
+        },
+        "riskReward": {
+          "score": 75,
+          "reasoning": "Entry $62.00, Target $70.00 (+12.9%), Stop $55.50 (-10.5%) → R:R of 1.23:1. Stop placed below the March 9 gap-up opening level — a clean structural invalidation. Target scaled 0.7x per range-bound regime rules. Acceptable for a catalyst-driven biotech trade, though R:R is modest given the 46.5% gap already taken. Key risk is profit-taking or market-wide selloff on ceasefire news."
+        },
+        "volumeLiquidity": {
+          "score": 82,
+          "reasoning": "XENE saw exceptionally heavy volume on March 9 with the +46.5% gap — the catalyst-day volume surge confirms institutional interest. Biotech stocks with Phase 3 wins of this magnitude typically see sustained elevated volume for 3-5 sessions. Mid-cap liquidity sufficient for normal position sizing; options market will be active. Not a mega-cap (some slippage risk on large orders)."
+        },
+        "marketAlignment": {
+          "score": 62,
+          "reasoning": "This is the weakest dimension. The regime is range-bound with elevated VIX (27.19) due to Iran war uncertainty. However, XENE's catalyst is 100% idiosyncratic — seizure drug data has zero correlation to oil prices, Iran ceasefire risk, or defense spending. This partially offsets the regime headwind. Broader market selloff on ceasefire-reversal news could drag even uncorrelated biotechs lower, hence the score is not higher."
+        },
+        "informationEdge": {
+          "score": 88,
+          "reasoning": "The Phase 3 data was announced after market close on March 9 via press release. While the headline (+46%) is widely known, the specific data details — seizure halving on high dose at 12 weeks, clean safety profile, NDA Q3 2026 timeline, Stifel raising estimates — are still being processed by the full institutional universe. Day 2 is the window when sell-side analysts issue initial notes, triggering buy orders from accounts that don't act on PRE-publication data."
+        },
+        "timingUrgency": {
+          "score": 85,
+          "reasoning": "Day 2 of a Phase 3 biotech win is consistently the highest-probability entry window for continuation trades. Sell-side research desks publish initiations and upgrades during pre-market and morning of Day 2. Institutional accounts that missed Day 1 accumulate aggressively in the Day 2 morning session. Urgency is high: waiting until Day 3+ risks chasing into diminishing returns. The Q3 2026 NDA filing is still months away, making today a primary entry point before the next catalyst."
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "XENE",
+      "openPrice": 63.26,
+      "highPrice": 63.95,
+      "lowPrice": 56.92,
+      "closePrice": 57.9,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -6.61,
+      "notes": "3-day window (2026-03-10, 2026-03-11, 2026-03-12). Open $63.26, High $63.95, Low $56.92, Close $57.9."
+    }
+  ],
   "scores": {
     "directionAccuracy": 0,
     "targetHitRate": 0,
     "stopHitRate": 0,
-    "avgReturnPercent": 0,
+    "avgReturnPercent": -6.61,
     "profitFactor": 0,
     "winRate": 0,
-    "totalScore": 50
+    "totalScore": 15
   },
-  "dimensionAnalysis": {},
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 95,
+      "predictivePower": 0
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 76,
+      "predictivePower": 0
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 75,
+      "predictivePower": 0
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 82,
+      "predictivePower": 0
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 62,
+      "predictivePower": 0
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 88,
+      "predictivePower": 0
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 85,
+      "predictivePower": 0
+    }
+  },
   "weights": {
     "catalystClarity": 0.2,
     "technicalSetup": 0.15,
