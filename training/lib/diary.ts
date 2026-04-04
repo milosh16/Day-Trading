@@ -50,6 +50,16 @@ export function appendTrialEntry(result: TrialResult, trialNum: number, totalTri
 
   let entry = `## Day ${trialNum}/${totalTrials} — ${dateDisplay}\n\n`;
 
+  // Regime & Briefing context (if available from full pipeline)
+  if (result.regime) {
+    entry += `**Regime:** ${result.regime.regime} (${result.regime.confidence}% confidence) | `;
+    entry += `Stress: ${result.regime.stressIndex}/100 | Risk Appetite: ${result.regime.riskAppetiteIndex}/100\n\n`;
+  }
+  if (result.briefing) {
+    entry += `**Briefing:** ${result.briefing.summary}\n`;
+    entry += `**Market Condition:** ${result.briefing.marketCondition}\n\n`;
+  }
+
   // Recommendations
   if (result.recommendations.length === 0) {
     entry += `**Recommendations:** None — no setups met the conviction threshold.\n\n`;
@@ -117,6 +127,20 @@ export function appendTrialEntry(result: TrialResult, trialNum: number, totalTri
       entry += `| ${dim} | ${analysis.avgScoreWinners} | ${analysis.avgScoreLosers} | ${pp}${indicator} |\n`;
     }
     entry += "\n";
+  }
+
+  // Revised recommendations (populated after Opus review)
+  if (result.revisedRecommendations && result.revisedRecommendations.length > 0) {
+    entry += `### Opus Revised Recommendations (${result.revisedRecommendations.length})\n\n`;
+    entry += `| Symbol | Direction | Entry | Target | Stop | Thesis |\n`;
+    entry += `|--------|-----------|-------|--------|------|--------|\n`;
+    for (const rec of result.revisedRecommendations) {
+      entry += `| ${rec.symbol} | ${rec.direction} | $${rec.entryPrice} | $${rec.targetPrice} | $${rec.stopLoss} | ${rec.thesis.slice(0, 60)}${rec.thesis.length > 60 ? "..." : ""} |\n`;
+    }
+    entry += "\n";
+  }
+  if (result.opusReviewNotes) {
+    entry += `**Opus Review Notes:** ${result.opusReviewNotes.slice(0, 500)}${result.opusReviewNotes.length > 500 ? "..." : ""}\n\n`;
   }
 
   entry += `*Weights used: ${weightStr(result.weights)}*\n\n`;
