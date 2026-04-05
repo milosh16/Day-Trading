@@ -1,1 +1,351 @@
-{"currentTrial":0,"totalTrials":500,"weights":{"catalystClarity":0.20,"technicalSetup":0.15,"riskReward":0.15,"volumeLiquidity":0.10,"marketAlignment":0.15,"informationEdge":0.15,"timingUrgency":0.10},"results":[],"bestScore":0,"bestWeights":{"catalystClarity":0.20,"technicalSetup":0.15,"riskReward":0.15,"volumeLiquidity":0.10,"marketAlignment":0.15,"informationEdge":0.15,"timingUrgency":0.10},"startedAt":"2026-04-05T00:00:00.000Z","lastUpdatedAt":"2026-04-05T00:00:00.000Z","totalTokensUsed":0,"weightHistory":[]}
+{
+  "currentTrial": 1,
+  "totalTrials": 500,
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
+  },
+  "results": [
+    {
+      "trialId": 1,
+      "date": "2025-05-08",
+      "generatedAt": "2026-04-05T18:25:32.473Z",
+      "signals": {
+        "spFuturesChange": 0.58,
+        "nasdaqFuturesChange": 1.07,
+        "dowFuturesChange": 0.62,
+        "russellFuturesChange": 1.85,
+        "vixFuturesChange": -2.58,
+        "vix": 21.9,
+        "vixChange": -2.58,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 23.76,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.37,
+        "tenYearYieldChange": 2.29,
+        "twoYearYield": 4.06,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.84,
+        "threeMonthYield": 4.22,
+        "twoTenSpread": 0.31,
+        "threeMoTenYrSpread": 0.15,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 100.34,
+        "dollarIndexChange": -0.3,
+        "eurUsd": 1.12,
+        "eurUsdChange": -0.73,
+        "usdJpy": 146.01,
+        "usdJpyChange": 1.51,
+        "usdCny": 7.23,
+        "usdCnyChange": 0,
+        "oilWTI": 61.02,
+        "oilChange": 1.85,
+        "brentOil": 63.91,
+        "brentOilChange": 1.7,
+        "natGasChange": 5.65,
+        "goldPrice": 3335.4,
+        "goldChange": 1.18,
+        "silverChange": 0.92,
+        "copperChange": 1.1,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": 1.56,
+        "daxChange": 0.63,
+        "ftseChange": 0.27,
+        "shanghaiChange": -0.3,
+        "hangSengChange": 0.4,
+        "kospiChange": -0.09,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 107.5,
+        "spreadChange": 0.03,
+        "igSpread": -13.3,
+        "igSpreadChange": 0.5,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1.03,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 0.95,
+        "xlfChange": 0.83,
+        "xleChange": 1.32,
+        "xlvChange": -0.9,
+        "xlpChange": -0.12,
+        "xluChange": -0.8,
+        "xlreChange": -0.48,
+        "xliChange": 1.38,
+        "xlbChange": 1.33,
+        "xlcChange": 0.24,
+        "xlyChange": 1.18,
+        "smhChange": 0.88,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -0.26,
+        "ethereumChange": 6.3,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 0,
+        "daysToNextCPI": 0,
+        "daysToNextNFP": 0,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 2,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 1.07,
+        "sp20DayReturn": 3.79,
+        "nasdaqVsRussell5d": -1.33,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "risk-on",
+        "confidence": 59,
+        "directionalBias": "29",
+        "volatilityRegime": "normal",
+        "stressIndex": 23,
+        "riskAppetiteIndex": 68,
+        "sectorTilts": {
+          "tech": "overweight",
+          "consumer-discretionary": "overweight",
+          "utilities": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": "Markets are pressing higher on Day 3 of a cyclical recovery bounce, with small caps leading (+1.85%), commodities bid across the board, and clear rotation into cyclicals — all consistent with a Risk-On regime despite the S&P sitting near 52-week lows and extreme fear readings on sentiment surveys. The regime signal carries moderate conviction (59%) and presents a textbook 'fear bottom' setup: institutional positioning is defensive, but price action is turning. The bull/bear tension is real — this is a market trying to bottom, not one celebrating new highs.",
+        "marketCondition": "bullish",
+        "sections": [
+          {
+            "title": "🧭 Regime & Overall Market Posture",
+            "content": "The SIGNAL regime is classified RISK-ON at 59% confidence — meaningful but not emphatic. Stress sits at just 23/100 and risk appetite reads 68/100, suggesting the fear has drained from the system structurally even as the S&P remains near 52-week lows. The paradox here is intentional: sentiment (Fear & Greed at 0 — extreme fear) is maximally bearish while price action is constructively bullish for 2 consecutive up days, with the 5-day return +1.07% and 20-day return +3.79%. This divergence between survey sentiment and actual price behavior is one of the most reliable contrarian setups in markets. Futures are adding +0.82% this morning, Russell is leading by a full 103bps over large caps, and VIX has dropped to 21.9 (-2.58%) and is in contango — meaning the market is pricing in declining volatility ahead. Regime rules apply a -8 penalty to short conviction today. Do NOT fade this bounce.",
+            "importance": "high"
+          },
+          {
+            "title": "🔄 Sector Rotation & Relative Strength",
+            "content": "The sector leaderboard tells a crisp cyclical rotation story. Industrials (XLI +1.38%), Materials (XLB +1.33%), and Energy (XLE +1.32%) lead — these are the 'real economy' sectors that outperform when growth expectations are recovering. Discretionary (XLY +1.18%) and Tech (XLK +0.95%) follow, confirming risk appetite. Semis (SMH +0.88%) and Financials (XLF +0.83%) provide broad cyclical confirmation. On the losing side, the defensive complex is being systematically sold: Healthcare (XLV -0.90%), Utilities (XLU -0.80%), and Real Estate (XLRE -0.48%) all declined. Staples (XLP -0.12%) barely held flat. This is textbook cyclical rotation OUT of safety and INTO growth/risk — exactly what regime rules suggest overweighting: Tech and Discretionary remain the regime's preferred tilts. Notably, over the 5-day window, value is leading growth by 133bps (Russell outperforming Nasdaq), suggesting the rotation has a value/cyclical flavor, not just momentum-chasing.",
+            "importance": "high"
+          },
+          {
+            "title": "📈 Yield Curve & Rate Signals",
+            "content": "The 10-year yield pushed to 4.37% (+2.29%), a notable move that warrants attention. The 2-10 spread is +31bps and the 3M-10Y spread is +15bps — the curve is positively sloped and steepening at the long end, which historically signals improving growth expectations (bear steepening driven by optimism, not inflation panic). This yield move is consistent with the risk-on tone: money rotating from safe havens (bonds, utilities) into equities and commodities. The critical question is whether 4.37% on the 10Y is a headwind for equities or simply a normalization. At this level, it's likely the latter — equities appear comfortable absorbing higher yields when the growth narrative improves. Watch 4.50% as the threshold where rate pressure could reassert itself on P/E multiples, particularly in rate-sensitive sectors (XLRE, XLU already showing stress).",
+            "importance": "high"
+          },
+          {
+            "title": "💱 Currency & Commodity Flows",
+            "content": "The Dollar (DXY 100.34, -0.30%) remains in a soft declining trend, which is broadly constructive for risk assets, commodities, and international equities. EUR/USD at 1.12 reflects dollar weakness. The standout is USD/JPY +1.51% to 146.01 — yen weakening sharply, which historically correlates with carry-trade expansion and risk appetite (when JPY weakens, risk is ON). Commodities are confirming the reflation trade: Oil WTI +1.85% to $61.02 (supporting XLE leadership), Gold +1.18% to $3,335 (interesting — gold rising alongside risk assets suggests either residual safe-haven demand or dollar-weakness buying), and Copper +1.1% (the ultimate 'Dr. Copper' growth signal). International markets are broadly constructive: Nikkei +1.56% (yen weakness boost), DAX +0.63%, FTSE +0.27%, Hang Seng +0.40% — with only Shanghai (-0.30%) as the outlier. Crypto is mixed: Bitcoin -0.26% underperforming while Ethereum +6.30% surges, possibly on protocol-specific catalysts.",
+            "importance": "medium"
+          },
+          {
+            "title": "⚠️ Risk Factors & Contradictions",
+            "content": "Three contradictions demand respect: (1) S&P near 52-week lows — this rally is occurring from a deeply depressed base, meaning it could be a dead-cat bounce or genuine bottoming. The 59% regime confidence reflects this uncertainty. (2) Breadth is extremely weak — 0% of stocks above the 200 DMA. This is not a healthy, broad-based rally; it's a narrow lift. Sustainable recoveries need breadth to expand. (3) Fear & Greed at 0 (extreme fear) versus price action turning bullish — while this is a contrarian positive, it also means retail capitulation may not be complete, and any negative catalyst could re-trigger selling. Additional watch items: 10Y at 4.37% approaching potential resistance zones; oil recovery at $61 remains fragile given demand uncertainty; and the VIX at 21.9, while falling, is still elevated above the 'calm' threshold of ~17, meaning hedges remain expensive.",
+            "importance": "high"
+          }
+        ],
+        "scenarios": [
+          {
+            "event": "Continuation of Cyclical Bounce — Russell/Industrials Lead",
+            "scenarios": [
+              {
+                "condition": "If futures hold +0.82% gains at open and Russell continues to lead large caps",
+                "implication": "Cyclical rotation deepens; breadth expands as more stocks reclaim near-term levels; VIX breaks below 20, triggering systematic buying from vol-targeting funds",
+                "trade": "Consider long XLI (Industrials ETF) or XLB (Materials) as the regime's highest-conviction cyclical plays. Alternatively, IWM (Russell 2000 ETF) captures the small-cap leadership. Regime penalizes shorts by -8 — avoid fading this move. Scale targets at 1.0x normal distance."
+              },
+              {
+                "condition": "If breadth expands and % of stocks above 50 DMA starts recovering",
+                "implication": "Confirms this is a genuine recovery, not a narrow-cap-weighted distortion; increases probability of regime upgrading to higher conviction",
+                "trade": "Add to Tech (XLK) and Discretionary (XLY) per regime overweight tilts; reduce any remaining defensive hedges in Utilities (XLU) or Healthcare (XLV)"
+              }
+            ]
+          },
+          {
+            "event": "10Y Yield Spike Above 4.50% — Rate Pressure Re-emerges",
+            "scenarios": [
+              {
+                "condition": "If 10Y yield breaks above 4.50% on stronger-than-expected economic data or hawkish Fed commentary",
+                "implication": "Rate-sensitive sectors (Real Estate, Utilities) sell off further; growth/tech multiples compress; dollar potentially reverses higher, pressuring commodities and international equities",
+                "trade": "Reduce XLRE and XLU exposure immediately. Watch XLK for potential weakness — if NDX underperforms IWM on a yield spike, rotate from growth toward value/energy (XLE benefits from oil strength regardless). Consider TBT (2x short 20Y Treasury) as a rate hedge."
+              },
+              {
+                "condition": "If yield spike coincides with gold holding above $3,300",
+                "implication": "Stagflation narrative resurfaces — rising rates AND precious metals bid signals inflation fear, not growth optimism; regime confidence could deteriorate",
+                "trade": "GLD/gold miners (GDX) become tactical longs as stagflation hedge; reduce cyclical exposure partially; monitor regime confidence for potential downgrade from Risk-On"
+              }
+            ]
+          },
+          {
+            "event": "Sentiment Capitulation Completing — Extreme Fear Reversal",
+            "scenarios": [
+              {
+                "condition": "If Fear & Greed index begins moving off the 0 floor over coming sessions (even to 10-15) as price action improves",
+                "implication": "Classic contrarian inflection: the most powerful rallies begin when everyone is maximally bearish. Retail short-covering and institutional re-risking can create explosive upside from deeply oversold levels near 52-week lows",
+                "trade": "This is the highest-conviction macro setup in the data. Consider a staged long entry in QQQ or SPY with wider stops to accommodate volatility (VIX 21.9 means 1.4% daily moves are 'normal'). Russell (IWM) offers the best risk/reward given small-cap underperformance over prior weeks and today's +1.85% leadership signal. Target the 20-day return trend (+3.79%) as confirmation of momentum."
+              },
+              {
+                "condition": "If breadth fails to expand and the rally remains narrow (0% above 200 DMA persists for another week)",
+                "implication": "Bounce exhausts without institutional participation; large-cap indices fade back toward lows; regime confidence erodes below 50%, potentially flipping neutral",
+                "trade": "Tighten stops on all cyclical longs. Avoid adding new positions until breadth confirms. Monitor AAII sentiment and put/call ratios for secondary confirming signals before increasing equity exposure."
+              }
+            ]
+          }
+        ]
+      },
+      "recommendations": [
+        {
+          "symbol": "IWM",
+          "direction": "long",
+          "entryPrice": 196,
+          "targetPrice": 204,
+          "stopLoss": 191.5,
+          "thesis": "Day 3 of a cyclical recovery bounce with the Russell 2000 explicitly leading the S&P by 100+ basis points per the regime assessment. IWM is the highest-beta pure expression of the Risk-On fear-bottom setup. The US-UK trade deal adds a macro risk-on impulse while the Fed hold eliminates near-term shock risk. Small caps benefit disproportionately from trade de-escalation sentiment as they carry heavier domestic tariff exposure.",
+          "catalyst": "Day 3 cyclical bounce + US-UK trade deal pre-market + Fed hold (removes tail risk) + Russell 2000 regime leadership confirmed. Futures +0.82%, Russell leading S&P by 1.03pp per regime data.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 78,
+              "reasoning": "Multiple stacked catalysts — trade deal, Fed clarity, day 3 bounce — rather than one singular event. Each is confirmed; the combination is clear and mutually reinforcing. Slightly lower than single-catalyst plays due to complexity."
+            },
+            "technicalSetup": {
+              "score": 75,
+              "reasoning": "Day 3 of a bounce from fear-bottom lows with Russell explicitly leading. Momentum is constructive. Risk is that 3-day bounces can exhaust, but small cap leadership is a positive structural signal for continuation."
+            },
+            "riskReward": {
+              "score": 78,
+              "reasoning": "Entry ~$196, target $204 (+4.1%), stop $191.50 (-2.3%) = 1.78:1 R/R. ETF diversification reduces single-stock idiosyncratic risk significantly, effectively improving risk-adjusted return."
+            },
+            "volumeLiquidity": {
+              "score": 95,
+              "reasoning": "IWM is one of the most liquid ETFs in existence with average daily volume exceeding $4-5B. Zero liquidity concern at any position size."
+            },
+            "marketAlignment": {
+              "score": 92,
+              "reasoning": "Near-perfect regime alignment. Regime assessment explicitly states Russell leading by 1.03pp, cyclicals outperforming defensives, and overweights consumer discretionary. IWM captures the exact Risk-On flavor described."
+            },
+            "informationEdge": {
+              "score": 68,
+              "reasoning": "The macro setup is widely known and discussed. Edge comes from regime model systematically identifying this as the right vehicle, not from informational asymmetry. Lower information edge, higher structural edge."
+            },
+            "timingUrgency": {
+              "score": 80,
+              "reasoning": "Day 3 of a cyclical bounce is historically the optimal window before mean reversion risk increases. US-UK deal adds urgency — this catalyst is fresh today and will drive initial positioning flows."
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "IWM",
+          "openPrice": 199.77,
+          "highPrice": 209.73,
+          "lowPrice": 198.26,
+          "closePrice": 207.87,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 6.06,
+          "notes": "3-day window (2025-05-08, 2025-05-09, 2025-05-12). Open $199.77, High $209.73, Low $198.26, Close $207.87."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 100,
+        "targetHitRate": 100,
+        "stopHitRate": 0,
+        "avgReturnPercent": 6.06,
+        "profitFactor": 10,
+        "winRate": 100,
+        "totalScore": 100
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 78,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 75,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "riskReward": {
+          "avgScoreWinners": 78,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 95,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 92,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "informationEdge": {
+          "avgScoreWinners": 68,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 80,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.2,
+        "technicalSetup": 0.15,
+        "riskReward": 0.15,
+        "volumeLiquidity": 0.1,
+        "marketAlignment": 0.15,
+        "informationEdge": 0.15,
+        "timingUrgency": 0.1
+      },
+      "totalTokensUsed": 29588
+    }
+  ],
+  "bestScore": 100,
+  "bestWeights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
+  },
+  "startedAt": "2026-04-05T00:00:00.000Z",
+  "lastUpdatedAt": "2026-04-05T18:25:32.475Z",
+  "totalTokensUsed": 29588,
+  "weightHistory": []
+}
