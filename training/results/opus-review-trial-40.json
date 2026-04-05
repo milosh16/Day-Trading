@@ -1,0 +1,174 @@
+{
+  "trial": 40,
+  "reviewedAt": "2026-04-05T23:21:50.760Z",
+  "tokensUsed": 6080,
+  "insights": "The most critical problem with this algorithm is not signal quality — it's that the algorithm is effectively broken as a trading system. Out of 40 trials, only 5 produced trades (12.5%), and the last 10 trials produced ZERO trades. This means the threshold/conviction machinery is systematically filtering out every opportunity. The algorithm has become an expensive market commentary generator, not a trading system. A 60% win rate and 6.0 profit factor on 5 trades over 40 trials is statistically meaningless — you cannot draw any conclusions about edge from 5 observations. The 87.5% uniform predictive power across all dimensions (on 4 samples) confirms the sample is too small to differentiate signal from noise.\n\nThe regime classifier is producing low-confidence, ambiguous labels that appear to paralyze the recommendation engine. Trials 32-34, 36-37 were all classified as 'rotation' with confidence between 40-51% — this is essentially a coin flip that says 'I don't know.' Trials 38-40 were 'range-bound' at 36-39% confidence. When the classifier is uncertain, the downstream recommendation engine defaults to no-trade, which explains the 87.5% no-trade rate. The one time the classifier had high confidence (Trial 35, crisis at 90%), the system STILL produced no trades — this is particularly damning because crisis regimes offer some of the highest-conviction setups (VIX spikes, flight-to-quality, mean reversion). The classifier needs a complete overhaul: fewer regime buckets, forced binary risk-on/risk-off with a neutral zone, and the recommendation engine must have regime-specific playbooks that generate trades even in uncertain environments.\n\nLooking at the 5 trades that were taken, there's an interesting pattern: the three winners (IWM long, PLTR short, PNC long) were all single-name or ETF trades with clear catalysts — IWM on a risk-on day, PLTR short likely around earnings/valuation, PNC long likely on financials strength. The two losers (DBRG long, BRK.B short) share a common trait: they were lower-liquidity or counter-trend trades. DBRG is a small-cap REIT with thin volume; shorting BRK.B is inherently fighting a secular uptrend in the most famously mean-reverting stock in the market. This suggests the algorithm's few trades are split between high-conviction winners and low-conviction losers, and the conviction scoring isn't differentiating them well enough.\n\nThe weight evolution tells a concerning story of overfitting to individual trial results. Weights swing dramatically between trials (e.g., technicalSetup goes from 14.8% to 18.4% to 12.6%) based on single-trade outcomes. With only 5 trades, every weight update is essentially noise-fitting. The current heavy weighting on marketAlignment (19.8%) and catalystClarity (18.4%) while volumeLiquidity sits at only 9.8% is backwards given the evidence: the DBRG loss was likely a liquidity trap, and BRK.B short was a market-misalignment trade. Volume/liquidity should be weighted higher as a gatekeeper dimension.\n\nThe last 10 trials reveal specific missed opportunities. Trial 35 (2024-09-05) was classified as crisis with 90% confidence and VIX surging 12.46% — this screams for VIX calls, TLT longs, or defensive sector longs (XLU, XLP). Trial 40 (2024-09-18) was the September 2024 FOMC day where the Fed cut 50bps — one of the most tradeable events of the year, and the algorithm sat on its hands with a 'range-bound' classification. Trial 32 (2025-07-23) had appetite at 61 with bullish briefing and the algorithm found nothing to buy. The system is catastrophically over-cautious.",
+  "weightAdjustments": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.12,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.15,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.13,
+    "timingUrgency": 0.1
+  },
+  "thresholdRecommendation": 58,
+  "strategyChanges": [
+    "CRITICAL: Lower composite threshold from current effective level (~75+) to 58 to force trade generation. The algorithm cannot learn or generate returns with an 87.5% no-trade rate. Target 40-60% trade days minimum.",
+    "Replace 5-regime classifier (risk-on, risk-off, rotation, range-bound, crisis) with 3-regime system: RISK-ON (appetite > 55, stress < 20), RISK-OFF (appetite < 35 OR stress > 30), NEUTRAL (everything else). Current 'rotation' and 'range-bound' labels are paralyzing the system.",
+    "Implement regime-specific playbook mandates: RISK-ON must generate 1-3 long candidates in momentum leaders; RISK-OFF must generate 1-2 short candidates or defensive longs (TLT, XLU, GLD); NEUTRAL must generate 1 mean-reversion or pairs trade. No regime returns zero candidates.",
+    "Add a FOMC/macro-event override: when a major scheduled catalyst (FOMC, NFP, CPI) is within 24 hours, the system must generate event-specific directional or straddle-equivalent trades regardless of regime confidence.",
+    "Implement minimum 2-trade-per-week floor: if the algorithm has gone 5+ consecutive no-trade days, lower threshold by 5 points per additional no-trade day until at least one trade is generated. The current system is learning nothing from 35 blank days.",
+    "Boost volumeLiquidity weight from 9.8% to 15% and add hard filter: no trades in stocks with < $50M average daily dollar volume. The DBRG loss likely stemmed from thin liquidity.",
+    "Stop updating weights after single-trade trials. Require minimum 10 graded trades before any weight adjustment to prevent overfitting to noise."
+  ],
+  "blindSpots": [
+    "FOMC and scheduled macro events: Trial 40 was literally Fed day (Sep 18, 2024, the 50bp cut) and the system generated nothing. This is the highest signal-to-noise trading day of the quarter.",
+    "VIX spike mean-reversion: Trial 35 had VIX surging 12.46% with crisis classification at 90% confidence — classic setup for VIX put spreads or SPY call spreads 2-5 days out, but the system found no trade.",
+    "Momentum continuation in bullish regimes: Trial 32 had 3 consecutive up days, appetite at 61, bullish briefing — textbook momentum continuation setup in QQQ/SMH/XLK, completely ignored.",
+    "Sector rotation signals: Multiple 'rotation' regime days (Trials 32-34, 36-37) but no attempt to identify WHICH sectors are rotating INTO vs OUT OF. Rotation is a trade, not a reason to sit out.",
+    "The algorithm appears to have no earnings calendar integration — several of these dates likely had major earnings movers that were completely invisible to the system.",
+    "Weekend/Monday effects and options expiration cycles (Trial 31 was a Friday, Trial 37 was a Monday) are not being factored into timing or setup quality."
+  ],
+  "pipelineIssues": [
+    "PIPELINE BREAK: Regime classifier → Recommendation engine handoff is broken. Low-confidence regimes produce zero recommendations 100% of the time. The recommendation engine treats classifier uncertainty as 'do nothing' rather than 'find the highest-conviction idiosyncratic setup regardless of macro.'",
+    "Briefing quality is disconnected from trade generation: briefings correctly identify bullish/bearish/volatile conditions (Trial 32 bullish, Trial 35 crisis-volatile) but the recommendation engine ignores these directional signals entirely.",
+    "Regime confidence calibration is poor: 'rotation' at 40-51% confidence is the classifier's way of saying 'I have no idea' — this label should be abolished or the system should have a fallback strategy for low-confidence regimes.",
+    "No feedback loop exists: with 35 no-trade days, the system cannot learn what it SHOULD have traded. Need shadow/paper trades on no-trade days scored against actual market moves to build training signal.",
+    "Weight evolution is pure noise-fitting: updating 7 weights based on 1 trade outcome creates massive variance. The weights have oscillated meaninglessly across 40 trials. Freeze weights until 30+ graded trades exist.",
+    "Score averaging is misleading: 35 trials scored at 50 (no-trade default) and 5 real trials are being averaged together, producing a meaningless 70.0 average. No-trade days should score 0 or be excluded from averages."
+  ],
+  "revisedRecommendations": {
+    "31": [
+      {
+        "symbol": "TLT",
+        "direction": "long",
+        "reasoning": "Risk-off regime at 62% confidence with stress=30. Flight-to-quality trade in long-duration Treasuries is textbook risk-off playbook. Friday positioning into weekend risk amplifies the case."
+      },
+      {
+        "symbol": "XLU",
+        "direction": "long",
+        "reasoning": "Defensive sector rotation into utilities during confirmed risk-off. Low beta, dividend support, historically outperforms on risk-off Fridays."
+      }
+    ],
+    "32": [
+      {
+        "symbol": "QQQ",
+        "direction": "long",
+        "reasoning": "Three consecutive up days with appetite at 61 and bullish briefing. Momentum continuation in large-cap tech/growth. Russell 2000 lagging suggests staying in mega-cap quality momentum."
+      },
+      {
+        "symbol": "SMH",
+        "direction": "long",
+        "reasoning": "Rotation into semis during bullish momentum regime. If S&P is up 0.78%, semis likely leading. High-beta momentum play aligned with bullish briefing."
+      }
+    ],
+    "33": [
+      {
+        "symbol": "XLK",
+        "direction": "long",
+        "reasoning": "Briefing notes large-cap growth and semis in rotation — follow the rotation. Low stress (11), moderate appetite (56). Friday before likely low-volume week suggests positioning in quality growth."
+      },
+      {
+        "symbol": "NVDA",
+        "direction": "long",
+        "reasoning": "If semis are rotating in per briefing, NVDA is the highest-liquidity semiconductor play. December seasonality favors tech. Low stress environment reduces downside risk."
+      }
+    ],
+    "34": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Large-caps grinding higher per briefing (+0.4% S&P). Mid-October 2024 was pre-election rally period. Low stress (17), positive appetite (53). Simple trend-following in the liquid index."
+      },
+      {
+        "symbol": "IWM",
+        "direction": "short",
+        "reasoning": "Briefing explicitly notes small-caps lagging while large-caps grind higher. Pairs-style relative value: long SPY / short IWM captures the divergence."
+      }
+    ],
+    "35": [
+      {
+        "symbol": "VXX",
+        "direction": "long",
+        "reasoning": "90% crisis confidence, VIX surging 12.46%. Short-term VIX long for crisis continuation. This is the highest-confidence regime call in the entire dataset and generated zero trades — inexcusable."
+      },
+      {
+        "symbol": "TLT",
+        "direction": "long",
+        "reasoning": "Crisis regime flight-to-quality. September 2024 was pre-Fed cut period — bonds were rallying on rate cut expectations amplified by equity stress."
+      },
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Contrarian mean-reversion: after VIX spikes >12% in a single day, SPY has positive expected returns over next 3-5 sessions historically. Scale into long with tight stop."
+      }
+    ],
+    "36": [
+      {
+        "symbol": "XLP",
+        "direction": "long",
+        "reasoning": "Bearish rotation regime with stress=27. Defensive sector rotation into consumer staples. Four consecutive down days in S&P per briefing creates mean-reversion setup in defensive names."
+      },
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Four consecutive down sessions creates mean-reversion opportunity. November 2025, likely post-earnings season. Contrarian long with tight stop at recent lows."
+      }
+    ],
+    "37": [
+      {
+        "symbol": "QQQ",
+        "direction": "long",
+        "reasoning": "Appetite at 61, broad risk-on price action per briefing. Monday open in rotation regime — follow the money flow into risk assets. Volatility label suggests sizing down but still participating."
+      },
+      {
+        "symbol": "XLF",
+        "direction": "long",
+        "reasoning": "October 2025 rotation with risk-on appetite. Financials often lead in rotation regimes as yield curve and economic expectations shift. Monday positioning for the week."
+      }
+    ],
+    "38": [
+      {
+        "symbol": "GLD",
+        "direction": "long",
+        "reasoning": "Range-bound contradictory environment per briefing. Gold thrives in uncertainty and range-bound equity markets. Appetite at 51 is neutral — gold is the neutral-regime trade."
+      },
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "August 26, 2025 — late summer, likely low volume. Slight positive appetite (51). Mean-reversion in range-bound regime: buy near range support, sell near range resistance. Tight stops."
+      }
+    ],
+    "39": [
+      {
+        "symbol": "XLK",
+        "direction": "long",
+        "reasoning": "December 9, range-bound with slight positive appetite (52). December seasonality strongly favors equities (Santa Claus rally setup). Low stress (12) means limited downside. Tech tends to lead December rallies."
+      },
+      {
+        "symbol": "AAPL",
+        "direction": "long",
+        "reasoning": "December seasonality + range-bound with positive lean. AAPL is highest-liquidity single stock, benefits from holiday consumer sentiment and tax-loss selling reversal flows."
+      }
+    ],
+    "40": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "THIS IS FOMC DAY SEPTEMBER 18, 2024 — THE FED CUT 50BPS. The algorithm classified this as range-bound at 39% confidence, completely missing the most important macro catalyst of Q3 2024. Post-cut, SPY rallied. Long SPY into/through the announcement was the obvious trade."
+      },
+      {
+        "symbol": "TLT",
+        "direction": "long",
+        "reasoning": "Pre-FOMC with market pricing in a cut. Bonds rally on dovish Fed. Even if the cut was priced in, the 50bp surprise vs 25bp expected created further upside. The briefing IDENTIFIED this as pre-FOMC and still generated nothing."
+      },
+      {
+        "symbol": "XLF",
+        "direction": "long",
+        "reasoning": "Rate cuts benefit financials through steepened yield curve expectations and improved credit conditions. High-conviction FOMC day trade in liquid sector ETF."
+      }
+    ]
+  },
+  "rawResponse": "\n\n<json>\n{\n  \"insights\": \"The most critical problem with this algorithm is not signal quality — it's that the algorithm is effectively broken as a trading system. Out of 40 trials, only 5 produced trades (12.5%), and the last 10 trials produced ZERO trades. This means the threshold/conviction machinery is systematically filtering out every opportunity. The algorithm has become an expensive market commentary generator, not a trading system. A 60% win rate and 6.0 profit factor on 5 trades over 40 trials is statistically meaningless — you cannot draw any conclusions about edge from 5 observations. The 87.5% uniform predictive power across all dimensions (on 4 samples) confirms the sample is too small to differentiate signal from noise.\\n\\nThe regime classifier is producing low-confidence, ambiguous labels that appear to paralyze the recommendation engine. Trials 32-34, 36-37 were all classified as 'rotation' with confidence between 40-51% — this is essentially a coin flip that says 'I don't know.' Trials 38-40 were 'range-bound' at 36-39% confidence. When the classifier is uncertain, the downstream recommendation engine defaults to no-trade, which explains the 87.5% no-trade rate. The one time the classifier had high confidence (Trial 35, crisis at 90%), the system STILL produced no trades — this is particularly damning because crisis regimes offer some of the highest-conviction setups (VIX spikes, flight-to-quality, mean reversion). The classifier needs a complete overhaul: fewer regime buckets, forced binary risk-on/risk-off with a neutral zone, and the recommendation engine must have regime-specific playbooks that generate trades even in uncertain environments.\\n\\nLooking at the 5 trades that were taken, there's an interesting pattern: the three winners (IWM long, PLTR short, PNC long) were all single-name or ETF trades with clear catalysts — IWM on a risk-on day, PLTR short likely around earnings/valuation, PNC long likely on financials strength. The two losers (DBRG long, BRK.B short) share a common trait: they were lower-liquidity or counter-trend trades. DBRG is a small-cap REIT with thin volume; shorting BRK.B is inherently fighting a secular uptrend in the most famously mean-reverting stock in the market. This suggests the algorithm's few trades are split between high-conviction winners and low-conviction losers, and the conviction scoring isn't differentiating them well enough.\\n\\nThe weight evolution tells a concerning story of overfitting to individual trial results. Weights swing dramatically between trials (e.g., technicalSetup goes from 14.8% to 18.4% to 12.6%) based on single-trade outcomes. With only 5 trades, every weight update is essentially noise-fitting. The current heavy weighting on marketAlignment (19.8%) and catalystClarity (18.4%) while volumeLiquidity sits at only 9.8% is backwards given the evidence: the DBRG loss was likely a liquidity trap, and BRK.B short was a market-misalignment trade. Volume/liquidity should be weighted higher as a gatekeeper dimension.\\n\\nThe last 10 trials reveal specific missed opportunities. Trial 35 (2024-09-05) was classified as crisis with 90% confidence and VIX surging 12.46% — this screams for VIX calls, TLT longs, or defensive sector longs (XLU, XLP). Trial 40 (2024-09-18) was the September 2024 FOMC day where the Fed cut 50bps — one of the most tradeable events of the year, and the algorithm sat on its hands with a 'range-bound' classification. Trial 32 (2025-07-23) had appetite at 61 with bullish briefing and the algorithm found nothing to buy. The system is catastrophically over-cautious.\",\n  \"weightAdjustments\": {\n    \"catalystClarity\": 0.20,\n    \"technicalSetup\": 0.12,\n    \"riskReward\": 0.15,\n    \"volumeLiquidity\": 0.15,\n    \"marketAlignment\": 0.15,\n    \"informationEdge\": 0.13,\n    \"timingUrgency\": 0.10\n  },\n  \"thresholdRecommendation\": 58,\n  \"strategyChanges\": [\n    \"CRITICAL: Lower composite threshold from current effective level (~75+) to 58 to force trade generation. The algorithm cannot learn or generate returns with an 87.5% no-trade rate. Target 40-60% trade days minimum.\",\n    \"Replace 5-regime classifier (risk-on, risk-off, rotation, range-bound, crisis) with 3-regime system: RISK-ON (appetite > 55, stress < 20), RISK-OFF (appetite < 35 OR stress > 30), NEUTRAL (everything else). Current 'rotation' and 'range-bound' labels are paralyzing the system.\",\n    \"Implement regime-specific playbook mandates: RISK-ON must generate 1-3 long candidates in momentum leaders; RISK-OFF must generate 1-2 short candidates or defensive longs (TLT, XLU, GLD); NEUTRAL must generate 1 mean-reversion or pairs trade. No regime returns zero candidates.\",\n    \"Add a FOMC/macro-event override: when a major scheduled catalyst (FOMC, NFP, CPI) is within 24 hours, the system must generate event-specific directional or straddle-equivalent trades regardless of regime confidence.\",\n    \"Implement minimum 2-trade-per-week floor: if the algorithm has gone 5+ consecutive no-trade days, lower threshold by 5 points per additional no-trade day until at least one trade is generated. The current system is learning nothing from 35 blank days.\",\n    \"Boost volumeLiquidity weight from 9.8% to 15% and add hard filter: no trades in stocks with < $50M average daily dollar volume. The DBRG loss likely stemmed from thin liquidity.\",\n    \"Stop updating weights after single-trade trials. Require minimum 10 graded trades before any weight adjustment to prevent overfitting to noise.\"\n  ],\n  \"blindSpots\": [\n    \"FOMC and scheduled macro events: Trial 40 was literally Fed day (Sep 18, 2024, the 50bp cut) and the system generated nothing. This is the highest signal-to-noise trading day of the quarter.\",\n    \"VIX spike mean-reversion: Trial 35 had VIX surging 12.46% with crisis classification at 90% confidence — classic setup for VIX put spreads or SPY call spreads 2-5 days out, but the system found no trade.\",\n    \"Momentum continuation in bullish regimes: Trial 32 had 3 consecutive up days, appetite at 61, bullish briefing — textbook momentum continuation setup in QQQ/SMH/XLK, completely ignored.\",\n    \"Sector rotation signals: Multiple 'rotation' regime days (Trials 32-34, 36-37) but no attempt to identify WHICH sectors are rotating INTO vs OUT OF. Rotation is a trade, not a reason to sit out.\",\n    \"The algorithm appears to have no earnings calendar integration — several of these dates likely had major earnings movers that were completely invisible to the system.\",\n    \"Weekend/Monday effects and options expiration cycles (Trial 31 was a Friday, Trial 37 was a Monday) are not being factored into timing or setup quality.\"\n  ],\n  \"pipelineIssues\": [\n    \"PIPELINE BREAK: Regime classifier → Recommendation engine handoff is broken. Low-confidence regimes produce zero recommendations 100% of the time. The recommendation engine treats classifier uncertainty as 'do nothing' rather than 'find the highest-conviction idiosyncratic setup regardless of macro.'\",\n    \"Briefing quality is disconnected from trade generation: briefings correctly identify bullish/bearish/volatile conditions (Trial 32 bullish, Trial 35 crisis-volatile) but the recommendation engine ignores these directional signals entirely.\",\n    \"Regime confidence calibration is poor: 'rotation' at 40-51% confidence is the classifier's way of saying 'I have no idea' — this label should be abolished or the system should have a fallback strategy for low-confidence regimes.\",\n    \"No feedback loop exists: with 35 no-trade days, the system cannot learn what it SHOULD have traded. Need shadow/paper trades on no-trade days scored against actual market moves to build training signal.\",\n    \"Weight evolution is pure noise-fitting: updating 7 weights based on 1 trade outcome creates massive variance. The weights have oscillated meaninglessly across 40 trials. Freeze weights until 30+ graded trades exist.\",\n    \"Score averaging is misleading: 35 trials scored at 50 (no-trade default) and 5 real trials are being averaged together, producing a meaningless 70.0 average. No-trade days should score 0 or be excluded from averages.\"\n  ],\n  \"revisedRecommendations\": {\n    \"31\": [\n      {\"symbol\": \"TLT\", \"direction\": \"long\", \"reasoning\": \"Risk-off regime at 62% confidence with stress=30. Flight-to-quality trade in long-duration Treasuries is textbook risk-off playbook. Friday positioning into weekend risk amplifies the case.\"},\n      {\"symbol\": \"XLU\", \"direction\": \"long\", \"reasoning\": \"Defensive sector rotation into utilities during confirmed risk-off. Low beta, dividend support, historically outperforms on risk-off Fridays.\"}\n    ],\n    \"32\": [\n      {\"symbol\": \"QQQ\", \"direction\": \"long\", \"reasoning\": \"Three consecutive up days with appetite at 61 and bullish briefing. Momentum continuation in large-cap tech/growth. Russell 2000 lagging suggests staying in mega-cap quality momentum.\"},\n      {\"symbol\": \"SMH\", \"direction\": \"long\", \"reasoning\": \"Rotation into semis during bullish momentum regime. If S&P is up 0.78%, semis likely leading. High-beta momentum play aligned with bullish briefing.\"}\n    ],\n    \"33\": [\n      {\"symbol\": \"XLK\", \"direction\": \"long\", \"reasoning\": \"Briefing notes large-cap growth and semis in rotation — follow the rotation. Low stress (11), moderate appetite (56). Friday before likely low-volume week suggests positioning in quality growth.\"},\n      {\"symbol\": \"NVDA\", \"direction\": \"long\", \"reasoning\": \"If semis are rotating in per briefing, NVDA is the highest-liquidity semiconductor play. December seasonality favors tech. Low stress environment reduces downside risk.\"}\n    ],\n    \"34\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Large-caps grinding higher per briefing (+0.4% S&P). Mid-October 2024 was pre-election rally period. Low stress (17), positive appetite (53). Simple trend-following in the liquid index.\"},\n      {\"symbol\": \"IWM\", \"direction\": \"short\", \"reasoning\": \"Briefing explicitly notes small-caps lagging while large-caps grind higher. Pairs-style relative value: long SPY / short IWM captures the divergence.\"}\n    ],\n    \"35\": [\n      {\"symbol\": \"VXX\", \"direction\": \"long\", \"reasoning\": \"90% crisis confidence, VIX surging 12.46%. Short-term VIX long for crisis continuation. This is the highest-confidence regime call in the entire dataset and generated zero trades — inexcusable.\"},\n      {\"symbol\": \"TLT\", \"direction\": \"long\", \"reasoning\": \"Crisis regime flight-to-quality. September 2024 was pre-Fed cut period — bonds were rallying on rate cut expectations amplified by equity stress.\"},\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Contrarian mean-reversion: after VIX spikes >12% in a single day, SPY has positive expected returns over next 3-5 sessions historically. Scale into long with tight stop.\"}\n    ],\n    \"36\": [\n      {\"symbol\": \"XLP\", \"direction\": \"long\", \"reasoning\": \"Bearish rotation regime with stress=27. Defensive sector rotation into consumer staples. Four consecutive down days in S&P per briefing creates mean-reversion setup in defensive names.\"},\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Four consecutive down sessions creates mean-reversion opportunity. November 2025, likely post-earnings season. Contrarian long with tight stop at recent lows.\"}\n    ],\n    \"37\": [\n      {\"symbol\": \"QQQ\", \"direction\": \"long\", \"reasoning\": \"Appetite at 61, broad risk-on price action per briefing. Monday open in rotation regime — follow the money flow into risk assets. Volatility label suggests sizing down but still participating.\"},\n      {\"symbol\": \"XLF\", \"direction\": \"long\", \"reasoning\": \"October 2025 rotation with risk-on appetite. Financials often lead in rotation regimes as yield curve and economic expectations shift. Monday positioning for the week.\"}\n    ],\n    \"38\": [\n      {\"symbol\": \"GLD\", \"direction\": \"long\", \"reasoning\": \"Range-bound contradictory environment per briefing. Gold thrives in uncertainty and range-bound equity markets. Appetite at 51 is neutral — gold is the neutral-regime trade.\"},\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"August 26, 2025 — late summer, likely low volume. Slight positive appetite (51). Mean-reversion in range-bound regime: buy near range support, sell near range resistance. Tight stops.\"}\n    ],\n    \"39\": [\n      {\"symbol\": \"XLK\", \"direction\": \"long\", \"reasoning\": \"December 9, range-bound with slight positive appetite (52). December seasonality strongly favors equities (Santa Claus rally setup). Low stress (12) means limited downside. Tech tends to lead December rallies.\"},\n      {\"symbol\": \"AAPL\", \"direction\": \"long\", \"reasoning\": \"December seasonality + range-bound with positive lean. AAPL is highest-liquidity single stock, benefits from holiday consumer sentiment and tax-loss selling reversal flows.\"}\n    ],\n    \"40\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"THIS IS FOMC DAY SEPTEMBER 18, 2024 — THE FED CUT 50BPS. The algorithm classified this as range-bound at 39% confidence, completely missing the most important macro catalyst of Q3 2024. Post-cut, SPY rallied. Long SPY into/through the announcement was the obvious trade.\"},\n      {\"symbol\": \"TLT\", \"direction\": \"long\", \"reasoning\": \"Pre-FOMC with market pricing in a cut. Bonds rally on dovish Fed. Even if the cut was priced in, the 50bp surprise vs 25bp expected created further upside. The briefing IDENTIFIED this as pre-FOMC and still generated nothing.\"},\n      {\"symbol\": \"XLF\", \"direction\": \"long\", \"reasoning\": \"Rate cuts benefit financials through steepened yield curve expectations and improved credit conditions. High-conviction FOMC day trade in liquid sector ETF.\"}\n    ]\n  }\n}\n</json>"
+}
