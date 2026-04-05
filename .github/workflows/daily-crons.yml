@@ -32,7 +32,7 @@ jobs:
       github.event.inputs.job == 'briefing' ||
       github.event.inputs.job == 'all'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
         with:
