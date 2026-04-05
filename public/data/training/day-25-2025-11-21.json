@@ -1,0 +1,232 @@
+{
+  "trialId": 25,
+  "date": "2025-11-21",
+  "dateDisplay": "Friday, November 21, 2025",
+  "generatedAt": "2026-04-05T21:32:15.430Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.98,
+      "nasdaqFuturesChange": 0.88,
+      "dowFuturesChange": 1.08,
+      "russellFuturesChange": 2.8,
+      "vixFuturesChange": -11.32,
+      "vix": 23.43,
+      "vixChange": -11.32,
+      "vixTermStructure": "flat",
+      "vix9d": 0,
+      "vix3m": 23.96,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.06,
+      "tenYearYieldChange": -1.05,
+      "twoYearYield": 3.66,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.72,
+      "threeMonthYield": 3.74,
+      "twoTenSpread": 0.4,
+      "threeMoTenYrSpread": 0.32,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 100.18,
+      "dollarIndexChange": 0.02,
+      "eurUsd": 1.15,
+      "eurUsdChange": -0.05,
+      "usdJpy": 157.37,
+      "usdJpyChange": 0.24,
+      "usdCny": 7.11,
+      "usdCnyChange": 0,
+      "oilWTI": 58.06,
+      "oilChange": -1.83,
+      "brentOil": 62.56,
+      "brentOilChange": -1.29,
+      "natGasChange": 2.37,
+      "goldPrice": 4076.7,
+      "goldChange": 0.5,
+      "silverChange": -0.74,
+      "copperChange": 0.99,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -2.4,
+      "daxChange": -0.8,
+      "ftseChange": 0.13,
+      "shanghaiChange": -2.45,
+      "hangSengChange": -2.38,
+      "kospiChange": -3.79,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 98.14999999999999,
+      "spreadChange": -0.34,
+      "igSpread": -21.84,
+      "igSpreadChange": -0.35,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.1,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.39,
+      "xlfChange": 1.1,
+      "xleChange": 0.63,
+      "xlvChange": 2.11,
+      "xlpChange": 1.09,
+      "xluChange": 0.15,
+      "xlreChange": 1.31,
+      "xliChange": 1.22,
+      "xlbChange": 2.24,
+      "xlcChange": 1.76,
+      "xlyChange": 1.96,
+      "smhChange": 0.32,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.52,
+      "ethereumChange": 0.07,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": -1.95,
+      "sp20DayReturn": -2.78,
+      "nasdaqVsRussell5d": -1.96,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 46,
+      "directionalBias": "16",
+      "volatilityRegime": "elevated",
+      "stressIndex": 25,
+      "riskAppetiteIndex": 53,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "Markets are staging a broad-based relief rally after recent pressure, with the Russell 2000 leading large-caps by a wide margin (+2.8% vs +0.98% S&P) and VIX collapsing 11% to 23.43 — signaling a rotation-driven bounce rather than a sustained trend reversal. The backdrop remains structurally fragile: the S&P sits near 52-week lows with only one consecutive up day, international markets are broadly red (Nikkei -2.4%, Shanghai -2.45%), and the Fear & Greed index reads at extreme fear (0), creating a volatile, whipsaw-prone environment where conviction in either direction carries meaningful risk.",
+      "marketCondition": "volatile",
+      "sections": [
+        {
+          "title": "🧭 Regime & Market Posture",
+          "content": "The current regime is classified as ROTATION with only 46% confidence — a low-conviction read that itself tells a story. We are not in a clean trending environment. The +16 directional bias and +0.93% futures print suggest modest bullish tilt overnight, but the structural weight of the data argues for caution. The S&P is near 52-week lows, breadth is technically 0% above the 200 DMA (an extreme reading), and both long and short trades carry a -3 conviction penalty today. This is a session to identify asymmetric setups, not to size aggressively. The regime rules demand scaled targets (0.9x) and warn against fighting the chop in either direction. Think of today's tape as a controlled fire — there's heat, but it can turn. The Russell leading by 1.87pp over large-caps is the single most important data point for regime interpretation: small-caps tend to lead risk-on rotations, but they also lead bear market bounces. Context matters enormously here.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "Yesterday's sector performance tells a fascinating and somewhat contradictory story. Every sector was green — a rare breadth flush — but the leadership mix is not classically risk-on. Materials (XLB +2.24%) and Healthcare (XLV +2.11%) co-leading alongside Discretionary (XLY +1.96%) and Comm Services (XLC +1.76%) creates a hybrid signal: cyclicals and defensives are rotating simultaneously, which is characteristic of a relief rally rather than a regime change. True risk-on leadership would favor Tech and Semis at the top of the leaderboard — instead, XLK gained only +0.39% and SMH +0.32%, both dead last. This tech underperformance relative to the broader move is a yellow flag. Real Estate (XLRE +1.31%) benefiting from the yield drop and Financials (XLF +1.1%) recovering suggests rate-sensitive sectors are the real driver. The 5-day Value vs. Growth divergence (Value leading by -1.96% on a relative basis) reinforces this thesis: money is rotating out of high-multiple growth into value, cyclicals, and rate-sensitives. Watch Materials and Healthcare for continuation; treat Tech and Semis rallies as distribution opportunities unless volume confirms.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10-year yield dropping to 4.06% (-1.05%) is one of the cleanest signals in today's data. A 4bp+ move lower in the 10Y on a day the equity market rallied is meaningful — it suggests safe-haven demand and/or inflation expectations softening rather than a pure risk-on equity rally. The 2-10 spread at +40bps and the 3M-10Y spread at +32bps indicate a modestly positive slope — the curve has re-steepened off inversion, which historically is a early signal of economic regime transition (note: re-steepening during stress often precedes recessions, not recoveries). The term structure is flat, meaning the bond market is not pricing aggressive Fed cuts yet, but the yield decline combined with gold's strength (+$4076, up 0.5%) tells you real rates may be declining. For equity traders: XLRE and XLF sensitivity to the 10Y move explains much of their outperformance. If yields stabilize here or drift lower, rate-sensitive sectors maintain their tailwind. A reversal back above 4.15% on the 10Y would pressure those gains quickly.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The dollar (DXY 100.18, +0.02%) is essentially flat — no directional conviction from the currency market. EUR/USD at 1.15 is elevated, reflecting relative dollar weakness over recent weeks and potential European positioning. USD/JPY at 157.37 is elevated and warrants monitoring — a sharp yen strengthening move could trigger carry unwind risk, which would hit risk assets broadly. Gold at $4,076 (+0.5%) continuing to hold near all-time highs despite an equity bounce is the most important commodity signal: gold is not selling off into the risk rally, which means institutional hedging demand remains intact. This is NOT the behavior of a market that believes the equity bounce is durable. WTI crude at $58.06 (-1.83%) is weak and declining — this is bearish for global growth expectations and pressures the Energy sector despite yesterday's modest +0.63% gain. Cheap oil + strong gold + flat dollar = a market that is hedging against a growth slowdown even as it buys the equity dip. Bitcoin's -0.52% decline while equities rallied is another subtle risk-off tell in the speculative asset space.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors",
+          "content": "The risk matrix today is asymmetrically skewed toward the downside on any negative catalyst. Key risks: (1) International contagion — Nikkei -2.4%, Shanghai -2.45%, Hang Seng -2.38%, DAX -0.8% on the same day U.S. markets rallied is a significant divergence. Asian and European weakness is not resolved; it may bleed back into U.S. futures. (2) S&P near 52-week lows with only one up day — bounces in downtrends are frequent and violent but rarely mark the bottom on the first attempt. (3) Extreme fear reading (F&G: 0) can persist or deepen; contrarian signals are valuable but the timing of mean reversion is notoriously difficult. (4) VIX at 23.43 with a flat term structure means the options market is not pricing in sustained calm — any negative headline can re-spike vol quickly. (5) 5-day return of -1.95% and 20-day of -2.78% confirm the intermediate trend is still down. One up day does not change trend; two or three consecutive higher-lows with improving breadth would be required to signal a genuine inflection.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Russell 2000 Small-Cap Rotation Continuation",
+          "scenarios": [
+            {
+              "condition": "If IWM holds yesterday's gains and pushes toward a second consecutive close above prior resistance, with breadth improving and VIX declining below 21",
+              "implication": "The rotation into value/cyclicals/small-caps has legs and represents genuine risk appetite expansion. Financials, Materials, and Discretionary would be the primary beneficiaries. Tech may lag but would participate on a rising tide.",
+              "trade": "Consider IWM or value-tilted ETFs (IWN, VBR) on morning consolidation (not the open rip). Scale targets 0.9x per regime rules. Stop below yesterday's open. Conviction penalized -3 per regime — size accordingly at 60-70% of normal position."
+            },
+            {
+              "condition": "If IWM fades the open and gives back more than 50% of yesterday's gains by midday, with VIX reclaiming 24+",
+              "implication": "Yesterday was a bear market bounce, not a rotation. The relief rally exhausted itself on one session and smart money distributed into strength. Downside pressure resumes toward prior 52-week lows.",
+              "trade": "Fade the bounce via put spreads on SPY or short IWM. Look for breakdown below intraday VWAP as trigger. Maintain tight risk given regime penalty on shorts as well."
+            }
+          ]
+        },
+        {
+          "event": "Gold vs. Equity Divergence Resolution",
+          "scenarios": [
+            {
+              "condition": "If Gold (GLD/XAUUSD) pulls back toward $4,020-4,030 support while equities continue to rally through the session",
+              "implication": "The hedging premium is being unwound and risk appetite is genuinely expanding. This would be the most bullish confirmation signal available — equities and gold moving in opposite directions would validate the equity bounce.",
+              "trade": "Reduce defensive hedges; add to cyclical sector exposure (XLB, XLY). Consider trimming GLD position or using covered calls to monetize gold's elevated level while equity beta increases."
+            },
+            {
+              "condition": "If Gold holds above $4,070 or makes new highs while equities fade during the session",
+              "implication": "The gold bid is telling the truth — institutional capital does not believe the equity bounce. Risk-off positioning remains dominant beneath the surface. Equity rally is likely to fail.",
+              "trade": "Maintain or add to GLD/gold miner (GDX) positions. Use any equity strength to reduce long exposure. The macro hedge is working and should not be abandoned into strength."
+            }
+          ]
+        },
+        {
+          "event": "International Contagion vs. U.S. Decoupling",
+          "scenarios": [
+            {
+              "condition": "If European futures open flat-to-up on Friday and Asian overnight losses do not deepen, confirming U.S. is decoupling from international weakness",
+              "implication": "The U.S. market has priced in sufficient risk premium and domestic rotation is driving flows. Dollar stability (100.18) and domestic demand support the thesis. Materials and Industrials — which benefit from global trade — may give a false signal if the rally is purely domestic.",
+              "trade": "Focus on domestically-oriented sectors: Healthcare (XLV), Financials (XLF), Real Estate (XLRE). Avoid international-revenue-heavy tech and industrials until global picture clarifies. IWM (domestic revenue focus) over SPY remains the preferred vehicle."
+            },
+            {
+              "condition": "If European markets open down 1%+ and futures deteriorate through the pre-market session toward flat or negative",
+              "implication": "U.S. cannot sustain decoupling from coordinated global selling. The S&P's proximity to 52-week lows makes a test of those lows likely, and a break lower would trigger technical selling and stop-runs.",
+              "trade": "No new long exposure until S&P holds above the prior 52-week low on an intraday basis. Use VIX calls or UVXY as portfolio insurance. If 52-week low breaks on volume, the downside target expands meaningfully — wait for capitulation volume before any mean-reversion long."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.12,
+    "technicalSetup": 0.2,
+    "riskReward": 0.18,
+    "volumeLiquidity": 0.12,
+    "marketAlignment": 0.12,
+    "informationEdge": 0.1,
+    "timingUrgency": 0.16
+  },
+  "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 25 out of 30 trials produced NO trades, and of the 5 trades taken, 2 were losers (40% loss rate on tiny sample). The algorithm is essentially broken as a trading system — it's a 'do nothing' machine with occasional random bets. The 83.3% no-trade rate means the scoring threshold and/or conviction pipeline is systematically too restrictive, filtering out actionable opportunities while occasionally letting through marginal ones like the BRK.B short on Trial 30 (shorting Berkshire in a range-bound, elevated-stress environment with only 32% regime confidence — a low-conviction bet that should never have passed filters).\n\nLooking at the last 10 trials specifically: Trials 21-29 all produced zero trades despite several presenting clear opportunities. Trial 28 (2025-03-24) was classified as risk-on with 77% confidence and appetite of 75 — the highest conviction regime signal in the entire last 10 — yet NO trade was recommended. This is the single most damning failure. A strong risk-on regime with a bullish briefing noting small-cap leadership (+2.55%) should have generated long recommendations in IWM, QQQ, or leading sector ETFs. Trial 24 (2025-11-20) was classified risk-off with 74% confidence — another high-conviction regime — yet also produced no trades. If the algorithm can't trade when it has 74-77% regime confidence, when CAN it trade? Meanwhile Trial 30, with only 32% regime confidence and a contradictory/volatile briefing, somehow generated a short on BRK.B — one of the most stable, mean-reverting names in the market — and lost.\n\nThe dimension predictive power data is effectively useless: all seven dimensions show identical 87.5/100 predictive power across only 4 samples. This means the algorithm cannot distinguish which dimensions actually matter, and the weight evolution has been drifting semi-randomly. The shift from catalystClarity-heavy (18% in Trial 10) to technicalSetup-heavy (18.4% in Trial 30) happened without meaningful signal. With only 4-5 actual trades across 30 trials, there is insufficient data to calibrate ANY dimension weights. The algorithm is optimizing weights on noise.\n\nThe regime classification appears reasonable in isolation — Trial 28's risk-on at 77% confidence and Trial 24's risk-off at 74% confidence seem well-calibrated — but the pipeline completely fails to translate regime signals into trade generation. The bottleneck is clearly in the recommendation engine: it requires ALL dimensions to score high simultaneously, which almost never happens in real markets. Real trading opportunities often have 2-3 strong conviction dimensions and acceptable (not excellent) scores on the rest. The algorithm needs a fundamental redesign of how conviction scores translate to trade decisions.\n\nTrial 30's BRK.B short exemplifies a specific failure mode: the algorithm finally generates a trade on the WORST possible setup — low regime confidence (32%), contradictory signals, and a fundamentally defensive name (Berkshire) that tends to outperform in volatile/uncertain environments. This suggests the scoring function may have an inversion problem where certain combinations of mediocre scores accidentally sum to pass threshold while genuinely strong setups get filtered. The 3 winning trades (IWM long, PLTR short, PNC long) all had clear catalysts and high regime confidence, confirming that catalystClarity and marketAlignment should be the dominant filters, not technicalSetup."
+}
