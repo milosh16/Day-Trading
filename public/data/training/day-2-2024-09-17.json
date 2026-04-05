@@ -1,0 +1,237 @@
+{
+  "trialId": 2,
+  "date": "2024-09-17",
+  "dateDisplay": "Tuesday, September 17, 2024",
+  "generatedAt": "2026-04-05T18:33:11.454Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.03,
+      "nasdaqFuturesChange": 0.2,
+      "dowFuturesChange": -0.04,
+      "russellFuturesChange": 0.75,
+      "vixFuturesChange": 3.52,
+      "vix": 18.23,
+      "vixChange": 3.52,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 20.13,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.64,
+      "tenYearYieldChange": 0.58,
+      "twoYearYield": 3.82,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.95,
+      "threeMonthYield": 4.74,
+      "twoTenSpread": -0.18,
+      "threeMoTenYrSpread": -1.1,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 100.6,
+      "dollarIndexChange": -0.29,
+      "eurUsd": 1.11,
+      "eurUsdChange": -0.06,
+      "usdJpy": 142.01,
+      "usdJpyChange": 0.87,
+      "usdCny": 7.09,
+      "usdCnyChange": 0,
+      "oilWTI": 70.91,
+      "oilChange": -0.39,
+      "brentOil": 73.65,
+      "brentOilChange": -0.07,
+      "natGasChange": -1.72,
+      "goldPrice": 2570.7,
+      "goldChange": 0.25,
+      "silverChange": -0.91,
+      "copperChange": 0.58,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.49,
+      "daxChange": -0.08,
+      "ftseChange": -0.68,
+      "shanghaiChange": 0.49,
+      "hangSengChange": 1.37,
+      "kospiChange": 0.13,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 100.75,
+      "spreadChange": -0.03,
+      "igSpread": -27.44,
+      "igSpreadChange": -0.01,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.01,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.2,
+      "xlfChange": 0.53,
+      "xleChange": 1.35,
+      "xlvChange": -1.03,
+      "xlpChange": -0.95,
+      "xluChange": -0.08,
+      "xlreChange": -0.79,
+      "xliChange": 0.55,
+      "xlbChange": 0.19,
+      "xlcChange": 0,
+      "xlyChange": 0.51,
+      "smhChange": -0.03,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 2.22,
+      "ethereumChange": 1.2,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 7,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 2.53,
+      "sp20DayReturn": 0.47,
+      "nasdaqVsRussell5d": -1.61,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 38,
+      "directionalBias": "8",
+      "volatilityRegime": "normal",
+      "stressIndex": 19,
+      "riskAppetiteIndex": 58,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "Markets are flashing a classic rotation signal heading into Tuesday — cyclicals and small caps are quietly asserting leadership while mega-cap tech and defensives fade, all ahead of Wednesday's pivotal FOMC decision. The S&P is technically extended after 7 consecutive up days near a 52-week low context (regime contradiction worth noting), VIX is nudging higher at 18.23, and the Fear & Greed index sits at extreme fear (0) — a divergence suggesting the rally is running on thin conviction. The dominant trade thesis today is sector rotation, not directional momentum.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🧭 Regime & Market Posture",
+          "content": "The regime classifier has labeled today ROTATION with only 38% confidence — that low confidence number is itself a signal. We are in a transitional, indecisive market environment where the usual playbook is unreliable. Both long and short trades carry a -3 conviction penalty, meaning the edge today lives in relative value and cross-sector trades, NOT directional bets on the index. Seven consecutive up days on the S&P creates a technical overbought condition, yet the broader context (S&P near 52-week lows, extreme fear at F&G = 0) tells a conflicting story. The most likely interpretation: this is a short-covering and positioning rally into FOMC, not a fresh bull leg. Stress is low at 19/100, risk appetite moderate at 58/100 — the market is calm but not greedy. Treat today as a reconnaissance day, not a deployment day.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation — The Core Story",
+          "content": "The sector tape is telling a clear rotation story from defensives and growth into cyclicals and value. Winners: Energy (XLE +1.35%), Industrials (XLI +0.55%), Financials (XLF +0.53%), Discretionary (XLY +0.51%). Losers: Healthcare (XLV -1.03%), Staples (XLP -0.95%), Real Estate (XLRE -0.79%), Tech (XLK -0.20%). This is textbook cyclical rotation — the kind that happens when the market begins pricing in a soft landing narrative or an imminent rate cut catalyst. Financials benefiting from a steepening yield curve expectation, Energy getting a bounce despite soft oil, Industrials/Discretionary reflecting small-cap risk-on. The Russell outperforming by 0.64pp over the S&P confirms small-cap/value leadership. Nasdaq vs. Russell 5-day spread shows value leading by -1.61pp — this is not a tech-driven market. Semis (SMH -0.03%) going essentially flat while the broader market rallied is a quiet warning: the AI/semiconductor trade is stalling ahead of the Fed.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The yield curve remains deeply inverted: 2-10 spread at -0.18, and the 3M-10Y spread at a crushing -1.10 — one of the most reliable recession warning signals in the toolkit, still flashing amber. The 10-year yield ticked up modestly to 3.64% (+0.58%), which is notable ahead of an expected Fed cut. The market may be questioning whether the Fed will deliver 25bps or 50bps tomorrow — a 25bps cut would likely push the 10Y higher (hawkish relative to expectations) while 50bps could steepen the curve aggressively. The VIX term structure in contango is constructive — no panic bid for near-term protection — but the VIX itself rising 3.52% to 18.23 while markets barely moved (+0.03% S&P) is a quiet tell that options traders are buying protection into the FOMC event. Watch for curve steepening post-FOMC as the primary macro trade.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The dollar continues its quiet deterioration — DXY at 100.6 (-0.29%), EUR/USD holding 1.11 — consistent with Fed cut expectations eroding USD carry. USD/JPY at 142.01 (+0.87%) is the regime flag here: yen weakness (or dollar strength vs. JPY specifically) is a risk-on signal that diverges from the broader dollar weakness — watch this cross carefully as BOJ policy uncertainty intersects with Fed action. Gold at $2,570.7 (+0.25%) continues its secular run, confirming real rate compression expectations and perhaps some macro uncertainty hedge. Oil at $70.91 (-0.39%) is the soft spot — energy stocks are outperforming their commodity, suggesting the XLE move is more about sector rotation/positioning than fundamental oil demand. Bitcoin +2.22% and Ethereum +1.2% suggest crypto is front-running liquidity expectations from the Fed cut — consistent with a risk-on tilt in the alternative asset space. International flows: Hang Seng +1.37% is the standout, with China-adjacent assets waking up — worth monitoring for EM rotation.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors & Red Flags",
+          "content": "1) FOMC Event Risk (Wednesday): This is the elephant in the room. The entire market is positioned around tomorrow's decision. A surprise 50bps cut could spike volatility in both directions — initially euphoric, then questioned. A 25bps cut with hawkish language could reverse the recent rally sharply. 2) Overbought Technicals: 7 consecutive up days with the S&P near a 52-week low creates a mean-reversion risk. The rally feels exhausted at the index level even as rotation continues beneath the surface. 3) Extreme Fear vs. Rally Disconnect: F&G at 0 (extreme fear) while markets rally is either a contrarian bullish signal (wall of worry) OR a sign that the rally is driven by short-covering alone and is fragile. 4) Breadth Concern: 0% of stocks above 200 DMA (as flagged in regime data) — this is a narrow, potentially misleading rally. 5) VIX Rising into a Rally: When VIX and equity prices both rise, the market is pricing uncertainty, not confidence. This setup often precedes a reversal.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "FOMC Decision Wednesday — 25bps vs 50bps Cut",
+          "scenarios": [
+            {
+              "condition": "If Fed delivers 25bps with dovish forward guidance (the base case)",
+              "implication": "Initial modest rally, curve steepens modestly, dollar softens further. Financials (XLF) and cyclicals hold gains. Tech likely underwhelms. Gold and bonds consolidate.",
+              "trade": "Hold XLF/XLI rotational exposure; consider XLK puts or underweight tech into the announcement. Gold (GLD) remains a hold above $2,550 support."
+            },
+            {
+              "condition": "If Fed delivers 50bps (surprise larger cut)",
+              "implication": "Initial risk-on surge — small caps, cyclicals, crypto spike. However, if 50bps is read as 'panic cut,' we could see a sharp reversal within hours. Yield curve steepens aggressively, dollar drops hard, yen strengthens (USD/JPY falls).",
+              "trade": "Fade the initial spike in QQQ/SPY with tight stops. Long IWM (small caps) on the dip after the knee-jerk. Long TLT for curve steepening. Short USD/JPY if yen begins to strengthen below 140."
+            },
+            {
+              "condition": "If Fed delivers 25bps with hawkish tone / higher-for-longer language",
+              "implication": "Risk-off selloff. Dollar strengthens, rates rise, defensive sectors re-bid (Utilities, Healthcare, Staples reverse). Crypto and commodities sold. Russell gives back recent outperformance.",
+              "trade": "Rotate defensively into XLU/XLV. Long VIX calls or SPY puts as a hedge. Exit energy longs as oil faces demand concerns. Watch 3,500 on S&P as next structural support."
+            }
+          ]
+        },
+        {
+          "event": "Sector Rotation — Cyclical Leadership Continuation vs. Fade",
+          "scenarios": [
+            {
+              "condition": "If cyclicals (XLE, XLI, XLF) continue to lead through the week",
+              "implication": "Soft landing narrative is being priced — economy healthy enough to sustain earnings while Fed eases. Russell vs. Nasdaq divergence widens further. Value ETFs (VTV, IWN) outperform growth.",
+              "trade": "Long IWM vs. short QQQ pairs trade. Long XLF as rate cut + soft landing combo is ideal for bank net interest margins. Target XLF 5% above current levels over 2-3 weeks with 2% stop."
+            },
+            {
+              "condition": "If defensive sectors (XLV, XLP, XLU) snap back post-FOMC selloff exhaustion",
+              "implication": "Rotation reverses — defensives were oversold (XLV -1.03%, XLP -0.95% in a single session). A mean reversion bounce is statistically likely within 3-5 sessions regardless of FOMC outcome.",
+              "trade": "Consider XLV or XLP call spreads targeting 3-5% mean reversion over 1 week. Low-risk entry given oversold conditions and historically strong dividend support."
+            }
+          ]
+        },
+        {
+          "event": "Technical Exhaustion — 7-Day Rally Breaks Down",
+          "scenarios": [
+            {
+              "condition": "If the S&P fails to make a new intraday high today and VIX continues creeping toward 20",
+              "implication": "Overbought momentum exhaustion confirms. Market likely consolidates or pulls back 1-2% before/after FOMC. Breadth (0% above 200 DMA) cannot sustain index-level moves indefinitely.",
+              "trade": "Reduce gross exposure today. Buy SPY put spreads (1-2% OTM, 2-week expiry) as FOMC hedge. Keep position sizing at 50-60% of normal given regime confidence of only 38%. Cash is a position ahead of binary event risk."
+            },
+            {
+              "condition": "If small caps (IWM) hold above recent breakout level and breadth improves",
+              "implication": "The rotation is healthy and broadening — even if large-cap S&P stalls, the underlying market is strengthening. This would be a bullish structural signal for Q4.",
+              "trade": "Add IWM on any intraday dip. Monitor XLF for confirmation — if financials hold gains through FOMC, the cyclical rotation thesis is validated. Scale into risk gradually rather than chasing the index."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
+  },
+  "opusReviewNotes": "The algorithm's most glaring problem is a 70% no-trade rate. While the 3 trades taken were all winners (100% win rate, PF=10), this is statistically meaningless — 3 trades across 10 sessions is not a trading system, it's a coincidence filter. The algorithm is massively over-filtering, likely because conviction thresholds are too high and/or the scoring function is too conservative in uncertain regimes. A day trading algorithm that sits out 7 of 10 days is leaving enormous alpha on the table and provides zero value on most sessions.\n\nTrial 9 is the most damning example: the regime was classified as risk-on with 100% confidence, stress at 13, appetite at 85, briefing was bullish describing an 'erupting decisive risk-on surge' following the 2024 election — and the algorithm recommended NO TRADES. This is a catastrophic pipeline failure. On the single highest-conviction regime day in the entire sample, the system produced nothing. This strongly suggests the filtering stage between regime/briefing and trade recommendation is disconnected from the regime classifier. Similarly, Trial 7 had a bearish briefing in a range-bound regime — a textbook environment for short setups on overextended names — yet produced nothing. Trial 4 had extreme fear (F&G: 0) with stress at 35, which historically produces violent snapback rallies or clear continuation shorts, yet again nothing.\n\nThe 'dimension predictive power' data is useless because all 7 dimensions show 100/100 across only 3 samples. This is a classic overfitting/survivorship artifact — the algorithm only took trades when ALL dimensions aligned perfectly, so of course every dimension appears perfectly predictive. There is zero variance to learn from. The system needs to take trades at LOWER conviction levels to generate the variance necessary for weight calibration. Without losers, you cannot distinguish which dimensions actually matter.\n\nThe regime classifier shows reasonable face validity: Trial 1's risk-on classification matched the cyclical recovery narrative and IWM's +6.06% gain; Trial 9's 100% confidence risk-on matched the post-election surge; Trial 4's rotation with extreme fear matched a stressed selloff environment. However, several classifications seem low-confidence and vague — Trials 3, 5, 6 all hover around 32-37% confidence with generic 'rotation' or 'range-bound' labels. When the classifier has low confidence, the trade recommender apparently shuts down entirely rather than identifying regime-appropriate strategies (mean reversion in range-bound, sector pairs in rotation). This is the core architectural flaw.\n\nThe current weight distribution is essentially flat (11.5-18%) with catalystClarity slightly overweighted. Given zero variance in outcomes, these weights have never been meaningfully tested. The system needs to differentiate between dimensions that predict DIRECTION (catalystClarity, informationEdge, marketAlignment) and dimensions that predict RISK-ADJUSTED MAGNITUDE (technicalSetup, riskReward, volumeLiquidity). TimingUrgency at 11.5% is likely underweighted for a DAY TRADING system where timing is literally the entire edge."
+}
