@@ -32,6 +32,7 @@ import { writeDiaryHeader, appendTrialEntry, appendMilestoneSummary } from "./li
 import { classifyRegime, buildRegimePrompt } from "../src/lib/market-regime.ts";
 import type { GlobalSignals, RegimeAssessment } from "../src/lib/market-regime.ts";
 import { computeStressIndex, computeRiskAppetiteIndex } from "../src/lib/leading-indicators.ts";
+import { fetchHistoricalSignals } from "./lib/yahoo-signals.ts";
 import type {
   TradeRecommendation, TrialResult, TrainingState, ConvictionWeights,
   TrainingBriefing, TrainingRegime, TrainingDayRecord,
@@ -97,8 +98,17 @@ function weightsToPrompt(weights: ConvictionWeights): string {
     .join("\n");
 }
 
-// ---- Phase 1: Signal Gathering ----
+// ---- Phase 1: Signal Gathering (Yahoo Finance — deterministic, zero tokens) ----
 async function generateSignals(
+  date: string
+): Promise<{ signals: GlobalSignals; tokensUsed: number }> {
+  const { signals, fieldsPopulated } = await fetchHistoricalSignals(date);
+  log(`  Yahoo Finance: ${fieldsPopulated} real data fields populated`);
+  return { signals, tokensUsed: 0 };
+}
+
+// Legacy web-search version (kept for reference, unused)
+async function _generateSignals_websearch(
   date: string
 ): Promise<{ signals: GlobalSignals; tokensUsed: number }> {
   const tradingDate = new Date(date + "T12:00:00Z");
@@ -177,45 +187,76 @@ async function generateBriefing(
   regimePrompt: string,
   stressIndex: number,
   riskAppetite: number,
+  signals: GlobalSignals,
 ): Promise<{ briefing: TrainingBriefing; tokensUsed: number }> {
   const dateDisplay = new Date(date + "T12:00:00Z").toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
-  const priorDate = new Date(date + "T12:00:00Z");
-  priorDate.setUTCDate(priorDate.getUTCDate() - 1);
-  while (priorDate.getUTCDay() === 0 || priorDate.getUTCDay() === 6) priorDate.setUTCDate(priorDate.getUTCDate() - 1);
-  const priorDateDisplay = priorDate.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+
+  // Build a data-driven market summary from the actual signals
+  const sectorMoves = [
+    { name: "Tech (XLK)", change: signals.xlkChange },
+    { name: "Finance (XLF)", change: signals.xlfChange },
+    { name: "Energy (XLE)", change: signals.xleChange },
+    { name: "Healthcare (XLV)", change: signals.xlvChange },
+    { name: "Staples (XLP)", change: signals.xlpChange },
+    { name: "Utilities (XLU)", change: signals.xluChange },
+    { name: "Real Estate (XLRE)", change: signals.xlreChange },
+    { name: "Industrials (XLI)", change: signals.xliChange },
+    { name: "Materials (XLB)", change: signals.xlbChange },
+    { name: "Comm Svcs (XLC)", change: signals.xlcChange },
+    { name: "Discretionary (XLY)", change: signals.xlyChange },
+    { name: "Semis (SMH)", change: signals.smhChange },
+  ].filter(s => s.change !== 0).sort((a, b) => b.change - a.change);
+
+  const winners = sectorMoves.filter(s => s.change > 0).map(s => `${s.name} +${s.change}%`).join(", ");
+  const losers = sectorMoves.filter(s => s.change < 0).map(s => `${s.name} ${s.change}%`).join(", ");
+
+  const signalsSummary = `MARKET DATA (prior close):
+VIX: ${signals.vix} (${signals.vixChange > 0 ? "+" : ""}${signals.vixChange}%) | Term structure: ${signals.vixTermStructure}
+S&P: ${signals.spFuturesChange > 0 ? "+" : ""}${signals.spFuturesChange}% | Nasdaq: ${signals.nasdaqFuturesChange > 0 ? "+" : ""}${signals.nasdaqFuturesChange}% | Russell: ${signals.russellFuturesChange > 0 ? "+" : ""}${signals.russellFuturesChange}%
+10Y: ${signals.tenYearYield}% (${signals.tenYearYieldChange > 0 ? "+" : ""}${signals.tenYearYieldChange}%) | 2-10 spread: ${signals.twoTenSpread} | 3M-10Y: ${signals.threeMoTenYrSpread}
+Dollar: ${signals.dollarIndex} (${signals.dollarIndexChange > 0 ? "+" : ""}${signals.dollarIndexChange}%) | EUR/USD: ${signals.eurUsd} | USD/JPY: ${signals.usdJpy}
+Oil WTI: $${signals.oilWTI} (${signals.oilChange > 0 ? "+" : ""}${signals.oilChange}%) | Gold: $${signals.goldPrice} (${signals.goldChange > 0 ? "+" : ""}${signals.goldChange}%)
+Bitcoin: ${signals.bitcoinChange > 0 ? "+" : ""}${signals.bitcoinChange}% | Ethereum: ${signals.ethereumChange > 0 ? "+" : ""}${signals.ethereumChange}%
+International: Nikkei ${signals.nikkeiChange}% | DAX ${signals.daxChange}% | FTSE ${signals.ftseChange}% | Shanghai ${signals.shanghaiChange}% | Hang Seng ${signals.hangSengChange}%
+S&P context: ${signals.spConsecutiveUpDays > 0 ? signals.spConsecutiveUpDays + " consecutive up days" : signals.spConsecutiveDownDays > 0 ? signals.spConsecutiveDownDays + " consecutive down days" : "mixed"} | 5d: ${signals.sp5DayReturn}% | 20d: ${signals.sp20DayReturn}%
+Sector winners: ${winners || "none"}
+Sector losers: ${losers || "none"}
+Nasdaq vs Russell 5d: ${signals.nasdaqVsRussell5d > 0 ? "Growth leading +" : "Value leading "}${signals.nasdaqVsRussell5d}%`;
 
   const response = await callClaude({
-    system: `You are SIGNAL, an AI trading intelligence system. Today is ${dateDisplay}. Generate a pre-market morning briefing using ONLY information available before market open.
+    system: `You are SIGNAL, an AI trading intelligence system. Synthesize a morning briefing from REAL market data for ${dateDisplay}. You have actual prices, yields, VIX, sector performance, and regime classification.
 
---- REGIME ASSESSMENT ---
+Your job: interpret this data like an expert analyst. What story do the numbers tell? What sectors are rotating? Is risk appetite expanding or contracting? What does the yield curve signal? Where is the opportunity?
+
+--- REGIME ---
 ${regimePrompt}
+Stress: ${stressIndex}/100 | Risk Appetite: ${riskAppetite}/100
 --- END REGIME ---
-Stress Index: ${stressIndex}/100 | Risk Appetite: ${riskAppetite}/100
 
-TEMPORAL CONSTRAINT: Only use data from ${priorDateDisplay} and earlier. Do NOT reference anything that happened during or after ${dateDisplay}.
+${signalsSummary}
 
 Return JSON in <json> tags:
 <json>{
-  "summary": "2-3 sentence market overview",
+  "summary": "2-3 sentence market overview synthesizing the data",
   "marketCondition": "bullish" | "bearish" | "neutral" | "volatile",
   "sections": [
-    { "title": "Section Title", "content": "Detailed content", "importance": "high" | "medium" | "low" }
+    { "title": "Section Title", "content": "Analysis grounded in the data", "importance": "high" | "medium" | "low" }
   ],
   "scenarios": [
-    { "event": "Event", "scenarios": [{ "condition": "If X", "implication": "Then Y", "trade": "Consider Z" }] }
+    { "event": "Key setup from the data", "scenarios": [{ "condition": "If X", "implication": "Then Y", "trade": "Consider Z" }] }
   ]
 }</json>`,
     messages: [{
       role: "user",
-      content: `Generate the morning market briefing for ${dateDisplay}. Search for overnight news, futures, economic calendar, earnings, and key developments from ${priorDateDisplay}. Incorporate the regime assessment.`,
+      content: `Analyze the market data above for ${dateDisplay}. Build a pre-market briefing covering: 1) Overall market posture and regime, 2) Sector rotation and relative strength, 3) Yield curve and rate signals, 4) Currency and commodity flows, 5) Risk factors. Then provide 2-3 scenario analyses with trade implications.`,
     }],
     maxTokens: 4096,
-    useWebSearch: true,
+    useWebSearch: false, // Pure data synthesis — no web search needed
   });
 
   const parsed = extractJson<TrainingBriefing>(response.text);
   const briefing: TrainingBriefing = parsed || {
-    summary: "Briefing generation failed — insufficient data.",
+    summary: "Briefing generation failed.",
     marketCondition: "neutral",
     sections: [],
     scenarios: [],
@@ -603,7 +644,7 @@ async function runTrial(
 
   // Phase 3: Daily Briefing
   log(`  Phase 3: Generating daily briefing...`);
-  const { briefing, tokensUsed: briefTokens } = await generateBriefing(date, regimePromptStr, stressIndex, riskAppetite);
+  const { briefing, tokensUsed: briefTokens } = await generateBriefing(date, regimePromptStr, stressIndex, riskAppetite, signals);
   totalTokens += briefTokens;
   log(`  Briefing: ${briefing.marketCondition} | ${briefing.sections.length} sections | ${briefing.scenarios.length} scenarios`);
 
