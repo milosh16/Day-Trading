@@ -1,5 +1,5 @@
 {
-  "currentTrial": 171,
+  "currentTrial": 172,
   "totalTrials": 500,
   "weights": {
     "catalystClarity": 0.22,
@@ -42676,6 +42676,238 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 23705
+    },
+    {
+      "trialId": 172,
+      "date": "2024-08-12",
+      "generatedAt": "2026-04-06T19:00:45.144Z",
+      "signals": {
+        "spFuturesChange": 0,
+        "nasdaqFuturesChange": 0.21,
+        "dowFuturesChange": -0.36,
+        "russellFuturesChange": -0.91,
+        "vixFuturesChange": -12.51,
+        "vix": 18.12,
+        "vixChange": -12.51,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 21.63,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 3.91,
+        "tenYearYieldChange": -0.84,
+        "twoYearYield": 4.15,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.2,
+        "threeMonthYield": 5.07,
+        "twoTenSpread": -0.24,
+        "threeMoTenYrSpread": -1.16,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 102.56,
+        "dollarIndexChange": -0.56,
+        "eurUsd": 1.09,
+        "eurUsdChange": 0.21,
+        "usdJpy": 146.98,
+        "usdJpyChange": -0.04,
+        "usdCny": 7.17,
+        "usdCnyChange": 0.11,
+        "oilWTI": 78.35,
+        "oilChange": -2.14,
+        "brentOil": 80.69,
+        "brentOilChange": -1.96,
+        "natGasChange": -1.87,
+        "goldPrice": 2466.7,
+        "goldChange": 0.17,
+        "silverChange": -0.8,
+        "copperChange": -0.47,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": 3.45,
+        "daxChange": 0.48,
+        "ftseChange": 0.3,
+        "shanghaiChange": 0.34,
+        "hangSengChange": 0.36,
+        "kospiChange": 0.12,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 109.9,
+        "spreadChange": -0.06,
+        "igSpread": -19.88,
+        "igSpreadChange": -0.21,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.95,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 0.82,
+        "xlfChange": -0.52,
+        "xleChange": 0.49,
+        "xlvChange": -0.38,
+        "xlpChange": -0.51,
+        "xluChange": 0.18,
+        "xlreChange": -0.6,
+        "xliChange": -0.51,
+        "xlbChange": -0.44,
+        "xlcChange": -0.69,
+        "xlyChange": -0.4,
+        "smhChange": 0.94,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 2.11,
+        "ethereumChange": -0.76,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": true,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 37,
+        "daysToNextCPI": 2,
+        "daysToNextNFP": 25,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 3,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 3.05,
+        "sp20DayReturn": -5.09,
+        "nasdaqVsRussell5d": 2.46,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "range-bound",
+        "confidence": 36,
+        "directionalBias": "6",
+        "volatilityRegime": "normal",
+        "stressIndex": 16,
+        "riskAppetiteIndex": 45,
+        "sectorTilts": {
+          "airlines": "overweight",
+          "consumer-discretionary": "overweight"
+        }
+      },
+      "briefing": {
+        "summary": "Markets open Monday in a fragile, range-bound posture following a violent volatility unwind — VIX crushed 12.5% Friday but remains elevated at 18.12, while the S&P sits near 52-week lows with a deeply inverted yield curve and extreme fear readings. The narrative is split: international markets (Nikkei +3.45%, DAX +0.48%) and a falling dollar suggest some risk appetite returning globally, yet domestic breadth is catastrophically weak (0% of stocks above 200 DMA) and small caps are lagging badly, warning that the recovery is shallow and concentrated. With CPI just 2 days away and the regime flagging low confidence range-bound conditions, the disciplined posture today is observation over action.",
+        "marketCondition": "neutral",
+        "sections": [
+          {
+            "title": "1. Overall Market Posture & Regime",
+            "content": "The regime classifier lands on RANGE-BOUND with only 36% confidence — itself a signal. The S&P is flat on the session but sits near 52-week lows after a punishing 20-day drawdown of -5.09%, recovering only 3.05% over the last 5 days. That bounce is narrow: the Russell 2000 is -0.91% Friday and lagging growth by 2.46% over 5 days, a classic 'relief rally in large caps only' signature. Fear & Greed at 0 (extreme fear) alongside VIX at 18.12 — still above the 16-17 complacency zone — means the market is not yet in a clean recovery. The stress reading of 16/100 and risk appetite of 45/100 reinforce a no-man's-land environment. The minimum conviction threshold is raised to 78 today with -5 penalties on both longs and shorts. The regime is explicitly saying: do less, not more.",
+            "importance": "high"
+          },
+          {
+            "title": "2. Sector Rotation & Relative Strength",
+            "content": "Friday's sector tape tells a clear story: this is a tech/momentum-led defensive bounce, not a broad risk-on rotation. Semis (SMH +0.94%) and Tech (XLK +0.82%) are the only real winners, consistent with the Nasdaq outperforming the Russell. Energy (XLE +0.49%) adds a commodity-adjacent bid. Meanwhile, the typical risk-on sectors are ALL in the red — Financials (-0.52%), Industrials (-0.51%), Discretionary (-0.40%), and Materials (-0.44%) are all down. This is notable: Discretionary is a regime overweight due to lower gas prices, yet it's lagging. Real Estate (-0.60%) and Comm Services (-0.69%) lead the losers, both rate-sensitive or sentiment-driven names struggling under an inverted curve and cautious positioning. The rotation picture says: growth tech is a safe haven here, not a risk-on leader. Airlines are a regime overweight on fuel cost tailwinds — WTI at $78.35 and falling (-2.14%) supports that thesis structurally, though today's price action needs validation.",
+            "importance": "high"
+          },
+          {
+            "title": "3. Yield Curve & Rate Signals",
+            "content": "The yield curve remains deeply inverted on two measures: 2-10 spread at -24bps and 3M-10Y at a stark -116bps. The 10Y yield fell 84bps to 3.91% — a significant single-day move into the weekend — signaling a bond market that is pricing meaningful rate cuts and/or recession risk. This is not a growth-positive yield move; it is a flight-to-quality bid. The term structure for VIX is in contango, which is mildly stabilizing for equities (near-term fear not spiking), but the absolute level of inversion on rates is incompatible with a sustained equity recovery in rate-sensitive sectors. With CPI in 2 days (Wednesday), any upside surprise reignites the rate fear trade and could shatter the fragile 3-day bounce. The bond market is pricing more aggressively for cuts than the equity market has fully reflected — that divergence is the week's key tension.",
+            "importance": "high"
+          },
+          {
+            "title": "4. Currency & Commodity Flows",
+            "content": "Dollar weakness (-0.56% to 102.56) is a meaningful data point: it helped fuel the international outperformance (Nikkei +3.45% — largely a carry-unwind reversal, DAX +0.48%, FTSE +0.30%, EM names positive) and provided a tailwind for commodities priced in USD. However, Gold only gained +0.17% despite dollar weakness, suggesting gold is not in a panic-bid mode — consistent with the stress reading of 16/100. Oil's -2.14% drop to $78.35 is a double-edged signal: bullish for consumer and airline names (lower input costs), but bearish for Energy equities unless seen as demand-destruction. USD/JPY at 146.98 bears watching — the yen carry unwind that drove last week's volatility spike is not fully resolved at this level, and any drop toward 144-145 could reignite equity vol. Bitcoin +2.11% adds a mild risk-appetite signal but Ethereum's -0.76% divergence suggests crypto is not in a unified risk-on mode.",
+            "importance": "medium"
+          },
+          {
+            "title": "5. Key Risk Factors Into the Week",
+            "content": "Five risks warrant active monitoring: (1) CPI Wednesday — the dominant binary event; a hot print resets the rate-cut narrative and breaks the bounce. (2) USD/JPY stability — yen carry unwind remains an unresolved systemic risk; a move below 145 could spike VIX back above 25. (3) Breadth failure — 0% of S&P names above 200 DMA is an extraordinary reading; if the rally cannot broaden from Semis/Tech to Financials and Industrials this week, the bounce fails. (4) Small cap divergence — Russell underperformance of 1.02pp signals liquidity preference and credit concern; HY spreads at 109.9bps are tight but IG showing -19.88bps compression suggests credit is not in crisis mode yet. (5) OPEX week dynamics — options expiration can amplify moves intraday; combined with a low-conviction regime and elevated VIX, gamma effects may create whipsaw conditions unsuitable for directional positioning.",
+            "importance": "high"
+          }
+        ],
+        "scenarios": [
+          {
+            "event": "CPI Pre-Positioning (Wednesday data, Monday-Tuesday setup)",
+            "scenarios": [
+              {
+                "condition": "If CPI prints in-line or below (core ≤0.2% MoM) on Wednesday",
+                "implication": "Rate-cut narrative solidifies, 10Y yields drop further, dollar weakens more. Tech/Growth leadership accelerates. Discretionary and airlines could finally activate as overweights. VIX likely drops toward 15-16.",
+                "trade": "Hold off initiating until CPI prints. If cool, look for SMH/XLK continuation and airline names (JETS ETF) on the open Wednesday. Regime penalty still applies — wait for 78+ conviction setups."
+              },
+              {
+                "condition": "If CPI prints hot (core ≥0.3% MoM)",
+                "implication": "The 3-day bounce is immediately at risk. Rate-cut timeline pushed out, 10Y back toward 4.1-4.2%, dollar rebounds, VIX spikes. The extreme fear reading at F&G=0 means capitulation positioning — a hot print could trigger forced selling.",
+                "trade": "Defensive posture: inverse tech or S&P hedges could work but carry -5 conviction penalty. Better to be flat and re-evaluate post-CPI. Do not chase the bounce into the print."
+              }
+            ]
+          },
+          {
+            "event": "Yen Carry Unwind Resumption (USD/JPY watching 145 level)",
+            "scenarios": [
+              {
+                "condition": "If USD/JPY breaks below 145 during Monday-Tuesday session",
+                "implication": "Risk-off cascade similar to the Aug 5 episode could resurface. VIX would likely spike back above 22-25. International equity correlations break down as Japanese institutions repatriate. The Nikkei's +3.45% Friday bounce reverses.",
+                "trade": "No new longs. Consider VIX call spreads or SPY puts as tail hedges. Gold may finally catch a real bid. This is a scenario to survive, not trade aggressively."
+              },
+              {
+                "condition": "If USD/JPY holds 147-148 range through the week",
+                "implication": "Carry unwind stabilizes, global risk appetite normalizes, international outperformance continues. The dollar weakness tailwind persists for multinationals and EM.",
+                "trade": "EEM or international ETFs (EFA) become attractive on a CPI confirmation. Not actionable today given regime conviction hurdle."
+              }
+            ]
+          },
+          {
+            "event": "Breadth Recovery Test (Can the rally broaden beyond Tech?)",
+            "scenarios": [
+              {
+                "condition": "If Financials (XLF), Industrials (XLI), and Small Caps (IWM) join the bid early this week",
+                "implication": "Breadth improvement would be the single most bullish signal possible from this setup. A move of XLF +1%+ and IWM closing the gap with QQQ would suggest the bounce has legs and regime could shift toward bullish with higher confidence.",
+                "trade": "IWM long on breadth confirmation, targeting the 5-day recovery range. Still apply conviction filter — only enter if setup clears 78+ threshold after regime penalties."
+              },
+              {
+                "condition": "If Tech/Semis continue to rally alone while Financials and Industrials stay red",
+                "implication": "The current narrow rally is a dead-cat structure. Smart money rotating to tech as defensive growth, not risk-on positioning. The S&P will struggle to reclaim 200 DMA and the range-bound regime persists or worsens.",
+                "trade": "No new longs. Consider sector-relative pairs (long XLK / short XLF) if conviction allows, but the -5 penalty on both sides makes this difficult to clear 78. Default to cash."
+              }
+            ]
+          }
+        ]
+      },
+      "recommendations": [],
+      "outcomes": [],
+      "scores": {
+        "directionAccuracy": 0,
+        "targetHitRate": 0,
+        "stopHitRate": 0,
+        "avgReturnPercent": 0,
+        "profitFactor": 0,
+        "winRate": 0,
+        "totalScore": 50
+      },
+      "dimensionAnalysis": {},
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 20109
     }
   ],
   "bestScore": 100,
@@ -42689,8 +42921,8 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T18:52:34.517Z",
-  "totalTokensUsed": 3581195,
+  "lastUpdatedAt": "2026-04-06T19:00:45.146Z",
+  "totalTokensUsed": 3601304,
   "weightHistory": [
     {
       "trial": 10,
@@ -43599,6 +43831,7 @@
     "2025-07-08"
   ],
   "completedDates": [
-    "2026-03-12"
+    "2026-03-12",
+    "2024-08-12"
   ]
 }
