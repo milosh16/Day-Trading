@@ -1,0 +1,336 @@
+{
+  "trialId": 171,
+  "date": "2026-03-12",
+  "dateDisplay": "Thursday, March 12, 2026",
+  "generatedAt": "2026-04-06T18:20:48.711Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -1.52,
+      "nasdaqFuturesChange": -1.78,
+      "dowFuturesChange": -1.56,
+      "russellFuturesChange": -2.12,
+      "vixFuturesChange": -0.37,
+      "vix": 27.19,
+      "vixChange": -0.37,
+      "vixTermStructure": "flat",
+      "vix9d": 0,
+      "vix3m": 26.95,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.27,
+      "tenYearYieldChange": 1.54,
+      "twoYearYield": 3.8,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.89,
+      "threeMonthYield": 3.61,
+      "twoTenSpread": 0.47,
+      "threeMoTenYrSpread": 0.66,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 100.36,
+      "dollarIndexChange": 0.62,
+      "eurUsd": 1.15,
+      "eurUsdChange": -0.19,
+      "usdJpy": 159.21,
+      "usdJpyChange": 0.08,
+      "usdCny": 6.87,
+      "usdCnyChange": 0.05,
+      "oilWTI": 98.71,
+      "oilChange": 3.11,
+      "brentOil": 103.14,
+      "brentOilChange": 2.67,
+      "natGasChange": -3.15,
+      "goldPrice": 5052.5,
+      "goldChange": -1.24,
+      "silverChange": -4.44,
+      "copperChange": -1.89,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -1.16,
+      "daxChange": -0.6,
+      "ftseChange": -0.43,
+      "shanghaiChange": -0.82,
+      "hangSengChange": -0.98,
+      "kospiChange": -1.72,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 103.25,
+      "spreadChange": 0.64,
+      "igSpread": -17.14,
+      "igSpreadChange": 0.54,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -1.84,
+      "xlfChange": -1.63,
+      "xleChange": 0.93,
+      "xlvChange": -1.76,
+      "xlpChange": -0.4,
+      "xluChange": 0.71,
+      "xlreChange": -0.64,
+      "xliChange": -2.51,
+      "xlbChange": -0.32,
+      "xlcChange": -1.48,
+      "xlyChange": -2.3,
+      "smhChange": -3.22,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.67,
+      "ethereumChange": 0.94,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 6,
+      "daysToNextCPI": 33,
+      "daysToNextNFP": 22,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 3,
+      "sp5DayReturn": -2.31,
+      "sp20DayReturn": -3.87,
+      "nasdaqVsRussell5d": 1.81,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-off",
+      "confidence": 79,
+      "directionalBias": "-49",
+      "volatilityRegime": "elevated",
+      "stressIndex": 30,
+      "riskAppetiteIndex": 14,
+      "sectorTilts": {
+        "utilities": "overweight",
+        "healthcare": "overweight",
+        "staples": "overweight",
+        "tech": "underweight",
+        "energy": "overweight",
+        "airlines": "underweight",
+        "semiconductors": "underweight",
+        "materials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets are in confirmed Risk-Off mode with 79% confidence as the S&P prints a third consecutive down day, trading near 52-week lows with zero breadth (0% of names above 200 DMA) and Fear & Greed at a literal floor of 0 — a reading that signals capitulation-level sentiment but not yet a confirmed bottom. The only refuge is Energy (+0.93%) riding a sharp WTI spike to $98.71, and Utilities (+0.71%) absorbing defensive rotation, while cyclicals, financials, and semis lead the selling. With the FOMC 6 days out and a dollar strengthening into this risk-off wave, the tape is pricing in a toxic cocktail of growth fears, policy uncertainty, and global coordination in the selloff.",
+      "marketCondition": "bearish",
+      "sections": [
+        {
+          "title": "🔴 Overall Market Posture — Confirmed Bear Pressure",
+          "content": "The regime classification leaves little room for debate: Risk-Off at 79% confidence with a directional bias of -49 and stress conditions active. Futures came in -1.65% pre-market, extending losses across a 5-day drawdown of -2.31% and a 20-day move of -3.87% — a steady, grinding deterioration rather than a single-event shock. The S&P is near its 52-week low, which is a critical technical threshold; a confirmed close below it would likely accelerate systematic de-risking from trend-following strategies and risk-parity funds. The VIX at 27.19 is elevated but notably not yet at panic extremes (historically, capitulation readings cluster 35-45+), suggesting the market has more fear to price in. The flat VIX term structure — where near-term implied vol equals longer-dated vol — confirms the market sees sustained, not spike, risk. Conviction bias today: favor short/defensive setups; all long trades carry an automatic -8 conviction penalty.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation — Energy & Utilities Are the Entire Story",
+          "content": "The sector tape is brutally clear: two sectors are green, nine are red. Energy (XLE +0.93%) is the standout, entirely driven by WTI crude spiking +3.11% to $98.71 — a supply shock or geopolitical premium bid, not a growth signal. Utilities (XLU +0.71%) confirms the defensive rotation thesis. Everything else is being sold in approximate order of beta: Industrials (-2.51%), Semis (-3.22%), Discretionary (-2.30%), Tech (-1.84%), and Healthcare (-1.76%) — notably, Healthcare is being sold DESPITE the regime calling for overweight, which signals the selling is indiscriminate and broad-based rather than sector-selective. Financials (-1.63%) are under pressure likely from rate vol concerns and credit spread widening. The notable divergence: Growth is outperforming Value on a 5-day basis (Nasdaq leading Russell by +1.81%), which at first appears contradictory in a risk-off regime — but in this context it reflects that mega-cap tech is falling LESS than small-cap cyclicals, not that growth is being bid. Russell -2.12% on the day vs. Nasdaq -1.78% reinforces small-cap fragility. Regime sector tilts: Overweight XLE, XLU, XLP. Underweight XLK, SMH, XLB, airlines.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals — Steepening Into Uncertainty",
+          "content": "The 10-year yield at 4.27% rose +1.54% on the day — a meaningful move that, in a risk-off session, is a warning flag rather than a reassurance. Typically in genuine flight-to-safety episodes, bonds rally and yields fall. The fact that yields are RISING alongside equity selling suggests one of two narratives: (1) inflation premium re-pricing — WTI at $98.71 is stoking stagflation concerns, or (2) the market is questioning the Fed's ability to cut into a supply-driven inflation shock. The 2-10 spread at 47bps and the 3M-10Y spread at 66bps show a positively sloped (re-steepening) curve, which historically transitions from inversion to steepening AHEAD of recessions as the market prices in eventual cuts that the Fed hasn't yet delivered. With FOMC in 6 days, any hawkish hold or 'higher for longer' language into $98 oil will be particularly combustive for equities. The credit market adds nuance: HY spreads widened only modestly (+0.64bps to 103.25bps), while IG spreads actually compressed (-17.14bps) — suggesting credit stress is not yet systemic, but the HY directionality bears watching as the equity decline deepens.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows — Dollar Dominance, Gold Puzzling",
+          "content": "The Dollar Index at 100.36 (+0.62%) is acting as a classic risk-off safe haven, with EUR/USD at 1.15 under pressure. The USD/JPY at 159.21 is the most striking data point here: a stronger dollar AGAINST the yen in a risk-off environment suggests the yen carry trade is NOT fully unwinding — historically, yen strength (USD/JPY falling) accompanies the most severe risk-off episodes. The lack of a yen safe-haven bid may indicate this selloff is more macro/growth-driven than a financial system stress event. Gold at $5,052.50 (-1.24%) is the biggest anomaly in the dataset. Gold falling in a risk-off, dollar-strengthening, equity-selling environment suggests: (a) position liquidation — funds selling gold to meet margin calls or redemptions, and/or (b) gold already priced in extreme risk premium and is correcting. At $5,052, gold has clearly had a massive run; this dip may be noise, but a sustained gold breakdown would be the most bearish confirmation possible for the overall regime. Oil at $98.71 (+3.11%) is the clearest macro signal — approaching the psychologically critical $100 level, which historically triggers inflation re-pricing and consumer spending concerns simultaneously. Bitcoin (+0.67%) and Ethereum (+0.94%) are marginally green, a modest divergence from equities, but too small to read as a meaningful risk signal.",
+          "importance": "high"
+        },
+        {
+          "title": "🌍 International Coordination — Global Synchronized Selling",
+          "content": "There is no safe harbor globally. Nikkei -1.16%, Shanghai -0.82%, Hang Seng -0.98%, DAX -0.60%, FTSE -0.43%. The international average of -0.95% is a key regime driver and confirms this is not a US-specific event. The relative resilience of European markets (DAX/FTSE down less than half the S&P's 1.52%) may reflect currency effects — a weaker EUR helps European exporters — but the direction is uniform. The coordinated global selloff eliminates geographic diversification as a near-term hedge and confirms macro, not idiosyncratic, drivers are in control.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Key Risk Factors for Today's Session",
+          "content": "1) S&P AT 52-WEEK LOW: A confirmed close below this level is a binary event for systematic strategies. Watch intraday price action at this threshold closely. 2) OIL AT $98.71: A break above $100 WTI intraday would inject a stagflation narrative that complicates the Fed's path and pressures both bonds and equities simultaneously. 3) FOMC IN 6 DAYS: Pre-meeting blackout is likely active; no Fedspeak to cushion the tape. Market will be flying blind on Fed intent into a volatile oil move. 4) ZERO BREADTH: When 0% of S&P names are above their 200 DMA, the market is in washout territory — this can precede sharp bear market rallies (short-covering), but timing is the challenge. 5) GOLD BREAKING DOWN: If gold fails to hold and continues lower, it removes the last conventional safe haven and may signal forced liquidation dynamics. 6) NO MAJOR CATALYSTS TODAY: Empty calendar means price action is technically and sentiment-driven — momentum and flow will dominate.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "S&P Tests and Breaks 52-Week Low Intraday",
+          "scenarios": [
+            {
+              "condition": "If S&P breaks below 52-week low on heavy volume with no intraday recovery",
+              "implication": "Systematic de-risking accelerates; trend-following CTAs flip net short; risk-parity rebalancing adds selling pressure; VIX spikes toward 32-35; HY spreads widen materially. This is the scenario that turns a correction into a confirmed bear market leg.",
+              "trade": "Consider initiating or adding to short exposure via SPY puts or inverse ETFs (SPXS/SH). XLY and XLI remain the highest-beta short candidates. Hedged: long XLU against short XLI as a pair. Targets scaled 1.1x per regime. Avoid naked long positioning — -8 conviction penalty applies to all long trades."
+            },
+            {
+              "condition": "If S&P tests 52-week low and reverses sharply (bear trap / capitulation wick)",
+              "implication": "F&G at 0, VIX at 27, 0% above 200 DMA, and three consecutive down days creates the setup for a violent short-covering rally. A reversal off the 52-week low would be technically significant and could trigger a 1.5-3% snap-back. However, in the current regime, this is a TRADE not a TREND.",
+              "trade": "On confirmed intraday reversal with volume confirmation: tactical long SPY/QQQ with tight stops below the low. Size small given -8 conviction penalty. Target: 20-30 DMA overhead resistance. Exit discipline is critical — this is a mean-reversion scalp, not a regime change call."
+            }
+          ]
+        },
+        {
+          "event": "WTI Crude Breaks Above $100 — Stagflation Scenario",
+          "scenarios": [
+            {
+              "condition": "If WTI trades above $100 and holds through the session",
+              "implication": "Inflation re-pricing accelerates ahead of the FOMC. The Fed, already in blackout, cannot manage expectations. Bond yields push higher (10Y toward 4.40%+), removing the 'bonds as hedge' safety valve. Equities face dual pressure from higher discount rates AND lower growth expectations. Consumer discretionary (XLY) and airlines face the sharpest fundamental headwinds. This is the worst-case macro combination for the current tape.",
+              "trade": "Long XLE as the direct beneficiary — energy is the one sector where $100 oil is unambiguously constructive (confirmed regime overweight). Consider XLE calls or direct equity in integrated majors. Short XLY on the consumer spending squeeze thesis. Short airline names on fuel cost compression. Avoid REIT exposure as higher yields compound the pressure."
+            },
+            {
+              "condition": "If WTI fades back below $96 (giveback of today's spike)",
+              "implication": "Energy sector loses its sole positive catalyst; XLE gives back gains; overall market may stabilize as the stagflation premium is removed. However, the underlying risk-off regime remains intact — the rally would be relief, not resolution.",
+              "trade": "Take profits on any energy longs; do NOT rotate into cyclicals on the oil pullback as the broader bearish regime remains dominant. Neutral/flat positioning with defensive tilt maintained (XLU, XLP)."
+            }
+          ]
+        },
+        {
+          "event": "FOMC Pre-Meeting Positioning — 6 Days Out",
+          "scenarios": [
+            {
+              "condition": "If market begins pricing in an emergency or dovish surprise cut due to equity decline",
+              "implication": "With the S&P near 52-week lows and F&G at 0, speculative positioning in rate futures may shift toward pricing a more dovish FOMC outcome. This would temporarily support equities and compress yields, but with oil at $98+, the Fed has virtually no cover to cut without stoking inflation credibility concerns. Any 'Fed put' rally is likely to be sold into.",
+              "trade": "If bond yields dip on dovish speculation: consider shorting TLT (higher yields structurally) or positioning in TIPS as an inflation hedge. Equity positioning: use any Fed-driven rally to reduce long exposure or add shorts at better prices — the macro backdrop (oil + growth fears) does not support a durable re-rating."
+            },
+            {
+              "condition": "If market accepts a hawkish hold (Fed stays on hold despite equity weakness, citing $98 oil)",
+              "implication": "This is the base case given the data. Yields rise, dollar strengthens further, and equities face continued multiple compression. Small caps (IWM) are most vulnerable given higher funding cost sensitivity. Growth stocks with stretched valuations face the sharpest re-rating risk in a sustained higher-for-longer environment.",
+              "trade": "Maintain short bias on IWM (small cap vulnerability). Consider defensive positioning in XLU and short-duration bond exposure. Gold becomes tactically interesting if it stabilizes — it would benefit from eventual Fed pivot expectations even in a delayed timeline. Monitor credit spreads: a HY spread move above 150bps would be a systemic warning requiring immediate de-risking."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "SQQQ",
+      "direction": "long",
+      "entryPrice": 69.5,
+      "targetPrice": 76,
+      "stopLoss": 65.5,
+      "thesis": "Iran's new Supreme Leader Khamenei confirmed overnight that the Strait of Hormuz will remain closed as a geopolitical pressure tool — a prolonged supply shock that hammers growth sentiment and accelerates the Nasdaq's technical breakdown below 2026 lows. SQQQ (3x inverse Nasdaq) is the cleanest expression of the risk-off regime with zero breadth, Fear & Greed at 0, and tech/semi sector in confirmed de-risking mode.",
+      "catalyst": "Iran Supreme Leader Mojtaba Khamenei's first public statement (overnight March 11-12) vowing the Hormuz Strait stays closed and threatening US military bases — directly extends the oil supply shock and deepens the growth-fear selloff in tech/Nasdaq",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": "Overnight geopolitical catalyst is unambiguous: Iran's first supreme leader statement since appointment explicitly confirms Hormuz closure as strategy. No interpretation needed — this is bearish for growth/tech."
+        },
+        "technicalSetup": {
+          "score": 85,
+          "reasoning": "Nasdaq posted third consecutive down week, is printing 2026 lows, and 0% of names are above the 200-DMA. Regime confirms SMH down -3.2% and Russell lagging. SQQQ's inverse structure is in a confirmed uptrend."
+        },
+        "riskReward": {
+          "score": 78,
+          "reasoning": "Entry ~$69.50 with $76 target and $65.50 stop yields a 1.63:1 R/R. 3x leverage amplifies the move. Primary risk: a surprise de-escalation statement from US/Iran could spark sharp reversal — stop at $65.50 limits damage."
+        },
+        "volumeLiquidity": {
+          "score": 88,
+          "reasoning": "SQQQ is one of the most liquid inverse ETFs with billions in daily volume. Easy fills at any size. No slippage concern in the pre-market move."
+        },
+        "marketAlignment": {
+          "score": 92,
+          "reasoning": "Perfect alignment: Risk-off regime at 79% confidence, tech underweight, Nasdaq underweight, Fear & Greed at 0, S&P near 52-week low. This is the canonical setup for inverse Nasdaq exposure. Note: treated as short-direction equivalent — no long penalty applied."
+        },
+        "informationEdge": {
+          "score": 82,
+          "reasoning": "The supreme leader's statement dropped overnight and markets haven't fully priced the 'no near-term resolution' implication. Retail is in extreme fear (F&G=0) but institutional positioning has not yet cleared — continued forced selling likely."
+        },
+        "timingUrgency": {
+          "score": 85,
+          "reasoning": "Opening gap down is imminent on the pre-market futures signal. The Khamenei statement is fresh and the primary driver of today's tape. Waiting past the open risks chasing or missing the momentum window."
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "SQQQ",
+      "openPrice": 72.4,
+      "highPrice": 76.15,
+      "lowPrice": 71.86,
+      "closePrice": 73.21,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 5.34,
+      "notes": "3-day window (2026-03-12, 2026-03-13, 2026-03-16). Open $72.4, High $76.15, Low $71.86, Close $73.21."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 100,
+    "targetHitRate": 100,
+    "stopHitRate": 0,
+    "avgReturnPercent": 5.34,
+    "profitFactor": 10,
+    "winRate": 100,
+    "totalScore": 100,
+    "benchmarkReturn": -0.76,
+    "alpha": 6.1
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 88,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 85,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "riskReward": {
+      "avgScoreWinners": 78,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 88,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 92,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "informationEdge": {
+      "avgScoreWinners": 82,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 85,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  }
+}

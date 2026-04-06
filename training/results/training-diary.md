@@ -5198,3 +5198,47 @@
 
 ---
 
+## Day 171/500 — Thursday, March 12, 2026
+
+### Recommendations (1)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| SQQQ | long | $69.5 | $76 | $65.5 | 85 | Iran's new Supreme Leader Khamenei confirmed overnight that ... |
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| SQQQ | $72.4 | $76.15 | $71.86 | $73.21 | Correct | Yes | No | +5.34% |
+
+- **SQQQ:** 3-day window (2026-03-12, 2026-03-13, 2026-03-16). Open $72.4, High $76.15, Low $71.86, Close $73.21.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 100.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +5.34% |
+| Profit Factor | 10 |
+| **Composite Score** | **100/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 88 | 0 | 100 (strong) |
+| technicalSetup | 85 | 0 | 100 (strong) |
+| riskReward | 78 | 0 | 100 (strong) |
+| volumeLiquidity | 88 | 0 | 100 (strong) |
+| marketAlignment | 92 | 0 | 100 (strong) |
+| informationEdge | 82 | 0 | 100 (strong) |
+| timingUrgency | 85 | 0 | 100 (strong) |
+
+*Weights used: catalystClarity: 22.0% | technicalSetup: 15.0% | riskReward: 12.0% | volumeLiquidity: 6.0% | marketAlignment: 10.0% | informationEdge: 18.0% | timingUrgency: 17.0%*
+
+---
+
