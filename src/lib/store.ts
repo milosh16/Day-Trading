@@ -12,8 +12,6 @@ import {
   AccountInfo,
   Position,
   AppSettings,
-  BacktestResult,
-  BacktestIteration,
   PerformanceMetrics,
 } from "./types";
 
@@ -164,30 +162,3 @@ export const usePerformanceStore = create<PerformanceState>()(
   )
 );
 
-// --- Backtest Store (persisted) ---
-interface BacktestState {
-  result: BacktestResult | null;
-  iterations: BacktestIteration[];
-  running: boolean;
-  progress: number;
-  setResult: (r: BacktestResult | null) => void;
-  setIterations: (i: BacktestIteration[]) => void;
-  setRunning: (r: boolean) => void;
-  setProgress: (p: number) => void;
-}
-
-export const useBacktestStore = create<BacktestState>()(
-  persist(
-    (set) => ({
-      result: null,
-      iterations: [],
-      running: false,
-      progress: 0,
-      setResult: (r) => set({ result: r }),
-      setIterations: (i) => set({ iterations: i }),
-      setRunning: (r) => set({ running: r }),
-      setProgress: (p) => set({ progress: p }),
-    }),
-    { name: "signal-backtest" }
-  )
-);

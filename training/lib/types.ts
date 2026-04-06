@@ -2,6 +2,8 @@
 // Training - Type Definitions
 // ============================================================
 
+import type { RegimeWeightTable } from "./regime-weights.ts";
+
 export interface TradeRecommendation {
   symbol: string;
   direction: "long" | "short";
@@ -71,6 +73,8 @@ export interface TrialResult {
     profitFactor: number;             // gross profit / gross loss
     winRate: number;                  // % of trades with positive return
     totalScore: number;               // composite 0-100
+    benchmarkReturn?: number;         // SPY return on this date
+    alpha?: number;                   // avg return minus benchmark
   };
   dimensionAnalysis: {
     [key: string]: {
@@ -132,4 +136,7 @@ export interface TrainingState {
     weights: ConvictionWeights;
     score: number;
   }[];
+  regimeWeightTable?: RegimeWeightTable;  // regime-conditional weights (v2)
+  dateSequence?: string[];                // deterministic date list
+  completedDates?: string[];              // dates already tested
 }

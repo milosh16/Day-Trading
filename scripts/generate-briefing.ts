@@ -34,6 +34,9 @@ import {
   buildLeadingIndicatorPrompt,
   type DailySignalRecord,
 } from "../src/lib/leading-indicators";
+import { getProductionSignals } from "./lib/production-signals";
+import { loadHistory, saveHistory, addRecommendations, buildPerformanceContext } from "./lib/recommendation-tracker";
+import { loadRegistry, getActivePromptFragments } from "../training/lib/insight-registry";
 
 // --- Config ---
 const API_KEY = process.env.ANTHROPIC_API_KEY;
@@ -169,6 +172,57 @@ function saveSignalHistory(record: DailySignalRecord): void {
   );
 }
 
+// --- Yesterday Context Injection ---
+
+function getYesterdayContext(): string {
+  // Find the most recent accuracy file
+  const files = readdirSync(DATA_DIR)
+    .filter(f => f.startsWith('accuracy-') && f !== 'accuracy-summary.json' && f.endsWith('.json'))
+    .sort()
+    .reverse();
+
+  if (files.length === 0) return '';
+
+  try {
+    const latest = JSON.parse(readFileSync(join(DATA_DIR, files[0]), 'utf-8'));
+
+    const lines: string[] = [];
+    lines.push('--- YESTERDAY\'S PERFORMANCE (learn from this) ---');
+    lines.push(`Date: ${latest.date}`);
+    lines.push(`Regime prediction: ${latest.regime?.predicted || 'unknown'} → ${latest.regime?.correct ? 'CORRECT' : 'INCORRECT'} (actual: ${latest.regime?.actual || 'unknown'})`);
+
+    if (latest.summary) {
+      const s = latest.summary;
+      lines.push(`Recommendations: ${s.totalRecs} trades, ${s.directionCorrect}/${s.totalRecs} direction correct`);
+      lines.push(`Targets hit: ${s.targetsHit}, Stops hit: ${s.stopsHit}`);
+      lines.push(`Avg return: ${s.avgReturn > 0 ? '+' : ''}${s.avgReturn?.toFixed(2) || 0}%`);
+      if (s.bestTrade) lines.push(`Best: ${s.bestTrade.symbol} ${s.bestTrade.return > 0 ? '+' : ''}${s.bestTrade.return.toFixed(2)}%`);
+      if (s.worstTrade) lines.push(`Worst: ${s.worstTrade.symbol} ${s.worstTrade.return > 0 ? '+' : ''}${s.worstTrade.return.toFixed(2)}%`);
+    }
+
+    if (latest.spyReturn !== undefined) {
+      lines.push(`SPY: ${latest.spyReturn > 0 ? '+' : ''}${latest.spyReturn.toFixed(2)}% | Alpha: ${latest.alpha > 0 ? '+' : ''}${latest.alpha?.toFixed(2) || 0}%`);
+    }
+
+    lines.push(`Composite score: ${latest.compositeScore}/100`);
+    lines.push('--- END YESTERDAY ---');
+
+    return lines.join('\n');
+  } catch {
+    return '';
+  }
+}
+
+function getRollingAccuracy(): string {
+  try {
+    const summary = JSON.parse(readFileSync(join(DATA_DIR, 'accuracy-summary.json'), 'utf-8'));
+    if (summary.rolling20) {
+      return `\nROLLING 20-DAY STATS: ${summary.rolling20.avgDirectionAccuracy?.toFixed(0)}% direction accuracy, ${summary.rolling20.avgReturn?.toFixed(2)}% avg return, ${summary.rolling20.avgAlpha?.toFixed(2)}% alpha, ${summary.rolling20.regimeAccuracy?.toFixed(0)}% regime accuracy`;
+    }
+  } catch {}
+  return '';
+}
+
 // --- Phase Prompts ---
 
 // Phase 1: Deep world research — 6 parallel-ish search domains
@@ -291,26 +345,7 @@ Return in <research> tags a detailed analysis.`,
   },
 ];
 
-// Phase 1 also gathers market signals
-const SIGNALS_SYSTEM = `You are SIGNAL's market data scanner. Gather comprehensive real-time global market data and return it as structured JSON. Search MULTIPLE times across different sources. Accuracy is critical.`;
-
-const SIGNALS_QUERY = (date: string) => `Gather all global market signals as of ${date}. Search for:
-- S&P 500, Nasdaq, Dow, Russell futures
-- VIX level and term structure
-- Treasury yields (2Y, 10Y, 30Y), yield curve
-- Dollar index, EUR/USD, USD/JPY
-- Oil (WTI, Brent), gold, copper, natural gas
-- International markets (Nikkei, DAX, FTSE, China, EM)
-- Credit spreads (HY, IG)
-- Market breadth (advance/decline, new highs/lows)
-- Sector ETFs (XLK, XLF, XLE, XLV, etc.)
-- Sentiment (AAII, CNN Fear/Greed)
-- Bitcoin, Ethereum
-- Economic calendar this week
-- Fed funds futures, SOFR
-
-Return ONLY JSON in <signals> tags with these fields (use 0 for unknown numbers, "" for strings, false for booleans):
-<signals>{"spFuturesChange":0,"nasdaqFuturesChange":0,"dowFuturesChange":0,"russellFuturesChange":0,"vixFuturesChange":0,"vix":0,"vixChange":0,"vixTermStructure":"contango","vix9d":0,"vix3m":0,"skewIndex":0,"putCallRatio":0,"spxGammaExposure":"neutral","tenYearYield":0,"tenYearYieldChange":0,"twoYearYield":0,"twoYearYieldChange":0,"thirtyYearYield":0,"threeMonthYield":0,"twoTenSpread":0,"threeMoTenYrSpread":0,"realYield10Y":0,"fedFundsRate":0,"fedFundsExpected":0,"dollarIndex":0,"dollarIndexChange":0,"eurUsd":0,"eurUsdChange":0,"usdJpy":0,"usdJpyChange":0,"usdCny":0,"usdCnyChange":0,"oilWTI":0,"oilChange":0,"brentOil":0,"brentOilChange":0,"natGasChange":0,"goldPrice":0,"goldChange":0,"silverChange":0,"copperChange":0,"ironOreChange":0,"wheatChange":0,"uraniumChange":0,"balticDryIndex":0,"balticDryChange":0,"nikkeiChange":0,"daxChange":0,"ftseChange":0,"shanghaiChange":0,"hangSengChange":0,"kospiChange":0,"emChange":0,"euroStoxx50Change":0,"highYieldSpread":0,"spreadChange":0,"igSpread":0,"igSpreadChange":0,"cdsIndex":0,"tedSpread":0,"mbs30YrSpread":0,"advanceDeclineRatio":0,"newHighsNewLows":0,"percentAbove200DMA":0,"percentAbove50DMA":0,"mcclellanOscillator":0,"xlkChange":0,"xlfChange":0,"xleChange":0,"xlvChange":0,"xlpChange":0,"xluChange":0,"xlreChange":0,"xliChange":0,"xlbChange":0,"xlcChange":0,"xlyChange":0,"smhChange":0,"aaiiBullBear":0,"cnnFearGreed":0,"naaim":0,"marginDebt":"flat","etfFlows":"flat","bitcoinChange":0,"ethereumChange":0,"btcDominance":0,"cryptoTotalMarketCapChange":0,"sofr":0,"repoRate":0,"fedBalanceSheet":"flat","tgaBalance":"flat","hasMajorEconData":false,"econDataType":"","hasEarningsOfNote":false,"earningsNames":"","isOpexWeek":false,"isOpexDay":false,"isMonthEnd":false,"isQuarterEnd":false,"daysToFOMC":0,"daysToNextCPI":0,"daysToNextNFP":0,"isExDividendHeavy":false,"geopoliticalRisk":"low","geopoliticalEvents":"","spConsecutiveUpDays":0,"spConsecutiveDownDays":0,"sp5DayReturn":0,"sp20DayReturn":0,"nasdaqVsRussell5d":0,"sp52WeekRange":0,"spDistanceFrom200DMA":0,"spDistanceFrom50DMA":0}</signals>`;
+// Phase 1 market signals now handled by production-signals.ts (hybrid pipeline)
 
 // --- Main: 5-Phase Deep Research Pipeline ---
 
@@ -340,11 +375,29 @@ async function main() {
   // ============================================================
   console.log(`\n=== PHASE 1: MARKET SIGNALS + DEEP WORLD RESEARCH ===`);
 
-  // Call 1: Market signals
-  console.log(`\n  [Market Signals] Gathering numerical data...`);
+  // Call 1: Market signals — hybrid deterministic + web search pipeline
+  console.log(`\n  [Market Signals] Hybrid pipeline (Yahoo + FRED + Calendar + Web Search)...`);
   const sigT = Date.now();
-  const signalsText = await callClaude(SIGNALS_SYSTEM, SIGNALS_QUERY(dateStr));
+  const signalResult = await getProductionSignals(dateStr, callClaude, extractJson);
+  const signals: GlobalSignals = signalResult.signals;
+  // Log the source breakdown
+  const sourceCounts: Record<string, number> = {};
+  for (const src of Object.values(signalResult.sources)) {
+    sourceCounts[src] = (sourceCounts[src] || 0) + 1;
+  }
   console.log(`  [Market Signals] Done (${((Date.now() - sigT) / 1000).toFixed(0)}s)`);
+  console.log(`  Signal sources: ${JSON.stringify(sourceCounts)}`);
+  if (signalResult.conflicts.length > 0) {
+    console.log(`  Conflicts (using deterministic value):`);
+    for (const c of signalResult.conflicts) {
+      console.log(`    ${c.field}: deterministic=${c.deterministic}, webSearch=${c.webSearch}`);
+    }
+  }
+  if (signalResult.warnings.length > 0) {
+    for (const w of signalResult.warnings) {
+      console.log(`  Warning: ${w}`);
+    }
+  }
 
   // Call 2: All 6 research domains in ONE call
   console.log(`\n  [Deep Research] All 6 domains in single Opus call...`);
@@ -397,9 +450,7 @@ Your detailed findings here...
     console.log(`    ${domain.name}: ${content.length} chars`);
   }
 
-  const signalsJson = extractJson(signalsText, "signals");
-  const signals: GlobalSignals = JSON.parse(signalsJson);
-  const nonDefault = Object.entries(signals).filter(([, v]) => v !== 0 && v !== "" && v !== false && v !== "flat" && v !== "neutral" && v !== "contango" && v !== "low").length;
+  const nonDefault = signalResult.fieldsPopulated;
   console.log(`  Parsed ${nonDefault} non-default signal fields`);
 
   // Regime classification (local, instant)
@@ -432,6 +483,24 @@ Your detailed findings here...
   console.log(`\n=== PHASE 2: IMPACT ANALYSIS + TRADE RESEARCH + CONVICTION ===`);
   console.log(`  Opus analyzing impact, researching trades, and scoring conviction...\n`);
 
+  const yesterdayContext = getYesterdayContext();
+  const rollingAccuracy = getRollingAccuracy();
+  const perfContext = (() => {
+    try {
+      const hist = loadHistory();
+      return buildPerformanceContext(hist);
+    } catch { return ''; }
+  })();
+  const trainingInsights = (() => {
+    try {
+      const registry = loadRegistry();
+      const convictionInsights = getActivePromptFragments(registry, 'conviction_prompt');
+      const tradeInsights = getActivePromptFragments(registry, 'trade_selection');
+      const combined = [convictionInsights, tradeInsights].filter(Boolean).join('\n');
+      return combined ? `\nTRAINING-DERIVED INSIGHTS (from ${registry.insights.filter(i => i.active).length} active insights):\n${combined}\n` : '';
+    } catch { return ''; }
+  })();
+
   const phase2T = Date.now();
   const combinedText = await callClaude(
     `You are SIGNAL — an elite trading intelligence system that combines world-class research analysis with portfolio management. You will perform THREE tasks in sequence:
@@ -453,8 +522,9 @@ ${regimePrompt}
 Stress: ${stressIndex}/100 | Risk Appetite: ${riskAppetiteIndex}/100
 ${indicatorPrompt}
 --- END REGIME ---
-
-Score each trade on these conviction dimensions (0-100):
+${yesterdayContext ? `\n${yesterdayContext}\n` : ''}${rollingAccuracy}
+${perfContext ? `\n${perfContext}\n` : ''}
+${trainingInsights}Score each trade on these conviction dimensions (0-100):
 - catalystClarity: How clear and time-bound is the catalyst?
 - technicalSetup: Are price levels, volume, momentum supportive?
 - riskReward: Is the R:R ratio favorable? Are stops well-placed?
@@ -572,6 +642,19 @@ Return ALL results in a single <json> block:
   writeData(`impact-${dateKey}.json`, { date: dateKey, analysis: impactAnalysis });
   writeData(`trade-research-${dateKey}.json`, { date: dateKey, research: tradeResearch });
   writeData(`recommendations-${dateKey}.json`, { date: dateKey, recommendations });
+
+  // Track recommendations in history
+  if (recommendations.recommendations?.length > 0) {
+    let recHistory = loadHistory();
+    recHistory = addRecommendations(
+      recHistory,
+      dateKey,
+      recommendations.recommendations,
+      regime.regime,
+    );
+    saveHistory(recHistory);
+    console.log(`  Added ${recommendations.recommendations.length} recs to history (${recHistory.totalRecords} total)`);
+  }
 
   // ============================================================
   // PHASE 5: COMPILE & SURFACE
