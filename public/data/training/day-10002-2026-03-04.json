@@ -2,270 +2,385 @@
   "trialId": 10002,
   "date": "2026-03-04",
   "dateDisplay": "Wednesday, March 4, 2026",
-  "generatedAt": "2026-04-06T20:10:15.735Z",
+  "generatedAt": "2026-04-06T20:44:02.139Z",
   "pipeline": {
-    "signals": {
-      "spFuturesChange": 0.78,
-      "nasdaqFuturesChange": 1.29,
-      "dowFuturesChange": 0.49,
-      "russellFuturesChange": 1.06,
-      "vixFuturesChange": 12.29,
-      "vix": 23.75,
-      "vixChange": 12.29,
-      "vixTermStructure": "backwardation",
-      "vix9d": 0,
-      "vix3m": 22.29,
-      "skewIndex": 0,
-      "putCallRatio": 0,
-      "spxGammaExposure": "neutral",
-      "tenYearYield": 4.08,
-      "tenYearYieldChange": 0.59,
-      "twoYearYield": 3.65,
-      "twoYearYieldChange": 0,
-      "thirtyYearYield": 4.72,
-      "threeMonthYield": 3.6,
-      "twoTenSpread": 0.43,
-      "threeMoTenYrSpread": 0.48,
-      "realYield10Y": 0,
-      "fedFundsRate": 0,
-      "fedFundsExpected": 0,
-      "dollarIndex": 99.32,
-      "dollarIndexChange": 0.56,
-      "eurUsd": 1.16,
-      "eurUsdChange": 0.2,
-      "usdJpy": 156.98,
-      "usdJpyChange": -0.5,
-      "usdCny": 6.9,
-      "usdCnyChange": -0.04,
-      "oilWTI": 81.01,
-      "oilChange": 8.51,
-      "brentOil": 85.41,
-      "brentOilChange": 4.93,
-      "natGasChange": 2.95,
-      "goldPrice": 5065.3,
-      "goldChange": -1.07,
-      "silverChange": -1.14,
-      "copperChange": -1.74,
-      "ironOreChange": 0,
-      "wheatChange": 0,
-      "uraniumChange": 0,
-      "balticDryIndex": 0,
-      "balticDryChange": 0,
-      "nikkeiChange": 1.9,
-      "daxChange": -1.61,
-      "ftseChange": -1.46,
-      "shanghaiChange": 0.64,
-      "hangSengChange": 0.28,
-      "kospiChange": 9.63,
-      "emChange": 0,
-      "euroStoxx50Change": 0,
-      "highYieldSpread": 98,
-      "spreadChange": -0.35,
-      "igSpread": -21.94,
-      "igSpreadChange": -0.09,
-      "cdsIndex": 0,
-      "tedSpread": 0,
-      "mbs30YrSpread": 0,
-      "advanceDeclineRatio": 0.96,
-      "newHighsNewLows": 0,
-      "percentAbove200DMA": 0,
-      "percentAbove50DMA": 0,
-      "mcclellanOscillator": 0,
-      "xlkChange": 1.7,
-      "xlfChange": 0.57,
-      "xleChange": -0.58,
-      "xlvChange": 0.2,
-      "xlpChange": -0.66,
-      "xluChange": 0.42,
-      "xlreChange": 0.14,
-      "xliChange": 0.3,
-      "xlbChange": -0.04,
-      "xlcChange": 0.7,
-      "xlyChange": 1.78,
-      "smhChange": 2.06,
-      "aaiiBullBear": 0,
-      "cnnFearGreed": 0,
-      "naaim": 0,
-      "marginDebt": "flat",
-      "etfFlows": "flat",
-      "bitcoinChange": -2.57,
-      "ethereumChange": -2.58,
-      "btcDominance": 0,
-      "cryptoTotalMarketCapChange": 0,
-      "sofr": 0,
-      "repoRate": 0,
-      "fedBalanceSheet": "flat",
-      "tgaBalance": "flat",
-      "hasMajorEconData": false,
-      "econDataType": "",
-      "hasEarningsOfNote": false,
-      "earningsNames": "",
-      "isOpexWeek": false,
-      "isOpexDay": false,
-      "isMonthEnd": false,
-      "isQuarterEnd": false,
-      "daysToFOMC": 14,
-      "daysToNextCPI": 7,
-      "daysToNextNFP": 2,
-      "isExDividendHeavy": false,
-      "geopoliticalRisk": "low",
-      "geopoliticalEvents": "",
-      "spConsecutiveUpDays": 1,
-      "spConsecutiveDownDays": 0,
-      "sp5DayReturn": -1.1,
-      "sp20DayReturn": -0.7,
-      "nasdaqVsRussell5d": -0.46,
-      "sp52WeekRange": 0,
-      "spDistanceFrom200DMA": 0,
-      "spDistanceFrom50DMA": 0
-    },
+    "signals": {},
     "regime": {
       "regime": "crisis",
       "confidence": 90,
       "directionalBias": -60,
-      "volatilityRegime": "elevated",
+      "volatilityRegime": "extreme",
       "stressIndex": 35,
       "riskAppetiteIndex": 54,
-      "keyFactors": [
-        "VIX 23.75 (elevated), term structure backwardation",
-        "CRISIS REGIME: elevated correlation, liquidity stress"
-      ],
-      "sectorTilts": [
-        {
-          "sector": "tech",
-          "bias": "underweight",
-          "reason": "High-beta sells first in crisis"
-        },
-        {
-          "sector": "utilities",
-          "bias": "overweight",
-          "reason": "Defensive rotation"
-        },
-        {
-          "sector": "healthcare",
-          "bias": "overweight",
-          "reason": "Defensive rotation"
-        },
-        {
-          "sector": "financials",
-          "bias": "underweight",
-          "reason": "Credit stress"
-        }
-      ],
-      "convictionModifiers": {
-        "longPenalty": 15,
-        "shortPenalty": 0,
-        "targetMultiplier": 1.5,
-        "minConvictionOverride": 80
-      }
+      "keyFactors": [],
+      "sectorTilts": [],
+      "convictionModifiers": {}
     },
     "briefing": {
-      "summary": "CRISIS REGIME — BEARISH WITH ENERGY/DEFENSE EXCEPTIONS. The market is in the early innings of a major geopolitical shock. Operation Epic Fury (US-Israel strikes on Iran, Feb 28) has triggered the closure of the Strait of Hormuz, which handles 20% of global oil supply. Oil surged 8.5% on March 3 and is heading significantly higher (Brent will reach $100+ within days, eventually $120+ by mid-March). The traditional safe-haven playbook is BROKEN: gold is falling, Treasuries are selling off (yields spiking), and the dollar is strengthening as the market prices a stagflationary energy shock rather than a deflationary risk event. The S&P 500 lost 0.94% on March 3 after being down as much as 2.5% intraday — expect continued volatility with a downward bias. VIX at 23.75 in backwardation confirms near-term fear exceeds long-term, and VIX likely heads to 29+ by March 6. Key dynamic: massive sector rotation FROM tech/discretionary INTO energy/defense. Broadcom earnings tonight are a wildcard — a strong AI beat could provide a temporary lift to semis but won't change the macro picture. The next 2 weeks are critical: if Hormuz stays closed, we get a full-blown energy crisis. If Trump's Navy escort plan works or a ceasefire emerges, rapid de-escalation is possible but unlikely in the near term. Position for continued crisis: long energy/defense, short high-beta tech/consumer/airlines, hedge with VIX calls.",
-      "marketCondition": "volatile",
-      "sections": [
-        {
-          "title": "Geopolitics",
-          "content": "CRITICAL: On Feb 28, 2026, the US and Israel launched 'Operation Epic Fury' — surprise joint airstrikes against Iran targeting nuclear facilities, military infrastructure, and leadership (Supreme Leader Khamenei assassinated). Over 1,700 sorties struck 1,250+ targets in the first 48 hours. Iran retaliated with missile/drone strikes on US bases, Israeli territory, and Gulf states. IRGC closed the Strait of Hormuz to all shipping traffic — this is the single most important market driver. The war entered its 4th day on March 3. Trump stated March 3 that the US Navy would escort tankers through Hormuz 'if necessary.' Markets swung wildly — S&P was down 2.5% intraday on March 3 before recovering to close -0.94%. Defense stocks surging (NOC +6%, AVRL +10%, LMT +3%). This is a hot shooting war with massive commodity supply disruption — crisis regime is fully justified.",
-          "importance": "medium"
-        },
-        {
-          "title": "Macro",
-          "content": "Fed funds rate at 3.5-3.75% (held steady at Jan meeting). FOMC meeting in 14 days (March 18) where they will hold again 11-1. 10Y yield surging to 4.08% (+59bps) as markets price stagflation — rising oil = inflation expectations up, but war/uncertainty = growth fears. The yield curve is positively sloped (2-10 spread +43bps), suggesting markets fear inflation more than recession near-term. Dollar strengthening (DXY 99.32, +0.56%) as flight-to-cash dominates over flight-to-quality. Key: traditional safe haven playbook is BROKEN — Treasuries selling off (yields up) because market is pricing energy-driven inflation shock, not a deflationary bust. NFP in 2 days, CPI in 7 days — both will be pre-war data and largely irrelevant to current crisis dynamics. Real risk: stagflation scenario if Hormuz stays closed for weeks.",
-          "importance": "medium"
-        },
-        {
-          "title": "Corporate",
-          "content": "BROADCOM (AVGO) reports Q1 FY2026 after close TODAY (March 4). Consensus expects EPS $1.88, revenue ~$19B. AI revenue expected to be massive — will likely beat given prior quarter trends. This is the biggest single-stock catalyst today. Microsoft (MSFT) closing its worst quarter since 2008 (-23%), as AI spending scrutiny intensifies. Big Tech AI capex expected at $720B in 2026 — 'prove it' era for returns. OpenAI at $25B annualized revenue, Anthropic at $19B. Corporate earnings broadly taking a backseat to the geopolitical crisis — war uncertainty overshadowing fundamentals.",
-          "importance": "medium"
-        },
-        {
-          "title": "Tech",
-          "content": "Semiconductor sector (SMH +2.06%) showing resilience despite crisis — AI demand seen as secular and war-independent. AVGO earnings tonight are the key catalyst. A major risk: helium shortage emerging from Hormuz closure (critical for chipmaking) — if prolonged, could constrain semiconductor production. Apple targeting AI Siri release with iOS 26.4 in March. Anthropic's Model Context Protocol hit 97M installs. Morgan Stanley warning of an 'AI breakthrough' in 2026 that most aren't ready for. Tech faces a two-way pull: secular AI tailwind vs. crisis-driven rotation out of high-beta growth. Near-term, the rotation OUT of tech into energy/defense is the dominant flow.",
-          "importance": "medium"
-        },
-        {
-          "title": "Energy",
-          "content": "OIL IS THE TRADE. WTI surged 8.5% to $81 on March 3 (up from ~$71 pre-strikes). Brent at $85.41 (+4.93%). The Strait of Hormuz handles ~20% of global oil supply. Iran's IRGC has prohibited vessel passage. Oil prices will continue to surge — Brent eventually hits $120+ by mid-March and $166 (Dubai crude) by March 19. IEA members will release 400M barrels from strategic reserves on March 11, but this only slows the spike. LNG, LPG, naphtha all disrupted. Petrochemical plants curtailing production. Energy stocks (XOM, CVX, COP) up 4-5% on March 3 and have significantly more room to run. Natural gas prices rising in Europe and Asia. This is a supply-driven energy shock with no quick resolution — Hormuz reopening requires either military escort success or ceasefire.",
-          "importance": "medium"
-        },
-        {
-          "title": "Policy",
-          "content": "MAJOR: On Feb 20, SCOTUS ruled 6-3 that IEEPA does not authorize presidential tariffs, striking down the legal basis for Trump's 2025 tariff regime. A new 10% global surcharge under Section 122 took effect Feb 24 for 150 days. On March 4 (TODAY), Judge Eaton of the Court of International Trade orders CBP to begin IEEPA tariff refunds to importers — this is a mild positive for importers/retailers. New Section 301 investigations launched March 11-12 targeting 16 countries. Net effect: tariff uncertainty remains but the SCOTUS ruling was actually a modest de-escalation on the trade front. The tariff story is now secondary to the Iran war as the dominant policy driver.",
-          "importance": "medium"
-        }
-      ],
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
       "scenarios": []
     }
   },
-  "recommendations": {
-    "cleanRecs": [],
-    "flaggedCount": 7,
-    "priceDeviations": [
-      {
-        "symbol": "XOM",
-        "priorClose": 151.83,
-        "entryPrice": 128,
-        "deviation": 15.7,
-        "plausible": false
-      },
-      {
-        "symbol": "COP",
-        "priorClose": 118.52,
-        "entryPrice": 115,
-        "deviation": 2.97,
-        "plausible": false
-      },
-      {
-        "symbol": "NOC",
-        "priorClose": 759.11,
-        "entryPrice": 530,
-        "deviation": 30.18,
-        "plausible": false
-      },
-      {
-        "symbol": "UVXY",
-        "priorClose": 43.15,
-        "entryPrice": 28,
-        "deviation": 35.11,
-        "plausible": false
-      },
-      {
-        "symbol": "AAL",
-        "priorClose": 12.46,
-        "entryPrice": 16.5,
-        "deviation": 32.42,
-        "plausible": false
-      },
-      {
-        "symbol": "CCL",
-        "priorClose": 28.53,
-        "entryPrice": 22,
-        "deviation": 22.89,
-        "plausible": false
-      },
-      {
-        "symbol": "LMT",
-        "priorClose": 667.82,
-        "entryPrice": 510,
-        "deviation": 23.63,
-        "plausible": false
+  "recommendations": [
+    {
+      "symbol": "AAL",
+      "direction": "short",
+      "entryPrice": 12.46,
+      "targetPrice": 10.6,
+      "stopLoss": 13.25,
+      "thesis": "Weakest airline balance sheet, highest fuel cost sensitivity. Jet fuel about to surge as Brent heads to $100+. Only -0.48% on March 3 means the fuel shock is NOT priced in. AAL has the least hedging of major carriers and the thinnest margins. Strait of Hormuz closure is a direct hit to operating costs.",
+      "catalyst": "Jet fuel price surge as Hormuz closure persists; potential route disruptions in Middle East",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
       }
-    ],
-    "tokensUsed": 0
-  },
-  "outcomes": [],
+    },
+    {
+      "symbol": "VLO",
+      "direction": "long",
+      "entryPrice": 217.71,
+      "targetPrice": 242,
+      "stopLoss": 208,
+      "thesis": "Refiners are the best energy play in a Hormuz closure scenario. VLO benefits from widening crack spreads as crude rises but refined product prices rise even faster (supply disruption in downstream). Already +1.30% showing relative strength. Refiners outperform E&Ps when crude spikes because product margins expand. Note: -15 long penalty applied but conviction still exceeds 80.",
+      "catalyst": "Continued Hormuz closure; crack spread widening; IEA strategic reserve release (March 11) actually helps refiners by providing crude feedstock",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NCLH",
+      "direction": "short",
+      "entryPrice": 21.27,
+      "targetPrice": 18,
+      "stopLoss": 22.8,
+      "thesis": "Cruise lines face triple headwind: surging fuel costs (bunker fuel), Middle East route disruptions (Eastern Mediterranean itineraries), and consumer sentiment hit from war uncertainty. Already -4.10% and weakest of cruise names. NCLH has the weakest balance sheet of the three major cruise operators. Booking cancellation risk as crisis escalates.",
+      "catalyst": "Fuel cost pass-through warnings; potential booking cancellations; route diversions adding costs",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "UVXY",
+      "direction": "long",
+      "entryPrice": 43.15,
+      "targetPrice": 55,
+      "stopLoss": 38,
+      "thesis": "VIX at 23.75 in backwardation heading to 29+ by March 6 per regime analysis. Backwardation means near-term futures move faster than spot — UVXY benefits from positive roll yield in this environment. Crisis is early innings (day 4 of Hormuz closure). Each day closure persists, VIX grinds higher. Note: -15 long penalty applied but conviction still exceeds 80.",
+      "catalyst": "Escalation risk from Iran retaliation; Hormuz closure persistence; potential US Navy confrontation",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "RTX",
+      "direction": "long",
+      "entryPrice": 206.52,
+      "targetPrice": 225,
+      "stopLoss": 198,
+      "thesis": "RTX (Raytheon) is the most direct beneficiary of active US military operations. Patriot missile systems, radar, precision munitions all in active use during Operation Epic Fury. Pulled back -2.66% with broad market selloff creating an entry point. Defense spending will accelerate — bipartisan support for supplemental appropriations. Note: -15 long penalty applied but conviction still exceeds 80.",
+      "catalyst": "Supplemental defense spending bills; munition replenishment orders; NATO ally procurement acceleration",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "MU",
+      "direction": "short",
+      "entryPrice": 379.68,
+      "targetPrice": 340,
+      "stopLoss": 405,
+      "thesis": "Micron is the most helium-dependent semiconductor company. Hormuz closure disrupts helium supply (Qatar is world's #2 helium producer, ships through Hormuz). DRAM/NAND fabs cannot operate without helium for cooling and processing. Already -7.99% and momentum is sharply negative. Supply chain disruption risk is existential for near-term production guidance.",
+      "catalyst": "Helium supply shortage headlines; potential production guidance cuts; continued semi selloff (SMH -3.77%)",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "AAL",
+      "openPrice": 12.74,
+      "highPrice": 12.93,
+      "lowPrice": 11.08,
+      "closePrice": 11.18,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 10.27,
+      "notes": "3-day window (2026-03-04, 2026-03-05, 2026-03-06). Open $12.74, High $12.93, Low $11.08, Close $11.18."
+    },
+    {
+      "symbol": "VLO",
+      "openPrice": 217.25,
+      "highPrice": 232.99,
+      "lowPrice": 216.44,
+      "closePrice": 224.63,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 3.18,
+      "notes": "3-day window (2026-03-04, 2026-03-05, 2026-03-06). Open $217.25, High $232.99, Low $216.44, Close $224.63."
+    },
+    {
+      "symbol": "NCLH",
+      "openPrice": 21.4,
+      "highPrice": 21.91,
+      "lowPrice": 19.61,
+      "closePrice": 20.05,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 5.74,
+      "notes": "3-day window (2026-03-04, 2026-03-05, 2026-03-06). Open $21.4, High $21.91, Low $19.61, Close $20.05."
+    },
+    {
+      "symbol": "UVXY",
+      "openPrice": 42.41,
+      "highPrice": 54.25,
+      "lowPrice": 39.77,
+      "closePrice": 54.09,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 25.35,
+      "notes": "3-day window (2026-03-04, 2026-03-05, 2026-03-06). Open $42.41, High $54.25, Low $39.77, Close $54.09."
+    },
+    {
+      "symbol": "RTX",
+      "openPrice": 207,
+      "highPrice": 210.15,
+      "lowPrice": 200.1,
+      "closePrice": 209.76,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.57,
+      "notes": "3-day window (2026-03-04, 2026-03-05, 2026-03-06). Open $207, High $210.15, Low $200.1, Close $209.76."
+    },
+    {
+      "symbol": "MU",
+      "openPrice": 393.64,
+      "highPrice": 407.88,
+      "lowPrice": 367.45,
+      "closePrice": 370.3,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.47,
+      "notes": "3-day window (2026-03-04, 2026-03-05, 2026-03-06). Open $393.64, High $407.88, Low $367.45, Close $370.3."
+    }
+  ],
   "scores": {
-    "directionAccuracy": 0,
+    "directionAccuracy": 100,
     "targetHitRate": 0,
-    "stopHitRate": 0,
-    "avgReturnPercent": 0,
-    "profitFactor": 0,
-    "winRate": 0,
-    "totalScore": 50,
+    "stopHitRate": 16.7,
+    "avgReturnPercent": 8.1,
+    "profitFactor": 10,
+    "winRate": 100,
+    "totalScore": 89.3,
     "benchmarkReturn": 0.51,
-    "alpha": -0.51
+    "alpha": 7.59
   },
-  "dimensionAnalysis": {},
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
   "weights": {
     "catalystClarity": 0.22,
     "technicalSetup": 0.15,
