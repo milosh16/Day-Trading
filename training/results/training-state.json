@@ -1,5 +1,5 @@
 {
-  "currentTrial": 173,
+  "currentTrial": 174,
   "totalTrials": 500,
   "weights": {
     "catalystClarity": 0.22,
@@ -49711,6 +49711,326 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 174,
+      "date": "2026-03-11",
+      "generatedAt": "2026-04-06T20:52:32.334Z",
+      "signals": {
+        "spFuturesChange": -0.08,
+        "nasdaqFuturesChange": 0.08,
+        "dowFuturesChange": -0.61,
+        "russellFuturesChange": -0.2,
+        "vixFuturesChange": 12.63,
+        "vix": 27.29,
+        "vixChange": 12.63,
+        "vixTermStructure": "backwardation",
+        "vix9d": 0,
+        "vix3m": 24.97,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.21,
+        "tenYearYieldChange": 1.74,
+        "twoYearYield": 3.73,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.86,
+        "threeMonthYield": 3.6,
+        "twoTenSpread": 0.48,
+        "threeMoTenYrSpread": 0.61,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 99.74,
+        "dollarIndexChange": 0.51,
+        "eurUsd": 1.15,
+        "eurUsdChange": -0.59,
+        "usdJpy": 159.07,
+        "usdJpyChange": 0.61,
+        "usdCny": 6.87,
+        "usdCnyChange": -0.16,
+        "oilWTI": 95.73,
+        "oilChange": 9.72,
+        "brentOil": 100.46,
+        "brentOilChange": 9.22,
+        "natGasChange": 0.75,
+        "goldPrice": 5115.8,
+        "goldChange": -1,
+        "silverChange": -0.46,
+        "copperChange": -0.36,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -1.04,
+        "daxChange": -0.21,
+        "ftseChange": -0.47,
+        "shanghaiChange": -0.1,
+        "hangSengChange": -0.7,
+        "kospiChange": -0.48,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 100.7,
+        "spreadChange": 0.22,
+        "igSpread": -18.32,
+        "igSpreadChange": 0.82,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.98,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 0.48,
+        "xlfChange": -0.84,
+        "xleChange": 2.48,
+        "xlvChange": -0.2,
+        "xlpChange": -1.32,
+        "xluChange": -0.84,
+        "xlreChange": -1.19,
+        "xliChange": -0.31,
+        "xlbChange": -0.08,
+        "xlcChange": -0.32,
+        "xlyChange": -0.26,
+        "smhChange": 0.93,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 0.41,
+        "ethereumChange": 1.05,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": true,
+        "econDataType": "CPI",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 7,
+        "daysToNextCPI": 0,
+        "daysToNextNFP": 23,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 2,
+        "sp5DayReturn": -1.36,
+        "sp20DayReturn": -2.39,
+        "nasdaqVsRussell5d": 3.13,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "crisis",
+        "confidence": 90,
+        "directionalBias": "-60",
+        "volatilityRegime": "elevated",
+        "stressIndex": 39,
+        "riskAppetiteIndex": 42,
+        "sectorTilts": {
+          "tech": "underweight",
+          "utilities": "overweight",
+          "healthcare": "overweight",
+          "financials": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": "Markets are operating in a confirmed CRISIS regime (90% confidence) with VIX at 27.29 and term structure in backwardation — a rare condition signaling acute near-term fear premium. The S&P has logged two consecutive down days (-1.36% over 5 days, -2.39% over 20 days) while today's CPI print is the single most important catalyst of the session. A dangerous cocktail of surging oil (+9.72% WTI to $95.73), a weakening dollar, and broad defensive sector underperformance suggests markets are pricing stagflationary pressure — not a clean growth scare.",
+        "marketCondition": "volatile",
+        "sections": [
+          {
+            "title": "🚨 Regime Alert: Crisis Mode Active",
+            "content": "The SIGNAL regime engine has classified current conditions as CRISIS with 90% confidence. VIX at 27.29 — up 12.63% at the prior close — combined with VIX term structure backwardation (near-term contracts trading above long-dated) is the defining signal. Backwardation means options traders are paying up for immediate protection, not future hedges. This is not typical 'choppy market' behavior — it reflects genuine liquidity stress and elevated cross-asset correlation. All long trades carry a -15 conviction penalty today. Minimum conviction threshold is raised to 80. The regime playbook is explicit: only take 80+ conviction trades, prefer shorts or defensive longs. Do NOT fight the regime.",
+            "importance": "high"
+          },
+          {
+            "title": "📅 CPI Day: The Only Event That Matters This Morning",
+            "content": "CPI prints TODAY with FOMC exactly 7 days out. This is the highest-stakes data sequencing possible. With WTI crude up nearly 10% in a single session to $95.73, energy-driven CPI upside is a live risk. If headline CPI surprises hot, the Fed's path to any dovish pivot evaporates instantly — bond yields spike, growth multiples compress, and the crisis regime deepens. If CPI comes in cool despite oil, markets may interpret it as lagged energy pass-through not yet reflected, buying a brief relief rally. The Fed cannot ignore a hot print one week before their decision. Traders should be positioned BEFORE the number or flat — not chasing into the release. Elevated VIX means options are expensive; premium selling is dangerous on a binary event day.",
+            "importance": "high"
+          },
+          {
+            "title": "🔄 Sector Rotation: A Contradictory and Revealing Picture",
+            "content": "Yesterday's sector tape tells a nuanced and somewhat alarming story. Energy (XLE) led with +2.48% — entirely oil-price driven, not a risk-on signal. Semis (SMH +0.93%) and Tech (XLK +0.48%) showed resilience on the surface, but this is likely short-covering or tactical momentum, not genuine rotation into risk. The truly bearish signal is in what FELL: Utilities (XLU -0.84%) and Staples (XLP -1.32%) — the two canonical crisis/defensive havens — were the worst performers outside Real Estate. This is not a normal risk-off playbook. When defensives sell off alongside cyclicals, it points to forced liquidation or broad deleveraging, not orderly rotation. Real Estate (XLRE -1.19%) is being crushed by rate sensitivity. Financials (XLF -0.84%) weakness confirms credit stress concerns embedded in the regime classification. Healthcare (XLV -0.20%) underperforms despite the regime calling for overweight — watch for stabilization as a potential defensive re-entry signal.",
+            "importance": "high"
+          },
+          {
+            "title": "📈 Yield Curve & Rate Signals: Steepening Into Uncertainty",
+            "content": "The 10-year yield jumped +1.74% to 4.21% — a meaningful single-session move. The 2-10 spread sits at 48bps and the 3M-10Y at 61bps, meaning the curve is positively sloped (no longer inverted). Under normal circumstances, curve steepening is bullish — it signals growth expectations returning. In the current context, however, steepening is being driven by the LONG END rising, not the short end falling. This is a 'bear steepener' pattern — the bond market is demanding more term premium for holding duration, likely because of inflation concerns (oil at $95.73) and fiscal uncertainty. A bear steepener is historically negative for equities, particularly rate-sensitive sectors. The 10Y at 4.21% with a hot CPI risk today means 4.40-4.50% is not off the table before the FOMC meeting — which would further pressure multiples.",
+            "importance": "high"
+          },
+          {
+            "title": "💵 Currency & Commodity Flows: The Stagflation Signal",
+            "content": "The DXY at 99.74 (+0.51%) is strengthening, yet EUR/USD holds at 1.15 and USD/JPY sits at 159.07 — the yen remains historically weak, suggesting BOJ-Fed divergence continues. Dollar strength alongside rising yields is typically an emerging market headwind and a drag on multinational earnings. Gold falling -1.0% to $5,115.80 while oil surges +9.72% to $95.73 is a critical divergence: gold weakness suggests some risk premium is being unwound (or liquidated for margin), while oil's parabolic move is a supply/geopolitical shock story. Together, this creates the stagflation composite — energy inflation with financial stress. Bitcoin +0.41% and Ethereum +1.05% are quiet; crypto is not leading risk appetite in either direction today, which is consistent with the broader uncertainty. International markets are uniformly red: Nikkei -1.04%, FTSE -0.47%, Hang Seng -0.70% — no safe harbor in global equities.",
+            "importance": "medium"
+          },
+          {
+            "title": "⚡ Growth vs. Value Divergence: Nasdaq Holding Relative Strength",
+            "content": "Over the 5-day window, Nasdaq is outperforming Russell by +3.13 percentage points — a significant spread. Large-cap growth (Nasdaq) is acting as a 'quality refuge' trade relative to small-cap value (Russell -0.20% yesterday). This is somewhat paradoxical in a crisis regime where high-beta typically sells first, but can be explained by: (1) mega-cap tech has fortress balance sheets and doesn't need credit markets, (2) small-caps are more exposed to domestic credit conditions and banking stress, (3) momentum/systematic funds are long large-cap growth. This divergence is NOT sustainable if the crisis regime deepens — eventually the beta unwind hits everything. Do not interpret Nasdaq relative strength as a green light for tech longs.",
+            "importance": "medium"
+          },
+          {
+            "title": "🏦 Credit Markets: A Split Signal Requiring Caution",
+            "content": "HY spreads at 100.7bps (+0.22bps) are mildly wider — directionally consistent with stress but not yet at levels that signal systemic credit panic. However, the IG spread at -18.32bps is an unusual reading that warrants scrutiny; negative IG spreads relative to a benchmark can indicate technical distortions or data anomalies. The relatively contained credit spread widening (given VIX at 27+) suggests either: (1) credit markets have not fully caught up to equity stress, creating a lag risk, or (2) the equity volatility is being driven more by rates/macro than pure credit fear. History shows credit often follows equity stress with a 2-5 day lag. If HY spreads begin accelerating wider, treat it as a confirmation signal for the crisis regime deepening significantly.",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": [
+          {
+            "event": "🔥 CPI PRINT — HOT SURPRISE (above consensus)",
+            "scenarios": [
+              {
+                "condition": "If CPI comes in materially above expectations (e.g., headline >0.5% MoM or core >0.4%), driven by energy and shelter",
+                "implication": "10Y yield spikes toward 4.40-4.50%, Fed rate cut expectations for 2026 evaporate entirely. Equity futures sell off sharply — S&P likely tests recent lows with momentum acceleration. Dollar surges, gold may paradoxically rally on stagflation fear after initial dip. VIX could push toward 30-32. Crisis regime confidence moves to 95%+. Financials and Real Estate hit hardest. The 'quality growth refuge' trade in Nasdaq breaks down as rate sensitivity overwhelms balance sheet quality arguments.",
+                "trade": "Crisis regime + hot CPI = SHORT bias confirmed. Consider short XLF (financials stress + rate pressure), short XLRE (rate sensitivity maximum pain), short XLY (discretionary consumer under stagflation squeeze). For defensive longs that clear 80+ conviction: XLV if it stabilizes pre-open, XLE as a direct oil-inflation hedge. Avoid any leveraged long positions — the -15 conviction penalty on longs likely pushes most setups below the 80 threshold."
+              }
+            ]
+          },
+          {
+            "event": "❄️ CPI PRINT — COOL SURPRISE (below consensus)",
+            "scenarios": [
+              {
+                "condition": "If CPI comes in below expectations (headline ≤0.2% MoM, core ≤0.2%) suggesting oil pass-through is lagged and underlying disinflation intact",
+                "implication": "Initial relief rally — S&P futures spike, 10Y yield pulls back from 4.21%, VIX compresses toward 24-25. However, the rally faces significant headwinds: (1) The crisis regime is structural — one data point doesn't clear backwardation or reset correlation; (2) WTI at $95.73 means next month's CPI is almost certainly going higher; (3) FOMC in 7 days will still need to acknowledge oil risk. The relief rally is likely a SELLING OPPORTUNITY, not an all-clear. Tactically, a cool print could trigger a 0.8-1.5% intraday S&P bounce that fades by end of day as traders re-price next month's CPI risk.",
+                "trade": "Fade the rip. If S&P futures gap up 0.8%+ on cool CPI, the regime says this is a short opportunity on the open — not a long entry. Any bounce in rate-sensitives (XLRE, XLU) on yield pullback should be faded. The only clean defensive long that makes regime sense on a cool print: accumulate XLV (healthcare) if it clears the prior day's high on volume — it's been oversold relative to its regime-prescribed overweight."
+              }
+            ]
+          },
+          {
+            "event": "⚡ OIL SHOCK CONTINUATION — WTI Extends Beyond $100",
+            "scenarios": [
+              {
+                "condition": "If WTI crude sustains above $95 and pushes toward $100+ during the session (supply disruption, geopolitical escalation, or demand re-pricing)",
+                "implication": "Energy sector becomes the only performing long in the market. However, this is a double-edged sword: oil above $100 historically triggers consumer confidence deterioration, transportation cost spikes, and margin compression across industrials and discretionary. The stagflation narrative becomes consensus, not a tail risk. Bond yields reprice higher regardless of today's CPI print (the market will front-run next month's data). The crisis regime deepens. Small-cap Russell underperformance versus Nasdaq accelerates — small caps have higher input cost sensitivity and weaker pricing power. The Nikkei correlation is worth watching: JPY weakness + $100 oil is an existential pressure on Japan's import-heavy economy.",
+                "trade": "Long XLE with conviction — energy is the only sector with fundamental tailwinds in this scenario AND it aligns with the crisis regime's tolerance for non-beta defensive commodities. Pair with short XLY (discretionary consumers can't absorb $100 oil) for a relative value trade. Short XLI (industrials) as input cost squeeze plays. The XLE long is one of the few trades likely to clear 80+ conviction even with the -15 long penalty applied, given the direct fundamental catalyst."
+              }
+            ]
+          }
+        ]
+      },
+      "recommendations": [
+        {
+          "symbol": "XLF",
+          "direction": "short",
+          "entryPrice": 49.8,
+          "targetPrice": 47,
+          "stopLoss": 51.5,
+          "thesis": "Financial sector faces a dual squeeze: private credit stress (Blue Owl/BlackRock withdrawal limits flagged) and a yield curve that is steepening on a credit-risk bid — not a NIM tailwind. XLF has broken down -4.5% in 3 days with KRE off -7%, and today's in-line CPI print provides no rescue catalyst for rate-sensitive financials in a stagflationary oil-shock environment.",
+          "catalyst": "CPI March 11 in-line (2.4% YoY) removes rate-cut hopes; private credit stress headlines from prior days; oil shock stagflation narrative tightens lending conditions; regime explicitly underweights financials (credit stress factor).",
+          "conviction": {
+            "catalystClarity": {
+              "score": 82,
+              "reasoning": "Multiple converging catalysts: private credit stress, steepening yield curve focused on credit risk (not NIM), in-line CPI ruling out near-term Fed cut, and ongoing Iran war oil shock amplifying recession fears in loan books. All pre-market known."
+            },
+            "technicalSetup": {
+              "score": 80,
+              "reasoning": "XLF is in a confirmed 3-day breakdown, down 4.5% from recent levels. KRE (highly correlated regional bank ETF) down 7% in the same period — its worst 3-day since April 7 washout. Price structure suggests distribution, not consolidation."
+            },
+            "riskReward": {
+              "score": 83,
+              "reasoning": "Entry ~$49.80, target $47.00 (-5.6%), stop $51.50 (+3.4%). Raw R:R of ~1.65:1. Scaled by crisis regime 1.5x target methodology, effective R:R improves. CPI in-line removes upside catalyst for financials today."
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": "XLF is one of the most liquid sector ETFs in the market with billions in AUM and tight bid/ask spreads. Easy to enter and exit at precise levels."
+            },
+            "marketAlignment": {
+              "score": 90,
+              "reasoning": "CRISIS regime explicitly assigns UNDERWEIGHT to financials due to credit stress. This short is perfectly aligned with the regime's sector tilt. Short trades carry 0 regime penalty — no conviction discount applied."
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": "Private credit stress (withdrawal limits at major managers) is visible but not universally priced. XLF's relationship to oil-shock credit risk (higher energy prices → tighter corporate loan performance → delinquency creep) is underappreciated by retail. Deleted tanker tweet restores oil risk premium."
+            },
+            "timingUrgency": {
+              "score": 82,
+              "reasoning": "CPI print at 8:30 AM is the day's pivotal event. In-line data removes the 'rate-cut rescue' scenario for financials. Market opens with oil shock narrative re-confirmed (deleted tanker tweet). Urgency is high — this window closes if oil falls hard again on new de-escalation headlines."
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "XLF",
+          "openPrice": 49.98,
+          "highPrice": 50.12,
+          "lowPrice": 48.79,
+          "closePrice": 48.89,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.83,
+          "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $49.98, High $50.12, Low $48.79, Close $48.89."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 100,
+        "targetHitRate": 0,
+        "stopHitRate": 0,
+        "avgReturnPercent": 1.83,
+        "profitFactor": 10,
+        "winRate": 100,
+        "totalScore": 89.5,
+        "benchmarkReturn": -0.18,
+        "alpha": 2.01
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 82,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 80,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "riskReward": {
+          "avgScoreWinners": 83,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 85,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 90,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "informationEdge": {
+          "avgScoreWinners": 78,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 82,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 23266
     }
   ],
   "bestScore": 100,
@@ -49724,8 +50044,8 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T20:44:39.017Z",
-  "totalTokensUsed": 3625689,
+  "lastUpdatedAt": "2026-04-06T20:52:32.336Z",
+  "totalTokensUsed": 3648955,
   "weightHistory": [
     {
       "trial": 10,
@@ -50744,6 +51064,7 @@
   "completedDates": [
     "2026-03-12",
     "2024-08-12",
-    "2024-08-26"
+    "2024-08-26",
+    "2026-03-11"
   ]
 }
