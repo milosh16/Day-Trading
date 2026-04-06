@@ -1,0 +1,393 @@
+{
+  "trialId": 10005,
+  "date": "2025-05-13",
+  "dateDisplay": "Tuesday, May 13, 2025",
+  "generatedAt": "2026-04-06T20:33:28.927Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.72,
+      "nasdaqFuturesChange": 1.61,
+      "dowFuturesChange": -0.64,
+      "russellFuturesChange": 0.49,
+      "vixFuturesChange": 2.2,
+      "vix": 18.62,
+      "vixChange": 2.2,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 20.09,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.5,
+      "tenYearYieldChange": 0.94,
+      "twoYearYield": 4.17,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.94,
+      "threeMonthYield": 4.28,
+      "twoTenSpread": 0.33,
+      "threeMoTenYrSpread": 0.22,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 101.04,
+      "dollarIndexChange": 0.04,
+      "eurUsd": 1.12,
+      "eurUsdChange": 0.81,
+      "usdJpy": 147.53,
+      "usdJpyChange": -0.53,
+      "usdCny": 7.21,
+      "usdCnyChange": 0.05,
+      "oilWTI": 63.15,
+      "oilChange": -0.82,
+      "brentOil": 66.09,
+      "brentOilChange": -0.81,
+      "natGasChange": -4.25,
+      "goldPrice": 3181.4,
+      "goldChange": -1.82,
+      "silverChange": -1.95,
+      "copperChange": -1.51,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.14,
+      "daxChange": -0.47,
+      "ftseChange": -0.21,
+      "shanghaiChange": 0.86,
+      "hangSengChange": 2.3,
+      "kospiChange": 1.23,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 102.65,
+      "spreadChange": -0.18,
+      "igSpread": -13.36,
+      "igSpreadChange": -0.08,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.95,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 2.16,
+      "xlfChange": 0.41,
+      "xleChange": 1.41,
+      "xlvChange": -3.01,
+      "xlpChange": -1.35,
+      "xluChange": -0.14,
+      "xlreChange": -1.34,
+      "xliChange": 0.7,
+      "xlbChange": -0.5,
+      "xlcChange": 0.98,
+      "xlyChange": 1.32,
+      "smhChange": 3.43,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.61,
+      "ethereumChange": -2.61,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": true,
+      "econDataType": "CPI",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": true,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 36,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 24,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 2,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 4.99,
+      "sp20DayReturn": 8.89,
+      "nasdaqVsRussell5d": 1.46,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "event-driven",
+      "confidence": 70,
+      "directionalBias": 17,
+      "volatilityRegime": "normal",
+      "stressIndex": 17,
+      "riskAppetiteIndex": 57,
+      "keyFactors": [
+        "Major economic data or imminent FOMC"
+      ],
+      "sectorTilts": [],
+      "convictionModifiers": {
+        "longPenalty": 5,
+        "shortPenalty": 5,
+        "targetMultiplier": 1.2,
+        "minConvictionOverride": 77
+      }
+    },
+    "briefing": {
+      "summary": true,
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Macro",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Geopolitical",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "SectorAnalysis",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "TechnicalSetup",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "FlowsAndPositioning",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "CatalystsAndEvents",
+          "content": "[object Object]",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "TLT",
+      "direction": "long",
+      "entryPrice": 86.24,
+      "targetPrice": 88.8,
+      "stopLoss": 85.1,
+      "thesis": "Post-CPI bond rally play. This is the cleanest event-driven trade on the board. April CPI came in soft at +0.2% MoM / 2.3% YoY (vs +0.3% / 2.4% expected) -- lowest YoY since Feb 2021. The 10Y yield at 4.5% spiked on risk-on rotation out of bonds on May 12, creating an overdone selloff. Soft CPI directly supports rate cut expectations and bond prices. TLT sold off -0.93% on May 12 as money fled to equities -- this creates a mean-reversion setup reinforced by the fundamental catalyst of cooler inflation. R:R = 2.56:1.14 = 2.2:1. CRITICAL: This is a POST-DATA trade. Enter only after 8:30 AM CPI confirms soft print.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XLV",
+      "direction": "short",
+      "entryPrice": 135.96,
+      "targetPrice": 132.5,
+      "stopLoss": 137.8,
+      "thesis": "Healthcare sector short on dual headwinds: (1) Trump's most-favored-nation drug pricing executive order signed May 12 targeting 30-80% cost reductions -- a structural policy threat to pharma margins. The EO directed HHS to implement direct-to-consumer programs and threatened revocation of FDA approvals for non-compliant manufacturers. (2) XLV was already the worst-performing sector on May 12 (signals show -3.01%). This trade works independent of the CPI outcome because the drug pricing EO is a separate, sector-specific catalyst. Pharma stocks (MRK, JNJ, ABBV, PFE, GILD, TEVA) are specifically in the crosshairs. R:R = 3.46:1.84 = 1.9:1. -5 short conviction penalty applied for event-driven regime.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 79,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "QQQ",
+      "direction": "long",
+      "entryPrice": 507.85,
+      "targetPrice": 520,
+      "stopLoss": 500,
+      "thesis": "Post-CPI momentum continuation in tech/growth. Soft CPI (+0.2% vs +0.3% expected) + US-China tariff deal = double tailwind for Nasdaq. Lower inflation supports lower rate expectations which supports higher growth multiples. Nasdaq futures +1.61% pre-market. SMH +3.43% prior day. However, QQQ already +4.07% on May 12 -- extended. REDUCED SIZING mandatory given the 5-day rally. R:R = 12.15:7.85 = 1.5:1 (barely acceptable). CRITICAL: POST-DATA trade only. Enter only if QQQ holds above 505 through the first 30 minutes after CPI. If it breaks 505, this trade is dead. -5 long conviction penalty applied for event-driven regime.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 73,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "TLT",
+      "openPrice": 86.13,
+      "highPrice": 86.32,
+      "lowPrice": 85.2,
+      "closePrice": 86.07,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.2,
+      "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $86.13, High $86.32, Low $85.2, Close $86.07."
+    },
+    {
+      "symbol": "XLV",
+      "openPrice": 133.94,
+      "highPrice": 133.94,
+      "lowPrice": 127.35,
+      "closePrice": 130.46,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 4.05,
+      "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $133.94, High $133.94, Low $127.35, Close $130.46."
+    },
+    {
+      "symbol": "QQQ",
+      "openPrice": 509.16,
+      "highPrice": 521.93,
+      "lowPrice": 508.42,
+      "closePrice": 519.25,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.24,
+      "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $509.16, High $521.93, Low $508.42, Close $519.25."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 66.7,
+    "targetHitRate": 66.7,
+    "stopHitRate": 0,
+    "avgReturnPercent": 2.03,
+    "profitFactor": 31.45,
+    "winRate": 66.7,
+    "totalScore": 84.6,
+    "benchmarkReturn": 0.59,
+    "alpha": 1.44
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 76,
+      "avgScoreLosers": 82,
+      "predictivePower": 44
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

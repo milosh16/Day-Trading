@@ -1,0 +1,283 @@
+{
+  "id": "briefing-2025-05-13-1775507608945",
+  "date": "2025-05-13",
+  "generatedAt": "2026-04-06T20:33:28.927Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorAnalysis",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "TechnicalSetup",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "FlowsAndPositioning",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "CatalystsAndEvents",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG TLT @ $undefined",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $undefined",
+          "implication": "+NaN% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $undefined",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XLV @ $undefined",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $undefined",
+          "implication": "+NaN% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $undefined",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG QQQ @ $undefined",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $undefined",
+          "implication": "+NaN% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $undefined",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "event-driven",
+  "regimeConfidence": 70,
+  "recommendations": [
+    {
+      "ticker": "TLT",
+      "direction": "long",
+      "entry": 86.24,
+      "target": 88.8,
+      "stop": 85.1,
+      "timeframe": "1-3 days",
+      "thesis": "Post-CPI bond rally play. This is the cleanest event-driven trade on the board. April CPI came in soft at +0.2% MoM / 2.3% YoY (vs +0.3% / 2.4% expected) -- lowest YoY since Feb 2021. The 10Y yield at 4.5% spiked on risk-on rotation out of bonds on May 12, creating an overdone selloff. Soft CPI directly supports rate cut expectations and bond prices. TLT sold off -0.93% on May 12 as money fled to equities -- this creates a mean-reversion setup reinforced by the fundamental catalyst of cooler inflation. R:R = 2.56:1.14 = 2.2:1. CRITICAL: This is a POST-DATA trade. Enter only after 8:30 AM CPI confirms soft print.",
+      "conviction": {
+        "catalyst": 85,
+        "technicals": 78,
+        "riskReward": 82,
+        "timing": 80,
+        "conviction": 78,
+        "liquidity": 95,
+        "regime": 80,
+        "total": 83
+      }
+    },
+    {
+      "ticker": "XLV",
+      "direction": "short",
+      "entry": 135.96,
+      "target": 132.5,
+      "stop": 137.8,
+      "timeframe": "2-5 days",
+      "thesis": "Healthcare sector short on dual headwinds: (1) Trump's most-favored-nation drug pricing executive order signed May 12 targeting 30-80% cost reductions -- a structural policy threat to pharma margins. The EO directed HHS to implement direct-to-consumer programs and threatened revocation of FDA approvals for non-compliant manufacturers. (2) XLV was already the worst-performing sector on May 12 (signals show -3.01%). This trade works independent of the CPI outcome because the drug pricing EO is a separate, sector-specific catalyst. Pharma stocks (MRK, JNJ, ABBV, PFE, GILD, TEVA) are specifically in the crosshairs. R:R = 3.46:1.84 = 1.9:1. -5 short conviction penalty applied for event-driven regime.",
+      "conviction": {
+        "catalyst": 80,
+        "technicals": 77,
+        "riskReward": 79,
+        "timing": 78,
+        "conviction": 74,
+        "liquidity": 90,
+        "regime": 75,
+        "total": 79
+      }
+    },
+    {
+      "ticker": "QQQ",
+      "direction": "long",
+      "entry": 507.85,
+      "target": 520,
+      "stop": 500,
+      "timeframe": "1-3 days",
+      "thesis": "Post-CPI momentum continuation in tech/growth. Soft CPI (+0.2% vs +0.3% expected) + US-China tariff deal = double tailwind for Nasdaq. Lower inflation supports lower rate expectations which supports higher growth multiples. Nasdaq futures +1.61% pre-market. SMH +3.43% prior day. However, QQQ already +4.07% on May 12 -- extended. REDUCED SIZING mandatory given the 5-day rally. R:R = 12.15:7.85 = 1.5:1 (barely acceptable). CRITICAL: POST-DATA trade only. Enter only if QQQ holds above 505 through the first 30 minutes after CPI. If it breaks 505, this trade is dead. -5 long conviction penalty applied for event-driven regime.",
+      "conviction": {
+        "catalyst": 82,
+        "technicals": 72,
+        "riskReward": 73,
+        "timing": 75,
+        "conviction": 72,
+        "liquidity": 95,
+        "regime": 78,
+        "total": 78
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "GLD",
+      "price": 298.19,
+      "reason": "Gold sold off -2.82% on May 12 risk-on rotation, but soft CPI + rate cut expectations create a conflicting bullish force for gold. Rate cut expectations move forward on soft inflation data, which is historically gold-positive. Watch for stabilization above 295 as potential reversal signal. If gold holds above 295 post-CPI, could be a long entry for a rate-cut-driven recovery.",
+      "triggerCondition": "Post-CPI stabilization above 295; reversal pattern on intraday chart; 10Y yield declining"
+    },
+    {
+      "ticker": "AAPL",
+      "price": 210.79,
+      "reason": "Biggest China-exposed mega-cap. Already +6.18% on May 12 tariff deal. Leading beneficiary of tariff reduction (massive China supply chain). If soft CPI adds fuel, could test 215. But extended -- profit-taking risk is real. Watch for ability to hold above 208.",
+      "triggerCondition": "Holds above 208 after CPI release; breaks above 212 on volume"
+    },
+    {
+      "ticker": "SMH",
+      "price": 237.41,
+      "reason": "Semiconductors led the May 12 rally at +6.27%. NVDA +5.44%, AVGO +6.43%, AMD +5.13%. Most leveraged to both the trade deal (supply chain relief) and AI capex thesis. Extremely extended but could see momentum continuation on soft CPI supporting growth rotation. Critical level: 233 support.",
+      "triggerCondition": "Holds above 233 post-CPI; volume confirmation above 237; enter on first pullback that holds support"
+    },
+    {
+      "ticker": "XLRE",
+      "price": 41.65,
+      "reason": "Rate-sensitive real estate sector was flat on May 12 while everything else surged. If soft CPI drives 10Y yield lower, XLRE is the catch-up play. REITs directly benefit from rate cut expectations. This is the 'second derivative' trade -- after the tariff deal lifts growth sectors, soft CPI lifts rate-sensitive sectors.",
+      "triggerCondition": "10Y yield drops below 4.45% post-CPI; XLRE breaks above 42.00"
+    }
+  ],
+  "avoidList": [
+    {
+      "ticker": "UVXY",
+      "price": 108.55,
+      "reason": "Down -19.56% on May 12. Tempting to buy vol into CPI event risk, but VIX term structure in contango means relentless time decay. Soft CPI (which materialized) further crushes volatility. Even in the hot CPI scenario, the risk-on force from the tariff deal would likely cap any vol spike. The product is structurally designed to lose value over time. Contango bleed makes this a losing proposition even with a brief vol pop."
+    },
+    {
+      "ticker": "TQQQ",
+      "price": 33.06,
+      "reason": "Already +12.11% on May 12. 3x leveraged Nasdaq ETF at these extreme levels carries severe mean-reversion risk. Even if the market goes higher, any intraday 2% pullback in QQQ creates a 6% loss in TQQQ. The risk/reward for 3x leverage after a 12% single-day move is objectively terrible. If bullish on Nasdaq, use QQQ at 1x leverage -- the thesis is the same with far better risk management."
+    },
+    {
+      "ticker": "GDX",
+      "price": 46.62,
+      "reason": "Gold miners collapsed -7.44% on May 12 in the most aggressive safety-trade unwind of the session. While soft CPI could help gold stabilize, gold miners add company-specific operational risk on top of gold price risk. If gold bounces, GLD is the cleaner instrument. GDX also carries the risk that the risk-on rotation is structural (trade deal), not just one-day noise, meaning gold may not recover quickly. Wait for gold itself to find a confirmed floor before considering miners."
+    }
+  ],
+  "trainingData": {
+    "trialId": 10005,
+    "outcomes": [
+      {
+        "symbol": "TLT",
+        "openPrice": 86.13,
+        "highPrice": 86.32,
+        "lowPrice": 85.2,
+        "closePrice": 86.07,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.2,
+        "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $86.13, High $86.32, Low $85.2, Close $86.07."
+      },
+      {
+        "symbol": "XLV",
+        "openPrice": 133.94,
+        "highPrice": 133.94,
+        "lowPrice": 127.35,
+        "closePrice": 130.46,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.05,
+        "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $133.94, High $133.94, Low $127.35, Close $130.46."
+      },
+      {
+        "symbol": "QQQ",
+        "openPrice": 509.16,
+        "highPrice": 521.93,
+        "lowPrice": 508.42,
+        "closePrice": 519.25,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.24,
+        "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $509.16, High $521.93, Low $508.42, Close $519.25."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 66.7,
+      "targetHitRate": 66.7,
+      "stopHitRate": 0,
+      "avgReturnPercent": 2.03,
+      "profitFactor": 31.45,
+      "winRate": 66.7,
+      "totalScore": 84.6,
+      "benchmarkReturn": 0.59,
+      "alpha": 1.44
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 76,
+        "avgScoreLosers": 82,
+        "predictivePower": 44
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.59,
+    "alpha": 1.44,
+    "fullDepth": true
+  }
+}
