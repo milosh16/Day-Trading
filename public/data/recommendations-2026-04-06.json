@@ -1,65 +1,112 @@
 {
   "date": "2026-04-06",
   "recommendations": {
-    "marketOutlook": "Markets are in a fragile range-bound regime dominated by the binary Hormuz deadline tomorrow (April 7 at 8pm ET) and CPI on Friday. Extreme fear (F&G: 19) with negative dealer gamma means any catalyst will be amplified. The Strait of Hormuz outcome alone could swing the S&P 3-5% in either direction. Breadth divergence (48.31% above 200 DMA while index rallied 3.6% in 5 days) warns that narrow leadership is masking underlying weakness. This is a sit-on-hands environment until the binary events resolve.",
+    "marketOutlook": "War-driven regime with extreme fear (F&G 19) and negative gamma creating amplified moves in both directions. The S&P bounced 6% last week on ceasefire hopes, but breadth divergence (only 48.3% above 200 DMA) warns this is narrow, fragile leadership. March CPI on April 10 is the next major macro catalyst — oil pass-through could push inflation expectations higher and kill remaining rate cut hopes. The dominant trade remains long energy/gold/defense, short airlines/consumer, but the range-bound regime with elevated VIX means forcing trades carries high risk. Binary outcomes (ceasefire vs. escalation) make position sizing critical.",
     "riskLevel": "elevated",
-    "recommendations": [],
+    "recommendations": [
+      {
+        "ticker": "NO_TRADE_RECOMMENDED",
+        "direction": "none",
+        "entryPrice": null,
+        "targetPrice": null,
+        "stopPrice": null,
+        "riskRewardRatio": null,
+        "positionSize": "0%",
+        "catalyst": "Range-bound regime with 39% confidence, extreme binary risk (ceasefire vs. escalation), negative gamma amplification, and CPI in 4 days",
+        "reasoning": "SIGNAL's highest-conviction candidate (DAL short into earnings) scores 74 composite — below the regime-mandated minimum of 78. The range-bound regime with -5 penalties on both longs and shorts, combined with extreme binary geopolitical risk (Iran ceasefire vs. escalation could move markets 5%+ in either direction), negative dealer gamma (amplified moves), and March CPI on April 10, creates an environment where the EXPECTED VALUE of forcing a trade is negative. Every candidate either: (a) has poor risk/reward at current levels (XOM near resistance, GDX 28% above 50-DMA, LMT at consensus PT), (b) faces binary event risk that makes stop placement unreliable (DAL earnings, ceasefire headlines), or (c) lacks sufficient timing urgency for a day trade (CCJ, AMD, LLY). Cash is a position. The disciplined move is to wait for either: a ceasefire resolution (then aggressively short energy/gold, long airlines), an escalation confirmation (then aggressively long energy/gold), or a CPI print that provides macro clarity.",
+        "bearCase": "Missing a 3-5% move in energy or gold if escalation accelerates before we can enter",
+        "conviction": {
+          "catalystClarity": 0,
+          "technicalSetup": 0,
+          "riskReward": 0,
+          "volumeLiquidity": 0,
+          "marketAlignment": 0,
+          "informationEdge": 0,
+          "timingUrgency": 0
+        },
+        "compositeScore": 0
+      },
+      {
+        "ticker": "DAL",
+        "direction": "short",
+        "entryPrice": 66.7,
+        "targetPrice": 62.5,
+        "stopPrice": 68.75,
+        "riskRewardRatio": 2.05,
+        "positionSize": "2% of portfolio (reduced from standard 3% due to regime uncertainty)",
+        "catalyst": "Q1 earnings April 8 pre-market. Jet fuel costs +103% MoM devastate margins. Wide guidance ($0.50-$0.90) signals management uncertainty. Put/call skew confirms bearish positioning.",
+        "reasoning": "DAL reports Q1 earnings on April 8 pre-market with jet fuel at $195/bbl (up 103% in a month). Most airlines abandoned fuel hedging — DAL's refinery provides partial buffer but cannot offset a doubling of fuel costs. The EPS guide of $0.50-$0.90 is extremely wide, signaling management uncertainty. Options market confirms bearish sentiment (IV30 at 54.6, top 25% of year, put preference). The stock bounced from $55.20 to $66.70 — a 20% recovery that appears premature given the fuel cost reality. Regime underweight airlines. Short trades carry -5 penalty but the catalyst is binary and clear.",
+        "bearCase": "Delta's refinery hedge performs better than expected; forward guidance emphasizes pricing power and premium revenue streams; ceasefire hopes provide macro relief; short squeeze on heavily-shorted airline names.",
+        "conviction": {
+          "catalystClarity": 92,
+          "technicalSetup": 68,
+          "riskReward": 82,
+          "volumeLiquidity": 88,
+          "marketAlignment": 70,
+          "informationEdge": 72,
+          "timingUrgency": 95
+        },
+        "compositeScore": 74,
+        "NOTE": "BELOW 78 REGIME MINIMUM. Included as conditional recommendation only — enter ONLY if pre-market data on April 8 confirms weak guidance or if oil spikes above $115 before earnings. Otherwise, this remains a watchlist item."
+      }
+    ],
     "watchlist": [
       {
-        "ticker": "NFLX",
-        "trigger": "Buy if stock pulls back to $95-96 support zone after initial Goldman upgrade gap, with stop at $91. Target $106-108 (3-5 day swing into earnings anticipation).",
-        "reasoning": "Goldman upgrade to Buy with PT $120 is a legitimate catalyst. The stock gapped up 3.25% premarket but has resistance at $105 and $115-117. A pullback to support near $95 would offer a 1.8:1 R:R. Earnings April 16 provides additional catalyst. Wait for the Hormuz binary to resolve first — if market sells off on escalation, NFLX likely pulls back to support. If ceasefire holds, NFLX rallies with broader market."
+        "ticker": "NEM",
+        "trigger": "Buy on pullback to $108-110 (near recent swing low of $107.43) with gold holding above $4,600",
+        "reasoning": "Gold miners have massive operating leverage to gold prices. NEM at $114 with analyst PT $132.88 offers 16.5% upside. But GDX is 28% above 50-DMA — statistically extended and vulnerable to mean-reversion pullback. Wait for a pullback into $108-110 for better entry. If gold breaks $4,800, buy NEM regardless — momentum overrides extension."
       },
       {
-        "ticker": "CVX",
-        "trigger": "SHORT if ceasefire is announced and CVX breaks below $195. Target $186 (analyst consensus), stop $201.",
-        "reasoning": "CVX at $198.97 trades 7% above consensus analyst PT of $186.50. A ceasefire would collapse oil toward $90-95 and CVX would likely gap down through analyst targets. This is a high-conviction mean-reversion short IF the ceasefire binary resolves dovishly. Do NOT enter before the Hormuz outcome."
+        "ticker": "AMD",
+        "trigger": "Buy on confirmed break above $221-225 resistance zone with volume",
+        "reasoning": "$60B Meta deal is transformational, but technically AMD is stuck in $211-$219 chop zone with heavy resistance at $221-225. RSI neutral (53.62), ADX weak (11.62) — no directional trend. Breakout above $225 with volume = high-conviction entry for $250+. Don't chase — wait for confirmation."
       },
       {
-        "ticker": "NVO",
-        "trigger": "Buy if stock breaks above $40 with volume, indicating market accepting GLP-1 duopoly thesis. Stop $35.50, target $47.",
-        "reasoning": "Down 43% in a year but held up on LLY Foundayo approval. Oral Wegovy cross-trial data could catalyze reversion. Analyst PT $51 implies 38% upside. The market has priced NVO for failure in GLP-1 competition, but the oral semaglutide data suggests both companies can win. High R:R contrarian setup."
+        "ticker": "XOM",
+        "trigger": "Buy on pullback to $154-156 support zone (accumulated volume support at $154.19)",
+        "reasoning": "XOM pulled back from ATH $176.41 to $160.69. At current price, closer to resistance than support — poor risk/reward for new entry. If oil stays above $105 and XOM pulls to $154-156, that's a high-conviction buy targeting $170+. Strong Buy quant rating. Ceasefire binary risk is main concern."
       },
       {
         "ticker": "LLY",
-        "trigger": "Buy on any pullback to $895-900 support zone post-Foundayo launch. Stop $870, target $960.",
-        "reasoning": "FDA approval is landmark but stock has rallied since April 1. BofA PT $1,294, consensus $1,222. The first oral GLP-1 creates a massive new addressable market. Wait for a pullback rather than chasing at $920. Pharma is relatively insulated from Hormuz binary."
+        "trigger": "Buy on dip to $900-910 support or break above $957 (post-Foundayo resistance)",
+        "reasoning": "Foundayo is a blockbuster but stock pulled back from $976.68 to $935.58. Consensus PT $1,209. Tariff exemption pathway for domestic pharma. Wait for either support test or breakout — don't enter mid-range."
       },
       {
-        "ticker": "XLE",
-        "trigger": "SHORT at $61+ if ceasefire announced, target $54, stop $63.50. Or LONG below $57 if escalation confirmed, target $63, stop $55.",
-        "reasoning": "XLE is the purest expression of the Hormuz binary. Rather than picking individual energy names, XLE gives diversified exposure. Wait for the binary to resolve. The 52-week range is $37.24-$63.46, so a ceasefire could drive a 10%+ decline while escalation could push to new highs."
+        "ticker": "CCJ",
+        "trigger": "Buy on pullback to $105-108 or on any new hyperscaler nuclear energy announcement",
+        "reasoning": "Nuclear for AI data centers is under-followed structural theme. Meta 2,176 MW deal + TerraPower. CCJ at $112.57 with PT $123-136. Strong Buy consensus. Need better entry or fresh catalyst for urgency."
       },
       {
-        "ticker": "RTX",
-        "trigger": "Buy at $193-194 support with stop at $189.50, target $204.",
-        "reasoning": "RTX has the best fundamental story in defense with $268B backlog and Iran war demand. Currently at $196.21, right at first support at $195.76. If it pulls back to stronger support at $193.35, the R:R improves to ~2:1. Analyst PT $216 provides significant upside. But avoid entry before Hormuz binary resolves."
+        "ticker": "GDX",
+        "trigger": "Buy ONLY on pullback to $88-90 (near 50-DMA of $87.98)",
+        "reasoning": "Highest-conviction sector theme but 28% above 50-DMA is statistically unsustainable. Parabolic pullbacks always come. $88 retest = screaming buy for move back to $95+. Do NOT chase extended move."
+      },
+      {
+        "ticker": "CRWD",
+        "trigger": "Buy on dip to $380 support or on any additional major cyber attack news",
+        "reasoning": "Drift $285M hack highlights cybersecurity urgency. CRWD at $399, down 16% YTD — oversold vs structural demand. Wait for $380 dip or new catalyst."
       }
     ],
     "avoidList": [
       {
-        "ticker": "XOM",
-        "reasoning": "Trading at $170.99, essentially at all-time highs. Analyst consensus PT is AT or BELOW current price. Earnings Apr 24 is a catalyst but entry here offers terrible risk/reward. A Hormuz ceasefire tomorrow could cause a 10-15% drawdown. Parabolic bull pattern with decelerating composite signals exhaustion."
-      },
-      {
-        "ticker": "CVX",
-        "reasoning": "At $198.97, trading 7% ABOVE consensus analyst PT of $186.50. The market has already priced the Iran war premium. 8,000 layoffs signal internal stress. A ceasefire crashes this stock through multiple support levels. Do not go long here."
-      },
-      {
         "ticker": "LMT",
-        "reasoning": "At $623.85, literally AT the consensus PT of $623.16. Hold rating from 14 analysts. Zero upside to consensus. The Iran war premium is fully baked. Any de-escalation removes the urgency bid."
+        "reasoning": "Looks tempting given active war and PAC-3 deal, but analyst consensus is HOLD with PT $575-623 — at or BELOW current price of $617. Trump EO restricts buybacks/dividends. Below-average volume. War premium may be fully priced. Ceasefire = significant downside."
+      },
+      {
+        "ticker": "USO",
+        "reasoning": "Extreme call skew (500%), price at 98.1% of annual range, massive gap up = crowded and one-sided positioning. Ceasefire headline would trigger violent unwind. Asymmetry now favors downside surprises. Oil has priced Hormuz closure. Don't be the last buyer."
+      },
+      {
+        "ticker": "NVO",
+        "reasoning": "Down 43% YTD looks like value play but 100% pharma import tariff unresolved and LLY Foundayo competitive pressure is structural. +2.6% Foundayo day resilience is interesting but insufficient edge for a trade."
+      },
+      {
+        "ticker": "RTX",
+        "reasoning": "Record backlog impressive but same buyback/dividend EO restriction. Consensus already prices defense premium. No volume signal. Insufficient edge over market's bullish defense positioning."
       },
       {
         "ticker": "TSLA",
-        "reasoning": "Down 20% YTD, Q1 deliveries missed, Cybercab regulatory hurdles unresolved, Musk's regulatory optimism unsubstantiated. Analyst maintains underweight with $145 PT (60% downside). Catching a falling knife in a range-bound, fearful market."
-      },
-      {
-        "ticker": "NVDA",
-        "reasoning": "Bearish wave-C correction pattern identified by multiple TradingView analysts. AMD-Meta deal challenges monopoly pricing narrative. At $177, testing critical support — if support breaks, next level is $166-167. Not the time to be a hero long."
-      },
-      {
-        "ticker": "SPY",
-        "reasoning": "Range-bound regime, breadth divergence (index up but only 48.31% above 200 DMA), extreme fear, negative gamma. Binary Hormuz event tomorrow amplifies any move. Index-level trades offer the worst risk/reward in this environment."
+        "reasoning": "Q1 delivery beat already priced in. JPMorgan underweight. Musk political controversy = headline risk. Too many non-fundamental variables for clean trade setup."
       }
     ]
   }
