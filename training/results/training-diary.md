@@ -3701,3 +3701,108 @@
 
 ---
 
+## Day 138/500 — Wednesday, July 31, 2024
+
+### Recommendations (2)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| MSFT | short | $441.5 | $425 | $449 | 86 | Microsoft's Azure cloud grew only 29% in Q4 FY2024 vs. the 3... |
+| AMD | short | $158 | $147 | $164.5 | 80 | AMD beat Q2 estimates across the board and raised its AI chi... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 22.0% | technicalSetup: 15.0% | riskReward: 10.0% | volumeLiquidity: 8.0% | marketAlignment: 20.0% | informationEdge: 10.0% | timingUrgency: 15.0%*
+
+---
+
+## Day 139/500 — Tuesday, April 8, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 22.0% | technicalSetup: 15.0% | riskReward: 10.0% | volumeLiquidity: 8.0% | marketAlignment: 20.0% | informationEdge: 10.0% | timingUrgency: 15.0%*
+
+---
+
+## Day 140/500 — Thursday, August 1, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 22.0% | technicalSetup: 15.0% | riskReward: 10.0% | volumeLiquidity: 8.0% | marketAlignment: 20.0% | informationEdge: 10.0% | timingUrgency: 15.0%*
+
+---
+
+# ========== MILESTONE: 140 TRIALS COMPLETE ==========
+
+### Last 10 Trials Performance
+
+| Metric | Value |
+|--------|-------|
+| Avg Composite Score | 50.0/100 |
+| Avg Win Rate | 0.0% |
+| Avg Direction Accuracy | 0.0% |
+| Avg Profit Factor | 0.00 |
+| Avg Return per Trade | +0.00% |
+| No-Trade Days | 8/10 |
+| Best Score (all time) | 100/100 |
+
+### Overall (140 trials, 25 with trades)
+
+- Overall avg composite: 56.4/100
+- Total tokens used: 2,959,939
+
+### Learnings & Weight Changes
+
+- **catalystClarity**: 22.0% → 19.3% (DECREASED)
+  - *Insufficient data*
+- **riskReward**: 10.0% → 11.5% (INCREASED)
+  - *Insufficient data*
+- **volumeLiquidity**: 8.0% → 10.2% (INCREASED)
+  - *Insufficient data*
+- **marketAlignment**: 20.0% → 18.0% (DECREASED)
+  - *Insufficient data*
+- **informationEdge**: 10.0% → 11.5% (INCREASED)
+  - *Insufficient data*
+
+**New weights:** catalystClarity: 19.3% | technicalSetup: 14.8% | riskReward: 11.5% | volumeLiquidity: 10.2% | marketAlignment: 18.0% | informationEdge: 11.5% | timingUrgency: 14.8%
+
+---
+

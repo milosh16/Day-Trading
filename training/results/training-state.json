@@ -1,14 +1,14 @@
 {
-  "currentTrial": 137,
+  "currentTrial": 140,
   "totalTrials": 500,
   "weights": {
-    "catalystClarity": 0.22,
-    "technicalSetup": 0.15,
+    "catalystClarity": 0.25,
+    "technicalSetup": 0.12,
     "riskReward": 0.1,
     "volumeLiquidity": 0.08,
     "marketAlignment": 0.2,
-    "informationEdge": 0.1,
-    "timingUrgency": 0.15
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
   },
   "results": [
     {
@@ -32891,7 +32891,8 @@
         "informationEdge": 0.1,
         "timingUrgency": 0.15
       },
-      "totalTokensUsed": 18137
+      "totalTokensUsed": 18137,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
     },
     {
       "trialId": 132,
@@ -33133,7 +33134,8 @@
         "informationEdge": 0.1,
         "timingUrgency": 0.15
       },
-      "totalTokensUsed": 24017
+      "totalTokensUsed": 24017,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
     },
     {
       "trialId": 133,
@@ -33404,7 +33406,8 @@
         "informationEdge": 0.1,
         "timingUrgency": 0.15
       },
-      "totalTokensUsed": 24580
+      "totalTokensUsed": 24580,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
     },
     {
       "trialId": 134,
@@ -33641,7 +33644,8 @@
         "informationEdge": 0.1,
         "timingUrgency": 0.15
       },
-      "totalTokensUsed": 17831
+      "totalTokensUsed": 17831,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
     },
     {
       "trialId": 135,
@@ -33870,7 +33874,8 @@
         "informationEdge": 0.1,
         "timingUrgency": 0.15
       },
-      "totalTokensUsed": 18975
+      "totalTokensUsed": 18975,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
     },
     {
       "trialId": 136,
@@ -34105,7 +34110,8 @@
         "informationEdge": 0.1,
         "timingUrgency": 0.15
       },
-      "totalTokensUsed": 19880
+      "totalTokensUsed": 19880,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
     },
     {
       "trialId": 137,
@@ -34339,7 +34345,801 @@
         "informationEdge": 0.1,
         "timingUrgency": 0.15
       },
-      "totalTokensUsed": 23515
+      "totalTokensUsed": 23515,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
+    },
+    {
+      "trialId": 138,
+      "date": "2024-07-31",
+      "generatedAt": "2026-04-06T11:59:09.511Z",
+      "signals": {
+        "spFuturesChange": 1.58,
+        "nasdaqFuturesChange": 2.64,
+        "dowFuturesChange": 0.24,
+        "russellFuturesChange": 0.51,
+        "vixFuturesChange": 13.63,
+        "vix": 18.59,
+        "vixChange": 13.63,
+        "vixTermStructure": "backwardation",
+        "vix9d": 0,
+        "vix3m": 16.97,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.11,
+        "tenYearYieldChange": -0.82,
+        "twoYearYield": 4.34,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.37,
+        "threeMonthYield": 5.14,
+        "twoTenSpread": -0.23,
+        "threeMoTenYrSpread": -1.03,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 104.42,
+        "dollarIndexChange": 0.31,
+        "eurUsd": 1.08,
+        "eurUsdChange": 0.07,
+        "usdJpy": 149.74,
+        "usdJpyChange": -1.92,
+        "usdCny": 7.22,
+        "usdCnyChange": -0.46,
+        "oilWTI": 76.31,
+        "oilChange": -2.05,
+        "brentOil": 79.52,
+        "brentOilChange": -1.49,
+        "natGasChange": -3.34,
+        "goldPrice": 2435,
+        "goldChange": 0.35,
+        "silverChange": -1.55,
+        "copperChange": -2.25,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -2.49,
+        "daxChange": -2.3,
+        "ftseChange": -1.01,
+        "shanghaiChange": -0.22,
+        "hangSengChange": -0.23,
+        "kospiChange": 0.25,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 107.30000000000001,
+        "spreadChange": -0.36,
+        "igSpread": -19.12,
+        "igSpreadChange": -0.58,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.89,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 4.24,
+        "xlfChange": -0.25,
+        "xleChange": 0.42,
+        "xlvChange": -0.37,
+        "xlpChange": -0.18,
+        "xluChange": 1.29,
+        "xlreChange": -0.24,
+        "xliChange": 1.12,
+        "xlbChange": 1.04,
+        "xlcChange": 1.19,
+        "xlyChange": 1.55,
+        "smhChange": 7.63,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 1.14,
+        "ethereumChange": -0.92,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 0,
+        "daysToNextCPI": 0,
+        "daysToNextNFP": 0,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 1,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 1.75,
+        "sp20DayReturn": 0.24,
+        "nasdaqVsRussell5d": -1.21,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "crisis",
+        "confidence": 90,
+        "directionalBias": "-60",
+        "volatilityRegime": "normal",
+        "stressIndex": 30,
+        "riskAppetiteIndex": 47,
+        "sectorTilts": {
+          "tech": "underweight",
+          "utilities": "overweight",
+          "healthcare": "overweight",
+          "financials": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": "Markets are sending deeply contradictory signals on July 31, 2024: U.S. equities surged Tuesday — led by a historic +7.63% explosion in semis (SMH) and +4.24% in tech (XLK) — while international markets cratered (Nikkei -2.49%, DAX -2.30%), VIX spiked +13.63% to 18.59 with the term structure in backwardation, and every classic defensive sector closed red. The regime classifier reads CRISIS at 90% confidence, and the internal data supports that call: yield curve deeply inverted, dollar strengthening, oil dumping, and global equity weakness tell a story of liquidity stress hiding beneath a U.S. tech-led surface rally. Do not be seduced by the green tape — the internals are flashing yellow-to-red.",
+        "marketCondition": "volatile",
+        "sections": [
+          {
+            "title": "🚨 Regime Alert: Crisis Classification at 90% Confidence",
+            "content": "The system has classified today's regime as CRISIS with 90% confidence — the highest-stakes designation in the playbook. This is not a routine bearish flag; it means elevated cross-asset correlations, potential liquidity stress, and a market structure where dislocations can accelerate rapidly. Key confirming signals: VIX at 18.59 jumped +13.63% on a day when equities were broadly green — that divergence is a textbook warning sign. The VIX term structure is in backwardation, meaning near-term options are more expensive than longer-dated ones. Backwardation signals that professionals are paying up for immediate downside protection, not speculative hedges. Stress sits at 30/100 and risk appetite at only 47/100 — modest numbers that nonetheless confirm the market is not in a healthy, broadly participatory bull mode. Operationally: minimum conviction threshold is raised to 80 today, long trades carry a -15 conviction penalty, and targets should be scaled 1.5x wider. Only high-conviction shorts or deeply defensive longs qualify for execution today.",
+            "importance": "high"
+          },
+          {
+            "title": "📊 Surface vs. Structure: The U.S. Equity Rally Is a Mirage",
+            "content": "The headline numbers look bullish: S&P +1.58%, Nasdaq +2.64%, SMH +7.63%. But strip away the semi/tech surge and the picture inverts. Russell 2000 gained only +0.51% — a massive underperformance that signals the rally is narrow, not broad. The 5-day Nasdaq vs. Russell spread shows value leading by -1.21%, confirming the rotation is defensive and concentrated, not the kind of broad risk-on expansion that sustains uptrends. Critically, every defensive sector that should outperform in a genuine risk-on rally instead closed green for wrong reasons: Utilities (XLU) +1.29% — defensive bid. Meanwhile, the sectors that should confirm risk appetite — Financials (XLF) -0.25%, Healthcare (XLV) -0.37%, Staples (XLP) -0.18%, Real Estate (XLRE) -0.24% — all closed red. When Semis rally 7.6% and Healthcare falls 0.4% on the same day, the market is not expressing confidence — it is expressing a single-stock or earnings-driven momentum spike, not systemic bull conviction. Only 1 consecutive up day in the S&P, and the 20-day return is a mere +0.24%, confirming this is not a trending bull environment.",
+            "importance": "high"
+          },
+          {
+            "title": "🌍 International Divergence: Global Risk-Off Is the Real Story",
+            "content": "While U.S. tech celebrated, global markets were in retreat. Nikkei -2.49%, DAX -2.30%, FTSE -1.01%, Shanghai -0.22%, Hang Seng -0.23%. This is a broad international risk-off session. European and Japanese markets are typically correlated with U.S. risk sentiment — when they diverge this sharply to the downside, it signals either a global catalyst that U.S. markets have not yet fully priced, or a dollar/yen dynamic creating stress in carry trade unwinds. The JPY at 149.74 is critically important here: any move toward 150 triggers BOJ intervention risk, and a rapid yen appreciation would devastate the global carry trade that has funded much of the 2024 equity rally. The Nikkei's -2.49% loss likely reflects early carry unwind pressures. Watch USD/JPY 150 as the tripwire level today — a break or defense of that level will have outsized implications for global risk assets.",
+            "importance": "high"
+          },
+          {
+            "title": "📉 Yield Curve: Deeply Inverted, Structurally Bearish",
+            "content": "The yield curve is screaming caution. The 2-10 spread is -0.23, meaning the curve remains inverted — historically the most reliable recession leading indicator. More strikingly, the 3M-10Y spread is -1.03, a severe inversion that has historically preceded economic stress by 12-18 months. The 10-year yield fell -0.82% to 4.11%, which should be a tailwind for equities — and partly explains the tech rally, as growth stock valuations are sensitive to rate moves. However, falling yields in this context are more likely signaling flight-to-safety demand for Treasuries than an optimistic rate-cut pricing. If bonds are rallying while VIX spikes and international markets sell off, the bond bid is fear-driven, not growth-optimism-driven. The FOMC decision is due today (July 31) — Fed Chair Powell's press conference will be the pivotal data point. Any hawkish surprise or pushback on September cut expectations could reverse yesterday's tech rally instantly. Any dovish pivot language could extend it briefly but does not change the structural regime.",
+            "importance": "high"
+          },
+          {
+            "title": "💱 Dollar & Commodities: Defensive Flows Dominate",
+            "content": "The Dollar Index (DXY) at 104.42 (+0.31%) is strengthening — typically a headwind for commodities and emerging markets. EUR/USD at 1.08 reflects euro weakness, consistent with the DAX selloff and European risk-off. USD/JPY at 149.74 sits just below the critical 150 intervention threshold. Oil (WTI) at $76.31 is down -2.05% — a significant one-day move that signals demand concerns, not supply disruption. In a genuine risk-on environment, oil would be flat or higher. The oil dump combined with dollar strength is a classic defensive/recessionary flow pattern. Gold at $2,435 (+0.35%) is holding firm — it is not surging aggressively, which suggests this is not yet a full panic bid, but the bid is there. Bitcoin +1.14% with Ethereum -0.92% is a mixed crypto signal — no clear directional conviction. Net read: commodity flows confirm the regime. Money is moving toward safety (gold, bonds, dollar) and away from growth/cyclical assets (oil, EM currencies).",
+            "importance": "medium"
+          },
+          {
+            "title": "⚡ Sector Rotation: Tech Spike is an Outlier, Not a Trend",
+            "content": "Yesterday's sector performance tells a story of contradiction rather than conviction. The SMH +7.63% move is almost certainly driven by a specific earnings catalyst (likely AMD or another major semiconductor report) rather than broad sector re-rating. Single-stock earnings beats in mega-cap tech can mathematically drag the entire Nasdaq higher without representing a genuine sector-wide bid. The regime calls for underweighting tech (high-beta sells first in crisis) and overweighting Utilities and Healthcare — yet Healthcare was the worst-performing sector at -0.37% and Utilities gained modestly at +1.29%. The regime's defensive tilt is not yet fully reflected in price, which means either the crisis signal is early (and the market will catch up to the defensive rotation) or yesterday's tech spike briefly overwhelmed the structural bias. Financials (XLF) -0.25% confirms the regime's underweight call — credit stress is showing up in bank stock pressure. Industrials +1.12% and Materials +1.04% are modestly positive but not leadership — they are noise, not signal.",
+            "importance": "medium"
+          },
+          {
+            "title": "⚠️ Key Risk Factors for July 31",
+            "content": "1. FOMC Decision (today): The Fed meets today. Markets are pricing a September cut but watching for language. Any deviation — hawkish or more dovish than expected — creates volatility. VIX backwardation suggests professionals expect near-term turbulence around this event. 2. USD/JPY 150 Level: BOJ policy normalization and carry trade unwind risk. If yen strengthens sharply, global equity correlations spike and the Nikkei's pain spreads. 3. Narrow Rally Risk: A rally built on 1-2 stocks (SMH/semiconductor earnings) is fragile. If those names give back gains, the S&P's 1-day gain evaporates. 4. Inverted Yield Curve Persistence: The -1.03 3M-10Y spread has historically been a 12-18 month leading indicator. We may be approaching the 'disinversion' phase — historically, the curve disinverting is often MORE dangerous for equities than the inversion itself, as it signals recession arrival. 5. Global Contagion: Nikkei and DAX both down 2%+ on the same day is not a routine pullback. If European/Asian weakness persists, U.S. cannot decouple indefinitely.",
+            "importance": "high"
+          }
+        ],
+        "scenarios": [
+          {
+            "event": "FOMC Decision & Powell Press Conference (July 31 afternoon)",
+            "scenarios": [
+              {
+                "condition": "If Powell signals September cut is on the table with dovish language on inflation progress",
+                "implication": "Short-term tech/growth rally extension. 10Y yield falls further. Dollar weakens. BUT — this is a sell-the-news setup in crisis regime. Any rally is likely capped and reversal risk is high within 1-2 sessions as global macro headwinds reassert.",
+                "trade": "Avoid chasing longs. If already long tech/growth from lower levels, use rally to reduce exposure. Consider buying short-dated put spreads on QQQ if IV is not excessive post-FOMC. Conviction only if setup clears 80+ threshold after penalty."
+              },
+              {
+                "condition": "If Powell is hawkish, pushes back on September cut, or emphasizes data dependence without clear dovish bias",
+                "implication": "Immediate reversal of yesterday's tech rally. VIX spikes above 20. 10Y yields rise. Dollar strengthens. International weakness amplifies. This scenario CONFIRMS the crisis regime and could trigger a 2-3% S&P correction within 24-48 hours.",
+                "trade": "High-conviction short setup: QQQ puts or short XLK. Long VIX calls or UVXY. Defensive positioning: long XLU, XLV. This scenario aligns perfectly with regime tilts. Scale targets 1.5x wider per regime rules. Minimum 80 conviction required."
+              }
+            ]
+          },
+          {
+            "event": "USD/JPY breaks or defends the 150 level",
+            "scenarios": [
+              {
+                "condition": "If USD/JPY breaks above 150 without BOJ intervention",
+                "implication": "Carry trade extension initially appears positive for risk assets, but signals BOJ has lost control of yen depreciation. Risk of sudden, violent reversal if BOJ intervenes unexpectedly. Nikkei volatility amplifies. Global macro stress indicator rises.",
+                "trade": "Do not read JPY weakness as risk-on signal in this regime. Monitor for sudden yen reversal. If USD/JPY breaks 150 and then sharply reverses intraday, treat as crisis escalation signal — move to maximum defensive posture immediately."
+              },
+              {
+                "condition": "If USD/JPY drops sharply below 149 (yen strengthening rapidly)",
+                "implication": "Carry trade unwind accelerating. Global equity correlations spike. Nikkei likely falls another 1-2%. U.S. equities cannot decouple — expect S&P and Nasdaq to reverse gains. VIX could spike toward 22-25 range rapidly. This is the most dangerous scenario for current positions.",
+                "trade": "Highest conviction short signal in this regime. Long VIX, short EWJ (Japan ETF), short QQQ. Long gold as safe haven. Reduce all equity longs immediately. This scenario would push regime stress indicators from 30 toward 60+ and validate full crisis mode execution rules."
+              }
+            ]
+          },
+          {
+            "event": "Semiconductor/Tech Earnings Giveback vs. Continuation",
+            "scenarios": [
+              {
+                "condition": "If SMH/SOX gives back 3%+ of yesterday's gains in pre-market or early session",
+                "implication": "Yesterday's S&P rally was mathematically dependent on semiconductor strength. A reversal in SMH pulls Nasdaq down 1.5-2% and reveals the true underlying market weakness hidden by the earnings spike. This is the 'narrative-collapse' scenario the crisis regime is warning about.",
+                "trade": "Short QQQ or SOXS (3x short semis) if SMH shows clear rejection at resistance. Wait for confirmation — do not front-run, but act decisively once giveback is confirmed. Target 1.5x normal distance per regime rules. This trade aligns with regime: tech underweight, high-beta sells first."
+              },
+              {
+                "condition": "If additional tech earnings beats (Meta reports today after close) sustain the semiconductor momentum",
+                "implication": "Near-term tech rally extension is possible, but remains a narrow, single-factor trade. The regime still classifies this as crisis — do not fight the regime with aggressive tech longs. Risk/reward is asymmetric to the downside given backwardation, global weakness, and FOMC risk.",
+                "trade": "If Meta earnings are strong, any resulting gap-up is a fade candidate rather than a chase. Consider selling calls against existing tech longs or buying put spreads to hedge. Do not initiate new tech longs — the -15 conviction penalty on longs in crisis regime makes this math very difficult to justify."
+              }
+            ]
+          }
+        ]
+      },
+      "recommendations": [
+        {
+          "symbol": "MSFT",
+          "direction": "short",
+          "entryPrice": 441.5,
+          "targetPrice": 425,
+          "stopLoss": 449,
+          "thesis": "Microsoft's Azure cloud grew only 29% in Q4 FY2024 vs. the 31% consensus — the first Azure miss since 2022 — sending shares lower after hours despite headline EPS and revenue beats. In a CRISIS regime that explicitly underweights high-beta tech, an Azure deceleration narrative at a ~35x P/E multiple offers clean downside with a well-defined catalyst. The FOMC event this afternoon adds additional event-risk overhang that suppresses any dip-buying impulse in mega-cap tech.",
+          "catalyst": "July 30 after-hours: Azure cloud revenue +29% vs. +31% consensus (first miss since 2022); stock dipped in extended trading. Pre-market July 31: gap-down entry window. FOMC rate decision afternoon adds intraday vol.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 92,
+              "reasoning": "Crystal-clear, quantified catalyst: Azure +29% vs. +31% expected. First Azure consensus miss since 2022. Easily communicated to market participants. Intelligent Cloud segment broadly missed. Stock reaction in AH confirmed bearish interpretation."
+            },
+            "technicalSetup": {
+              "score": 78,
+              "reasoning": "MSFT had run to elevated levels on AI euphoria. Post-earnings gap-down creates downside momentum with overhead resistance at pre-earnings close. AH selling pressure sets up a continuation short at the open. No nearby technical support until the mid-$420s."
+            },
+            "riskReward": {
+              "score": 76,
+              "reasoning": "Entry ~$441.50 (estimated premarket), target $425 (-3.7%), stop $449 (+1.7%). R/R approximately 2.2:1. Crisis regime calls for 1.5x target distance scaling, widening the reward window. Stop sits just above pre-earnings close, limiting tail risk."
+            },
+            "volumeLiquidity": {
+              "score": 95,
+              "reasoning": "MSFT is the world's largest company by market cap. Options market is deep. Institutional participation is enormous. No liquidity risk whatsoever. Tight bid-ask spreads guaranteed even at open."
+            },
+            "marketAlignment": {
+              "score": 82,
+              "reasoning": "Crisis regime explicitly underweights tech (high-beta sells first). Short bias mandated. Azure miss compounds the structural concern of AI capex not yet translating to revenue acceleration. Global risk-off backdrop (Nikkei -2.49%, DAX -2.30%) supports selling U.S. tech leaders."
+            },
+            "informationEdge": {
+              "score": 88,
+              "reasoning": "Specific, measurable Azure miss vs. published consensus. The market had priced in 31% — the delta is known and actionable. First Azure miss since 2022 is a regime-change signal for AI monetization expectations. Capacity constraint language from Nadella adds duration to the negative thesis."
+            },
+            "timingUrgency": {
+              "score": 90,
+              "reasoning": "Earnings-driven gaps are most efficiently exploited in the first session after the release. The 24-48 hour window post-earnings print is when the maximum analyst downgrade and institutional re-positioning pressure is concentrated. FOMC this afternoon adds a second catalyst layer."
+            }
+          }
+        },
+        {
+          "symbol": "AMD",
+          "direction": "short",
+          "entryPrice": 158,
+          "targetPrice": 147,
+          "stopLoss": 164.5,
+          "thesis": "AMD beat Q2 estimates across the board and raised its AI chip outlook to >$4.5B, yet the stock fell ~7-8% after hours — a classic 'buy the rumor, sell the news' exhaustion after a 137% 12-month run. Q3 guidance of ~$6.7B only met (did not exceed) consensus, Gaming revenue collapsed -59% YoY, and the market punished the stock for failing to deliver a 'beat-and-raise' on guidance. In a CRISIS regime underweighting high-beta semis, this post-earnings gap-down offers a clean short entry against a technically overextended name.",
+          "catalyst": "July 30 after-hours: AMD Q2 beat but Q3 guidance in-line at $6.7B (no upside surprise); Gaming revenue -59% YoY; stock -7-8% AH. Pre-market July 31: gap-down continuation setup. Stock up 137% in prior year — elevated expectations create asymmetric downside on neutral guidance.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 82,
+              "reasoning": "Dual catalysts: (1) Q3 guidance of $6.7B was in-line, not a beat — market was pricing in an upside surprise given the 137% run; (2) Gaming segment down -59% YoY confirms non-AI segments are deteriorating. Stock's -7-8% AH reaction confirms bearish price discovery."
+            },
+            "technicalSetup": {
+              "score": 75,
+              "reasoning": "AMD had rallied ~137% in the prior year on AI enthusiasm. Elevated valuation and technical overextension set up a mean-reversion move. Post-earnings gap-down breaks near-term momentum. AH reaction creates gap resistance at ~$165, structurally bearish for the session."
+            },
+            "riskReward": {
+              "score": 74,
+              "reasoning": "Entry ~$158 (estimated premarket gap-down), target $147 (-6.9%), stop $164.50 (+4.1%). R/R approximately 1.7:1. Somewhat compressed given the stock already moved AH. Crisis regime's 1.5x target scaling partially compensates. Stop placed above AH reaction high."
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": "AMD is a high-volume, heavily traded semiconductor name with deep options markets. Post-earnings sessions typically see 2-3x average volume. No liquidity concerns for any reasonable position size."
+            },
+            "marketAlignment": {
+              "score": 80,
+              "reasoning": "Crisis regime explicitly underweights tech/semis as 'high-beta sells first.' SMH surged +7.63% Tuesday — a stretched move that increases reversal risk. Shorting AMD into a post-earnings gap-down aligns perfectly with the regime's directional bias and sector tilt."
+            },
+            "informationEdge": {
+              "score": 80,
+              "reasoning": "The key edge: AMD's stock had been pricing in a massive guidance beat, not a meet. The specific Q3 guidance of $6.7B vs. $6.61B consensus (only +$90M above) is insufficient to sustain the 137% YTD premium. Gaming's -59% collapse adds a concrete segment-level deterioration fact that the market will price in further."
+            },
+            "timingUrgency": {
+              "score": 82,
+              "reasoning": "Same principle as MSFT: post-earnings gap-down execution window is time-sensitive. Analyst coverage updates, institutional rebalancing, and options delta-hedging flows concentrate in the first session. The urgency is slightly lower than MSFT because AMD's miss was softer (guidance in-line vs. Azure outright miss)."
+            }
+          }
+        }
+      ],
+      "outcomes": [],
+      "scores": {
+        "directionAccuracy": 0,
+        "targetHitRate": 0,
+        "stopHitRate": 0,
+        "avgReturnPercent": 0,
+        "profitFactor": 0,
+        "winRate": 0,
+        "totalScore": 50
+      },
+      "dimensionAnalysis": {},
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.1,
+        "volumeLiquidity": 0.08,
+        "marketAlignment": 0.2,
+        "informationEdge": 0.1,
+        "timingUrgency": 0.15
+      },
+      "totalTokensUsed": 25944,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
+    },
+    {
+      "trialId": 139,
+      "date": "2025-04-08",
+      "generatedAt": "2026-04-06T12:06:10.332Z",
+      "signals": {
+        "spFuturesChange": -1.57,
+        "nasdaqFuturesChange": -2.15,
+        "dowFuturesChange": -0.84,
+        "russellFuturesChange": -2.73,
+        "vixFuturesChange": -35.75,
+        "vix": 33.62,
+        "vixChange": -35.75,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 41.5,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.26,
+        "tenYearYieldChange": 2.58,
+        "twoYearYield": 3.99,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.72,
+        "threeMonthYield": 4.18,
+        "twoTenSpread": 0.27,
+        "threeMoTenYrSpread": 0.08,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 102.9,
+        "dollarIndexChange": -0.06,
+        "eurUsd": 1.1,
+        "eurUsdChange": 0.6,
+        "usdJpy": 145.85,
+        "usdJpyChange": -1.32,
+        "usdCny": 7.34,
+        "usdCnyChange": 0.42,
+        "oilWTI": 62.35,
+        "oilChange": 4.65,
+        "brentOil": 65.48,
+        "brentOilChange": 4.23,
+        "natGasChange": 10.13,
+        "goldPrice": 3056.5,
+        "goldChange": 2.97,
+        "silverChange": 2.47,
+        "copperChange": 1.16,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -3.93,
+        "daxChange": -3,
+        "ftseChange": -2.92,
+        "shanghaiChange": 1.31,
+        "hangSengChange": 0.68,
+        "kospiChange": -1.74,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 121.25,
+        "spreadChange": 0.46,
+        "igSpread": -10.62,
+        "igSpreadChange": 1.27,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.97,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": -2.03,
+        "xlfChange": -0.39,
+        "xleChange": -2.31,
+        "xlvChange": -1.11,
+        "xlpChange": -1.55,
+        "xluChange": -0.41,
+        "xlreChange": -2.47,
+        "xliChange": -0.83,
+        "xlbChange": -3.08,
+        "xlcChange": -1.4,
+        "xlyChange": -2.38,
+        "smhChange": -2.68,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 8.26,
+        "ethereumChange": 13.28,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 0,
+        "daysToNextCPI": 0,
+        "daysToNextNFP": 0,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 4,
+        "sp5DayReturn": -11.54,
+        "sp20DayReturn": -10.58,
+        "nasdaqVsRussell5d": 0,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "risk-off",
+        "confidence": 76,
+        "directionalBias": "-46",
+        "volatilityRegime": "elevated",
+        "stressIndex": 38,
+        "riskAppetiteIndex": 22,
+        "sectorTilts": {
+          "utilities": "overweight",
+          "healthcare": "overweight",
+          "staples": "overweight",
+          "tech": "underweight",
+          "energy": "overweight",
+          "airlines": "underweight",
+          "semiconductors": "underweight",
+          "materials": "overweight"
+        }
+      },
+      "briefing": {
+        "summary": "Markets are in full risk-off mode entering Tuesday, April 8, with the S&P down 11.54% over five days and sitting near 52-week lows — a capitulation-adjacent environment where not a single sector closed in the green. Safe-haven flows are bifurcated and contradictory: gold surging +3%, JPY strengthening (USD/JPY -1.32%), yet Bitcoin exploding +8.3% and crypto broadly rallying, suggesting a complex mix of genuine fear hedging and speculative repositioning. With Fear & Greed at literal zero, VIX at 33.62 despite a massive -35.75% single-day drop, and 0% of S&P constituents above their 200 DMA, the market is pricing systemic stress — but the VIX collapse and crypto surge inject a wildcard: is this the exhaustion flush before a bounce, or a dead-cat setup in a structural bear?",
+        "marketCondition": "bearish",
+        "sections": [
+          {
+            "title": "🔴 Overall Market Posture: Controlled Panic With a Capitulation Signature",
+            "content": "The data paints a market under extreme duress but with internal signals that warrant careful reading. Four consecutive down days, -11.54% on the week, and S&P near 52-week lows confirm the bear thesis. However, VIX cratering -35.75% in a single session while futures are still -1.86% pre-market is a significant anomaly — VIX compression of that magnitude on a down day typically reflects either a massive options unwind, short-vol covering, or the early exhaust of fear premium. This is NOT a signal to go long aggressively; regime confidence is 76% risk-off with a directional bias of -46. The regime's long conviction penalty of -8 points is active. Zero percent of names above their 200 DMA is a breadth reading associated with either bottoms or waterfall continuations — context is everything, and current context favors the latter until proven otherwise. Stress at 38/100 is elevated but not at maximum panic levels, suggesting room for further deterioration. Risk appetite at 22/100 confirms institutional de-risking is well underway.",
+            "importance": "high"
+          },
+          {
+            "title": "📊 Sector Rotation: Nowhere to Hide, But Relative Safety Emerges",
+            "content": "The rotation map is unambiguous: everything sold off, but the dispersion tells the real story. Financials (XLF -0.39%) and Utilities (XLU -0.41%) led on a relative basis — this is classic late-cycle defensive rotation where capital concentrates in rate-sensitive and dividend-yielding names when growth expectations collapse. Healthcare (XLV -1.11%) and Staples (XLP -1.55%) held better than the broader market, confirming the regime's overweight tilts in those sectors are directionally correct. The carnage is concentrated in the growth and cyclical complex: Materials (XLB -3.08%) worst on the day despite copper +1.2% being cited as a China recovery signal — this divergence between copper and materials equities suggests equity markets are pricing in demand destruction faster than commodity spot markets. Semis (SMH -2.68%) continue their structural underperformance; with SMH as a leading indicator for risk appetite, sustained weakness here is a warning to any broad market bull case. Energy (XLE -2.31%) declining despite WTI oil +4.65% is a notable divergence — equity markets are discounting energy earnings through a recession/demand-destruction lens even as spot commodity moves higher on supply dynamics. Discretionary (XLY -2.38%) weakness is consistent with consumer spending fears embedded in a trade-war/tariff shock narrative. The regime correctly has tech and semis underweighted and airlines underweighted given the fuel cost headwind from oil's surge.",
+            "importance": "high"
+          },
+          {
+            "title": "📈 Yield Curve & Rate Signals: Flat But Not Inverted — Stagflation Warning",
+            "content": "The 10-year yield at 4.26% with a +2.58% daily move is significant: in a true risk-off flight-to-safety, you'd expect yields to fall as capital floods into Treasuries. Instead, yields are rising in a risk-off environment — this is the stagflation/fiscal stress signal. The 2-10 spread at 0.27 and 3M-10Y at 0.08 show a curve that has normalized from deep inversion but remains dangerously flat. The combination of rising long-end yields + falling equities + surging gold is the classic 'sell everything including bonds' regime, which historically precedes either a Fed pivot catalyst or a credit event. Rising yields while stocks fall pressures equity valuations on two fronts simultaneously: higher discount rates AND lower earnings estimates. Watch the 10Y — a sustained move above 4.40% in this environment would signal Treasury market stress and could accelerate equity selling. Conversely, a reversal back below 4.10% would be the first credible signal of genuine flight-to-safety bid returning to bonds, which would support a risk-off bounce trade in Treasuries (TLT).",
+            "importance": "high"
+          },
+          {
+            "title": "💱 Currency & Commodity Flows: Gold + Yen = Real Fear; Bitcoin = Speculative Release Valve",
+            "content": "The currency and commodity picture is deeply instructive. USD/JPY falling 1.32% to 145.85 confirms institutional safe-haven rotation into yen — this is real money deleveraging, not retail fear. Dollar index at 102.9 (-0.06%) shows the greenback is NOT benefiting from safe-haven flows in the usual way, suggesting USD credibility concerns may be embedded in the current selloff (consistent with a tariff/trade war narrative that weakens long-term USD competitiveness). Gold at $3,056.50 (+2.97%) is running its own bull market and is the cleanest expression of systemic distrust — the regime's overweight on gold-adjacent plays is well-supported. WTI crude at $62.35 (+4.65%) is a complex signal: supply cuts or geopolitical premium are pushing spot higher, but as noted, energy equities are not following, suggesting the equity market disbelieves the oil rally's sustainability in a recession scenario. Copper +1.2% with Shanghai +1.31% and Hang Seng +0.68% points to a China divergence story — Asian markets are notably outperforming Western markets, supporting the regime's overweight on materials as a China recovery trade, though the materials equity underperformance creates a tactical tension. Bitcoin +8.26% and Ethereum +13.28% in a risk-off day is the most anomalous signal in the dataset — this could reflect: (1) crypto as an alternative store-of-value in a dollar-distrust environment, (2) short-squeeze dynamics after extreme crypto selloff, or (3) retail capitulation into crypto as a 'lottery ticket' in extreme fear. Do NOT interpret crypto strength as a broader risk-on signal today.",
+            "importance": "high"
+          },
+          {
+            "title": "⚠️ Risk Factors: The Five Landmines for Tuesday",
+            "content": "1) TARIFF/TRADE WAR ESCALATION: The entire market regime appears to be pricing an acute tariff shock. Any headline escalation — new tariff announcements, retaliatory measures, breakdown in trade negotiations — could push this from a correction toward a crash scenario. Conversely, any credible de-escalation is the single highest-impact positive catalyst. 2) TREASURY MARKET DYSFUNCTION: Rising yields during a risk-off selloff suggests potential forced selling or foreign central bank liquidation of US Treasuries. If the 10Y breaks above 4.50% with equities falling simultaneously, this signals a disorderly market requiring Fed intervention. 3) VIX SNAP-BACK: VIX fell -35.75% in one session to 33.62. If futures continue lower pre-market and VIX reverses sharply higher, the options market is repricing risk and gamma exposure could accelerate the downside. 4) INTERNATIONAL CONTAGION: Nikkei -3.93%, DAX -3%, FTSE -2.92% show synchronized global selling. European and Asian opens Tuesday will set the tone. Shanghai's relative outperformance (+1.31%) is a fragile buffer. 5) SMALL-CAP FRAGILITY: Russell underperforming by 0.87pp on a day when everything was down signals small-cap/credit stress. Small caps are more levered to domestic credit conditions and consumer spending — their persistent underperformance often precedes credit spread widening.",
+            "importance": "high"
+          },
+          {
+            "title": "🔍 Technical Context: Oversold But Not Yet Bouncing",
+            "content": "Zero percent of S&P names above their 200 DMA is an extreme reading — historically, this level has been reached fewer than a dozen times in modern market history, and it has often (though not always) preceded mean-reversion bounces. However, the critical distinction is whether this is a panic low in a bull market correction (2018, 2020 COVID crash recovery) or the beginning of a structural bear market repricing (2000-2002, 2007-2008). Current macro conditions — trade war uncertainty, Fed constrained by inflation, rising long-end yields, fiscal stress — more closely resemble the latter category. The -10.58% 20-day performance means any position entered recently is deeply underwater; forced selling from leveraged accounts and risk-managed funds likely has more room to run. Support levels for S&P are technically undefined in a new-low environment — the market needs to establish a base through time and price action, not simply reach an 'oversold' indicator threshold.",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": [
+          {
+            "event": "Scenario 1: Tariff De-escalation Headline — The Violent Bear Market Bounce",
+            "scenarios": [
+              {
+                "condition": "If a credible trade negotiation announcement, tariff pause, or diplomatic breakthrough emerges pre-market or during the session Tuesday",
+                "implication": "A vicious short-covering rally materializes. With 0% of names above 200 DMA and extreme positioning, the squeeze could be 4-7% intraday. However, this would be a RELIEF rally in a downtrend, not a trend reversal — the underlying structural damage (earnings revisions, supply chain disruption, confidence shock) takes quarters to repair. VIX would compress rapidly, further distorting the signal.",
+                "trade": "Tactical longs in beaten-down quality cyclicals (XLI, XLY) on confirmation of the headline. Size small (regime long penalty active). Avoid holding overnight — sell strength into 3-5% rally. Consider SPY short-dated calls as a defined-risk vehicle for a bounce play only. Do NOT chase into the close; gaps fill quickly in volatile regimes."
+              }
+            ]
+          },
+          {
+            "event": "Scenario 2: Continued Deterioration — Waterfall Continuation and Credit Stress",
+            "scenarios": [
+              {
+                "condition": "If futures hold -1.86% or worse into the open, no positive macro catalyst emerges, and the 10Y yield moves above 4.40% while equities continue falling",
+                "implication": "This confirms the 'sell everything' regime where both stocks and bonds are being liquidated — historically the most dangerous and disorderly phase of a risk-off event. The S&P has no established technical support in this price zone. Credit spreads will widen, small caps will accelerate lower, and sector rotation into Utilities/Staples/Gold intensifies. Potential for a Fed emergency response or circuit-breaker talk begins to circulate.",
+                "trade": "Maintain short bias consistent with regime. Overweight defensive sector expressions: XLU, XLV, XLP on relative basis. Long GLD/gold miners (GDX) as the cleanest hedge in a dollar-distrust + fear environment. Short SMH or XLK on any intraday bounce for momentum continuation. TLT becomes interesting ONLY if yields reverse — do not chase TLT into rising yields. Monitor HYG (high-yield credit ETF) as the canary: HYG breakdown confirms credit stress and accelerates equity selling."
+              }
+            ]
+          },
+          {
+            "event": "Scenario 3: Sideways Churn and Volatility Compression — False Stability",
+            "scenarios": [
+              {
+                "condition": "If the market opens lower but stabilizes intraday, VIX remains compressed near 33, no major catalyst in either direction, and the S&P trades in a tight range with low conviction",
+                "implication": "This is a deceptive scenario. Apparent stability after extreme volatility can be misread as a bottom forming. In reality, it often reflects temporary equilibrium between panicked sellers exhausted from 4 down days and buyers unwilling to commit without a catalyst. Volume and breadth will be the tell — if volume dries up and fewer than 30% of names advance, this is consolidation before the next leg lower, not accumulation. The VIX term structure in contango means short-vol players will be tempted back in too early.",
+                "trade": "Avoid aggressive positioning in either direction. Use the session to assess: (1) Does XLF hold its relative outperformance? — financial stress indicator. (2) Does gold continue to make new highs? — confirms safe-haven demand intact. (3) Does Bitcoin hold its overnight gains? — if yes, the speculative/alternative-store-of-value thesis is building. Reduce position size, widen stops, and wait for a directional resolution. Cash is a position. In a regime with 22/100 risk appetite, capital preservation outperforms forced trading."
+              }
+            ]
+          }
+        ]
+      },
+      "recommendations": [],
+      "outcomes": [],
+      "scores": {
+        "directionAccuracy": 0,
+        "targetHitRate": 0,
+        "stopHitRate": 0,
+        "avgReturnPercent": 0,
+        "profitFactor": 0,
+        "winRate": 0,
+        "totalScore": 50
+      },
+      "dimensionAnalysis": {},
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.1,
+        "volumeLiquidity": 0.08,
+        "marketAlignment": 0.2,
+        "informationEdge": 0.1,
+        "timingUrgency": 0.15
+      },
+      "totalTokensUsed": 21138,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
+    },
+    {
+      "trialId": 140,
+      "date": "2024-08-01",
+      "generatedAt": "2026-04-06T12:14:55.037Z",
+      "signals": {
+        "spFuturesChange": -1.37,
+        "nasdaqFuturesChange": -2.3,
+        "dowFuturesChange": -1.21,
+        "russellFuturesChange": -3.03,
+        "vixFuturesChange": 25.82,
+        "vix": 23.39,
+        "vixChange": 25.82,
+        "vixTermStructure": "backwardation",
+        "vix9d": 0,
+        "vix3m": 19.14,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 3.98,
+        "tenYearYieldChange": -3.24,
+        "twoYearYield": 4.22,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.27,
+        "threeMonthYield": 5.11,
+        "twoTenSpread": -0.24,
+        "threeMoTenYrSpread": -1.13,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 103.21,
+        "dollarIndexChange": -1.16,
+        "eurUsd": 1.08,
+        "eurUsdChange": -0.34,
+        "usdJpy": 149.2,
+        "usdJpyChange": -0.36,
+        "usdCny": 7.24,
+        "usdCnyChange": 0.35,
+        "oilWTI": 73.52,
+        "oilChange": -3.66,
+        "brentOil": 76.81,
+        "brentOilChange": -3.41,
+        "natGasChange": -0.05,
+        "goldPrice": 2425.7,
+        "goldChange": -0.38,
+        "silverChange": -0.3,
+        "copperChange": 0.43,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -5.81,
+        "daxChange": -2.33,
+        "ftseChange": -1.31,
+        "shanghaiChange": -0.92,
+        "hangSengChange": -2.08,
+        "kospiChange": -3.65,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 110.19999999999999,
+        "spreadChange": 0.74,
+        "igSpread": -19.06,
+        "igSpreadChange": 0.03,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1.03,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": -3.73,
+        "xlfChange": -1.42,
+        "xleChange": -2.65,
+        "xlvChange": 1.02,
+        "xlpChange": 0.92,
+        "xluChange": 1.8,
+        "xlreChange": 1.55,
+        "xliChange": -1.85,
+        "xlbChange": -0.4,
+        "xlcChange": 0.41,
+        "xlyChange": -2.45,
+        "smhChange": -6.47,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -6.03,
+        "ethereumChange": -6.73,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 0,
+        "daysToNextCPI": 0,
+        "daysToNextNFP": 0,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 1,
+        "sp5DayReturn": 0.88,
+        "sp20DayReturn": -1.63,
+        "nasdaqVsRussell5d": 1.73,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "crisis",
+        "confidence": 90,
+        "directionalBias": "-60",
+        "volatilityRegime": "elevated",
+        "stressIndex": 36,
+        "riskAppetiteIndex": 6,
+        "sectorTilts": {
+          "tech": "underweight",
+          "utilities": "overweight",
+          "healthcare": "overweight",
+          "financials": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": "Markets are flashing a full crisis regime signal on August 1, 2024, with VIX surging 25.82% to 23.39 in backwardation, the S&P shedding 1.37% while Nasdaq dropped 2.3% and small-caps cratered 3.03% — a classic risk-off waterfall. The rotation is unambiguous: defensives (XLU +1.8%, XLRE +1.55%, XLV +1.02%) are absorbing capital fleeing from growth and cyclicals, with semis (SMH -6.47%) and tech (XLK -3.73%) leading the liquidation. Global contagion is evident with Nikkei -5.81%, suggesting this is not an isolated U.S. event but a synchronized deleveraging episode.",
+        "marketCondition": "volatile",
+        "sections": [
+          {
+            "title": "🚨 Regime Alert: Crisis Classification Active (90% Confidence)",
+            "content": "SIGNAL has classified today's regime as CRISIS with 90% confidence — the highest conviction tier. The evidence is stacked: VIX at 23.39 is a 25.82% single-session explosion, term structure is in backwardation (near-term fear priced above longer-dated options, a textbook stress signal), risk appetite sits at 6/100, and stress registers 36/100 on accelerating momentum. Elevated cross-asset correlation is stripping diversification benefits. This is not a 'buy the dip' environment — this is a controlled capital preservation environment. Minimum conviction threshold for any trade is raised to 80. Long trades carry a -15 conviction penalty. Shorts and defensive longs are the only compliant postures.",
+            "importance": "high"
+          },
+          {
+            "title": "📊 Sector Rotation: Defensives Are the Only Game in Town",
+            "content": "The sector tape is telling a crystal-clear story of flight to safety. Utilities (XLU +1.8%) and Real Estate (XLRE +1.55%) are leading — this is interest-rate-sensitive defensive rotation, supercharged by the 10Y yield collapsing 3.24% to 3.98%. Healthcare (XLV +1.02%) and Staples (XLP +0.92%) confirm the defensive bid is broad-based, not a rate-proxy quirk. On the other side, the carnage is concentrated in high-beta cyclicals: Semis (SMH -6.47%) is the headline wound — this is likely earnings-driven (Intel/AMD guidance miss territory) compounding macro fear. Tech (XLK -3.73%), Energy (XLE -2.65%), Discretionary (XLY -2.45%), and Industrials (XLI -1.85%) are all under sustained selling. Financials (XLF -1.42%) confirm credit stress is being priced. The rotation from growth/cyclical → defensive/bond-proxy is mature and accelerating. Regime tilts align perfectly: overweight utilities and healthcare, underweight tech and financials.",
+            "importance": "high"
+          },
+          {
+            "title": "📉 Yield Curve & Rate Signals: Recession Pricing Returns",
+            "content": "The rates market is screaming. The 10-year yield collapsed to 3.98% (-3.24% on the session) — a dramatic flight-to-quality bid that confirms institutional capital is rotating into Treasuries at scale. The 2-10 spread sits at -0.24 (inverted), and the 3-month to 10-year spread is deeply inverted at -1.13 — historically one of the most reliable recession leading indicators. The bull flattening/steepening dynamic here is key: if the long end is rallying (yields falling) while the front end stickier, the market is pricing Fed rate cuts ahead, not growth recovery. The sub-4% 10Y is a psychological threshold break. For equity markets, this Treasury bid normally provides a relief valve — but in crisis regimes, the correlation breaks down as forced selling overrides rate sensitivity. Watch for the 10Y to probe 3.80% if risk-off accelerates. Bonds are the clearest trade in this regime.",
+            "importance": "high"
+          },
+          {
+            "title": "💱 Currency & Commodity Flows: Dollar Breaks, Yen Strengthens",
+            "content": "The dollar index fell 1.16% to 103.21 — a significant one-day move that typically accompanies risk-off yen buying and flight from dollar-denominated risk assets. USD/JPY at 149.2 is critical: yen strengthening (dollar weakening vs yen) is the classic carry trade unwind signal. If yen continues to appreciate, global carry trades funded in yen begin to blow up — this is a significant amplification mechanism for the Nikkei's -5.81% collapse. The Nikkei drop is partly a yen-appreciation story: Japanese exporters get crushed and yen carry unwinds force global deleveraging. Oil (WTI -3.66% to $73.52) is flagging demand destruction expectations — consistent with recession pricing in rates. Gold's mild -0.38% decline is notable: gold is NOT rallying in this risk-off move, suggesting liquidation pressure (margin calls forcing gold selling) rather than pure safe-haven rotation. Crypto (BTC -6.03%, ETH -6.73%) confirms maximum risk-off — digital assets are behaving as high-beta risk proxies.",
+            "importance": "high"
+          },
+          {
+            "title": "⚠️ Risk Factors: What Could Accelerate This Move",
+            "content": "Five compounding risk vectors are active simultaneously: (1) VIX backwardation suggests options markets expect volatility to remain elevated or worsen near-term — this is not a spike to fade casually. (2) Yen carry unwind: USD/JPY at 149.2 with yen strengthening could cascade — every 1% yen appreciation forces estimated $50-100B in carry trade unwinding globally. (3) Small-cap divergence: Russell -3.03% vs S&P -1.37% signals credit access concerns for smaller firms — high-yield spreads are likely widening. (4) Global contagion is synchronized: Nikkei -5.81%, DAX -2.33%, Hang Seng -2.08% — this is not a U.S.-isolated event. (5) Semiconductor specific risk: SMH -6.47% in a single session suggests a major earnings catalyst (likely Intel Q2 miss after-hours July 31). If semi guidance points to demand slowdown, AI capex narrative faces a fundamental challenge, which hits Nasdaq multiple compression risk.",
+            "importance": "high"
+          },
+          {
+            "title": "🔍 International Markets: Synchronized Global Deleveraging",
+            "content": "The international picture removes any hope this is a U.S.-idiosyncratic selloff. Nikkei -5.81% is the standout — a move of that magnitude in Japan typically reflects yen carry unwind, export-sector pain, and cross-border risk reduction by global funds. DAX -2.33% signals European growth concerns, likely compounded by weak German industrial data and ECB policy uncertainty. FTSE -1.31% is relatively resilient (energy/mining heavy index partially hedged by commodity exposure, though oil falling limits that). Shanghai -0.92% and Hang Seng -2.08% confirm emerging market risk appetite contraction. The synchronized nature across Asia, Europe, and the U.S. in a single session is a hallmark of institutional deleveraging rather than targeted sector rotation.",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": [
+          {
+            "event": "Yen Carry Unwind Accelerates — USD/JPY Breaks Below 148",
+            "scenarios": [
+              {
+                "condition": "If USD/JPY breaches 148 and yen continues strengthening into the Tokyo open",
+                "implication": "Global carry trade liquidation accelerates. Nikkei futures could gap another -3% to -5%. U.S. equity futures open sharply lower. VIX could spike toward 28-30. High-beta assets (semis, crypto, small-caps) face another waterfall leg down. Treasury yields press toward 3.75-3.80% as safe-haven demand intensifies.",
+                "trade": "Short SMH (semis already wounded, carry unwind hits leveraged tech positioning hardest). Long TLT (Treasuries benefit from dual safe-haven + rate-cut pricing catalyst). Long XLU or XLV as defensive hold — conviction 82-85 post regime-penalty adjustment. Avoid all JPY-funded long positions."
+              },
+              {
+                "condition": "If USD/JPY stabilizes above 149.5 and BoJ signals no further immediate action",
+                "implication": "Carry unwind pressure pauses. Nikkei stabilizes. U.S. futures recover modestly from overnight lows. VIX retreats from spike highs but stays elevated above 20. Defensive rotation continues but at reduced pace — potential for a dead-cat bounce in tech.",
+                "trade": "Maintain defensive overweights (XLU, XLV). Use any tech bounce to reduce exposure — do NOT chase the bounce in SMH or XLK. The regime remains CRISIS; bounces are selling opportunities, not inflection points."
+              }
+            ]
+          },
+          {
+            "event": "ISM Manufacturing / Jobs Data Surprise (August 1 Calendar Risk)",
+            "scenarios": [
+              {
+                "condition": "If ISM Manufacturing prints below 46 (contraction deepens) or jobless claims spike above 250K",
+                "implication": "Recession pricing intensifies. The 10Y yield breaks below 3.90%, potentially targeting 3.75%. Equity markets accelerate lower — S&P could test 5,300-5,250 support zone. Fed cut expectations for September surge to near-certainty, but 'bad news is bad news' dynamic dominates: growth fear outweighs rate relief. Financials and energy face heaviest additional selling.",
+                "trade": "Long TLT or short-duration bond ETFs. Short XLF (banks face NIM compression + credit risk). Short XLE (demand destruction confirmed). Defensive longs in XLU/XLRE carry elevated conviction given rate tailwind. Crisis regime confirmation — do not initiate new equity longs."
+              },
+              {
+                "condition": "If ISM prints above 49 (near expansion) or claims fall below 215K (labor resilience)",
+                "implication": "Brief relief rally — VIX retreats toward 20-21, S&P bounces 0.5-1.0%. However, semi-specific damage (SMH) and global carry concerns are not resolved by a single data point. Rally is unlikely to be sustained. Regime stays CRISIS — the structural signals (VIX backwardation, yield curve inversion, global correlation spike) do not flip on one print.",
+                "trade": "Do NOT aggressively buy the relief bounce. Use it to establish short positions in XLK or QQQ with tighter stops. Any recovery above S&P 5,450 intraday becomes a shorting opportunity with favorable risk/reward given regime headwinds. Minimum 80 conviction threshold still applies."
+              }
+            ]
+          },
+          {
+            "event": "Semiconductor Earnings Catalyst — Intel/AMD Guidance Fallout",
+            "scenarios": [
+              {
+                "condition": "If Intel's after-hours earnings (July 31) revealed a significant revenue guide-down or margin compression, confirmed in pre-market commentary",
+                "implication": "SMH faces continued pressure — a -6.47% single session often precedes a multi-day distribution as institutional holders reduce exposure in tranches. NVDA, AMD, AVGO face sympathy selling. AI capex narrative gets questioned. Nasdaq multiple compression risk is substantial — the AI premium in valuations has no earnings support if the semiconductor supply chain is weakening. QQQ could test 20d moving average support.",
+                "trade": "Short SMH with defined risk above yesterday's high — this is the highest-conviction bearish setup in the current regime. Short QQQ puts (1-2 weeks out, near ATM) as a defined-risk vehicle aligned with -2.3% Nasdaq move and crisis regime. Conviction: 85 pre-penalty for shorts (no penalty applies to short trades in crisis regime). Target: SMH -8 to -12% from prior close over 3-5 sessions."
+              },
+              {
+                "condition": "If pre-market analyst calls reframe Intel miss as company-specific (market share loss to AMD/TSMC) rather than demand destruction",
+                "implication": "SMH partially recovers — Intel-specific pain is isolated. NVDA and TSMC may actually benefit from narrative of Intel losing share. Broader tech selloff moderates. However, macro regime headwinds (VIX, carry unwind, yield curve) still cap any recovery. Selective within-semis rotation possible but dangerous in crisis environment.",
+                "trade": "Avoid heroic long positions in any semi name — regime penalty makes long conviction difficult to clear 80 threshold. If forced to trade: micro pairs trade long NVDA / short INTC captures the relative value without full market exposure. Size at 50% of normal position given crisis regime rules."
+              }
+            ]
+          }
+        ]
+      },
+      "recommendations": [],
+      "outcomes": [],
+      "scores": {
+        "directionAccuracy": 0,
+        "targetHitRate": 0,
+        "stopHitRate": 0,
+        "avgReturnPercent": 0,
+        "profitFactor": 0,
+        "winRate": 0,
+        "totalScore": 50
+      },
+      "dimensionAnalysis": {},
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.1,
+        "volumeLiquidity": 0.08,
+        "marketAlignment": 0.2,
+        "informationEdge": 0.1,
+        "timingUrgency": 0.15
+      },
+      "totalTokensUsed": 23456,
+      "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 115 no-trade days out of 140 trials (82.1%) with an average score of 56.4. When it does trade, the win rate is only 28%, meaning roughly 7 out of 25 trading trials lost money. The profit factor of 22.18 is artificially inflated by a handful of perfect-score single-trade trials (IWM, PLTR, PNC, UBER, TGT) that each scored 100 with PF=10. Strip those 5 winners out and the remaining 20 trading trials have a dismal profile. The algorithm is essentially a lottery ticket — it rarely fires, and when it does, it either nails a perfect trade or loses. There is no middle ground of consistent, moderate-conviction winners.\n\nLooking at the last 10 trials, 8 of 10 produced no trades (score=50 baseline). Trial 133 went long GOOGL in a range-bound/low-confidence regime (32% confidence, appetite only 44) — this is a textbook case of the algorithm trading when it shouldn't. The regime was explicitly low-conviction and the briefing said 'conflicted needle,' yet a long was entered anyway. Trial 138 shorted MSFT and AMD in what it classified as a 'crisis' regime (90% confidence), but the briefing explicitly noted 'U.S. equities surged Tuesday' — the algorithm shorted into strength during a crisis classification that didn't match the price action. This is a critical pipeline failure: the regime classifier flagged crisis based on stress indicators while the actual price action was bullish, and the trade recommendations followed the regime label rather than the price reality.\n\nThe dimension predictive power scores are nearly indistinguishable (66.3 to 70.0 across all 7 dimensions on only 11 samples). This is a massive red flag — either all dimensions are equally predictive (unlikely) or the sample size is too small to differentiate signal from noise. TimingUrgency at 70.0 and catalystClarity at 69.8 show marginal edges, but with 11 samples this is well within noise. The weight evolution shows the algorithm has been oscillating weights without converging — catalystClarity bounced between 12.6% and 24.9%, marketAlignment between 7.4% and 19.8%. This suggests the learning signal is too weak to drive meaningful adaptation. The algorithm needs structural changes, not weight tweaks.\n\nThe best trades share a common pattern: single high-conviction trades with a clear binary catalyst (earnings for PLTR/PNC, macro event for IWM, guidance for TGT/UBER). The worst trades share a different pattern: trading in ambiguous regimes without a clear catalyst (BRK.B short in unclear conditions, SNOW long without edge, VLO/CMC/AYI multi-stock long in a losing regime). The algorithm should dramatically increase its catalyst bar and reduce the number of trades per day to 0-1. Multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) have been uniformly terrible.\n\nThe regime classifier has a disconnect between stress/appetite inputs and actual market behavior. Trial 138 classified as 'crisis' (90% confidence) while markets were surging. Trial 136 correctly identified risk-off with S&P futures -2.69%, but then produced no trades — missing what should have been a high-conviction short opportunity. Trial 139 correctly identified risk-off (-11.54% over 5 days) but also produced no trades. The algorithm is simultaneously too passive in clear regimes and too active in ambiguous ones. It should flip this behavior: trade aggressively in high-confidence directional regimes and stand aside in rotation/range-bound conditions."
     }
   ],
   "bestScore": 100,
@@ -34353,8 +35153,8 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T11:46:45.050Z",
-  "totalTokensUsed": 2889401,
+  "lastUpdatedAt": "2026-04-06T12:16:13.635Z",
+  "totalTokensUsed": 2959939,
   "weightHistory": [
     {
       "trial": 10,
@@ -34521,6 +35321,19 @@
         "volumeLiquidity": 0.102,
         "marketAlignment": 0.167,
         "informationEdge": 0.128,
+        "timingUrgency": 0.148
+      },
+      "score": 50
+    },
+    {
+      "trial": 140,
+      "weights": {
+        "catalystClarity": 0.193,
+        "technicalSetup": 0.148,
+        "riskReward": 0.115,
+        "volumeLiquidity": 0.102,
+        "marketAlignment": 0.18,
+        "informationEdge": 0.115,
         "timingUrgency": 0.148
       },
       "score": 50
