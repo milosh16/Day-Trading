@@ -1,0 +1,238 @@
+{
+  "date": "2026-04-06",
+  "analysis": {
+    "sectorRankings": [
+      {
+        "sector": "Energy",
+        "bias": "bullish",
+        "magnitude": 5,
+        "reasoning": "Oil at $111/bbl with $200 tail risk. Strait of Hormuz closure is the dominant macro driver. XOM up 30% YTD near ATH. OPEC+ adding production but can't deliver through closed strait. Escalation risk high today."
+      },
+      {
+        "sector": "Industrials (Defense)",
+        "bias": "bullish",
+        "magnitude": 5,
+        "reasoning": "$1.5T defense budget proposal, RTX $50B Patriot contract, $268B backlog, Iran war Day 36 with escalation risk. Multi-year structural tailwinds from US, European, and allied rearmament."
+      },
+      {
+        "sector": "Materials (Gold/Precious Metals)",
+        "bias": "bullish",
+        "magnitude": 4,
+        "reasoning": "Gold at $4,660-4,720 record highs. War premium + inflation fears + central bank buying. NEM near ATH. Safe haven demand elevated. However, RSI approaching overbought for gold miners."
+      },
+      {
+        "sector": "Healthcare",
+        "bias": "bullish",
+        "magnitude": 3,
+        "reasoning": "LLY Foundayo launch TODAY is a major catalyst. Defensive characteristics favored in elevated-vol regime. FDA approvals continue. GLP-1 market expansion is secular growth."
+      },
+      {
+        "sector": "Utilities",
+        "bias": "bullish",
+        "magnitude": 2,
+        "reasoning": "Defensive tilt in risk-off environment. CEG nuclear narrative intact but stock struggling. Rising 30yr yields (4.88%) create headwind for yield-sensitive names."
+      },
+      {
+        "sector": "Information Technology",
+        "bias": "neutral",
+        "magnitude": 0,
+        "reasoning": "Mixed: NVDA Rubin bullish long-term, Google winning AI race. But breadth divergence, Taiwan risk on TSMC, elevated VIX pressures multiples. Cybersecurity benefits from Iran cyber threats."
+      },
+      {
+        "sector": "Financials",
+        "bias": "neutral",
+        "magnitude": 0,
+        "reasoning": "Steeper yield curve (+52bps 2s10s) helps NII, but credit risk rising. Bank earnings start mid-April. Lighter SEC regulation is structurally positive. Net neutral."
+      },
+      {
+        "sector": "Communication Services",
+        "bias": "neutral",
+        "magnitude": -1,
+        "reasoning": "Google outperforming on AI but antitrust risk. Consumer spending weakness is headwind for ad revenue."
+      },
+      {
+        "sector": "Consumer Staples",
+        "bias": "neutral",
+        "magnitude": -1,
+        "reasoning": "Defensive but not outperforming. Higher energy costs squeeze CPG margins. WMT, PG are relative safe havens. Higher shipping costs from Hormuz closure pressure importers."
+      },
+      {
+        "sector": "Real Estate",
+        "bias": "bearish",
+        "magnitude": -3,
+        "reasoning": "30-year mortgage at 6.46% and rising. 30-year Treasury at 4.88%. Iran war pushing yields higher through inflation expectations. No near-term rate relief."
+      },
+      {
+        "sector": "Consumer Discretionary",
+        "bias": "bearish",
+        "magnitude": -4,
+        "reasoning": "Triple headwind: higher energy prices squeeze spending, TSLA down 20% YTD, consumer confidence weak. Airlines face jet fuel up 103%. Travel/leisure exposed to war disruption."
+      }
+    ],
+    "highImpactCompanies": [
+      {
+        "ticker": "LLY",
+        "name": "Eli Lilly",
+        "direction": "bullish",
+        "magnitude": 5,
+        "catalyst": "Foundayo commercial launch TODAY April 6 via LillyDirect at $149/month",
+        "firstOrder": "Launch day momentum buying; already up 3.8-6.5% on FDA approval",
+        "secondOrder": "Oral GLP-1 expands TAM beyond injectable-only patients. Pressures NVO.",
+        "timeframe": "today-5d"
+      },
+      {
+        "ticker": "RTX",
+        "name": "RTX Corporation",
+        "direction": "bullish",
+        "magnitude": 5,
+        "catalyst": "$50B Patriot contract, $268B backlog, Iran war demand, Q1 earnings April 21",
+        "firstOrder": "Defense rotation continues on war escalation fears",
+        "secondOrder": "Multi-year Patriot restocking creates unprecedented earnings visibility",
+        "timeframe": "today-21d"
+      },
+      {
+        "ticker": "DAL",
+        "name": "Delta Air Lines",
+        "direction": "bearish",
+        "magnitude": 5,
+        "catalyst": "Q1 earnings April 8. Jet fuel up 103% to $195/bbl. NO fuel hedging. Put/call 1.60",
+        "firstOrder": "Earnings miss or brutal guidance on fuel costs",
+        "secondOrder": "Entire airline sector re-rates lower on fuel reality",
+        "timeframe": "1-3d"
+      },
+      {
+        "ticker": "XOM",
+        "name": "Exxon Mobil",
+        "direction": "bullish",
+        "magnitude": 4,
+        "catalyst": "Oil at $111, Strait closure, near ATH",
+        "firstOrder": "Oil elevation drives earnings, escalation spikes further",
+        "secondOrder": "At 99.6% annual range ceiling—limited upside, reversal risk",
+        "timeframe": "today-3d"
+      },
+      {
+        "ticker": "NEM",
+        "name": "Newmont Corporation",
+        "direction": "bullish",
+        "magnitude": 4,
+        "catalyst": "Gold records, world's largest gold miner",
+        "firstOrder": "Gold safe haven intensifies on Iran escalation",
+        "secondOrder": "RSI approaching overbought, support at $112",
+        "timeframe": "3-5d"
+      },
+      {
+        "ticker": "LMT",
+        "name": "Lockheed Martin",
+        "direction": "bullish",
+        "magnitude": 4,
+        "catalyst": "$1.5T defense budget, $193.6B backlog, DCF target $843",
+        "firstOrder": "Defense rotation continues below ATH",
+        "secondOrder": "Resistance at $658 needs breaking",
+        "timeframe": "3-7d"
+      },
+      {
+        "ticker": "NOC",
+        "name": "Northrop Grumman",
+        "direction": "neutral",
+        "magnitude": 2,
+        "catalyst": "Defense budget, B-21. But stock ABOVE analyst targets",
+        "firstOrder": "Fully priced for defense surge",
+        "secondOrder": "Vulnerable to mean reversion",
+        "timeframe": "avoid"
+      },
+      {
+        "ticker": "CVX",
+        "name": "Chevron",
+        "direction": "bullish",
+        "magnitude": 3,
+        "catalyst": "Oil at $111, up 27.6% YTD, 8K layoffs = cost discipline",
+        "firstOrder": "Margin expansion from high oil + cost cuts",
+        "secondOrder": "Oil reversal risk on ceasefire",
+        "timeframe": "3-5d"
+      },
+      {
+        "ticker": "GDX",
+        "name": "VanEck Gold Miners ETF",
+        "direction": "bullish",
+        "magnitude": 3,
+        "catalyst": "Gold records, Iran premium, CPI April 10 inflation hedge",
+        "firstOrder": "Leveraged exposure to gold price",
+        "secondOrder": "Momentum fading near-term, RSI overbought risk",
+        "timeframe": "3-7d"
+      },
+      {
+        "ticker": "ITA",
+        "name": "iShares Aerospace & Defense ETF",
+        "direction": "bullish",
+        "magnitude": 4,
+        "catalyst": "$1.5T defense budget, Iran war, European rearmament",
+        "firstOrder": "Broad defense exposure reduces single-stock risk",
+        "secondOrder": "52wk range $129-$250, currently $222",
+        "timeframe": "3-7d"
+      },
+      {
+        "ticker": "UAL",
+        "name": "United Airlines",
+        "direction": "bearish",
+        "magnitude": 4,
+        "catalyst": "Same fuel headwinds as DAL, sector sympathy",
+        "firstOrder": "Sells off on DAL earnings miss sympathy",
+        "secondOrder": "May have different hedging—wait for DAL confirm",
+        "timeframe": "3-5d"
+      },
+      {
+        "ticker": "CRWD",
+        "name": "CrowdStrike",
+        "direction": "neutral",
+        "magnitude": 2,
+        "catalyst": "Iran cyber threats elevated, $5.25B ARR",
+        "firstOrder": "Demand elevated but stock de-rated on AI fears",
+        "secondOrder": "Not compelling for 3-7d trade",
+        "timeframe": "monitor"
+      },
+      {
+        "ticker": "CEG",
+        "name": "Constellation Energy",
+        "direction": "bullish",
+        "magnitude": 3,
+        "catalyst": "Down 20-35% from highs, nuclear renaissance, UBS target $388",
+        "firstOrder": "Contrarian if support holds at $258",
+        "secondOrder": "Downtrend not yet reversed",
+        "timeframe": "monitor"
+      },
+      {
+        "ticker": "COIN",
+        "name": "Coinbase",
+        "direction": "neutral",
+        "magnitude": 2,
+        "catalyst": "SEC CLARITY Act roundtable April 16, lighter regulation",
+        "firstOrder": "Crypto clarity medium-term positive",
+        "secondOrder": "Not enough near-term catalyst",
+        "timeframe": "monitor"
+      },
+      {
+        "ticker": "ZIM",
+        "name": "ZIM Integrated Shipping",
+        "direction": "bullish",
+        "magnitude": 3,
+        "catalyst": "Strait closure driving container rates higher",
+        "firstOrder": "Higher freight rates = higher revenue",
+        "secondOrder": "EPS -162% projected. Ceasefire risk extreme",
+        "timeframe": "avoid (too binary)"
+      }
+    ],
+    "contrarian": "EVERYONE is focused on: Iran escalation/ceasefire binary, oil prices, defense stocks, and gold. What is being MISSED: (1) DAL earnings on April 8 is a high-conviction SHORT—jet fuel up 103% and Delta doesn't hedge, yet stock only down 3% YTD. Smart money (put/call 1.60) sees it but equity hasn't caught up. (2) LLY Foundayo launching TODAY is drowned out by war headlines—a $100B+ TAM product launch with $149/month pricing is a distinct non-war catalyst. (3) Breadth divergence (S&P up 3.4% over 5d but 0% above 200 DMA) is extreme—ceasefire relief rally could be a bull trap. (4) March CPI on April 10 will first capture Iran energy effects—could be a nasty upside surprise. (5) CEG/nuclear down 35% from highs while AI datacenter thesis unchanged—contrarian long developing.",
+    "riskEvents": [
+      "CRITICAL TODAY: Trump's Iran deadline (Tuesday 8pm ET)—if Iran doesn't reopen Strait, Trump threatens power plant/bridge strikes. Binary escalation/de-escalation event.",
+      "DAL Q1 earnings April 8—potential airline sector selloff on fuel cost guidance. $195/bbl jet fuel unhedged.",
+      "March CPI April 10—first reading capturing Iran war energy spike. Energy component likely surges, could delay Fed cuts.",
+      "Iran ceasefire collapse—if 45-day framework fails, oil could spike to $130-150+. $200 tail risk per analysts.",
+      "Surprise ceasefire/de-escalation—35-40% probability. Would sharply reverse energy/defense longs and trigger relief rally.",
+      "Kuwait oil infrastructure attacks expanding—drones hitting refineries. If attacks spread to Saudi Arabia, oil gaps 10%+.",
+      "Hezbollah escalation—51 attacks against Israel over weekend. Multi-front war expansion triggers broader risk-off.",
+      "Taiwan PLA drills—low probability (5-10%) but catastrophic for TSMC and semiconductor supply chain.",
+      "Breadth divergence resolution—narrow leadership unsustainable. Either breadth improves or index corrects.",
+      "FOMC late April—if CPI hot, rate cut expectations evaporate, additional pressure on risk assets."
+    ]
+  }
+}
