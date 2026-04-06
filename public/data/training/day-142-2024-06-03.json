@@ -1,0 +1,328 @@
+{
+  "trialId": 142,
+  "date": "2024-06-03",
+  "dateDisplay": "Monday, June 3, 2024",
+  "generatedAt": "2026-04-06T12:31:49.192Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.11,
+      "nasdaqFuturesChange": 0.56,
+      "dowFuturesChange": -0.3,
+      "russellFuturesChange": -0.5,
+      "vixFuturesChange": 0.38,
+      "vix": 13.16,
+      "vixChange": 0.38,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 14.8,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.4,
+      "tenYearYieldChange": -2.48,
+      "twoYearYield": 4.67,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.55,
+      "threeMonthYield": 5.24,
+      "twoTenSpread": -0.27,
+      "threeMoTenYrSpread": -0.84,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 104.11,
+      "dollarIndexChange": -0.03,
+      "eurUsd": 1.09,
+      "eurUsdChange": 0.5,
+      "usdJpy": 156.08,
+      "usdJpyChange": -0.7,
+      "usdCny": 7.24,
+      "usdCnyChange": 0.01,
+      "oilWTI": 73.25,
+      "oilChange": -1.31,
+      "brentOil": 77.52,
+      "brentOilChange": -1.07,
+      "natGasChange": -6.17,
+      "goldPrice": 2325.5,
+      "goldChange": -0.9,
+      "silverChange": -3.76,
+      "copperChange": -2.76,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.22,
+      "daxChange": -1.09,
+      "ftseChange": -0.37,
+      "shanghaiChange": 0.41,
+      "hangSengChange": 0.22,
+      "kospiChange": -0.76,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 114.94999999999999,
+      "spreadChange": 0.16,
+      "igSpread": -14.44,
+      "igSpreadChange": -0.31,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.94,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.25,
+      "xlfChange": -0.62,
+      "xleChange": -2.62,
+      "xlvChange": 0.7,
+      "xlpChange": -0.04,
+      "xluChange": -1.14,
+      "xlreChange": -0.39,
+      "xliChange": -1.22,
+      "xlbChange": -0.59,
+      "xlcChange": 0.4,
+      "xlyChange": -0.05,
+      "smhChange": 1.25,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 2.56,
+      "ethereumChange": 1.22,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 2,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": -0.4,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": -0.06,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 44,
+      "directionalBias": "-14",
+      "volatilityRegime": "normal",
+      "stressIndex": 10,
+      "riskAppetiteIndex": 48,
+      "sectorTilts": {
+        "materials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "Monday opens in a confirmed ROTATION regime as the market sends deeply conflicting signals: large-cap tech and semis held up Friday while cyclicals, energy, financials, and utilities sold off hard — a classic defensive rotation under the surface of a flat tape. The yield curve remains deeply inverted (-84bps on 3M/10Y), copper cratered -2.8%, and the Fear & Greed index sits at zero, suggesting the apparent calm in S&P futures (+0.34%) is a facade masking significant risk-off repositioning beneath.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🧭 Regime Posture: Calm Surface, Churning Underneath",
+          "content": "The ROTATION regime (44% confidence) is the correct read here, but the underlying data is more stressed than the headline numbers imply. S&P futures are modestly green (+0.34%) yet the Russell lagged by 83bps Friday — small caps are telling a different story than mega-cap tech. Breadth is essentially broken: 0% of names above their 200 DMA in the regime scan, which is an extraordinary signal. Fear & Greed at zero (extreme fear) while VIX sits at a benign 13.16 creates a dangerous disconnect — options markets are not pricing the fear that sentiment surveys are registering. The S&P is near a 52-week low in this context, and the 5-day return is -0.4% with zero progress over 20 days. This is a market that has been grinding sideways-to-down while rotating internally. Both long and short conviction carries a -3 penalty today — the regime is explicitly saying: reduce size, respect the chop, don't fight rotations with directional bets.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation: Tech Island Surrounded by Cyclical Selling",
+          "content": "Friday's sector scorecard reveals a stark bifurcation. Winners: Semis (SMH +1.25%), Healthcare (XLV +0.7%), Comm Services (XLC +0.4%), Tech (XLK +0.25%). Losers: Energy (XLE -2.62%), Industrials (XLI -1.22%), Utilities (XLU -1.14%), Financials (XLF -0.62%), Materials (XLB -0.59%), Real Estate (XLRE -0.39%). This is not a simple risk-on or risk-off day — it is a rotation INTO mega-cap tech/growth and OUT of everything rate-sensitive or cyclical. Sector dispersion of 3.9pp on a flat futures day confirms the regime classification. Notably, Utilities and REITs — typically defensive — sold off alongside cyclical Energy and Industrials, suggesting the selling is rate-driven (not pure recession trade) as the 10Y yield, while falling -2.48%, remains elevated at 4.4%. Healthcare's outperformance adds a genuine defensive bid. The message: capital is concentrating into a narrower and narrower leadership cohort (semis, mega-cap tech), which historically signals a maturing rally or a market searching for justification to move higher without broad participation.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals: Inversion Persists, Rally in Bonds",
+          "content": "The 10-year yield dropped a meaningful -2.48% to 4.40% Friday, providing some relief, but the curve structure remains deeply problematic. The 2-10 spread is inverted at -27bps, and the 3M-10Y spread is inverted at -84bps — a level historically associated with recession risk within a 12-18 month window. The bond rally (yield decline) is a mixed signal: it could reflect genuine flight-to-quality demand consistent with the extreme fear reading, or it could be a reaction to weaker economic data expectations (copper -2.8% reinforces the latter). For equities, lower yields theoretically support growth/tech multiples — which explains Friday's semis and tech outperformance — but the rate relief has not yet been sufficient to lift rate-sensitives like Utilities (-1.14%), REITs (-0.39%), or Financials (-0.62%), suggesting the market doesn't yet trust the yield move as sustainable. Watch the 10Y: a break below 4.35% would be a meaningful catalyst for rate-sensitives. A reversal back above 4.50% would confirm the recent relief is temporary and pressure growth multiples.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows: Dr. Copper Sends a Warning",
+          "content": "The commodity and currency complex is flashing caution. Copper's -2.8% decline is the loudest signal in today's data — Dr. Copper has historically been the most reliable leading indicator of global growth expectations, and a move of this magnitude in a single session is not noise. Combined with Oil WTI -1.31% to $73.25 and Gold -0.90% to $2325, commodities are broadly under pressure. Gold's decline is particularly notable: when both copper AND gold sell off simultaneously, it often reflects forced deleveraging or a broad commodity unwind rather than a pure growth scare (which would typically see gold bid as safe haven). The Dollar (DXY 104.11, -0.03%) was essentially flat, so this isn't a dollar-strength driven commodity selloff. USD/JPY at 156.08 (-0.70%) is interesting — yen strengthening suggests some safe-haven flows or positioning ahead of potential BOJ intervention chatter. Bitcoin +2.56% and Ethereum +1.22% are diverging from risk-off in commodities — crypto acting as its own asset class, potentially benefiting from ETF flow dynamics. Materials sector is on explicit UNDERWEIGHT per regime rules. Avoid XLB, FCX, and commodity-linked names today.",
+          "importance": "high"
+        },
+        {
+          "title": "🌍 International Markets: Europe Weak, Asia Mixed",
+          "content": "Global markets provide no clear directional tailwind. DAX -1.09% is the standout — European equities sold off meaningfully Friday, likely pricing a combination of rate uncertainty (ECB meeting approaching) and growth concerns amplified by the copper signal. FTSE -0.37% and Nikkei -0.22% add to the soft international backdrop. On the positive side, Shanghai +0.41% and Hang Seng +0.22% show Chinese markets holding up modestly — potentially reflecting domestic stimulus optimism or a different economic cycle. The DAX weakness is worth watching: German industrials are a bellwether for global manufacturing, and their underperformance reinforces the industrial/cyclical rotation story playing out in U.S. sectors (XLI -1.22% Friday).",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors: The Disconnect Problem",
+          "content": "The most significant risk today is the disconnect between surface-level calm and underlying stress indicators. VIX at 13.16 implies complacency, yet F&G is at 0 (extreme fear). Breadth is broken. Copper is crashing. The curve is deeply inverted. Yet futures are green and the S&P has had 2 consecutive up days. This kind of divergence resolves — usually not gently. Specific risks to monitor: (1) Any ISM Manufacturing data or Fed speak that confirms the growth slowdown implied by copper; (2) A VIX spike through 15-16 that forces systematic de-risking; (3) Small-cap (IWM) continuation of underperformance — if Russell breaks recent lows, breadth deterioration becomes confirmed, not just suspected; (4) Energy sector follow-through — XLE -2.62% in one day is a significant move; if oil breaks $72 support, energy sector names face meaningful downside; (5) The narrow leadership in semis is both a strength and a vulnerability — if SMH reverses on any negative catalyst (NVDA guidance, export controls, etc.), the one remaining pillar of the bull case weakens significantly.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Yield Curve / Rate Direction — The Pivot Point for Today's Rotation",
+          "scenarios": [
+            {
+              "condition": "If 10Y yield continues lower, breaking below 4.35% on weak ISM or soft data",
+              "implication": "Rate-sensitives (XLRE, XLU) get relief bid; growth/tech leadership extends; the rotation narrative shifts from 'tech only' to broader participation. Bond market validating a growth slowdown that eventually helps rate-sensitives.",
+              "trade": "Consider long XLV (Healthcare — already showing strength, benefits from lower rates and defensive bid) or a pairs trade: long XLU/short XLE to play the rate-relief + commodity-weakness combination. Scale to 0.9x normal size per regime rules."
+            },
+            {
+              "condition": "If 10Y yield reverses higher back toward 4.50%+, undoing Friday's move",
+              "implication": "The brief relief rally in growth names fades; tech and semis give back Friday gains; rate-sensitives remain under pressure. This scenario creates a market with no winners — cyclicals down on growth fears, defensives down on rates, growth down on yield reversal.",
+              "trade": "Reduce gross exposure. A tactical short on XLRE (most rate-sensitive sector, already weak) with tight stops above recent highs. Avoid new longs. This scenario has the highest risk of a broader selloff that brings VIX toward 16-18."
+            }
+          ]
+        },
+        {
+          "event": "Semiconductor / Mega-Cap Tech Leadership — Can the Pillar Hold?",
+          "scenarios": [
+            {
+              "condition": "If SMH +1.25% momentum continues Monday with no negative catalyst, NVDA/AMD/AVGO hold or extend",
+              "implication": "The narrow leadership continues to mask market deterioration. S&P holds near current levels despite broad weakness. Nasdaq outperforms meaningfully. The bull case — AI capex cycle sustains semis regardless of macro — remains intact for now.",
+              "trade": "Long SMH or individual semi names (NVDA, AVGO) with defined risk below Friday's lows. This is the consensus trade and the regime's 'least bad' direction today, but size at 0.7-0.8x normal given -3 conviction penalty and narrow breadth risk."
+            },
+            {
+              "condition": "If semis fade Monday morning after the open, giving back Friday's gains on volume",
+              "implication": "The last pillar of market support cracks. With cyclicals already weak, energy selling off, and breadth broken, a semi reversal removes the only sector providing positive momentum. This would be a high-conviction signal of broader market deterioration.",
+              "trade": "Aggressive reduction of long exposure across the board. Consider short SOXS (3x inverse semis) only for experienced traders with strict stops. More conservatively: reduce all tech/semi longs to minimum sizing and increase cash. This scenario likely takes S&P toward 5,150-5,180 support."
+            }
+          ]
+        },
+        {
+          "event": "Copper / Commodities Cascade — Growth Scare Confirmation",
+          "scenarios": [
+            {
+              "condition": "If copper stabilizes or bounces Monday, and oil holds $72-73 support",
+              "implication": "Friday's commodity selloff was a one-day event, not the start of a trend. Growth fears recede marginally. Energy (XLE) and Materials (XLB) could see a technical bounce after severe oversold conditions. The rotation regime loses some of its 'growth fear' component.",
+              "trade": "Tactical long XLE for a mean-reversion bounce from oversold (-2.62% in one day), with a stop below Friday's close. This is a counter-trend trade in a weak sector — keep size very small (0.5x) and treat as a day trade rather than a swing position."
+            },
+            {
+              "condition": "If copper continues lower and oil breaks $72, with DAX/global equities following Friday's weakness",
+              "implication": "The growth scare becomes a growth narrative. Cyclicals, Energy, Industrials, and Materials enter a more sustained downtrend. International weakness (DAX already -1.09%) confirms this is a global slowdown signal, not just a U.S. rotation.",
+              "trade": "Short XLB (Materials) aligns with the explicit regime underweight signal. Short XLE on a break of $72 oil with a target toward $69-70 WTI. Long GLD as a relative safe haven if gold stabilizes despite commodity pressure — gold's resilience vs. copper in a growth scare can be significant."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "MRVL",
+      "direction": "long",
+      "entryPrice": 68.5,
+      "targetPrice": 75,
+      "stopLoss": 64.5,
+      "thesis": "Marvell Technology beat Q1 FY2025 consensus on both revenue ($1.161B, +$11M above guidance midpoint) and non-GAAP EPS ($0.24), explicitly citing 'stronger than forecasted demand from AI.' Monday is the first full trading session post-earnings. With the AI data center segment driving 69%+ of revenue and growing 92% YoY, MRVL offers a stock-specific beat in a market otherwise rewarding tech/semis while cyclicals sell off — perfectly suited to a ROTATION regime.",
+      "catalyst": "Q1 FY2025 earnings beat reported after close May 30, 2024 — revenue $1.161B above guidance, non-GAAP EPS $0.24 beat, AI demand cited as the upside driver. First day of full market reaction on June 3.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": "Concrete earnings beat: revenue $1.161B beat guidance midpoint by $11M, non-GAAP EPS $0.24 beat. AI demand explicitly cited as the upside driver by management. Q2 FY25 guidance expected to show continued AI-driven growth. The beat is clean and quantifiable — this is high-clarity catalyst."
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": "MRVL was trading ~$63-68 in late May 2024 before the earnings print. A beat of this magnitude with an AI narrative typically produces 5-10% gap-ups in this tape. However, the broader rotation regime and high beta (1.78) make sustained follow-through uncertain. Setup is decent but not pristine."
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": "Entry ~$68.50 (post-gap open estimate), target $75 (+9.5%), stop $64.50 (-5.8%). Ratio ~1.6:1. The reward is compelling if AI enthusiasm carries the stock; the stop is set below pre-earnings support to limit downside on a failed gap-fill scenario."
+        },
+        "volumeLiquidity": {
+          "score": 82,
+          "reasoning": "MRVL is a liquid large-cap semiconductor stock. Post-earnings volume typically 2-4x average. Options flow will be active. Size can be managed appropriately without slippage concerns."
+        },
+        "marketAlignment": {
+          "score": 59,
+          "reasoning": "Regime applies -3 penalty to longs (raw 62 → 59). The ROTATION regime is generally hostile to directional longs. However, MRVL fits the specific intra-regime pattern: tech/semis are the 'island' holding up while cyclicals sell off. A stock-specific earnings beat in the right sector somewhat mitigates the regime headwind, but this is the weakest dimension."
+        },
+        "informationEdge": {
+          "score": 80,
+          "reasoning": "The earnings release is the freshest possible information — just reported after close on May 30. The market hasn't fully priced the AI data center acceleration narrative in the context of the Q1 beat. Edge lies in acting on the first-day post-earnings gap before the move is fully digested."
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": "First trading day post-earnings is the highest-urgency window for post-earnings momentum plays. The setup degrades significantly if not entered Monday as the initial gap-up is the cleanest signal. By Tuesday, the narrative will be priced in or fading."
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "MRVL",
+      "openPrice": 70.2,
+      "highPrice": 71.16,
+      "lowPrice": 66.1,
+      "closePrice": 69.8,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.9,
+      "notes": "3-day window (2024-06-03, 2024-06-04, 2024-06-05). Open $70.2, High $71.16, Low $66.1, Close $69.8."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 100,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 1.9,
+    "profitFactor": 10,
+    "winRate": 100,
+    "totalScore": 75
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 85,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 70,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "riskReward": {
+      "avgScoreWinners": 72,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 82,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 59,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "informationEdge": {
+      "avgScoreWinners": 80,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 75,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.25,
+    "technicalSetup": 0.12,
+    "riskReward": 0.1,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
+  },
+  "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 124 out of 150 trials (82.7%) produced NO trades. In the last 10 trials, 9 out of 10 were no-trade days, and the single trade taken (MRVL long in Trial 142) was actually a winner at +1.9%. This means the algorithm is leaving massive amounts of alpha on the table. The threshold and/or conviction scoring pipeline is so restrictive that it refuses to act even in clearly directional regimes — Trial 146 had a 73% confidence risk-on regime with SPX +1.97% and Nasdaq +2.18%, and Trial 148 had a 90% confidence crisis regime, yet ZERO trades were generated in either. These are exactly the high-conviction environments where the algorithm should be deploying capital aggressively. The algorithm appears to be optimizing for avoiding losses rather than capturing gains, which is a fundamental design flaw for a day trading system.\n\nThe dimension predictive power data reveals a troublingly narrow spread: all dimensions cluster between 69.1 and 72.5 out of 100. This near-uniform predictive power suggests the scoring system lacks discriminatory power — no single dimension is clearly separating winners from losers. Yet the weights have drifted dramatically, with catalystClarity at 21.3% and volumeLiquidity at only 10.2%, despite their predictive power being only ~3 points apart. The weight evolution shows catalystClarity has been monotonically increasing from 18% to 21.3% without strong empirical justification given the flat predictive power landscape. Meanwhile, timingUrgency (72.5 — the highest predictive dimension) has been bouncing between 8.3% and 18.6% and currently sits at only 11.5%. The weights are not tracking predictive power.\n\nLooking at the best trials, every single one was a single-trade day with 100% win rate. This confirms the algorithm CAN pick winners when it acts — the issue is it almost never acts. The worst trials show a pattern: multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) tend to perform poorly, suggesting the algorithm dilutes conviction when it takes multiple positions. Trial 30 (BRK.B short, score=0) and Trial 55 (SNOW long, score=15) suggest the algorithm occasionally takes contrarian positions that fail badly — shorting a defensive name or going long a high-beta growth stock without sufficient catalyst support.\n\nThe regime classification pipeline has a critical issue: it frequently classifies regimes with very low confidence (38-48%) and defaults to 'rotation' or 'range-bound', which then suppresses trade generation. In 7 of the last 10 trials, regime confidence was below 50%. The algorithm treats low-confidence regime classification as a reason not to trade, when it should instead be using regime uncertainty as a signal to reduce position size while still trading directional setups within the regime's dominant characteristic. Trial 145 (risk-off, 67% confidence) and Trial 148 (crisis, 90% confidence) were high-confidence regimes that should have generated short/defensive trades but produced nothing.\n\nThe profit factor of 21.71 on winning trades is extraordinarily high, which means when the algorithm does trade, it's highly selective and usually right. But a 30.8% win rate combined with only 26 trades in 150 trials means the system is generating maybe 5-8 actual gains over the entire period. The algorithm needs to trade 3-4x more frequently while maintaining selectivity. The path to improvement is NOT tightening filters further — it's loosening the composite threshold while adding regime-specific trade templates that automatically generate candidates in high-confidence directional regimes."
+}

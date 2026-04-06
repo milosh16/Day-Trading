@@ -1,0 +1,232 @@
+{
+  "trialId": 141,
+  "date": "2025-07-24",
+  "dateDisplay": "Thursday, July 24, 2025",
+  "generatedAt": "2026-04-06T12:23:04.273Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.07,
+      "nasdaqFuturesChange": 0.18,
+      "dowFuturesChange": -0.7,
+      "russellFuturesChange": -1.36,
+      "vixFuturesChange": -2.99,
+      "vix": 14.93,
+      "vixChange": -2.99,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 18.56,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.41,
+      "tenYearYieldChange": 0.46,
+      "twoYearYield": 4.05,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.95,
+      "threeMonthYield": 4.24,
+      "twoTenSpread": 0.36,
+      "threeMoTenYrSpread": 0.17,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 97.65,
+      "dollarIndexChange": 0.28,
+      "eurUsd": 1.18,
+      "eurUsdChange": -0.15,
+      "usdJpy": 147.01,
+      "usdJpyChange": 0.45,
+      "usdCny": 7.15,
+      "usdCnyChange": -0.08,
+      "oilWTI": 65.16,
+      "oilChange": -1.32,
+      "brentOil": 68.44,
+      "brentOilChange": -1.07,
+      "natGasChange": 0.52,
+      "goldPrice": 3334,
+      "goldChange": -1.1,
+      "silverChange": -2.19,
+      "copperChange": -0.23,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.88,
+      "daxChange": -0.32,
+      "ftseChange": -0.2,
+      "shanghaiChange": -0.33,
+      "hangSengChange": -1.09,
+      "kospiChange": 0.18,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 97.8,
+      "spreadChange": 0.12,
+      "igSpread": -17.28,
+      "igSpreadChange": 0.15,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.96,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.42,
+      "xlfChange": -0.06,
+      "xleChange": 0.71,
+      "xlvChange": -0.37,
+      "xlpChange": -0.36,
+      "xluChange": -0.13,
+      "xlreChange": -0.14,
+      "xliChange": -0.17,
+      "xlbChange": -1.03,
+      "xlcChange": 0.17,
+      "xlyChange": -1.66,
+      "smhChange": 0.42,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.62,
+      "ethereumChange": 0.52,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 4,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.05,
+      "sp20DayReturn": 4.45,
+      "nasdaqVsRussell5d": 0.89,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 42,
+      "directionalBias": "-12",
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 43,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "Markets are caught in a bifurcated rotation session: mega-cap growth and energy are holding up while small caps, defensives, and cyclicals face meaningful selling pressure — Russell underperformed by 1.49pp and XLY shed 1.66%, signaling a risk-quality split rather than broad risk-on. The regime is classified as ROTATION with only 42% confidence, reflecting genuine uncertainty about direction, while Fear & Greed at extreme fear (0) clashes oddly with a VIX at a benign 14.93 — a disconnect worth watching. After four consecutive up days and a 4.45% 20-day gain in the S&P, the path of least resistance is consolidation or selective sector unwind rather than a clean continuation.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🧭 Overall Market Posture & Regime",
+          "content": "The ROTATION regime with 42% confidence tells you the system itself is unsure — this is not a high-conviction trending day. The directional bias of -12 leans slightly negative, and both long and short trades carry a -3 conviction penalty, meaning the edge is thin on any directional bet. What's notable is the internal contradiction: VIX at 14.93 (down nearly 3%) is pricing calm, yet the Fear & Greed index reads 0 (extreme fear) and breadth is effectively dead with 0% of stocks above their 200 DMA. This divergence between implied vol and sentiment/breadth suggests the VIX may be complacent or that the F&G reading is capturing a different, potentially lagging signal. The S&P is sitting near 52-week lows contextually, yet has posted four straight up days — the rally has been narrow and fragile, likely driven by a handful of mega-cap names. Stress at 11/100 and risk appetite at 43/100 confirm a market in limbo, not crisis, but not confidence either.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "The sector tape is telling a very clear story: this is a mega-cap growth + energy day, and everything else is being sold or ignored. XLE +0.71% leads — likely driven by short covering or macro positioning rather than fundamental oil strength (WTI was down 1.32%). XLK +0.42% and SMH +0.42% confirm tech/semis are the quality refuge. On the losing side, the damage is significant and revealing: XLY -1.66% (consumer discretionary) is the biggest red flag — this sector moving this hard lower while growth names hold signals consumers are being repriced for weakness, not just rate sensitivity. XLB -1.03% (materials) confirms the commodity/China growth narrative is deteriorating. Healthcare XLV -0.37% and Staples XLP -0.36% selling off simultaneously with discretionary breaks the classic 'defensives bid in fear' pattern — money is not rotating to safety, it's leaving sectors entirely. The Russell lagging by 1.49pp caps it: this is a large-cap quality trade, not broad market participation. Growth leading Russell by 0.89% over 5 days reinforces that mega-cap tech is doing the heavy lifting for index-level returns.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10Y yield moved up 4.6bps to 4.41% — a meaningful single-day move that adds pressure to rate-sensitive sectors (which explains XLRE -0.14% and XLU -0.13%). The 2-10 spread at 36bps is positive but slim, and the 3M-10Y spread at just 17bps means the curve is barely uninverted — we're at a critical juncture where the yield curve re-steepening narrative is alive but unproven. A further rise in 10Y yields from here would start to pressure the equity multiple, particularly for the growth names that have been carrying the market. The fact that XLK held up despite a 10Y yield spike is notable — it suggests the market is still prioritizing earnings quality and AI optionality over duration sensitivity. Watch the 4.50% level on the 10Y as a near-term line in the sand: a break there historically triggers repricing in growth multiples and could unwind the narrow leadership holding this market up.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "Dollar strength (+0.28% to 97.65) with EUR/USD at 1.18 and USD/JPY at 147.01 is a headwind for international equities and commodities — both confirmed. Gold -1.10% to $3,334 is a meaningful pullback from elevated levels; this looks like profit-taking or a dollar-driven unwind rather than a structural shift, but it reduces the safe-haven narrative for now. WTI crude -1.32% to $65.16 is the more concerning data point — oil weakness despite energy stocks holding up (XLE +0.71%) suggests either a lagged sector response or traders positioning in energy equities for reasons beyond spot price (geopolitics, supply constraints expectations). That divergence between XLE and WTI is worth monitoring; historically it closes, usually with XLE following oil lower. International markets were uniformly weak: Nikkei -0.88%, Hang Seng -1.09%, Shanghai -0.33%, DAX -0.32% — global growth anxiety is the backdrop, and the USD strength is reflecting capital repatriation toward US assets, specifically large-cap US tech.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors to Watch",
+          "content": "1) NARROW LEADERSHIP RISK: Four consecutive up days in the S&P driven by a handful of mega-cap names is inherently fragile. When small caps, defensives, materials, and discretionary all sell simultaneously, the index is a facade. Any earnings miss from a top-10 S&P constituent could unwind weeks of gains in a session. 2) YIELD SPIKE SENSITIVITY: 10Y at 4.41% and rising. If we see 4.50%+ on strong economic data or a hawkish Fed signal, the growth multiple compression trade returns with velocity. 3) OIL-ENERGY DIVERGENCE: XLE holding while WTI falls is an unstable equilibrium. Energy is the top sector today for the wrong reasons — don't trust the leadership. 4) F&G vs VIX DISCONNECT: Extreme fear at F&G=0 while VIX prints 14.93 is anomalous. One of these is wrong. If VIX is complacent and fear is the correct read, a volatility snapback could materialize quickly. 5) GLOBAL WEAKNESS: Every major international index closed red. China/HK weakness is a macro drag that doesn't disappear overnight — it feeds back into materials, energy, and cyclicals.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "10Y Yield Tests 4.50% — Growth Multiple Pressure",
+          "scenarios": [
+            {
+              "condition": "If 10Y yields push toward 4.50% on strong economic data or Fed speak",
+              "implication": "The narrow tech/growth leadership that has carried the S&P through four up days faces multiple compression. XLK and SMH, which have been the only real drivers, would rotate out. Small caps (already lagging) offer no safe harbor. The S&P's fragile gains could evaporate quickly as the one pillar holding the index cracks.",
+              "trade": "Consider reducing long XLK/QQQ exposure or hedging with TLT puts. Short-duration positioning via SGOV or cash equivalents becomes attractive. If yield spike is confirmed, XLF may actually benefit (yield curve steepening trade) — watch XLF relative to XLK as a pair."
+            },
+            {
+              "condition": "If 10Y yields stabilize or pull back below 4.35%",
+              "implication": "The growth trade gets fresh oxygen. Tech and semis re-accelerate, the S&P can extend its four-day run, and the rotation story fades into a cleaner risk-on tape. XLRE and XLU would also recover.",
+              "trade": "Stay long quality growth (QQQ, SMH) with tight stops. Add XLRE on yield pullback as a mean-reversion setup. Regime penalty still applies — size 0.7x normal."
+            }
+          ]
+        },
+        {
+          "event": "XLY -1.66% Consumer Discretionary Breakdown — Macro Signal or Noise?",
+          "scenarios": [
+            {
+              "condition": "If consumer discretionary weakness continues into Thursday with retail/consumer data disappointing",
+              "implication": "XLY's 1.66% drop is the largest single-sector loss and may be pricing in consumer fatigue. If confirmed by weak macro data (consumer confidence, spending data), this becomes a recession-adjacent signal. Materials already breaking, discretionary rolling — the cyclical complex is telling a coherent story of growth slowdown.",
+              "trade": "Short XLY or long XLP/XLY ratio trade (defensive vs discretionary rotation). Commodities-adjacent names (XLB components) remain under pressure. Avoid IWM/small caps — they are most exposed to domestic economic softness."
+            },
+            {
+              "condition": "If XLY weakness was idiosyncratic (single large-cap component drag, earnings-related)",
+              "implication": "The macro alarm is false, and XLY bounces. The rotation story becomes more benign — money shuffled within sectors rather than a broad growth scare.",
+              "trade": "Fade the XLY weakness with a mean-reversion long if premarket shows stabilization and no macro catalyst confirming the move. Use tight stop below prior session low."
+            }
+          ]
+        },
+        {
+          "event": "XLE vs WTI Divergence Resolution — Energy Setup",
+          "scenarios": [
+            {
+              "condition": "If WTI continues lower toward $63-64 support and XLE starts to follow oil down",
+              "implication": "The energy sector's 'top sector' status today was on borrowed time. XLE rallying while oil drops is a classic divergence that closes against the equity side. A WTI breakdown through $63 would reprice energy equities sharply and remove the only non-tech sector showing strength.",
+              "trade": "Short XLE or buy XLE puts on confirmation of follow-through oil weakness. The oil services names (OIH) are particularly vulnerable in this scenario. Watch Saudi/OPEC headlines as the wildcard."
+            },
+            {
+              "condition": "If WTI stabilizes at $65 and geopolitical risk premium returns (supply disruption headlines)",
+              "implication": "Energy becomes legitimate leadership, not just a short-covering bounce. XLE holds and potentially extends, giving the market a second pillar of support beyond mega-cap tech.",
+              "trade": "Long XLE with a stop at yesterday's low. Pair with long XOM or CVX for single-stock expression. This scenario gives the S&P a broader base and improves the probability of continued upside."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.25,
+    "technicalSetup": 0.12,
+    "riskReward": 0.1,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.1
+  },
+  "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 124 out of 150 trials (82.7%) produced NO trades. In the last 10 trials, 9 out of 10 were no-trade days, and the single trade taken (MRVL long in Trial 142) was actually a winner at +1.9%. This means the algorithm is leaving massive amounts of alpha on the table. The threshold and/or conviction scoring pipeline is so restrictive that it refuses to act even in clearly directional regimes — Trial 146 had a 73% confidence risk-on regime with SPX +1.97% and Nasdaq +2.18%, and Trial 148 had a 90% confidence crisis regime, yet ZERO trades were generated in either. These are exactly the high-conviction environments where the algorithm should be deploying capital aggressively. The algorithm appears to be optimizing for avoiding losses rather than capturing gains, which is a fundamental design flaw for a day trading system.\n\nThe dimension predictive power data reveals a troublingly narrow spread: all dimensions cluster between 69.1 and 72.5 out of 100. This near-uniform predictive power suggests the scoring system lacks discriminatory power — no single dimension is clearly separating winners from losers. Yet the weights have drifted dramatically, with catalystClarity at 21.3% and volumeLiquidity at only 10.2%, despite their predictive power being only ~3 points apart. The weight evolution shows catalystClarity has been monotonically increasing from 18% to 21.3% without strong empirical justification given the flat predictive power landscape. Meanwhile, timingUrgency (72.5 — the highest predictive dimension) has been bouncing between 8.3% and 18.6% and currently sits at only 11.5%. The weights are not tracking predictive power.\n\nLooking at the best trials, every single one was a single-trade day with 100% win rate. This confirms the algorithm CAN pick winners when it acts — the issue is it almost never acts. The worst trials show a pattern: multi-trade days (Trial 75 with 3 trades, Trial 138 with 2) tend to perform poorly, suggesting the algorithm dilutes conviction when it takes multiple positions. Trial 30 (BRK.B short, score=0) and Trial 55 (SNOW long, score=15) suggest the algorithm occasionally takes contrarian positions that fail badly — shorting a defensive name or going long a high-beta growth stock without sufficient catalyst support.\n\nThe regime classification pipeline has a critical issue: it frequently classifies regimes with very low confidence (38-48%) and defaults to 'rotation' or 'range-bound', which then suppresses trade generation. In 7 of the last 10 trials, regime confidence was below 50%. The algorithm treats low-confidence regime classification as a reason not to trade, when it should instead be using regime uncertainty as a signal to reduce position size while still trading directional setups within the regime's dominant characteristic. Trial 145 (risk-off, 67% confidence) and Trial 148 (crisis, 90% confidence) were high-confidence regimes that should have generated short/defensive trades but produced nothing.\n\nThe profit factor of 21.71 on winning trades is extraordinarily high, which means when the algorithm does trade, it's highly selective and usually right. But a 30.8% win rate combined with only 26 trades in 150 trials means the system is generating maybe 5-8 actual gains over the entire period. The algorithm needs to trade 3-4x more frequently while maintaining selectivity. The path to improvement is NOT tightening filters further — it's loosening the composite threshold while adding regime-specific trade templates that automatically generate candidates in high-confidence directional regimes."
+}
