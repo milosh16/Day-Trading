@@ -1,0 +1,237 @@
+{
+  "trialId": 71,
+  "date": "2025-07-16",
+  "dateDisplay": "Wednesday, July 16, 2025",
+  "generatedAt": "2026-04-06T03:17:23.977Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.32,
+      "nasdaqFuturesChange": 0.25,
+      "dowFuturesChange": 0.53,
+      "russellFuturesChange": 0.99,
+      "vixFuturesChange": -3.73,
+      "vix": 16.52,
+      "vixChange": -3.73,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 20.09,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.45,
+      "tenYearYieldChange": -0.76,
+      "twoYearYield": 4.05,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 5.01,
+      "threeMonthYield": 4.22,
+      "twoTenSpread": 0.4,
+      "threeMoTenYrSpread": 0.23,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.73,
+      "dollarIndexChange": 0.35,
+      "eurUsd": 1.16,
+      "eurUsdChange": 0.24,
+      "usdJpy": 148,
+      "usdJpyChange": -0.51,
+      "usdCny": 7.18,
+      "usdCnyChange": 0.08,
+      "oilWTI": 67.54,
+      "oilChange": 1.75,
+      "brentOil": 69.52,
+      "brentOilChange": 1.46,
+      "natGasChange": -0.25,
+      "goldPrice": 3340.1,
+      "goldChange": -0.37,
+      "silverChange": 0.54,
+      "copperChange": -0.19,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.6,
+      "daxChange": 1.51,
+      "ftseChange": 0.52,
+      "shanghaiChange": 0.37,
+      "hangSengChange": -0.08,
+      "kospiChange": 0.19,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 99.7,
+      "spreadChange": -0.26,
+      "igSpread": -15.66,
+      "igSpreadChange": -0.16,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.01,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.31,
+      "xlfChange": 0.7,
+      "xleChange": -0.86,
+      "xlvChange": 1.24,
+      "xlpChange": 0.35,
+      "xluChange": 0.05,
+      "xlreChange": 1.09,
+      "xliChange": 0.35,
+      "xlbChange": 0.27,
+      "xlcChange": 0.3,
+      "xlyChange": 0.18,
+      "smhChange": -0.52,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.46,
+      "ethereumChange": 3.12,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 0.01,
+      "sp20DayReturn": 3.82,
+      "nasdaqVsRussell5d": 1.71,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 37,
+      "directionalBias": "7",
+      "volatilityRegime": "normal",
+      "stressIndex": 14,
+      "riskAppetiteIndex": 55,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "Markets are in a confirmed ROTATION regime with low conviction (37%), as capital shuffles between sectors rather than making a directional bet — Healthcare and Real Estate led Tuesday while Semis and Energy lagged, a classic defensive-growth mix that defies easy labeling. The VIX at 16.52 with a 3.7% drop signals volatility compression, yet the Fear & Greed index sits at extreme fear (0) and breadth is essentially non-existent above the 200 DMA, creating a rare and important divergence between realized vol and sentiment. Russell outperformance (+0.99% vs S&P +0.32%) hints at small-cap catch-up or risk rotation, but the S&P near 52-week lows keeps the macro backdrop cautious.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "1. Overall Market Posture & Regime",
+          "content": "The ROTATION regime (37% confidence) is the dominant signal today — and low confidence is itself a signal. Markets are not trending; they are redistributing. The S&P is up only 0.01% over 5 days despite a 3.82% 20-day gain, suggesting momentum is stalling at a critical juncture near 52-week lows. With both long and short trades carrying a -3 conviction penalty, the regime explicitly discourages directional conviction. Stress is low at 14/100, and risk appetite sits at a moderate 55/100 — not panicked, not euphoric. This is a market in a holding pattern, processing conflicting signals. The single consecutive up day provides no meaningful trend confirmation. Approach today as a stock-picker's or sector-rotator's market, not a macro momentum day.",
+          "importance": "high"
+        },
+        {
+          "title": "2. Sector Rotation & Relative Strength",
+          "content": "The sector tape tells a nuanced story. Healthcare (XLV +1.24%) and Real Estate (XLRE +1.09%) leading the board is an unusual pairing — XLV suggests defensive positioning while XLRE's strength is a direct rate play (see yields below). Financials (XLF +0.7%) benefiting from a steeper curve adds another layer. The critical underperformers are Semis (SMH -0.52%) and Energy (XLE -0.86%) — two of the most economically sensitive and growth-linked sectors. Semis weakness is notable given that they are often the leading indicator for Nasdaq/growth; their lag while Tech (XLK +0.31%) holds up suggests large-cap tech is being supported by non-semi names. Discretionary (XLY +0.18%) and Utilities (XLU +0.05%) were essentially flat. The sector dispersion of 2.1 percentage points with flat futures is the textbook definition of a rotation day — money is moving between sectors, not entering or leaving the market in aggregate. No strong sector tilts exist per the regime, reinforcing the 'no high-conviction directional bet' message.",
+          "importance": "high"
+        },
+        {
+          "title": "3. Yield Curve & Rate Signals",
+          "content": "The 10-year yield dropped 0.76% to 4.45%, a meaningful single-session move that is directly explaining Real Estate and rate-sensitive outperformance. The 2-10 spread at +40bps and the 3M-10Y at +23bps confirm a positively sloped curve — no inversion signal, which is modestly constructive for bank net interest margins (supportive of XLF). The curve steepening, even slightly, combined with falling long rates is the ideal environment for REITs, utilities, and rate-sensitive consumer names. The 10Y at 4.45% remains elevated in historical context but the directional move down is what markets are trading. If 10Y continues to drift toward 4.30-4.35%, expect XLRE, XLU, and dividend-heavy names to continue outperforming. Watch whether the rate drop is driven by growth concerns (bearish read) or inflation relief (bullish read) — the distinction matters enormously for how to position.",
+          "importance": "high"
+        },
+        {
+          "title": "4. Currency & Commodity Flows",
+          "content": "The Dollar (DXY +0.35% to 98.73) rising while yields fall is an interesting divergence — typically, falling rates weaken the dollar. This may reflect safe-haven demand, relative global growth dynamics, or short covering. EUR/USD at 1.16 is near multi-year highs for the euro, suggesting the dollar's bounce is tactical, not structural. USD/JPY at 148 with a -0.51% move shows the yen strengthening — a classic risk-off signal from the carry trade. Yen strength often precedes or accompanies equity volatility, worth monitoring closely. Gold falling -0.37% despite yen strength is somewhat contradictory — it may be profit-taking after a strong run or a dollar-driven headwind. Oil +1.75% to $67.54 is notable given Energy sector weakness (XLE -0.86%); this divergence between commodity and equity sector is unusual and may signal that the oil move is being discounted as temporary or that energy equities are already pricing in macro weakness. Bitcoin +0.46% and Ethereum +3.12% suggest crypto risk appetite is selectively elevated — ETH's outperformance may reflect protocol-specific catalysts rather than broad risk-on.",
+          "importance": "medium"
+        },
+        {
+          "title": "5. Risk Factors & Red Flags",
+          "content": "Three contradictions demand attention today. First, the VIX at 16.52 (low, falling) versus Fear & Greed at extreme fear (0) is one of the sharpest sentiment-vol divergences possible — either realized vol is about to spike to match sentiment, or sentiment is about to recover sharply. This binary creates tail risk in both directions. Second, 0% of S&P stocks above their 200 DMA with the index near 52-week lows is a severe breadth failure — the index level is being held up by a narrow group of names, which is historically fragile. Third, international markets (DAX +1.51%, Nikkei +0.6%) are outperforming U.S. equities meaningfully, continuing a theme of global rotation away from U.S. assets. If this continues, it is a structural headwind for U.S. equities. The combination of narrow breadth, extreme fear sentiment, yen strengthening, and S&P near lows creates a setup where a negative catalyst could accelerate a downside move quickly, despite the calm VIX reading.",
+          "importance": "high"
+        },
+        {
+          "title": "6. International & Cross-Asset Context",
+          "content": "DAX +1.51% is the standout international performer and continues the narrative of European equity outperformance versus U.S. in 2025. Nikkei +0.60% despite yen strength is resilient and may indicate Japanese domestic demand themes. Shanghai +0.37% and Hang Seng -0.08% show a split within China — onshore holding while Hong Kong wobbles, likely reflecting different exposure to global trade concerns. The international average of +0.52% outpacing S&P's +0.32% continues the year's dominant macro theme: global diversification away from U.S. tech concentration. For U.S. investors, this is a reminder that international exposure (EFA, VEU, EWG) has been the relative value trade.",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "VIX Compression vs. Extreme Fear Divergence Resolution",
+          "scenarios": [
+            {
+              "condition": "If sentiment recovers and Fear & Greed begins normalizing upward from extreme fear (0) toward neutral (40-50) over the next 3-5 sessions",
+              "implication": "The VIX compression is confirmed as a leading indicator. Breadth broadens, small caps (Russell) continue to outperform, and the market stages a relief rally from near 52-week lows. Rate-sensitive sectors (XLRE, XLU) continue to benefit from falling 10Y.",
+              "trade": "Consider tactical longs in IWM (small caps) and XLRE with tight stops below recent lows. Scale position sizes to 0.9x normal given regime target distance scaling. Conviction reduced by -3 per regime rules — size accordingly."
+            },
+            {
+              "condition": "If breadth fails to recover and the 0% above 200 DMA condition persists or worsens while yen continues strengthening",
+              "implication": "The calm VIX is a lagging indicator. Carry trade unwind accelerates, defensive positioning intensifies, and the S&P breaks below 52-week lows with potential for a sharp volatility spike to 20-22 VIX range.",
+              "trade": "Consider hedges via VIX calls or SQQQ. Short SMH as the weakest sector with semiconductor-specific headwinds. Again, -3 conviction penalty applies — keep shorts small and hedge-sized, not speculative."
+            }
+          ]
+        },
+        {
+          "event": "Oil-Energy Equity Divergence Resolution",
+          "scenarios": [
+            {
+              "condition": "If WTI holds above $67 and makes another leg higher toward $70, with macro data showing demand resilience",
+              "implication": "Energy equities (XLE -0.86% yesterday) snap back to catch up with crude — the sector was a laggard and mean-reversion toward oil spot price is the typical pattern with a 1-3 day lag.",
+              "trade": "XLE or individual integrated names (XOM, CVX) as a catch-up trade. Set target at 0.9x normal distance per regime scaling. High oil + weaker dollar environment (if USD gives back today's gains) is the ideal setup for this trade."
+            },
+            {
+              "condition": "If oil fades back below $66 and XLE continues underperforming despite commodity strength",
+              "implication": "Energy equity weakness is a macro signal — the market is pricing in demand destruction or recession risk that the spot oil market hasn't fully discounted yet. This would be a bearish leading indicator for broader economically-sensitive sectors.",
+              "trade": "Stay away from XLE. Rotate further into defensive plays — XLV and staples (XLP). The energy equity divergence from spot becomes a macro warning flag worth embedding in risk models."
+            }
+          ]
+        },
+        {
+          "event": "International vs. U.S. Outperformance Continuation",
+          "scenarios": [
+            {
+              "condition": "If DAX, Nikkei, and other international indices continue to outpace U.S. equities by 50-100bps daily and the dollar weakens from 98.73 back toward 97-98",
+              "implication": "The structural rotation out of U.S. equities into international is intact. EUR/USD potentially pushes toward 1.17-1.18, providing an additional FX tailwind for unhedged international equity holders. U.S. tech multinationals face a dual headwind of dollar translation and valuation compression.",
+              "trade": "Add to international equity exposure via EWG (Germany) or VEU (ex-U.S.) on any dips. Reduce overweight in U.S. mega-cap tech concentration. This is a multi-week theme, not a single-day trade — position sizing should reflect medium-term conviction, not day-trade sizing."
+            },
+            {
+              "condition": "If U.S. economic data surprises to the upside (retail sales, industrial production) and dollar strengthens further",
+              "implication": "International outperformance stalls as U.S. growth premium reasserts. Dollar strength headwind for international equities compresses the relative return gap. Capital rotates back to U.S. large caps.",
+              "trade": "Fade international outperformance, rotate back to SPY/QQQ with reduced international allocation. Watch 10Y yield reaction to data — if strong data pushes 10Y back above 4.55%, XLRE and rate-sensitives reverse sharply."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.12,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.14,
+    "informationEdge": 0.13,
+    "timingUrgency": 0.18
+  },
+  "opusReviewNotes": "The algorithm's most glaring problem is its extreme passivity: 77.5% no-trade days across 80 trials, with only 18 trials producing any trades at all. This is catastrophic for a day trading algorithm. The 'rotation' regime classification is being used as a catch-all bucket that triggers no-trade decisions — 7 of the last 10 trials were classified as 'rotation' with low confidence (33-50%), and 6 of those 7 produced zero trades. The algorithm is essentially paralyzed whenever it can't cleanly classify the regime, which is most of the time. Meanwhile, when it DOES trade in rotation regimes (Trial 75 with 3 trades, Trial 79 with 1 trade), the results are wildly inconsistent: Trial 75 scored 5 (all three wrong, AYI down -15.73%) while Trial 79 scored 100 (UBER +1.21%). This suggests the regime classification itself isn't the issue — it's that the algorithm lacks sub-regime logic for rotation environments, which represent the majority of trading days.\n\nThe dimension predictive power data is remarkably flat: all seven dimensions cluster between 62.9 and 67.0, with timingUrgency (67.0) and catalystClarity (66.8) marginally leading. Yet the current weights are heavily skewed toward catalystClarity (20.4%) and timingUrgency (18.5%), which together consume 39% of the score despite only marginally outperforming other dimensions. The weight evolution shows chaotic oscillation — technicalSetup went from 14.8% to 18.4% to 12.6% to 12.0% across trials, suggesting the optimization is overfitting to recent results rather than converging on stable weights. The near-uniform predictive power across dimensions (spread of only 4.1 points) suggests either all dimensions carry roughly equal signal, or none of them carry meaningful signal and the scoring framework itself needs rethinking.\n\nTrial 75 is the most instructive failure: three simultaneous long positions (VLO, CMC, AYI) in a 'rotation' regime with 50% confidence. This violated basic portfolio construction — taking three correlated long bets (all value/cyclical names) in a rotation environment is the opposite of what rotation trading demands. AYI's -15.73% loss suggests either a catastrophic earnings miss or a fundamental event the algorithm failed to screen for. The algorithm needs a hard rule: never take 3+ positions in the same direction during rotation regimes. Contrast with Trial 79, where a single UBER long in rotation worked perfectly — the algorithm correctly identified a stock-specific catalyst (likely earnings or guidance) and took a single concentrated bet.\n\nTrial 77 is a critical missed opportunity: a genuine risk-on regime (60% confidence, appetite=68, stress=12) with the briefing explicitly bullish ('meaningful risk-on bounce, S&P futures +1.52%, semis leading'), yet ZERO trades were generated. This is the algorithm's highest-conviction regime classification in the last 10 trials, and it did nothing. Similarly, Trial 78 had stress=26 (highest in the window) with appetite=35 — a clear defensive/fear regime that could have supported short trades or defensive longs, but was classified as mere 'rotation' and produced nothing. The algorithm is failing to act on its own best signals.\n\nThe profit factor of 30.25 is misleadingly high because it's dominated by the winning trades (which tend to be single-position, modest gains) while the losing trades are rare but devastating (AYI -15.73%). The 33.3% win rate with high profit factor means the winners are significantly larger than losers on average, but with only 18 trade-producing trials out of 80, the sample is far too small to trust. The stop-loss hit rate (3 hits, avg -6.30%) suggests stops are too wide — a day trading algorithm should rarely see -6% drawdowns on individual positions. The stop-loss framework needs tightening to 2-3% maximum for day trades."
+}

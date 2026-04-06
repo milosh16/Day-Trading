@@ -1,0 +1,428 @@
+{
+  "trialId": 75,
+  "date": "2026-01-08",
+  "dateDisplay": "Thursday, January 8, 2026",
+  "generatedAt": "2026-04-06T03:45:40.247Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.01,
+      "nasdaqFuturesChange": -0.44,
+      "dowFuturesChange": 0.55,
+      "russellFuturesChange": 1.11,
+      "vixFuturesChange": -6.21,
+      "vix": 14.49,
+      "vixChange": -6.21,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 18.39,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.18,
+      "tenYearYieldChange": 1.09,
+      "twoYearYield": 3.67,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.86,
+      "threeMonthYield": 3.51,
+      "twoTenSpread": 0.51,
+      "threeMoTenYrSpread": 0.67,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 99.13,
+      "dollarIndexChange": 0.2,
+      "eurUsd": 1.17,
+      "eurUsdChange": -0.16,
+      "usdJpy": 156.88,
+      "usdJpyChange": 0.1,
+      "usdCny": 6.98,
+      "usdCnyChange": -0.19,
+      "oilWTI": 59.12,
+      "oilChange": 2.35,
+      "brentOil": 63.34,
+      "brentOilChange": 2.18,
+      "natGasChange": -6.99,
+      "goldPrice": 4490.3,
+      "goldChange": 0.91,
+      "silverChange": 5.58,
+      "copperChange": 1.9,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 1.61,
+      "daxChange": 0.53,
+      "ftseChange": 0.8,
+      "shanghaiChange": 0.92,
+      "hangSengChange": 0.32,
+      "kospiChange": 0.75,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 95.3,
+      "spreadChange": -0.07,
+      "igSpread": -20.48,
+      "igSpreadChange": 0.28,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.09,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -1.56,
+      "xlfChange": 0.52,
+      "xleChange": 3.15,
+      "xlvChange": -0.96,
+      "xlpChange": 2.38,
+      "xluChange": 0.29,
+      "xlreChange": 0.75,
+      "xliChange": 0.75,
+      "xlbChange": 1.76,
+      "xlcChange": 0.33,
+      "xlyChange": 1.67,
+      "smhChange": -1.57,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.56,
+      "ethereumChange": -0.69,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.11,
+      "sp20DayReturn": 1.18,
+      "nasdaqVsRussell5d": -3.89,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 50,
+      "directionalBias": "20",
+      "volatilityRegime": "normal",
+      "stressIndex": 12,
+      "riskAppetiteIndex": 55,
+      "sectorTilts": {
+        "energy": "overweight",
+        "airlines": "underweight",
+        "materials": "overweight",
+        "industrials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets are in a confirmed ROTATION regime as of January 8, 2026, with sharp bifurcation between value/cyclicals and growth/tech — Russell outperforming Nasdaq by over 155bps, Energy surging +3.15%, and Semis/Tech shedding -1.57%/-1.56% respectively. Despite extreme Fear & Greed readings near zero and the S&P trading near 52-week lows, copper +1.9%, oil +2.35%, and broad international green signals suggest institutional money is repositioning into hard assets and cyclical value rather than fleeing risk entirely. The story today is not panic — it is rotation, and the spread between winners and losers (4.7pp sector dispersion) confirms capital is moving with conviction, just not in the direction consensus expected.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🧭 Overall Market Posture & Regime",
+          "content": "The regime classification is ROTATION at 50% confidence — a meaningful signal that the market is in transition, not trend. The S&P is essentially flat (+0.01%) while under the hood the machinery is grinding hard: Russell 2000 +1.11%, cyclicals outpacing defensives, and international markets broadly green (Nikkei +1.61%, Shanghai +0.92%, FTSE +0.80%). VIX at 14.49 with a -6.21% drop and term structure in contango tells us realized and implied volatility are both receding — this is NOT a fear spike. Stress sits at just 12/100. Yet Fear & Greed reads zero and the S&P is near 52-week lows. That contradiction is the key tension: sentiment is historically bearish, but volatility and cross-asset flows are not confirming a crisis. This is the setup for a mean-reversion rally in beaten-down cyclicals, not a crash. Regime rules impose a -3 conviction penalty on both long and short trades — the system is telling you the direction is unclear even if the rotation theme is clear. Trade selectively and size conservatively.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "The sector tape is screaming cyclical/value rotation out of growth. Energy (XLE) +3.15% leads all sectors — not a defensive move, this is commodity demand signaling. Materials (XLB) +1.76% confirms the theme alongside copper's +1.9% surge. Discretionary (XLY) +1.67% is surprising given the fear backdrop but consistent with small-cap leadership — Main Street spending may be holding up even as Wall Street growth narratives deflate. On the losing side: Tech (XLK) -1.56% and Semis (SMH) -1.57% are being actively sold, with Nasdaq lagging Russell by ~155bps on the day and -3.89% over 5 days. This 5-day divergence is not noise — it reflects a multi-day unwind of tech/growth positioning. Notably, Staples (XLP) +2.38% is anomalous — a defensive sector leading alongside cyclicals suggests either a flight-to-quality overlay or sector-specific earnings/news catalyst. Healthcare (XLV) -0.96% is the only other clear loser, potentially reflecting policy or pricing pressure. Industrials (XLI) +0.75% and Financials (XLF) +0.52% quietly confirm the cyclical tilt. The regime sector tilts — overweight Energy, Materials, Industrials — are fully validated by today's tape.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10-year yield at 4.18% with a +1.09% move (roughly +4.5bps) is a meaningful rise. The 2-10 spread of +51bps and the 3M-10Y of +67bps confirm a positively sloped curve — no inversion, no recession signal from rates. The steepening bias is consistent with a reflationary or cyclical recovery narrative: longer-end yields moving up as growth/inflation expectations firm. This yield rise is friendly for Financials (steeper curve = better net interest margin) and corrosive for long-duration tech/growth valuations — which explains the XLK/SMH selloff with mechanical precision. The rising 10Y also underpins the dollar's modest strength (+0.20% to 99.13). If yields continue to push toward 4.25-4.35%, expect additional rotation pressure away from high-multiple tech names. Watch the 10Y carefully — a move above 4.25% today would be a confirming signal for the rotation thesis.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The commodity complex is firing on multiple cylinders. Oil WTI at $59.12 (+2.35%) is a significant move — at this level, energy equities have strong earnings leverage. Combined with XLE +3.15%, the oil-equity correlation is tracking perfectly. Gold at $4,490.30 (+0.91%) at historically elevated levels continues its multi-month run — this is NOT a normal gold price and suggests structural dollar debasement hedging or geopolitical risk premium is embedded in the market. Copper +1.9% is perhaps the most important signal: Dr. Copper doesn't lie, and a near-2% single-day move signals industrial demand expectations are rising — supportive of Materials and Industrials overweights. The dollar at 99.13 is modestly firm but historically weak (EUR/USD at 1.17 is a multi-year dollar low zone). USD/JPY at 156.88 is elevated — watch for BOJ intervention risk if JPY weakens further. Bitcoin -0.56% and Ethereum -0.69% confirm crypto is not participating in the risk-on commodity move, suggesting this is fundamentals-driven rotation, not speculative froth.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors & Contradictions",
+          "content": "Three major risk contradictions demand attention: (1) BREADTH FAILURE — 0% of S&P components above their 200 DMA is an extraordinary reading. This means the index-level calm (+0.01% S&P) masks pervasive underlying weakness. Even in rotation rallies, breadth this poor historically precedes either a sharp washout or a compressed mean-reversion. Do not mistake sector leadership for broad market health. (2) FEAR & GREED AT ZERO + S&P NEAR 52-WEEK LOW — sentiment is at maximum pessimism. Contrarian signals this extreme have historically preceded multi-week bounces, but the catalyst for reversal remains unclear. The setup exists; the trigger has not fired. (3) AIRLINES UNDERWEIGHT (fuel cost headwind) — with oil +2.35%, carriers face margin compression. Avoid UAL, DAL, AAL on the long side today. The -3 conviction penalty on both longs and shorts is the regime's honest acknowledgment that this is a low-confidence environment despite clear rotation signals. Position sizing should reflect that.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Oil holds above $59 and 10Y yields continue rising toward 4.25%",
+          "scenarios": [
+            {
+              "condition": "If WTI sustains above $59 and 10Y breaks toward 4.25% in today's session",
+              "implication": "The reflation/rotation thesis accelerates. Energy, Materials, and Financials extend gains. Tech/Semis face additional multiple compression. Russell continues to outpace Nasdaq. International markets (particularly commodity exporters) stay bid.",
+              "trade": "Consider long XLE or XLB with tight stops below today's open. Pair with short XLK as a spread trade to reduce regime-level directional risk. Scale targets by 0.9x per regime rules. Conviction: moderate — apply -3 regime penalty."
+            },
+            {
+              "condition": "If oil fades back below $57 and 10Y yields reverse below 4.15%",
+              "implication": "The commodity-led rotation loses its primary catalyst. Energy gives back gains, Materials stall. The 0% breadth reading becomes the dominant narrative and risk-off returns. Small-cap leadership fades.",
+              "trade": "Stand aside on new longs. The regime's -3 long conviction penalty was prescient. Consider defensive posture or cash until breadth improves above 20% of names above 200 DMA."
+            }
+          ]
+        },
+        {
+          "event": "Extreme sentiment (F&G = 0) meets S&P at 52-week low support",
+          "scenarios": [
+            {
+              "condition": "If S&P holds the 52-week low as support and breadth begins recovering (>10% above 200 DMA)",
+              "implication": "Classic capitulation setup resolving to the upside. Maximum pessimism + holding technical support = high-probability mean reversion. The rotation already underway in cyclicals could broaden to lift the entire market.",
+              "trade": "Watch for IWM (Russell ETF) continuation long as the leading indicator. A confirmed breadth thrust (advancing issues >70% for two consecutive days) would be the entry signal for a broader long. Conviction improves materially if breadth confirms."
+            },
+            {
+              "condition": "If S&P breaks below the 52-week low on any meaningful volume",
+              "implication": "The fear reading of zero gets validated as prescient, not contrarian. Rotation narrative breaks down as even cyclical gains get sold. Risk-off accelerates. VIX would likely spike back above 18-20.",
+              "trade": "Short SPY or buy VIX calls as a tail hedge. Copper and oil would likely reverse sharply — cover Materials/Energy longs immediately on a confirmed 52-week low break with volume."
+            }
+          ]
+        },
+        {
+          "event": "Gold at $4,490 (historically elevated) while crypto sells off",
+          "scenarios": [
+            {
+              "condition": "If gold continues to climb above $4,500 while Bitcoin remains below -1% and dollar stays below 99.50",
+              "implication": "Institutional flight to hard asset stores of value is structural, not tactical. This suggests deeper macro concerns (dollar debasement, geopolitical risk, or sovereign debt anxiety) that aren't yet reflected in the VIX. The divergence between gold's strength and crypto's weakness is notable — smart money is choosing proven hedges over speculative ones.",
+              "trade": "Long GLD or gold miners (GDX) as a portfolio hedge overlay. This trade works in both the rotation-continues scenario AND the market-breaks-lower scenario — making it one of the few high-conviction ideas in a regime that penalizes directional bets. Size modestly given 0.9x target scaling."
+            },
+            {
+              "condition": "If gold reverses below $4,450 and dollar strengthens above 99.75",
+              "implication": "The macro hedge bid unwinds. Dollar strength would pressure commodities broadly — oil, copper, and gold selling simultaneously would undercut the entire rotation thesis and signal a potential deflationary growth scare.",
+              "trade": "Reduce all commodity-linked exposure (XLE, XLB). Monitor EUR/USD — a break below 1.165 would confirm dollar strength accelerating and trigger a more defensive posture across the book."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "VLO",
+      "direction": "long",
+      "entryPrice": 183,
+      "targetPrice": 194.7,
+      "stopLoss": 175,
+      "thesis": "Valero surged 5%+ to an all-time high on Jan 7 as the Trump administration announced plans to sell millions of barrels of Venezuelan heavy crude — exactly what Valero's Gulf Coast refineries are purpose-built to handle. The stock has cleared a year-long consolidation base above $180, with technical analysts citing a measured-move target of $258. Energy sector is the #1 regime overweight today.",
+      "catalyst": "Trump administration disclosed plans to sell Venezuelan oil (Jan 6-7), directly benefiting heavy crude-capable refiners like VLO; Maduro capture Jan 3 adds geopolitical tailwind. Technical breakout above $180 multi-year base confirmed.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": "Trump administration's Venezuelan oil announcement is a named, dated event with direct, quantifiable impact on Valero's feedstock economics. Barclays analyst specifically cited VLO's capacity to process 300,000–400,000 incremental bpd of Venezuelan crude."
+        },
+        "technicalSetup": {
+          "score": 85,
+          "reasoning": "Stock cleared major $180 resistance level after 12+ months of basing between $97–$174. Golden cross formed in September 2025. Measured-move pattern projects $258 long-term. RSI in bullish zone above 35 since April 2025."
+        },
+        "riskReward": {
+          "score": 82,
+          "reasoning": "Entry ~$183, target $194.70 (scaled 0.9x per regime), stop $175 (below breakout base). R/R of ~1.46:1. Venezuela story has implementation risk (gradual supply ramp) but near-term sentiment momentum is strong."
+        },
+        "volumeLiquidity": {
+          "score": 82,
+          "reasoning": "VLO is a large-cap S&P 500 refiner with deep institutional coverage and heavy daily volume. High-conviction event drives unusual volume — no liquidity concern."
+        },
+        "marketAlignment": {
+          "score": 90,
+          "reasoning": "Energy is the #1 overweight sector in today's ROTATION regime. Oil +2.35%, XLE up 5%+ week-to-date. Regime explicitly calls for energy overweight due to oil surge. Perfect alignment."
+        },
+        "informationEdge": {
+          "score": 80,
+          "reasoning": "Venezuela catalyst is public knowledge but market is still pricing in the medium-term supply dynamics. Crack spread expansion story for heavy crude-capable refiners is a nuanced edge that broader market may underappreciate."
+        },
+        "timingUrgency": {
+          "score": 88,
+          "reasoning": "Breakout is 2–3 days old — still early in the move with momentum intact. Energy regime tailwind is fresh. Entering at open captures continuation momentum before further institutional rotation into energy."
+        }
+      }
+    },
+    {
+      "symbol": "CMC",
+      "direction": "long",
+      "entryPrice": 73.5,
+      "targetPrice": 78.45,
+      "stopLoss": 69.5,
+      "thesis": "Commercial Metals reports Q1 FY2026 pre-market with adjusted EPS of $1.84 vs. consensus of $1.58 — a 16.5% beat — and EBITDA up 52% year-over-year. This is a clean earnings beat in the materials sector, which is explicitly overweighted in today's rotation regime. The gap-up setup from $72.69 prior close toward the $75–$79 zone has strong fundamental support.",
+      "catalyst": "Q1 FY2026 earnings release pre-market Jan 8: Adjusted EPS $1.84 vs. $1.58 estimate (+$0.26 beat), consolidated core EBITDA $316.9M (+52% YoY), revenue $2.12B vs. $2.08B estimate. North America Steel Group EBITDA margin at 14.9%.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": "Pre-market earnings beat is unambiguous: $1.84 adjusted EPS vs. $1.58 consensus (+16.5%), EBITDA +52% YoY, revenue beat. CEO stated 'exceptional start to our fiscal year.' Clearest catalyst type possible for a gap-up trade."
+        },
+        "technicalSetup": {
+          "score": 78,
+          "reasoning": "CMC closed at $72.69 on Jan 7, just below its 52-week high of $75.03. Earnings beat sets up a gap toward and through the 52-week high. Prior resistance becomes support on volume confirmation. Moderate setup quality."
+        },
+        "riskReward": {
+          "score": 80,
+          "reasoning": "Entry ~$73.50 (gap up), target $78.45 (0.9x scaled), stop $69.50 (below earnings gap support). R/R ~1.24:1. Beat magnitude justifies gap persistence. Stop is below the pre-earnings close, providing clear invalidation level."
+        },
+        "volumeLiquidity": {
+          "score": 72,
+          "reasoning": "CMC averages ~1.18M shares/day — adequate for a swing position. Earnings day volume will be elevated. Not the most liquid name but sufficient for a focused position."
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": "Materials is explicitly overweighted in the ROTATION regime. Copper +1.9%, shipping/industrial expansion signals active. CMC is a domestic steel fabricator — direct cyclical expansion beneficiary. Strong regime alignment."
+        },
+        "informationEdge": {
+          "score": 82,
+          "reasoning": "Pre-market earnings release provides maximum information edge at open: quantified beat, management guidance, and EBITDA quality are all known. This is the clearest informational setup available on any given trading day."
+        },
+        "timingUrgency": {
+          "score": 90,
+          "reasoning": "Earnings day is the single highest-urgency catalyst type. The window to capture the initial gap reaction is the open. Post-earnings drift on strong beats in cyclical materials tends to persist for 2–5 sessions."
+        }
+      }
+    },
+    {
+      "symbol": "AYI",
+      "direction": "long",
+      "entryPrice": 375,
+      "targetPrice": 393,
+      "stopLoss": 360,
+      "thesis": "Acuity Inc. (AYI) reports Q1 FY2026 earnings pre-market with consensus EPS of $4.17–$4.45 on $1.14B revenue. The company has beaten expectations every single quarter of the past year, trading near its 52-week high of $379.17. The structural 'smart buildings' retrofit tailwind driven by IRA mandates and energy codes creates secular demand. Industrials are overweighted in today's rotation regime.",
+      "catalyst": "Q1 FY2026 earnings report pre-market Jan 8; consensus EPS ~$4.17 (Nasdaq) representing 13.62% YoY growth; company has beaten consensus every quarter in the past year; stock at 52-week high entering print; Smart Building/Intelligent Spaces segment is key high-margin growth driver.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 82,
+          "reasoning": "Pre-market earnings event with clear historical beat pattern (beat every quarter past year) and a specific EPS consensus to beat. Smart buildings narrative is tangible and IRA-driven. Somewhat lower than CMC due to mixed revenue/EBITDA dynamics possible."
+        },
+        "technicalSetup": {
+          "score": 75,
+          "reasoning": "Stock is at its 52-week high ($379.17) going into earnings — technically extended but momentum-strong. Investing.com rates it a 'Strong Buy' on moving averages. Gap up on beat would break to new all-time highs."
+        },
+        "riskReward": {
+          "score": 73,
+          "reasoning": "Entry $375, target $393 (0.9x scaled), stop $360. R/R ~1.20:1. Risk is that at 52-week highs, any disappointment punishes hard. Earnings uncertainty at high-multiple industrial tech names is elevated. Tightest R/R of the four setups."
+        },
+        "volumeLiquidity": {
+          "score": 68,
+          "reasoning": "AYI is covered by only 4–6 analysts and has below-average daily volume for its price level. Spread may widen at open. Position sizing should be conservative relative to CMC/VLO/FCX."
+        },
+        "marketAlignment": {
+          "score": 68,
+          "reasoning": "AYI sits at the intersection of industrials (regime overweight) and industrial technology (regime less aligned vs. pure cyclicals). Not a pure cyclical play. Partially aligned but not the ideal rotation regime expression."
+        },
+        "informationEdge": {
+          "score": 76,
+          "reasoning": "Historical beat rate is meaningful information edge — 4 consecutive quarters of beats is statistically significant. Smart building secular tailwind is well-understood but underappreciated by market pricing a lighting company."
+        },
+        "timingUrgency": {
+          "score": 88,
+          "reasoning": "Earnings day is maximum urgency. Gap-up on beat opportunity is only available at or near market open. Pre-market earnings releases create the tightest timing windows in trading."
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "VLO",
+      "openPrice": 184.11,
+      "highPrice": 192,
+      "lowPrice": 178.34,
+      "closePrice": 179.62,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.85,
+      "notes": "3-day window (2026-01-08, 2026-01-09, 2026-01-12). Open $184.11, High $192, Low $178.34, Close $179.62."
+    },
+    {
+      "symbol": "CMC",
+      "openPrice": 71.54,
+      "highPrice": 74.42,
+      "lowPrice": 69.45,
+      "closePrice": 72.99,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.69,
+      "notes": "3-day window (2026-01-08, 2026-01-09, 2026-01-12). Open $71.54, High $74.42, Low $69.45, Close $72.99."
+    },
+    {
+      "symbol": "AYI",
+      "openPrice": 341.86,
+      "highPrice": 346.5,
+      "lowPrice": 312.12,
+      "closePrice": 316,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -15.73,
+      "notes": "3-day window (2026-01-08, 2026-01-09, 2026-01-12). Open $341.86, High $346.5, Low $312.12, Close $316."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 66.7,
+    "avgReturnPercent": -6.09,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 5
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 86.7,
+      "predictivePower": 0
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 79.3,
+      "predictivePower": 0
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 78.3,
+      "predictivePower": 0
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 74,
+      "predictivePower": 0
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 81,
+      "predictivePower": 0
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 79.3,
+      "predictivePower": 0
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 88.7,
+      "predictivePower": 0
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.12,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.14,
+    "informationEdge": 0.13,
+    "timingUrgency": 0.18
+  },
+  "opusReviewNotes": "The algorithm's most glaring problem is its extreme passivity: 77.5% no-trade days across 80 trials, with only 18 trials producing any trades at all. This is catastrophic for a day trading algorithm. The 'rotation' regime classification is being used as a catch-all bucket that triggers no-trade decisions — 7 of the last 10 trials were classified as 'rotation' with low confidence (33-50%), and 6 of those 7 produced zero trades. The algorithm is essentially paralyzed whenever it can't cleanly classify the regime, which is most of the time. Meanwhile, when it DOES trade in rotation regimes (Trial 75 with 3 trades, Trial 79 with 1 trade), the results are wildly inconsistent: Trial 75 scored 5 (all three wrong, AYI down -15.73%) while Trial 79 scored 100 (UBER +1.21%). This suggests the regime classification itself isn't the issue — it's that the algorithm lacks sub-regime logic for rotation environments, which represent the majority of trading days.\n\nThe dimension predictive power data is remarkably flat: all seven dimensions cluster between 62.9 and 67.0, with timingUrgency (67.0) and catalystClarity (66.8) marginally leading. Yet the current weights are heavily skewed toward catalystClarity (20.4%) and timingUrgency (18.5%), which together consume 39% of the score despite only marginally outperforming other dimensions. The weight evolution shows chaotic oscillation — technicalSetup went from 14.8% to 18.4% to 12.6% to 12.0% across trials, suggesting the optimization is overfitting to recent results rather than converging on stable weights. The near-uniform predictive power across dimensions (spread of only 4.1 points) suggests either all dimensions carry roughly equal signal, or none of them carry meaningful signal and the scoring framework itself needs rethinking.\n\nTrial 75 is the most instructive failure: three simultaneous long positions (VLO, CMC, AYI) in a 'rotation' regime with 50% confidence. This violated basic portfolio construction — taking three correlated long bets (all value/cyclical names) in a rotation environment is the opposite of what rotation trading demands. AYI's -15.73% loss suggests either a catastrophic earnings miss or a fundamental event the algorithm failed to screen for. The algorithm needs a hard rule: never take 3+ positions in the same direction during rotation regimes. Contrast with Trial 79, where a single UBER long in rotation worked perfectly — the algorithm correctly identified a stock-specific catalyst (likely earnings or guidance) and took a single concentrated bet.\n\nTrial 77 is a critical missed opportunity: a genuine risk-on regime (60% confidence, appetite=68, stress=12) with the briefing explicitly bullish ('meaningful risk-on bounce, S&P futures +1.52%, semis leading'), yet ZERO trades were generated. This is the algorithm's highest-conviction regime classification in the last 10 trials, and it did nothing. Similarly, Trial 78 had stress=26 (highest in the window) with appetite=35 — a clear defensive/fear regime that could have supported short trades or defensive longs, but was classified as mere 'rotation' and produced nothing. The algorithm is failing to act on its own best signals.\n\nThe profit factor of 30.25 is misleadingly high because it's dominated by the winning trades (which tend to be single-position, modest gains) while the losing trades are rare but devastating (AYI -15.73%). The 33.3% win rate with high profit factor means the winners are significantly larger than losers on average, but with only 18 trade-producing trials out of 80, the sample is far too small to trust. The stop-loss hit rate (3 hits, avg -6.30%) suggests stops are too wide — a day trading algorithm should rarely see -6% drawdowns on individual positions. The stop-loss framework needs tightening to 2-3% maximum for day trades."
+}

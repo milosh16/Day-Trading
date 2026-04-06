@@ -1978,3 +1978,307 @@
 
 ---
 
+## Day 71/500 — Wednesday, July 16, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 72/500 — Friday, June 21, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 73/500 — Tuesday, October 21, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 74/500 — Tuesday, December 10, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 75/500 — Thursday, January 8, 2026
+
+### Recommendations (3)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| VLO | long | $183 | $194.7 | $175 | 85 | Valero surged 5%+ to an all-time high on Jan 7 as the Trump ... |
+| CMC | long | $73.5 | $78.45 | $69.5 | 83 | Commercial Metals reports Q1 FY2026 pre-market with adjusted... |
+| AYI | long | $375 | $393 | $360 | 76 | Acuity Inc. (AYI) reports Q1 FY2026 earnings pre-market with... |
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| VLO | $184.11 | $192 | $178.34 | $179.62 | Wrong | No | No | -1.85% |
+| CMC | $71.54 | $74.42 | $69.45 | $72.99 | Wrong | No | Yes | -0.69% |
+| AYI | $341.86 | $346.5 | $312.12 | $316 | Wrong | No | Yes | -15.73% |
+
+- **VLO:** 3-day window (2026-01-08, 2026-01-09, 2026-01-12). Open $184.11, High $192, Low $178.34, Close $179.62.
+- **CMC:** 3-day window (2026-01-08, 2026-01-09, 2026-01-12). Open $71.54, High $74.42, Low $69.45, Close $72.99.
+- **AYI:** 3-day window (2026-01-08, 2026-01-09, 2026-01-12). Open $341.86, High $346.5, Low $312.12, Close $316.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 66.7% |
+| Win Rate | 0.0% |
+| Avg Return | -6.09% |
+| Profit Factor | 0 |
+| **Composite Score** | **5/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 0 | 86.7 | 0 (inverse!) |
+| technicalSetup | 0 | 79.3 | 0 (inverse!) |
+| riskReward | 0 | 78.3 | 0 (inverse!) |
+| volumeLiquidity | 0 | 74 | 0 (inverse!) |
+| marketAlignment | 0 | 81 | 0 (inverse!) |
+| informationEdge | 0 | 79.3 | 0 (inverse!) |
+| timingUrgency | 0 | 88.7 | 0 (inverse!) |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 76/500 — Tuesday, July 8, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 77/500 — Friday, January 3, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 78/500 — Wednesday, August 7, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 79/500 — Thursday, August 7, 2025
+
+### Recommendations (1)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| UBER | long | $89.5 | $93 | $87 | 76 | Uber delivered a clean Q2 2025 beat — revenue +18% YoY to $1... |
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| UBER | $90.72 | $94.31 | $88.91 | $90.58 | Correct | Yes | No | +1.21% |
+
+- **UBER:** 3-day window (2025-08-07, 2025-08-08, 2025-08-11). Open $90.72, High $94.31, Low $88.91, Close $90.58.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 100.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +1.21% |
+| Profit Factor | 10 |
+| **Composite Score** | **100/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 85 | 0 | 100 (strong) |
+| technicalSetup | 70 | 0 | 100 (strong) |
+| riskReward | 76 | 0 | 100 (strong) |
+| volumeLiquidity | 85 | 0 | 100 (strong) |
+| marketAlignment | 60 | 0 | 100 (strong) |
+| informationEdge | 80 | 0 | 100 (strong) |
+| timingUrgency | 80 | 0 | 100 (strong) |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+## Day 80/500 — Wednesday, February 18, 2026
+
+### Recommendations (1)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| NVDA | long | $135.53 | $140.27 | $132.14 | 83 | Meta's officially confirmed multi-year, multi-billion-dollar... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 8.0% | marketAlignment: 14.0% | informationEdge: 13.0% | timingUrgency: 18.0%*
+
+---
+
+# ========== MILESTONE: 80 TRIALS COMPLETE ==========
+
+### Last 10 Trials Performance
+
+| Metric | Value |
+|--------|-------|
+| Avg Composite Score | 51.7/100 |
+| Avg Win Rate | 33.3% |
+| Avg Direction Accuracy | 33.3% |
+| Avg Profit Factor | 3.33 |
+| Avg Return per Trade | -1.63% |
+| No-Trade Days | 7/10 |
+| Best Score (all time) | 100/100 |
+
+### Overall (80 trials, 18 with trades)
+
+- Overall avg composite: 56.1/100
+- Total tokens used: 1,704,009
+
+### Learnings & Weight Changes
+
+- **volumeLiquidity**: 8.0% → 7.5% (DECREASED)
+  - *Weak/neutral signal: minimal spread between winners and losers*
+- **marketAlignment**: 14.0% → 13.5% (DECREASED)
+  - *Weak/neutral signal: minimal spread between winners and losers*
+- **timingUrgency**: 18.0% → 18.5% (INCREASED)
+  - *Weak/neutral signal: minimal spread between winners and losers*
+
+**New weights:** catalystClarity: 20.4% | technicalSetup: 12.0% | riskReward: 14.9% | volumeLiquidity: 7.5% | marketAlignment: 13.5% | informationEdge: 13.3% | timingUrgency: 18.5%
+
+---
+
