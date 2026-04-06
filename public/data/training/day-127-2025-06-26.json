@@ -1,0 +1,232 @@
+{
+  "trialId": 127,
+  "date": "2025-06-26",
+  "dateDisplay": "Thursday, June 26, 2025",
+  "generatedAt": "2026-04-06T10:31:03.366Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.8,
+      "nasdaqFuturesChange": 0.97,
+      "dowFuturesChange": 0.94,
+      "russellFuturesChange": 1.68,
+      "vixFuturesChange": -1.63,
+      "vix": 16.32,
+      "vixChange": -1.63,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 19.45,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.25,
+      "tenYearYieldChange": -0.93,
+      "twoYearYield": 3.92,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.82,
+      "threeMonthYield": 4.19,
+      "twoTenSpread": 0.33,
+      "threeMoTenYrSpread": 0.06,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 97.4,
+      "dollarIndexChange": 0.26,
+      "eurUsd": 1.17,
+      "eurUsdChange": 0.07,
+      "usdJpy": 144.69,
+      "usdJpyChange": -0.14,
+      "usdCny": 7.17,
+      "usdCnyChange": -0.12,
+      "oilWTI": 65.52,
+      "oilChange": 0.43,
+      "brentOil": 67.77,
+      "brentOilChange": 0.06,
+      "natGasChange": 14.66,
+      "goldPrice": 3273.7,
+      "goldChange": -1.79,
+      "silverChange": -1.5,
+      "copperChange": 0.06,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 1.43,
+      "daxChange": 1.62,
+      "ftseChange": 0.72,
+      "shanghaiChange": -0.7,
+      "hangSengChange": -0.17,
+      "kospiChange": -0.77,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 98.10000000000001,
+      "spreadChange": -0.29,
+      "igSpread": -18.38,
+      "igSpreadChange": -0.37,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.69,
+      "xlfChange": 0.74,
+      "xleChange": 1.43,
+      "xlvChange": 0.24,
+      "xlpChange": -0.09,
+      "xluChange": 0.83,
+      "xlreChange": -0.63,
+      "xliChange": 1.08,
+      "xlbChange": 1.11,
+      "xlcChange": 1.16,
+      "xlyChange": 0.92,
+      "smhChange": 0.73,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.12,
+      "ethereumChange": 0.32,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 2.68,
+      "sp20DayReturn": 4.29,
+      "nasdaqVsRussell5d": 0.38,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 53,
+      "directionalBias": "23",
+      "volatilityRegime": "normal",
+      "stressIndex": 13,
+      "riskAppetiteIndex": 64,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "Markets are printing a broad risk-on session with the Russell 2000 leading at +1.68%, cyclicals outperforming defensives across the board, and VIX compressing to 16.32 — yet the regime classifier flags ROTATION at only 53% confidence, a critical tension given the S&P sitting near 52-week lows with zero stocks above the 200 DMA. The bull case is in the price action; the bear case is in the structure. Energy, Materials, Industrials, and Comm Services are absorbing capital while Staples and Real Estate bleed — a classic cyclical rotation playbook running inside a technically fragile market. Today's edge lies in reading whether this rotation is a genuine re-risk event or a counter-trend squeeze before sellers return.",
+      "marketCondition": "bullish",
+      "sections": [
+        {
+          "title": "🧭 Regime & Market Posture — Handle With Care",
+          "content": "The ROTATION regime is live at 53% confidence — barely a majority call — and that ambiguity IS the signal. You have a directional bias of +23 (mildly constructive) paired with extreme fear on the Fear & Greed Index at 0 and an S&P near 52-week lows. This is a textbook contrarian setup: sentiment is washed out, futures are bid +0.89%, small caps are ripping, and cyclicals are rotating in. The regime imposes a -3 conviction penalty on BOTH longs AND shorts, meaning the market is not handing out free conviction in either direction. The correct posture is: participate in the strongest rotation themes with reduced size, tighten target distances by 0.9x as the rules require, and do not chase extended moves. Stress at 13/100 confirms no systemic shock in the pipes — this is a functional, if technically damaged, market attempting to rebuild. The single consecutive up day means this rally is early, not exhausted.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation — Cyclicals Are Calling the Play",
+          "content": "The sector tape is telling a clean story: Energy (XLE +1.43%), Materials (XLB +1.11%), Industrials (XLI +1.08%), and Discretionary (XLY +0.92%) are the top performers alongside Comm Services (XLC +1.16%). This is a pro-growth, pro-cycle rotation. Defensives are being sold — Staples (XLP -0.09%) and Real Estate (XLRE -0.63%) are the only red sectors. Utilities (XLU +0.83%) is the notable outlier: catching a bid despite the risk-on tone, likely driven by the 10Y yield dropping 0.93% to 4.25%, which mechanically lifts rate-sensitive sectors. Semis (SMH +0.73%) and Tech (XLK +0.69%) are participating but lagging the cyclical leaders — this is NOT a tech-led move, which adds credibility to the rotation thesis. Healthcare (XLV +0.24%) is a laggard but not in distribution. The 5-day data confirms Growth is still leading Russell by 0.38pp over the week, but yesterday's session alone showed small caps (Russell +1.68%) sharply outpacing Nasdaq (+0.97%) — watch for whether small cap momentum sustains as a signal that the rotation has legs beyond one session.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals — Steepener Emerging",
+          "content": "The 10-year yield dropped 0.93% to 4.25%, a meaningful move that tells you bond buyers showed up — whether as flight-to-quality or rate-cut positioning, it is a tailwind for equities. The 2-10 spread sits at +33 basis points and the 3M-10Y spread is a razor-thin +6 bps — the curve is positively sloped but barely so at the front end, signaling the market still sees near-term rate risk but is not pricing deep inversion. A 3M-10Y of +6 bps is not recessionary signal territory yet, but it is not a clean expansion signal either. The compression in the 10Y yield combined with a rising dollar (+0.26%) is an unusual pairing — typically lower yields weaken the dollar. The dollar's strength here may reflect relative safe-haven flows or positioning unwind in EUR/USD (1.17 is still historically elevated). Net read: the rate backdrop is supportive for equities today, and the yield curve steepening at the long end is constructive for Financials (XLF +0.74%) and rate-sensitive growth plays on a relative basis.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows — Divergence Worth Watching",
+          "content": "Gold dropping -1.79% to $3,273 while Oil rises +0.43% to $65.52 is a significant intraday divergence. Gold selling off hard in a risk-on session is normal and confirms the fear premium is being bled out of the market — Fear & Greed at 0 with gold falling says the acute fear trade is unwinding. Oil's modest gain aligns with Energy sector outperformance and the cyclical rotation narrative — demand expectations are ticking up. The dollar at 97.4 (+0.26%) with EUR/USD at 1.17 is relatively strong; a stronger dollar is a mild headwind for multinational revenue and commodities broadly, but it is not screaming risk-off given the equity backdrop. USD/JPY at 144.69 is in a range that does not signal yen stress carry unwind — that threshold typically matters above 150. Bitcoin (+0.12%) and Ethereum (+0.32%) are essentially flat, which is consistent with a rotation INTO cyclical equities rather than speculative assets — crypto is not leading this move. International markets are constructive: Nikkei +1.43%, DAX +1.62%, FTSE +0.72% all confirm this is a global risk-on session. Shanghai (-0.7%) and Hang Seng (-0.17%) are the divergent outliers — China is not participating, which is a key risk factor for Materials and Energy sustainability.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors — Structural Fragility Beneath the Surface",
+          "content": "Do not let yesterday's green tape obscure the structural damage: zero percent of S&P 500 stocks are above their 200-day moving averages. That is not a typo — it means the index-level bounce is happening in a market where individual stocks remain technically broken. Counter-trend rallies in this condition can be violent but short-lived. The S&P's 5-day gain of 2.68% and 20-day gain of 4.29% indicate a sharp bounce off lows, but bounces within downtrends can be the most painful to chase. Additional risk factors: (1) China underperformance is a latent headwind for global growth and commodity demand — watch Shanghai closely. (2) The dollar strengthening while yields fall is an unusual regime that can signal positioning instability. (3) Extreme Fear (F&G: 0) being the current reading means sentiment is at a washout — this CAN be a bullish contrarian signal, but it also means the narrative can snap back to fear rapidly if a catalyst emerges. (4) The -3 conviction penalty on both longs and shorts is a regime warning: the system is explicitly telling you this is a low-conviction environment. Size accordingly.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Cyclical Rotation Continuation vs. Bull Trap",
+          "scenarios": [
+            {
+              "condition": "If Russell holds gains above yesterday's close and XLE/XLB/XLI maintain leadership into the afternoon session",
+              "implication": "Rotation is institutional and has follow-through. The 0% above 200 DMA stat begins to repair as individual names reclaim technical levels. The bounce becomes a genuine trend change attempt, not just a squeeze.",
+              "trade": "Consider long exposure in XLE or XLI with 0.9x target scaling per regime rules. Sector ETFs preferred over single names given the structural backdrop. Stop below yesterday's low on the ETF. Conviction carries -3 penalty — size at 60-70% of normal."
+            },
+            {
+              "condition": "If the Russell fades intraday and small caps give back more than half of yesterday's gains",
+              "implication": "The leadership reversal signals the move was short-covering in low-liquidity names, not genuine rotation capital. The 0% above 200 DMA backdrop reasserts itself. Risk-off resumes.",
+              "trade": "Stand aside or reduce cyclical longs. Watch XLP and XLRE — if defensives begin to bid while cyclicals fade, that is confirmation of a failed rotation. Avoid new longs in that environment per the -3 long conviction penalty."
+            }
+          ]
+        },
+        {
+          "event": "Gold Selling & Fear Unwind — Durable or One-Day?",
+          "scenarios": [
+            {
+              "condition": "If gold continues lower below $3,250 with VIX staying compressed under 17",
+              "implication": "The fear premium in assets is genuinely unwinding. Equity risk appetite is expanding. The F&G reading of 0 was peak fear and sentiment mean-reverts toward neutral. This is durable support for equities.",
+              "trade": "This environment favors holding cyclical long positions and watching for breakout setups in Energy (XLE has been a multi-day leader). Gold short is technically valid but the -3 conviction penalty applies — keep position small."
+            },
+            {
+              "condition": "If gold stabilizes or reverses above $3,300 while the dollar continues to strengthen",
+              "implication": "The gold/dollar correlation break is a warning signal — it may indicate safe-haven demand is returning despite the equity bounce, or that the dollar strength is stress-related rather than growth-related. Conflicting signals argue for reduced risk.",
+              "trade": "Trim cyclical exposure on any gold reversal with dollar strength. The combination historically precedes equity volatility. Watch VIX for any pickup above 18 as confirmation of a regime shift back toward stress."
+            }
+          ]
+        },
+        {
+          "event": "China Divergence — Global Growth Risk",
+          "scenarios": [
+            {
+              "condition": "If Shanghai extends losses and commodity-linked currencies (AUD, CAD) weaken alongside",
+              "implication": "China's underperformance is signaling a real demand problem, not just local positioning noise. Materials (XLB) and Energy (XLE) rotation in U.S. markets becomes less sustainable as global demand concerns surface. The U.S. rally becomes increasingly domestic-focused.",
+              "trade": "Reduce XLB exposure — Materials is the most China-sensitive U.S. sector. Monitor copper prices intraday as the real-time China demand barometer. If copper cracks, pivot from XLB to XLI (more domestically driven) within the cyclical rotation trade."
+            },
+            {
+              "condition": "If China stabilizes overnight and Asian markets open higher on Friday",
+              "implication": "Global synchronized recovery narrative stays intact. The S&P 5-day and 20-day gains build on a broader foundation. Commodity demand outlook improves, extending Energy and Materials leadership.",
+              "trade": "Full conviction in XLE/XLB rotation with 0.9x target scaling remains valid through the end of the week. Consider adding international exposure via EWJ (Japan) given Nikkei +1.43% and favorable USD/JPY dynamics."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.13,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.18,
+    "informationEdge": 0.12,
+    "timingUrgency": 0.15
+  },
+  "opusReviewNotes": "The most glaring problem with this algorithm is not signal quality — it's extreme passivity. Out of 130 trials, 107 (82.3%) produced zero trades. The last 10 trials are ALL no-trade days, scoring a flat 50 every time. This means the algorithm's threshold or filtering logic is so restrictive that it is systematically avoiding the market. A 30.4% win rate on 23 traded trials with a profit factor of 24.11 suggests that when it does trade, the winners are massive relative to losers — but it trades so rarely that the system is essentially dormant. The algorithm is optimizing for not losing rather than for risk-adjusted returns. A day-trading algorithm that trades 17.7% of days is not a day-trading algorithm; it's an occasional lottery ticket.\n\nLooking at the last 10 trials specifically: Trial 121 was classified as risk-on (77% confidence) with a 2.13% S&P rally and Nasdaq surging — this is a textbook environment for momentum longs (QQQ, TQQQ, or high-beta names), yet zero trades were taken. Trial 128 was classified as CRISIS (90% confidence!) with a technical bounce — this is exactly when you either ride the bounce with tight stops or short the fade. Neither happened. Trial 125 and 126 were both risk-off with bearish briefings — perfect environments for defensive longs (XLU, GLD, TLT) or index shorts, yet nothing was done. Trial 127 was rotation with Russell 2000 leading +1.68% — a clear small-cap momentum trade was missed. The regime classifier and briefing generator appear to be functioning reasonably well in identifying conditions, but the trade recommendation engine is completely disconnected from these signals. The pipeline breaks between 'briefing' and 'recommendations.'\n\nThe dimension predictive power analysis reveals an uncomfortably narrow spread: all seven dimensions cluster between 66.3 and 70.0 out of 100, with only 11 samples each. This is far too few samples to draw meaningful conclusions, AND the tight clustering suggests either (a) the dimensions are highly correlated and not providing independent signals, or (b) the scoring methodology is compressing real variance. TimingUrgency at 70.0 and catalystClarity at 69.8 are marginally the strongest, while volumeLiquidity at 66.3 is weakest — but these differences are not statistically significant on 11 samples. The weight evolution shows wild oscillation (e.g., marketAlignment swinging from 7.4% at Trial 110 to 16.7% at Trial 130) without clear performance improvement, suggesting the learning mechanism is fitting to noise rather than signal.\n\nThe best 5 trials all share a pattern: single-trade days with 100% win rates and PF=10. These were high-conviction, single-name bets (IWM long, PLTR short, PNC long, UBER long, TGT short). The worst trials involved multiple simultaneous trades (Trial 75 had 3 losers) or low-conviction single names (SNOW, BRK.B). This strongly suggests the algorithm should concentrate on ONE high-conviction trade per day maximum, and that diversifying across multiple mediocre setups destroys returns. The stop-loss hit rate of 3 with -6.30% average is concerning — stops may be too wide for day trading, where 2-3% max loss per position is more appropriate.\n\nThe weight evolution from Trial 10 to Trial 130 shows that catalystClarity has been consistently weighted highest (18-25%), which aligns with it being marginally more predictive. However, the algorithm has never achieved a score above 50 since Trial 119 (16 trials ago), suggesting the current weight configuration and threshold are both suboptimal. The system needs a fundamental rethink of its trade generation logic — it should be generating candidate trades directly from the regime classification and briefing themes, then scoring them, rather than apparently waiting for some external signal that rarely fires."
+}

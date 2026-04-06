@@ -1,0 +1,236 @@
+{
+  "trialId": 122,
+  "date": "2024-09-09",
+  "dateDisplay": "Monday, September 9, 2024",
+  "generatedAt": "2026-04-06T09:55:52.422Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 1.16,
+      "nasdaqFuturesChange": 1.16,
+      "dowFuturesChange": 1.2,
+      "russellFuturesChange": 0.3,
+      "vixFuturesChange": -1.9,
+      "vix": 19.08,
+      "vixChange": -1.9,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 20.88,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.7,
+      "tenYearYieldChange": -0.35,
+      "twoYearYield": 3.91,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4,
+      "threeMonthYield": 4.89,
+      "twoTenSpread": -0.21,
+      "threeMoTenYrSpread": -1.19,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 101.63,
+      "dollarIndexChange": 0.08,
+      "eurUsd": 1.1,
+      "eurUsdChange": -0.45,
+      "usdJpy": 143.18,
+      "usdJpyChange": 0.48,
+      "usdCny": 7.11,
+      "usdCnyChange": 0.36,
+      "oilWTI": 65.75,
+      "oilChange": -4.31,
+      "brentOil": 69.19,
+      "brentOilChange": -3.69,
+      "natGasChange": 2.86,
+      "goldPrice": 2512.3,
+      "goldChange": 0.42,
+      "silverChange": -0.12,
+      "copperChange": -1.08,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.16,
+      "daxChange": -0.96,
+      "ftseChange": -0.78,
+      "shanghaiChange": 0.28,
+      "hangSengChange": 0.22,
+      "kospiChange": -0.49,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 103.35000000000001,
+      "spreadChange": -0.24,
+      "igSpread": -25.16,
+      "igSpreadChange": -0.22,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.98,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1.64,
+      "xlfChange": 1.49,
+      "xleChange": 0.72,
+      "xlvChange": 0.7,
+      "xlpChange": 0.77,
+      "xluChange": 1.01,
+      "xlreChange": 1.19,
+      "xliChange": 1.53,
+      "xlbChange": 0.97,
+      "xlcChange": 0.43,
+      "xlyChange": 1.46,
+      "smhChange": 2.26,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 1.1,
+      "ethereumChange": 1.32,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": -3.14,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": 0.72,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 37,
+      "directionalBias": "7",
+      "volatilityRegime": "normal",
+      "stressIndex": 18,
+      "riskAppetiteIndex": 56,
+      "sectorTilts": {
+        "airlines": "overweight",
+        "consumer-discretionary": "overweight",
+        "semiconductors": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Friday's session delivered a broad-based 1.16% S&P bounce — every sector finished green — but the recovery must be contextualized against a bruising 5-day loss of 3.14%, a Fear & Greed index pinned at extreme fear (0), and an S&P hugging 52-week lows. The regime classifier reads RANGE-BOUND with only 37% confidence, flagging contradictory signals: futures strength vs. crumbling breadth, a risk-off commodity complex (oil -4.31%, copper -1.1%), and deeply inverted yield curves. One green day does not a trend make — this looks like a relief bounce inside a deteriorating tape, not the start of a new leg higher.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "1. Overall Market Posture & Regime",
+          "content": "The regime engine classifies today as RANGE-BOUND with low conviction (37%), and the underlying data supports that skepticism. The S&P is 1 day removed from a multi-day selloff (-3.14% over 5 sessions), sitting near 52-week lows with zero percent of the index above its 200-day moving average — a breadth reading that historically accompanies either capitulation bottoms or the early stages of sustained breakdowns, not clean reversals. Futures are constructive (+1.16%) heading into Monday's open, but the positive bias score (+7 directional) is modest and unconfirmed. Stress is contained at 18/100, and risk appetite sits at a middling 56/100 — not collapsed, but not expansive. The regime imposes a -5 conviction penalty on both longs and shorts, raises the minimum conviction bar to 78, and explicitly warns against forcing trades. Today's posture: observe, map the tape, preserve capital. The default output is ZERO trades unless something extraordinary emerges intraday.",
+          "importance": "high"
+        },
+        {
+          "title": "2. Sector Rotation & Relative Strength",
+          "content": "Friday's broad green tape masks important relative strength signals. Semiconductors (SMH +2.26%) led decisively — the regime already has semis as an overweight tilt, reinforced by Korea fab demand data. Tech (XLK +1.64%) and Industrials (XLI +1.53%) followed, with Financials (XLF +1.49%) and Discretionary (XLY +1.46%) rounding out the top quintile. The critical tell: growth is beating value on the 5-day view (+0.72% Nasdaq vs. Russell), and the Russell dramatically underperformed Friday (+0.3% vs. S&P +1.16%, a -0.86pp gap). Small-caps are the canary — when they lag during a bounce, it signals the market's confidence in the recovery is narrow and concentrated in mega-cap tech/semis rather than broad cyclical reflation. Defensive sectors (Utilities, Staples, Healthcare) participated but lagged — not a classic flight-to-safety pattern, but not the aggressive cyclical rotation you'd expect from a genuine risk-on reversal. The regime's overweights — airlines (fuel tailwind from oil's collapse), consumer discretionary (lower gas prices), and semis (momentum) — align with the sector tape, but conviction remains conditional on the regime resolving bullishly.",
+          "importance": "high"
+        },
+        {
+          "title": "3. Yield Curve & Rate Signals",
+          "content": "The rate picture is unambiguously dovish and increasingly alarming from a growth standpoint. The 10-year yield fell 35 basis points to 3.70% — a significant single-session move suggesting aggressive bond buying (flight to safety or rate-cut repricing). The 2-10 spread remains inverted at -21bps, and the 3-month to 10-year spread is deeply negative at -119bps — one of the most historically reliable recession indicators. Term structure is in contango (short rates above long), which means the bond market is actively pricing future Fed cuts, not because the economy is accelerating, but because it may be decelerating. For equities, this is a double-edged signal: falling yields mechanically support growth/tech valuations (good for semis and mega-cap), but the reason yields are falling — potential recessionary slowdown — is bad for earnings. The bond market is not celebrating Friday's equity bounce. It is hedging against something darker.",
+          "importance": "high"
+        },
+        {
+          "title": "4. Currency & Commodity Flows",
+          "content": "The commodity complex is sending recession/demand-destruction signals that equity bulls must not ignore. WTI crude collapsed 4.31% to $65.75 — a level that validates the regime's airlines and consumer discretionary overweights (cost tailwind) but simultaneously reflects global demand worry. Copper fell 1.1%, and copper is the PhD economist of commodities — it doesn't lie about industrial demand. Together, oil and copper down sharply in the same session is a yellow-to-orange flag for global growth. The dollar is essentially flat (101.63, +0.08%), which is interesting — dollar strength often accompanies risk-off, so its stability here is mildly constructive. EUR/USD at 1.10 and USD/JPY at 143.18 suggest the yen carry unwind is not accelerating, which reduces one tail risk that rattled markets earlier in the summer. Gold at $2,512 (+0.42%) continues its quiet march — not spiking in panic, but not retreating either. Bitcoin (+1.1%) and Ethereum (+1.32%) are mildly constructive, consistent with a slight uptick in risk appetite but far from a full crypto risk-on signal. International markets (DAX -0.96%, FTSE -0.78%, Nikkei -0.16%) closed in the red Friday despite Wall Street's bounce — a notable divergence that suggests global markets are not buying the U.S. recovery narrative yet.",
+          "importance": "medium"
+        },
+        {
+          "title": "5. Risk Factors to Monitor",
+          "content": "Multiple risk factors demand active monitoring heading into the week. (1) Breadth collapse: 0% of S&P components above their 200-DMA is an extraordinary reading — this must begin recovering for any bullish thesis to hold weight. (2) Extreme fear: F&G at 0 can mark capitulation bottoms, but it can also precede further selling if no catalyst arrives to shift sentiment. (3) Earnings/macro catalysts: With the S&P near 52-week lows, any negative macro surprise (CPI, jobs revision, Fed speak) could break support and accelerate selling. (4) Oil price trajectory: At $65.75, WTI is approaching levels where energy sector stress and credit market pressure could emerge for levered E&P names. (5) VIX at 19.08 (-1.9%): Declining but not low — term structure in contango is the constructive signal, but VIX would need to sustain a move below 17 to confirm a true fear unwind. (6) Russell 2000 underperformance: Small-cap lagging is a persistent warning. Watch IWM — if it fails to participate in Monday's open strength, the bounce is suspect.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Bounce Continuation vs. Failure at Resistance",
+          "scenarios": [
+            {
+              "condition": "If Monday opens with follow-through buying, breadth improves meaningfully (>40% of S&P above 20-DMA), and Russell begins to close the gap with Nasdaq",
+              "implication": "The Friday bounce has legs — a short-term tradeable recovery is underway. Semis and discretionary lead. Fear & Greed begins recovering from extreme levels. Bond yields stabilize or tick up modestly, suggesting growth expectations are holding.",
+              "trade": "Conditional long consideration in SMH (regime-overweight semis) or XLY (discretionary tailwind from oil collapse) — but only if intraday conviction clears the elevated 78 threshold. Scale position size to 0.7x normal targets per regime rules. This is a scalp/swing setup, NOT a trend trade."
+            },
+            {
+              "condition": "If Monday's open fades quickly, Russell continues to lag, and the S&P undercuts Friday's low on any volume",
+              "implication": "The Friday rally was a dead-cat bounce. Sellers are still in control. A test of 52-week low support becomes the primary scenario, with downside acceleration possible if support fails. Bond market's recession signal takes precedent over equity optimism.",
+              "trade": "No new longs. Let cash work. If short setups emerge with conviction above 78 (after -5 regime penalty is absorbed), inverse ETFs like SH or SQQQ could be considered — but regime penalizes shorts equally. Cash is a position today."
+            }
+          ]
+        },
+        {
+          "event": "Oil Price Trajectory & Commodity Signal",
+          "scenarios": [
+            {
+              "condition": "If WTI continues to slide toward $60 in early week trading (demand concern deepens, OPEC+ fails to jawbone prices)",
+              "implication": "Airlines and consumer discretionary get a genuine cost tailwind, partially validating regime overweights. However, the macro message turns darker — energy credit stress rises, EM currencies tied to oil weaken, and the 'demand destruction' narrative gains traction. Equities face a conflicted signal: sector winners (airlines, discretionary) fighting macro losers (growth concerns).",
+              "trade": "Sector-specific: Watch DAL, UAL for cost-driven relief rallies. Avoid energy sector (XLE) longs aggressively. The regime already underweights energy implicitly via its sector tilts."
+            },
+            {
+              "condition": "If oil stabilizes or rebounds above $68 (OPEC+ intervention, surprise inventory draw, geopolitical escalation)",
+              "implication": "The commodity demand-destruction narrative loses steam. Energy sector stabilizes. Inflation expectations tick back up, putting downward pressure on the rate-cut-driven bond rally. This could be mildly negative for growth/tech valuations (yields rise) but positive for the 'soft landing' narrative.",
+              "trade": "Monitor XLE and energy names for mean-reversion setup. A yield uptick (10Y back toward 3.85%) would pressure XLK and SMH — watch those positions closely if held."
+            }
+          ]
+        },
+        {
+          "event": "Fear & Greed at Zero — Capitulation Bottom or Continued Deterioration?",
+          "scenarios": [
+            {
+              "condition": "If F&G begins recovering from 0 this week (moves to 10-20), VIX sustains a move below 17, and breadth (% above 200-DMA) begins recovering from the historic 0% reading",
+              "implication": "Classic sentiment reversal signal. Extreme fear at lows has historically been a reliable medium-term contrarian buy signal when accompanied by stabilizing technicals. A 3-5% recovery rally over the next 2-3 weeks becomes the base case.",
+              "trade": "Quality large-cap growth and semi names on pullbacks. SMH, NVDA, AAPL on any intraday dips with clear technical support. Keep position sizes small (0.7x regime scaling) and honor stops — the regime is not yet bullish."
+            },
+            {
+              "condition": "If F&G stays pinned at 0-5 through mid-week, the S&P tests or breaches 52-week lows on rising volume, and credit spreads begin widening",
+              "implication": "The extreme fear reading is not capitulation — it is justified fear. The market is pricing something the macro data hasn't fully confirmed yet (recession, credit event, or policy error). Drawdown risk accelerates. Historical analogs: August 2015, December 2018, early 2022 — all saw further 10-20% downside after initial oversold bounces failed.",
+              "trade": "Raise cash aggressively. Trim any remaining longs at strength. Gold (GLD) as a defensive allocation makes sense — it's already near all-time highs and trending. No new risk-on positions until the regime shifts to bullish with higher confidence."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.13,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.18,
+    "informationEdge": 0.12,
+    "timingUrgency": 0.15
+  },
+  "opusReviewNotes": "The most glaring problem with this algorithm is not signal quality — it's extreme passivity. Out of 130 trials, 107 (82.3%) produced zero trades. The last 10 trials are ALL no-trade days, scoring a flat 50 every time. This means the algorithm's threshold or filtering logic is so restrictive that it is systematically avoiding the market. A 30.4% win rate on 23 traded trials with a profit factor of 24.11 suggests that when it does trade, the winners are massive relative to losers — but it trades so rarely that the system is essentially dormant. The algorithm is optimizing for not losing rather than for risk-adjusted returns. A day-trading algorithm that trades 17.7% of days is not a day-trading algorithm; it's an occasional lottery ticket.\n\nLooking at the last 10 trials specifically: Trial 121 was classified as risk-on (77% confidence) with a 2.13% S&P rally and Nasdaq surging — this is a textbook environment for momentum longs (QQQ, TQQQ, or high-beta names), yet zero trades were taken. Trial 128 was classified as CRISIS (90% confidence!) with a technical bounce — this is exactly when you either ride the bounce with tight stops or short the fade. Neither happened. Trial 125 and 126 were both risk-off with bearish briefings — perfect environments for defensive longs (XLU, GLD, TLT) or index shorts, yet nothing was done. Trial 127 was rotation with Russell 2000 leading +1.68% — a clear small-cap momentum trade was missed. The regime classifier and briefing generator appear to be functioning reasonably well in identifying conditions, but the trade recommendation engine is completely disconnected from these signals. The pipeline breaks between 'briefing' and 'recommendations.'\n\nThe dimension predictive power analysis reveals an uncomfortably narrow spread: all seven dimensions cluster between 66.3 and 70.0 out of 100, with only 11 samples each. This is far too few samples to draw meaningful conclusions, AND the tight clustering suggests either (a) the dimensions are highly correlated and not providing independent signals, or (b) the scoring methodology is compressing real variance. TimingUrgency at 70.0 and catalystClarity at 69.8 are marginally the strongest, while volumeLiquidity at 66.3 is weakest — but these differences are not statistically significant on 11 samples. The weight evolution shows wild oscillation (e.g., marketAlignment swinging from 7.4% at Trial 110 to 16.7% at Trial 130) without clear performance improvement, suggesting the learning mechanism is fitting to noise rather than signal.\n\nThe best 5 trials all share a pattern: single-trade days with 100% win rates and PF=10. These were high-conviction, single-name bets (IWM long, PLTR short, PNC long, UBER long, TGT short). The worst trials involved multiple simultaneous trades (Trial 75 had 3 losers) or low-conviction single names (SNOW, BRK.B). This strongly suggests the algorithm should concentrate on ONE high-conviction trade per day maximum, and that diversifying across multiple mediocre setups destroys returns. The stop-loss hit rate of 3 with -6.30% average is concerning — stops may be too wide for day trading, where 2-3% max loss per position is more appropriate.\n\nThe weight evolution from Trial 10 to Trial 130 shows that catalystClarity has been consistently weighted highest (18-25%), which aligns with it being marginally more predictive. However, the algorithm has never achieved a score above 50 since Trial 119 (16 trials ago), suggesting the current weight configuration and threshold are both suboptimal. The system needs a fundamental rethink of its trade generation logic — it should be generating candidate trades directly from the regime classification and briefing themes, then scoring them, rather than apparently waiting for some external signal that rarely fires."
+}
