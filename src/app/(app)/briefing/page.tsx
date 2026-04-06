@@ -690,54 +690,113 @@ export default function BriefingPage() {
     );
   };
 
+  /* --- Trade ticket state (editable order form) --- */
+  const [tradeTicket, setTradeTicket] = useState<{
+    symbol: string;
+    side: "buy" | "sell";
+    orderType: "market" | "limit" | "bracket";
+    qty: string;
+    limitPrice: string;
+    takeProfitPrice: string;
+    stopLossPrice: string;
+    timeInForce: "day" | "gtc";
+    catalyst: string;
+  } | null>(null);
+
+  const openTradeTicket = (ticker: string, direction?: string, entry?: number | null, target?: number | null, stop?: number | null, catalyst?: string) => {
+    const hasPrices = entry != null && entry > 0 && target != null && target > 0 && stop != null && stop > 0;
+    setTradeTicket({
+      symbol: ticker,
+      side: direction === "short" ? "sell" : "buy",
+      orderType: hasPrices ? "bracket" : "market",
+      qty: "1",
+      limitPrice: entry && entry > 0 ? entry.toFixed(2) : "",
+      takeProfitPrice: target && target > 0 ? target.toFixed(2) : "",
+      stopLossPrice: stop && stop > 0 ? stop.toFixed(2) : "",
+      timeInForce: "day",
+      catalyst: catalyst || "",
+    });
+  };
+
+  const submitTradeTicket = async () => {
+    if (!tradeTicket || !settings.alpacaKeys) return;
+    setExecutingTrade(tradeTicket.symbol);
+    try {
+      const orderBody: Record<string, unknown> = {
+        symbol: tradeTicket.symbol,
+        side: tradeTicket.side,
+        qty: tradeTicket.qty,
+        time_in_force: tradeTicket.timeInForce,
+      };
+
+      if (tradeTicket.orderType === "bracket" && tradeTicket.limitPrice && tradeTicket.takeProfitPrice && tradeTicket.stopLossPrice) {
+        orderBody.type = "limit";
+        orderBody.limit_price = tradeTicket.limitPrice;
+        orderBody.order_class = "bracket";
+        orderBody.take_profit = { limit_price: tradeTicket.takeProfitPrice };
+        orderBody.stop_loss = { stop_price: tradeTicket.stopLossPrice };
+      } else if (tradeTicket.orderType === "limit" && tradeTicket.limitPrice) {
+        orderBody.type = "limit";
+        orderBody.limit_price = tradeTicket.limitPrice;
+      } else {
+        orderBody.type = "market";
+      }
+
+      const res = await fetch("/api/alpaca/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-alpaca-key": settings.alpacaKeys.apiKey,
+          "x-alpaca-secret": settings.alpacaKeys.secretKey,
+          "x-alpaca-paper": String(settings.alpacaKeys.paperTrading),
+        },
+        body: JSON.stringify(orderBody),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        setTradeResult({ symbol: tradeTicket.symbol, success: true, message: `${tradeTicket.side.toUpperCase()} ${tradeTicket.qty} ${tradeTicket.symbol} submitted (ID: ${data.id?.slice(0, 8)})` });
+        setTradeTicket(null);
+      } else {
+        const err = await res.json().catch(() => ({ error: "Unknown error" }));
+        setTradeResult({ symbol: tradeTicket.symbol, success: false, message: err.error || "Order failed" });
+      }
+    } catch (e) {
+      setTradeResult({ symbol: tradeTicket.symbol, success: false, message: String(e) });
+    } finally {
+      setExecutingTrade(null);
+    }
+  };
+
   /* --- Trade buttons component (reused across all card types) --- */
-  const TradeButtons = ({ ticker, direction, entryPrice, targetPrice, stopPrice }: {
+  const TradeButtons = ({ ticker, direction, entryPrice, targetPrice, stopPrice, catalyst }: {
     ticker: string;
     direction?: string;
     entryPrice?: number | null;
     targetPrice?: number | null;
     stopPrice?: number | null;
+    catalyst?: string;
   }) => {
     const side = direction === "short" ? "sell" : "buy";
-    const hasFullOrder = entryPrice != null && targetPrice != null && stopPrice != null;
     return (
       <div className="flex gap-2 mt-2 pt-2 border-t border-ios-separator/30">
         <button
-          onClick={(e) => { e.stopPropagation(); window.open(`${alpacaBaseUrl}/${ticker}`, "_blank"); }}
-          className="flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg bg-ios-blue/15 text-ios-blue active:bg-ios-blue/25 transition-colors"
+          onClick={(e) => { e.stopPropagation(); window.open(`https://www.tradingview.com/chart/?symbol=${encodeURIComponent(ticker)}`, "_blank"); }}
+          className="flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg bg-ios-gray/15 text-white/70 active:bg-ios-gray/25 transition-colors"
         >
-          Trade on Alpaca
+          TradingView
         </button>
-        {settings.alpacaKeys && hasFullOrder && (
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              setTradeConfirm({
-                symbol: ticker,
-                direction: direction === "short" ? "short" : "long",
-                entryPrice: entryPrice!,
-                targetPrice: targetPrice!,
-                stopLoss: stopPrice!,
-              } as Recommendation);
-            }}
-            disabled={executingTrade === ticker}
-            className={`flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg transition-colors ${
-              direction === "short"
-                ? "bg-ios-red/15 text-ios-red active:bg-ios-red/25"
-                : "bg-ios-green/15 text-ios-green active:bg-ios-green/25"
-            } disabled:opacity-50`}
-          >
-            {executingTrade === ticker ? "Sending..." : `Execute ${side === "buy" ? "Buy" : "Sell"}`}
-          </button>
-        )}
-        {tradeResult && tradeResult.symbol === ticker && (
-          <div className={`absolute bottom-0 left-0 right-0 text-[11px] p-2 rounded-b-lg ${
-            tradeResult.success ? "bg-ios-green/10 text-ios-green" : "bg-ios-red/10 text-ios-red"
-          }`}>
-            {tradeResult.message}
-            <button onClick={() => setTradeResult(null)} className="ml-2 underline">dismiss</button>
-          </div>
-        )}
+        <button
+          onClick={(e) => { e.stopPropagation(); openTradeTicket(ticker, direction, entryPrice, targetPrice, stopPrice, catalyst); }}
+          disabled={executingTrade === ticker}
+          className={`flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg transition-colors ${
+            direction === "short"
+              ? "bg-ios-red/15 text-ios-red active:bg-ios-red/25"
+              : "bg-ios-green/15 text-ios-green active:bg-ios-green/25"
+          } disabled:opacity-50`}
+        >
+          {executingTrade === ticker ? "Sending..." : `${side === "buy" ? "Buy" : "Sell"} on Alpaca`}
+        </button>
       </div>
     );
   };
@@ -952,6 +1011,7 @@ export default function BriefingPage() {
                 entryPrice={rec.entryPrice}
                 targetPrice={rec.targetPrice}
                 stopPrice={rec.stopPrice}
+                catalyst={rec.catalyst}
               />
             </Card>
           );
@@ -1225,100 +1285,197 @@ export default function BriefingPage() {
 
               {/* Trade action buttons */}
               {!isRevised && (
-                <div className="flex gap-2 mt-2 pt-2 border-t border-ios-separator/30">
-                  <button
-                    onClick={(e) => { e.stopPropagation(); openInAlpaca(rec); }}
-                    className="flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg bg-ios-blue/15 text-ios-blue active:bg-ios-blue/25 transition-colors"
-                  >
-                    Trade on Alpaca
-                  </button>
-                  {settings.alpacaKeys && (
-                    <button
-                      onClick={(e) => { e.stopPropagation(); setTradeConfirm(rec); }}
-                      disabled={executingTrade === rec.symbol}
-                      className={`flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg transition-colors ${
-                        rec.direction === "long"
-                          ? "bg-ios-green/15 text-ios-green active:bg-ios-green/25"
-                          : "bg-ios-red/15 text-ios-red active:bg-ios-red/25"
-                      } disabled:opacity-50`}
-                    >
-                      {executingTrade === rec.symbol ? "Sending..." : `Execute ${rec.direction === "long" ? "Buy" : "Sell"}`}
-                    </button>
-                  )}
-                </div>
-              )}
-
-              {/* Trade result toast */}
-              {tradeResult && tradeResult.symbol === rec.symbol && (
-                <div className={`mt-2 text-[11px] p-2 rounded-lg ${
-                  tradeResult.success ? "bg-ios-green/10 text-ios-green" : "bg-ios-red/10 text-ios-red"
-                }`}>
-                  {tradeResult.message}
-                  <button onClick={() => setTradeResult(null)} className="ml-2 underline">dismiss</button>
-                </div>
+                <TradeButtons
+                  ticker={rec.symbol}
+                  direction={rec.direction}
+                  entryPrice={rec.entryPrice}
+                  targetPrice={rec.targetPrice}
+                  stopPrice={rec.stopLoss}
+                  catalyst={rec.catalyst}
+                />
               )}
             </div>
           ))}
         </div>
 
-        {/* Execution confirmation modal */}
-        {tradeConfirm && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setTradeConfirm(null)}>
-            <div className="bg-ios-card rounded-2xl p-5 mx-6 max-w-sm w-full shadow-2xl" onClick={e => e.stopPropagation()}>
-              <h3 className="text-lg font-bold mb-3">Confirm Order</h3>
-              <div className="space-y-2 mb-4">
-                <div className="flex justify-between text-sm">
-                  <span className="text-ios-gray">Symbol</span>
-                  <span className="font-semibold">{tradeConfirm.symbol}</span>
+        {/* Editable Trade Ticket Modal */}
+        {tradeTicket && (
+          <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setTradeTicket(null)}>
+            <div className="bg-ios-card rounded-t-2xl sm:rounded-2xl p-5 mx-0 sm:mx-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+              {/* Header */}
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-bold">Trade {tradeTicket.symbol}</h3>
+                <button onClick={() => setTradeTicket(null)} className="text-ios-gray text-xl leading-none">&times;</button>
+              </div>
+
+              {/* Catalyst context */}
+              {tradeTicket.catalyst && (
+                <div className="bg-ios-blue/10 rounded-lg p-2.5 mb-4">
+                  <p className="text-[11px] text-ios-blue">{tradeTicket.catalyst}</p>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-ios-gray">Side</span>
-                  <span className={`font-semibold ${tradeConfirm.direction === "long" ? "text-ios-green" : "text-ios-red"}`}>
-                    {tradeConfirm.direction === "long" ? "BUY" : "SELL"}
+              )}
+
+              {/* Side toggle */}
+              <div className="flex gap-2 mb-4">
+                <button
+                  onClick={() => setTradeTicket({ ...tradeTicket, side: "buy" })}
+                  className={`flex-1 text-sm font-semibold py-2 rounded-xl transition-colors ${
+                    tradeTicket.side === "buy" ? "bg-ios-green text-black" : "bg-ios-elevated text-white/50"
+                  }`}
+                >
+                  Buy
+                </button>
+                <button
+                  onClick={() => setTradeTicket({ ...tradeTicket, side: "sell" })}
+                  className={`flex-1 text-sm font-semibold py-2 rounded-xl transition-colors ${
+                    tradeTicket.side === "sell" ? "bg-ios-red text-white" : "bg-ios-elevated text-white/50"
+                  }`}
+                >
+                  Sell / Short
+                </button>
+              </div>
+
+              {/* Order type */}
+              <div className="mb-4">
+                <label className="text-[11px] text-ios-gray uppercase tracking-wider mb-1.5 block">Order Type</label>
+                <div className="flex gap-1.5">
+                  {(["market", "limit", "bracket"] as const).map(t => (
+                    <button
+                      key={t}
+                      onClick={() => setTradeTicket({ ...tradeTicket, orderType: t })}
+                      className={`flex-1 text-[11px] font-semibold py-1.5 rounded-lg transition-colors ${
+                        tradeTicket.orderType === t ? "bg-ios-blue text-white" : "bg-ios-elevated text-white/50"
+                      }`}
+                    >
+                      {t === "bracket" ? "Bracket" : t === "limit" ? "Limit" : "Market"}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Quantity */}
+              <div className="mb-3">
+                <label className="text-[11px] text-ios-gray uppercase tracking-wider mb-1 block">Quantity (shares)</label>
+                <input
+                  type="number"
+                  min="1"
+                  value={tradeTicket.qty}
+                  onChange={e => setTradeTicket({ ...tradeTicket, qty: e.target.value })}
+                  className="w-full bg-ios-elevated rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-ios-blue"
+                />
+              </div>
+
+              {/* Limit price (for limit and bracket) */}
+              {tradeTicket.orderType !== "market" && (
+                <div className="mb-3">
+                  <label className="text-[11px] text-ios-gray uppercase tracking-wider mb-1 block">
+                    {tradeTicket.orderType === "bracket" ? "Entry Price (limit)" : "Limit Price"}
+                  </label>
+                  <input
+                    type="number"
+                    step="0.01"
+                    value={tradeTicket.limitPrice}
+                    onChange={e => setTradeTicket({ ...tradeTicket, limitPrice: e.target.value })}
+                    placeholder="0.00"
+                    className="w-full bg-ios-elevated rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-ios-blue"
+                  />
+                </div>
+              )}
+
+              {/* Take profit + stop loss (bracket only) */}
+              {tradeTicket.orderType === "bracket" && (
+                <div className="grid grid-cols-2 gap-3 mb-3">
+                  <div>
+                    <label className="text-[11px] text-ios-green uppercase tracking-wider mb-1 block">Take Profit</label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={tradeTicket.takeProfitPrice}
+                      onChange={e => setTradeTicket({ ...tradeTicket, takeProfitPrice: e.target.value })}
+                      placeholder="0.00"
+                      className="w-full bg-ios-elevated rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-ios-green"
+                    />
+                  </div>
+                  <div>
+                    <label className="text-[11px] text-ios-red uppercase tracking-wider mb-1 block">Stop Loss</label>
+                    <input
+                      type="number"
+                      step="0.01"
+                      value={tradeTicket.stopLossPrice}
+                      onChange={e => setTradeTicket({ ...tradeTicket, stopLossPrice: e.target.value })}
+                      placeholder="0.00"
+                      className="w-full bg-ios-elevated rounded-lg px-3 py-2 text-sm text-white outline-none focus:ring-1 focus:ring-ios-red"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Time in force */}
+              <div className="mb-4">
+                <label className="text-[11px] text-ios-gray uppercase tracking-wider mb-1.5 block">Time in Force</label>
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setTradeTicket({ ...tradeTicket, timeInForce: "day" })}
+                    className={`flex-1 text-[11px] font-semibold py-1.5 rounded-lg transition-colors ${
+                      tradeTicket.timeInForce === "day" ? "bg-ios-blue text-white" : "bg-ios-elevated text-white/50"
+                    }`}
+                  >
+                    Day
+                  </button>
+                  <button
+                    onClick={() => setTradeTicket({ ...tradeTicket, timeInForce: "gtc" })}
+                    className={`flex-1 text-[11px] font-semibold py-1.5 rounded-lg transition-colors ${
+                      tradeTicket.timeInForce === "gtc" ? "bg-ios-blue text-white" : "bg-ios-elevated text-white/50"
+                    }`}
+                  >
+                    Good til Cancel
+                  </button>
+                </div>
+              </div>
+
+              {/* Order summary */}
+              <div className="bg-ios-elevated rounded-lg p-3 mb-4">
+                <p className="text-[11px] text-ios-gray uppercase tracking-wider mb-2">Order Summary</p>
+                <p className="text-sm text-white">
+                  <span className={tradeTicket.side === "buy" ? "text-ios-green font-bold" : "text-ios-red font-bold"}>
+                    {tradeTicket.side.toUpperCase()}
                   </span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-ios-gray">Type</span>
-                  <span>Bracket (Limit + TP + SL)</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-ios-gray">Entry</span>
-                  <span className="font-semibold">${tradeConfirm.entryPrice.toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-ios-gray">Take Profit</span>
-                  <span className="text-ios-green">${tradeConfirm.targetPrice.toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-ios-gray">Stop Loss</span>
-                  <span className="text-ios-red">${tradeConfirm.stopLoss.toFixed(2)}</span>
-                </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-ios-gray">Qty</span>
-                  <span>1 share</span>
-                </div>
+                  {" "}{tradeTicket.qty} {tradeTicket.symbol}
+                  {tradeTicket.orderType === "market" ? " at market" : ` @ $${tradeTicket.limitPrice || "—"}`}
+                  {tradeTicket.orderType === "bracket" && (
+                    <span className="text-white/50"> | TP ${tradeTicket.takeProfitPrice || "—"} | SL ${tradeTicket.stopLossPrice || "—"}</span>
+                  )}
+                  {" "}({tradeTicket.timeInForce === "day" ? "day" : "GTC"})
+                </p>
                 <p className="text-[11px] text-ios-gray mt-1">
                   {settings.alpacaKeys?.paperTrading !== false ? "Paper trading" : "LIVE TRADING"}
                 </p>
               </div>
+
+              {/* Submit */}
               <div className="flex gap-3">
                 <button
-                  onClick={() => setTradeConfirm(null)}
+                  onClick={() => setTradeTicket(null)}
                   className="flex-1 text-sm font-semibold py-2.5 rounded-xl bg-ios-elevated text-white active:bg-ios-gray-3 transition-colors"
                 >
                   Cancel
                 </button>
                 <button
-                  onClick={() => executeTradeViaApi(tradeConfirm)}
-                  className={`flex-1 text-sm font-semibold py-2.5 rounded-xl transition-colors ${
-                    tradeConfirm.direction === "long"
+                  onClick={submitTradeTicket}
+                  disabled={!settings.alpacaKeys || executingTrade === tradeTicket.symbol}
+                  className={`flex-1 text-sm font-semibold py-2.5 rounded-xl transition-colors disabled:opacity-50 ${
+                    tradeTicket.side === "buy"
                       ? "bg-ios-green text-black active:bg-ios-green/80"
                       : "bg-ios-red text-white active:bg-ios-red/80"
                   }`}
                 >
-                  {tradeConfirm.direction === "long" ? "Buy" : "Sell"} {tradeConfirm.symbol}
+                  {executingTrade === tradeTicket.symbol ? "Submitting..." : `Submit ${tradeTicket.side === "buy" ? "Buy" : "Sell"}`}
                 </button>
               </div>
+
+              {!settings.alpacaKeys && (
+                <p className="text-[11px] text-ios-orange text-center mt-2">Set Alpaca API keys in Settings first</p>
+              )}
             </div>
           </div>
         )}
