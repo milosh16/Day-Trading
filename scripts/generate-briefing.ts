@@ -334,36 +334,68 @@ async function main() {
   console.log(`Output: ${DATA_DIR}\n`);
 
   // ============================================================
-  // PHASE 1: DEEP WORLD RESEARCH
-  // Multiple Opus web searches across 6 domains + market signals
+  // PHASE 1: MARKET SIGNALS + DEEP WORLD RESEARCH (2 calls)
+  // Call 1: Market signals via web search
+  // Call 2: ALL 6 research domains in ONE mega-call
   // ============================================================
-  console.log(`\n=== PHASE 1: DEEP WORLD RESEARCH ===`);
-  console.log(`Launching ${RESEARCH_DOMAINS.length} research domains + market signals...\n`);
+  console.log(`\n=== PHASE 1: MARKET SIGNALS + DEEP WORLD RESEARCH ===`);
 
-  // Run all research domains sequentially (rate limiting)
-  const researchResults: { name: string; content: string }[] = [];
-  for (const domain of RESEARCH_DOMAINS) {
-    console.log(`  [${domain.name}] Searching...`);
-    const t = Date.now();
-    try {
-      const text = await callClaude(domain.system, domain.query(dateStr));
-      const elapsed = ((Date.now() - t) / 1000).toFixed(0);
-      // Extract from <research> tags or use full text
-      const resMatch = text.match(/<research>([\s\S]*?)<\/research>/);
-      const content = resMatch ? resMatch[1].trim() : text;
-      researchResults.push({ name: domain.name, content });
-      console.log(`  [${domain.name}] Done (${elapsed}s) — ${content.length} chars`);
-    } catch (err) {
-      console.error(`  [${domain.name}] FAILED: ${err}`);
-      researchResults.push({ name: domain.name, content: "Research failed for this domain." });
-    }
-  }
-
-  // Market signals
+  // Call 1: Market signals
   console.log(`\n  [Market Signals] Gathering numerical data...`);
   const sigT = Date.now();
   const signalsText = await callClaude(SIGNALS_SYSTEM, SIGNALS_QUERY(dateStr));
   console.log(`  [Market Signals] Done (${((Date.now() - sigT) / 1000).toFixed(0)}s)`);
+
+  // Call 2: All 6 research domains in ONE call
+  console.log(`\n  [Deep Research] All 6 domains in single Opus call...`);
+  const researchT = Date.now();
+  const allDomainsPrompt = RESEARCH_DOMAINS.map((d, i) =>
+    `## DOMAIN ${i + 1}: ${d.name.toUpperCase()}\n${d.query(dateStr)}`
+  ).join("\n\n---\n\n");
+
+  const megaResearchText = await callClaude(
+    `You are an elite multi-domain intelligence analyst. You must research ALL of the following domains using web_search extensively. Search DEEPLY — not surface-level summaries. For each domain, find specific companies, tickers, and quantify impact where possible. Use web_search multiple times across different queries to be thorough.`,
+    `Research ALL of the following 6 domains for ${dateStr}. Use web_search for EACH domain. Be thorough and specific.
+
+${allDomainsPrompt}
+
+Return your findings in this EXACT format — one <domain> block per domain:
+
+<domain name="Geopolitics & War">
+Your detailed findings here...
+</domain>
+
+<domain name="Macro & Central Banks">
+Your detailed findings here...
+</domain>
+
+<domain name="Corporate & Earnings">
+Your detailed findings here...
+</domain>
+
+<domain name="Tech & AI & Supply Chain">
+Your detailed findings here...
+</domain>
+
+<domain name="Energy & Commodities">
+Your detailed findings here...
+</domain>
+
+<domain name="Policy & Regulation">
+Your detailed findings here...
+</domain>`,
+    32000,
+  );
+  console.log(`  [Deep Research] Done (${((Date.now() - researchT) / 1000).toFixed(0)}s) — ${megaResearchText.length} chars`);
+
+  // Parse domain results from the mega-call
+  const researchResults: { name: string; content: string }[] = [];
+  for (const domain of RESEARCH_DOMAINS) {
+    const domainMatch = megaResearchText.match(new RegExp(`<domain name="${domain.name}">([\\s\\S]*?)</domain>`));
+    const content = domainMatch ? domainMatch[1].trim() : "";
+    researchResults.push({ name: domain.name, content: content || "Domain not parsed from mega-research." });
+    console.log(`    ${domain.name}: ${content.length} chars`);
+  }
 
   const signalsJson = extractJson(signalsText, "signals");
   const signals: GlobalSignals = JSON.parse(signalsJson);
@@ -394,148 +426,21 @@ async function main() {
   console.log(`\n  Phase 1 complete: ${researchResults.length} domains researched`);
 
   // ============================================================
-  // PHASE 2: IMPACT ANALYSIS
-  // Opus identifies which companies/sectors are most affected
+  // PHASE 2: IMPACT + TRADE RESEARCH + CONVICTION (1 call)
+  // Single Opus call combining analysis, research, and scoring
   // ============================================================
-  console.log(`\n=== PHASE 2: IMPACT ANALYSIS ===`);
-  console.log(`  Opus analyzing sector & company impact...\n`);
+  console.log(`\n=== PHASE 2: IMPACT ANALYSIS + TRADE RESEARCH + CONVICTION ===`);
+  console.log(`  Opus analyzing impact, researching trades, and scoring conviction...\n`);
 
-  const impactText = await callClaude(
-    `You are SIGNAL's chief strategist — an elite analyst who connects world events to specific stock market opportunities. You have deep knowledge of which companies have exposure to geopolitical events, policy changes, supply chains, and macro shifts.
+  const phase2T = Date.now();
+  const combinedText = await callClaude(
+    `You are SIGNAL — an elite trading intelligence system that combines world-class research analysis with portfolio management. You will perform THREE tasks in sequence:
 
-Your job: take the raw research below and identify the TOP 15-20 companies/ETFs most likely to move significantly today or this week. Think beyond the obvious — find the second and third-order effects that most traders miss.
+1. IMPACT ANALYSIS: Connect world events to specific companies/sectors
+2. TRADE RESEARCH: Use web_search to get current prices, technicals, and data for top candidates
+3. CONVICTION SCORING: Score and recommend the best 3-7 day trades
 
---- MARKET REGIME ---
-${regimePrompt}
-Stress: ${stressIndex}/100 | Risk Appetite: ${riskAppetiteIndex}/100
---- END REGIME ---`,
-    `Here is today's deep research across 6 domains:
-
-${fullResearch}
-
-Based on ALL of this research, identify:
-
-1. **SECTORS**: Rank the 11 GICS sectors from most bullish to most bearish today, with 1-sentence reasoning for each.
-
-2. **HIGH-IMPACT COMPANIES** (15-20): For each, specify:
-   - Ticker and company name
-   - Direction (bullish/bearish) and magnitude (1-5 scale, 5 = massive move)
-   - The specific catalyst from the research
-   - First-order effect (obvious) AND second/third-order effects (less obvious)
-   - Timeframe: today, this week, or developing
-
-3. **CONTRARIAN OPPORTUNITIES**: What is everyone focused on (war, obvious news) vs what is being MISSED that could move markets more?
-
-4. **RISK EVENTS**: What could go wrong today? What would cause a reversal?
-
-Return in <json> tags:
-<json>{
-  "sectorRankings": [{"sector": "Technology", "bias": "bullish", "magnitude": 3, "reasoning": "..."}],
-  "highImpactCompanies": [{"ticker": "XYZ", "name": "Company", "direction": "bullish", "magnitude": 4, "catalyst": "...", "firstOrder": "...", "secondOrder": "...", "timeframe": "today"}],
-  "contrarian": "What is being missed...",
-  "riskEvents": ["Risk 1", "Risk 2"]
-}</json>`,
-    16384,
-  );
-
-  let impactAnalysis: any;
-  try {
-    impactAnalysis = JSON.parse(extractJson(impactText, "json"));
-    console.log(`  Sectors ranked: ${impactAnalysis.sectorRankings?.length || 0}`);
-    console.log(`  High-impact companies: ${impactAnalysis.highImpactCompanies?.length || 0}`);
-    if (impactAnalysis.highImpactCompanies) {
-      for (const c of impactAnalysis.highImpactCompanies.slice(0, 5)) {
-        console.log(`    ${c.direction === "bullish" ? "+" : "-"} ${c.ticker} (${c.magnitude}/5): ${c.catalyst?.slice(0, 80)}`);
-      }
-      if (impactAnalysis.highImpactCompanies.length > 5) console.log(`    ... and ${impactAnalysis.highImpactCompanies.length - 5} more`);
-    }
-  } catch {
-    console.error("  Failed to parse impact analysis — using raw text");
-    impactAnalysis = { raw: impactText };
-  }
-
-  writeData(`impact-${dateKey}.json`, { date: dateKey, analysis: impactAnalysis });
-
-  // ============================================================
-  // PHASE 3: TRADE CANDIDATE RESEARCH
-  // Opus pulls prices, technicals, and catalysts for candidates
-  // ============================================================
-  console.log(`\n=== PHASE 3: TRADE CANDIDATE RESEARCH ===`);
-
-  const candidates = impactAnalysis.highImpactCompanies
-    ?.filter((c: any) => c.magnitude >= 3)
-    ?.map((c: any) => c.ticker)
-    ?.slice(0, 12) || [];
-
-  console.log(`  Researching ${candidates.length} high-conviction candidates: ${candidates.join(", ")}\n`);
-
-  const tradeResearchText = await callClaude(
-    `You are SIGNAL's trade research analyst. For each candidate stock, search for current price, recent price action, key support/resistance levels, volume trends, and any additional catalysts. Use web_search to get REAL current data.`,
-    `Research these trade candidates for ${dateStr}: ${candidates.join(", ")}
-
-For EACH candidate, search for and provide:
-1. Current/last price and recent % change (1d, 5d, 1m)
-2. Key support and resistance levels
-3. Average daily volume vs recent volume (unusual activity?)
-4. Analyst consensus: buy/hold/sell, average price target
-5. Options activity: unusual put/call volume?
-6. Upcoming catalysts: earnings date, ex-dividend, FDA date, etc.
-7. Short interest: days to cover, % float short
-
-Also search for any ADDITIONAL companies that should be on our radar based on today's news that weren't in the initial list.
-
-Return in <json> tags:
-<json>{
-  "candidates": [
-    {
-      "ticker": "XYZ",
-      "price": 100.00,
-      "change1d": -2.5,
-      "change5d": -8.0,
-      "change1m": -15.0,
-      "support": [95, 90],
-      "resistance": [105, 110],
-      "avgVolume": "5M",
-      "recentVolume": "8M",
-      "volumeSignal": "elevated",
-      "analystConsensus": "buy",
-      "priceTarget": 120,
-      "shortInterest": "3.5% float",
-      "upcomingCatalyst": "Earnings April 15",
-      "optionsActivity": "Unusual call buying at 110 strike",
-      "additionalNotes": "..."
-    }
-  ],
-  "additionalCandidates": [{"ticker": "NEW", "reasoning": "..."}]
-}</json>`,
-    16384,
-  );
-
-  let tradeResearch: any;
-  try {
-    tradeResearch = JSON.parse(extractJson(tradeResearchText, "json"));
-    console.log(`  Researched ${tradeResearch.candidates?.length || 0} candidates`);
-    if (tradeResearch.additionalCandidates?.length) {
-      console.log(`  Additional candidates found: ${tradeResearch.additionalCandidates.map((c: any) => c.ticker).join(", ")}`);
-    }
-  } catch {
-    console.error("  Failed to parse trade research — using raw text");
-    tradeResearch = { raw: tradeResearchText };
-  }
-
-  writeData(`trade-research-${dateKey}.json`, { date: dateKey, research: tradeResearch });
-
-  // ============================================================
-  // PHASE 4: CONVICTION SCORING & RECOMMENDATIONS
-  // Opus scores each trade on confidence, risk/reward, timing
-  // ============================================================
-  console.log(`\n=== PHASE 4: CONVICTION SCORING ===`);
-  console.log(`  Opus generating final trade recommendations...\n`);
-
-  const convictionText = await callClaude(
-    `You are SIGNAL's portfolio manager — the final decision maker. You have all the research, impact analysis, and trade data. Your job is to select the BEST 3-7 trades for today with full conviction scoring.
-
-RULES:
+TRADING RULES:
 - Day trades: open and close same day
 - Max stop loss: 3% for equities, 5% for leveraged/volatile names
 - Minimum risk/reward ratio: 1.5:1
@@ -543,9 +448,10 @@ RULES:
 - Regime-aligned: trades must match the current market regime
 - EVERY trade must have a specific, time-bound catalyst
 
---- REGIME ---
+--- MARKET REGIME ---
 ${regimePrompt}
 Stress: ${stressIndex}/100 | Risk Appetite: ${riskAppetiteIndex}/100
+${indicatorPrompt}
 --- END REGIME ---
 
 Score each trade on these conviction dimensions (0-100):
@@ -556,30 +462,39 @@ Score each trade on these conviction dimensions (0-100):
 - marketAlignment: Does this trade align with the regime?
 - informationEdge: Do we know something the market hasn't priced?
 - timingUrgency: Why today specifically?`,
-    `Here is everything we know:
+    `Here is today's deep research across 6 domains:
 
-RESEARCH SUMMARY:
-${researchResults.map(r => `[${r.name}]: ${r.content.slice(0, 500)}`).join("\n\n")}
+${fullResearch}
 
-IMPACT ANALYSIS:
-${JSON.stringify(impactAnalysis, null, 2).slice(0, 3000)}
+Now perform all 3 tasks:
 
-TRADE RESEARCH:
-${JSON.stringify(tradeResearch, null, 2).slice(0, 4000)}
+**TASK 1 — IMPACT ANALYSIS:**
+- Rank the 11 GICS sectors from most bullish to most bearish today
+- Identify the TOP 15-20 companies/ETFs most likely to move significantly
+- Find contrarian opportunities: what is everyone focused on vs what is being MISSED
+- List risk events that could cause reversals
 
-Generate your FINAL trade recommendations. Be selective — only recommend trades where conviction is genuinely high. It's better to recommend 2 great trades than 7 mediocre ones. "No trade" is also a valid position if nothing meets our bar.
+**TASK 2 — TRADE RESEARCH:**
+For the top 10-12 highest-conviction candidates from Task 1, use web_search to find:
+- Current/last price and recent % change (1d, 5d)
+- Key support and resistance levels
+- Analyst consensus and price targets
+- Any unusual options or volume activity
+- Upcoming catalysts (earnings, ex-div, FDA, etc.)
 
-For each trade, provide:
-1. Full entry/target/stop with specific prices
-2. Conviction scores across all 7 dimensions
-3. Detailed reasoning connecting research → impact → trade
-4. What could go wrong (the bear case)
-5. Position size recommendation (% of portfolio)
+**TASK 3 — CONVICTION SCORING:**
+Select the BEST 3-7 trades with full entry/target/stop prices and conviction scores.
+Be selective — 2 great trades > 7 mediocre ones. "No trade" is valid if nothing meets our bar.
 
-Return in <json> tags:
+Return ALL results in a single <json> block:
 <json>{
+  "sectorRankings": [{"sector": "Technology", "bias": "bullish", "magnitude": 3, "reasoning": "..."}],
+  "highImpactCompanies": [{"ticker": "XYZ", "name": "Company", "direction": "bullish", "magnitude": 4, "catalyst": "...", "firstOrder": "...", "secondOrder": "...", "timeframe": "today"}],
+  "contrarian": "What is being missed...",
+  "riskEvents": ["Risk 1", "Risk 2"],
+  "tradeResearch": [{"ticker": "XYZ", "price": 100.00, "change1d": -2.5, "change5d": -8.0, "support": [95, 90], "resistance": [105, 110], "analystConsensus": "buy", "priceTarget": 120, "upcomingCatalyst": "...", "optionsActivity": "..."}],
   "marketOutlook": "1-2 sentence overall view",
-  "riskLevel": "low" | "moderate" | "elevated" | "high",
+  "riskLevel": "low|moderate|elevated|high",
   "recommendations": [
     {
       "ticker": "XYZ",
@@ -590,7 +505,7 @@ Return in <json> tags:
       "riskRewardRatio": 1.6,
       "positionSize": "3% of portfolio",
       "catalyst": "Specific catalyst",
-      "reasoning": "Full reasoning chain from research to trade",
+      "reasoning": "Full reasoning chain",
       "bearCase": "What could go wrong",
       "conviction": {
         "catalystClarity": 85,
@@ -604,19 +519,37 @@ Return in <json> tags:
       "compositeScore": 76
     }
   ],
-  "watchlist": [
-    {"ticker": "ABC", "trigger": "Buy if price drops to $X", "reasoning": "..."}
-  ],
-  "avoidList": [
-    {"ticker": "DEF", "reasoning": "Looks tempting but..."}
-  ]
+  "watchlist": [{"ticker": "ABC", "trigger": "Buy if price drops to $X", "reasoning": "..."}],
+  "avoidList": [{"ticker": "DEF", "reasoning": "Looks tempting but..."}]
 }</json>`,
-    16384,
+    32000,
   );
 
-  let recommendations: any;
+  console.log(`  Phase 2 done (${((Date.now() - phase2T) / 1000).toFixed(0)}s) — ${combinedText.length} chars`);
+
+  // Parse combined results
+  let impactAnalysis: any = {};
+  let tradeResearch: any = {};
+  let recommendations: any = {};
   try {
-    recommendations = JSON.parse(extractJson(convictionText, "json"));
+    const parsed = JSON.parse(extractJson(combinedText, "json"));
+    impactAnalysis = {
+      sectorRankings: parsed.sectorRankings,
+      highImpactCompanies: parsed.highImpactCompanies,
+      contrarian: parsed.contrarian,
+      riskEvents: parsed.riskEvents,
+    };
+    tradeResearch = { candidates: parsed.tradeResearch };
+    recommendations = {
+      marketOutlook: parsed.marketOutlook,
+      riskLevel: parsed.riskLevel,
+      recommendations: parsed.recommendations,
+      watchlist: parsed.watchlist,
+      avoidList: parsed.avoidList,
+    };
+
+    console.log(`  Sectors ranked: ${impactAnalysis.sectorRankings?.length || 0}`);
+    console.log(`  High-impact companies: ${impactAnalysis.highImpactCompanies?.length || 0}`);
     console.log(`  Market outlook: ${recommendations.marketOutlook}`);
     console.log(`  Risk level: ${recommendations.riskLevel}`);
     console.log(`  Recommendations: ${recommendations.recommendations?.length || 0}`);
@@ -630,10 +563,14 @@ Return in <json> tags:
       console.log(`  Watchlist: ${recommendations.watchlist.map((w: any) => w.ticker).join(", ")}`);
     }
   } catch {
-    console.error("  Failed to parse recommendations — using raw text");
-    recommendations = { raw: convictionText };
+    console.error("  Failed to parse combined results — using raw text");
+    impactAnalysis = { raw: combinedText };
+    recommendations = { raw: combinedText };
+    tradeResearch = { raw: combinedText };
   }
 
+  writeData(`impact-${dateKey}.json`, { date: dateKey, analysis: impactAnalysis });
+  writeData(`trade-research-${dateKey}.json`, { date: dateKey, research: tradeResearch });
   writeData(`recommendations-${dateKey}.json`, { date: dateKey, recommendations });
 
   // ============================================================
