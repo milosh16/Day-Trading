@@ -254,19 +254,6 @@ export default function SettingsPage() {
         </div>
       </Card>
 
-      {/* Backtest Link */}
-      <Card className="mb-4" onClick={() => router.push("/backtest")}>
-        <div className="flex items-center justify-between">
-          <div>
-            <h3 className="text-sm font-semibold">Backtest Engine</h3>
-            <p className="text-xs text-ios-gray mt-0.5">Monte Carlo simulation of conviction algorithm</p>
-          </div>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-ios-gray">
-            <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
-      </Card>
-
       {/* Clear Data */}
       <Card className="mb-20">
         <button

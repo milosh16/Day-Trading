@@ -32,7 +32,12 @@ import { writeDiaryHeader, appendTrialEntry, appendMilestoneSummary } from "./li
 import { classifyRegime, buildRegimePrompt } from "../src/lib/market-regime.ts";
 import type { GlobalSignals, RegimeAssessment } from "../src/lib/market-regime.ts";
 import { computeStressIndex, computeRiskAppetiteIndex } from "../src/lib/leading-indicators.ts";
-import { fetchHistoricalSignals } from "./lib/yahoo-signals.ts";
+import { fetchCompositeSignals } from "./lib/composite-signals.ts";
+import { calculateCompositeScore } from "./lib/scorer-v2.ts";
+import { createDefaultTable, getWeightsForRegime, optimizeByRegime, weightsToPrompt as regimeWeightsToPrompt, regimeTableToSummary, type RegimeWeightTable } from "./lib/regime-weights.ts";
+import { runCounterfactual } from "./lib/counterfactual.ts";
+import { loadRegistry, saveRegistry, addInsight, getActivePromptFragments } from "./lib/insight-registry.ts";
+import { loadOptimizationLog, saveOptimizationLog, addRecord, computeRegimePerformance, checkConvergence, type OptimizationRecord } from "./lib/meta-optimization.ts";
 import type {
   TradeRecommendation, TrialResult, TrainingState, ConvictionWeights,
   TrainingBriefing, TrainingRegime, TrainingDayRecord,
@@ -71,6 +76,9 @@ function loadState(): TrainingState {
     lastUpdatedAt: new Date().toISOString(),
     totalTokensUsed: 0,
     weightHistory: [],
+    regimeWeightTable: createDefaultTable(),
+    dateSequence: [],
+    completedDates: [],
   };
 }
 
@@ -102,9 +110,12 @@ function weightsToPrompt(weights: ConvictionWeights): string {
 async function generateSignals(
   date: string
 ): Promise<{ signals: GlobalSignals; tokensUsed: number }> {
-  const { signals, fieldsPopulated } = await fetchHistoricalSignals(date);
-  log(`  Yahoo Finance: ${fieldsPopulated} real data fields populated`);
-  return { signals, tokensUsed: 0 };
+  const result = await fetchCompositeSignals(date);
+  log(`  Composite signals: ${result.fieldsPopulated} fields populated`);
+  if (result.warnings.length > 0) {
+    for (const w of result.warnings) log(`    WARNING: ${w}`);
+  }
+  return { signals: result.signals, tokensUsed: 0 };
 }
 
 // Legacy web-search version (kept for reference, unused)
@@ -221,7 +232,10 @@ International: Nikkei ${signals.nikkeiChange}% | DAX ${signals.daxChange}% | FTS
 S&P context: ${signals.spConsecutiveUpDays > 0 ? signals.spConsecutiveUpDays + " consecutive up days" : signals.spConsecutiveDownDays > 0 ? signals.spConsecutiveDownDays + " consecutive down days" : "mixed"} | 5d: ${signals.sp5DayReturn}% | 20d: ${signals.sp20DayReturn}%
 Sector winners: ${winners || "none"}
 Sector losers: ${losers || "none"}
-Nasdaq vs Russell 5d: ${signals.nasdaqVsRussell5d > 0 ? "Growth leading +" : "Value leading "}${signals.nasdaqVsRussell5d}%`;
+Nasdaq vs Russell 5d: ${signals.nasdaqVsRussell5d > 0 ? "Growth leading +" : "Value leading "}${signals.nasdaqVsRussell5d}%
+Calendar: ${signals.hasMajorEconData ? `MAJOR DATA TODAY: ${signals.econDataType}` : "No major data today"} | FOMC in ${signals.daysToFOMC}d | CPI in ${signals.daysToNextCPI}d | NFP in ${signals.daysToNextNFP}d${signals.isOpexDay ? " | OPEX DAY" : signals.isOpexWeek ? " | OPEX week" : ""}${signals.isQuarterEnd ? " | QUARTER END" : signals.isMonthEnd ? " | Month end" : ""}
+Rates: Fed Funds ${signals.fedFundsRate || "N/A"}% | SOFR ${signals.sofr || "N/A"}% | TED spread ${signals.tedSpread || "N/A"}
+Credit: HY spread ${signals.highYieldSpread}bps (${signals.spreadChange > 0 ? "+" : ""}${signals.spreadChange}bps) | IG spread ${signals.igSpread}bps`;
 
   const response = await callClaude({
     system: `You are SIGNAL, an AI trading intelligence system. Synthesize a morning briefing from REAL market data for ${dateDisplay}. You have actual prices, yields, VIX, sector performance, and regime classification.
@@ -536,9 +550,13 @@ async function generateRecommendations(
     day: "numeric",
   });
 
+  // Inject training-derived insights into the prompt
+  const insightRegistry = loadRegistry();
+  const activeInsights = getActivePromptFragments(insightRegistry, 'trade_selection');
+
   const response = await callClaude({
     system: `You are SIGNAL, an AI trading intelligence system. You are generating a PRE-MARKET briefing for trading on ${dateDisplay}.
-
+${activeInsights ? `\nTRAINING-DERIVED INSIGHTS:\n${activeInsights}\n` : ''}
 TEMPORAL CONSTRAINT — THIS IS CRITICAL:
 You may ONLY use information available BEFORE the market opens on ${dateDisplay}.
 This means: news, data, earnings, events from ${priorDateDisplay} and earlier.
@@ -566,9 +584,12 @@ CRITICAL RULES:
 - Search for: "${priorDateStr} stock market", "${priorDateStr} earnings reports", "economic calendar ${date}", "pre-market ${date}"
 - Only recommend trades based on information available BEFORE market open
 - Do NOT use hindsight — you do NOT know what happens on or after ${dateDisplay}
-- If nothing compelling was happening, return an empty array
 - Every trade needs specific entry price (use prior day close or pre-market levels), target, and stop-loss
 - Minimum conviction threshold: 72/100 weighted score
+- On RISK-ON or RISK-OFF regime days, the market has a clear directional bias — you should EXPECT to find 1-3 trades aligned with that direction. Zero trades on a strongly directional day means you didn't search hard enough.
+- On RANGE-BOUND or low-conviction days, zero trades is often correct. Don't force trades.
+- On EVENT-DRIVEN days, consider both pre-event positioning AND post-event reaction trades.
+- Consider sector ETFs (XLK, XLE, XLF, etc.) and leveraged ETFs (TQQQ, SQQQ, UVXY) as trade vehicles, not just individual stocks.
 
 Return a JSON array wrapped in <json> tags:
 <json>[
@@ -613,7 +634,8 @@ If no setups meet the threshold, return: <json>[]</json>`,
 async function runTrial(
   trialNum: number,
   date: string,
-  weights: ConvictionWeights
+  weights: ConvictionWeights,
+  regimeWeightTable?: RegimeWeightTable
 ): Promise<TrialResult> {
   log(`\n=== Trial ${trialNum} | ${date} ===`);
   let totalTokens = 0;
@@ -650,8 +672,13 @@ async function runTrial(
 
   // Phase 4: Trade Recommendations (with regime + briefing context)
   log(`  Phase 4: Generating trade recommendations...`);
+  const regime_for_weights = classifyRegime(signals);
+  const regimeWeights = getWeightsForRegime(
+    regimeWeightTable || createDefaultTable(),
+    regime_for_weights.regime
+  );
   const briefingContext = `${briefing.summary}\nMarket condition: ${briefing.marketCondition}\nKey themes: ${briefing.sections.filter(s => s.importance === "high").map(s => s.title).join(", ")}`;
-  const { recs, tokensUsed: genTokens } = await generateRecommendations(date, weights, regimePromptStr, briefingContext);
+  const { recs, tokensUsed: genTokens } = await generateRecommendations(date, regimeWeights, regimePromptStr, briefingContext);
   totalTokens += genTokens;
   log(`  Recommendations: ${recs.length} trades`);
 
@@ -691,8 +718,22 @@ async function runTrial(
   const { outcomes, tokensUsed: scoreTokens } = await scoreRecommendations(date, verifiedRecs);
   totalTokens += scoreTokens;
   const scores = calculateScores(verifiedRecs, outcomes);
+  // Rescore with v2 composite
+  scores.totalScore = calculateCompositeScore(scores);
   const dimensionAnalysis = analyzeDimensions(verifiedRecs, outcomes);
   log(`  Score: ${scores.totalScore} | Win: ${scores.winRate}% | Dir: ${scores.directionAccuracy}% | PF: ${scores.profitFactor}`);
+
+  // Benchmark: SPY return for this date
+  try {
+    const { getOHLC } = await import("./lib/market-data.ts");
+    const spyData = await getOHLC("SPY", date);
+    if (spyData && spyData.open > 0) {
+      const spyReturn = ((spyData.close - spyData.open) / spyData.open) * 100;
+      scores.benchmarkReturn = Math.round(spyReturn * 100) / 100;
+      scores.alpha = Math.round((scores.avgReturnPercent - spyReturn) * 100) / 100;
+      log(`  Benchmark: SPY ${spyReturn > 0 ? '+' : ''}${spyReturn.toFixed(2)}% | Alpha: ${scores.alpha > 0 ? '+' : ''}${scores.alpha.toFixed(2)}%`);
+    }
+  } catch { /* SPY data not available */ }
 
   const result: TrialResult = {
     trialId: trialNum, date, generatedAt: new Date().toISOString(),
@@ -728,7 +769,15 @@ async function main(): Promise<void> {
   log(`Resuming from trial ${state.currentTrial}/${state.totalTrials}`);
   log(`Best score so far: ${state.bestScore}`);
 
-  // Generate dates for remaining trials
+  // Generate deterministic date sequence if not already stored
+  if (!state.dateSequence || state.dateSequence.length === 0) {
+    state.dateSequence = getRandomTradingDays(TOTAL_TRIALS, START_DATE, END_DATE, 42);
+    state.completedDates = state.completedDates || [];
+    saveState(state);
+    log(`Generated deterministic schedule: ${state.dateSequence.length} dates (seed=42)`);
+  }
+
+  // Check remaining trials
   const remainingTrials = TOTAL_TRIALS - state.currentTrial;
   if (remainingTrials <= 0) {
     log("All trials complete!");
@@ -736,20 +785,7 @@ async function main(): Promise<void> {
     return;
   }
 
-  // Get dates we haven't tested yet
-  const testedDates = new Set(state.results.map((r) => r.date));
-  let dates = getRandomTradingDays(remainingTrials * 2, START_DATE, END_DATE)
-    .filter((d) => !testedDates.has(d));
-
-  if (dates.length < remainingTrials) {
-    // If we've exhausted unique dates, allow repeats
-    const moreDates = getRandomTradingDays(remainingTrials, START_DATE, END_DATE);
-    dates = [...dates, ...moreDates];
-  }
-
-  dates = dates.slice(0, remainingTrials);
-
-  log(`Selected ${dates.length} dates for testing`);
+  log(`${remainingTrials} trials remaining`);
   log(`Current weights:\n${weightsToPrompt(state.weights)}`);
 
   // Initialize diary if starting fresh
@@ -758,17 +794,19 @@ async function main(): Promise<void> {
   }
 
   // Run trials
-  for (let i = 0; i < dates.length; i++) {
+  for (let i = 0; i < remainingTrials; i++) {
     const trialNum = state.currentTrial + 1;
-    const date = dates[i];
+    const date = state.dateSequence[state.currentTrial];
 
     try {
-      const result = await runTrial(trialNum, date, state.weights);
+      const result = await runTrial(trialNum, date, state.weights, state.regimeWeightTable);
 
       // Update state
       state.results.push(result);
       state.currentTrial = trialNum;
       state.totalTokensUsed += result.totalTokensUsed;
+      state.completedDates = state.completedDates || [];
+      state.completedDates.push(date);
 
       // Write diary entry for this day
       appendTrialEntry(result, trialNum, TOTAL_TRIALS);
@@ -783,7 +821,24 @@ async function main(): Promise<void> {
       if (trialNum % OPTIMIZE_EVERY === 0 && trialNum > 0) {
         log(`\n=== Optimizing weights (trial ${trialNum}) ===`);
         const oldWeights = { ...state.weights };
-        state.weights = optimizeWeights(state.weights, state.results);
+        const oldRegimeTable = JSON.parse(JSON.stringify(state.regimeWeightTable || createDefaultTable())) as RegimeWeightTable;
+
+        const { newTable, changes: regimeChanges } = optimizeByRegime(
+          state.regimeWeightTable || createDefaultTable(),
+          state.results.slice(-OPTIMIZE_EVERY * 2),  // use recent trials
+          3,  // min trials per regime
+        );
+        state.regimeWeightTable = newTable;
+        // Also update flat weights for backward compatibility
+        state.weights = newTable.default;
+
+        if (regimeChanges.length > 0) {
+          log(`  Regime-conditional optimization:`);
+          for (const rc of regimeChanges) {
+            log(`    ${rc.regime}: ${rc.trialsUsed} trials, ${rc.changes.length} dimensions changed`);
+          }
+        }
+
         log(summarizeChanges(oldWeights, state.weights));
 
         const newThreshold = optimizeThreshold(state.results);
@@ -828,6 +883,72 @@ async function main(): Promise<void> {
           } catch (e) {
             log(`  Opus review failed: ${e instanceof Error ? e.message : String(e)}`);
           }
+        }
+
+        // --- Counterfactual testing on weight change ---
+        const counterfactualResult = runCounterfactual(
+          state.results.slice(-20),  // test on last 20 trials
+          oldRegimeTable,            // weights before optimization
+          state.regimeWeightTable!,  // weights after optimization
+        );
+        log(`  Counterfactual: ${counterfactualResult.recommendation} (${counterfactualResult.improvement > 0 ? '+' : ''}${counterfactualResult.improvement.toFixed(1)} score delta)`);
+
+        if (counterfactualResult.recommendation === 'reject') {
+          log(`  REJECTING weight change — reverting to previous weights`);
+          state.regimeWeightTable = oldRegimeTable;
+          state.weights = oldRegimeTable.default;
+        }
+
+        // --- Extract and register insights from Opus review ---
+        try {
+          const reviewPath = path.join(__dirname, "results", `opus-review-trial-${state.currentTrial}.json`);
+          if (fs.existsSync(reviewPath)) {
+            const reviewData = JSON.parse(fs.readFileSync(reviewPath, "utf-8"));
+            if (reviewData?.strategyChanges) {
+              let registry = loadRegistry();
+              for (const change of reviewData.strategyChanges) {
+                registry = addInsight(registry, {
+                  discoveredAtTrial: state.currentTrial,
+                  category: 'trade_selection',
+                  insight: change,
+                  promptFragment: change,
+                  supportingTrials: state.results.slice(-10).map(r => r.trialId),
+                  confidenceScore: 60,  // starts at 60, validated later
+                });
+              }
+              saveRegistry(registry);
+            }
+          }
+        } catch (e) {
+          log(`  Insight registration failed: ${e instanceof Error ? e.message : String(e)}`);
+        }
+
+        // --- Record optimization metadata ---
+        const regimePerf = computeRegimePerformance(state.results);
+        const optLog = loadOptimizationLog();
+        const optRecord: OptimizationRecord = {
+          trial: state.currentTrial,
+          timestamp: new Date().toISOString(),
+          regimeChanges: regimeChanges.map(rc => ({
+            regime: rc.regime,
+            dimensionChanges: rc.changes,
+          })),
+          insightsAdded: [],
+          insightsRetired: [],
+          counterfactual: counterfactualResult ? {
+            improvement: counterfactualResult.improvement,
+            recommendation: counterfactualResult.recommendation,
+          } : undefined,
+          regimePerformance: regimePerf,
+        };
+        saveOptimizationLog(addRecord(optLog, optRecord));
+
+        // --- Check convergence ---
+        const convergence = checkConvergence(loadOptimizationLog());
+        if (convergence.converged) {
+          log(`\n  *** CONVERGENCE DETECTED ***`);
+          log(`  Reason: ${convergence.reason}`);
+          log(`  ${convergence.recommendation}`);
         }
 
         // (Diary commit handled below in the unified commit block)

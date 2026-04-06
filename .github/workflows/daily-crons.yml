@@ -4,6 +4,8 @@ on:
   schedule:
     # Pre-market: 6:15 AM ET (10:15 UTC) weekdays
     - cron: '15 10 * * 1-5'
+    # Post-market: 5:00 PM ET (21:00 UTC) weekdays
+    - cron: '0 21 * * 1-5'
   workflow_dispatch:
     inputs:
       job:
@@ -16,6 +18,7 @@ on:
     paths:
       - '.github/workflows/daily-crons.yml'
       - 'scripts/generate-briefing.ts'
+      - 'scripts/score-accuracy.ts'
 
 permissions:
   contents: write
@@ -28,7 +31,7 @@ jobs:
   briefing:
     if: >-
       github.event_name == 'push' ||
-      github.event_name == 'schedule' ||
+      github.event.schedule == '15 10 * * 1-5' ||
       github.event.inputs.job == 'briefing' ||
       github.event.inputs.job == 'all'
     runs-on: ubuntu-latest
@@ -104,33 +107,74 @@ jobs:
             done
           fi
 
-  accuracy:
+  post-market-accuracy:
     if: >-
+      github.event.schedule == '0 21 * * 1-5' ||
       github.event.inputs.job == 'accuracy' ||
       github.event.inputs.job == 'all'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.ref_name || 'main' }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Score accuracy
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          CRON_SECRET: ${{ secrets.CRON_SECRET }}
-          APP_URL: ${{ vars.APP_URL || 'https://day-trading-sigma.vercel.app' }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Score daily accuracy
         run: |
-          echo "Triggering accuracy cron at $APP_URL..."
-          RESPONSE=$(curl -s -w "\n%{http_code}" \
-            "$APP_URL/api/cron/accuracy" \
-            -H "Authorization: Bearer $CRON_SECRET" \
-            -H "x-anthropic-key: $ANTHROPIC_API_KEY" \
-            --max-time 300)
-          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
-          BODY=$(echo "$RESPONSE" | sed '$d')
-          echo "Status: $HTTP_CODE"
-          echo "Response: $BODY"
-          if [ "$HTTP_CODE" -ge 400 ]; then
-            echo "::warning::Accuracy cron returned $HTTP_CODE (non-fatal)"
+          set -e
+          echo "=== Starting post-market accuracy scoring ==="
+
+          npx tsx scripts/score-accuracy.ts
+
+          echo "=== Verifying output ==="
+          DATE=$(date +%Y-%m-%d)
+          if [ -f "public/data/accuracy-${DATE}.json" ]; then
+            echo "Accuracy file created for ${DATE}"
+            node -e "const a=require('./public/data/accuracy-${DATE}.json'); console.log('Score:', a.compositeScore, '| Recs:', a.summary.totalRecs, '| Alpha:', a.alpha + '%');"
+          elif ls public/data/accuracy-*.json 1>/dev/null 2>&1; then
+            echo "Accuracy file created (date may differ from today)"
+            ls -la public/data/accuracy-*.json | tail -1
+          else
+            echo "::warning::No accuracy file was created"
+          fi
+
+          if [ -f "public/data/accuracy-summary.json" ]; then
+            echo "Summary updated:"
+            node -e "const s=require('./public/data/accuracy-summary.json'); console.log('Total days:', s.totalDaysScored, '| Rolling 5 avg:', s.rolling5.avgCompositeScore);"
+          fi
+
+      - name: Commit and push results
+        run: |
+          git config user.name "SIGNAL Bot"
+          git config user.email "signal-bot@users.noreply.github.com"
+          git add public/data/
+          if git diff --cached --quiet; then
+            echo "No accuracy data changes to commit"
+          else
+            DATE=$(date +%Y-%m-%d)
+            git commit -m "data: accuracy scoring ${DATE}"
+            # Retry push up to 4 times with backoff
+            for i in 1 2 3 4; do
+              if git push origin ${GITHUB_REF_NAME:-main}; then
+                echo "Push succeeded on attempt $i"
+                break
+              fi
+              if [ $i -eq 4 ]; then
+                echo "::error::Push failed after 4 attempts"
+                exit 1
+              fi
+              WAIT=$((2 ** i))
+              echo "Push failed, retrying in ${WAIT}s..."
+              sleep $WAIT
+              git pull origin ${GITHUB_REF_NAME:-main} --rebase
+            done
           fi

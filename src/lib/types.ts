@@ -144,50 +144,6 @@ export interface PerformanceMetrics {
   worstTrade: number;
 }
 
-// --- Backtest Types ---
-
-export interface BacktestResult {
-  id: string;
-  timestamp: string;
-  parameters: BacktestParameters;
-  metrics: PerformanceMetrics;
-  equityCurve: { day: number; equity: number; sp500: number }[];
-  tradeLog: BacktestTrade[];
-}
-
-export interface BacktestParameters {
-  days: number;
-  initialCapital: number;
-  convictionThreshold: number;
-  maxPositionPercent: number;
-  maxExposurePercent: number;
-  maxLossPerTrade: number;
-  dailyLossHalt: number;
-  minRewardRisk: number;
-  avgTradesPerDay: number;
-  winRate: number;
-  avgWinPercent: number;
-  avgLossPercent: number;
-}
-
-export interface BacktestTrade {
-  day: number;
-  symbol: string;
-  direction: TradeDirection;
-  conviction: number;
-  entryPrice: number;
-  exitPrice: number;
-  pnl: number;
-  pnlPercent: number;
-  won: boolean;
-}
-
-export interface BacktestIteration {
-  iteration: number;
-  parameters: BacktestParameters;
-  metrics: PerformanceMetrics;
-}
-
 // --- Settings Types ---
 
 export interface AlpacaKeys {
