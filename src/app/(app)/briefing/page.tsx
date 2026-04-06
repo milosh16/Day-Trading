@@ -1297,11 +1297,16 @@ export default function BriefingPage() {
             </div>
           ))}
         </div>
+      </Card>
+    );
+  };
 
-        {/* Editable Trade Ticket Modal */}
-        {tradeTicket && (
-          <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setTradeTicket(null)}>
-            <div className="bg-ios-card rounded-t-2xl sm:rounded-2xl p-5 mx-0 sm:mx-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+  /* --- Trade Ticket Modal (rendered at page root) --- */
+  const renderTradeTicketModal = () => {
+    if (!tradeTicket) return null;
+    return (
+      <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setTradeTicket(null)}>
+        <div className="bg-ios-card rounded-t-2xl sm:rounded-2xl p-5 mx-0 sm:mx-6 max-w-md w-full shadow-2xl max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
                 <h3 className="text-lg font-bold">Trade {tradeTicket.symbol}</h3>
@@ -1478,9 +1483,7 @@ export default function BriefingPage() {
               )}
             </div>
           </div>
-        )}
-      </Card>
-    );
+        );
   };
 
   const renderOutcomes = (outcomes: Outcome[]) => {
@@ -1964,6 +1967,19 @@ export default function BriefingPage() {
               </p>
             </Card>
           )}
+        </div>
+      )}
+
+      {/* Trade Ticket Modal — rendered at page root so it works from any section */}
+      {renderTradeTicketModal()}
+
+      {/* Trade result toast */}
+      {tradeResult && (
+        <div className={`fixed bottom-28 left-4 right-4 z-50 text-sm p-3 rounded-xl shadow-lg ${
+          tradeResult.success ? "bg-ios-green/90 text-black" : "bg-ios-red/90 text-white"
+        }`}>
+          {tradeResult.message}
+          <button onClick={() => setTradeResult(null)} className="ml-3 font-bold underline">OK</button>
         </div>
       )}
     </div>
