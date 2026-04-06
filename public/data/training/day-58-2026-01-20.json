@@ -1,0 +1,356 @@
+{
+  "trialId": 58,
+  "date": "2026-01-20",
+  "dateDisplay": "Tuesday, January 20, 2026",
+  "generatedAt": "2026-04-06T01:38:34.817Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -2.06,
+      "nasdaqFuturesChange": -2.39,
+      "dowFuturesChange": -1.76,
+      "russellFuturesChange": -1.21,
+      "vixFuturesChange": -15.88,
+      "vix": 16.9,
+      "vixChange": -15.88,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 21.28,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.3,
+      "tenYearYieldChange": 1.51,
+      "twoYearYield": 3.77,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.92,
+      "threeMonthYield": 3.57,
+      "twoTenSpread": 0.53,
+      "threeMoTenYrSpread": 0.73,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.76,
+      "dollarIndexChange": 0.12,
+      "eurUsd": 1.17,
+      "eurUsdChange": 0.76,
+      "usdJpy": 158.16,
+      "usdJpyChange": -0.01,
+      "usdCny": 6.96,
+      "usdCnyChange": -0.12,
+      "oilWTI": 60.62,
+      "oilChange": 0.46,
+      "brentOil": 65.24,
+      "brentOilChange": 0.49,
+      "natGasChange": 24.78,
+      "goldPrice": 4831.8,
+      "goldChange": 1.52,
+      "silverChange": -2.12,
+      "copperChange": -0.75,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.41,
+      "daxChange": -0.58,
+      "ftseChange": 0.11,
+      "shanghaiChange": 0.08,
+      "hangSengChange": 0.37,
+      "kospiChange": 0.49,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 95.60000000000001,
+      "spreadChange": 0.26,
+      "igSpread": -19.8,
+      "igSpreadChange": 0.61,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.06,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -2.6,
+      "xlfChange": -2.28,
+      "xleChange": -0.19,
+      "xlvChange": -0.22,
+      "xlpChange": 0.3,
+      "xluChange": -0.99,
+      "xlreChange": -1.92,
+      "xliChange": -2.02,
+      "xlbChange": -1.01,
+      "xlcChange": -1.48,
+      "xlyChange": -2.6,
+      "smhChange": -2.5,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 1.21,
+      "ethereumChange": 1.47,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 2,
+      "sp5DayReturn": -2.59,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": -3.65,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-off",
+      "confidence": 66,
+      "directionalBias": "-36",
+      "volatilityRegime": "normal",
+      "stressIndex": 17,
+      "riskAppetiteIndex": 33,
+      "sectorTilts": {
+        "utilities": "overweight",
+        "healthcare": "overweight",
+        "staples": "overweight",
+        "tech": "underweight",
+        "semiconductors": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "U.S. equities are in full risk-off mode heading into Tuesday, with S&P futures down 2.06% and Nasdaq off 2.39% after two consecutive down sessions that have pushed the index to near 52-week lows. Gold is surging +1.52% to $4,831 while the VIX — despite a dramatic -15.88% drop — remains elevated in context, and fear & greed has hit an extreme zero reading, signaling capitulatory sentiment. Defensive rotation is the dominant theme: staples is the lone sector in the green, every cyclical is bleeding, and the regime classifier is firmly RISK-OFF with 66% confidence.",
+      "marketCondition": "bearish",
+      "sections": [
+        {
+          "title": "1. Overall Market Posture & Regime",
+          "content": "SIGNAL's regime engine is reading RISK-OFF at 66% confidence, and the data backs it up comprehensively. The S&P is pressing near its 52-week low with a 5-day return of -2.59% and zero percent of names above the 200 DMA — a breadth reading that indicates systemic selling, not isolated weakness. The directional bias sits at -36, reflecting meaningful negative momentum. Fear & Greed at 0 (extreme fear) suggests we are approaching maximum pessimism territory, which historically marks either a flush-and-recover inflection or the beginning of a more sustained drawdown. The VIX's -15.88% drop is the most counterintuitive data point today: falling volatility into a falling market typically means options traders are not aggressively hedging — possibly because put protection was already in place, or because the market is sliding rather than gapping chaotically. Term structure remains in contango, consistent with an orderly (if painful) selloff rather than a panic spike. Stress score of 17/100 and risk appetite of 33/100 confirm the regime without screaming systemic breakdown — this is a controlled de-risking, not a 2008-style unwind. Regime rules apply: long trades carry -8 conviction penalty, short trades carry no penalty. Do not fight this tape.",
+          "importance": "high"
+        },
+        {
+          "title": "2. Sector Rotation & Relative Strength",
+          "content": "The sector scorecard is almost uniformly red, but the leadership hierarchy tells the real story. Staples (XLP) is the only green sector at +0.30%, confirming textbook defensive rotation. Healthcare (XLV) and Utilities (XLU) — both regime-overweighted as defensive havens — are ironically in the red (-0.22% and -0.99% respectively), which suggests the selloff has been broad enough to drag even safety sectors lower, though they are outperforming cyclicals on a relative basis. The worst performers are concentrated in high-beta growth: Tech (XLK) -2.6%, Discretionary (XLY) -2.6%, Semis (SMH) -2.5%, and Financials (XLF) -2.28%. The SMH reading is particularly notable — semiconductor weakness often leads broader tech by 1-2 sessions, suggesting continued headwinds for the Nasdaq. Real Estate (XLRE) -1.92% is being hit by rate pressure (10Y at 4.3%). Industrials (XLI) -2.02% signals deteriorating growth expectations. The Russell 2000 is outperforming large-cap by roughly 1 percentage point — a counterintuitive signal in risk-off, but historically small caps can see short-covering rallies or reflect different sector composition. Value is leading growth on the 5-day basis by 3.65 percentage points, a regime-consistent rotation out of duration-sensitive growth names. The playbook is clear: rotate toward staples, reduce tech/semi/discretionary exposure.",
+          "importance": "high"
+        },
+        {
+          "title": "3. Yield Curve & Rate Signals",
+          "content": "The 10-year Treasury yield is at 4.30%, up +1.51% on the session — a meaningful move higher in yields even as equities are selling off. This is the most important macro tension in today's data. Normally, a risk-off equity selloff drives a flight-to-quality bid in Treasuries, pushing yields DOWN. Instead, yields are rising alongside equity weakness, which points to one of two dynamics: (1) inflation expectations are re-accelerating, or (2) there is forced selling or supply pressure in the bond market itself. Neither interpretation is equity-friendly. The 2-10 spread at 53 basis points is positively sloped but not dramatically so, suggesting the curve has normalized from inversion without yet pricing a robust recovery. The 3-month to 10-year spread at 73 bps is also positive — the full inversion that preceded 2023-2024 recession fears has resolved. This is constructive structurally, but the near-term rising yield environment creates a headwind for rate-sensitive sectors (XLRE, XLU) and high-multiple tech names. Watch the 10Y closely: a break above 4.40-4.50% would intensify equity pressure and validate the bearish regime. A reversal below 4.20% would be the first signal of a potential relief rally.",
+          "importance": "high"
+        },
+        {
+          "title": "4. Currency & Commodity Flows",
+          "content": "The currency picture is nuanced. The Dollar (DXY) is modestly firmer at +0.12%, sitting at 98.76 — not a strong safe-haven surge, which is somewhat surprising in a risk-off day. EUR/USD at 1.17 reflects a relatively strong euro, suggesting the dollar's safe-haven bid is muted despite equity weakness. USD/JPY at 158.16 is elevated — the yen has NOT strengthened meaningfully, which typically occurs in risk-off environments when Japanese investors repatriate capital. This is worth watching: yen weakness despite risk-off is unusual and may suggest carry trades are still intact, or that BOJ dynamics are suppressing yen appreciation. Commodities tell a bifurcated story. Gold at $4,831 (+1.52%) is the standout safe-haven performer, confirming the risk-off narrative with authority — this is the asset doing exactly what it should. WTI crude at $60.62 (+0.46%) is quietly holding, which may reflect supply constraints rather than demand optimism given the weak equity/growth backdrop. Bitcoin +1.21% and Ethereum +1.47% are both positive — crypto moving counter to equities is an interesting divergence, possibly reflecting idiosyncratic demand or a perception of crypto as a dollar hedge rather than a risk-asset today. International markets (Nikkei -0.41%, DAX -0.58%) are mildly negative but dramatically better than U.S. futures, suggesting the selling pressure is concentrated domestically.",
+          "importance": "medium"
+        },
+        {
+          "title": "5. Risk Factors & Key Watches",
+          "content": "Five risk factors demand attention today: (1) BREADTH COLLAPSE — 0% of S&P names above the 200 DMA is an extraordinary reading. This is either a capitulation signal that precedes a violent snap-back, or confirmation of a regime change to sustained bear market. The distinction matters enormously for positioning. (2) RISING YIELDS + FALLING STOCKS — The simultaneous move higher in the 10Y and lower in equities suggests potential stagflation pricing or bond market stress. If this correlation persists, traditional 60/40 hedging breaks down. (3) SEMICONDUCTOR CONTAGION — SMH at -2.5% leading tech lower is a pattern that has historically marked extended drawdown periods in the Nasdaq. Watch NVDA, AMD, and TSM for confirmation or reversal. (4) SMALL-CAP RESILIENCE — Russell outperforming by 1pp in a broad selloff is anomalous. Monitor whether this is short-covering that reverses, or genuine rotation into value/small-cap names. (5) CRYPTO DIVERGENCE — Digital assets rising while equities fall breaks the typical high-beta correlation. Could signal institutional reallocation or a narrative shift around crypto as a macro hedge. The VIX drop (-15.88%) despite market weakness is a potential false signal — if realized volatility remains elevated, implied vol could re-spike violently on the next leg down.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Capitulation & Snapback — Extreme Fear (F&G: 0) + Near 52-Week Low",
+          "scenarios": [
+            {
+              "condition": "If the S&P holds or reclaims the 52-week low level intraday with improving breadth (e.g., >20% of names recover above key moving averages) and yields reverse below 4.20%",
+              "implication": "Classic washout bottom setup. Extreme fear at zero has historically marked short-term oversold conditions. A reversal here could produce a 2-4% relief rally over 3-5 sessions as shorts cover and dip buyers emerge in quality names.",
+              "trade": "Cautiously initiate longs in XLP or defensive quality ETFs (conviction reduced by -8 regime penalty). Consider defined-risk call spreads on SPY 2-3 weeks out rather than outright longs. Keep position sizing at 50% of normal. Stop below today's low."
+            },
+            {
+              "condition": "If the S&P breaks decisively below the 52-week low on volume, with yields continuing to rise above 4.40% and VIX re-spiking above 20",
+              "implication": "Breakdown confirmation — the oversold reading becomes a lagging indicator of a genuine bear market leg. Momentum funds and systematic strategies will accelerate selling. Next technical support levels come into focus (typically 5-8% below the 52-week low).",
+              "trade": "Add to short exposure via SPXS, SH, or QQQ puts. No regime penalty on shorts. Overweight the Gold (GLD) position as the primary long hedge — gold's +1.52% today in risk-off confirms it as the highest-conviction safe haven. Target 3-5% gold allocation increase."
+            }
+          ]
+        },
+        {
+          "event": "Yield Curve Stress — 10Y Rising Alongside Equity Weakness",
+          "scenarios": [
+            {
+              "condition": "If 10Y yields continue climbing toward 4.50%+ over the next 2-3 sessions with no corresponding improvement in growth data",
+              "implication": "Stagflation pricing intensifies. Rate-sensitive sectors (XLRE, XLU, XLF) face compounded pressure from both risk-off sentiment AND rate headwinds. Growth multiples compress further in tech. The traditional equity-bond diversification benefit breaks down.",
+              "trade": "Underweight XLRE and XLU despite their 'defensive' classification — they are rate-sensitive defensives, not pure flight-to-quality. Rotate defensive allocation into XLP (staples) which has lower rate sensitivity. Consider TBT (inverse 20Y Treasury) as a yield-rise hedge on a portion of fixed income exposure. Reduce tech exposure aggressively — SMH and XLK shorts are highest conviction given regime + rate headwinds."
+            },
+            {
+              "condition": "If 10Y yields reverse sharply below 4.20%, signaling a flight-to-quality bid finally materializing in bonds",
+              "implication": "Bond market normalizing — risk-off trade becomes self-consistent. Dollar would likely strengthen, gold could pause, and equities might find a temporary floor as the yield headwind abates. This would be the more 'classic' risk-off playbook.",
+              "trade": "Cover rate-sensitive shorts (XLRE, XLU). Increase TLT or long-duration bond exposure as a hedge. Maintain short bias on growth/tech but reduce aggressiveness. Watch for equity stabilization as the cue to begin scaling into quality defensive longs."
+            }
+          ]
+        },
+        {
+          "event": "International Divergence — U.S. Weakness vs. Stable Global Markets",
+          "scenarios": [
+            {
+              "condition": "If Nikkei, DAX, and Hang Seng continue showing relative strength (-0.4% to +0.4%) versus U.S. futures (-2%+), suggesting idiosyncratic U.S.-specific selling",
+              "implication": "The selling pressure may be U.S.-policy or U.S.-valuation driven rather than a global growth shock. This creates a potential geographic rotation opportunity. European and Asian markets trading near flat while U.S. hits 52-week lows suggests relative value in international exposure.",
+              "trade": "Consider modest long positions in EFA (international developed) or EWJ (Japan) against a short in SPY as a pair trade — capturing relative strength without being net long in a risk-off regime. Dollar weakness (DXY only +0.12% despite equity stress) supports unhedged international positions. Size conservatively given -8 conviction penalty on longs. The crypto divergence (BTC +1.21%) may also be worth a small satellite allocation as a dollar-hedge proxy if the U.S.-specific narrative gains traction."
+            },
+            {
+              "condition": "If international markets begin to follow U.S. weakness lower with a lag (contagion pattern), with DAX and Nikkei dropping 1%+ in subsequent sessions",
+              "implication": "Global risk-off is confirmed. No safe harbor in international equities. Dollar would likely strengthen more aggressively as the global reserve currency flight-to-safety bid kicks in, pressuring EUR/USD below 1.15 and commodities.",
+              "trade": "Close international relative-value positions immediately. Concentrate defensive positioning in gold (GLD) and short-term Treasuries (SHY/BIL). Reduce all equity exposure including defensives. The gold trade remains the highest-conviction position in this scenario — $4,831 gold with +1.52% momentum in a risk-off regime has clear continuation logic."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "QQQ",
+      "direction": "short",
+      "entryPrice": 500,
+      "targetPrice": 487,
+      "stopLoss": 506,
+      "thesis": "Trump's Greenland tariff shock (10% on 8 EU nations starting Feb 1, escalating to 25% by June 1) directly targets tech supply chains and sentiment. Nasdaq futures are -2.39% pre-open on the first trading day after a 3-day holiday weekend with no U.S. session to absorb the shock — the full reaction lands at today's open. Regime calls for tech underweight and this is the highest-liquidity expression of that view.",
+      "catalyst": "Trump's Saturday (Jan 18) Truth Social post announcing escalating tariffs on 8 European NATO members over Greenland, triggering a global 'Sell America' risk-off with Nasdaq futures -2.39% pre-market and VIX spiking above 20.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 92,
+          "reasoning": "Tariff announcement is explicit, dated, and quantified (10% Feb 1 → 25% June 1). No ambiguity. European markets already confirmed the reaction with Stoxx 600 -1.2% on Monday. The catalyst is fully documented and regime-confirming."
+        },
+        "technicalSetup": {
+          "score": 85,
+          "reasoning": "Nasdaq was already in a losing week into Jan 16 close (23,515). The holiday gap creates a clean technical break with no intermediate support to absorb the shock. First trading day after a 3-day accumulation of negative news = gap-and-go continuation setup."
+        },
+        "riskReward": {
+          "score": 82,
+          "reasoning": "Entry ~$500, Target $487 (-2.6%), Stop $506 (+1.2%) = 2.17:1 R:R. Asymmetric given that the full tariff shock hasn't been priced into U.S. equities yet. Target is conservative (only pricing in half the futures move to allow for intraday volatility)."
+        },
+        "volumeLiquidity": {
+          "score": 95,
+          "reasoning": "QQQ is the most liquid ETF in the world, averaging $20B+ daily volume. Earnings season adds institutional participation. Short execution risk is near zero. Excellent for scaling and precision entries."
+        },
+        "marketAlignment": {
+          "score": 92,
+          "reasoning": "Regime is RISK-OFF (66% confidence). Tech is explicitly underweighted. Directional bias is -36. Short tech is the single highest-alignment trade available. S&P futures -2.06%, Nasdaq futures -2.39% confirm the directional bet before markets open."
+        },
+        "informationEdge": {
+          "score": 80,
+          "reasoning": "Holiday weekend gap means U.S. participants have had 3 days to absorb tariff news without a trading outlet. European and futures reactions confirm the direction. The market hasn't had a chance to price this in — opening session will be the discovery mechanism."
+        },
+        "timingUrgency": {
+          "score": 92,
+          "reasoning": "This is the first U.S. equity session after the tariff shock. Momentum from European selloff, gold ATH, and futures positioning all point to maximum urgency at the open. Delay risks missing the gap. Urgency score near maximum."
+        }
+      }
+    },
+    {
+      "symbol": "FAST",
+      "direction": "short",
+      "entryPrice": 41.1,
+      "targetPrice": 38.5,
+      "stopLoss": 42.5,
+      "thesis": "Fastenal (FAST) reported Q4 2025 before the MLK holiday with EPS in-line but critical margin pressure: gross margin declined 50bps YoY due to lower-than-expected supplier rebates, and management guidance was soft on incremental margins. Pre-market is already -6.04% to $41.10. In a broad risk-off tape with industrials leading losses, FAST faces a compounded headwind: a fundamental earnings disappointment on top of macro-driven sector rotation out of cyclicals.",
+      "catalyst": "Q4 2025 earnings released Jan 19: EPS $0.26 (in-line), but revenue +11.1% driven by price hikes not volume, gross margin compressed -50bps YoY from lower supplier rebates, and Q4 device signings declined 12.1% YoY. Pre-market reaction: -6.04% to $41.10 with industrial sector facing additional tariff headwinds.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": "Earnings are public: margin miss on rebate timing, weakening smaller-customer activity, and 12.1% decline in FASTVend signings are all concrete negatives. Pre-market price action (-6.04%) confirms the market's interpretation. Clarity is high."
+        },
+        "technicalSetup": {
+          "score": 82,
+          "reasoning": "Clean gap-down from ~$43.74 (Jan 16 close) to $41.10 pre-market. FAST had already been declining from its 52-week high of ~$50.63. Gap confirms technical break of near-term support. The broader bearish market tape reduces likelihood of a gap fill."
+        },
+        "riskReward": {
+          "score": 80,
+          "reasoning": "Entry $41.10, Target $38.50 (-6.3% additional), Stop $42.50 (+3.4% above entry) = 1.86:1 R:R. Target represents a retest of recent lows. Stop placed above the gap to protect against gap-fill reversal. Acceptable but not exceptional ratio."
+        },
+        "volumeLiquidity": {
+          "score": 78,
+          "reasoning": "FAST averages ~8M shares/day. On earnings days, volume surges significantly. Sufficient liquidity for meaningful position sizing. Not as liquid as QQQ but manageable for standard position sizes."
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": "Industrials are cyclical and explicitly underperforming in today's risk-off regime. FAST's manufacturing-heavy customer base is directly exposed to tariff-driven industrial slowdown fears. Double headwind: earnings miss + macro selling."
+        },
+        "informationEdge": {
+          "score": 85,
+          "reasoning": "Pre-market data is confirmed: -6.04% with specific drivers (margin compression, rebate miss, softer signings). Most retail traders won't see this until market open. Institutional reaction already started but hasn't fully played out in regular session."
+        },
+        "timingUrgency": {
+          "score": 88,
+          "reasoning": "Earnings gap on first trading day after holiday in a risk-off market creates maximum urgency. The gap and go setup has the highest probability of follow-through in the first 30-60 minutes of trading. Delay risks the trade moving significantly in your direction without entry."
+        }
+      }
+    },
+    {
+      "symbol": "GLD",
+      "direction": "long",
+      "entryPrice": 450,
+      "targetPrice": 463,
+      "stopLoss": 443.5,
+      "thesis": "Gold hit a new all-time high of $4,689/oz on Jan 19 (MLK Day) as the Trump Greenland tariff shock ignited a global 'Sell America' flight to safety. With the 'Sell America' trade active, gold/GLD is the canonical safe-haven long — simultaneously benefiting from dollar weakness, rate cut expectations, and central bank demand. The regime explicitly calls for gold exposure as a defensive haven. Despite the long penalty, GLD's institutional setup, clear catalyst, and extreme risk-off environment push it above the 72-point threshold.",
+      "catalyst": "Gold hit intraday all-time high of $4,689.15/oz on January 19 during U.S. market closure, driven by Trump's Greenland tariff shock (10%→25% on 8 EU nations), 'Sell America' trade, central bank buying spree, and dollar retreat. Goldman Sachs maintains $5,400 year-end gold target.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": "Gold's ATH print on Jan 19 during the holiday is an unambiguous signal. The catalysts are stacked: tariff shock, dollar weakness, central bank buying (averaging 585 tonnes/quarter in 2026 per JP Morgan), and ETF inflows at near-record levels. Crystal clear."
+        },
+        "technicalSetup": {
+          "score": 82,
+          "reasoning": "Gold is in ATH breakout mode after hitting $4,600 on Jan 12 and then $4,689 on Jan 19. Momentum is clearly bullish. In a risk-off tape, breakout continuation from ATH is the highest-probability setup. GLD should gap up at open reflecting the holiday gold move."
+        },
+        "riskReward": {
+          "score": 78,
+          "reasoning": "Entry ~$450, Target $463 (+2.9%), Stop $443.50 (-1.4%) = 2.0:1 R:R. Target is conservative relative to gold's momentum and Goldman's $5,400 year-end target. Stop placed below recent support to allow for intraday volatility without being stopped out by noise."
+        },
+        "volumeLiquidity": {
+          "score": 92,
+          "reasoning": "GLD is one of the world's most liquid commodity ETFs. In risk-off conditions, volume surges as institutions rotate into gold. Execution risk near zero. Spreads tighten during high-volume risk-off events. Ideal instrument for the thesis."
+        },
+        "marketAlignment": {
+          "score": 88,
+          "reasoning": "Regime explicitly names gold +1.5% as a key factor. GLD is a defensive haven in the sector tilt framework. The 'Sell America' trade makes gold the go-to safe haven. This is one of the highest regime-alignment trades available on the long side despite the penalty."
+        },
+        "informationEdge": {
+          "score": 80,
+          "reasoning": "Holiday gold ATH is known but U.S. equities haven't had a session to absorb it. The first GLD print of the day will reflect 3 days of accumulated gold demand. JP Morgan's $5,000/oz Q4 2026 target and Goldman's $5,400 year-end target provide institutional tailwind framing."
+        },
+        "timingUrgency": {
+          "score": 85,
+          "reasoning": "First U.S. session after gold ATH. GLD will gap up at open to reflect 3 days of gold price appreciation. Acting at or near the open captures the institutional inflow momentum before retail chases. Waiting risks being dragged in at a worse entry as ETF flows accelerate."
+        }
+      }
+    }
+  ],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.18,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.17,
+    "informationEdge": 0.12,
+    "timingUrgency": 0.08
+  },
+  "opusReviewNotes": "The most glaring issue across 60 trials is the 80% no-trade rate combined with a 37.5% win rate when trades ARE taken. This is a worst-of-both-worlds outcome: the algorithm is too conservative to generate volume, yet not selective enough to be accurate when it does trade. The threshold is filtering out opportunities but not filtering out losers. Looking at the last 10 trials specifically: Trials 51-54 and 59 all produced no trades despite varying regimes. Trial 52 was classified as risk-off with 100% confidence and stress=18, yet no short trades were recommended — this is a clear missed opportunity. If the algorithm has high conviction in a bearish regime, it should be able to find at least one high-quality short or defensive long. Similarly, Trial 58 correctly identified risk-off (66% confidence, bearish briefing) and recommended QQQ short + FAST short + GLD long, but scored 50 with 0% win rate on outcomes tracked. The regime was right but execution was wrong — likely because shorting QQQ in an already-down-2% session means chasing, not leading.\n\nThe dimension predictive power data is remarkably flat: all seven dimensions cluster between 69.6 and 72.9 out of 100. This near-uniform distribution strongly suggests the scoring model lacks discriminative power. When every dimension predicts roughly equally, no dimension is actually predicting — the model is essentially averaging noise. The slight edge in riskReward (72.9) and timingUrgency (72.6) deserves investigation, but the current weight allocation has timingUrgency at only 8.3% (lowest) while catalystClarity sits at 20.0% despite only 71.7 predictive power. The weights are inversely correlated with actual predictive signal.\n\nTrial 55 (SNOW long, rotation regime, appetite=56) lost 0.68% and scored 15 — the worst score in the last 10. SNOW is a high-beta cloud name that requires strong risk-on momentum, not a rotation regime with only 46% confidence. Trial 57 recommended XHB long and PHM long (both homebuilders) in a range-bound/bearish regime — this is a fundamental regime-alignment failure. Going long cyclical/rate-sensitive names when the briefing itself says 'defensive selloff' is contradictory. Trial 60's RTX long lost 2.49% (stop-loss hit) while XENE short gained 6.61% — the biotech short worked but the defense long failed despite seeming 'safe' in a rotation. The pattern is clear: the algorithm treats certain sectors as defensive hedges without verifying they actually behave defensively in the specific regime.\n\nThe best trials (1, 8, 10, 41) all share a pattern: single concentrated trades with clear directional conviction. Trial 8 shorted PLTR, Trial 1 went long IWM, Trial 10 went long PNC — each was one trade with 100% win rate. When the algorithm takes multiple trades (Trial 57: 2 trades, Trial 58: 3 trades, Trial 60: 2 trades), performance degrades significantly. This suggests the second and third recommendations are dilutive — lower conviction ideas that drag down the portfolio. The algorithm should enforce a strict 1-trade maximum unless composite scores exceed 85.\n\nThe profit factor of 3.55 is technically strong but misleading given only 12 trading trials and heavy influence from three perfect-score trials. The algorithm has no mechanism to distinguish between 'no edge detected' (correct no-trade) and 'edge exists but threshold is too high' (missed opportunity). Trials 51-54 and 59 all scored exactly 50, which is the default no-trade score — there's no gradient telling us how close these were to generating trades or whether the no-trade decision was correct."
+}

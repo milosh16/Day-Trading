@@ -1388,3 +1388,307 @@
 
 ---
 
+## Day 51/500 — Friday, September 12, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 52/500 — Wednesday, July 30, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 53/500 — Thursday, May 22, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 54/500 — Thursday, May 29, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 55/500 — Tuesday, July 2, 2024
+
+### Recommendations (1)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| SNOW | long | $144 | $153 | $136 | 77 | Goldman Sachs added Snowflake to its high-conviction 'Americ... |
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| SNOW | $142.66 | $146.46 | $140.7 | $143.02 | Wrong | No | No | -0.68% |
+
+- **SNOW:** 3-day window (2024-07-02, 2024-07-03, 2024-07-05). Open $142.66, High $146.46, Low $140.7, Close $143.02.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | -0.68% |
+| Profit Factor | 0 |
+| **Composite Score** | **15/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 0 | 82 | 0 (inverse!) |
+| technicalSetup | 0 | 63 | 0 (inverse!) |
+| riskReward | 0 | 85 | 0 (inverse!) |
+| volumeLiquidity | 0 | 78 | 0 (inverse!) |
+| marketAlignment | 0 | 70 | 0 (inverse!) |
+| informationEdge | 0 | 85 | 0 (inverse!) |
+| timingUrgency | 0 | 75 | 0 (inverse!) |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 56/500 — Tuesday, July 30, 2024
+
+### Recommendations (1)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| FCX | long | $46.5 | $48.13 | $45.34 | 78 | Freeport-McMoRan is the highest-conviction expression of the... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 57/500 — Monday, August 25, 2025
+
+### Recommendations (2)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| XHB | long | $99.5 | $103.5 | $96.5 | 81 | Powell's Jackson Hole speech delivered the clearest rate-cut... |
+| PHM | long | $122 | $127.5 | $118 | 80 | PulteGroup is a best-in-class large-cap homebuilder with div... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 58/500 — Tuesday, January 20, 2026
+
+### Recommendations (3)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| QQQ | short | $500 | $487 | $506 | 88 | Trump's Greenland tariff shock (10% on 8 EU nations starting... |
+| FAST | short | $41.1 | $38.5 | $42.5 | 84 | Fastenal (FAST) reported Q4 2025 before the MLK holiday with... |
+| GLD | long | $450 | $463 | $443.5 | 85 | Gold hit a new all-time high of $4,689/oz on Jan 19 (MLK Day... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 59/500 — Tuesday, September 10, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+## Day 60/500 — Tuesday, March 10, 2026
+
+### Recommendations (2)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| RTX | long | $208.23 | $214.5 | $203.5 | 81 | RTX makes the PATRIOT interceptors and cruise missile engine... |
+| XENE | short | $62 | $57.5 | $65.5 | 83 | XENE surged +49% Monday on Phase 3 trial success but simulta... |
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| RTX | $206.36 | $209.39 | $201.84 | $203.04 | Wrong | No | Yes | -2.49% |
+| XENE | $63.26 | $63.95 | $56.92 | $57.9 | Correct | Yes | No | +6.61% |
+
+- **RTX:** 3-day window (2026-03-10, 2026-03-11, 2026-03-12). Open $206.36, High $209.39, Low $201.84, Close $203.04.
+- **XENE:** 3-day window (2026-03-10, 2026-03-11, 2026-03-12). Open $63.26, High $63.95, Low $56.92, Close $57.9.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 50.0% |
+| Target Hit Rate | 50.0% |
+| Stop Hit Rate | 50.0% |
+| Win Rate | 50.0% |
+| Avg Return | +2.06% |
+| Profit Factor | 2.65 |
+| **Composite Score** | **50.5/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 90 | 88 | 52 |
+| technicalSetup | 82 | 76 | 56 (moderate) |
+| riskReward | 85 | 75 | 60 (moderate) |
+| volumeLiquidity | 75 | 88 | 37 (inverse!) |
+| marketAlignment | 68 | 74 | 44 (inverse!) |
+| informationEdge | 88 | 83 | 55 |
+| timingUrgency | 90 | 82 | 58 (moderate) |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 15.0% | riskReward: 18.0% | volumeLiquidity: 10.0% | marketAlignment: 17.0% | informationEdge: 12.0% | timingUrgency: 8.0%*
+
+---
+
+# ========== MILESTONE: 60 TRIALS COMPLETE ==========
+
+### Last 10 Trials Performance
+
+| Metric | Value |
+|--------|-------|
+| Avg Composite Score | 43.1/100 |
+| Avg Win Rate | 10.0% |
+| Avg Direction Accuracy | 10.0% |
+| Avg Profit Factor | 0.53 |
+| Avg Return per Trade | +0.28% |
+| No-Trade Days | 5/10 |
+| Best Score (all time) | 100/100 |
+
+### Overall (60 trials, 12 with trades)
+
+- Overall avg composite: 57.5/100
+- Total tokens used: 1,282,564
+
+### Learnings & Weight Changes
+
+- **volumeLiquidity**: 10.0% → 9.5% (DECREASED)
+  - *Inverse signal: losers actually scored higher (83) than winners (38) — reducing weight*
+
+**New weights:** catalystClarity: 20.0% | technicalSetup: 15.2% | riskReward: 18.3% | volumeLiquidity: 9.5% | marketAlignment: 16.7% | informationEdge: 12.1% | timingUrgency: 8.3%
+
+---
+

@@ -1,0 +1,380 @@
+{
+  "trialId": 60,
+  "date": "2026-03-10",
+  "dateDisplay": "Tuesday, March 10, 2026",
+  "generatedAt": "2026-04-06T01:55:15.632Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.21,
+      "nasdaqFuturesChange": 0.01,
+      "dowFuturesChange": -0.07,
+      "russellFuturesChange": -0.22,
+      "vixFuturesChange": -2.81,
+      "vix": 24.23,
+      "vixChange": -2.81,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 25.51,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.14,
+      "tenYearYieldChange": 0,
+      "twoYearYield": 3.68,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.77,
+      "threeMonthYield": 3.6,
+      "twoTenSpread": 0.46,
+      "threeMoTenYrSpread": 0.54,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 99.23,
+      "dollarIndexChange": 0.4,
+      "eurUsd": 1.16,
+      "eurUsdChange": -0.05,
+      "usdJpy": 158.11,
+      "usdJpyChange": 0.17,
+      "usdCny": 6.88,
+      "usdCnyChange": -0.5,
+      "oilWTI": 87.25,
+      "oilChange": 4.55,
+      "brentOil": 91.98,
+      "brentOilChange": 4.76,
+      "natGasChange": 6.26,
+      "goldPrice": 5167.4,
+      "goldChange": -1.19,
+      "silverChange": -4.51,
+      "copperChange": -0.99,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 1.43,
+      "daxChange": -1.37,
+      "ftseChange": -0.56,
+      "shanghaiChange": 0.25,
+      "hangSengChange": -0.24,
+      "kospiChange": 1.4,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 99.80000000000001,
+      "spreadChange": 0.16,
+      "igSpread": -20.12,
+      "igSpreadChange": 0.69,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.95,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0,
+      "xlfChange": -0.54,
+      "xleChange": -1.28,
+      "xlvChange": -0.72,
+      "xlpChange": -0.29,
+      "xluChange": -0.62,
+      "xlreChange": -0.14,
+      "xliChange": -0.54,
+      "xlbChange": -0.22,
+      "xlcChange": -0.15,
+      "xlyChange": -0.13,
+      "smhChange": 0.75,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.4,
+      "ethereumChange": 0.71,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": -0.52,
+      "sp20DayReturn": -2.63,
+      "nasdaqVsRussell5d": 3.11,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 34,
+      "directionalBias": "-4",
+      "volatilityRegime": "elevated",
+      "stressIndex": 25,
+      "riskAppetiteIndex": 43,
+      "sectorTilts": {
+        "energy": "overweight",
+        "airlines": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets open Tuesday in a fractured, low-conviction rotation session: the S&P sits near 52-week lows with zero breadth participation above the 200 DMA, Fear & Greed at extreme fear (0), yet semis are quietly outperforming and oil is surging +4.5% — classic late-cycle sector churn rather than a clean directional move. The regime is classified as ROTATION with only 34% confidence, meaning the market is not committing to bulls or bears, it is repricing leadership. Dollar strength (+0.40%) and gold weakness (-1.19%) suggest a risk-off undercurrent even as crypto edges higher and Nasdaq flatlines, creating a contradictory tape that demands patience over aggression.",
+      "marketCondition": "volatile",
+      "sections": [
+        {
+          "title": "1. Overall Market Posture & Regime",
+          "content": "The ROTATION regime at 34% confidence is the most important number in today's briefing — low confidence means the system is detecting cross-currents, not a clean trend. The S&P is -2.63% over 20 days and sitting near a 52-week low, which is a structurally bearish backdrop. Yet VIX at 24.23 declined -2.81% yesterday, suggesting implied volatility is not accelerating despite the price weakness — the term structure in contango further confirms this is not a panic spike. Stress is a moderate 25/100 and risk appetite at 43/100 is below neutral but not collapsed. The directional bias of -4 tilts bearish. The critical takeaway: this is not a crash regime, but it is not a buying opportunity either. Both long and short trades carry a -3 conviction penalty. Sit on your hands unless a specific setup is exceptional. The market is punishing trend-followers today.",
+          "importance": "high"
+        },
+        {
+          "title": "2. Sector Rotation & Relative Strength",
+          "content": "Today's sector map tells a precise story: semis (SMH +0.75%) are the sole winner, and everything else is red — a highly unusual configuration. Energy (XLE) is the largest sector loser at -1.28% despite WTI crude surging +4.55%, which is a major divergence that demands attention. It suggests either profit-taking in energy equities after a run, or that the market views the oil spike as a demand-destruction signal (stagflation risk) rather than an earnings catalyst. Healthcare (XLV -0.72%), Utilities (XLU -0.62%), and Financials (XLF -0.54%) are all selling off, meaning defensive rotation is NOT occurring — money is not hiding in safe havens. The only leadership is in growth-adjacent semis, corroborated by Nasdaq's 5-day outperformance vs Russell (+3.11% growth over value). This is a narrow, fragile leadership structure. Sector dispersion of 2.0pp with flat futures confirms the rotation read: capital is moving WITHIN the market, not exiting or entering en masse. Watch SMH for continuation or reversal — it is the market's canary.",
+          "importance": "high"
+        },
+        {
+          "title": "3. Yield Curve & Rate Signals",
+          "content": "The 10-year yield holds steady at 4.14% with a 2-10 spread of +0.46 and a 3M-10Y spread of +0.54 — both positive, meaning the yield curve is no longer inverted. This is actually a subtle but important shift: curve re-steepening historically occurs either because the Fed is cutting (bullish) or because long-end rates are rising on fiscal/inflation concerns (bearish). Given oil at $87.25 and dollar strength, the latter interpretation is more consistent with today's data. A steepening curve driven by inflation re-acceleration would be particularly damaging for rate-sensitive sectors — which explains the weakness in Utilities, Real Estate (XLRE -0.14%), and Financials. The 10Y steady at 4.14% is not alarming in isolation, but if oil sustains above $85, expect the bond market to start pricing a 'higher for longer' redux, which would pressure equities broadly and growth stocks specifically despite today's semi bounce.",
+          "importance": "high"
+        },
+        {
+          "title": "4. Currency & Commodity Flows",
+          "content": "Dollar at 99.23 (+0.40%) with EUR/USD at 1.16 and USD/JPY at 158.11 paints a complex picture. The dollar is strengthening modestly, but EUR/USD at 1.16 is historically elevated — suggesting the dollar rally is more about relative weakness in risk assets than fundamental USD strength. USD/JPY at 158.11 is critically elevated and puts the Bank of Japan on intervention watch; a sudden JPY reversal could trigger carry trade unwind with global equity implications. Gold declining -1.19% to $5,167 while the dollar strengthens is the textbook relationship — but gold at $5,167 remains near multi-year highs, so this is a pullback within a bull trend, not a breakdown. The oil spike (+4.55% to $87.25) is the day's dominant commodity signal. At these levels, oil acts as a tax on consumers and a headwind for discretionary spending (XLY -0.13%) and airlines specifically (regime flags airlines as underweight due to fuel cost headwinds). The energy equity underperformance versus crude suggests smart money is fading the oil move in equities. Bitcoin +0.4% and Ethereum +0.71% are mildly risk-on but insufficient to offset the broader bearish undertow.",
+          "importance": "medium"
+        },
+        {
+          "title": "5. Risk Factors & Red Flags",
+          "content": "Five specific risk factors stand out today: (1) ZERO stocks above 200 DMA — this is an extreme breadth reading indicating the 200 DMA has become resistance across the entire index, not just individual names. This is a bear market breadth signature. (2) Fear & Greed at 0 (extreme fear) coinciding with a near-52-week low creates sentiment-oversold conditions that CAN produce sharp counter-trend bounces — but also can persist during genuine bear markets. Do not mistake fear for a contrarian buy signal without confirmation. (3) DAX -1.37% and FTSE -0.56% signal European weakness that could weigh on U.S. open — Germany's economic trajectory matters for global industrial demand. (4) The XLE/WTI divergence (energy stocks down, crude up sharply) is a warning sign that either equities are smarter than futures about oil sustainability, or something specific is pressuring energy equities (hedging activity, rig cost inflation). (5) The semiconductor bounce on a weak tape could be a technical dead-cat bounce or genuine sector leadership — with no confirmation from broader breadth, treat the SMH move with skepticism.",
+          "importance": "high"
+        },
+        {
+          "title": "6. International Context",
+          "content": "Nikkei +1.43% provides a positive Asian read, but USD/JPY at 158.11 complicates any clean bullish thesis from Japan — yen weakness inflates Nikkei returns in local currency while masking underlying fragility in global carry trades. Shanghai +0.25% and Hang Seng -0.24% suggest China is treading water — no positive catalyst from the world's second-largest economy. DAX -1.37% is the most concerning international signal; Germany's industrial base is highly sensitive to energy costs and global trade flows. A DAX breakdown on an oil surge day is a stagflation signal worth monitoring. European weakness may bleed into U.S. opening sentiment.",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Oil holds above $87 — stagflation narrative takes hold",
+          "scenarios": [
+            {
+              "condition": "If WTI sustains above $87 through midday and 10Y yield begins moving above 4.20%",
+              "implication": "Stagflation pricing intensifies: consumer discretionary, utilities, and REITs face additional selling pressure; financials squeezed by credit quality concerns; semis fade as risk-off reasserts; dollar could push higher, further pressuring gold",
+              "trade": "Consider defensive short exposure in XLY or XLU (scale conviction by regime penalty, target 0.9x normal distance). Avoid long XLE despite oil strength — equity/crude divergence is a warning. Monitor TLT for breakdown as a stagflation confirmation signal."
+            },
+            {
+              "condition": "If WTI spikes further above $90 and the dollar weakens simultaneously",
+              "implication": "Supply-shock narrative emerges (geopolitical), not demand-pull inflation — gold would reverse higher, USD would weaken, emerging markets could catch a bid; this would be a different regime entirely and may invalidate today's rotation classification",
+              "trade": "Hedge with GLD calls if gold recaptures $5,200 on volume; small speculative long in energy producers only if XLE reverses its equity/crude divergence and closes green"
+            }
+          ]
+        },
+        {
+          "event": "SMH semi rally — testing whether growth leadership is real or head-fake",
+          "scenarios": [
+            {
+              "condition": "If SMH extends gains above yesterday's close by +1.5% or more with volume confirmation and Nasdaq turns decisively positive",
+              "implication": "Semi-led growth rotation could pull capital from defensive sectors and provide the narrow leadership needed for a short-term S&P bounce; 5-day Nasdaq outperformance (+3.11% vs Russell) gives this scenario momentum",
+              "trade": "Tactical long in NVDA/AMD or SMH with tight stop below prior close; apply -3 conviction penalty from regime — this is a scalp, not a position. Target: prior resistance level scaled at 0.9x normal distance. Exit same-day if market breadth does not improve."
+            },
+            {
+              "condition": "If SMH fades intraday and gives back early gains as Nasdaq rolls over",
+              "implication": "The last pillar of bullish support collapses; with zero breadth, no defensive rotation, and S&P at 52-week lows, a flush lower becomes the path of least resistance; VIX could recapture 26+",
+              "trade": "Short SPY puts or direct short with momentum confirmation; wait for SMH to break below yesterday's open — do not anticipate, let the failure confirm. Apply regime's -3 short penalty and size accordingly."
+            }
+          ]
+        },
+        {
+          "event": "Fear & Greed at 0 — extreme sentiment oversold bounce potential",
+          "scenarios": [
+            {
+              "condition": "If S&P opens flat-to-up, VIX continues declining below 23, and breadth improves to even 20% above 200 DMA intraday",
+              "implication": "Classic 'washout low' setup: extreme fear + declining VIX + any breadth improvement = conditions for sharp mean-reversion bounce, particularly in beaten-down healthcare (XLV) and financials (XLF)",
+              "trade": "Mean-reversion long in XLV or XLF — both sold off hard with no fundamental catalyst today. Use very tight stops (regime is rotation, not trending). This is a 1-2 day trade maximum. F&G at 0 has historically produced 2-5% bounces within 5 sessions — but only when paired with volume capitulation signals."
+            },
+            {
+              "condition": "If S&P opens down and fear metrics remain pinned at extremes without VIX expansion",
+              "implication": "Grinding bear market with low volatility is the most dangerous tape — no capitulation, no bounce, just slow erosion; this is the 2022 analog. F&G at 0 without a spike-and-reverse in VIX means the fear is structural, not emotional",
+              "trade": "No new longs. Reduce exposure. Consider systematic hedge via SPY puts or VIX calls as portfolio insurance. Wait for either VIX spike above 30 (capitulation entry) or clear regime shift before re-engaging on the long side."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "RTX",
+      "direction": "long",
+      "entryPrice": 208.23,
+      "targetPrice": 214.5,
+      "stopLoss": 203.5,
+      "thesis": "RTX makes the PATRIOT interceptors and cruise missile engines actively being fired in the Iran war today. With Hegseth declaring 'our most intense day of strikes' for Tuesday, RTX's specific munitions portfolio — unlike the broader defense sector which has stalled — faces direct near-term demand validation. A fresh P&W contract announcement pre-market adds a secondary catalyst.",
+      "catalyst": "Defense Secretary Hegseth statement (pre-market March 10): 'Today will be our most intense day of strikes inside Iran' — directly validates RTX's active munitions systems (PATRIOT, interceptors). Pratt & Whitney awarded TJ150 cruise missile engine contract (March 10 pre-market PR). RTX showing relative strength vs. peers while broader defense rally stalls.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": "Crystal clear: Hegseth named today as the most intense strike day, directly benefiting RTX's PATRIOT and interceptor systems. P&W contract news published pre-market on March 10 adds fresh, specific catalyst. Trump's '$1.5T defense budget' proposal remains in background as structural tailwind."
+        },
+        "technicalSetup": {
+          "score": 76,
+          "reasoning": "RTX was gaining on March 9 (Barron's headline) while broader defense rally stalled per Investopedia — this is clear relative strength. Stock in uptrend from pre-war levels (~$190s). March 10 close of $207 implies March 9 close ~$208, so entry is at prior-day close with no gap-up chase."
+        },
+        "riskReward": {
+          "score": 75,
+          "reasoning": "Entry $208.23, target $214.50 (3.0% upside, 0.9x regime scaled), stop $203.50 (2.3% downside). R/R of 1.33:1 is modest but acceptable given elevated probability. Primary risk is Trump doubling down on 'war almost over' language causing broad defense selloff — hence tight stop."
+        },
+        "volumeLiquidity": {
+          "score": 88,
+          "reasoning": "RTX is a $140B+ mega-cap defense contractor trading millions of shares daily. Deep options chain. No liquidity risk whatsoever. Institutional flow will be active given today's strike escalation news."
+        },
+        "marketAlignment": {
+          "score": 74,
+          "reasoning": "Rotation regime (34% confidence) applies -3 penalty. However, defense IS the dominant rotation winner sector in this Iran-driven market. RTX's operational specificity to today's events (unlike NOC which peaked March 2) creates micro-alignment within a murky macro regime."
+        },
+        "informationEdge": {
+          "score": 83,
+          "reasoning": "Market may not have fully digested the Hegseth 'most intense strikes' statement alongside the P&W TJ150 contract award. The combination of operational munitions depletion + new contract wins is an edge over generic 'defense is up' narratives that have started to fade."
+        },
+        "timingUrgency": {
+          "score": 82,
+          "reasoning": "Hegseth's statement specifically designates TODAY as the peak strike day. This is a time-stamped catalyst — if the opportunity is not captured at open, the information advantage dissipates by day's end. Strike intensity data will be known after-hours."
+        }
+      }
+    },
+    {
+      "symbol": "XENE",
+      "direction": "short",
+      "entryPrice": 62,
+      "targetPrice": 57.5,
+      "stopLoss": 65.5,
+      "thesis": "XENE surged +49% Monday on Phase 3 trial success but simultaneously announced a $650M equity offering — priced Tuesday morning at exactly $57.00/share, a 15%+ discount to Monday's peak close. The offering price is a hard anchor pulling shares toward $57, making this a high-conviction compression trade as underwriters and new investors mark the stock to the deal price.",
+      "catalyst": "March 9 (after hours): Xenon announced $500M public offering immediately following +49% surge on Phase 3 X-TOLE2 trial success. March 10 (pre-market): Offering upsized to $650M and PRICED at $57.00/share — well below Monday's close near $67. The offering closes ~March 12, creating three days of downward price pressure toward the $57 anchor.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": "Maximally clear: the offering is priced at $57.00 per share (public, confirmed via GlobeNewswire March 10). This is a hard anchor. When companies do large dilutive offerings the morning after a major gap, shares consistently compress toward the offer price as institutional allocations are distributed. Wedbush raised PT to $64 pre-market but the deal anchor at $57 dominates near-term price action."
+        },
+        "technicalSetup": {
+          "score": 82,
+          "reasoning": "Classic 'gap and dilute' pattern: stock gaps +49% on binary trial result, company immediately does dilutive follow-on at $57 (vs $44.92 pre-announcement base). Pre-market at 6 AM likely shows stock already fading toward $57-$62 range. The $57 deal price is the technical floor AND the gravity center — above it, sellers will dominate."
+        },
+        "riskReward": {
+          "score": 85,
+          "reasoning": "Entry $62.00, target $57.50 ($4.50 gain, 7.3% downside move), stop $65.50 ($3.50 risk). R/R 1.29:1 looks modest but the probability distribution is skewed: the offering price creates a near-certain gravitational pull. Risk is if trial enthusiasm overwhelms deal pressure, but at 10.5M new shares flooding market, that is unlikely."
+        },
+        "volumeLiquidity": {
+          "score": 75,
+          "reasoning": "XENE is a mid-cap biotech (~$3-4B market cap post-offering). Volume will be extraordinary today given the trial results + offering news combination. Adequate liquidity for a single-session trade, though bid-ask spreads may widen in early minutes — prefer entry 15-20 min after open."
+        },
+        "marketAlignment": {
+          "score": 68,
+          "reasoning": "Rotation regime applies -3 short penalty. However, this is a pure stock-specific, catalyst-driven short that is decoupled from macro direction. The regime 'rotation' label is somewhat irrelevant here — this is a deal mechanics trade, not a macro directional bet. Score penalized appropriately for regime friction."
+        },
+        "informationEdge": {
+          "score": 88,
+          "reasoning": "The offering price of $57.00 is publicly disclosed but many retail participants who drove Monday's +49% surge may not have processed the dilution math or deal mechanics. The gap between retail enthusiasm and institutional deal pricing is the edge. Additionally, the $747.5M final size (with greenshoe) represents ~15-18% share count dilution."
+        },
+        "timingUrgency": {
+          "score": 90,
+          "reasoning": "Offering closes March 12 — today is day one of deal pricing pressure. Compression toward $57 is most acute on day one as the market reprices the dilution. If not entered today, the stock may either have already compressed or bounced back, closing the window. Extremely time-sensitive."
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "RTX",
+      "openPrice": 206.36,
+      "highPrice": 209.39,
+      "lowPrice": 201.84,
+      "closePrice": 203.04,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -2.49,
+      "notes": "3-day window (2026-03-10, 2026-03-11, 2026-03-12). Open $206.36, High $209.39, Low $201.84, Close $203.04."
+    },
+    {
+      "symbol": "XENE",
+      "openPrice": 63.26,
+      "highPrice": 63.95,
+      "lowPrice": 56.92,
+      "closePrice": 57.9,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.61,
+      "notes": "3-day window (2026-03-10, 2026-03-11, 2026-03-12). Open $63.26, High $63.95, Low $56.92, Close $57.9."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 50,
+    "targetHitRate": 50,
+    "stopHitRate": 50,
+    "avgReturnPercent": 2.06,
+    "profitFactor": 2.65,
+    "winRate": 50,
+    "totalScore": 50.5
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 90,
+      "avgScoreLosers": 88,
+      "predictivePower": 52
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 82,
+      "avgScoreLosers": 76,
+      "predictivePower": 56
+    },
+    "riskReward": {
+      "avgScoreWinners": 85,
+      "avgScoreLosers": 75,
+      "predictivePower": 60
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 75,
+      "avgScoreLosers": 88,
+      "predictivePower": 37
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 68,
+      "avgScoreLosers": 74,
+      "predictivePower": 44
+    },
+    "informationEdge": {
+      "avgScoreWinners": 88,
+      "avgScoreLosers": 83,
+      "predictivePower": 55
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 90,
+      "avgScoreLosers": 82,
+      "predictivePower": 58
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.18,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.17,
+    "informationEdge": 0.12,
+    "timingUrgency": 0.08
+  },
+  "opusReviewNotes": "The most glaring issue across 60 trials is the 80% no-trade rate combined with a 37.5% win rate when trades ARE taken. This is a worst-of-both-worlds outcome: the algorithm is too conservative to generate volume, yet not selective enough to be accurate when it does trade. The threshold is filtering out opportunities but not filtering out losers. Looking at the last 10 trials specifically: Trials 51-54 and 59 all produced no trades despite varying regimes. Trial 52 was classified as risk-off with 100% confidence and stress=18, yet no short trades were recommended — this is a clear missed opportunity. If the algorithm has high conviction in a bearish regime, it should be able to find at least one high-quality short or defensive long. Similarly, Trial 58 correctly identified risk-off (66% confidence, bearish briefing) and recommended QQQ short + FAST short + GLD long, but scored 50 with 0% win rate on outcomes tracked. The regime was right but execution was wrong — likely because shorting QQQ in an already-down-2% session means chasing, not leading.\n\nThe dimension predictive power data is remarkably flat: all seven dimensions cluster between 69.6 and 72.9 out of 100. This near-uniform distribution strongly suggests the scoring model lacks discriminative power. When every dimension predicts roughly equally, no dimension is actually predicting — the model is essentially averaging noise. The slight edge in riskReward (72.9) and timingUrgency (72.6) deserves investigation, but the current weight allocation has timingUrgency at only 8.3% (lowest) while catalystClarity sits at 20.0% despite only 71.7 predictive power. The weights are inversely correlated with actual predictive signal.\n\nTrial 55 (SNOW long, rotation regime, appetite=56) lost 0.68% and scored 15 — the worst score in the last 10. SNOW is a high-beta cloud name that requires strong risk-on momentum, not a rotation regime with only 46% confidence. Trial 57 recommended XHB long and PHM long (both homebuilders) in a range-bound/bearish regime — this is a fundamental regime-alignment failure. Going long cyclical/rate-sensitive names when the briefing itself says 'defensive selloff' is contradictory. Trial 60's RTX long lost 2.49% (stop-loss hit) while XENE short gained 6.61% — the biotech short worked but the defense long failed despite seeming 'safe' in a rotation. The pattern is clear: the algorithm treats certain sectors as defensive hedges without verifying they actually behave defensively in the specific regime.\n\nThe best trials (1, 8, 10, 41) all share a pattern: single concentrated trades with clear directional conviction. Trial 8 shorted PLTR, Trial 1 went long IWM, Trial 10 went long PNC — each was one trade with 100% win rate. When the algorithm takes multiple trades (Trial 57: 2 trades, Trial 58: 3 trades, Trial 60: 2 trades), performance degrades significantly. This suggests the second and third recommendations are dilutive — lower conviction ideas that drag down the portfolio. The algorithm should enforce a strict 1-trade maximum unless composite scores exceed 85.\n\nThe profit factor of 3.55 is technically strong but misleading given only 12 trading trials and heavy influence from three perfect-score trials. The algorithm has no mechanism to distinguish between 'no edge detected' (correct no-trade) and 'edge exists but threshold is too high' (missed opportunity). Trials 51-54 and 59 all scored exactly 50, which is the default no-trade score — there's no gradient telling us how close these were to generating trades or whether the no-trade decision was correct."
+}

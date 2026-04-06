@@ -1,0 +1,314 @@
+{
+  "trialId": 57,
+  "date": "2025-08-25",
+  "dateDisplay": "Monday, August 25, 2025",
+  "generatedAt": "2026-04-06T01:31:01.711Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.43,
+      "nasdaqFuturesChange": -0.22,
+      "dowFuturesChange": -0.77,
+      "russellFuturesChange": -0.96,
+      "vixFuturesChange": -1.15,
+      "vix": 14.62,
+      "vixChange": -1.15,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 18.02,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.28,
+      "tenYearYieldChange": 0.35,
+      "twoYearYield": 3.88,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.89,
+      "threeMonthYield": 4.09,
+      "twoTenSpread": 0.4,
+      "threeMoTenYrSpread": 0.19,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.23,
+      "dollarIndexChange": -0.2,
+      "eurUsd": 1.16,
+      "eurUsdChange": -0.78,
+      "usdJpy": 147.82,
+      "usdJpyChange": 0.41,
+      "usdCny": 7.15,
+      "usdCnyChange": -0.23,
+      "oilWTI": 63.25,
+      "oilChange": -2.39,
+      "brentOil": 67.22,
+      "brentOilChange": -2.3,
+      "natGasChange": 0.78,
+      "goldPrice": 3388.6,
+      "goldChange": 0.44,
+      "silverChange": -0.25,
+      "copperChange": -0.36,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.97,
+      "daxChange": -0.5,
+      "ftseChange": -0.6,
+      "shanghaiChange": -0.39,
+      "hangSengChange": -1.18,
+      "kospiChange": -0.95,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 96.55,
+      "spreadChange": 0.2,
+      "igSpread": -19.82,
+      "igSpreadChange": 0.26,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.97,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.22,
+      "xlfChange": -0.58,
+      "xleChange": 0.26,
+      "xlvChange": -1.43,
+      "xlpChange": -1.71,
+      "xluChange": -1.13,
+      "xlreChange": -0.5,
+      "xliChange": -1,
+      "xlbChange": -0.55,
+      "xlcChange": 0.16,
+      "xlyChange": -0.2,
+      "smhChange": 0.1,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 1.52,
+      "ethereumChange": 5.2,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": -0.15,
+      "sp20DayReturn": 0.78,
+      "nasdaqVsRussell5d": -2.78,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 39,
+      "directionalBias": "-9",
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 49,
+      "sectorTilts": {
+        "airlines": "overweight",
+        "consumer-discretionary": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets enter Monday in a low-conviction, range-bound regime as a broad defensive selloff Friday left virtually every major sector in the red except Energy, Comm Services, and Semis — a fragmented, indecisive tape with no clear leadership. Despite a benign VIX at 14.62 and modest stress readings, the Fear & Greed index sits at extreme fear (0), the S&P is near 52-week lows, and international markets are universally weak, painting a picture of subdued risk appetite beneath a deceptively calm volatility surface. The regime is range-bound with only 39% confidence, directional bias is mildly negative, and the minimum conviction threshold is elevated — this is a day to observe, not force trades.",
+      "marketCondition": "bearish",
+      "sections": [
+        {
+          "title": "🧭 Overall Market Posture & Regime",
+          "content": "The SIGNAL regime classification is RANGE-BOUND at 39% confidence — notably low, meaning the system is uncertain about structure. That uncertainty is itself a signal: don't lean hard in either direction. Futures are modestly negative (-0.33%), the Russell is underperforming SPX by 0.64pp (small-cap weakness = risk-off lean), and 0% of names are above their 200 DMA per the regime input — a breadth reading consistent with a beaten-down market, not a healthy one. Yet stress registers only 11/100 and VIX is 14.62 in contango. This is the core tension: options markets are calm, but underlying breadth and sentiment (F&G: 0 = Extreme Fear) are deeply stressed. The VIX-sentiment divergence suggests complacency rather than clarity. Regime rules impose a -5 conviction penalty on both longs and shorts, and raise the minimum conviction bar to 78. The baseline posture is: reduce size, widen filters, demand more from setups.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "Friday's sector map tells a sharp story: the selloff was concentrated in defensives and rate-sensitives, not growth. Healthcare (XLV) -1.43%, Staples (XLP) -1.71%, Utilities (XLU) -1.13%, and Real Estate (XLRE) -0.50% led the damage — this is unusual because these are typically the 'safe harbor' sectors. Their underperformance suggests either (a) rate pressure is weighing on yield-proxies, or (b) a crowded defensive unwind is underway. Financials (XLF) -0.58% and Industrials (XLI) -1.0% add cyclical confirmation of the weak tape. On the bright side, Energy (XLE) +0.26%, Comm Services (XLC) +0.16%, and Semis (SMH) +0.10% held green — a thin but notable list. Energy's resilience despite WTI crude falling -2.39% is a divergence worth watching; it may signal sector rotation into energy equities as a relative-value play as oil stabilizes. The regime's overweight tilts toward Airlines (fuel cost tailwind from cheap oil) and Consumer Discretionary (lower gas prices) are thematically coherent but Discretionary (XLY) was itself -0.20% Friday — execution of that thesis requires patience. Value is leading Growth over 5 days (-2.78% Nasdaq vs Russell spread), but small-cap value is still underperforming large-cap, muddying the rotation read.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10-year yield moved up +0.35% to 4.28% on Friday — a meaningful single-day move that helps explain the defensive selloff. Rising long rates compress the dividend-discount value of rate-sensitive sectors (utilities, REITs, staples), which matches Friday's price action precisely. The 2-10 spread is +0.40 and the 3M-10Y spread is +0.19 — both positive, meaning the yield curve is no longer inverted. A positively sloped curve is historically associated with economic re-acceleration expectations, but in the current context it may simply reflect term premium re-pricing or Fed policy uncertainty rather than genuine growth optimism. The modest spread levels (not steep by historical norms) suggest the curve is normalizing rather than signaling a boom. For rate-sensitive longs, the near-term headwind from a rising 10-year is real. Watch 4.35-4.40% on the 10Y as a key level — a break higher would likely renew pressure on XLRE, XLU, and XLP.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The dollar is soft (DXY 98.23, -0.20%) with EUR/USD at 1.16 — a notable level reflecting ongoing dollar weakness that should, in theory, support multinational earnings and commodities. Yet international markets were broadly red Friday (Nikkei -0.97%, Hang Seng -1.18%, DAX -0.50%), suggesting global risk-off rather than dollar-specific weakness. USD/JPY at 147.82 is elevated — yen weakness persists despite global risk-off, which is a mild anomaly; watch for any yen strengthening as a leading risk-off indicator. WTI crude -2.39% to $63.25 is a significant move — crude is breaking down, which is deflationary and margin-positive for airlines and consumer-facing companies (hence the regime's sector tilts), but negative for energy producers. Energy equities (XLE +0.26%) outperforming crude is the divergence to monitor. Gold +0.44% to $3,388.60 is quietly bid — in a low-stress, low-VIX environment, gold's bid suggests smart money is hedging against tail risks not captured in options markets. Bitcoin +1.52% and Ethereum +5.2% suggest crypto is decoupling to the upside, possibly driven by its own catalysts (ETF flows, macro rates narrative); this is a risk-appetite signal in one specific pocket of the market.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors & Contradictions",
+          "content": "Several internal contradictions demand respect today: (1) VIX is calm (14.62) but F&G is at extreme fear (0) — this divergence often resolves violently; historically, when sentiment is this depressed but vol is suppressed, a catalyst can gap the market hard in either direction. (2) The S&P is near 52-week lows while VIX is below 15 — this combination is rare and typically unstable. (3) Defensive sectors are selling off harder than cyclicals, which is counterintuitive in a risk-off tape — unless institutional money is rotating out of defensives into cash, which is the most bearish interpretation. (4) International markets are universally weak across Asia and Europe, providing no positive overnight catalyst. (5) The 10Y is rising while equities are falling — this 'both down' scenario eliminates the bond/equity hedge and reduces portfolio diversification effectiveness. Net risk assessment: the downside tail is fatter than VIX implies. Position sizing should reflect that asymmetry.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "10-Year Yield Continues Higher Toward 4.40%",
+          "scenarios": [
+            {
+              "condition": "If the 10Y yield breaks above 4.35% intraday on Monday",
+              "implication": "Rate-sensitive sectors face renewed selling pressure — XLRE, XLU, XLP, and XLF likely see continuation of Friday's losses. Equity indices could accelerate lower as the bond/equity correlation stays positive (both falling). The range-bound regime could shift toward a bearish trending regime.",
+              "trade": "Short XLRE or XLU via puts or inverse ETFs, targeting the prior 52-week low zones. Keep size small given the -5 conviction penalty and elevated minimum threshold. Avoid new long positions in yield-proxies."
+            },
+            {
+              "condition": "If the 10Y yield reverses and falls back below 4.20%",
+              "implication": "Rate-sensitive sectors rally as the pressure valve releases. Utilities and REITs could see sharp mean-reversion bounces given Friday's oversold readings. Overall equity tone improves.",
+              "trade": "Tactical long XLU or XLRE for a mean-reversion bounce, but only if conviction clears the 78-point threshold given range-bound regime penalties. Use tight stops given the macro uncertainty."
+            }
+          ]
+        },
+        {
+          "event": "Crude Oil Continues Breakdown Below $63",
+          "scenarios": [
+            {
+              "condition": "If WTI crude breaks $61-62 support and sustains below $63",
+              "implication": "Deflationary signal strengthens — consumer spending power improves, airlines and consumer discretionary get a tailwind (regime's overweight thesis plays out). However, energy sector (XLE) likely follows crude lower after Friday's divergence closes. Broader market may read cheap oil as a demand-destruction signal and sell off.",
+              "trade": "Long airlines (JETS ETF or individual names like DAL, UAL) as a fuel-cost beneficiary. This aligns with the regime's overweight. Simultaneously consider trimming any XLE longs — the XLE vs. crude divergence is unlikely to persist if oil breaks structurally lower."
+            },
+            {
+              "condition": "If WTI crude bounces off $63 and reclaims $65+",
+              "implication": "Energy equities likely see momentum continuation; the XLE divergence resolves bullishly. Inflationary impulse reduces the deflationary tailwind for consumer names. Airlines give back some gains.",
+              "trade": "Long XLE or oil majors (CVX, XOM) on confirmation of the bounce, but target distance should be scaled by 0.7x per regime rules. Tight stops below $62.50 on crude."
+            }
+          ]
+        },
+        {
+          "event": "Crypto Momentum Divergence — Bitcoin and Ethereum Leading Risk",
+          "scenarios": [
+            {
+              "condition": "If Ethereum +5.2% and Bitcoin +1.52% gains persist into Monday with equity markets flat-to-down",
+              "implication": "Crypto is decoupling from traditional risk assets — this could signal a rotation of speculative capital into digital assets, or it may be a leading indicator of broader risk appetite recovery that equities will follow with a lag. Historically, ETH outperforming BTC signals higher-beta risk appetite in crypto specifically.",
+              "trade": "This divergence does NOT meet the conviction threshold under the current range-bound regime with its penalties — crypto momentum trades should be passed today. However, flag this as a watchlist item: if equities recover alongside crypto strength, it would be a more actionable setup. Monitor for regime upgrade before initiating."
+            },
+            {
+              "condition": "If crypto gains fade and Bitcoin reverses below Friday's close",
+              "implication": "The one pocket of risk appetite in the market evaporates, confirming broad risk-off across all asset classes. This would be the most bearish scenario for Monday — no buyers anywhere.",
+              "trade": "No new longs. Consider hedging existing equity positions via SPY puts or inverse ETFs, but again, only if conviction clears 78 after penalties. The regime is signaling to do less, not more."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "XHB",
+      "direction": "long",
+      "entryPrice": 99.5,
+      "targetPrice": 103.5,
+      "stopLoss": 96.5,
+      "thesis": "Powell's Jackson Hole speech delivered the clearest rate-cut signal of 2025, sending mortgage rates immediately lower and igniting a broad homebuilder/housing materials rally on Friday. Canada's Sept 1 removal of CUSMA-compliant tariffs provides a secondary catalyst for lumber and building materials inputs. XHB (SPDR S&P Homebuilders ETF) captures the full homebuilder ecosystem — pure-play exposure with ETF liquidity — and aligns with the regime's consumer-discretionary overweight tilt. Monday morning follow-through is the highest-probability continuation window before the market re-assesses upcoming PCE data.",
+      "catalyst": "Fed Chair Powell's Jackson Hole speech (Aug 22) signaled imminent rate cuts; September cut probability jumped to 70-85%. Canada announced removal of retaliatory tariffs on CUSMA-compliant US goods by Sept 1, reducing materials input costs for homebuilders. 10-year Treasury yield dropped to 4.26%, 30-year mortgage rate fell to 6.55%.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": "Dual catalysts with extreme clarity: (1) Powell's dovish Jackson Hole speech — the most significant Fed signal of 2025 — directly boosts housing demand via lower mortgage rates; (2) Canada's tariff removal directly reduces lumber/materials cost pressure for US homebuilders. Both catalysts occurred on Aug 22 and are unambiguously housing-positive."
+        },
+        "technicalSetup": {
+          "score": 74,
+          "reasoning": "XHB broke higher Friday on strong volume with momentum behind it. Risk is that a partial Monday gap-up has already been priced in pre-market. Entry above Friday close (~$99-100) is slightly disadvantaged vs. buying the Friday breakout. Trend is constructive but short-term overbought caution applies."
+        },
+        "riskReward": {
+          "score": 76,
+          "reasoning": "Entry ~$99.50, target $103.50, stop $96.50 yields 1.33:1 R:R at 0.7x regime scaling. Tighter than ideal due to large Friday move already captured. However, the Powell catalyst is expected to have multi-day legs as September cut pricing continues to build toward PCE data."
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": "XHB is a well-established SPDR ETF with consistent high daily volume, tight bid-ask spreads, and an active options market. No liquidity concerns for standard position sizes."
+        },
+        "marketAlignment": {
+          "score": 74,
+          "reasoning": "Regime explicitly tilts consumer-discretionary OVERWEIGHT (homebuilders are consumer-discretionary adjacent). Broad market in strong rally mode (DOW record). The -5 long-direction penalty has been applied. Net alignment is positive given direct sector tilt match."
+        },
+        "informationEdge": {
+          "score": 82,
+          "reasoning": "The Powell catalyst is public but the FULL repricing of rate-sensitive sectors (homebuilders, REITs) takes multiple sessions. PCE data later this week could confirm the dovish path. Canada tariff removal by Sept 1 is under-discussed and adds a near-term materials cost relief tailwind that the market hasn't fully priced."
+        },
+        "timingUrgency": {
+          "score": 84,
+          "reasoning": "Monday open is the first opportunity for institutional flows to chase Friday's sector rotation into rate-sensitive names. Durable Goods at 8:30 AM could add a secondary catalyst. The urgency window is Monday open through Tuesday — post-PCE data, the trade thesis gets re-evaluated."
+        }
+      }
+    },
+    {
+      "symbol": "PHM",
+      "direction": "long",
+      "entryPrice": 122,
+      "targetPrice": 127.5,
+      "stopLoss": 118,
+      "thesis": "PulteGroup is a best-in-class large-cap homebuilder with diversified product lines (Centex, Pulte, Del Webb, DiVosta) covering move-up, active-adult, and entry-level segments — all directly benefiting from falling mortgage rates. PHM closed +2%+ on Friday on the Powell catalyst and, unlike DHI which already surged 4%+, offers a better entry risk/reward for Monday follow-through. The regime's consumer-discretionary overweight bias is a direct sector tilt match. PCE data later this week is the next binary event that could extend or reverse the trade.",
+      "catalyst": "Fed Chair Powell's Jackson Hole speech (Aug 22) sent 30-year mortgage rates to 6.55% and September rate-cut odds to 70-85%. PHM closed +2%+ Friday with momentum into Monday. Canada CUSMA tariff removal by Sept 1 provides building materials cost relief. Durable Goods data (Monday 8:30 AM) could add near-term support.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": "Single dominant catalyst: Powell's dovish pivot at Jackson Hole directly lowers mortgage rates, boosting new home demand and builder margins. Canada tariff relief is a bonus. Earnings are not a near-term overhang (PHM's Q3 not due until October). Catalyst is both clear and multi-day in duration."
+        },
+        "technicalSetup": {
+          "score": 78,
+          "reasoning": "PHM's +2%+ Friday close was more measured than DHI's +4% surge, leaving a cleaner follow-through setup. The stock's 52-week range of ~$112–$138 puts current levels (~$122) in the mid-range, with room to run toward the upper half. Momentum indicators constructive. Stop at $118 aligns with prior support."
+        },
+        "riskReward": {
+          "score": 78,
+          "reasoning": "Entry $122, target $127.50, stop $118. Risk = $4.00, Reward = $5.50, R:R = 1.375:1 at 0.7x regime scaling. Acceptable for a high-conviction rate-cut beneficiary trade with a clear macro tailwind. A breach of $118 would signal the broader rate-cut thesis is fading."
+        },
+        "volumeLiquidity": {
+          "score": 76,
+          "reasoning": "PHM is a large-cap S&P 500 component with solid average daily volume (~3-4M shares) and liquid options. Sufficient liquidity for institutional and retail participation. Slightly less liquid than XHB ETF but offers single-name alpha."
+        },
+        "marketAlignment": {
+          "score": 74,
+          "reasoning": "Consumer-discretionary sector is explicitly OVERWEIGHT in today's regime tilt. Homebuilders are the purest expression of that tilt. The -5 long-direction regime penalty has been applied. Net market alignment remains positive given the specific sector tilt match and DOW record close Friday."
+        },
+        "informationEdge": {
+          "score": 82,
+          "reasoning": "PHM specifically benefits from the active-adult (Del Webb) segment, which is highly mortgage-rate sensitive. Mortgage rates dropped to 6.55% Friday and could continue lower into September FOMC. The Canada tariff removal on lumber/materials is a less-discussed PHM margin tailwind. PCE data this week could provide confirmation."
+        },
+        "timingUrgency": {
+          "score": 82,
+          "reasoning": "The first 1-2 sessions after a major Fed pivot signal are historically the highest-momentum window for rate-sensitive sectors. Monday open represents the first full-day opportunity for institutional reallocation into homebuilders. Urgency is high before PCE data resets expectations by Thursday-Friday."
+        }
+      }
+    }
+  ],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.18,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.17,
+    "informationEdge": 0.12,
+    "timingUrgency": 0.08
+  },
+  "opusReviewNotes": "The most glaring issue across 60 trials is the 80% no-trade rate combined with a 37.5% win rate when trades ARE taken. This is a worst-of-both-worlds outcome: the algorithm is too conservative to generate volume, yet not selective enough to be accurate when it does trade. The threshold is filtering out opportunities but not filtering out losers. Looking at the last 10 trials specifically: Trials 51-54 and 59 all produced no trades despite varying regimes. Trial 52 was classified as risk-off with 100% confidence and stress=18, yet no short trades were recommended — this is a clear missed opportunity. If the algorithm has high conviction in a bearish regime, it should be able to find at least one high-quality short or defensive long. Similarly, Trial 58 correctly identified risk-off (66% confidence, bearish briefing) and recommended QQQ short + FAST short + GLD long, but scored 50 with 0% win rate on outcomes tracked. The regime was right but execution was wrong — likely because shorting QQQ in an already-down-2% session means chasing, not leading.\n\nThe dimension predictive power data is remarkably flat: all seven dimensions cluster between 69.6 and 72.9 out of 100. This near-uniform distribution strongly suggests the scoring model lacks discriminative power. When every dimension predicts roughly equally, no dimension is actually predicting — the model is essentially averaging noise. The slight edge in riskReward (72.9) and timingUrgency (72.6) deserves investigation, but the current weight allocation has timingUrgency at only 8.3% (lowest) while catalystClarity sits at 20.0% despite only 71.7 predictive power. The weights are inversely correlated with actual predictive signal.\n\nTrial 55 (SNOW long, rotation regime, appetite=56) lost 0.68% and scored 15 — the worst score in the last 10. SNOW is a high-beta cloud name that requires strong risk-on momentum, not a rotation regime with only 46% confidence. Trial 57 recommended XHB long and PHM long (both homebuilders) in a range-bound/bearish regime — this is a fundamental regime-alignment failure. Going long cyclical/rate-sensitive names when the briefing itself says 'defensive selloff' is contradictory. Trial 60's RTX long lost 2.49% (stop-loss hit) while XENE short gained 6.61% — the biotech short worked but the defense long failed despite seeming 'safe' in a rotation. The pattern is clear: the algorithm treats certain sectors as defensive hedges without verifying they actually behave defensively in the specific regime.\n\nThe best trials (1, 8, 10, 41) all share a pattern: single concentrated trades with clear directional conviction. Trial 8 shorted PLTR, Trial 1 went long IWM, Trial 10 went long PNC — each was one trade with 100% win rate. When the algorithm takes multiple trades (Trial 57: 2 trades, Trial 58: 3 trades, Trial 60: 2 trades), performance degrades significantly. This suggests the second and third recommendations are dilutive — lower conviction ideas that drag down the portfolio. The algorithm should enforce a strict 1-trade maximum unless composite scores exceed 85.\n\nThe profit factor of 3.55 is technically strong but misleading given only 12 trading trials and heavy influence from three perfect-score trials. The algorithm has no mechanism to distinguish between 'no edge detected' (correct no-trade) and 'edge exists but threshold is too high' (missed opportunity). Trials 51-54 and 59 all scored exactly 50, which is the default no-trade score — there's no gradient telling us how close these were to generating trades or whether the no-trade decision was correct."
+}
