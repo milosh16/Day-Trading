@@ -18,6 +18,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { fileURLToPath } from "url";
+import { execSync } from "child_process";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.join(__dirname, "..");
@@ -99,6 +100,22 @@ function handleShutdown(signal: string): void {
 }
 process.on("SIGTERM", () => handleShutdown("SIGTERM"));
 process.on("SIGINT", () => handleShutdown("SIGINT"));
+
+function commitAndPush(message: string): void {
+  const branch = process.env.GITHUB_REF_NAME || 'main';
+  try {
+    execSync(
+      `git add training/results/ public/data/training/ 2>/dev/null; ` +
+      `git diff --staged --quiet || ` +
+      `(git commit -m "${message}" && ` +
+      `git pull origin ${branch} --rebase 2>/dev/null; ` +
+      `git push origin HEAD:${branch})`,
+      { stdio: "pipe", timeout: 120000 }
+    );
+  } catch (e) {
+    console.error(`Git commit/push failed: ${e}`);
+  }
+}
 
 function weightsToPrompt(weights: ConvictionWeights): string {
   return Object.entries(weights)
@@ -749,7 +766,225 @@ async function runTrial(
   return result;
 }
 
-async function main(): Promise<void> {
+// ---- MODE=trial: Run exactly one trial, commit, exit ----
+async function runSingleTrialMode(): Promise<void> {
+  const resultsDir = path.join(__dirname, "results");
+  if (!fs.existsSync(resultsDir)) fs.mkdirSync(resultsDir, { recursive: true });
+
+  log("=== SIGNAL Training Engine — MODE=trial ===");
+
+  const state = loadState();
+  currentState = state;
+
+  // Generate deterministic date sequence if needed (first run)
+  if (!state.dateSequence || state.dateSequence.length === 0) {
+    state.dateSequence = getRandomTradingDays(TOTAL_TRIALS, START_DATE, END_DATE, 42);
+    state.completedDates = state.completedDates || [];
+    saveState(state);
+    log(`Generated deterministic schedule: ${state.dateSequence.length} dates (seed=42)`);
+  }
+
+  if (state.currentTrial >= state.totalTrials) {
+    log("All trials complete!");
+    printSummary(state);
+    return;
+  }
+
+  const trialNum = state.currentTrial + 1;
+  const date = state.dateSequence[state.currentTrial];
+  log(`Running trial ${trialNum}/${state.totalTrials} for date ${date}`);
+  log(`Current weights:\n${weightsToPrompt(state.weights)}`);
+
+  // Initialize diary if starting fresh
+  if (state.currentTrial === 0) {
+    writeDiaryHeader(state);
+  }
+
+  const result = await runTrial(trialNum, date, state.weights, state.regimeWeightTable);
+
+  // Update state
+  state.results.push(result);
+  state.currentTrial = trialNum;
+  state.totalTokensUsed += result.totalTokensUsed;
+  state.completedDates = state.completedDates || [];
+  state.completedDates.push(date);
+
+  // Write diary entry
+  appendTrialEntry(result, trialNum, TOTAL_TRIALS);
+
+  if (result.scores.totalScore > state.bestScore) {
+    state.bestScore = result.scores.totalScore;
+    state.bestWeights = { ...state.weights };
+    log(`  ★ New best score: ${state.bestScore}`);
+  }
+
+  // Save state
+  saveState(state);
+
+  // Write app data (already done in runTrial, but ensure state is saved first)
+  log(`Trial ${trialNum} complete — score: ${result.scores.totalScore}`);
+
+  // Commit and push results
+  commitAndPush(`Training trial ${state.currentTrial}: ${date} (score: ${result.scores.totalScore})`);
+}
+
+// ---- MODE=review: Run Opus review + optimization for last 10 trials, commit, exit ----
+async function runReviewMode(): Promise<void> {
+  const resultsDir = path.join(__dirname, "results");
+  if (!fs.existsSync(resultsDir)) fs.mkdirSync(resultsDir, { recursive: true });
+
+  log("=== SIGNAL Training Engine — MODE=review ===");
+
+  const state = loadState();
+  currentState = state;
+
+  if (state.results.length < 10) {
+    log(`Only ${state.results.length} trials completed — need at least 10 for review. Skipping.`);
+    return;
+  }
+
+  log(`Running review at trial ${state.currentTrial} (${state.results.length} total results)`);
+
+  // --- Statistical weight optimization ---
+  log(`\n=== Optimizing weights (trial ${state.currentTrial}) ===`);
+  const oldWeights = { ...state.weights };
+  const oldRegimeTable = JSON.parse(JSON.stringify(state.regimeWeightTable || createDefaultTable())) as RegimeWeightTable;
+
+  const { newTable, changes: regimeChanges } = optimizeByRegime(
+    state.regimeWeightTable || createDefaultTable(),
+    state.results.slice(-OPTIMIZE_EVERY * 2),
+    3,
+  );
+  state.regimeWeightTable = newTable;
+  state.weights = newTable.default;
+
+  if (regimeChanges.length > 0) {
+    log(`  Regime-conditional optimization:`);
+    for (const rc of regimeChanges) {
+      log(`    ${rc.regime}: ${rc.trialsUsed} trials, ${rc.changes.length} dimensions changed`);
+    }
+  }
+
+  log(summarizeChanges(oldWeights, state.weights));
+
+  const newThreshold = optimizeThreshold(state.results);
+  log(`  Recommended threshold: ${newThreshold}`);
+
+  state.weightHistory.push({
+    trial: state.currentTrial,
+    weights: { ...state.weights },
+    score: state.results[state.results.length - 1]?.scores.totalScore || 0,
+  });
+
+  // Write milestone summary to diary
+  appendMilestoneSummary(state.currentTrial, state, oldWeights, state.weights);
+
+  // Print rolling stats
+  const last10 = state.results.slice(-10);
+  const avg10 = last10.reduce((s, r) => s + r.scores.totalScore, 0) / last10.length;
+  log(`  Rolling avg (last 10): ${avg10.toFixed(1)}`);
+  log(`  Best overall: ${state.bestScore}`);
+  log("");
+
+  // --- Counterfactual testing ---
+  const counterfactualResult = runCounterfactual(
+    state.results.slice(-20),
+    oldRegimeTable,
+    state.regimeWeightTable!,
+  );
+  log(`  Counterfactual: ${counterfactualResult.recommendation} (${counterfactualResult.improvement > 0 ? '+' : ''}${counterfactualResult.improvement.toFixed(1)} score delta)`);
+
+  if (counterfactualResult.recommendation === 'reject') {
+    log(`  REJECTING weight change — reverting to previous weights`);
+    state.regimeWeightTable = oldRegimeTable;
+    state.weights = oldRegimeTable.default;
+  }
+
+  // --- Opus algorithm review ---
+  log(`\n=== Opus Algorithm Review (trial ${state.currentTrial}) ===`);
+  try {
+    const reviewResult = await opusAlgorithmReview(state);
+    log(`  Review complete. Insights saved.`);
+    if (reviewResult.weightAdjustments) {
+      log(`  Opus recommended weight adjustments — applying...`);
+      for (const [dim, adj] of Object.entries(reviewResult.weightAdjustments)) {
+        if (dim in state.weights && typeof adj === "number") {
+          (state.weights as Record<string, number>)[dim] = Math.max(0.05, Math.min(0.35, adj));
+        }
+      }
+      const total = Object.values(state.weights).reduce((s, v) => s + v, 0);
+      for (const dim of Object.keys(state.weights)) {
+        (state.weights as Record<string, number>)[dim] /= total;
+      }
+      log(`  Adjusted weights:\n${weightsToPrompt(state.weights)}`);
+    }
+  } catch (e) {
+    log(`  Opus review failed: ${e instanceof Error ? e.message : String(e)}`);
+  }
+
+  // --- Extract and register insights ---
+  try {
+    const reviewPath = path.join(__dirname, "results", `opus-review-trial-${state.currentTrial}.json`);
+    if (fs.existsSync(reviewPath)) {
+      const reviewData = JSON.parse(fs.readFileSync(reviewPath, "utf-8"));
+      if (reviewData?.strategyChanges) {
+        let registry = loadRegistry();
+        for (const change of reviewData.strategyChanges) {
+          registry = addInsight(registry, {
+            discoveredAtTrial: state.currentTrial,
+            category: 'trade_selection',
+            insight: change,
+            promptFragment: change,
+            supportingTrials: state.results.slice(-10).map(r => r.trialId),
+            confidenceScore: 60,
+          });
+        }
+        saveRegistry(registry);
+      }
+    }
+  } catch (e) {
+    log(`  Insight registration failed: ${e instanceof Error ? e.message : String(e)}`);
+  }
+
+  // --- Record optimization metadata ---
+  const regimePerf = computeRegimePerformance(state.results);
+  const optLog = loadOptimizationLog();
+  const optRecord: OptimizationRecord = {
+    trial: state.currentTrial,
+    timestamp: new Date().toISOString(),
+    regimeChanges: regimeChanges.map(rc => ({
+      regime: rc.regime,
+      dimensionChanges: rc.changes,
+    })),
+    insightsAdded: [],
+    insightsRetired: [],
+    counterfactual: counterfactualResult ? {
+      improvement: counterfactualResult.improvement,
+      recommendation: counterfactualResult.recommendation,
+    } : undefined,
+    regimePerformance: regimePerf,
+  };
+  saveOptimizationLog(addRecord(optLog, optRecord));
+
+  // --- Check convergence ---
+  const convergence = checkConvergence(loadOptimizationLog());
+  if (convergence.converged) {
+    log(`\n  *** CONVERGENCE DETECTED ***`);
+    log(`  Reason: ${convergence.reason}`);
+    log(`  ${convergence.recommendation}`);
+  }
+
+  // Save state
+  saveState(state);
+
+  log(`Review at trial ${state.currentTrial} complete.`);
+
+  // Commit and push results
+  commitAndPush(`Training review at trial ${state.currentTrial}: ${regimeChanges.length} regime optimizations`);
+}
+
+// ---- MODE=batch (default): Original monolithic loop for local testing ----
+async function runBatchMode(): Promise<void> {
   // Ensure results directory exists
   const resultsDir = path.join(__dirname, "results");
   if (!fs.existsSync(resultsDir)) {
@@ -961,20 +1196,8 @@ async function main(): Promise<void> {
       const shouldCommit = trialNum === 1 || trialNum % OPTIMIZE_EVERY === 0;
       if (shouldCommit && process.env.CI) {
         try {
-          const { execSync } = await import("child_process");
-          // Detect current branch dynamically
-          const branch = process.env.GITHUB_REF_NAME ||
-            execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf-8' }).trim() ||
-            'main';
-          log(`  Committing checkpoint to ${branch}...`);
-          execSync(
-            `git add training/results/ public/data/training/ 2>/dev/null; ` +
-            `git diff --staged --quiet || ` +
-            `(git commit -m "Training checkpoint: ${trialNum}/${TOTAL_TRIALS} trials — best: ${state.bestScore}" && ` +
-            `git pull origin ${branch} --rebase 2>/dev/null; ` +
-            `git push origin HEAD:${branch})`,
-            { stdio: "pipe", timeout: 120000 }
-          );
+          log(`  Committing checkpoint...`);
+          commitAndPush(`Training checkpoint: ${trialNum}/${TOTAL_TRIALS} trials — best: ${state.bestScore}`);
           log(`  Checkpoint committed and pushed (trial ${trialNum})`);
         } catch (e) {
           log(`  Checkpoint push failed: ${e instanceof Error ? e.message : String(e)}`);
@@ -995,6 +1218,25 @@ async function main(): Promise<void> {
   log("\n=== Training Complete ===");
   printSummary(state);
   exportOptimizedWeights(state);
+}
+
+// ---- Main dispatcher ----
+async function main(): Promise<void> {
+  const mode = (process.env.MODE || 'batch').toLowerCase();
+  log(`Mode: ${mode}`);
+
+  switch (mode) {
+    case 'trial':
+      await runSingleTrialMode();
+      break;
+    case 'review':
+      await runReviewMode();
+      break;
+    case 'batch':
+    default:
+      await runBatchMode();
+      break;
+  }
 }
 
 function printSummary(state: TrainingState): void {

@@ -1,0 +1,63 @@
+name: Training Trial
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: training-execution
+  cancel-in-progress: false
+
+jobs:
+  trial:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Configure git
+        run: |
+          git config user.name "SIGNAL Training Bot"
+          git config user.email "signal-bot@users.noreply.github.com"
+
+      - name: Pull latest
+        run: git pull origin main --rebase || true
+
+      - name: Run single trial
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          MODE: trial
+        run: npx tsx training/train.ts
+        timeout-minutes: 25
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: trial-${{ github.run_id }}
+          path: training/results/
+          retention-days: 30
+
+      - name: Trigger next
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Small delay to avoid rate limiting
+          sleep 5
+          gh workflow run training-dispatcher.yml --ref main

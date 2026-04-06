@@ -1,0 +1,70 @@
+name: Training Dispatcher
+
+on:
+  push:
+    branches: [main]
+    paths: ['training/**', '.github/workflows/training-*.yml']
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'What to do: start, resume, review'
+        required: false
+        default: 'resume'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: training-dispatcher
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine next action
+        id: next
+        run: |
+          if [ -f training/results/training-state.json ]; then
+            TRIAL=$(node -e "console.log(require('./training/results/training-state.json').currentTrial)" 2>/dev/null || echo "0")
+            TOTAL=$(node -e "console.log(require('./training/results/training-state.json').totalTrials || 500)" 2>/dev/null || echo "500")
+          else
+            TRIAL=0
+            TOTAL=500
+          fi
+          echo "current_trial=$TRIAL" >> $GITHUB_OUTPUT
+          echo "total_trials=$TOTAL" >> $GITHUB_OUTPUT
+
+          if [ "$TRIAL" -ge "$TOTAL" ]; then
+            echo "action=complete" >> $GITHUB_OUTPUT
+            echo "Training complete at trial $TRIAL/$TOTAL"
+          elif [ $((TRIAL % 10)) -eq 0 ] && [ "$TRIAL" -gt 0 ] && [ "${{ github.event.inputs.action }}" != "start" ]; then
+            echo "action=review" >> $GITHUB_OUTPUT
+            echo "Triggering review at trial $TRIAL"
+          else
+            echo "action=trial" >> $GITHUB_OUTPUT
+            echo "Triggering trial $((TRIAL + 1))"
+          fi
+
+      - name: Trigger trial
+        if: steps.next.outputs.action == 'trial'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run training-trial.yml --ref main
+
+      - name: Trigger review
+        if: steps.next.outputs.action == 'review'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run training-review.yml --ref main
+
+      - name: Training complete
+        if: steps.next.outputs.action == 'complete'
+        run: echo "Training complete! ${{ steps.next.outputs.current_trial }}/${{ steps.next.outputs.total_trials }} trials done."
