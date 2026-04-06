@@ -1,0 +1,337 @@
+{
+  "trialId": 10014,
+  "date": "2024-10-18",
+  "dateDisplay": "Friday, October 18, 2024",
+  "generatedAt": "2026-04-06T23:05:24.958Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.4,
+      "nasdaqFuturesChange": 0.63,
+      "dowFuturesChange": 0.09,
+      "russellFuturesChange": -0.21,
+      "vixFuturesChange": -5.65,
+      "vix": 18.03,
+      "vixChange": -5.65,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 19.19,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.07,
+      "tenYearYieldChange": -0.56,
+      "twoYearYield": 4.07,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.38,
+      "threeMonthYield": 4.51,
+      "twoTenSpread": 0,
+      "threeMoTenYrSpread": -0.44,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 103.49,
+      "dollarIndexChange": -0.33,
+      "eurUsd": 1.08,
+      "eurUsdChange": -0.3,
+      "usdJpy": 150.1,
+      "usdJpyChange": 0.35,
+      "usdCny": 7.12,
+      "usdCnyChange": 0.06,
+      "oilWTI": 69.22,
+      "oilChange": -2.05,
+      "brentOil": 73.06,
+      "brentOilChange": -1.87,
+      "natGasChange": -3.79,
+      "goldPrice": 2713.7,
+      "goldChange": 0.84,
+      "silverChange": 4.62,
+      "copperChange": 1.39,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.18,
+      "daxChange": 0.38,
+      "ftseChange": -0.32,
+      "shanghaiChange": 2.91,
+      "hangSengChange": 0,
+      "kospiChange": -0.59,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 101,
+      "spreadChange": -0.24,
+      "igSpread": -21.5,
+      "igSpreadChange": 0.12,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.99,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.36,
+      "xlfChange": 0.02,
+      "xleChange": -0.33,
+      "xlvChange": 0.49,
+      "xlpChange": 0.22,
+      "xluChange": 0.58,
+      "xlreChange": 0.7,
+      "xliChange": 0.3,
+      "xlbChange": 0.4,
+      "xlcChange": 0.74,
+      "xlyChange": 0.39,
+      "smhChange": -0.03,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.08,
+      "ethereumChange": 0.27,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": true,
+      "isOpexDay": true,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 20,
+      "daysToNextCPI": 26,
+      "daysToNextNFP": 14,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 0.85,
+      "sp20DayReturn": 2.84,
+      "nasdaqVsRussell5d": -1.07,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 45,
+      "directionalBias": "15",
+      "volatilityRegime": "normal",
+      "stressIndex": 17,
+      "riskAppetiteIndex": 51,
+      "sectorTilts": {
+        "airlines": "overweight",
+        "consumer-discretionary": "overweight",
+        "materials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Bullish momentum continues with S&P 500 at record highs (6th consecutive weekly gain). TSMC blowout earnings validate AI capex thesis, Netflix subscriber beat boosts consumer discretionary, ECB cut signals global easing, and Sinwar's killing introduces potential Middle East de-escalation catalyst. Strong retail sales (+0.4%) confirm resilient US consumer. Risk is complacency at all-time highs.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Geopolitics",
+          "content": "MAJOR CATALYST: Hamas leader Yahya Sinwar confirmed killed by IDF in Rafah on Oct 16-17. This is the single biggest geopolitical event — removes the architect of Oct 7 and could accelerate ceasefire negotiations. Israel's Lebanon ground operation continues (entered Oct 1). Hezbollah weakened after Nasrallah assassination Sep 27. Oil geopolitical risk premium declining as Israel's strikes have not targeted Iranian oil infrastructure. Ukraine: North Korea deploying ~11,000 troops to Russia (escalation risk). Zelenskyy 'victory plan' presented but NATO tepid. Russia captures two villages in Donetsk.",
+          "importance": "medium"
+        },
+        {
+          "title": "Macro",
+          "content": "ECB cut rates 25bp to 3.25% on Oct 17 (3rd cut since June) — disinflation 'well on track.' US retail sales beat at +0.4% (vs +0.3% expected), showing strong consumer. Initial jobless claims fell 19K to 241K (hurricane rebound from 260K). Fed rate cut expectations stable — market pricing Nov cut. S&P 500 closed at record 5,864.67. Dow at record 43,275. Nasdaq +0.63%. Six consecutive weeks of gains — longest streak of 2024. China stimulus from late September fading but supportive backdrop.",
+          "importance": "medium"
+        },
+        {
+          "title": "Corporate",
+          "content": "TSMC Q3: Net profit +54% YoY to $10.1B, revenue +36%, gross margin 57.8%, guided Q4 revenue $26.1-26.9B — blowout on AI demand. Netflix Q3: EPS $5.40 (vs $5.12 est), revenue $9.83B beat, +5.1M subs, ad-tier +35% QoQ, raised FCF guidance to $6-6.5B — stock +5% after hours. Morgan Stanley Q3 (Oct 16): Strong $15.4B revenue. Blackstone Q3: $54B deployed (highest in 2yrs), $40B+ inflows. American Express Q3 (Oct 18 pre-market): EPS $3.49, raised FY guidance. P&G reports Oct 18 pre-market. Intuitive Surgical Q3: Revenue +17% to $2.04B, 379 da Vinci placements (110 dV5).",
+          "importance": "medium"
+        },
+        {
+          "title": "TechAI",
+          "content": "TSMC results are the seminal tech event — validates that AI infrastructure spending is accelerating, not peaking. ASML's Oct 15 guidance cut (-16% stock drop, bookings miss at 2.6B vs 5.6B est) created fear that semiconductor cycle was rolling over, but TSMC's results specifically showed the weakness is in non-AI segments while AI demand surges. NVIDIA bouncing after ASML-driven selloff. Apple iPhone 16 sales +20% in China debut — first positive data point in months. Nvidia up 0.9% in Oct 18 premarket on TSMC tailwind.",
+          "importance": "medium"
+        },
+        {
+          "title": "Energy",
+          "content": "WTI crude trading around $70/barrel range, down from $82 spike on Oct 7. Oil risk premium declining — Israel's response to Iran did not target oil infrastructure, removing worst-case scenario. US oil production hit record 13.5M b/d in October. Gold at $2,710.70/oz, elevated on geopolitical uncertainty and rate cuts but not at extreme. Bitcoin at $67,254, consolidating below $68K resistance.",
+          "importance": "medium"
+        },
+        {
+          "title": "Policy",
+          "content": "US election 22 days away. Polls show dead heat (Harris slight lead in polls, Trump 54% on prediction markets/Polymarket). Market not pricing election risk — VIX low, record highs. New HSR Act reporting rules finalized Oct 2024, taking effect Feb 2025 (M&A friction). No major new tariff/trade actions. SEC ESG enforcement continues under current admin.",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "entryPrice": 138,
+      "targetPrice": 145,
+      "stopLoss": 134,
+      "thesis": "Global macro (rate cuts, risk-on) → AI infrastructure spending (TSMC validation) → NVIDIA as AI chip leader → NVDA long. TSMC's results specifically showed AI-related demand surging while non-AI segments weak — this is directly bullish for NVIDIA which is 100% AI-exposed. The ASML-driven selloff created a dip-buying opportunity now validated by TSMC.",
+      "catalyst": "TSMC's blowout Q3 validates that AI chip demand is accelerating. NVIDIA is TSMC's largest AI customer. ASML's Oct 15 selloff dragged NVDA down ~4.5% — TSMC results provide the rebound catalyst. NVDA up 0.9% premarket Oct 18.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 98,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XOM",
+      "direction": "short",
+      "entryPrice": 118,
+      "targetPrice": 113,
+      "stopLoss": 121.5,
+      "thesis": "Geopolitical de-escalation (Sinwar killed, Israel restraint on Iran oil) → Oil risk premium declining → Energy sector underperformance → XOM short. The market's biggest fear was Iran oil disruption — Israel's restraint and Sinwar's death reduce this tail risk. US production at records adds supply pressure. Money rotating from energy into tech/growth on TSMC/NFLX catalysts.",
+      "catalyst": "Sinwar's killing on Oct 17 materially reduces Middle East escalation premium in oil. Israel has not targeted Iranian oil infrastructure. WTI declining toward $70. US oil production at record 13.5M b/d. OPEC+ spare capacity overhang. Risk-on rotation favors growth over value/commodity names.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 60,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "NVDA",
+      "openPrice": 138.67,
+      "highPrice": 144.42,
+      "lowPrice": 137.28,
+      "closePrice": 143.59,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 4.05,
+      "notes": "3-day window (2024-10-18, 2024-10-21, 2024-10-22). Open $138.67, High $144.42, Low $137.28, Close $143.59."
+    },
+    {
+      "symbol": "XOM",
+      "openPrice": 120.44,
+      "highPrice": 121.48,
+      "lowPrice": 119.15,
+      "closePrice": 120.7,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -2.29,
+      "notes": "3-day window (2024-10-18, 2024-10-21, 2024-10-22). Open $120.44, High $121.48, Low $119.15, Close $120.7."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 50,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0.88,
+    "profitFactor": 1.77,
+    "winRate": 50,
+    "totalScore": 59.2,
+    "benchmarkReturn": 0.09,
+    "alpha": 0.79
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 88,
+      "avgScoreLosers": 72,
+      "predictivePower": 66
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 75,
+      "avgScoreLosers": 65,
+      "predictivePower": 60
+    },
+    "riskReward": {
+      "avgScoreWinners": 72,
+      "avgScoreLosers": 70,
+      "predictivePower": 52
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 98,
+      "avgScoreLosers": 95,
+      "predictivePower": 53
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 88,
+      "avgScoreLosers": 68,
+      "predictivePower": 70
+    },
+    "informationEdge": {
+      "avgScoreWinners": 75,
+      "avgScoreLosers": 65,
+      "predictivePower": 60
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 75,
+      "avgScoreLosers": 60,
+      "predictivePower": 65
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
