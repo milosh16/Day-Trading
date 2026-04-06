@@ -5330,3 +5330,28 @@
 
 ---
 
+## Day 174/500 — Wednesday, March 11, 2026
+
+### Recommendations (2)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| SQQQ | long | $18.75 | $21.56 | $17.62 | 84 | Long SQQQ (3x inverse Nasdaq) as a regime-aligned short-equi... |
+| XLE | short | $58.5 | $52.65 | $61.43 | 80 | Short the Energy Select Sector ETF following oil's historic ... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 22.0% | technicalSetup: 15.0% | riskReward: 12.0% | volumeLiquidity: 6.0% | marketAlignment: 10.0% | informationEdge: 18.0% | timingUrgency: 17.0%*
+
+---
+

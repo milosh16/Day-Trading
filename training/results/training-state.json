@@ -1,5 +1,5 @@
 {
-  "currentTrial": 173,
+  "currentTrial": 174,
   "totalTrials": 500,
   "weights": {
     "catalystClarity": 0.22,
@@ -43141,6 +43141,309 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 24508
+    },
+    {
+      "trialId": 174,
+      "date": "2026-03-11",
+      "generatedAt": "2026-04-06T19:20:24.117Z",
+      "signals": {
+        "spFuturesChange": -0.08,
+        "nasdaqFuturesChange": 0.08,
+        "dowFuturesChange": -0.61,
+        "russellFuturesChange": -0.2,
+        "vixFuturesChange": 12.63,
+        "vix": 27.29,
+        "vixChange": 12.63,
+        "vixTermStructure": "backwardation",
+        "vix9d": 0,
+        "vix3m": 24.97,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.21,
+        "tenYearYieldChange": 1.74,
+        "twoYearYield": 3.73,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.86,
+        "threeMonthYield": 3.6,
+        "twoTenSpread": 0.48,
+        "threeMoTenYrSpread": 0.61,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 99.74,
+        "dollarIndexChange": 0.51,
+        "eurUsd": 1.15,
+        "eurUsdChange": -0.59,
+        "usdJpy": 159.07,
+        "usdJpyChange": 0.61,
+        "usdCny": 6.87,
+        "usdCnyChange": -0.16,
+        "oilWTI": 95.73,
+        "oilChange": 9.72,
+        "brentOil": 100.46,
+        "brentOilChange": 9.22,
+        "natGasChange": 0.75,
+        "goldPrice": 5115.8,
+        "goldChange": -1,
+        "silverChange": -0.46,
+        "copperChange": -0.36,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -1.04,
+        "daxChange": -0.21,
+        "ftseChange": -0.47,
+        "shanghaiChange": -0.1,
+        "hangSengChange": -0.7,
+        "kospiChange": -0.48,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 100.7,
+        "spreadChange": 0.22,
+        "igSpread": -18.32,
+        "igSpreadChange": 0.82,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.98,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 0.48,
+        "xlfChange": -0.84,
+        "xleChange": 2.48,
+        "xlvChange": -0.2,
+        "xlpChange": -1.32,
+        "xluChange": -0.84,
+        "xlreChange": -1.19,
+        "xliChange": -0.31,
+        "xlbChange": -0.08,
+        "xlcChange": -0.32,
+        "xlyChange": -0.26,
+        "smhChange": 0.93,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 0.41,
+        "ethereumChange": 1.05,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": true,
+        "econDataType": "CPI",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 7,
+        "daysToNextCPI": 0,
+        "daysToNextNFP": 23,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 2,
+        "sp5DayReturn": -1.36,
+        "sp20DayReturn": -2.39,
+        "nasdaqVsRussell5d": 3.13,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "crisis",
+        "confidence": 90,
+        "directionalBias": "-60",
+        "volatilityRegime": "elevated",
+        "stressIndex": 39,
+        "riskAppetiteIndex": 42,
+        "sectorTilts": {
+          "tech": "underweight",
+          "utilities": "overweight",
+          "healthcare": "overweight",
+          "financials": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": "Markets are firmly in CRISIS regime (90% confidence) as VIX spikes to 27.29 (+12.63%) with term structure in backwardation — a classic stress signal indicating near-term fear premium. The S&P is grinding lower for a second consecutive session (-1.36% over 5 days, -2.39% over 20 days) while oil's +9.72% surge and dollar strength (+0.51%) inject a stagflationary undercurrent that complicates the Fed's calculus heading into CPI day. Defensive playbook is in effect: only 80+ conviction trades qualify, long bias carries a -15 penalty, and the regime favors shorts or defensive longs exclusively.",
+        "marketCondition": "volatile",
+        "sections": [
+          {
+            "title": "🚨 REGIME ALERT: Crisis Mode Active — Posture & Priority",
+            "content": "The system has classified today as CRISIS with 90% confidence. VIX at 27.29 is not a minor spike — backwardation in the VIX term structure means the options market is pricing more fear NOW than in the future, a structure historically associated with acute stress events rather than chronic anxiety. Correlation across assets is elevated, liquidity is stressed, and the directional bias reads -60 (meaningfully bearish). The S&P has posted two consecutive down days with a -2.39% 20-day drawdown. The critical constraint for today: minimum conviction threshold is RAISED to 80. Do not force trades. The regime's message is simple — capital preservation over alpha generation. Any long exposure must be defensive by nature (utilities, healthcare), and even those carry the -15 long penalty. Shorts are penalty-free.",
+            "importance": "high"
+          },
+          {
+            "title": "📊 CPI Day: The Macro Catalyst That Defines Everything",
+            "content": "Today's CPI print is the singular data event that will either validate or violently reprice the current regime. Context matters enormously: WTI crude just surged +9.72% to $95.73 — a move of that magnitude in energy will almost certainly have filtered into headline CPI reads if it has persistence. Meanwhile, gold is down -1.0% to $5,115 and the dollar is up +0.51% to DXY 99.74, suggesting some repositioning ahead of the print rather than a clean inflation-fear bid. The 10-year yield rose +1.74% to 4.21%, consistent with markets pricing in an upside surprise risk. With FOMC in 7 days, a hot CPI print creates a genuinely difficult policy bind: the Fed cannot cut into rising inflation, but the equity market is already under stress. A cold print is the only clean catalyst for regime de-escalation today.",
+            "importance": "high"
+          },
+          {
+            "title": "🔄 Sector Rotation: The Signal in the Noise",
+            "content": "Yesterday's sector tape tells a contradictory story that requires careful interpretation. Energy (XLE +2.48%) dominated — oil's +9.72% surge is the obvious driver, but energy leadership in a crisis regime is inflationary, not risk-on. Semis (SMH +0.93%) and Tech (XLK +0.48%) posted green, but the regime model explicitly underweights tech as 'high-beta sells first in crisis' — yesterday's bid may reflect short-covering or index rebalancing rather than genuine conviction. The alarming signal is on the loser side: Staples (XLP -1.32%), Real Estate (XLRE -1.19%), Utilities (XLU -0.84%), and Financials (XLF -0.84%) ALL fell. Defensives selling off while the VIX spikes is deeply unusual — it suggests forced de-risking and liquidation rather than clean rotation. When even the 'safe harbors' are leaking, it points to margin calls and portfolio-level selling pressure. Healthcare (XLV -0.20%) is designated overweight by the regime but also closed in the red. Tread carefully.",
+            "importance": "high"
+          },
+          {
+            "title": "📈 Yield Curve & Rate Signals: Stagflation Whispers",
+            "content": "The yield curve configuration deserves close attention. The 2-10 spread sits at +0.48 and the 3M-10Y at +0.61 — both positive, meaning the curve is no longer inverted. In isolation, curve re-steepening is historically bullish (a recession signal lifting). But this re-steepening appears to be driven by the LONG END rising (10Y +1.74% to 4.21%) rather than the short end falling — that's a bear steepener, which is unambiguously negative for equities and risk assets. Bear steepeners signal that the market is pricing more inflation/supply risk at the long end, not Fed cuts at the short end. With FOMC in 7 days, this puts Powell in a bind. The HY credit spread at 100.7bps (+0.22bps) is ticking wider — watch this closely. IG at -18.32bps is an outlier that may reflect index rebalancing effects. The overall rate complex is sending a stagflationary signal: rising rates + slowing growth + elevated inflation.",
+            "importance": "high"
+          },
+          {
+            "title": "💱 Currency & Commodity Flows: Dollar Strength + Oil Spike = Pressure",
+            "content": "The dollar at 99.74 (+0.51%) is strengthening despite the risk-off environment, which is consistent with crisis-driven USD safe-haven demand. EUR/USD at 1.15 reflects relative EUR weakness. USD/JPY at 159.07 is notable — the yen remains under structural pressure, and at these levels, BOJ intervention risk builds. The dominant commodity story is WTI crude at $95.73 (+9.72%). A nearly 10% single-day move in oil is extraordinary and demands explanation — this is either a supply shock (geopolitical event, OPEC action) or a massive short squeeze. At $95.73, oil is now at levels that historically trigger consumer spending compression and feed directly into headline CPI. Gold's -1.0% decline to $5,115 is counterintuitive in a crisis — this likely reflects dollar strength suppressing gold in USD terms, or profit-taking from gold's already extreme elevation. International markets (Nikkei -1.04%, FTSE -0.47%, Hang Seng -0.70%) confirm global risk-off. Crypto's mild green (+0.41% BTC, +1.05% ETH) is too small to be meaningful signal.",
+            "importance": "medium"
+          },
+          {
+            "title": "⚠️ Risk Factor Matrix: What Could Break Today",
+            "content": "RISK #1 — Hot CPI Print: Oil's +9.72% surge combined with dollar strength creates a bifurcated CPI risk. If headline CPI beats consensus materially, expect 10Y to punch toward 4.35-4.40%, equities to sell off sharply, and the crisis regime to deepen. Risk #2 — Liquidity Stress Cascade: Defensives (Staples, Utilities, REITs) selling off alongside equities signals possible forced selling. If this continues, there is no 'hiding place' trade within equities. Risk #3 — Oil Shock Persistence: If WTI sustains above $95, the stagflation narrative becomes consensus, not fringe. This eliminates the 'soft landing' path and removes the Fed's ability to cut. Risk #4 — VIX Backwardation Deepening: If spot VIX accelerates above 30, systematic volatility-targeting strategies (risk parity, CTAs) will mechanically reduce equity exposure — creating a feedback loop. Risk #5 — USD/JPY above 160: BOJ intervention threshold. A break above 160 increases tail risk in yen-funded carry trades.",
+            "importance": "high"
+          }
+        ],
+        "scenarios": [
+          {
+            "event": "CPI PRINT — Hot (Above Consensus)",
+            "scenarios": [
+              {
+                "condition": "If CPI comes in above expectations (e.g., headline >0.4% MoM or core >0.4%), driven by energy passthrough from the oil surge",
+                "implication": "10Y yield spikes toward 4.35-4.45%. Equities sell hard — S&P likely tests and breaks recent lows. VIX accelerates toward 32-35. Dollar surges, gold falls further. Fed cut expectations for June get fully priced out. Crisis regime conviction rises to maximum. Financials, REITs, and growth tech bear the brunt. Energy (XLE) may perversely rally further as an inflation hedge.",
+                "trade": "CRISIS REGIME ALIGNED — SHORT SPY or QQQ with defined risk (stop above yesterday's high). LONG XLE calls as inflation hedge (note: still carries -15 long penalty, requires 80+ conviction). SHORT XLRE or XLF as rate-sensitive longs that cannot survive this environment. Avoid all new defensive longs until dust settles post-print."
+              }
+            ]
+          },
+          {
+            "event": "CPI PRINT — Cold (Below Consensus)",
+            "scenarios": [
+              {
+                "condition": "If CPI undershoots expectations (headline ≤0.2% MoM, core ≤0.2%), suggesting the oil spike is lagged/not yet in the data and prior disinflation is holding",
+                "implication": "This is the market's lifeline. 10Y yields pull back toward 4.10-4.15%. Equities rally sharply — bear-squeeze potential given elevated VIX and short positioning. VIX drops but likely stays above 24 (backwardation doesn't flip on one print). Dollar softens, gold rebounds. FOMC next week reprices toward 'patient but eventually dovish.' Regime may not immediately reclassify — one data point rarely shifts 90% crisis confidence — but the pressure valve releases.",
+                "trade": "REGIME CAUTION APPLIES — even with a cold print, the -15 long penalty remains and minimum 80 conviction required. TACTICAL LONG QQQ or SPY with tight stops (crisis can reassert quickly). LONG XLV (Healthcare — regime overweight) as growth + defensive blend. COVER any short positions in XLU or XLP opened on the inflation thesis. This is a 1-2 day trade, not a regime shift."
+              }
+            ]
+          },
+          {
+            "event": "VIX ACCELERATION & LIQUIDITY STRESS EVENT",
+            "scenarios": [
+              {
+                "condition": "If VIX breaks above 30 intraday (regardless of CPI) — triggering systematic de-risking from risk-parity and CTA strategies — and defensives continue to sell alongside cyclicals (as seen yesterday with XLP -1.32%, XLU -0.84%)",
+                "implication": "Correlation-1 environment: everything sells. This is the scenario where normal sector rotation logic fails entirely. Cash becomes the only 'long.' HY spreads widen materially beyond 100bps. USD surges as global dollar funding stress emerges. BOJ tests 160 on USD/JPY. S&P tests the 20-day low support zone. The 2-10 spread may paradoxically flatten as long-end yields drop in a flight-to-quality panic (overriding the bear-steepener trend).",
+                "trade": "PURE CRISIS PLAYBOOK — SHORT broad market indices (SPY, IWM — Russell most vulnerable given -0.2% already lagging). LONG VXX or UVXY as volatility accelerates (treat as short equity surrogate, -15 long penalty applies but VIX instruments are unique). LONG TLT if flight-to-quality dominates (bonds rally). REDUCE all equity exposure including defensives. CASH IS A POSITION. Do not fight this regime — the -0 short penalty exists for exactly this scenario."
+              }
+            ]
+          }
+        ]
+      },
+      "recommendations": [
+        {
+          "symbol": "SQQQ",
+          "direction": "long",
+          "entryPrice": 18.75,
+          "targetPrice": 21.56,
+          "stopLoss": 17.62,
+          "thesis": "Long SQQQ (3x inverse Nasdaq) as a regime-aligned short-equivalent play. CPI printed in-line today but the market faces compounding headwinds: 10Y yields spiking to 4.214%, oil disruption stoking forward inflation fears, and a CRISIS-regime VIX of 27.29 with term-structure backwardation. Tech sector is explicitly underweighted by the regime; any CPI relief rally is likely to fade into the stagflation narrative.",
+          "catalyst": "February CPI release at 8:30 AM ET on March 11, 2026 (in-line print removes upside catalyst; focus shifts to oil-driven inflation forward expectations). Compounded by 10Y Treasury yield surging to 4.214%, regime backwardation in VIX, and tech underperformance trend in CRISIS regime.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 83,
+              "reasoning": "CPI in-line (no upside surprise) removes a bullish catalyst. Yield shock at 4.214% is a quantified, published data point. Oil-driven forward inflation risk (Varghese/Carson Group: 'calm before the storm') is an articulated, analyst-supported thesis. Multiple converging headwinds visible pre-market."
+            },
+            "technicalSetup": {
+              "score": 82,
+              "reasoning": "Nasdaq in multi-week decline; S&P down -1.36% over 5 days, -2.39% over 20 days. VIX at 27.29 in backwardation signals near-term fear premium. SQQQ is a leveraged instrument that benefits from continued tech pressure; macro trend intact. Crisis regime technical context supports short-side positioning."
+            },
+            "riskReward": {
+              "score": 84,
+              "reasoning": "Entry ~$18.75, target ~$21.56 (+15%), stop ~$17.62 (-6%). Ratio ~2.5:1. Crisis regime rules require 1.5x target scaling, which is incorporated. Risk is a CPI-relief gap-up in tech; stop at 6% accounts for that. Leveraged ETF amplifies both; position sizing must be small."
+            },
+            "volumeLiquidity": {
+              "score": 88,
+              "reasoning": "SQQQ averages millions of shares per day. On high-volatility CPI days, volume typically surges 2-3x. Extremely liquid with tight bid-ask spread. No liquidity constraints for typical position sizes."
+            },
+            "marketAlignment": {
+              "score": 92,
+              "reasoning": "Perfect regime alignment: CRISIS regime (90% confidence), directional bias -60, tech sector explicitly underweighted, short trades carry 0 penalty. SQQQ long is the quintessential regime-aligned trade for this environment. Stagflation narrative (oil + rising yields + in-line CPI) supports continued tech pressure."
+            },
+            "informationEdge": {
+              "score": 80,
+              "reasoning": "Multiple data points available pre-market: exact CPI figures, 10Y yield level (4.214%), VIX regime, oil settlement (-11.94%), EIA outlook (Brent above $95/b for 2 months), IEA reserve release discussions. Carson Group macro strategist quote provides narrative anchor. Edge is in synthesis, not proprietary data."
+            },
+            "timingUrgency": {
+              "score": 82,
+              "reasoning": "CPI day creates binary reaction risk at open. In-line CPI means no sustained relief rally — any pop is a fade opportunity. The 8:30 AM release and subsequent market open at 9:30 AM create a specific entry window. Post-CPI positioning needs to be established before the narrative firms up."
+            }
+          }
+        },
+        {
+          "symbol": "XLE",
+          "direction": "short",
+          "entryPrice": 58.5,
+          "targetPrice": 52.65,
+          "stopLoss": 61.43,
+          "thesis": "Short the Energy Select Sector ETF following oil's historic 11.94% single-session collapse on March 10, driven by a false Navy-escort-through-Hormuz claim that was subsequently corrected by the White House. The correction removes a key bullish catalyst, G7/IEA emergency reserve release discussions add further supply-side pressure, and Trump's SPR tap hint (after Tuesday's close) signals further supply-side intervention. Oil remains volatile but the narrative has shifted from supply-shock-induced surge to government-intervention-induced normalization.",
+          "catalyst": "Oil collapsed 11.94% (WTI to $83.45) on March 10 after Energy Secretary Wright's social media post about a Navy tanker escort was debunked by the White House. G7 asked IEA to prepare emergency oil stockpile release scenarios. Trump hinted at SPR tap post-close on March 10. These multiple bearish oil catalysts pressure XLE at open on March 11.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 84,
+              "reasoning": "Three distinct, named catalysts: (1) White House correction of Wright's false Navy escort post, (2) G7/IEA emergency reserve release discussions, (3) Trump SPR tap hint. All occurred before market open on March 11. Oil settled at $83.45 WTI — a quantified, timestamped level. Catalyst chain is clear."
+            },
+            "technicalSetup": {
+              "score": 79,
+              "reasoning": "XLE had surged >22% YTD on oil shock but experienced a severe single-day breakdown on March 10. Post a -12% oil day, energy stocks likely gapped lower. Short after such a large move carries gap-fill risk — the main technical caution. However, trend momentum has turned; lower highs forming. Regime supports short."
+            },
+            "riskReward": {
+              "score": 76,
+              "reasoning": "Entry ~$58.50, target ~$52.65 (-10%), stop ~$61.43 (+5%). Ratio ~2:1. Shorting after a large down-day carries mean-reversion risk; stop must be respected. The 1.5x crisis regime target scaling is incorporated. Risk is if oil rebounds sharply on renewed Hormuz tension or a genuine Navy escort occurs."
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": "XLE is the largest energy sector ETF with billions in AUM. Extremely liquid, tight spreads, deep order book. Earnings-event and macro-event days drive outsized volume. No liquidity concerns."
+            },
+            "marketAlignment": {
+              "score": 82,
+              "reasoning": "CRISIS regime with directional bias -60 supports short positioning. Energy had been the outlier sector (only green YTD) but the oil supply narrative is fracturing. Short trades carry 0 regime penalty. The energy sector now faces a new headwind: government-coordinated supply response."
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": "Key data: WTI settled $83.45 (vs ~$94 prior), White House correction of Wright post, G7/IEA reserve release prep, Trump SPR hint — all published and timestamped before March 11 open. EIA forecast of Brent above $95 for 2 months shows structural support underneath, which is the primary risk to the short."
+            },
+            "timingUrgency": {
+              "score": 72,
+              "reasoning": "The major move happened on March 10. Shorting at open March 11 is a continuation play, not a fresh break. Timing urgency is moderate — the catalyst already priced in partially. However, if oil futures remain weak overnight (consistent with the false-positive correction), XLE opens lower and the entry is valid."
+            }
+          }
+        }
+      ],
+      "outcomes": [],
+      "scores": {
+        "directionAccuracy": 0,
+        "targetHitRate": 0,
+        "stopHitRate": 0,
+        "avgReturnPercent": 0,
+        "profitFactor": 0,
+        "winRate": 0,
+        "totalScore": 50
+      },
+      "dimensionAnalysis": {},
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 24387
     }
   ],
   "bestScore": 100,
@@ -43154,8 +43457,8 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T19:10:54.802Z",
-  "totalTokensUsed": 3625812,
+  "lastUpdatedAt": "2026-04-06T19:20:24.119Z",
+  "totalTokensUsed": 3650199,
   "weightHistory": [
     {
       "trial": 10,
@@ -44066,6 +44369,7 @@
   "completedDates": [
     "2026-03-12",
     "2024-08-12",
-    "2024-08-26"
+    "2024-08-26",
+    "2026-03-11"
   ]
 }
