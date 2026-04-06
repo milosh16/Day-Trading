@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-06T17:50:12.067Z",
+  "lastUpdated": "2026-04-06T17:52:06.047Z",
   "insights": [
     {
       "discoveredAtTrial": 170,
@@ -229,6 +229,144 @@
       "confidenceScore": 60,
       "id": "insight-trade_selection-mnnhjzoj",
       "discoveredAt": "2026-04-06T17:50:12.067Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Cap maximum trades per day at 1. The best trials were all single-trade days; multi-trade days (138, 161, 162, 75) are the worst performers. If two candidates score above threshold, take ONLY the highest-scoring one.",
+      "promptFragment": "Cap maximum trades per day at 1. The best trials were all single-trade days; multi-trade days (138, 161, 162, 75) are the worst performers. If two candidates score above threshold, take ONLY the highest-scoring one.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhmfmn",
+      "discoveredAt": "2026-04-06T17:52:06.047Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Prohibit correlated sector bets: never recommend two tickers from the same sector or ETF family (e.g., LRCX+SMH, AMAT+SMH, MSFT+AMD). Implement a sector-deduplication filter that forces the second pick to be in a different GICS sector.",
+      "promptFragment": "Prohibit correlated sector bets: never recommend two tickers from the same sector or ETF family (e.g., LRCX+SMH, AMAT+SMH, MSFT+AMD). Implement a sector-deduplication filter that forces the second pick to be in a different GICS sector.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhmfmn",
+      "discoveredAt": "2026-04-06T17:52:06.047Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Lower the composite score threshold from ~65-70 to 58. The algorithm is passing on 83.5% of trading days, which means it's missing high-quality setups. The risk-on days with 58-61% regime confidence and bullish briefings (Trials 163, 166) should absolutely generate trades.",
+      "promptFragment": "Lower the composite score threshold from ~65-70 to 58. The algorithm is passing on 83.5% of trading days, which means it's missing high-quality setups. The risk-on days with 58-61% regime confidence and bullish briefings (Trials 163, 166) should absolutely generate trades.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhmfmn",
+      "discoveredAt": "2026-04-06T17:52:06.047Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "When regime is classified as 'risk-on' with confidence >55% AND briefing is 'bullish', force the system to generate at least one long candidate. The current pipeline allows risk-on+bullish to produce zero trades, which is a logic failure.",
+      "promptFragment": "When regime is classified as 'risk-on' with confidence >55% AND briefing is 'bullish', force the system to generate at least one long candidate. The current pipeline allows risk-on+bullish to produce zero trades, which is a logic failure.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhmfmn",
+      "discoveredAt": "2026-04-06T17:52:06.047Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Add a regime confidence floor: if regime confidence is below 40%, override to 'uncertain' and only allow mean-reversion or volatility plays, not directional bets. The 34-35% confidence 'rotation' and 'range-bound' labels are noise.",
+      "promptFragment": "Add a regime confidence floor: if regime confidence is below 40%, override to 'uncertain' and only allow mean-reversion or volatility plays, not directional bets. The 34-35% confidence 'rotation' and 'range-bound' labels are noise.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhmfmn",
+      "discoveredAt": "2026-04-06T17:52:06.047Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Stabilize weight evolution by using exponential moving average of weights across trials with decay factor 0.95, preventing wild oscillations between trials. Current weights are effectively random-walking.",
+      "promptFragment": "Stabilize weight evolution by using exponential moving average of weights across trials with decay factor 0.95, preventing wild oscillations between trials. Current weights are effectively random-walking.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhmfmn",
+      "discoveredAt": "2026-04-06T17:52:06.047Z",
       "validated": false,
       "active": false
     }
