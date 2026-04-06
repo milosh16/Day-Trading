@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Card, { StatusBadge } from "@/components/Card";
+import { useSettingsStore } from "@/lib/store";
 import type { BriefingSection, ScenarioAnalysis } from "@/lib/types";
 
 /* ================================================================
@@ -235,6 +236,63 @@ export default function BriefingPage() {
 
   // --- Expandable sections ---
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set());
+
+  // --- Trade execution ---
+  const { settings } = useSettingsStore();
+  const [executingTrade, setExecutingTrade] = useState<string | null>(null);
+  const [tradeConfirm, setTradeConfirm] = useState<Recommendation | null>(null);
+  const [tradeResult, setTradeResult] = useState<{ symbol: string; success: boolean; message: string } | null>(null);
+
+  const alpacaBaseUrl = settings.alpacaKeys?.paperTrading !== false
+    ? "https://app.alpaca.markets/paper/trade"
+    : "https://app.alpaca.markets/trade";
+
+  const openInAlpaca = (rec: Recommendation) => {
+    window.open(`${alpacaBaseUrl}/${rec.symbol}`, "_blank");
+  };
+
+  const executeTradeViaApi = async (rec: Recommendation) => {
+    if (!settings.alpacaKeys) {
+      setTradeResult({ symbol: rec.symbol, success: false, message: "Set Alpaca API keys in Settings first" });
+      return;
+    }
+    setExecutingTrade(rec.symbol);
+    setTradeConfirm(null);
+    try {
+      const side = rec.direction === "long" ? "buy" : "sell";
+      const res = await fetch("/api/alpaca/orders", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-alpaca-key": settings.alpacaKeys.apiKey,
+          "x-alpaca-secret": settings.alpacaKeys.secretKey,
+          "x-alpaca-paper": String(settings.alpacaKeys.paperTrading),
+        },
+        body: JSON.stringify({
+          symbol: rec.symbol,
+          side,
+          type: "limit",
+          time_in_force: "day",
+          limit_price: rec.entryPrice.toFixed(2),
+          qty: "1",
+          order_class: "bracket",
+          take_profit: { limit_price: rec.targetPrice.toFixed(2) },
+          stop_loss: { stop_price: rec.stopLoss.toFixed(2) },
+        }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setTradeResult({ symbol: rec.symbol, success: true, message: `Order submitted: ${side.toUpperCase()} ${rec.symbol} @ $${rec.entryPrice.toFixed(2)} (ID: ${data.id?.slice(0, 8)})` });
+      } else {
+        const err = await res.json().catch(() => ({ error: "Unknown error" }));
+        setTradeResult({ symbol: rec.symbol, success: false, message: err.error || "Order failed" });
+      }
+    } catch (e) {
+      setTradeResult({ symbol: rec.symbol, success: false, message: String(e) });
+    } finally {
+      setExecutingTrade(null);
+    }
+  };
 
   // --- Load on mount ---
   useEffect(() => {
@@ -726,9 +784,106 @@ export default function BriefingPage() {
               {rec.catalyst && (
                 <p className="text-[11px] text-ios-blue mt-1">Catalyst: {rec.catalyst}</p>
               )}
+
+              {/* Trade action buttons */}
+              {!isRevised && (
+                <div className="flex gap-2 mt-2 pt-2 border-t border-ios-separator/30">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); openInAlpaca(rec); }}
+                    className="flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg bg-ios-blue/15 text-ios-blue active:bg-ios-blue/25 transition-colors"
+                  >
+                    Trade on Alpaca
+                  </button>
+                  {settings.alpacaKeys && (
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setTradeConfirm(rec); }}
+                      disabled={executingTrade === rec.symbol}
+                      className={`flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg transition-colors ${
+                        rec.direction === "long"
+                          ? "bg-ios-green/15 text-ios-green active:bg-ios-green/25"
+                          : "bg-ios-red/15 text-ios-red active:bg-ios-red/25"
+                      } disabled:opacity-50`}
+                    >
+                      {executingTrade === rec.symbol ? "Sending..." : `Execute ${rec.direction === "long" ? "Buy" : "Sell"}`}
+                    </button>
+                  )}
+                </div>
+              )}
+
+              {/* Trade result toast */}
+              {tradeResult && tradeResult.symbol === rec.symbol && (
+                <div className={`mt-2 text-[11px] p-2 rounded-lg ${
+                  tradeResult.success ? "bg-ios-green/10 text-ios-green" : "bg-ios-red/10 text-ios-red"
+                }`}>
+                  {tradeResult.message}
+                  <button onClick={() => setTradeResult(null)} className="ml-2 underline">dismiss</button>
+                </div>
+              )}
             </div>
           ))}
         </div>
+
+        {/* Execution confirmation modal */}
+        {tradeConfirm && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={() => setTradeConfirm(null)}>
+            <div className="bg-ios-card rounded-2xl p-5 mx-6 max-w-sm w-full shadow-2xl" onClick={e => e.stopPropagation()}>
+              <h3 className="text-lg font-bold mb-3">Confirm Order</h3>
+              <div className="space-y-2 mb-4">
+                <div className="flex justify-between text-sm">
+                  <span className="text-ios-gray">Symbol</span>
+                  <span className="font-semibold">{tradeConfirm.symbol}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-ios-gray">Side</span>
+                  <span className={`font-semibold ${tradeConfirm.direction === "long" ? "text-ios-green" : "text-ios-red"}`}>
+                    {tradeConfirm.direction === "long" ? "BUY" : "SELL"}
+                  </span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-ios-gray">Type</span>
+                  <span>Bracket (Limit + TP + SL)</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-ios-gray">Entry</span>
+                  <span className="font-semibold">${tradeConfirm.entryPrice.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-ios-gray">Take Profit</span>
+                  <span className="text-ios-green">${tradeConfirm.targetPrice.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-ios-gray">Stop Loss</span>
+                  <span className="text-ios-red">${tradeConfirm.stopLoss.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-ios-gray">Qty</span>
+                  <span>1 share</span>
+                </div>
+                <p className="text-[11px] text-ios-gray mt-1">
+                  {settings.alpacaKeys?.paperTrading !== false ? "Paper trading" : "LIVE TRADING"}
+                </p>
+              </div>
+              <div className="flex gap-3">
+                <button
+                  onClick={() => setTradeConfirm(null)}
+                  className="flex-1 text-sm font-semibold py-2.5 rounded-xl bg-ios-elevated text-white active:bg-ios-gray-3 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={() => executeTradeViaApi(tradeConfirm)}
+                  className={`flex-1 text-sm font-semibold py-2.5 rounded-xl transition-colors ${
+                    tradeConfirm.direction === "long"
+                      ? "bg-ios-green text-black active:bg-ios-green/80"
+                      : "bg-ios-red text-white active:bg-ios-red/80"
+                  }`}
+                >
+                  {tradeConfirm.direction === "long" ? "Buy" : "Sell"} {tradeConfirm.symbol}
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </Card>
     );
   };
