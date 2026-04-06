@@ -1,0 +1,181 @@
+{
+  "trial": 50,
+  "reviewedAt": "2026-04-06T00:36:35.798Z",
+  "tokensUsed": 6385,
+  "insights": "The most glaring problem with this algorithm is its extreme conservatism: 43 out of 50 trials produced NO trades (86% no-trade rate). Of the 7 trials that did trade, 4 were winners and 3 were losers, yielding a 57% win rate with a strong profit factor of 5.71 when it does trade. This tells us the signal quality is actually decent — the algorithm picks winners when it acts — but it is catastrophically over-filtering, leaving massive alpha on the table. A day-trading algorithm that trades 14% of the time is not a day-trading algorithm; it's barely a monthly trading algorithm. The threshold is clearly too high or the conviction scoring is systematically too conservative across multiple dimensions simultaneously.\n\nThe dimension predictive power data is essentially useless for calibration: every single dimension shows 90/100 predictive power across only 5 samples. This is a massive red flag — it means the feedback loop is not actually differentiating which dimensions matter. Either the scoring methodology is broken (likely assigning near-identical scores to all dimensions), or the sample size is so small that no real signal has emerged. With only 7 actual trades across 50 trials, we simply cannot learn which dimensions predict outcomes. This is a chicken-and-egg problem: the algorithm needs to trade MORE (even at slightly lower conviction) to generate the data needed to calibrate the dimensions properly. I would recommend a 'learning mode' where the threshold is lowered for the next 20-30 trials to gather calibration data.\n\nLooking at the last 10 trials specifically: Trial 41 was the only trade (PLUG long in risk-on, +6.45% — excellent). But Trials 42-50 were ALL no-trades despite several presenting clearly actionable setups. Trial 43 (crisis regime, 90% confidence, VIX spiking 21.89%) should have generated short or put-spread recommendations — crisis regimes with 90% confidence are among the highest-conviction environments. Trial 44 identified a rotation correctly (defensives leading) and even generated 3 recommendations (MDT long, LOW short, VNQ long) but scored 50 with no outcome data reported, suggesting the trades were recommended but not executed or not tracked. Trial 49 (rotation with appetite at 61 and stress at only 12) was a benign enough environment for selective longs in rotation beneficiaries. The algorithm appears to be treating low regime confidence (34-45%) as a reason NOT to trade, when in fact rotation and range-bound regimes inherently have lower classification confidence — that's the nature of those regimes, not a signal to abstain.\n\nThe weight evolution shows erratic swings that aren't learning meaningful patterns: catalystClarity bounced between 12.6% and 18.4%, technicalSetup between 12.6% and 18.4%, marketAlignment between 12.6% and 19.8%. These swings are driven by individual trade outcomes on a tiny sample, not statistical learning. The weights should be stabilized until we have at least 30+ trades to learn from. The current approach of adjusting weights after each trial with so few data points is pure noise-fitting.\n\nThe regime classifier shows a concerning pattern: it correctly identifies crisis regimes with high confidence (90%) but then the trade recommendation engine refuses to act on them. Meanwhile, rotation regimes (which appeared in 4 of the last 10 trials) are classified with low confidence (36-45%) and uniformly produce no trades. The pipeline has a fundamental disconnect: the regime classifier and the trade recommender are not speaking the same language. A rotation regime should trigger rotation-specific strategies (long outperformers, short underperformers, pairs trades) rather than requiring the same conviction threshold as a directional bet in a trending market.",
+  "weightAdjustments": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.15,
+    "riskReward": 0.18,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.17,
+    "informationEdge": 0.12,
+    "timingUrgency": 0.08
+  },
+  "thresholdRecommendation": 58,
+  "strategyChanges": [
+    "Lower the composite score threshold from current effective ~72-75 to 58 for the next 30 trials to enter 'calibration mode' — the algorithm MUST trade more frequently (target 40-50% of days) to generate the data needed to properly calibrate dimension weights. Track paper P&L separately for trades in the 58-70 band to validate whether the lower threshold captures alpha.",
+    "Implement regime-specific trade templates: CRISIS → short indices/high-beta, buy puts, long VIX; ROTATION → pairs trades (long outperformer sector ETF / short underperformer), sector-specific longs; RISK-ON → long high-beta, small-caps, momentum leaders; RANGE-BOUND → mean-reversion trades, sell strangles conceptually, tight stop scalps. Currently the algorithm uses one universal threshold regardless of regime, which is why it almost never trades in rotation/range-bound.",
+    "Decouple regime confidence from trade conviction: a 36% confidence rotation regime is not a low-conviction environment — it's simply a regime that is inherently harder to classify. The trade conviction should be assessed WITHIN the regime context, not penalized by regime classification confidence.",
+    "Freeze weight adjustments for 20 trials: with only 5 scored samples per dimension, the current weight evolution is pure noise. Lock weights at the recommended values and only re-optimize after accumulating 25+ trades with outcome data.",
+    "Add a 'missed opportunity' tracker: for every no-trade day, record what the TOP 3 potential trades were and their next-day outcomes. This creates a shadow portfolio that reveals the cost of over-filtering and provides calibration data without risking capital.",
+    "In crisis regimes with 90% confidence, REQUIRE at least one defensive/short recommendation rather than defaulting to no-trade. These are among the most predictable environments and the algorithm is leaving its highest-conviction edge unexploited."
+  ],
+  "blindSpots": [
+    "Crisis regimes are being treated as 'too dangerous to trade' when they are actually among the most directionally predictable environments — VIX spikes, correlation increases, and short/defensive trades have the highest expected value. Trials 43 and 48 both had 90% confidence crisis classifications and zero trades.",
+    "Rotation regimes (4 of last 10 trials) are being systematically ignored because their inherently lower classification confidence (36-45%) is being conflated with low trade conviction. The algorithm has no rotation-specific strategy.",
+    "The algorithm has ZERO short trades in the last 10 trials and only 1 short in 50 trials total (PLTR short, Trial 8, which was a winner). There is a massive long bias in recommendation generation that leaves half the opportunity set untouched.",
+    "Volume/liquidity dimension at 14.8% weight is likely adding noise rather than signal for large/mid-cap names that are always liquid. It should only be a gating factor (binary: liquid enough or not) rather than a scored dimension consuming weight.",
+    "No earnings/event calendar integration apparent in the pipeline — several of these dates (especially Trial 43, July 31) fall during peak earnings season, and the briefing doesn't reference specific upcoming catalysts that would create asymmetric opportunities."
+  ],
+  "pipelineIssues": [
+    "CRITICAL: The feedback loop is broken. All 7 dimensions show identical 90/100 predictive power, which means the scoring function is not differentiating dimension contributions to trade outcomes. This needs to be debugged immediately — either the predictive power calculation has a bug, or the sample size is too small to produce variance (likely both).",
+    "Regime classification confidence is being double-counted: once in the regime label (which affects briefing tone) and again in the trade conviction scoring (via marketAlignment). This creates an echo chamber where low-confidence regimes systematically suppress all trades.",
+    "The briefing narrative is disconnected from trade generation: Trial 44's briefing correctly identified rotation into defensives and generated 3 recommendations, but the outcome tracking shows 'N/A' — suggesting a pipeline break between recommendation generation and execution/tracking. If trades were recommended but not executed, why?",
+    "Trial 44 shows score=50 with 3 recommendations but outcomes listed as N/A and win rate 0%, PF=0 — this is inconsistent. Either the trades were executed and lost (which should show actual returns) or they weren't executed (which should show no trades). This data integrity issue means we may be learning from corrupted feedback.",
+    "The scoring system assigns 50 to all no-trade days, which artificially inflates the average score and makes it impossible to distinguish between 'correctly avoided a bad day' (should score higher) and 'missed a great opportunity' (should score lower). No-trade days need differentiated scoring based on what the market actually did."
+  ],
+  "revisedRecommendations": {
+    "41": [
+      {
+        "symbol": "PLUG",
+        "direction": "long",
+        "reasoning": "Correctly identified — risk-on regime at 68% confidence with small-caps leading +2.99%. PLUG was the right call and delivered +6.45%. Would additionally recommend:"
+      },
+      {
+        "symbol": "IWM",
+        "direction": "long",
+        "reasoning": "Russell 2000 leading at +2.99% in a risk-on regime is the textbook beta trade. IWM should have been the primary recommendation alongside or instead of single-stock PLUG risk."
+      },
+      {
+        "symbol": "SOXX",
+        "direction": "long",
+        "reasoning": "Briefing noted semis surging — SOXX as a sector vehicle captures the theme with less single-name risk than picking individual semi stocks."
+      }
+    ],
+    "42": [
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Range-bound at 39% confidence with stress at only 16 and appetite at 50 (neutral). This is a mean-reversion environment — if SPY was near the bottom of its recent range, a long with tight stops was appropriate. The 'bearish' briefing tone was likely an overreaction to a choppy but non-threatening tape."
+      },
+      {
+        "symbol": "TLT",
+        "direction": "long",
+        "reasoning": "In range-bound equity regimes with neutral risk appetite, bonds often provide a decorrelated opportunity. January 29 2025 was during a period of rate uncertainty — TLT as a hedge or directional play deserved evaluation."
+      }
+    ],
+    "43": [
+      {
+        "symbol": "SQQQ",
+        "direction": "long",
+        "reasoning": "Crisis regime at 90% confidence with VIX spiking 21.89% — this is the highest-conviction short environment possible. SQQQ (3x inverse Nasdaq) or direct QQQ puts would capture the downside momentum. NOT trading here was the algorithm's biggest miss."
+      },
+      {
+        "symbol": "VXX",
+        "direction": "long",
+        "reasoning": "VIX spiking in a confirmed crisis — long volatility is the textbook trade. VXX or UVXY should have been recommended with a defined exit at VIX mean-reversion."
+      },
+      {
+        "symbol": "XLU",
+        "direction": "long",
+        "reasoning": "Crisis regimes drive flight to safety. Utilities as a defensive sector long paired with a broad market short creates a hedged position aligned with the crisis regime."
+      }
+    ],
+    "44": [
+      {
+        "symbol": "XLV",
+        "direction": "long",
+        "reasoning": "Rotation regime with defensives (Staples, Healthcare) leading per the briefing. XLV captures the healthcare rotation theme as a sector ETF with better liquidity than single-name MDT."
+      },
+      {
+        "symbol": "XLP",
+        "direction": "long",
+        "reasoning": "Staples were explicitly called out as rotation beneficiaries in the briefing. XLP is the direct expression of this theme."
+      },
+      {
+        "symbol": "QQQ",
+        "direction": "short",
+        "reasoning": "In a defensive rotation, the short side should target the sectors losing flows — tech/growth (QQQ) is the natural short leg to pair against defensive longs, creating a market-neutral rotation trade."
+      }
+    ],
+    "45": [
+      {
+        "symbol": "SMH",
+        "direction": "long",
+        "reasoning": "Briefing explicitly stated 'semis and tech surged while everything else sold off' — this is a clear momentum concentration trade. SMH captures semi strength directly."
+      },
+      {
+        "symbol": "IWM",
+        "direction": "short",
+        "reasoning": "If tech is surging while 'everything else sold off,' small-caps are likely underperforming. IWM short paired with SMH long creates a rotation pairs trade aligned with the identified bifurcation."
+      }
+    ],
+    "46": [
+      {
+        "symbol": "GLD",
+        "direction": "long",
+        "reasoning": "Range-bound equities near 52-week lows with stress at 24 (elevated but not crisis) — gold tends to perform well in uncertain, range-bound equity environments. This is a diversifying trade when equity signals are murky."
+      },
+      {
+        "symbol": "SPY",
+        "direction": "long",
+        "reasoning": "Near 52-week lows in a range-bound regime suggests mean-reversion potential. A long SPY with a tight stop just below the recent low offers asymmetric risk-reward if the range holds. April 28, 2025 was during the post-tariff uncertainty period — but being near lows in a range-bound (not crisis) regime favors the long side."
+      }
+    ],
+    "47": [
+      {
+        "symbol": "IWM",
+        "direction": "long",
+        "reasoning": "Briefing explicitly states 'small-caps leading large-caps' in a rotation regime. IWM long is the direct expression of this rotation theme. October 2024 was indeed a period of small-cap relative strength."
+      },
+      {
+        "symbol": "RSP",
+        "direction": "long",
+        "reasoning": "Rotation into small-caps often coincides with broadening participation. RSP (equal-weight S&P) benefits from breadth expansion and is a lower-volatility way to express the rotation theme versus IWM."
+      }
+    ],
+    "48": [
+      {
+        "symbol": "SH",
+        "direction": "long",
+        "reasoning": "Crisis regime at 90% confidence, VIX at 21.65 and rising — inverse S&P (SH) or SPXU for leveraged exposure. Same logic as Trial 43: high-confidence crisis regimes demand defensive/short positioning, and defaulting to no-trade is leaving the algorithm's most predictable edge unexploited."
+      },
+      {
+        "symbol": "TLT",
+        "direction": "long",
+        "reasoning": "March 27, 2025 crisis with risk appetite at only 24 — flight to quality into treasuries is a high-probability trade. TLT long captures the safety bid."
+      },
+      {
+        "symbol": "UVXY",
+        "direction": "long",
+        "reasoning": "VIX surging 15.84% with crisis confirmation — long volatility via UVXY with a defined exit (e.g., VIX reversal below 20) provides crisis-alpha exposure."
+      }
+    ],
+    "49": [
+      {
+        "symbol": "XLF",
+        "direction": "long",
+        "reasoning": "Rotation regime with appetite at 61 (mildly bullish) and stress at only 12 (very low). Five consecutive down days create a mean-reversion setup. After 5 down days in a low-stress environment with positive risk appetite, sector rotation longs in whatever sector is showing relative strength (financials were strong in Aug 2025) make sense."
+      },
+      {
+        "symbol": "IWM",
+        "direction": "long",
+        "reasoning": "Low stress, positive appetite, rotation regime after 5 down days — this is a classic small-cap bounce setup. The selloff was likely overdone given the benign stress readings."
+      }
+    ],
+    "50": [
+      {
+        "symbol": "XLE",
+        "direction": "long",
+        "reasoning": "Rotation regime on September 30 with appetite at 58 (constructive) and stress at 14 (low). End-of-quarter window dressing often drives flows into outperforming sectors. Energy was a Q3 2025 rotation beneficiary."
+      },
+      {
+        "symbol": "VTV",
+        "direction": "long",
+        "reasoning": "Rotation regimes with constructive appetite favor value over growth. VTV (Vanguard Value ETF) captures the broadening rotation theme identified in the briefing where 'surface-level index gains mask' underlying rotation."
+      }
+    ]
+  },
+  "rawResponse": "\n\n<json>{\n  \"insights\": \"The most glaring problem with this algorithm is its extreme conservatism: 43 out of 50 trials produced NO trades (86% no-trade rate). Of the 7 trials that did trade, 4 were winners and 3 were losers, yielding a 57% win rate with a strong profit factor of 5.71 when it does trade. This tells us the signal quality is actually decent — the algorithm picks winners when it acts — but it is catastrophically over-filtering, leaving massive alpha on the table. A day-trading algorithm that trades 14% of the time is not a day-trading algorithm; it's barely a monthly trading algorithm. The threshold is clearly too high or the conviction scoring is systematically too conservative across multiple dimensions simultaneously.\\n\\nThe dimension predictive power data is essentially useless for calibration: every single dimension shows 90/100 predictive power across only 5 samples. This is a massive red flag — it means the feedback loop is not actually differentiating which dimensions matter. Either the scoring methodology is broken (likely assigning near-identical scores to all dimensions), or the sample size is so small that no real signal has emerged. With only 7 actual trades across 50 trials, we simply cannot learn which dimensions predict outcomes. This is a chicken-and-egg problem: the algorithm needs to trade MORE (even at slightly lower conviction) to generate the data needed to calibrate the dimensions properly. I would recommend a 'learning mode' where the threshold is lowered for the next 20-30 trials to gather calibration data.\\n\\nLooking at the last 10 trials specifically: Trial 41 was the only trade (PLUG long in risk-on, +6.45% — excellent). But Trials 42-50 were ALL no-trades despite several presenting clearly actionable setups. Trial 43 (crisis regime, 90% confidence, VIX spiking 21.89%) should have generated short or put-spread recommendations — crisis regimes with 90% confidence are among the highest-conviction environments. Trial 44 identified a rotation correctly (defensives leading) and even generated 3 recommendations (MDT long, LOW short, VNQ long) but scored 50 with no outcome data reported, suggesting the trades were recommended but not executed or not tracked. Trial 49 (rotation with appetite at 61 and stress at only 12) was a benign enough environment for selective longs in rotation beneficiaries. The algorithm appears to be treating low regime confidence (34-45%) as a reason NOT to trade, when in fact rotation and range-bound regimes inherently have lower classification confidence — that's the nature of those regimes, not a signal to abstain.\\n\\nThe weight evolution shows erratic swings that aren't learning meaningful patterns: catalystClarity bounced between 12.6% and 18.4%, technicalSetup between 12.6% and 18.4%, marketAlignment between 12.6% and 19.8%. These swings are driven by individual trade outcomes on a tiny sample, not statistical learning. The weights should be stabilized until we have at least 30+ trades to learn from. The current approach of adjusting weights after each trial with so few data points is pure noise-fitting.\\n\\nThe regime classifier shows a concerning pattern: it correctly identifies crisis regimes with high confidence (90%) but then the trade recommendation engine refuses to act on them. Meanwhile, rotation regimes (which appeared in 4 of the last 10 trials) are classified with low confidence (36-45%) and uniformly produce no trades. The pipeline has a fundamental disconnect: the regime classifier and the trade recommender are not speaking the same language. A rotation regime should trigger rotation-specific strategies (long outperformers, short underperformers, pairs trades) rather than requiring the same conviction threshold as a directional bet in a trending market.\",\n  \"weightAdjustments\": {\n    \"catalystClarity\": 0.20,\n    \"technicalSetup\": 0.15,\n    \"riskReward\": 0.18,\n    \"volumeLiquidity\": 0.10,\n    \"marketAlignment\": 0.17,\n    \"informationEdge\": 0.12,\n    \"timingUrgency\": 0.08\n  },\n  \"thresholdRecommendation\": 58,\n  \"strategyChanges\": [\n    \"Lower the composite score threshold from current effective ~72-75 to 58 for the next 30 trials to enter 'calibration mode' — the algorithm MUST trade more frequently (target 40-50% of days) to generate the data needed to properly calibrate dimension weights. Track paper P&L separately for trades in the 58-70 band to validate whether the lower threshold captures alpha.\",\n    \"Implement regime-specific trade templates: CRISIS → short indices/high-beta, buy puts, long VIX; ROTATION → pairs trades (long outperformer sector ETF / short underperformer), sector-specific longs; RISK-ON → long high-beta, small-caps, momentum leaders; RANGE-BOUND → mean-reversion trades, sell strangles conceptually, tight stop scalps. Currently the algorithm uses one universal threshold regardless of regime, which is why it almost never trades in rotation/range-bound.\",\n    \"Decouple regime confidence from trade conviction: a 36% confidence rotation regime is not a low-conviction environment — it's simply a regime that is inherently harder to classify. The trade conviction should be assessed WITHIN the regime context, not penalized by regime classification confidence.\",\n    \"Freeze weight adjustments for 20 trials: with only 5 scored samples per dimension, the current weight evolution is pure noise. Lock weights at the recommended values and only re-optimize after accumulating 25+ trades with outcome data.\",\n    \"Add a 'missed opportunity' tracker: for every no-trade day, record what the TOP 3 potential trades were and their next-day outcomes. This creates a shadow portfolio that reveals the cost of over-filtering and provides calibration data without risking capital.\",\n    \"In crisis regimes with 90% confidence, REQUIRE at least one defensive/short recommendation rather than defaulting to no-trade. These are among the most predictable environments and the algorithm is leaving its highest-conviction edge unexploited.\"\n  ],\n  \"blindSpots\": [\n    \"Crisis regimes are being treated as 'too dangerous to trade' when they are actually among the most directionally predictable environments — VIX spikes, correlation increases, and short/defensive trades have the highest expected value. Trials 43 and 48 both had 90% confidence crisis classifications and zero trades.\",\n    \"Rotation regimes (4 of last 10 trials) are being systematically ignored because their inherently lower classification confidence (36-45%) is being conflated with low trade conviction. The algorithm has no rotation-specific strategy.\",\n    \"The algorithm has ZERO short trades in the last 10 trials and only 1 short in 50 trials total (PLTR short, Trial 8, which was a winner). There is a massive long bias in recommendation generation that leaves half the opportunity set untouched.\",\n    \"Volume/liquidity dimension at 14.8% weight is likely adding noise rather than signal for large/mid-cap names that are always liquid. It should only be a gating factor (binary: liquid enough or not) rather than a scored dimension consuming weight.\",\n    \"No earnings/event calendar integration apparent in the pipeline — several of these dates (especially Trial 43, July 31) fall during peak earnings season, and the briefing doesn't reference specific upcoming catalysts that would create asymmetric opportunities.\"\n  ],\n  \"pipelineIssues\": [\n    \"CRITICAL: The feedback loop is broken. All 7 dimensions show identical 90/100 predictive power, which means the scoring function is not differentiating dimension contributions to trade outcomes. This needs to be debugged immediately — either the predictive power calculation has a bug, or the sample size is too small to produce variance (likely both).\",\n    \"Regime classification confidence is being double-counted: once in the regime label (which affects briefing tone) and again in the trade conviction scoring (via marketAlignment). This creates an echo chamber where low-confidence regimes systematically suppress all trades.\",\n    \"The briefing narrative is disconnected from trade generation: Trial 44's briefing correctly identified rotation into defensives and generated 3 recommendations, but the outcome tracking shows 'N/A' — suggesting a pipeline break between recommendation generation and execution/tracking. If trades were recommended but not executed, why?\",\n    \"Trial 44 shows score=50 with 3 recommendations but outcomes listed as N/A and win rate 0%, PF=0 — this is inconsistent. Either the trades were executed and lost (which should show actual returns) or they weren't executed (which should show no trades). This data integrity issue means we may be learning from corrupted feedback.\",\n    \"The scoring system assigns 50 to all no-trade days, which artificially inflates the average score and makes it impossible to distinguish between 'correctly avoided a bad day' (should score higher) and 'missed a great opportunity' (should score lower). No-trade days need differentiated scoring based on what the market actually did.\"\n  ],\n  \"revisedRecommendations\": {\n    \"41\": [\n      {\"symbol\": \"PLUG\", \"direction\": \"long\", \"reasoning\": \"Correctly identified — risk-on regime at 68% confidence with small-caps leading +2.99%. PLUG was the right call and delivered +6.45%. Would additionally recommend:\"},\n      {\"symbol\": \"IWM\", \"direction\": \"long\", \"reasoning\": \"Russell 2000 leading at +2.99% in a risk-on regime is the textbook beta trade. IWM should have been the primary recommendation alongside or instead of single-stock PLUG risk.\"},\n      {\"symbol\": \"SOXX\", \"direction\": \"long\", \"reasoning\": \"Briefing noted semis surging — SOXX as a sector vehicle captures the theme with less single-name risk than picking individual semi stocks.\"}\n    ],\n    \"42\": [\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Range-bound at 39% confidence with stress at only 16 and appetite at 50 (neutral). This is a mean-reversion environment — if SPY was near the bottom of its recent range, a long with tight stops was appropriate. The 'bearish' briefing tone was likely an overreaction to a choppy but non-threatening tape.\"},\n      {\"symbol\": \"TLT\", \"direction\": \"long\", \"reasoning\": \"In range-bound equity regimes with neutral risk appetite, bonds often provide a decorrelated opportunity. January 29 2025 was during a period of rate uncertainty — TLT as a hedge or directional play deserved evaluation.\"}\n    ],\n    \"43\": [\n      {\"symbol\": \"SQQQ\", \"direction\": \"long\", \"reasoning\": \"Crisis regime at 90% confidence with VIX spiking 21.89% — this is the highest-conviction short environment possible. SQQQ (3x inverse Nasdaq) or direct QQQ puts would capture the downside momentum. NOT trading here was the algorithm's biggest miss.\"},\n      {\"symbol\": \"VXX\", \"direction\": \"long\", \"reasoning\": \"VIX spiking in a confirmed crisis — long volatility is the textbook trade. VXX or UVXY should have been recommended with a defined exit at VIX mean-reversion.\"},\n      {\"symbol\": \"XLU\", \"direction\": \"long\", \"reasoning\": \"Crisis regimes drive flight to safety. Utilities as a defensive sector long paired with a broad market short creates a hedged position aligned with the crisis regime.\"}\n    ],\n    \"44\": [\n      {\"symbol\": \"XLV\", \"direction\": \"long\", \"reasoning\": \"Rotation regime with defensives (Staples, Healthcare) leading per the briefing. XLV captures the healthcare rotation theme as a sector ETF with better liquidity than single-name MDT.\"},\n      {\"symbol\": \"XLP\", \"direction\": \"long\", \"reasoning\": \"Staples were explicitly called out as rotation beneficiaries in the briefing. XLP is the direct expression of this theme.\"},\n      {\"symbol\": \"QQQ\", \"direction\": \"short\", \"reasoning\": \"In a defensive rotation, the short side should target the sectors losing flows — tech/growth (QQQ) is the natural short leg to pair against defensive longs, creating a market-neutral rotation trade.\"}\n    ],\n    \"45\": [\n      {\"symbol\": \"SMH\", \"direction\": \"long\", \"reasoning\": \"Briefing explicitly stated 'semis and tech surged while everything else sold off' — this is a clear momentum concentration trade. SMH captures semi strength directly.\"},\n      {\"symbol\": \"IWM\", \"direction\": \"short\", \"reasoning\": \"If tech is surging while 'everything else sold off,' small-caps are likely underperforming. IWM short paired with SMH long creates a rotation pairs trade aligned with the identified bifurcation.\"}\n    ],\n    \"46\": [\n      {\"symbol\": \"GLD\", \"direction\": \"long\", \"reasoning\": \"Range-bound equities near 52-week lows with stress at 24 (elevated but not crisis) — gold tends to perform well in uncertain, range-bound equity environments. This is a diversifying trade when equity signals are murky.\"},\n      {\"symbol\": \"SPY\", \"direction\": \"long\", \"reasoning\": \"Near 52-week lows in a range-bound regime suggests mean-reversion potential. A long SPY with a tight stop just below the recent low offers asymmetric risk-reward if the range holds. April 28, 2025 was during the post-tariff uncertainty period — but being near lows in a range-bound (not crisis) regime favors the long side.\"}\n    ],\n    \"47\": [\n      {\"symbol\": \"IWM\", \"direction\": \"long\", \"reasoning\": \"Briefing explicitly states 'small-caps leading large-caps' in a rotation regime. IWM long is the direct expression of this rotation theme. October 2024 was indeed a period of small-cap relative strength.\"},\n      {\"symbol\": \"RSP\", \"direction\": \"long\", \"reasoning\": \"Rotation into small-caps often coincides with broadening participation. RSP (equal-weight S&P) benefits from breadth expansion and is a lower-volatility way to express the rotation theme versus IWM.\"}\n    ],\n    \"48\": [\n      {\"symbol\": \"SH\", \"direction\": \"long\", \"reasoning\": \"Crisis regime at 90% confidence, VIX at 21.65 and rising — inverse S&P (SH) or SPXU for leveraged exposure. Same logic as Trial 43: high-confidence crisis regimes demand defensive/short positioning, and defaulting to no-trade is leaving the algorithm's most predictable edge unexploited.\"},\n      {\"symbol\": \"TLT\", \"direction\": \"long\", \"reasoning\": \"March 27, 2025 crisis with risk appetite at only 24 — flight to quality into treasuries is a high-probability trade. TLT long captures the safety bid.\"},\n      {\"symbol\": \"UVXY\", \"direction\": \"long\", \"reasoning\": \"VIX surging 15.84% with crisis confirmation — long volatility via UVXY with a defined exit (e.g., VIX reversal below 20) provides crisis-alpha exposure.\"}\n    ],\n    \"49\": [\n      {\"symbol\": \"XLF\", \"direction\": \"long\", \"reasoning\": \"Rotation regime with appetite at 61 (mildly bullish) and stress at only 12 (very low). Five consecutive down days create a mean-reversion setup. After 5 down days in a low-stress environment with positive risk appetite, sector rotation longs in whatever sector is showing relative strength (financials were strong in Aug 2025) make sense.\"},\n      {\"symbol\": \"IWM\", \"direction\": \"long\", \"reasoning\": \"Low stress, positive appetite, rotation regime after 5 down days — this is a classic small-cap bounce setup. The selloff was likely overdone given the benign stress readings.\"}\n    ],\n    \"50\": [\n      {\"symbol\": \"XLE\", \"direction\": \"long\", \"reasoning\": \"Rotation regime on September 30 with appetite at 58 (constructive) and stress at 14 (low). End-of-quarter window dressing often drives flows into outperforming sectors. Energy was a Q3 2025 rotation beneficiary.\"},\n      {\"symbol\": \"VTV\", \"direction\": \"long\", \"reasoning\": \"Rotation regimes with constructive appetite favor value over growth. VTV (Vanguard Value ETF) captures the broadening rotation theme identified in the briefing where 'surface-level index gains mask' underlying rotation.\"}\n    ]\n  }\n}</json>"
+}
