@@ -1,0 +1,541 @@
+{
+  "trialId": 10009,
+  "date": "2025-10-16",
+  "dateDisplay": "Thursday, October 16, 2025",
+  "generatedAt": "2026-04-06T21:11:40.301Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.63,
+      "nasdaqFuturesChange": -0.47,
+      "dowFuturesChange": -0.65,
+      "russellFuturesChange": -2.09,
+      "vixFuturesChange": -17.9,
+      "vix": 20.78,
+      "vixChange": -17.9,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 24.87,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.98,
+      "tenYearYieldChange": -1.73,
+      "twoYearYield": 3.64,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.58,
+      "threeMonthYield": 3.85,
+      "twoTenSpread": 0.34,
+      "threeMoTenYrSpread": 0.13,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.43,
+      "dollarIndexChange": 0.04,
+      "eurUsd": 1.17,
+      "eurUsdChange": 0.46,
+      "usdJpy": 150.12,
+      "usdJpyChange": -0.57,
+      "usdCny": 7.12,
+      "usdCnyChange": -0.04,
+      "oilWTI": 57.54,
+      "oilChange": 0.14,
+      "brentOil": 61.29,
+      "brentOilChange": 0.38,
+      "natGasChange": 2.38,
+      "goldPrice": 4189.9,
+      "goldChange": -2.11,
+      "silverChange": -5.96,
+      "copperChange": -0.53,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -1.44,
+      "daxChange": -1.82,
+      "ftseChange": -0.86,
+      "shanghaiChange": -1.95,
+      "hangSengChange": -2.48,
+      "kospiChange": 0.01,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 97.44999999999999,
+      "spreadChange": 0.36,
+      "igSpread": -24.84,
+      "igSpreadChange": -0.29,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.97,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.07,
+      "xlfChange": -2.78,
+      "xleChange": -1.2,
+      "xlvChange": -0.17,
+      "xlpChange": -0.69,
+      "xluChange": -1.09,
+      "xlreChange": -0.31,
+      "xliChange": -0.66,
+      "xlbChange": -0.74,
+      "xlcChange": -1.07,
+      "xlyChange": -0.97,
+      "smhChange": 0.44,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -1.59,
+      "ethereumChange": -1.6,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": true,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 13,
+      "daysToNextCPI": 27,
+      "daysToNextNFP": 22,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": -1.57,
+      "sp20DayReturn": -0.04,
+      "nasdaqVsRussell5d": -1.93,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-off",
+      "confidence": 56,
+      "directionalBias": -26,
+      "volatilityRegime": "normal",
+      "stressIndex": 19,
+      "riskAppetiteIndex": 25,
+      "keyFactors": [
+        "Futures -0.55%",
+        "Russell lagging by 1.54pp",
+        "International avg -1.42%",
+        "Weak breadth: 0% above 200 DMA",
+        "Extreme fear (F&G: 0)",
+        "USD/JPY -0.57%",
+        "S&P near 52-week low"
+      ],
+      "sectorTilts": [
+        {
+          "sector": "utilities",
+          "bias": "overweight",
+          "reason": "Defensive haven"
+        },
+        {
+          "sector": "healthcare",
+          "bias": "overweight",
+          "reason": "Defensive haven"
+        },
+        {
+          "sector": "staples",
+          "bias": "overweight",
+          "reason": "Defensive rotation"
+        },
+        {
+          "sector": "tech",
+          "bias": "underweight",
+          "reason": "De-risking from high-beta"
+        }
+      ],
+      "convictionModifiers": {
+        "longPenalty": 8,
+        "shortPenalty": 0,
+        "targetMultiplier": 1.1
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "bearish",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "KRE",
+      "direction": "short",
+      "entryPrice": 61.98,
+      "targetPrice": 58.88,
+      "stopLoss": 63.84,
+      "thesis": "Regional bank stress signal. KRE dropped -2.26% even as big banks (MS, BAC) beat earnings -- this divergence signals credit quality concerns at smaller banks. XLF was worst sector at -2.78%. HY spreads widening (+0.36bps). Zions will plunge -13% on Oct 16 on bad loan charges, validating regional bank credit fears. Risk-off regime amplifies financial stress narrative.",
+      "catalyst": "Regional bank credit quality fears; big bank vs regional bank divergence; widening credit spreads",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "HON",
+      "direction": "short",
+      "entryPrice": 190.86,
+      "targetPrice": 182.02,
+      "stopLoss": 196.59,
+      "thesis": "Spinoff record date is Oct 17 (tomorrow) creating forced selling and portfolio rebalancing. Already down 12% YTD on growth concerns. Risk-off pressures industrials (XLI -0.66%). Institutional repositioning around record date = selling pressure. Broader industrial sector weakness confirms headwinds.",
+      "catalyst": "Solstice Advanced Materials spinoff record date Oct 17; risk-off regime; industrial sector weakness",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "BKNG",
+      "direction": "short",
+      "entryPrice": 203.23,
+      "targetPrice": 193.07,
+      "stopLoss": 209.33,
+      "thesis": "Travel/discretionary weakness in risk-off regime. BKNG fell -3.78% on Oct 15 -- worst single-stock decliner by percentage among large-caps. Govt shutdown + US-China trade tensions pressure travel demand and sentiment. Pre-earnings drift (Q3 reports Oct 28) with elevated expectations. Russell -2.09% futures signal consumer weakness continuing Oct 16.",
+      "catalyst": "Risk-off rotation from high-beta consumer discretionary; govt shutdown travel headwinds; pre-earnings vulnerability",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LHX",
+      "direction": "short",
+      "entryPrice": 289.72,
+      "targetPrice": 275.23,
+      "stopLoss": 298.01,
+      "thesis": "Defense stocks under Pentagon DOD extended review pressure. LHX led the defense selloff at -3.42%, outpacing NOC (-2.87%), HII (-2.39%), RTX (-1.51%). Momentum breakdown with sharp single-day decline from prior stability. No near-term positive catalyst -- defense earnings not until Oct 21. Risk-off regime amplifies institutional de-risking.",
+      "catalyst": "Pentagon review overhang; defense sector momentum breakdown; no near-term positive catalyst",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "DECK",
+      "direction": "short",
+      "entryPrice": 96.44,
+      "targetPrice": 91.62,
+      "stopLoss": 99.33,
+      "thesis": "Consumer discretionary under broad pressure in risk-off. DECK fell -2.86% on no company-specific news, pure risk-off selling of high-beta consumer names (HOKA/UGG). Discretionary sector (XLY -0.97%) underperforming. Govt shutdown + trade tensions pressure consumer spending outlook. Russell lagging (-2.09% futures) signals small/mid-cap consumer pain continuing.",
+      "catalyst": "Risk-off regime rotation from discretionary; consumer spending fears; trade tensions",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NOC",
+      "direction": "short",
+      "entryPrice": 608.93,
+      "targetPrice": 578.48,
+      "stopLoss": 627.2,
+      "thesis": "Pentagon DOD review overhang on defense sector. NOC dropped -2.87% on Oct 15, confirming sector-wide weakness (LHX -3.42%, HII -2.39%, RTX -1.51%). Earnings not until Oct 21 -- no near-term positive catalyst to reverse. Risk-off with Russell -2.09% futures and international weakness signals broad selling continuing.",
+      "catalyst": "Pentagon review; defense sector momentum breakdown; earnings not until Oct 21",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "KRE",
+      "openPrice": 61.4,
+      "highPrice": 61.44,
+      "lowPrice": 57.55,
+      "closePrice": 60.54,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.32,
+      "notes": "3-day window (2025-10-16, 2025-10-17, 2025-10-20). Open $61.4, High $61.44, Low $57.55, Close $60.54."
+    },
+    {
+      "symbol": "HON",
+      "openPrice": 191.99,
+      "highPrice": 194.34,
+      "lowPrice": 190.41,
+      "closePrice": 194.18,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.74,
+      "notes": "3-day window (2025-10-16, 2025-10-17, 2025-10-20). Open $191.99, High $194.34, Low $190.41, Close $194.18."
+    },
+    {
+      "symbol": "BKNG",
+      "openPrice": 202.39,
+      "highPrice": 206.92,
+      "lowPrice": 196.94,
+      "closePrice": 205.68,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.21,
+      "notes": "3-day window (2025-10-16, 2025-10-17, 2025-10-20). Open $202.39, High $206.92, Low $196.94, Close $205.68."
+    },
+    {
+      "symbol": "LHX",
+      "openPrice": 290.29,
+      "highPrice": 291.65,
+      "lowPrice": 282.27,
+      "closePrice": 290.56,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.29,
+      "notes": "3-day window (2025-10-16, 2025-10-17, 2025-10-20). Open $290.29, High $291.65, Low $282.27, Close $290.56."
+    },
+    {
+      "symbol": "DECK",
+      "openPrice": 97.67,
+      "highPrice": 102.53,
+      "lowPrice": 96.82,
+      "closePrice": 100.19,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.89,
+      "notes": "3-day window (2025-10-16, 2025-10-17, 2025-10-20). Open $97.67, High $102.53, Low $96.82, Close $100.19."
+    },
+    {
+      "symbol": "NOC",
+      "openPrice": 611,
+      "highPrice": 611.8,
+      "lowPrice": 591.68,
+      "closePrice": 602,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.14,
+      "notes": "3-day window (2025-10-16, 2025-10-17, 2025-10-20). Open $611, High $611.8, Low $591.68, Close $602."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 33.3,
+    "targetHitRate": 16.7,
+    "stopHitRate": 16.7,
+    "avgReturnPercent": -0.61,
+    "profitFactor": 0.49,
+    "winRate": 33.3,
+    "totalScore": 48.2,
+    "benchmarkReturn": -0.93,
+    "alpha": 0.32
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
