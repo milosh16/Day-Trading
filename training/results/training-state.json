@@ -43826,6 +43826,372 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10003,
+      "date": "2024-12-20",
+      "generatedAt": "2026-04-06T20:44:05.229Z",
+      "signals": {},
+      "regime": {
+        "regime": "rotation",
+        "confidence": 51,
+        "directionalBias": 21,
+        "volatilityRegime": "elevated",
+        "stressIndex": 18,
+        "riskAppetiteIndex": 55,
+        "keyFactors": [],
+        "sectorTilts": [],
+        "convictionModifiers": {}
+      },
+      "briefing": {
+        "summary": "Relief bounce on cooler PCE (2.4% vs 2.5% expected) after hawkish Fed shock. Triple witching $6.6T OPEX dominates intraday flow. Rotation regime confirmed — airlines and travel lead, rate-sensitive sectors (REITs, solar, homebuilders) lag. Semi bifurcation deepens after Micron -16% guidance miss. Expect choppy session with upward bias in first half, OPEX-driven chaos into close. S&P 5,930 faces resistance at 6,000, support at 5,850.",
+        "marketCondition": "volatile",
+        "sections": [
+          {
+            "title": "Macro",
+            "content": "Nov PCE 2.4% YoY (below 2.5% consensus) provides relief after hawkish Fed cut on Dec 18. Fed dot plot slashed 2025 rate cut expectations from 4 to 2. 10Y yield at 4.52%, 2-10 spread +19bps. Dollar index 107.62 retreating slightly. Higher-for-longer rates structurally negative for duration-sensitive assets (REITs, utilities, solar project finance).",
+            "importance": "medium"
+          },
+          {
+            "title": "Corporate",
+            "content": "Micron crashed 16% on weak Q2 guidance ($7.9B vs $8.98B expected). NAND oversupply and consumer demand weakness. Airlines surging — UAL +4.5%, DAL +2.6% on strong travel demand and lower oil. GE +3% on aerospace/defense rotation. Broadcom digesting blowout AI earnings. FSLR -4.6% and ENPH -4.4% as solar crushed by rate repricing.",
+            "importance": "medium"
+          },
+          {
+            "title": "Technicals",
+            "content": "UVXY +14% yesterday signals peak fear — contrarian bounce setup in quality names. VIX elevated but PCE print should compress it. Triple witching creates artificial volume spikes and potential mean reversion. Sector ETF flows show clear rotation: JETS +1.85%, XLU +0.48%, while XLRE -1.72%, XHB -2.19%, XLE -0.88%.",
+            "importance": "medium"
+          },
+          {
+            "title": "SectorRotation",
+            "content": "Clear rotation into consumer discretionary travel (airlines, cruises, hotels), aerospace/industrials (GE, BA, RTX), and AI-adjacent power (VST, CCJ). Rotation OUT of rate-sensitive (REITs, homebuilders, solar), non-AI semis (MU contagion to LRCX, AMAT), and energy (oversupply narrative). Financials mixed — JPM +1.1% but KRE -0.9%.",
+            "importance": "medium"
+          },
+          {
+            "title": "Catalysts",
+            "content": "PCE below consensus is the primary catalyst for today's bounce. Triple witching $6.6T OPEX creates mechanical flows. Government shutdown risk is headline noise with limited market impact. Micron earnings miss creates contagion risk in non-AI semiconductor names.",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "UAL",
+          "direction": "long",
+          "entryPrice": 95.56,
+          "targetPrice": 98.3,
+          "stopLoss": 93.8,
+          "thesis": "Airlines are the clear momentum leaders in this rotation regime. UAL +4.5% yesterday, strongest single-stock gainer ex-volatility products. PCE relief reinforces consumer travel spend narrative. Lower oil prices ($69.46 WTI) directly boost airline margins. Post-Fed rotation favors cyclicals with strong demand fundamentals over rate-sensitive sectors. Triple witching volume supports continuation of momentum names.",
+          "catalyst": "Cooler PCE print reinforces consumer spending strength; airline sector momentum from Dec 19 extends into triple witching session with massive volume",
+          "conviction": {
+            "catalystClarity": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 92,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 85,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "GE",
+          "direction": "long",
+          "entryPrice": 164.8,
+          "targetPrice": 169.5,
+          "stopLoss": 162.2,
+          "thesis": "GE Aerospace is a primary beneficiary of the rotation into industrials/defense. +3% yesterday on strong sector flows. Aerospace aftermarket demand remains robust. Defense budget tailwinds persist regardless of rate environment. Less rate-sensitive than growth/tech names, making it an ideal rotation target in a higher-for-longer regime. GE Vernova spin-off narrative provides additional catalyst.",
+          "catalyst": "Industrial/aerospace rotation accelerating post-Fed; defense spending insulated from rate environment; PCE relief supports broader cyclical bid",
+          "conviction": {
+            "catalystClarity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 76,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 80,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MU",
+          "direction": "short",
+          "entryPrice": 87.09,
+          "targetPrice": 83.5,
+          "stopLoss": 89.5,
+          "thesis": "Micron crashed 16% on massive guidance miss ($7.9B vs $8.98B expected revenue, $1.43 vs $1.91 EPS). NAND oversupply, consumer demand weakness, and data center SSD demand pause cited. This is not just a miss — it's a fundamental demand revision that creates contagion across non-AI semi names (LRCX -5.3%, AMAT -2.4%). Dead cat bounce likely capped as sellers use any rally to exit. Semi sentiment destroyed.",
+          "catalyst": "Post-earnings continuation sell pressure; analyst downgrades likely flowing in; institutional rebalancing on triple witching amplifies selling",
+          "conviction": {
+            "catalystClarity": {
+              "score": 92,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 88,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "FSLR",
+          "direction": "short",
+          "entryPrice": 175.88,
+          "targetPrice": 170,
+          "stopLoss": 179.5,
+          "thesis": "Solar sector getting crushed by higher-for-longer rate repricing. FSLR -4.6% yesterday, ENPH -4.4%. Hawkish Fed directly negative for solar project financing costs — fewer 2025 rate cuts means higher discount rates on long-duration renewable projects. This is a structural headwind, not a one-day move. Policy uncertainty around IRA subsidies under potential Trump admin adds further risk. Solar is on the wrong side of the rotation.",
+          "catalyst": "Hawkish Fed repricing directly increases solar project financing costs; 2025 rate cut expectations slashed from 4 to 2; structural headwind persists",
+          "conviction": {
+            "catalystClarity": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 82,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "VST",
+          "direction": "long",
+          "entryPrice": 137.2,
+          "targetPrice": 141.5,
+          "stopLoss": 134.5,
+          "thesis": "Vistra Energy is the power/nuclear play benefiting from AI data center electricity demand narrative. +3.2% yesterday, outperforming broader market significantly. Unlike solar (rate-sensitive project finance), nuclear/natural gas power generation benefits from demand growth regardless of rate environment. The AI power demand theme (data centers need baseload electricity) is structural and rate-insensitive. CCJ (uranium) +1.9% confirms the nuclear power bid.",
+          "catalyst": "AI data center power demand narrative driving nuclear/power names; rate-insensitive demand growth contrasts with solar's rate sensitivity; momentum continuation from Dec 19",
+          "conviction": {
+            "catalystClarity": {
+              "score": 84,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 74,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 86,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 76,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 80,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "UAL",
+          "openPrice": 94.52,
+          "highPrice": 101.29,
+          "lowPrice": 94.34,
+          "closePrice": 101.16,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 5.86,
+          "notes": "3-day window (2024-12-20, 2024-12-23, 2024-12-24). Open $94.52, High $101.29, Low $94.34, Close $101.16."
+        },
+        {
+          "symbol": "GE",
+          "openPrice": 163.97,
+          "highPrice": 171.49,
+          "lowPrice": 163.16,
+          "closePrice": 171.49,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.06,
+          "notes": "3-day window (2024-12-20, 2024-12-23, 2024-12-24). Open $163.97, High $171.49, Low $163.16, Close $171.49."
+        },
+        {
+          "symbol": "MU",
+          "openPrice": 85.41,
+          "highPrice": 91.1,
+          "lowPrice": 83.54,
+          "closePrice": 89.28,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -2.51,
+          "notes": "3-day window (2024-12-20, 2024-12-23, 2024-12-24). Open $85.41, High $91.1, Low $83.54, Close $89.28."
+        },
+        {
+          "symbol": "FSLR",
+          "openPrice": 174.46,
+          "highPrice": 189.14,
+          "lowPrice": 173.36,
+          "closePrice": 186.21,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -5.87,
+          "notes": "3-day window (2024-12-20, 2024-12-23, 2024-12-24). Open $174.46, High $189.14, Low $173.36, Close $186.21."
+        },
+        {
+          "symbol": "VST",
+          "openPrice": 132.45,
+          "highPrice": 144.16,
+          "lowPrice": 132,
+          "closePrice": 143.36,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.49,
+          "notes": "3-day window (2024-12-20, 2024-12-23, 2024-12-24). Open $132.45, High $144.16, Low $132, Close $143.36."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 60,
+        "targetHitRate": 60,
+        "stopHitRate": 60,
+        "avgReturnPercent": 1.21,
+        "profitFactor": 1.72,
+        "winRate": 60,
+        "totalScore": 65,
+        "benchmarkReturn": 1.61,
+        "alpha": -0.4
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 85.7,
+          "avgScoreLosers": 90,
+          "predictivePower": 45.7
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 80.7,
+          "avgScoreLosers": 80,
+          "predictivePower": 50.7
+        },
+        "riskReward": {
+          "avgScoreWinners": 76,
+          "avgScoreLosers": 77.5,
+          "predictivePower": 48.5
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 84.3,
+          "avgScoreLosers": 84,
+          "predictivePower": 50.3
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 88.7,
+          "avgScoreLosers": 83.5,
+          "predictivePower": 55.2
+        },
+        "informationEdge": {
+          "avgScoreWinners": 74.3,
+          "avgScoreLosers": 81.5,
+          "predictivePower": 42.8
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 81.7,
+          "avgScoreLosers": 85,
+          "predictivePower": 46.7
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -43839,7 +44205,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T20:44:02.169Z",
+  "lastUpdatedAt": "2026-04-06T20:44:05.258Z",
   "totalTokensUsed": 3625689,
   "weightHistory": [
     {
@@ -44285,7 +44651,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 2,
+  "fullDepthCurrentTrial": 3,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -44391,7 +44757,8 @@
   ],
   "fullDepthCompletedDates": [
     "2025-03-18",
-    "2026-03-04"
+    "2026-03-04",
+    "2024-12-20"
   ],
   "dateSequence": [
     "2025-09-09",
