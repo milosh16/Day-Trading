@@ -43150,1674 +43150,178 @@
     {
       "trialId": 10001,
       "date": "2025-03-18",
-      "generatedAt": "2026-04-06T20:02:41.717Z",
-      "signals": {
-        "spFuturesChange": -1.07,
-        "nasdaqFuturesChange": -1.71,
-        "dowFuturesChange": -0.62,
-        "russellFuturesChange": -0.89,
-        "vixFuturesChange": -8.29,
-        "vix": 19.9,
-        "vixChange": -8.29,
-        "vixTermStructure": "contango",
-        "vix9d": 0,
-        "vix3m": 21.97,
-        "skewIndex": 0,
-        "putCallRatio": 0,
-        "spxGammaExposure": "neutral",
-        "tenYearYield": 4.28,
-        "tenYearYieldChange": -0.58,
-        "twoYearYield": 4.11,
-        "twoYearYieldChange": 0,
-        "thirtyYearYield": 4.58,
-        "threeMonthYield": 4.2,
-        "twoTenSpread": 0.17,
-        "threeMoTenYrSpread": 0.08,
-        "realYield10Y": 0,
-        "fedFundsRate": 0,
-        "fedFundsExpected": 0,
-        "dollarIndex": 103.43,
-        "dollarIndexChange": 0.18,
-        "eurUsd": 1.09,
-        "eurUsdChange": 0.19,
-        "usdJpy": 149.45,
-        "usdJpyChange": 0.05,
-        "usdCny": 7.23,
-        "usdCnyChange": -0.07,
-        "oilWTI": 67.16,
-        "oilChange": 0.39,
-        "brentOil": 70.78,
-        "brentOilChange": 0.31,
-        "natGasChange": 4.81,
-        "goldPrice": 3035.9,
-        "goldChange": 0.03,
-        "silverChange": -1.75,
-        "copperChange": 1.66,
-        "ironOreChange": 0,
-        "wheatChange": 0,
-        "uraniumChange": 0,
-        "balticDryIndex": 0,
-        "balticDryChange": 0,
-        "nikkeiChange": -0.25,
-        "daxChange": -0.4,
-        "ftseChange": 0.02,
-        "shanghaiChange": -0.1,
-        "hangSengChange": 0.12,
-        "kospiChange": 0.62,
-        "emChange": 0,
-        "euroStoxx50Change": 0,
-        "highYieldSpread": 105.35,
-        "spreadChange": 0.18,
-        "igSpread": -16.86,
-        "igSpreadChange": -0.24,
-        "cdsIndex": 0,
-        "tedSpread": 0,
-        "mbs30YrSpread": 0,
-        "advanceDeclineRatio": 1.06,
-        "newHighsNewLows": 0,
-        "percentAbove200DMA": 0,
-        "percentAbove50DMA": 0,
-        "mcclellanOscillator": 0,
-        "xlkChange": -1.52,
-        "xlfChange": -0.12,
-        "xleChange": 0.16,
-        "xlvChange": 0.05,
-        "xlpChange": -1.14,
-        "xluChange": -0.69,
-        "xlreChange": -0.62,
-        "xliChange": -0.8,
-        "xlbChange": -0.17,
-        "xlcChange": -1.4,
-        "xlyChange": -1.78,
-        "smhChange": -1.55,
-        "aaiiBullBear": 0,
-        "cnnFearGreed": 0,
-        "naaim": 0,
-        "marginDebt": "flat",
-        "etfFlows": "flat",
-        "bitcoinChange": 5,
-        "ethereumChange": 6.48,
-        "btcDominance": 0,
-        "cryptoTotalMarketCapChange": 0,
-        "sofr": 0,
-        "repoRate": 0,
-        "fedBalanceSheet": "flat",
-        "tgaBalance": "flat",
-        "hasMajorEconData": false,
-        "econDataType": "",
-        "hasEarningsOfNote": false,
-        "earningsNames": "",
-        "isOpexWeek": true,
-        "isOpexDay": false,
-        "isMonthEnd": false,
-        "isQuarterEnd": false,
-        "daysToFOMC": 1,
-        "daysToNextCPI": 23,
-        "daysToNextNFP": 17,
-        "isExDividendHeavy": false,
-        "geopoliticalRisk": "low",
-        "geopoliticalEvents": "",
-        "spConsecutiveUpDays": 0,
-        "spConsecutiveDownDays": 1,
-        "sp5DayReturn": 0.76,
-        "sp20DayReturn": -8.4,
-        "nasdaqVsRussell5d": -0.91,
-        "sp52WeekRange": 0,
-        "spDistanceFrom200DMA": 0,
-        "spDistanceFrom50DMA": 0
-      },
+      "generatedAt": "2026-04-06T20:43:57.603Z",
+      "signals": {},
       "regime": {
         "regime": "range-bound",
         "confidence": 39,
         "directionalBias": -9,
-        "volatilityRegime": "normal",
+        "volatilityRegime": "elevated",
         "stressIndex": 18,
         "riskAppetiteIndex": 43,
-        "keyFactors": [
-          "Futures -1.39%",
-          "Russell leading by 0.50pp",
-          "Copper +1.7%",
-          "Weak breadth: 0% above 200 DMA",
-          "Extreme fear (F&G: 0)",
-          "Bitcoin +5.0%",
-          "S&P near 52-week low"
-        ],
-        "sectorTilts": [
-          {
-            "sector": "materials",
-            "bias": "overweight",
-            "reason": "Copper/shipping demand rising — industrial expansion"
-          },
-          {
-            "sector": "industrials",
-            "bias": "overweight",
-            "reason": "Cyclical expansion signal"
-          }
-        ],
-        "convictionModifiers": {
-          "longPenalty": 5,
-          "shortPenalty": 5,
-          "targetMultiplier": 0.7,
-          "minConvictionOverride": 78
-        }
-      },
-      "briefing": {
-        "summary": "Markets are in a correction bounce ahead of the most important macro event of the month — the FOMC meeting. The S&P is down 8.4% in 20 days with extreme fear readings, creating conditions for either a sharp relief rally (dovish FOMC) or resumption of the selloff (hawkish surprise). Pre-FOMC positioning is pure gambling; the edge is in post-announcement reaction plays.",
-        "marketCondition": "neutral",
-        "sections": [
-          {
-            "title": "Geopolitics",
-            "content": "Ukraine-Russia: Ukraine accepted a US-proposed 30-day ceasefire on March 12 after Saudi Arabia talks, with US resuming intelligence sharing and security assistance. Putin conditionally acknowledged ceasefire concept but demanded preconditions, making full acceptance uncertain. Middle East: US launched Operation Rough Rider against Houthis in March 2025 after 100+ merchant vessel attacks; active bombing campaign ongoing. Red Sea shipping disruptions continue. Israel-Hamas tensions remain elevated. Government shutdown averted on March 14 after Senate passed stopgap funding through September 2025, removing a near-term tail risk. Geopolitical risk is moderate — ceasefire hopes provide upside optionality but Russia rejection risk is real.",
-            "importance": "medium"
-          },
-          {
-            "title": "Macro",
-            "content": "FOMC meeting begins TODAY (March 18-19). Rate hold at 4.25-4.50% is near-certain. Key focus is the updated dot plot and Summary of Economic Projections. Markets expect two rate cuts in 2025 maintained in median dot, but risk of hawkish shift given tariff-driven inflation concerns. The S&P 500 entered correction territory on March 13 (down 10% from Feb 19 high of ~6,144 to ~5,522), then bounced — closed at ~5,675 on March 17 (up 1%). VIX at 19.9, down from recent spikes. 10Y yield at 4.28%, 2-10 spread positive at 17bp. The 20-day S&P return of -8.4% reflects the sharp correction. Fed GDP growth forecast expected to be revised down (from 2.1% to ~1.7%). Inflation forecast expected to be revised up. Powell will likely acknowledge tariff uncertainty is clouding outlook. This is THE event of the day — all other catalysts are secondary.",
-            "importance": "medium"
-          },
-          {
-            "title": "Corporate",
-            "content": "NVIDIA GTC 2025 kicked off March 17; Jensen Huang keynote is March 18. Key announcements expected: Blackwell Ultra GB300 chip, next-gen AI platform. Pre-GTC, NVDA closed at $119.53 on March 17, down 18.6% from its January 6 all-time high. Options market implies ~9% move by March 21 expiration. Magnificent 7 stocks collectively down 25% from 52-week highs, responsible for 96% of S&P 500 YTD decline. Earnings week includes: Micron (March 20, after GTC), Williams-Sonoma (March 18), Progressive (March 18). The following week: Alibaba, Accenture, Darden. DeepSeek AI shock from January still weighing on semiconductor valuations — challenged narrative of unlimited GPU demand growth.",
-            "importance": "medium"
-          },
-          {
-            "title": "Tech",
-            "content": "NVIDIA GTC 2025 (March 17-21) is the dominant tech event. Blackwell Ultra GB300 NVL72 expected to deliver 1.5x more AI performance vs GB200 NVL72. However, DeepSeek's January revelation that competitive AI models can be built with fewer high-end chips continues to weigh on the 'infinite GPU demand' thesis. Semiconductor market surpassed $830B in 2025 but growth is heavily concentrated — top 10 companies grew revenue 90% vs 8% for the rest. SMH (semiconductor ETF) down 1.55% on March 17. China's AI chip industry hitting record revenues despite US export restrictions, suggesting workarounds are working. South Korea investing $518B in AI strategy. The AI capex narrative is being questioned: are hyperscalers overbuilding? This is the key debate heading into GTC.",
-            "importance": "medium"
-          },
-          {
-            "title": "Energy",
-            "content": "Gold broke $3,000/oz for the first time on March 14, closing at ~$3,036 on March 17. Drivers: central bank buying, ETF inflows, geopolitical uncertainty, tariff fears, dollar weakness expectations. WTI crude at $67.16, relatively subdued despite Houthi attacks on Red Sea shipping. Brent at $70.78. Natural gas up 4.81% — seasonal and supply-driven. Copper up 1.66%, signaling some industrial demand optimism. The gold/oil ratio is extremely elevated (gold $3,036 / oil $67 = ~45x), suggesting markets are pricing in safe-haven demand over growth. Oil prices are being suppressed by recession fears despite Middle East supply risks — a potential contrarian long if FOMC is dovish.",
-            "importance": "medium"
-          },
-          {
-            "title": "Policy",
-            "content": "Steel and aluminum tariffs expanded to 25% on ALL imports effective March 12, 2025, eliminating all country exemptions and quotas. Steel prices up 16% since Trump inauguration. Auto tariffs (25%) announced but not yet in effect (March 26 announcement, April 3 effective — NOT YET KNOWN on March 18). China tariffs raised from 10% to 20% on March 3. Canada/Mexico 25% tariffs implemented March 4 with USMCA exemptions until April 2. Venezuela oil tariff EO coming March 24. US suspended WTO budget contributions. The tariff escalation is the primary driver of the S&P correction — creating stagflationary fears (higher prices + slower growth). This feeds directly into FOMC uncertainty — Powell must navigate between tariff-driven inflation and growth slowdown.",
-            "importance": "medium"
-          }
-        ],
-        "scenarios": []
-      },
-      "recommendations": {
-        "cleanRecs": [
-          {
-            "symbol": "NUE",
-            "direction": "long",
-            "entryPrice": 130,
-            "targetPrice": 140,
-            "stopLoss": 125,
-            "thesis": "Nucor is a direct, unambiguous beneficiary of the steel tariff regime. Unlike most trades today, the catalyst has already occurred (tariffs effective March 12) and is structural — not event-dependent like FOMC. The tariff environment creates pricing power for domestic steel producers that flows directly to earnings. Nucor's EAF model has lower costs than blast furnace competitors. Materials sector is regime-favored. FOMC outcome is secondary — tariffs are the driver.",
-            "catalyst": "25% universal steel tariffs effective March 12. Steel prices up 16% since inauguration. Nucor as largest US EAF steelmaker is the clearest beneficiary.",
-            "conviction": {
-              "catalystClarity": {
-                "score": 82,
-                "reasoning": ""
-              },
-              "technicalSetup": {
-                "score": 60,
-                "reasoning": ""
-              },
-              "riskReward": {
-                "score": 70,
-                "reasoning": ""
-              },
-              "volumeLiquidity": {
-                "score": 75,
-                "reasoning": ""
-              },
-              "marketAlignment": {
-                "score": 72,
-                "reasoning": ""
-              },
-              "informationEdge": {
-                "score": 65,
-                "reasoning": ""
-              },
-              "timingUrgency": {
-                "score": 55,
-                "reasoning": ""
-              }
-            }
-          }
-        ],
-        "flaggedCount": 1,
-        "priceDeviations": [
-          {
-            "symbol": "GDX",
-            "priorClose": 44.57,
-            "entryPrice": 43.5,
-            "deviation": 2.4,
-            "plausible": false
-          },
-          {
-            "symbol": "NUE",
-            "priorClose": 129.5,
-            "entryPrice": 130,
-            "deviation": 0.39,
-            "plausible": true
-          }
-        ],
-        "tokensUsed": 822
-      },
-      "outcomes": [],
-      "scores": {
-        "directionAccuracy": 0,
-        "targetHitRate": 0,
-        "stopHitRate": 0,
-        "avgReturnPercent": 0,
-        "profitFactor": 0,
-        "winRate": 0,
-        "totalScore": 50,
-        "benchmarkReturn": -0.67,
-        "alpha": 0.67
-      },
-      "dimensionAnalysis": {},
-      "weights": {
-        "catalystClarity": 0.22,
-        "technicalSetup": 0.15,
-        "riskReward": 0.12,
-        "volumeLiquidity": 0.06,
-        "marketAlignment": 0.1,
-        "informationEdge": 0.18,
-        "timingUrgency": 0.17
-      },
-      "totalTokensUsed": 0
-    },
-    {
-      "trialId": 10002,
-      "date": "2026-03-04",
-      "generatedAt": "2026-04-06T20:10:15.735Z",
-      "signals": {
-        "spFuturesChange": 0.78,
-        "nasdaqFuturesChange": 1.29,
-        "dowFuturesChange": 0.49,
-        "russellFuturesChange": 1.06,
-        "vixFuturesChange": 12.29,
-        "vix": 23.75,
-        "vixChange": 12.29,
-        "vixTermStructure": "backwardation",
-        "vix9d": 0,
-        "vix3m": 22.29,
-        "skewIndex": 0,
-        "putCallRatio": 0,
-        "spxGammaExposure": "neutral",
-        "tenYearYield": 4.08,
-        "tenYearYieldChange": 0.59,
-        "twoYearYield": 3.65,
-        "twoYearYieldChange": 0,
-        "thirtyYearYield": 4.72,
-        "threeMonthYield": 3.6,
-        "twoTenSpread": 0.43,
-        "threeMoTenYrSpread": 0.48,
-        "realYield10Y": 0,
-        "fedFundsRate": 0,
-        "fedFundsExpected": 0,
-        "dollarIndex": 99.32,
-        "dollarIndexChange": 0.56,
-        "eurUsd": 1.16,
-        "eurUsdChange": 0.2,
-        "usdJpy": 156.98,
-        "usdJpyChange": -0.5,
-        "usdCny": 6.9,
-        "usdCnyChange": -0.04,
-        "oilWTI": 81.01,
-        "oilChange": 8.51,
-        "brentOil": 85.41,
-        "brentOilChange": 4.93,
-        "natGasChange": 2.95,
-        "goldPrice": 5065.3,
-        "goldChange": -1.07,
-        "silverChange": -1.14,
-        "copperChange": -1.74,
-        "ironOreChange": 0,
-        "wheatChange": 0,
-        "uraniumChange": 0,
-        "balticDryIndex": 0,
-        "balticDryChange": 0,
-        "nikkeiChange": 1.9,
-        "daxChange": -1.61,
-        "ftseChange": -1.46,
-        "shanghaiChange": 0.64,
-        "hangSengChange": 0.28,
-        "kospiChange": 9.63,
-        "emChange": 0,
-        "euroStoxx50Change": 0,
-        "highYieldSpread": 98,
-        "spreadChange": -0.35,
-        "igSpread": -21.94,
-        "igSpreadChange": -0.09,
-        "cdsIndex": 0,
-        "tedSpread": 0,
-        "mbs30YrSpread": 0,
-        "advanceDeclineRatio": 0.96,
-        "newHighsNewLows": 0,
-        "percentAbove200DMA": 0,
-        "percentAbove50DMA": 0,
-        "mcclellanOscillator": 0,
-        "xlkChange": 1.7,
-        "xlfChange": 0.57,
-        "xleChange": -0.58,
-        "xlvChange": 0.2,
-        "xlpChange": -0.66,
-        "xluChange": 0.42,
-        "xlreChange": 0.14,
-        "xliChange": 0.3,
-        "xlbChange": -0.04,
-        "xlcChange": 0.7,
-        "xlyChange": 1.78,
-        "smhChange": 2.06,
-        "aaiiBullBear": 0,
-        "cnnFearGreed": 0,
-        "naaim": 0,
-        "marginDebt": "flat",
-        "etfFlows": "flat",
-        "bitcoinChange": -2.57,
-        "ethereumChange": -2.58,
-        "btcDominance": 0,
-        "cryptoTotalMarketCapChange": 0,
-        "sofr": 0,
-        "repoRate": 0,
-        "fedBalanceSheet": "flat",
-        "tgaBalance": "flat",
-        "hasMajorEconData": false,
-        "econDataType": "",
-        "hasEarningsOfNote": false,
-        "earningsNames": "",
-        "isOpexWeek": false,
-        "isOpexDay": false,
-        "isMonthEnd": false,
-        "isQuarterEnd": false,
-        "daysToFOMC": 14,
-        "daysToNextCPI": 7,
-        "daysToNextNFP": 2,
-        "isExDividendHeavy": false,
-        "geopoliticalRisk": "low",
-        "geopoliticalEvents": "",
-        "spConsecutiveUpDays": 1,
-        "spConsecutiveDownDays": 0,
-        "sp5DayReturn": -1.1,
-        "sp20DayReturn": -0.7,
-        "nasdaqVsRussell5d": -0.46,
-        "sp52WeekRange": 0,
-        "spDistanceFrom200DMA": 0,
-        "spDistanceFrom50DMA": 0
-      },
-      "regime": {
-        "regime": "crisis",
-        "confidence": 90,
-        "directionalBias": -60,
-        "volatilityRegime": "elevated",
-        "stressIndex": 35,
-        "riskAppetiteIndex": 54,
-        "keyFactors": [
-          "VIX 23.75 (elevated), term structure backwardation",
-          "CRISIS REGIME: elevated correlation, liquidity stress"
-        ],
-        "sectorTilts": [
-          {
-            "sector": "tech",
-            "bias": "underweight",
-            "reason": "High-beta sells first in crisis"
-          },
-          {
-            "sector": "utilities",
-            "bias": "overweight",
-            "reason": "Defensive rotation"
-          },
-          {
-            "sector": "healthcare",
-            "bias": "overweight",
-            "reason": "Defensive rotation"
-          },
-          {
-            "sector": "financials",
-            "bias": "underweight",
-            "reason": "Credit stress"
-          }
-        ],
-        "convictionModifiers": {
-          "longPenalty": 15,
-          "shortPenalty": 0,
-          "targetMultiplier": 1.5,
-          "minConvictionOverride": 80
-        }
-      },
-      "briefing": {
-        "summary": "CRISIS REGIME — BEARISH WITH ENERGY/DEFENSE EXCEPTIONS. The market is in the early innings of a major geopolitical shock. Operation Epic Fury (US-Israel strikes on Iran, Feb 28) has triggered the closure of the Strait of Hormuz, which handles 20% of global oil supply. Oil surged 8.5% on March 3 and is heading significantly higher (Brent will reach $100+ within days, eventually $120+ by mid-March). The traditional safe-haven playbook is BROKEN: gold is falling, Treasuries are selling off (yields spiking), and the dollar is strengthening as the market prices a stagflationary energy shock rather than a deflationary risk event. The S&P 500 lost 0.94% on March 3 after being down as much as 2.5% intraday — expect continued volatility with a downward bias. VIX at 23.75 in backwardation confirms near-term fear exceeds long-term, and VIX likely heads to 29+ by March 6. Key dynamic: massive sector rotation FROM tech/discretionary INTO energy/defense. Broadcom earnings tonight are a wildcard — a strong AI beat could provide a temporary lift to semis but won't change the macro picture. The next 2 weeks are critical: if Hormuz stays closed, we get a full-blown energy crisis. If Trump's Navy escort plan works or a ceasefire emerges, rapid de-escalation is possible but unlikely in the near term. Position for continued crisis: long energy/defense, short high-beta tech/consumer/airlines, hedge with VIX calls.",
-        "marketCondition": "volatile",
-        "sections": [
-          {
-            "title": "Geopolitics",
-            "content": "CRITICAL: On Feb 28, 2026, the US and Israel launched 'Operation Epic Fury' — surprise joint airstrikes against Iran targeting nuclear facilities, military infrastructure, and leadership (Supreme Leader Khamenei assassinated). Over 1,700 sorties struck 1,250+ targets in the first 48 hours. Iran retaliated with missile/drone strikes on US bases, Israeli territory, and Gulf states. IRGC closed the Strait of Hormuz to all shipping traffic — this is the single most important market driver. The war entered its 4th day on March 3. Trump stated March 3 that the US Navy would escort tankers through Hormuz 'if necessary.' Markets swung wildly — S&P was down 2.5% intraday on March 3 before recovering to close -0.94%. Defense stocks surging (NOC +6%, AVRL +10%, LMT +3%). This is a hot shooting war with massive commodity supply disruption — crisis regime is fully justified.",
-            "importance": "medium"
-          },
-          {
-            "title": "Macro",
-            "content": "Fed funds rate at 3.5-3.75% (held steady at Jan meeting). FOMC meeting in 14 days (March 18) where they will hold again 11-1. 10Y yield surging to 4.08% (+59bps) as markets price stagflation — rising oil = inflation expectations up, but war/uncertainty = growth fears. The yield curve is positively sloped (2-10 spread +43bps), suggesting markets fear inflation more than recession near-term. Dollar strengthening (DXY 99.32, +0.56%) as flight-to-cash dominates over flight-to-quality. Key: traditional safe haven playbook is BROKEN — Treasuries selling off (yields up) because market is pricing energy-driven inflation shock, not a deflationary bust. NFP in 2 days, CPI in 7 days — both will be pre-war data and largely irrelevant to current crisis dynamics. Real risk: stagflation scenario if Hormuz stays closed for weeks.",
-            "importance": "medium"
-          },
-          {
-            "title": "Corporate",
-            "content": "BROADCOM (AVGO) reports Q1 FY2026 after close TODAY (March 4). Consensus expects EPS $1.88, revenue ~$19B. AI revenue expected to be massive — will likely beat given prior quarter trends. This is the biggest single-stock catalyst today. Microsoft (MSFT) closing its worst quarter since 2008 (-23%), as AI spending scrutiny intensifies. Big Tech AI capex expected at $720B in 2026 — 'prove it' era for returns. OpenAI at $25B annualized revenue, Anthropic at $19B. Corporate earnings broadly taking a backseat to the geopolitical crisis — war uncertainty overshadowing fundamentals.",
-            "importance": "medium"
-          },
-          {
-            "title": "Tech",
-            "content": "Semiconductor sector (SMH +2.06%) showing resilience despite crisis — AI demand seen as secular and war-independent. AVGO earnings tonight are the key catalyst. A major risk: helium shortage emerging from Hormuz closure (critical for chipmaking) — if prolonged, could constrain semiconductor production. Apple targeting AI Siri release with iOS 26.4 in March. Anthropic's Model Context Protocol hit 97M installs. Morgan Stanley warning of an 'AI breakthrough' in 2026 that most aren't ready for. Tech faces a two-way pull: secular AI tailwind vs. crisis-driven rotation out of high-beta growth. Near-term, the rotation OUT of tech into energy/defense is the dominant flow.",
-            "importance": "medium"
-          },
-          {
-            "title": "Energy",
-            "content": "OIL IS THE TRADE. WTI surged 8.5% to $81 on March 3 (up from ~$71 pre-strikes). Brent at $85.41 (+4.93%). The Strait of Hormuz handles ~20% of global oil supply. Iran's IRGC has prohibited vessel passage. Oil prices will continue to surge — Brent eventually hits $120+ by mid-March and $166 (Dubai crude) by March 19. IEA members will release 400M barrels from strategic reserves on March 11, but this only slows the spike. LNG, LPG, naphtha all disrupted. Petrochemical plants curtailing production. Energy stocks (XOM, CVX, COP) up 4-5% on March 3 and have significantly more room to run. Natural gas prices rising in Europe and Asia. This is a supply-driven energy shock with no quick resolution — Hormuz reopening requires either military escort success or ceasefire.",
-            "importance": "medium"
-          },
-          {
-            "title": "Policy",
-            "content": "MAJOR: On Feb 20, SCOTUS ruled 6-3 that IEEPA does not authorize presidential tariffs, striking down the legal basis for Trump's 2025 tariff regime. A new 10% global surcharge under Section 122 took effect Feb 24 for 150 days. On March 4 (TODAY), Judge Eaton of the Court of International Trade orders CBP to begin IEEPA tariff refunds to importers — this is a mild positive for importers/retailers. New Section 301 investigations launched March 11-12 targeting 16 countries. Net effect: tariff uncertainty remains but the SCOTUS ruling was actually a modest de-escalation on the trade front. The tariff story is now secondary to the Iran war as the dominant policy driver.",
-            "importance": "medium"
-          }
-        ],
-        "scenarios": []
-      },
-      "recommendations": {
-        "cleanRecs": [],
-        "flaggedCount": 7,
-        "priceDeviations": [
-          {
-            "symbol": "XOM",
-            "priorClose": 151.83,
-            "entryPrice": 128,
-            "deviation": 15.7,
-            "plausible": false
-          },
-          {
-            "symbol": "COP",
-            "priorClose": 118.52,
-            "entryPrice": 115,
-            "deviation": 2.97,
-            "plausible": false
-          },
-          {
-            "symbol": "NOC",
-            "priorClose": 759.11,
-            "entryPrice": 530,
-            "deviation": 30.18,
-            "plausible": false
-          },
-          {
-            "symbol": "UVXY",
-            "priorClose": 43.15,
-            "entryPrice": 28,
-            "deviation": 35.11,
-            "plausible": false
-          },
-          {
-            "symbol": "AAL",
-            "priorClose": 12.46,
-            "entryPrice": 16.5,
-            "deviation": 32.42,
-            "plausible": false
-          },
-          {
-            "symbol": "CCL",
-            "priorClose": 28.53,
-            "entryPrice": 22,
-            "deviation": 22.89,
-            "plausible": false
-          },
-          {
-            "symbol": "LMT",
-            "priorClose": 667.82,
-            "entryPrice": 510,
-            "deviation": 23.63,
-            "plausible": false
-          }
-        ],
-        "tokensUsed": 0
-      },
-      "outcomes": [],
-      "scores": {
-        "directionAccuracy": 0,
-        "targetHitRate": 0,
-        "stopHitRate": 0,
-        "avgReturnPercent": 0,
-        "profitFactor": 0,
-        "winRate": 0,
-        "totalScore": 50,
-        "benchmarkReturn": 0.51,
-        "alpha": -0.51
-      },
-      "dimensionAnalysis": {},
-      "weights": {
-        "catalystClarity": 0.22,
-        "technicalSetup": 0.15,
-        "riskReward": 0.12,
-        "volumeLiquidity": 0.06,
-        "marketAlignment": 0.1,
-        "informationEdge": 0.18,
-        "timingUrgency": 0.17
-      },
-      "totalTokensUsed": 0
-    },
-    {
-      "trialId": 10003,
-      "date": "2024-12-20",
-      "generatedAt": "2026-04-06T20:16:31.225Z",
-      "signals": {
-        "spFuturesChange": 1.09,
-        "nasdaqFuturesChange": 1.03,
-        "dowFuturesChange": 1.18,
-        "russellFuturesChange": 0.94,
-        "vixFuturesChange": -23.79,
-        "vix": 18.36,
-        "vixChange": -23.79,
-        "vixTermStructure": "contango",
-        "vix9d": 0,
-        "vix3m": 20.1,
-        "skewIndex": 0,
-        "putCallRatio": 0,
-        "spxGammaExposure": "neutral",
-        "tenYearYield": 4.52,
-        "tenYearYieldChange": -1.01,
-        "twoYearYield": 4.33,
-        "twoYearYieldChange": 0,
-        "thirtyYearYield": 4.72,
-        "threeMonthYield": 4.22,
-        "twoTenSpread": 0.19,
-        "threeMoTenYrSpread": 0.3,
-        "realYield10Y": 0,
-        "fedFundsRate": 0,
-        "fedFundsExpected": 0,
-        "dollarIndex": 107.62,
-        "dollarIndexChange": -0.73,
-        "eurUsd": 1.04,
-        "eurUsdChange": 0.14,
-        "usdJpy": 157.64,
-        "usdJpyChange": 1.92,
-        "usdCny": 7.3,
-        "usdCnyChange": 0.14,
-        "oilWTI": 69.46,
-        "oilChange": -0.64,
-        "brentOil": 72.94,
-        "brentOilChange": 0.08,
-        "natGasChange": 4.58,
-        "goldPrice": 2628.7,
-        "goldChange": 1.41,
-        "silverChange": 1.95,
-        "copperChange": 0.51,
-        "ironOreChange": 0,
-        "wheatChange": 0,
-        "uraniumChange": 0,
-        "balticDryIndex": 0,
-        "balticDryChange": 0,
-        "nikkeiChange": -0.29,
-        "daxChange": -0.43,
-        "ftseChange": -0.26,
-        "shanghaiChange": -0.06,
-        "hangSengChange": -0.16,
-        "kospiChange": -1.3,
-        "emChange": 0,
-        "euroStoxx50Change": 0,
-        "highYieldSpread": 107.10000000000001,
-        "spreadChange": -0.63,
-        "igSpread": -13.96,
-        "igSpreadChange": -0.39,
-        "cdsIndex": 0,
-        "tedSpread": 0,
-        "mbs30YrSpread": 0,
-        "advanceDeclineRatio": 1.03,
-        "newHighsNewLows": 0,
-        "percentAbove200DMA": 0,
-        "percentAbove50DMA": 0,
-        "mcclellanOscillator": 0,
-        "xlkChange": 1.49,
-        "xlfChange": 1.49,
-        "xleChange": 0.98,
-        "xlvChange": 1.26,
-        "xlpChange": 0.35,
-        "xluChange": 1.6,
-        "xlreChange": 1.82,
-        "xliChange": 1.17,
-        "xlbChange": 1.24,
-        "xlcChange": 0.54,
-        "xlyChange": 0.25,
-        "smhChange": 1.61,
-        "aaiiBullBear": 0,
-        "cnnFearGreed": 0,
-        "naaim": 0,
-        "marginDebt": "flat",
-        "etfFlows": "flat",
-        "bitcoinChange": -0.54,
-        "ethereumChange": -3.9,
-        "btcDominance": 0,
-        "cryptoTotalMarketCapChange": 0,
-        "sofr": 0,
-        "repoRate": 0,
-        "fedBalanceSheet": "flat",
-        "tgaBalance": "flat",
-        "hasMajorEconData": false,
-        "econDataType": "",
-        "hasEarningsOfNote": false,
-        "earningsNames": "",
-        "isOpexWeek": true,
-        "isOpexDay": true,
-        "isMonthEnd": false,
-        "isQuarterEnd": false,
-        "daysToFOMC": 40,
-        "daysToNextCPI": 26,
-        "daysToNextNFP": 21,
-        "isExDividendHeavy": false,
-        "geopoliticalRisk": "low",
-        "geopoliticalEvents": "",
-        "spConsecutiveUpDays": 1,
-        "spConsecutiveDownDays": 0,
-        "sp5DayReturn": -1.99,
-        "sp20DayReturn": -0.3,
-        "nasdaqVsRussell5d": 2.68,
-        "sp52WeekRange": 0,
-        "spDistanceFrom200DMA": 0,
-        "spDistanceFrom50DMA": 0
-      },
-      "regime": {
-        "regime": "rotation",
-        "confidence": 51,
-        "directionalBias": 21,
-        "volatilityRegime": "normal",
-        "stressIndex": 18,
-        "riskAppetiteIndex": 55,
-        "keyFactors": [
-          "Futures +1.06%",
-          "Dollar -0.73%",
-          "Gold +1.4%",
-          "Weak breadth: 0% above 200 DMA",
-          "Extreme fear (F&G: 0)",
-          "USD/JPY +1.92%",
-          "S&P near 52-week low"
-        ],
+        "keyFactors": [],
         "sectorTilts": [],
-        "convictionModifiers": {
-          "longPenalty": 3,
-          "shortPenalty": 3,
-          "targetMultiplier": 0.9
-        }
+        "convictionModifiers": {}
       },
       "briefing": {
-        "summary": "The December 20 session is a relief bounce, not a trend reversal. The cooler Nov PCE (2.4% vs 2.5% expected) provides genuine catalyst for the bounce, as it pushes back on the 'inflation re-acceleration' narrative that drove the hawkish Fed reaction. However, the structural reality is fewer 2025 rate cuts and higher-for-longer rates. Triple witching will dominate intraday price action with $6.6T in options expiring. Government shutdown noise adds headline volatility but limited fundamental impact. Rotation regime is confirmed — breadth remains weak (Dow 10-day losing streak just ended) while mega-cap tech holds up. Airlines and travel/leisure are the momentum leaders. Expect choppy, volatile session with upward bias in first half followed by OPEX-driven chaos in the final hour. The S&P at 5,930 faces resistance at 6,000 and support at 5,850.",
+        "summary": "Correction bounce in progress (SPY +0.77%) but with critical bifurcation: cyclicals/value leading (travel +4-5%, gold miners +2-3%, refiners +3%) while mega-cap tech lags (NVDA -1.76%, TSLA -4.79%, AMZN -1.12%). This rotation pattern suggests the market is repositioning away from the names that drove the selloff, not that the selloff is over. FOMC at 2pm EST is the dominant catalyst — rate hold is priced in, the real signal is the dot plot and Powell's press conference tone on tariff-driven inflation. A dovish outcome (2+ cuts maintained, no inflation panic) would likely accelerate the bounce into a short-term rally, especially for rate-sensitive sectors. A hawkish surprise would resume the correction, likely testing the March 13 low of ~5,522. Pre-FOMC conviction should be capped at 50% position sizes — the real edge is in post-announcement reaction trades. VIX at 19.9 is elevated but declining (UVXY -5.93%), indicating fear is peaking rather than accelerating.",
         "marketCondition": "neutral",
-        "sections": [
-          {
-            "title": "Geopolitics",
-            "content": "Government shutdown crisis dominates. On Dec 19, the House rejected Trump-backed GOP funding bill 174-235, with 38 Republicans defecting. Elon Musk spearheaded opposition to bipartisan deal on X. Government funding expires end of Friday Dec 20. Trump demands debt ceiling suspension through Jan 2027 plus $110B disaster relief. Partial shutdown risk elevated heading into holidays, though markets historically shrug off shutdowns within days. Geopolitical risk otherwise low — no major international escalation.",
-            "importance": "medium"
-          },
-          {
-            "title": "Macro",
-            "content": "CRITICAL: Nov PCE (released morning of Dec 20) came in at 2.4% YoY, below the 2.5% consensus, providing relief after the hawkish Fed shock. Core PCE at 2.8% in line. This is the key catalyst for today's rebound. Fed cut 25bps on Dec 18 to 4.25-4.50% but dot plot slashed 2025 rate cut expectations from 4 cuts to just 2 (3.75-4.00% year-end 2025). SEP raised core PCE forecast to 2.5% from 2.1% and GDP growth to 2.1%. 10Y yield at 4.52%, 2-10 spread positive at 19bps. Dollar index 107.62 retreating 0.73% after sharp post-Fed rally. USD/JPY surging to 157.64 (+1.92%) as BoJ held rates. S&P had worst Fed-day performance on record Wed (-2.95%), Dow on 10-day losing streak (worst since 1974). Today is OPEX/triple witching with ~$6.6T notional options expiring — largest event of 2024.",
-            "importance": "medium"
-          },
-          {
-            "title": "Corporate",
-            "content": "Micron (MU) crashed 16% on Dec 19 after reporting weak Q2 guidance ($7.9B rev vs $8.98B expected, $1.43 EPS vs $1.91 expected). NAND oversupply, consumer demand weakness, and data center SSD demand pause cited. Broadcom (AVGO) still digesting blowout earnings from Dec 12 (revenue +44% YoY to $51.6B, AI revenue +220% to $12.2B). Airlines strong — UAL +4.5%, DAL +2.6%, BA +2.6% on Dec 19 close. Cruise lines rallied (CCL +1.5%, NCLH +1.2%). Boeing rebounding from operational lows. UNH down 2.1% continuing post-CEO-assassination weakness.",
-            "importance": "medium"
-          },
-          {
-            "title": "Tech",
-            "content": "Semiconductor bifurcation: AI-exposed names (NVDA, AVGO) holding up while broader semi complex weakens (MU -16%, AMD -2.1%). SMH at 238.87, down 1.3% on Dec 19 close despite strong prior session. Broadcom's $60-90B custom AI chip TAM by 2027 remains the dominant narrative. NVDA at 130.68, holding above key support after sharp pullback from $140+ highs. The Micron miss raises questions about non-AI semiconductor demand — particularly consumer DRAM/NAND. NFLX at 90.20 (+1.4%) continues momentum ahead of NFL Christmas Day games and ad-tier growth narrative.",
-            "importance": "medium"
-          },
-          {
-            "title": "Energy",
-            "content": "WTI crude at $69.46, essentially flat. OPEC+ delayed production unwind for the third time, pushing to Sep 2026. IEA and EIA both project well-supplied market in 2025. EIA forecasts Brent averaging $74/bbl in 2025 (down from $80 in 2024). Chinese oil demand growth stalling. Energy sector (XLE) lagging the recovery at +0.98% vs broader market. Oil services names under pressure — HAL -1.5%. The energy sector faces structural headwind of oversupply even with OPEC+ discipline, but current prices near multi-month lows provide some floor.",
-            "importance": "medium"
-          },
-          {
-            "title": "Policy",
-            "content": "Fed policy shift is THE dominant driver. The 'hawkish cut' on Dec 18 reset the entire 2025 rate trajectory — from 4 cuts to 2. Powell flagged inflation stickiness and strong labor market. Core PCE forecast raised to 2.5%. The Nov PCE print of 2.4% (released this morning) provides modest relief, suggesting inflation may not be as sticky as feared. Government shutdown adds policy uncertainty but is likely resolved within days. Trump admin fiscal policy (tax cuts, tariffs) creates medium-term inflation risk that Fed is now explicitly pricing. Market now expects next cut not until May 2025 at earliest.",
-            "importance": "medium"
-          }
-        ],
-        "scenarios": []
-      },
-      "recommendations": {
-        "cleanRecs": [
-          {
-            "symbol": "DAL",
-            "direction": "long",
-            "entryPrice": 60.38,
-            "targetPrice": 64,
-            "stopLoss": 58,
-            "thesis": "Delta is the highest-quality airline play. IATA projects $36.6B industry profit in 2025 (+16% vs 2024). Jet fuel expected at $87/bbl vs $99 in 2024. Delta's premium positioning and loyalty program generate durable revenue. Stock already showing leadership with +2.6% on Dec 19. Travel/leisure rotation is a multi-week trend, not a one-day event.",
-            "catalyst": "Airlines leading sector rotation with strong 2025 demand outlook, fuel costs declining, UAL +4.5% confirming group momentum",
-            "conviction": {
-              "catalystClarity": {
-                "score": 13,
-                "reasoning": ""
-              },
-              "technicalSetup": {
-                "score": 12,
-                "reasoning": ""
-              },
-              "riskReward": {
-                "score": 10,
-                "reasoning": ""
-              },
-              "volumeLiquidity": {
-                "score": 13,
-                "reasoning": ""
-              },
-              "marketAlignment": {
-                "score": 12,
-                "reasoning": ""
-              },
-              "informationEdge": {
-                "score": 10,
-                "reasoning": ""
-              },
-              "timingUrgency": {
-                "score": 11,
-                "reasoning": ""
-              }
-            }
-          },
-          {
-            "symbol": "NVDA",
-            "direction": "long",
-            "entryPrice": 130.68,
-            "targetPrice": 139,
-            "stopLoss": 125.5,
-            "thesis": "NVDA pulled back to key support around $128-131 after the Fed shock. The AI spending narrative remains the strongest secular trend in the market. Broadcom's blowout confirmed hyperscaler demand is accelerating. Micron's weakness is NAND/consumer-specific and actually highlights the divergence between AI compute (strong) and legacy semi (weak). Triple witching may create favorable entry on any intraday dips.",
-            "catalyst": "AI capex theme intact; Broadcom's $60-90B TAM guidance validates ecosystem; Micron selloff is NAND-specific, not AI compute; cooler PCE supports risk assets",
-            "conviction": {
-              "catalystClarity": {
-                "score": 14,
-                "reasoning": ""
-              },
-              "technicalSetup": {
-                "score": 11,
-                "reasoning": ""
-              },
-              "riskReward": {
-                "score": 11,
-                "reasoning": ""
-              },
-              "volumeLiquidity": {
-                "score": 14,
-                "reasoning": ""
-              },
-              "marketAlignment": {
-                "score": 11,
-                "reasoning": ""
-              },
-              "informationEdge": {
-                "score": 10,
-                "reasoning": ""
-              },
-              "timingUrgency": {
-                "score": 11,
-                "reasoning": ""
-              }
-            }
-          },
-          {
-            "symbol": "V",
-            "direction": "long",
-            "entryPrice": 314.88,
-            "targetPrice": 330,
-            "stopLoss": 305,
-            "thesis": "Visa is the ideal rotation trade — it benefits from consumer strength (holiday spending data strong) while being a quality compounder that holds up in volatile markets. +1.7% on Dec 19 shows relative strength. Not rate-sensitive like banks. Revenue is transaction-fee based and scales with nominal spending (inflation actually helps). In a rotation regime with uncertain direction, Visa offers asymmetric upside with limited downside.",
-            "catalyst": "Holiday spending season peak; consumer spending +0.7% in Nov; payments volume resilient; quality defensive growth in uncertain regime",
-            "conviction": {
-              "catalystClarity": {
-                "score": 12,
-                "reasoning": ""
-              },
-              "technicalSetup": {
-                "score": 12,
-                "reasoning": ""
-              },
-              "riskReward": {
-                "score": 10,
-                "reasoning": ""
-              },
-              "volumeLiquidity": {
-                "score": 14,
-                "reasoning": ""
-              },
-              "marketAlignment": {
-                "score": 12,
-                "reasoning": ""
-              },
-              "informationEdge": {
-                "score": 10,
-                "reasoning": ""
-              },
-              "timingUrgency": {
-                "score": 10,
-                "reasoning": ""
-              }
-            }
-          }
-        ],
-        "flaggedCount": 2,
-        "priceDeviations": [
-          {
-            "symbol": "DAL",
-            "priorClose": 60.38,
-            "entryPrice": 60.38,
-            "deviation": 0,
-            "plausible": true
-          },
-          {
-            "symbol": "NVDA",
-            "priorClose": 130.68,
-            "entryPrice": 130.68,
-            "deviation": 0,
-            "plausible": true
-          },
-          {
-            "symbol": "V",
-            "priorClose": 314.88,
-            "entryPrice": 314.88,
-            "deviation": 0,
-            "plausible": true
-          },
-          {
-            "symbol": "SVXY",
-            "priorClose": 45.6,
-            "entryPrice": 45.6,
-            "deviation": 0,
-            "plausible": true
-          },
-          {
-            "symbol": "GLD",
-            "priorClose": 239.6,
-            "entryPrice": 239.6,
-            "deviation": 0,
-            "plausible": true
-          }
-        ],
-        "tokensUsed": 1977
-      },
-      "outcomes": [],
-      "scores": {
-        "directionAccuracy": 0,
-        "targetHitRate": 0,
-        "stopHitRate": 0,
-        "avgReturnPercent": 0,
-        "profitFactor": 0,
-        "winRate": 0,
-        "totalScore": 50,
-        "benchmarkReturn": 1.61,
-        "alpha": -1.61
-      },
-      "dimensionAnalysis": {},
-      "weights": {
-        "catalystClarity": 0.22,
-        "technicalSetup": 0.15,
-        "riskReward": 0.12,
-        "volumeLiquidity": 0.06,
-        "marketAlignment": 0.1,
-        "informationEdge": 0.18,
-        "timingUrgency": 0.17
-      },
-      "totalTokensUsed": 0
-    },
-    {
-      "trialId": 10004,
-      "date": "2024-08-06",
-      "generatedAt": "2026-04-06T20:25:58.787Z",
-      "signals": {
-        "spFuturesChange": 1.04,
-        "nasdaqFuturesChange": 1.03,
-        "dowFuturesChange": 0.76,
-        "russellFuturesChange": 1.23,
-        "vixFuturesChange": 0.51,
-        "vix": 27.85,
-        "vixChange": 0.51,
-        "vixTermStructure": "flat",
-        "vix9d": 0,
-        "vix3m": 26.76,
-        "skewIndex": 0,
-        "putCallRatio": 0,
-        "spxGammaExposure": "neutral",
-        "tenYearYield": 3.89,
-        "tenYearYieldChange": 2.72,
-        "twoYearYield": 4.14,
-        "twoYearYieldChange": 0,
-        "thirtyYearYield": 4.18,
-        "threeMonthYield": 5.08,
-        "twoTenSpread": -0.25,
-        "threeMoTenYrSpread": -1.19,
-        "realYield10Y": 0,
-        "fedFundsRate": 0,
-        "fedFundsExpected": 0,
-        "dollarIndex": 103.2,
-        "dollarIndexChange": 0.22,
-        "eurUsd": 1.09,
-        "eurUsdChange": -0.23,
-        "usdJpy": 144.73,
-        "usdJpyChange": -0.73,
-        "usdCny": 7.16,
-        "usdCnyChange": 0.51,
-        "oilWTI": 75.23,
-        "oilChange": 2.77,
-        "brentOil": 78.33,
-        "brentOilChange": 2.42,
-        "natGasChange": 5.07,
-        "goldPrice": 2390.5,
-        "goldChange": 0.06,
-        "silverChange": -0.98,
-        "copperChange": -1.84,
-        "ironOreChange": 0,
-        "wheatChange": 0,
-        "uraniumChange": 0,
-        "balticDryIndex": 0,
-        "balticDryChange": 0,
-        "nikkeiChange": 1.19,
-        "daxChange": 1.5,
-        "ftseChange": 1.75,
-        "shanghaiChange": 0.09,
-        "hangSengChange": 1.38,
-        "kospiChange": 1.83,
-        "emChange": 0,
-        "euroStoxx50Change": 0,
-        "highYieldSpread": 112.44999999999999,
-        "spreadChange": -0.38,
-        "igSpread": -19.2,
-        "igSpreadChange": 0.65,
-        "cdsIndex": 0,
-        "tedSpread": 0,
-        "mbs30YrSpread": 0,
-        "advanceDeclineRatio": 1,
-        "newHighsNewLows": 0,
-        "percentAbove200DMA": 0,
-        "percentAbove50DMA": 0,
-        "mcclellanOscillator": 0,
-        "xlkChange": 1.36,
-        "xlfChange": 1.62,
-        "xleChange": 0.61,
-        "xlvChange": 0.46,
-        "xlpChange": 0.69,
-        "xluChange": 0.84,
-        "xlreChange": 2.21,
-        "xliChange": 1.2,
-        "xlbChange": 0.51,
-        "xlcChange": 1.18,
-        "xlyChange": 1.1,
-        "smhChange": 1.95,
-        "aaiiBullBear": 0,
-        "cnnFearGreed": 0,
-        "naaim": 0,
-        "marginDebt": "flat",
-        "etfFlows": "flat",
-        "bitcoinChange": -1.8,
-        "ethereumChange": -4.97,
-        "btcDominance": 0,
-        "cryptoTotalMarketCapChange": 0,
-        "sofr": 0,
-        "repoRate": 0,
-        "fedBalanceSheet": "flat",
-        "tgaBalance": "flat",
-        "hasMajorEconData": false,
-        "econDataType": "",
-        "hasEarningsOfNote": false,
-        "earningsNames": "",
-        "isOpexWeek": false,
-        "isOpexDay": false,
-        "isMonthEnd": false,
-        "isQuarterEnd": false,
-        "daysToFOMC": 43,
-        "daysToNextCPI": 8,
-        "daysToNextNFP": 31,
-        "isExDividendHeavy": false,
-        "geopoliticalRisk": "low",
-        "geopoliticalEvents": "",
-        "spConsecutiveUpDays": 1,
-        "spConsecutiveDownDays": 0,
-        "sp5DayReturn": -3.61,
-        "sp20DayReturn": -6.04,
-        "nasdaqVsRussell5d": 3.42,
-        "sp52WeekRange": 0,
-        "spDistanceFrom200DMA": 0,
-        "spDistanceFrom50DMA": 0
-      },
-      "regime": {
-        "regime": "range-bound",
-        "confidence": 44,
-        "directionalBias": 14,
-        "volatilityRegime": "elevated",
-        "stressIndex": 31,
-        "riskAppetiteIndex": 46,
-        "keyFactors": [
-          "Futures +1.04%",
-          "International avg +1.29%",
-          "Copper -1.8%",
-          "Weak breadth: 0% above 200 DMA",
-          "Extreme fear (F&G: 0)",
-          "USD/JPY -0.73%",
-          "S&P near 52-week low"
-        ],
-        "sectorTilts": [
-          {
-            "sector": "energy",
-            "bias": "overweight",
-            "reason": "Oil +2.8%"
-          },
-          {
-            "sector": "airlines",
-            "bias": "underweight",
-            "reason": "Fuel cost headwind"
-          },
-          {
-            "sector": "semiconductors",
-            "bias": "overweight",
-            "reason": "Semi momentum + Korea leading (fab demand)"
-          },
-          {
-            "sector": "materials",
-            "bias": "underweight",
-            "reason": "Dr. Copper declining — growth concerns"
-          }
-        ],
-        "convictionModifiers": {
-          "longPenalty": 5,
-          "shortPenalty": 5,
-          "targetMultiplier": 0.7,
-          "minConvictionOverride": 78
-        }
-      },
-      "briefing": {
-        "summary": true,
-        "marketCondition": "neutral",
-        "sections": [
-          {
-            "title": "Macro",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "Geopolitical",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "SectorAnalysis",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "TechnicalSetup",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "FlowsAndPositioning",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "CatalystsAndEvents",
-            "content": "[object Object]",
-            "importance": "medium"
-          }
-        ],
+        "sections": [],
         "scenarios": []
       },
       "recommendations": [
         {
-          "symbol": "SVXY",
+          "symbol": "NEM",
           "direction": "long",
-          "entryPrice": 39.22,
-          "targetPrice": 44.5,
-          "stopLoss": 35.5,
-          "thesis": "Volatility crush play. VIX spiked to 65 on Aug 5 (biggest ever), now at 27.85 and falling fast. SVXY tracks inverse VIX — as VIX mean-reverts toward 20, SVXY recovers. This is the single highest-conviction trade setup: VIX has NEVER stayed above 40 for more than a few days outside of 2008/2020 systemic crises. The carry trade unwind is a positioning event, not a fundamental crisis. SVXY at 39.22 vs prior close of 49.92 = 21% discount that will compress as vol normalizes. The BIS found 85% of the Aug 5 VIX spike was from illiquid put option bid-ask widening, not real hedging demand — further supporting rapid normalization.",
-          "catalyst": "",
+          "entryPrice": 47.52,
+          "targetPrice": 51.3,
+          "stopLoss": 45.5,
+          "thesis": "Gold broke $3,000 for the first time and the structural bid (central bank buying, ETF inflows, dollar weakness) has room to run. NEM +2.77% yesterday confirms participation but hasn't yet caught up to the gold move — miners typically lag then sprint. FOMC holding rates steady with dovish dot plot (2 cuts maintained) would weaken the dollar further, directly boosting gold. NEM trades at a discount to NAV and has the most liquid options among gold miners. Post-FOMC, if dot plot shows 2+ cuts, gold miners should gap up. Even a neutral FOMC maintains the current gold trend.",
+          "catalyst": "Gold at all-time highs ($3,036), dovish FOMC dot plot would accelerate gold miners. NEM is largest pure-play gold miner with highest operating leverage to gold price.",
           "conviction": {
             "catalystClarity": {
-              "score": 0,
+              "score": 88,
               "reasoning": ""
             },
             "technicalSetup": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "riskReward": {
-              "score": 14,
-              "reasoning": ""
-            },
-            "volumeLiquidity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "marketAlignment": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "informationEdge": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "timingUrgency": {
-              "score": 0,
-              "reasoning": ""
-            }
-          }
-        },
-        {
-          "symbol": "QQQ",
-          "direction": "long",
-          "entryPrice": 435.37,
-          "targetPrice": 452,
-          "stopLoss": 425,
-          "thesis": "Oversold mega-cap tech bounce. QQQ closed Aug 5 at 435.37 (-2.98%), down sharply from recent highs near 480. Nasdaq futures +1.03% pre-market. The selloff was driven by carry trade mechanics and Buffett's Apple sale — NOT by deteriorating AI/tech fundamentals. NVDA, AAPL, MSFT, GOOGL all down 3-6% in a single day on forced liquidation. Historical precedent: every VIX spike above 40 has been followed by Nasdaq recovery within 2 weeks. SMH pre-market +1.95% shows semiconductor leadership returning. Risk is further carry trade unwind or recession data, but the base case is mean reversion after 6% 20-day drawdown.",
-          "catalyst": "",
-          "conviction": {
-            "catalystClarity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "technicalSetup": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "riskReward": {
-              "score": 12,
-              "reasoning": ""
-            },
-            "volumeLiquidity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "marketAlignment": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "informationEdge": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "timingUrgency": {
-              "score": 0,
-              "reasoning": ""
-            }
-          }
-        },
-        {
-          "symbol": "XLRE",
-          "direction": "long",
-          "entryPrice": 40.65,
-          "targetPrice": 43,
-          "stopLoss": 39,
-          "thesis": "Rate-cut beneficiary play. XLRE leading the pre-market bounce at +2.21% — strongest sector. The 10Y yield collapse from 4.2% to 3.89% is a massive tailwind for REITs and rate-sensitive equities. Market is now pricing 100% probability of a September cut with debate on 25 vs 50bps. The crash accelerated the rate-cut timeline, which is structurally bullish for real estate. XLRE at 40.65 represents a 2.89% discount to prior close with clear upside as yield-sensitive investors rotate back. The 2-10 spread improving (-0.25) signals yield curve normalization which historically benefits financials and real estate.",
-          "catalyst": "",
-          "conviction": {
-            "catalystClarity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "technicalSetup": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "riskReward": {
-              "score": 12,
-              "reasoning": ""
-            },
-            "volumeLiquidity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "marketAlignment": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "informationEdge": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "timingUrgency": {
-              "score": 0,
-              "reasoning": ""
-            }
-          }
-        },
-        {
-          "symbol": "UVXY",
-          "direction": "short",
-          "entryPrice": 308.85,
-          "targetPrice": 220,
-          "stopLoss": 360,
-          "thesis": "Volatility decay / mean reversion short. UVXY surged 58% on Aug 5 to 308.85 — this is a leveraged VIX product that suffers from severe contango decay and daily rebalancing drag. With VIX already down from 65 to 28 in pre-market, UVXY faces enormous headwinds. Historical pattern: after every major VIX spike, UVXY loses 40-60% within 2-3 weeks as contango reasserts. The structural decay of the product means time is on the short's side. Risk is another panic leg, but with Nikkei +10% and global futures green, the acute phase appears over. Target of 220 represents ~29% decline, which is conservative given the product's typical post-spike decay. Note: this is a higher-risk trade due to potential for secondary vol spikes.",
-          "catalyst": "",
-          "conviction": {
-            "catalystClarity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "technicalSetup": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "riskReward": {
-              "score": 13,
-              "reasoning": ""
-            },
-            "volumeLiquidity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "marketAlignment": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "informationEdge": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "timingUrgency": {
-              "score": 0,
-              "reasoning": ""
-            }
-          }
-        }
-      ],
-      "outcomes": [
-        {
-          "symbol": "SVXY",
-          "openPrice": 41.86,
-          "highPrice": 46.53,
-          "lowPrice": 41.15,
-          "closePrice": 45.73,
-          "hitTarget": true,
-          "hitStop": false,
-          "directionCorrect": true,
-          "actualReturnPercent": 16.6,
-          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $41.86, High $46.53, Low $41.15, Close $45.73."
-        },
-        {
-          "symbol": "QQQ",
-          "openPrice": 437.23,
-          "highPrice": 449,
-          "lowPrice": 434.37,
-          "closePrice": 448.07,
-          "hitTarget": false,
-          "hitStop": false,
-          "directionCorrect": true,
-          "actualReturnPercent": 2.92,
-          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $437.23, High $449, Low $434.37, Close $448.07."
-        },
-        {
-          "symbol": "XLRE",
-          "openPrice": 40.68,
-          "highPrice": 42.24,
-          "lowPrice": 40.53,
-          "closePrice": 41.6,
-          "hitTarget": false,
-          "hitStop": false,
-          "directionCorrect": true,
-          "actualReturnPercent": 2.34,
-          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $40.68, High $42.24, Low $40.53, Close $41.6."
-        },
-        {
-          "symbol": "UVXY",
-          "openPrice": 256.9,
-          "highPrice": 273.65,
-          "lowPrice": 173.7,
-          "closePrice": 188.75,
-          "hitTarget": true,
-          "hitStop": false,
-          "directionCorrect": true,
-          "actualReturnPercent": 38.89,
-          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $256.9, High $273.65, Low $173.7, Close $188.75."
-        }
-      ],
-      "scores": {
-        "directionAccuracy": 100,
-        "targetHitRate": 50,
-        "stopHitRate": 0,
-        "avgReturnPercent": 15.19,
-        "profitFactor": 10,
-        "winRate": 100,
-        "totalScore": 100,
-        "benchmarkReturn": 0.56,
-        "alpha": 14.63
-      },
-      "dimensionAnalysis": {
-        "catalystClarity": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
-        },
-        "technicalSetup": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
-        },
-        "riskReward": {
-          "avgScoreWinners": 12.8,
-          "avgScoreLosers": 0,
-          "predictivePower": 62.8
-        },
-        "volumeLiquidity": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
-        },
-        "marketAlignment": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
-        },
-        "informationEdge": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
-        },
-        "timingUrgency": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
-        }
-      },
-      "weights": {
-        "catalystClarity": 0.22,
-        "technicalSetup": 0.15,
-        "riskReward": 0.12,
-        "volumeLiquidity": 0.06,
-        "marketAlignment": 0.1,
-        "informationEdge": 0.18,
-        "timingUrgency": 0.17
-      },
-      "totalTokensUsed": 0
-    },
-    {
-      "trialId": 10005,
-      "date": "2025-05-13",
-      "generatedAt": "2026-04-06T20:33:28.927Z",
-      "signals": {
-        "spFuturesChange": 0.72,
-        "nasdaqFuturesChange": 1.61,
-        "dowFuturesChange": -0.64,
-        "russellFuturesChange": 0.49,
-        "vixFuturesChange": 2.2,
-        "vix": 18.62,
-        "vixChange": 2.2,
-        "vixTermStructure": "contango",
-        "vix9d": 0,
-        "vix3m": 20.09,
-        "skewIndex": 0,
-        "putCallRatio": 0,
-        "spxGammaExposure": "neutral",
-        "tenYearYield": 4.5,
-        "tenYearYieldChange": 0.94,
-        "twoYearYield": 4.17,
-        "twoYearYieldChange": 0,
-        "thirtyYearYield": 4.94,
-        "threeMonthYield": 4.28,
-        "twoTenSpread": 0.33,
-        "threeMoTenYrSpread": 0.22,
-        "realYield10Y": 0,
-        "fedFundsRate": 0,
-        "fedFundsExpected": 0,
-        "dollarIndex": 101.04,
-        "dollarIndexChange": 0.04,
-        "eurUsd": 1.12,
-        "eurUsdChange": 0.81,
-        "usdJpy": 147.53,
-        "usdJpyChange": -0.53,
-        "usdCny": 7.21,
-        "usdCnyChange": 0.05,
-        "oilWTI": 63.15,
-        "oilChange": -0.82,
-        "brentOil": 66.09,
-        "brentOilChange": -0.81,
-        "natGasChange": -4.25,
-        "goldPrice": 3181.4,
-        "goldChange": -1.82,
-        "silverChange": -1.95,
-        "copperChange": -1.51,
-        "ironOreChange": 0,
-        "wheatChange": 0,
-        "uraniumChange": 0,
-        "balticDryIndex": 0,
-        "balticDryChange": 0,
-        "nikkeiChange": -0.14,
-        "daxChange": -0.47,
-        "ftseChange": -0.21,
-        "shanghaiChange": 0.86,
-        "hangSengChange": 2.3,
-        "kospiChange": 1.23,
-        "emChange": 0,
-        "euroStoxx50Change": 0,
-        "highYieldSpread": 102.65,
-        "spreadChange": -0.18,
-        "igSpread": -13.36,
-        "igSpreadChange": -0.08,
-        "cdsIndex": 0,
-        "tedSpread": 0,
-        "mbs30YrSpread": 0,
-        "advanceDeclineRatio": 0.95,
-        "newHighsNewLows": 0,
-        "percentAbove200DMA": 0,
-        "percentAbove50DMA": 0,
-        "mcclellanOscillator": 0,
-        "xlkChange": 2.16,
-        "xlfChange": 0.41,
-        "xleChange": 1.41,
-        "xlvChange": -3.01,
-        "xlpChange": -1.35,
-        "xluChange": -0.14,
-        "xlreChange": -1.34,
-        "xliChange": 0.7,
-        "xlbChange": -0.5,
-        "xlcChange": 0.98,
-        "xlyChange": 1.32,
-        "smhChange": 3.43,
-        "aaiiBullBear": 0,
-        "cnnFearGreed": 0,
-        "naaim": 0,
-        "marginDebt": "flat",
-        "etfFlows": "flat",
-        "bitcoinChange": -0.61,
-        "ethereumChange": -2.61,
-        "btcDominance": 0,
-        "cryptoTotalMarketCapChange": 0,
-        "sofr": 0,
-        "repoRate": 0,
-        "fedBalanceSheet": "flat",
-        "tgaBalance": "flat",
-        "hasMajorEconData": true,
-        "econDataType": "CPI",
-        "hasEarningsOfNote": false,
-        "earningsNames": "",
-        "isOpexWeek": true,
-        "isOpexDay": false,
-        "isMonthEnd": false,
-        "isQuarterEnd": false,
-        "daysToFOMC": 36,
-        "daysToNextCPI": 0,
-        "daysToNextNFP": 24,
-        "isExDividendHeavy": false,
-        "geopoliticalRisk": "low",
-        "geopoliticalEvents": "",
-        "spConsecutiveUpDays": 2,
-        "spConsecutiveDownDays": 0,
-        "sp5DayReturn": 4.99,
-        "sp20DayReturn": 8.89,
-        "nasdaqVsRussell5d": 1.46,
-        "sp52WeekRange": 0,
-        "spDistanceFrom200DMA": 0,
-        "spDistanceFrom50DMA": 0
-      },
-      "regime": {
-        "regime": "event-driven",
-        "confidence": 70,
-        "directionalBias": 17,
-        "volatilityRegime": "normal",
-        "stressIndex": 17,
-        "riskAppetiteIndex": 57,
-        "keyFactors": [
-          "Major economic data or imminent FOMC"
-        ],
-        "sectorTilts": [],
-        "convictionModifiers": {
-          "longPenalty": 5,
-          "shortPenalty": 5,
-          "targetMultiplier": 1.2,
-          "minConvictionOverride": 77
-        }
-      },
-      "briefing": {
-        "summary": true,
-        "marketCondition": "neutral",
-        "sections": [
-          {
-            "title": "Macro",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "Geopolitical",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "SectorAnalysis",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "TechnicalSetup",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "FlowsAndPositioning",
-            "content": "[object Object]",
-            "importance": "medium"
-          },
-          {
-            "title": "CatalystsAndEvents",
-            "content": "[object Object]",
-            "importance": "medium"
-          }
-        ],
-        "scenarios": []
-      },
-      "recommendations": [
-        {
-          "symbol": "TLT",
-          "direction": "long",
-          "entryPrice": 86.24,
-          "targetPrice": 88.8,
-          "stopLoss": 85.1,
-          "thesis": "Post-CPI bond rally play. This is the cleanest event-driven trade on the board. April CPI came in soft at +0.2% MoM / 2.3% YoY (vs +0.3% / 2.4% expected) -- lowest YoY since Feb 2021. The 10Y yield at 4.5% spiked on risk-on rotation out of bonds on May 12, creating an overdone selloff. Soft CPI directly supports rate cut expectations and bond prices. TLT sold off -0.93% on May 12 as money fled to equities -- this creates a mean-reversion setup reinforced by the fundamental catalyst of cooler inflation. R:R = 2.56:1.14 = 2.2:1. CRITICAL: This is a POST-DATA trade. Enter only after 8:30 AM CPI confirms soft print.",
-          "catalyst": "",
-          "conviction": {
-            "catalystClarity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "technicalSetup": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "riskReward": {
               "score": 82,
               "reasoning": ""
             },
-            "volumeLiquidity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "marketAlignment": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "informationEdge": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "timingUrgency": {
-              "score": 0,
-              "reasoning": ""
-            }
-          }
-        },
-        {
-          "symbol": "XLV",
-          "direction": "short",
-          "entryPrice": 135.96,
-          "targetPrice": 132.5,
-          "stopLoss": 137.8,
-          "thesis": "Healthcare sector short on dual headwinds: (1) Trump's most-favored-nation drug pricing executive order signed May 12 targeting 30-80% cost reductions -- a structural policy threat to pharma margins. The EO directed HHS to implement direct-to-consumer programs and threatened revocation of FDA approvals for non-compliant manufacturers. (2) XLV was already the worst-performing sector on May 12 (signals show -3.01%). This trade works independent of the CPI outcome because the drug pricing EO is a separate, sector-specific catalyst. Pharma stocks (MRK, JNJ, ABBV, PFE, GILD, TEVA) are specifically in the crosshairs. R:R = 3.46:1.84 = 1.9:1. -5 short conviction penalty applied for event-driven regime.",
-          "catalyst": "",
-          "conviction": {
-            "catalystClarity": {
-              "score": 0,
-              "reasoning": ""
-            },
-            "technicalSetup": {
-              "score": 0,
-              "reasoning": ""
-            },
             "riskReward": {
-              "score": 79,
+              "score": 80,
               "reasoning": ""
             },
             "volumeLiquidity": {
-              "score": 0,
+              "score": 92,
               "reasoning": ""
             },
             "marketAlignment": {
-              "score": 0,
+              "score": 90,
               "reasoning": ""
             },
             "informationEdge": {
-              "score": 0,
+              "score": 75,
               "reasoning": ""
             },
             "timingUrgency": {
-              "score": 0,
+              "score": 82,
               "reasoning": ""
             }
           }
         },
         {
-          "symbol": "QQQ",
+          "symbol": "RCL",
           "direction": "long",
-          "entryPrice": 507.85,
-          "targetPrice": 520,
-          "stopLoss": 500,
-          "thesis": "Post-CPI momentum continuation in tech/growth. Soft CPI (+0.2% vs +0.3% expected) + US-China tariff deal = double tailwind for Nasdaq. Lower inflation supports lower rate expectations which supports higher growth multiples. Nasdaq futures +1.61% pre-market. SMH +3.43% prior day. However, QQQ already +4.07% on May 12 -- extended. REDUCED SIZING mandatory given the 5-day rally. R:R = 12.15:7.85 = 1.5:1 (barely acceptable). CRITICAL: POST-DATA trade only. Enter only if QQQ holds above 505 through the first 30 minutes after CPI. If it breaks 505, this trade is dead. -5 long conviction penalty applied for event-driven regime.",
-          "catalyst": "",
+          "entryPrice": 219.41,
+          "targetPrice": 235,
+          "stopLoss": 210,
+          "thesis": "Cruise lines are showing the strongest group momentum in the entire 181-stock universe (CCL +4.87%, NCLH +4.43%, RCL +3.49%). RCL is the quality play in the group — best balance sheet, highest margins, premium brand. The correction pulled RCL from $270+ to sub-$220, a 19% drawdown that overshot fundamentals for a company with record bookings and pricing power. Ukraine ceasefire reduces European travel risk premium. Oil at $67 is a direct cost tailwind. Post-FOMC, if rates hold and dot plot stays dovish, consumer confidence stabilizes and travel spending sentiment improves. RCL preferred over CCL (too leveraged, bankruptcy history) and NCLH (weakest brand).",
+          "catalyst": "Correction bounce in travel/leisure. Ceasefire + falling oil = tailwinds for cruise operators. FOMC rate hold removes near-term tightening risk for consumer discretionary.",
           "conviction": {
             "catalystClarity": {
-              "score": 0,
+              "score": 78,
               "reasoning": ""
             },
             "technicalSetup": {
-              "score": 0,
+              "score": 80,
               "reasoning": ""
             },
             "riskReward": {
-              "score": 73,
+              "score": 75,
               "reasoning": ""
             },
             "volumeLiquidity": {
-              "score": 0,
+              "score": 85,
               "reasoning": ""
             },
             "marketAlignment": {
-              "score": 0,
+              "score": 85,
               "reasoning": ""
             },
             "informationEdge": {
-              "score": 0,
+              "score": 70,
               "reasoning": ""
             },
             "timingUrgency": {
-              "score": 0,
+              "score": 78,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "GDX",
+          "direction": "long",
+          "entryPrice": 44.57,
+          "targetPrice": 48,
+          "stopLoss": 42.5,
+          "thesis": "When miners outperform the underlying metal, it signals the market expects the gold move to continue (miners have operating leverage). GDX provides diversified exposure without single-stock risk. The gold thesis is multi-layered: central bank buying (structural), tariff uncertainty (cyclical), rate cut expectations (monetary), and geopolitical hedging (tactical). All four tailwinds are active simultaneously, which is rare. FOMC is the near-term catalyst — even a neutral hold maintains the trajectory. GDX also benefits from improving margins as gold rises faster than mining costs.",
+          "catalyst": "Gold miners ETF — diversified exposure to gold breakout above $3,000. FOMC dovish outcome would be accelerant. Miners outperforming metal (+2.13% vs GLD +0.54%) is bullish breadth signal.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 83,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 95,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 80,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MPC",
+          "direction": "long",
+          "entryPrice": 146.16,
+          "targetPrice": 156,
+          "stopLoss": 140,
+          "thesis": "MPC +3.55% is leading the refiner group (VLO +2.95%, PSX +1.94%). The tariff narrative works FOR refiners: they process domestic crude and sell refined products at tariff-inflated prices. Crack spreads (refining margin) have been widening. MPC has the best refining asset base and highest complexity (can process cheap heavy crude into premium products). This is a non-obvious beneficiary of the tariff regime that most traders are overlooking while focused on steel names (which are actually selling off). FOMC is secondary for this trade — refiner margins driven by crack spreads, not rates.",
+          "catalyst": "Refiner margins expanding. 25% steel/aluminum tariffs protect domestic refining infrastructure. Crude at $67 (low input cost) while refined product demand stable. Tariff regime is a structural tailwind for domestic refiners.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 76,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 75,
               "reasoning": ""
             }
           }
@@ -44825,88 +43329,100 @@
       ],
       "outcomes": [
         {
-          "symbol": "TLT",
-          "openPrice": 86.13,
-          "highPrice": 86.32,
-          "lowPrice": 85.2,
-          "closePrice": 86.07,
+          "symbol": "NEM",
+          "openPrice": 48.34,
+          "highPrice": 48.68,
+          "lowPrice": 47.2,
+          "closePrice": 47.76,
           "hitTarget": false,
           "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.51,
+          "notes": "3-day window (2025-03-18, 2025-03-19, 2025-03-20). Open $48.34, High $48.68, Low $47.2, Close $47.76."
+        },
+        {
+          "symbol": "RCL",
+          "openPrice": 217.17,
+          "highPrice": 218.88,
+          "lowPrice": 203.07,
+          "closePrice": 214.72,
+          "hitTarget": false,
+          "hitStop": true,
           "directionCorrect": false,
-          "actualReturnPercent": -0.2,
-          "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $86.13, High $86.32, Low $85.2, Close $86.07."
+          "actualReturnPercent": -2.14,
+          "notes": "3-day window (2025-03-18, 2025-03-19, 2025-03-20). Open $217.17, High $218.88, Low $203.07, Close $214.72."
         },
         {
-          "symbol": "XLV",
-          "openPrice": 133.94,
-          "highPrice": 133.94,
-          "lowPrice": 127.35,
-          "closePrice": 130.46,
-          "hitTarget": true,
+          "symbol": "GDX",
+          "openPrice": 45.44,
+          "highPrice": 45.65,
+          "lowPrice": 44.38,
+          "closePrice": 45.16,
+          "hitTarget": false,
           "hitStop": false,
           "directionCorrect": true,
-          "actualReturnPercent": 4.05,
-          "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $133.94, High $133.94, Low $127.35, Close $130.46."
+          "actualReturnPercent": 1.32,
+          "notes": "3-day window (2025-03-18, 2025-03-19, 2025-03-20). Open $45.44, High $45.65, Low $44.38, Close $45.16."
         },
         {
-          "symbol": "QQQ",
-          "openPrice": 509.16,
-          "highPrice": 521.93,
-          "lowPrice": 508.42,
-          "closePrice": 519.25,
-          "hitTarget": true,
+          "symbol": "MPC",
+          "openPrice": 147.65,
+          "highPrice": 152.08,
+          "lowPrice": 144.69,
+          "closePrice": 151.95,
+          "hitTarget": false,
           "hitStop": false,
           "directionCorrect": true,
-          "actualReturnPercent": 2.24,
-          "notes": "3-day window (2025-05-13, 2025-05-14, 2025-05-15). Open $509.16, High $521.93, Low $508.42, Close $519.25."
+          "actualReturnPercent": 3.96,
+          "notes": "3-day window (2025-03-18, 2025-03-19, 2025-03-20). Open $147.65, High $152.08, Low $144.69, Close $151.95."
         }
       ],
       "scores": {
-        "directionAccuracy": 66.7,
-        "targetHitRate": 66.7,
-        "stopHitRate": 0,
-        "avgReturnPercent": 2.03,
-        "profitFactor": 31.45,
-        "winRate": 66.7,
-        "totalScore": 84.6,
-        "benchmarkReturn": 0.59,
-        "alpha": 1.44
+        "directionAccuracy": 75,
+        "targetHitRate": 0,
+        "stopHitRate": 25,
+        "avgReturnPercent": 0.91,
+        "profitFactor": 2.71,
+        "winRate": 75,
+        "totalScore": 73,
+        "benchmarkReturn": -0.67,
+        "alpha": 1.58
       },
       "dimensionAnalysis": {
         "catalystClarity": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
+          "avgScoreWinners": 84.3,
+          "avgScoreLosers": 78,
+          "predictivePower": 56.3
         },
         "technicalSetup": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
+          "avgScoreWinners": 82.3,
+          "avgScoreLosers": 80,
+          "predictivePower": 52.3
         },
         "riskReward": {
-          "avgScoreWinners": 76,
-          "avgScoreLosers": 82,
-          "predictivePower": 44
+          "avgScoreWinners": 78,
+          "avgScoreLosers": 75,
+          "predictivePower": 53
         },
         "volumeLiquidity": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
+          "avgScoreWinners": 91.7,
+          "avgScoreLosers": 85,
+          "predictivePower": 56.7
         },
         "marketAlignment": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
+          "avgScoreWinners": 86.7,
+          "avgScoreLosers": 85,
+          "predictivePower": 51.7
         },
         "informationEdge": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
+          "avgScoreWinners": 75,
+          "avgScoreLosers": 70,
+          "predictivePower": 55
         },
         "timingUrgency": {
-          "avgScoreWinners": 0,
-          "avgScoreLosers": 0,
-          "predictivePower": 50
+          "avgScoreWinners": 79,
+          "avgScoreLosers": 78,
+          "predictivePower": 51
         }
       },
       "weights": {
@@ -44932,7 +43448,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T20:33:28.946Z",
+  "lastUpdatedAt": "2026-04-06T20:43:57.633Z",
   "totalTokensUsed": 3625689,
   "weightHistory": [
     {
@@ -45378,7 +43894,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 5,
+  "fullDepthCurrentTrial": 1,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -45483,11 +43999,7 @@
     "2026-03-19"
   ],
   "fullDepthCompletedDates": [
-    "2025-03-18",
-    "2026-03-04",
-    "2024-12-20",
-    "2024-08-06",
-    "2025-05-13"
+    "2025-03-18"
   ],
   "dateSequence": [
     "2025-09-09",
