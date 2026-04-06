@@ -43146,6 +43146,282 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 19407
+    },
+    {
+      "trialId": 10001,
+      "date": "2025-03-18",
+      "generatedAt": "2026-04-06T20:02:41.717Z",
+      "signals": {
+        "spFuturesChange": -1.07,
+        "nasdaqFuturesChange": -1.71,
+        "dowFuturesChange": -0.62,
+        "russellFuturesChange": -0.89,
+        "vixFuturesChange": -8.29,
+        "vix": 19.9,
+        "vixChange": -8.29,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 21.97,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.28,
+        "tenYearYieldChange": -0.58,
+        "twoYearYield": 4.11,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.58,
+        "threeMonthYield": 4.2,
+        "twoTenSpread": 0.17,
+        "threeMoTenYrSpread": 0.08,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 103.43,
+        "dollarIndexChange": 0.18,
+        "eurUsd": 1.09,
+        "eurUsdChange": 0.19,
+        "usdJpy": 149.45,
+        "usdJpyChange": 0.05,
+        "usdCny": 7.23,
+        "usdCnyChange": -0.07,
+        "oilWTI": 67.16,
+        "oilChange": 0.39,
+        "brentOil": 70.78,
+        "brentOilChange": 0.31,
+        "natGasChange": 4.81,
+        "goldPrice": 3035.9,
+        "goldChange": 0.03,
+        "silverChange": -1.75,
+        "copperChange": 1.66,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -0.25,
+        "daxChange": -0.4,
+        "ftseChange": 0.02,
+        "shanghaiChange": -0.1,
+        "hangSengChange": 0.12,
+        "kospiChange": 0.62,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 105.35,
+        "spreadChange": 0.18,
+        "igSpread": -16.86,
+        "igSpreadChange": -0.24,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1.06,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": -1.52,
+        "xlfChange": -0.12,
+        "xleChange": 0.16,
+        "xlvChange": 0.05,
+        "xlpChange": -1.14,
+        "xluChange": -0.69,
+        "xlreChange": -0.62,
+        "xliChange": -0.8,
+        "xlbChange": -0.17,
+        "xlcChange": -1.4,
+        "xlyChange": -1.78,
+        "smhChange": -1.55,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 5,
+        "ethereumChange": 6.48,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": true,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 1,
+        "daysToNextCPI": 23,
+        "daysToNextNFP": 17,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 1,
+        "sp5DayReturn": 0.76,
+        "sp20DayReturn": -8.4,
+        "nasdaqVsRussell5d": -0.91,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "range-bound",
+        "confidence": 39,
+        "directionalBias": -9,
+        "volatilityRegime": "normal",
+        "stressIndex": 18,
+        "riskAppetiteIndex": 43,
+        "keyFactors": [
+          "Futures -1.39%",
+          "Russell leading by 0.50pp",
+          "Copper +1.7%",
+          "Weak breadth: 0% above 200 DMA",
+          "Extreme fear (F&G: 0)",
+          "Bitcoin +5.0%",
+          "S&P near 52-week low"
+        ],
+        "sectorTilts": [
+          {
+            "sector": "materials",
+            "bias": "overweight",
+            "reason": "Copper/shipping demand rising — industrial expansion"
+          },
+          {
+            "sector": "industrials",
+            "bias": "overweight",
+            "reason": "Cyclical expansion signal"
+          }
+        ],
+        "convictionModifiers": {
+          "longPenalty": 5,
+          "shortPenalty": 5,
+          "targetMultiplier": 0.7,
+          "minConvictionOverride": 78
+        }
+      },
+      "briefing": {
+        "summary": "Markets are in a correction bounce ahead of the most important macro event of the month — the FOMC meeting. The S&P is down 8.4% in 20 days with extreme fear readings, creating conditions for either a sharp relief rally (dovish FOMC) or resumption of the selloff (hawkish surprise). Pre-FOMC positioning is pure gambling; the edge is in post-announcement reaction plays.",
+        "marketCondition": "neutral",
+        "sections": [
+          {
+            "title": "Geopolitics",
+            "content": "Ukraine-Russia: Ukraine accepted a US-proposed 30-day ceasefire on March 12 after Saudi Arabia talks, with US resuming intelligence sharing and security assistance. Putin conditionally acknowledged ceasefire concept but demanded preconditions, making full acceptance uncertain. Middle East: US launched Operation Rough Rider against Houthis in March 2025 after 100+ merchant vessel attacks; active bombing campaign ongoing. Red Sea shipping disruptions continue. Israel-Hamas tensions remain elevated. Government shutdown averted on March 14 after Senate passed stopgap funding through September 2025, removing a near-term tail risk. Geopolitical risk is moderate — ceasefire hopes provide upside optionality but Russia rejection risk is real.",
+            "importance": "medium"
+          },
+          {
+            "title": "Macro",
+            "content": "FOMC meeting begins TODAY (March 18-19). Rate hold at 4.25-4.50% is near-certain. Key focus is the updated dot plot and Summary of Economic Projections. Markets expect two rate cuts in 2025 maintained in median dot, but risk of hawkish shift given tariff-driven inflation concerns. The S&P 500 entered correction territory on March 13 (down 10% from Feb 19 high of ~6,144 to ~5,522), then bounced — closed at ~5,675 on March 17 (up 1%). VIX at 19.9, down from recent spikes. 10Y yield at 4.28%, 2-10 spread positive at 17bp. The 20-day S&P return of -8.4% reflects the sharp correction. Fed GDP growth forecast expected to be revised down (from 2.1% to ~1.7%). Inflation forecast expected to be revised up. Powell will likely acknowledge tariff uncertainty is clouding outlook. This is THE event of the day — all other catalysts are secondary.",
+            "importance": "medium"
+          },
+          {
+            "title": "Corporate",
+            "content": "NVIDIA GTC 2025 kicked off March 17; Jensen Huang keynote is March 18. Key announcements expected: Blackwell Ultra GB300 chip, next-gen AI platform. Pre-GTC, NVDA closed at $119.53 on March 17, down 18.6% from its January 6 all-time high. Options market implies ~9% move by March 21 expiration. Magnificent 7 stocks collectively down 25% from 52-week highs, responsible for 96% of S&P 500 YTD decline. Earnings week includes: Micron (March 20, after GTC), Williams-Sonoma (March 18), Progressive (March 18). The following week: Alibaba, Accenture, Darden. DeepSeek AI shock from January still weighing on semiconductor valuations — challenged narrative of unlimited GPU demand growth.",
+            "importance": "medium"
+          },
+          {
+            "title": "Tech",
+            "content": "NVIDIA GTC 2025 (March 17-21) is the dominant tech event. Blackwell Ultra GB300 NVL72 expected to deliver 1.5x more AI performance vs GB200 NVL72. However, DeepSeek's January revelation that competitive AI models can be built with fewer high-end chips continues to weigh on the 'infinite GPU demand' thesis. Semiconductor market surpassed $830B in 2025 but growth is heavily concentrated — top 10 companies grew revenue 90% vs 8% for the rest. SMH (semiconductor ETF) down 1.55% on March 17. China's AI chip industry hitting record revenues despite US export restrictions, suggesting workarounds are working. South Korea investing $518B in AI strategy. The AI capex narrative is being questioned: are hyperscalers overbuilding? This is the key debate heading into GTC.",
+            "importance": "medium"
+          },
+          {
+            "title": "Energy",
+            "content": "Gold broke $3,000/oz for the first time on March 14, closing at ~$3,036 on March 17. Drivers: central bank buying, ETF inflows, geopolitical uncertainty, tariff fears, dollar weakness expectations. WTI crude at $67.16, relatively subdued despite Houthi attacks on Red Sea shipping. Brent at $70.78. Natural gas up 4.81% — seasonal and supply-driven. Copper up 1.66%, signaling some industrial demand optimism. The gold/oil ratio is extremely elevated (gold $3,036 / oil $67 = ~45x), suggesting markets are pricing in safe-haven demand over growth. Oil prices are being suppressed by recession fears despite Middle East supply risks — a potential contrarian long if FOMC is dovish.",
+            "importance": "medium"
+          },
+          {
+            "title": "Policy",
+            "content": "Steel and aluminum tariffs expanded to 25% on ALL imports effective March 12, 2025, eliminating all country exemptions and quotas. Steel prices up 16% since Trump inauguration. Auto tariffs (25%) announced but not yet in effect (March 26 announcement, April 3 effective — NOT YET KNOWN on March 18). China tariffs raised from 10% to 20% on March 3. Canada/Mexico 25% tariffs implemented March 4 with USMCA exemptions until April 2. Venezuela oil tariff EO coming March 24. US suspended WTO budget contributions. The tariff escalation is the primary driver of the S&P correction — creating stagflationary fears (higher prices + slower growth). This feeds directly into FOMC uncertainty — Powell must navigate between tariff-driven inflation and growth slowdown.",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": []
+      },
+      "recommendations": {
+        "cleanRecs": [
+          {
+            "symbol": "NUE",
+            "direction": "long",
+            "entryPrice": 130,
+            "targetPrice": 140,
+            "stopLoss": 125,
+            "thesis": "Nucor is a direct, unambiguous beneficiary of the steel tariff regime. Unlike most trades today, the catalyst has already occurred (tariffs effective March 12) and is structural — not event-dependent like FOMC. The tariff environment creates pricing power for domestic steel producers that flows directly to earnings. Nucor's EAF model has lower costs than blast furnace competitors. Materials sector is regime-favored. FOMC outcome is secondary — tariffs are the driver.",
+            "catalyst": "25% universal steel tariffs effective March 12. Steel prices up 16% since inauguration. Nucor as largest US EAF steelmaker is the clearest beneficiary.",
+            "conviction": {
+              "catalystClarity": {
+                "score": 82,
+                "reasoning": ""
+              },
+              "technicalSetup": {
+                "score": 60,
+                "reasoning": ""
+              },
+              "riskReward": {
+                "score": 70,
+                "reasoning": ""
+              },
+              "volumeLiquidity": {
+                "score": 75,
+                "reasoning": ""
+              },
+              "marketAlignment": {
+                "score": 72,
+                "reasoning": ""
+              },
+              "informationEdge": {
+                "score": 65,
+                "reasoning": ""
+              },
+              "timingUrgency": {
+                "score": 55,
+                "reasoning": ""
+              }
+            }
+          }
+        ],
+        "flaggedCount": 1,
+        "priceDeviations": [
+          {
+            "symbol": "GDX",
+            "priorClose": 44.57,
+            "entryPrice": 43.5,
+            "deviation": 2.4,
+            "plausible": false
+          },
+          {
+            "symbol": "NUE",
+            "priorClose": 129.5,
+            "entryPrice": 130,
+            "deviation": 0.39,
+            "plausible": true
+          }
+        ],
+        "tokensUsed": 822
+      },
+      "outcomes": [],
+      "scores": {
+        "directionAccuracy": 0,
+        "targetHitRate": 0,
+        "stopHitRate": 0,
+        "avgReturnPercent": 0,
+        "profitFactor": 0,
+        "winRate": 0,
+        "totalScore": 50,
+        "benchmarkReturn": -0.67,
+        "alpha": 0.67
+      },
+      "dimensionAnalysis": {},
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -43159,7 +43435,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T19:55:25.868Z",
+  "lastUpdatedAt": "2026-04-06T20:02:41.747Z",
   "totalTokensUsed": 3625689,
   "weightHistory": [
     {
@@ -43605,7 +43881,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 0,
+  "fullDepthCurrentTrial": 1,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -43709,7 +43985,9 @@
     "2025-04-03",
     "2026-03-19"
   ],
-  "fullDepthCompletedDates": [],
+  "fullDepthCompletedDates": [
+    "2025-03-18"
+  ],
   "dateSequence": [
     "2025-09-09",
     "2025-03-27",

@@ -1,0 +1,180 @@
+{
+  "id": "briefing-2025-03-18-1775505761746",
+  "date": "2025-03-18",
+  "generatedAt": "2026-04-06T20:02:41.717Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Markets are in a correction bounce ahead of the most important macro event of the month — the FOMC meeting. The S&P is down 8.4% in 20 days with extreme fear readings, creating conditions for either a sharp relief rally (dovish FOMC) or resumption of the selloff (hawkish surprise). Pre-FOMC positioning is pure gambling; the edge is in post-announcement reaction plays.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Geopolitics",
+      "content": "Ukraine-Russia: Ukraine accepted a US-proposed 30-day ceasefire on March 12 after Saudi Arabia talks, with US resuming intelligence sharing and security assistance. Putin conditionally acknowledged ceasefire concept but demanded preconditions, making full acceptance uncertain. Middle East: US launched Operation Rough Rider against Houthis in March 2025 after 100+ merchant vessel attacks; active bombing campaign ongoing. Red Sea shipping disruptions continue. Israel-Hamas tensions remain elevated. Government shutdown averted on March 14 after Senate passed stopgap funding through September 2025, removing a near-term tail risk. Geopolitical risk is moderate — ceasefire hopes provide upside optionality but Russia rejection risk is real.",
+      "importance": "medium"
+    },
+    {
+      "title": "Macro",
+      "content": "FOMC meeting begins TODAY (March 18-19). Rate hold at 4.25-4.50% is near-certain. Key focus is the updated dot plot and Summary of Economic Projections. Markets expect two rate cuts in 2025 maintained in median dot, but risk of hawkish shift given tariff-driven inflation concerns. The S&P 500 entered correction territory on March 13 (down 10% from Feb 19 high of ~6,144 to ~5,522), then bounced — closed at ~5,675 on March 17 (up 1%). VIX at 19.9, down from recent spikes. 10Y yield at 4.28%, 2-10 spread positive at 17bp. The 20-day S&P return of -8.4% reflects the sharp correction. Fed GDP growth forecast expected to be revised down (from 2.1% to ~1.7%). Inflation forecast expected to be revised up. Powell will likely acknowledge tariff uncertainty is clouding outlook. This is THE event of the day — all other catalysts are secondary.",
+      "importance": "medium"
+    },
+    {
+      "title": "Corporate",
+      "content": "NVIDIA GTC 2025 kicked off March 17; Jensen Huang keynote is March 18. Key announcements expected: Blackwell Ultra GB300 chip, next-gen AI platform. Pre-GTC, NVDA closed at $119.53 on March 17, down 18.6% from its January 6 all-time high. Options market implies ~9% move by March 21 expiration. Magnificent 7 stocks collectively down 25% from 52-week highs, responsible for 96% of S&P 500 YTD decline. Earnings week includes: Micron (March 20, after GTC), Williams-Sonoma (March 18), Progressive (March 18). The following week: Alibaba, Accenture, Darden. DeepSeek AI shock from January still weighing on semiconductor valuations — challenged narrative of unlimited GPU demand growth.",
+      "importance": "medium"
+    },
+    {
+      "title": "Tech",
+      "content": "NVIDIA GTC 2025 (March 17-21) is the dominant tech event. Blackwell Ultra GB300 NVL72 expected to deliver 1.5x more AI performance vs GB200 NVL72. However, DeepSeek's January revelation that competitive AI models can be built with fewer high-end chips continues to weigh on the 'infinite GPU demand' thesis. Semiconductor market surpassed $830B in 2025 but growth is heavily concentrated — top 10 companies grew revenue 90% vs 8% for the rest. SMH (semiconductor ETF) down 1.55% on March 17. China's AI chip industry hitting record revenues despite US export restrictions, suggesting workarounds are working. South Korea investing $518B in AI strategy. The AI capex narrative is being questioned: are hyperscalers overbuilding? This is the key debate heading into GTC.",
+      "importance": "medium"
+    },
+    {
+      "title": "Energy",
+      "content": "Gold broke $3,000/oz for the first time on March 14, closing at ~$3,036 on March 17. Drivers: central bank buying, ETF inflows, geopolitical uncertainty, tariff fears, dollar weakness expectations. WTI crude at $67.16, relatively subdued despite Houthi attacks on Red Sea shipping. Brent at $70.78. Natural gas up 4.81% — seasonal and supply-driven. Copper up 1.66%, signaling some industrial demand optimism. The gold/oil ratio is extremely elevated (gold $3,036 / oil $67 = ~45x), suggesting markets are pricing in safe-haven demand over growth. Oil prices are being suppressed by recession fears despite Middle East supply risks — a potential contrarian long if FOMC is dovish.",
+      "importance": "medium"
+    },
+    {
+      "title": "Policy",
+      "content": "Steel and aluminum tariffs expanded to 25% on ALL imports effective March 12, 2025, eliminating all country exemptions and quotas. Steel prices up 16% since Trump inauguration. Auto tariffs (25%) announced but not yet in effect (March 26 announcement, April 3 effective — NOT YET KNOWN on March 18). China tariffs raised from 10% to 20% on March 3. Canada/Mexico 25% tariffs implemented March 4 with USMCA exemptions until April 2. Venezuela oil tariff EO coming March 24. US suspended WTO budget contributions. The tariff escalation is the primary driver of the S&P correction — creating stagflationary fears (higher prices + slower growth). This feeds directly into FOMC uncertainty — Powell must navigate between tariff-driven inflation and growth slowdown.",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG GDX @ $43.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $46",
+          "implication": "+5.7% gain",
+          "trade": "Gold miners provide leveraged exposure to gold at record prices. GDX benefits from both the absolute gold price level (record margins for miners) and the fear-driven demand backdrop. This is one of the few trades that works in both dovish AND hawkish FOMC scenarios because gold is being driven by structural factors (central bank de-dollarization, tariff uncertainty) not just rate expectations. The regime model favors materials. Position sized small due to range-bound regime."
+        },
+        {
+          "condition": "Price hits stop $42",
+          "implication": "A strongly hawkish FOMC with dollar spike to 105+ could trigger short-term gold pullback from $3,000 psychological level. Gold miners have operational risks (costs, production) that may not track gold perfectly. If tariff fears abate quickly (unlikely), the safe-haven bid evaporates.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NUE @ $130",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $140",
+          "implication": "+7.7% gain",
+          "trade": "Nucor is a direct, unambiguous beneficiary of the steel tariff regime. Unlike most trades today, the catalyst has already occurred (tariffs effective March 12) and is structural — not event-dependent like FOMC. The tariff environment creates pricing power for domestic steel producers that flows directly to earnings. Nucor's EAF model has lower costs than blast furnace competitors. Materials sector is regime-favored. FOMC outcome is secondary — tariffs are the driver."
+        },
+        {
+          "condition": "Price hits stop $125",
+          "implication": "Steel demand collapses in a recession, overwhelming tariff benefits. Downstream customers (auto, construction) reduce orders as their costs rise. Political risk — tariff rollback or exemptions granted. Steel is cyclical and a recession trade would hurt regardless of tariff protection.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 39,
+  "recommendations": [
+    {
+      "ticker": "GDX",
+      "direction": "long",
+      "entryPrice": 43.5,
+      "targetPrice": 46,
+      "stopPrice": 42,
+      "riskRewardRatio": 1.67,
+      "positionSize": "3% of portfolio",
+      "catalyst": "Gold at record $3,036. Central bank buying, tariff uncertainty, and geopolitical risk all structurally support gold regardless of FOMC outcome. FOMC dovish = dollar weak = gold up. FOMC hawkish = recession fears = gold up as safe haven.",
+      "reasoning": "Gold miners provide leveraged exposure to gold at record prices. GDX benefits from both the absolute gold price level (record margins for miners) and the fear-driven demand backdrop. This is one of the few trades that works in both dovish AND hawkish FOMC scenarios because gold is being driven by structural factors (central bank de-dollarization, tariff uncertainty) not just rate expectations. The regime model favors materials. Position sized small due to range-bound regime.",
+      "bearCase": "A strongly hawkish FOMC with dollar spike to 105+ could trigger short-term gold pullback from $3,000 psychological level. Gold miners have operational risks (costs, production) that may not track gold perfectly. If tariff fears abate quickly (unlikely), the safe-haven bid evaporates.",
+      "conviction": {
+        "catalystClarity": 75,
+        "technicalSetup": 70,
+        "riskReward": 65,
+        "volumeLiquidity": 85,
+        "marketAlignment": 80,
+        "informationEdge": 55,
+        "timingUrgency": 60
+      },
+      "compositeScore": 70
+    },
+    {
+      "ticker": "NUE",
+      "direction": "long",
+      "entryPrice": 130,
+      "targetPrice": 140,
+      "stopPrice": 125,
+      "riskRewardRatio": 2,
+      "positionSize": "2% of portfolio",
+      "catalyst": "25% universal steel tariffs effective March 12. Steel prices up 16% since inauguration. Nucor as largest US EAF steelmaker is the clearest beneficiary.",
+      "reasoning": "Nucor is a direct, unambiguous beneficiary of the steel tariff regime. Unlike most trades today, the catalyst has already occurred (tariffs effective March 12) and is structural — not event-dependent like FOMC. The tariff environment creates pricing power for domestic steel producers that flows directly to earnings. Nucor's EAF model has lower costs than blast furnace competitors. Materials sector is regime-favored. FOMC outcome is secondary — tariffs are the driver.",
+      "bearCase": "Steel demand collapses in a recession, overwhelming tariff benefits. Downstream customers (auto, construction) reduce orders as their costs rise. Political risk — tariff rollback or exemptions granted. Steel is cyclical and a recession trade would hurt regardless of tariff protection.",
+      "conviction": {
+        "catalystClarity": 82,
+        "technicalSetup": 60,
+        "riskReward": 70,
+        "volumeLiquidity": 75,
+        "marketAlignment": 72,
+        "informationEdge": 65,
+        "timingUrgency": 55
+      },
+      "compositeScore": 69
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "NVDA",
+      "trigger": "Post-GTC keynote reaction. If NVDA holds $115 support and reverses higher after Huang keynote on March 18, consider long. If breaks below $110, consider short via puts.",
+      "reasoning": "GTC keynote is today. Options imply 9% move. The Blackwell Ultra reveal is binary — either reignites AI capex narrative or confirms DeepSeek's thesis that less GPU spend is needed. Wait for the reaction, don't guess."
+    },
+    {
+      "ticker": "TLT",
+      "trigger": "Post-FOMC March 19. If dot plot shifts to one or zero cuts, TLT breaks below $86 — short. If dot plot holds at two cuts and Powell sounds dovish on growth, TLT breaks above $90 — long.",
+      "reasoning": "Long-duration Treasury bonds are the purest expression of the FOMC outcome. Trying to position before the announcement is gambling. Wait for the 2 PM release and Powell's 2:30 PM presser."
+    },
+    {
+      "ticker": "QQQ",
+      "trigger": "Post-FOMC + post-GTC. If both events resolve positively (dovish FOMC + strong GTC), QQQ could snap back 3-5% from extreme oversold levels. Entry on confirmed breakout above $470.",
+      "reasoning": "Nasdaq is the most beaten-down major index (-8.4% in 20 days). Extreme fear readings. If the two key risk events clear positively, the contrarian long is compelling. But only AFTER both events resolve — not before."
+    },
+    {
+      "ticker": "XLE",
+      "trigger": "WTI crude above $69 with Red Sea escalation or Russia ceasefire rejection. Entry on breakout above prior resistance.",
+      "reasoning": "Energy was the only positive sector on March 17. Houthi attacks and Russia-Ukraine uncertainty provide potential supply catalysts. Defensive in correction. Watch oil price for confirmation."
+    },
+    {
+      "ticker": "SMH",
+      "trigger": "Post-GTC. If NVDA keynote disappoints and SMH breaks below $210, short opportunity. If keynote surprises positively and SMH reclaims $225, long setup.",
+      "reasoning": "Semiconductor ETF is the leveraged play on the AI narrative. GTC sets the tone for the entire sector. Wait for Jensen Huang's keynote before positioning."
+    }
+  ],
+  "avoidList": [
+    {
+      "ticker": "TSLA",
+      "reasoning": "Too many crosscurrents — tariff risk on auto sector, consumer boycott concerns, Musk political controversies, EV demand softening, and FOMC uncertainty. XLY worst-performing sector. No clear directional edge. Stock is a coin flip with massive volatility. Risk-reward is poor in both directions."
+    },
+    {
+      "ticker": "MSTR",
+      "reasoning": "Bitcoin up 5% but this is a leveraged, volatile proxy with idiosyncratic corporate risk. FOMC outcome could swing BTC 10%+ either direction. In a range-bound, elevated-risk regime, leveraged crypto proxies are max uncertainty. The regime model penalizes both longs and shorts by 5 points."
+    },
+    {
+      "ticker": "F",
+      "reasoning": "Ford faces steel/aluminum tariff cost headwinds (25% tariffs effective March 12), looming auto-specific tariffs, cross-border supply chain disruption risk (significant Canadian/Mexican production), and consumer discretionary weakness. Multiple converging negatives but stock may already price this in. Not clear enough to trade directionally."
+    }
+  ],
+  "trainingData": {
+    "trialId": 10001,
+    "outcomes": [],
+    "scores": {
+      "directionAccuracy": 0,
+      "targetHitRate": 0,
+      "stopHitRate": 0,
+      "avgReturnPercent": 0,
+      "profitFactor": 0,
+      "winRate": 0,
+      "totalScore": 50,
+      "benchmarkReturn": -0.67,
+      "alpha": 0.67
+    },
+    "dimensionAnalysis": {},
+    "benchmarkReturn": -0.67,
+    "alpha": 0.67,
+    "fullDepth": true
+  }
+}
