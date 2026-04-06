@@ -7,7 +7,6 @@ const tabs = [
   { name: "Trades", path: "/trades", icon: TradesIcon },
   { name: "Portfolio", path: "/portfolio", icon: PortfolioIcon },
   { name: "Stats", path: "/performance", icon: StatsIcon },
-  { name: "Training", path: "/training", icon: TrainingIcon },
   { name: "Settings", path: "/settings", icon: SettingsIcon },
 ];
 

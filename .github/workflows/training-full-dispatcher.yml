@@ -1,0 +1,79 @@
+name: Full-Depth Training Dispatcher
+
+on:
+  push:
+    branches: [main]
+    paths: ['training/**', '.github/workflows/training-full-*.yml']
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'What to do: start, resume'
+        required: false
+        default: 'resume'
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: training-full-dispatcher
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Determine next action
+        id: next
+        run: |
+          if [ -f training/results/training-state.json ]; then
+            TRIAL=$(node -e "const s = require('./training/results/training-state.json'); console.log(s.fullDepthCurrentTrial || 0)" 2>/dev/null || echo "0")
+            TOTAL=$(node -e "const s = require('./training/results/training-state.json'); console.log(s.fullDepthTotalTrials || 100)" 2>/dev/null || echo "100")
+          else
+            TRIAL=0
+            TOTAL=100
+          fi
+
+          echo "current_trial=$TRIAL" >> $GITHUB_OUTPUT
+          echo "total_trials=$TOTAL" >> $GITHUB_OUTPUT
+          echo "Full-depth: $TRIAL/$TOTAL"
+
+          if [ "$TRIAL" -ge "$TOTAL" ]; then
+            echo "action=complete" >> $GITHUB_OUTPUT
+            echo "Full-depth training complete at trial $TRIAL/$TOTAL"
+          elif [ $((TRIAL % 10)) -eq 0 ] && [ "$TRIAL" -gt 0 ]; then
+            # Check if review already ran for this milestone
+            REVIEW_FILE="training/results/opus-review-trial-fulldepth-${TRIAL}.json"
+            if [ -f "$REVIEW_FILE" ]; then
+              echo "action=trial" >> $GITHUB_OUTPUT
+              echo "Review already done for trial $TRIAL, triggering next trial"
+            else
+              echo "action=review" >> $GITHUB_OUTPUT
+              echo "Review needed at full-depth trial $TRIAL"
+            fi
+          else
+            echo "action=trial" >> $GITHUB_OUTPUT
+            echo "Triggering full-depth trial $((TRIAL + 1))"
+          fi
+
+      - name: Trigger full-depth trial
+        if: steps.next.outputs.action == 'trial'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run training-full-trial.yml --ref main
+
+      - name: Trigger review
+        if: steps.next.outputs.action == 'review'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run training-review.yml --ref main
+
+      - name: Training complete
+        if: steps.next.outputs.action == 'complete'
+        run: echo "Full-depth training complete! ${{ steps.next.outputs.current_trial }}/${{ steps.next.outputs.total_trials }} trials done."
