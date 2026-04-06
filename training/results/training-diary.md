@@ -4324,3 +4324,265 @@
 
 ---
 
+## Day 161/500 — Thursday, October 23, 2025
+
+### Recommendations (2)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| LRCX | long | $221.5 | $240 | $210 | 85 | Lam Research beat on both EPS and revenue for the September ... |
+| SMH | long | $224 | $238 | $215 | 83 | The VanEck Semiconductor ETF offers clean, diversified expos... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 162/500 — Friday, August 15, 2025
+
+### Recommendations (2)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| AMAT | short | $183 | $168 | $192 | 79 | Applied Materials issued a catastrophic Q4 guide-down on Aug... |
+| SMH | short | $194 | $183 | $199 | 75 | AMAT represents ~5% of the VanEck Semiconductor ETF (SMH) an... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 163/500 — Wednesday, July 2, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 164/500 — Thursday, July 25, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 165/500 — Thursday, November 7, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 166/500 — Tuesday, August 13, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 167/500 — Tuesday, February 25, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 168/500 — Wednesday, July 3, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 169/500 — Friday, May 16, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+## Day 170/500 — Wednesday, September 17, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 13.0% | technicalSetup: 20.0% | riskReward: 12.0% | volumeLiquidity: 10.0% | marketAlignment: 12.0% | informationEdge: 13.0% | timingUrgency: 20.0%*
+
+---
+
+# ========== MILESTONE: 170 TRIALS COMPLETE ==========
+
+### Last 10 Trials Performance
+
+| Metric | Value |
+|--------|-------|
+| Avg Composite Score | 50.0/100 |
+| Avg Win Rate | 0.0% |
+| Avg Direction Accuracy | 0.0% |
+| Avg Profit Factor | 0.00 |
+| Avg Return per Trade | +0.00% |
+| No-Trade Days | 8/10 |
+| Best Score (all time) | 100/100 |
+
+### Overall (170 trials, 28 with trades)
+
+- Overall avg composite: 56.6/100
+- Total tokens used: 3,557,490
+
+### Learnings & Weight Changes
+
+- **technicalSetup**: 20.0% → 18.0% (DECREASED)
+  - *Insufficient data*
+- **riskReward**: 12.0% → 12.8% (INCREASED)
+  - *Insufficient data*
+- **volumeLiquidity**: 10.0% → 11.5% (INCREASED)
+  - *Insufficient data*
+- **marketAlignment**: 12.0% → 12.8% (INCREASED)
+  - *Insufficient data*
+- **timingUrgency**: 20.0% → 18.0% (DECREASED)
+  - *Insufficient data*
+
+**New weights:** catalystClarity: 13.4% | technicalSetup: 18.0% | riskReward: 12.8% | volumeLiquidity: 11.5% | marketAlignment: 12.8% | informationEdge: 13.4% | timingUrgency: 18.0%
+
+---
+
