@@ -1,0 +1,274 @@
+{
+  "trialId": 66,
+  "date": "2025-07-14",
+  "dateDisplay": "Monday, July 14, 2025",
+  "generatedAt": "2026-04-06T02:39:08.693Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.14,
+      "nasdaqFuturesChange": 0.27,
+      "dowFuturesChange": 0.2,
+      "russellFuturesChange": 0.67,
+      "vixFuturesChange": 1.05,
+      "vix": 17.38,
+      "vixChange": 1.05,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 19.84,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.43,
+      "tenYearYieldChange": 0.09,
+      "twoYearYield": 4.06,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.97,
+      "threeMonthYield": 4.23,
+      "twoTenSpread": 0.37,
+      "threeMoTenYrSpread": 0.2,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.62,
+      "dollarIndexChange": 0.55,
+      "eurUsd": 1.17,
+      "eurUsdChange": -0.14,
+      "usdJpy": 147.79,
+      "usdJpyChange": 0.34,
+      "usdCny": 7.17,
+      "usdCnyChange": -0.02,
+      "oilWTI": 66.52,
+      "oilChange": -0.69,
+      "brentOil": 68.71,
+      "brentOilChange": -0.72,
+      "natGasChange": 1.64,
+      "goldPrice": 3329.8,
+      "goldChange": -0.65,
+      "silverChange": -1.63,
+      "copperChange": 0.56,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.55,
+      "daxChange": -0.42,
+      "ftseChange": -0.66,
+      "shanghaiChange": -0.42,
+      "hangSengChange": 1.6,
+      "kospiChange": 0.41,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 99.55,
+      "spreadChange": -0.07,
+      "igSpread": -16.1,
+      "igSpreadChange": 0.03,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.08,
+      "xlfChange": 0.75,
+      "xleChange": -1.1,
+      "xlvChange": -0.12,
+      "xlpChange": 0.09,
+      "xluChange": 0.4,
+      "xlreChange": 0.67,
+      "xliChange": 0.54,
+      "xlbChange": -0.56,
+      "xlcChange": 0.98,
+      "xlyChange": 0.37,
+      "smhChange": -0.75,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -1.73,
+      "ethereumChange": 4.2,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 0.62,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": -0.49,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 32,
+      "directionalBias": "2",
+      "volatilityRegime": "normal",
+      "stressIndex": 16,
+      "riskAppetiteIndex": 53,
+      "sectorTilts": {
+        "materials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets are in a low-conviction rotation regime as Friday's close showed sharp sector divergence — small caps outpacing large caps, cyclicals gaining while tech and energy lagged, and the dollar strengthening despite soft gold and oil. The Fear & Greed Index registering extreme fear (0) alongside an S&P near 52-week lows creates a contradictory backdrop where risk appetite metrics (53/100) suggest the market isn't fully capitulating, but breadth is abysmal with 0% of names above their 200 DMA. Today's session is a stock-picker's environment, not a directional one.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🧭 Market Posture & Regime",
+          "content": "The regime classification is ROTATION at only 32% confidence — itself a signal worth respecting. Low confidence means the market hasn't committed to a clear directional thesis. With both long and short trades carrying a -3 conviction penalty, the edge today is in relative-value positioning rather than outright directional bets. The S&P's near 52-week low context combined with only 1 consecutive up day and a flat 20-day return paints a market that is grinding, not trending. VIX at 17.38 is elevated but not panicked — term structure remains in contango, suggesting options markets aren't pricing a near-term volatility spike. Stress at 16/100 supports that reading: this is fatigue, not fear-driven selling. The directional bias of +2 is marginally positive but essentially noise at this confidence level. Do not force a trending trade.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "Friday's sector map tells a clear story: the rotation is OUT of growth/risk-on (Tech -0.08%, Semis -0.75%, Energy -1.1%, Materials -0.56%) and INTO interest-rate-sensitive and value-oriented names (Real Estate +0.67%, Utilities +0.4%, Financials +0.75%, Comm Services +0.98%). This is unusual — XLRE and XLU outperforming on a day when yields rose is a signal worth watching carefully; it may indicate defensive positioning or a short-covering rally in rate-sensitive names after recent pressure. Russell outperforming the S&P by 0.47pp aligns with a value-over-growth rotation thesis (Nasdaq vs Russell 5d shows value leading by 0.49pp). Financials outperforming with a steepening yield curve is fundamentally coherent. The regime overweights Materials for a China recovery trade, yet XLB was -0.56% Friday — watch whether Hang Seng's +1.6% gain (strongest international market) translates into Monday morning strength for Materials and commodity-linked names. That divergence is your key tell for the China trade.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10Y yield rose to 4.43% (+9bps), a meaningful move suggesting either renewed inflation concern or continued Treasury supply pressure. The 2-10 spread at +37bps is modestly positive — the curve has been de-inverting, which historically benefits Financials and signals a less recessionary backdrop. The 3M-10Y spread at +20bps echoes this: no inversion, but a flat-to-modest positive slope. Rising long rates on a day when XLRE and XLU outperformed is counterintuitive and warrants caution — it may be a one-day mean reversion after overselling, not a structural shift. Financials benefiting from the steeper curve is the more durable signal here. Watch for 10Y holding above or below 4.40% as a session pivot — a break higher pressures growth multiples further and validates the rotation out of Nasdaq/tech.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The dollar's +0.55% gain to 98.62 is notable. A stronger USD is typically a headwind for commodities and multinational earnings — and this showed up precisely: Gold -0.65%, Oil -0.69%. Gold's decline despite extreme fear (F&G: 0) is particularly telling; it suggests dollar strength is overriding safe-haven demand, or that fear is more about equity positioning than macro panic. EUR/USD at 1.17 remains elevated historically, and USD/JPY at 147.79 suggests ongoing yen weakness. For commodities, WTI at $66.52 continues to face structural demand concerns — Energy as the worst-performing sector (-1.10%) aligns with this. Bitcoin's -1.73% decline alongside Ethereum's surprising +4.2% gain suggests crypto-internal rotation (possible Ethereum-specific catalyst — ETF flows or network event worth investigating). International flows: Hang Seng's +1.6% is the standout — monitor whether this sustains into Monday Asian session as a leading indicator for the Materials/China recovery overweight.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors",
+          "content": "1) BREADTH COLLAPSE: 0% of S&P names above 200 DMA is an extreme reading. In healthy markets this signals potential mean-reversion opportunity; in deteriorating markets it signals distribution. Given S&P near 52-week lows, this leans bearish for the broad index. 2) CONTRADICTORY SIGNALS: Extreme fear (F&G: 0) with risk appetite at 53/100 creates interpretive uncertainty — the regime's 32% confidence reflects this. 3) DOLLAR STRENGTH RISK: If DXY continues higher, it will weigh on multinationals, commodities, and EM-linked trades — the China recovery thesis via Materials could be undermined. 4) YIELD PRESSURE: A 10Y above 4.43% and rising compresses equity multiples, particularly for high-duration tech names that still dominate index weighting. 5) EARNINGS SEASON ENTRY: July is Q2 earnings season — single-stock event risk rises sharply. Sector-level trades may be disrupted by idiosyncratic earnings reactions. 6) LOW REGIME CONFIDENCE: At 32%, the rotation classification could flip intraday. Remain nimble and size positions conservatively.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Hang Seng momentum carries into Monday — China recovery trade activates",
+          "scenarios": [
+            {
+              "condition": "If Hang Seng sustains gains overnight and USD softens from Friday's +0.55% move",
+              "implication": "Materials sector reverses its -0.56% Friday underperformance; copper, steel, and mining names lead; the regime's Materials overweight becomes the day's primary trade",
+              "trade": "Consider XLB or individual commodity names (FCX, NUE) on early weakness as a long entry; watch $DXY — if it fades below 98.30, that's the green light. Scale targets by 0.9x per regime rules. Conviction will be capped by the -3 long penalty, so position size accordingly."
+            },
+            {
+              "condition": "If Hang Seng gains fade and USD holds above 98.60",
+              "implication": "China recovery trade stalls; Materials remain under pressure; rotation stays within domestic sectors (Financials, Comm Services)",
+              "trade": "Avoid XLB; shift focus to XLF which has both yield-curve tailwind and Friday's +0.75% momentum. Regional banks (KRE) could outperform with steepening curve."
+            }
+          ]
+        },
+        {
+          "event": "10Y yield breaks above 4.50% — rate shock scenario",
+          "scenarios": [
+            {
+              "condition": "If 10Y Treasury yield breaks and holds above 4.50% in Monday's session",
+              "implication": "Tech and Nasdaq face multiple compression; XLRE and XLU give back Friday's gains as the rate-sensitive trade unwinds; dollar likely strengthens further, adding pressure to gold and oil",
+              "trade": "Short duration equities (QQQ puts or SQQQ) become relevant, but note the -3 short conviction penalty. Better play: relative value — short QQQ / long IWM (small caps more insulated from duration risk). Financials (XLF) remain the cleanest long as steeper curve directly benefits NIM."
+            },
+            {
+              "condition": "If 10Y yields pull back below 4.38% — rate relief scenario",
+              "implication": "XLRE and XLU extend Friday's gains; growth/tech gets a reprieve; broader index may attempt a modest bounce from near 52-week low levels",
+              "trade": "XLRE or XLU as tactical longs if yields soften early. Tech (XLK) could see short-covering — but remain cautious given breadth (0% above 200 DMA) limits conviction in any sustained rally."
+            }
+          ]
+        },
+        {
+          "event": "Breadth expansion or continued deterioration — the binary that defines the week",
+          "scenarios": [
+            {
+              "condition": "If Monday opens with broad participation and % above 200 DMA begins recovering from 0%",
+              "implication": "Classic washout reversal setup — extreme fear + near 52-week lows + 0% breadth historically precedes sharp mean-reversion rallies when a catalyst arrives (Fed speak, geopolitical resolution, earnings beat from a bellwether)",
+              "trade": "Broad market exposure via SPY or IWM on confirmation of breadth expansion (watch advance/decline line intraday). Small caps (IWM) preferred given Russell's outperformance trend. This is the highest-conviction scenario IF it triggers — but requires patience for confirmation, not anticipation."
+            },
+            {
+              "condition": "If breadth remains collapsed and S&P tests new 52-week lows",
+              "implication": "Distribution phase continues; rotation is merely sector reshuffling within a declining market; no sector is truly 'safe' — only relatively less bad",
+              "trade": "Defensive posture: reduce gross exposure, focus on cash-rich, low-duration names within Comm Services or Financials that showed Friday strength. Avoid adding new longs into an untested low. VIX at 17.38 means hedges via puts are not yet expensive — consider tail protection."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "GS",
+      "direction": "long",
+      "entryPrice": 635,
+      "targetPrice": 669.92,
+      "stopLoss": 617.22,
+      "thesis": "Goldman Sachs's Board announced a 33% quarterly dividend increase ($3.00 → $4.00/share) pre-market on July 14, an idiosyncratic positive catalyst independent of the macro tariff noise. Combined with GS's history of 20%+ average earnings surprise and Q2 earnings due Wednesday July 16, the stock offers a near-term catalyst stack while the financials sector has been oversold at -1.9% weekly — setting up a mean-reversion entry.",
+      "catalyst": "Goldman Sachs Board of Directors announced quarterly dividend increase to $4.00/share from $3.00/share on July 14, 2025 (pre-market), ahead of Q2 2025 earnings release on July 16 — a 33% payout raise not yet reflected in Monday's open price.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": "Dividend increase is a confirmed, published Board decision announced July 14 pre-market — not speculative. Layered with Q2 earnings on Wednesday and Goldman's 20.74% average EPS surprise over the past 4 quarters, the catalyst stack is unusually clear for a rotation-regime day."
+        },
+        "technicalSetup": {
+          "score": 68,
+          "reasoning": "Financials sector fell -1.9% week-to-date through July 11, pulling GS down with the sector despite company-specific strength. This creates a mean-reversion setup entering a catalyst-heavy week. 52-week range is wide ($439–$985), with the April low far below; the stock has recovered substantially but the near-term sector drag may be reversing."
+        },
+        "riskReward": {
+          "score": 76,
+          "reasoning": "Entry ~$635, target $669.92 (+5.5%, regime-scaled 0.9x), stop $617.22 (-2.8%) yields approximately 1.97:1 R/R. Target anchored to pre-earnings momentum run and dividend repricing. Stop placed below last week's sector-driven pullback level. Acceptable in a flat-bias rotation day."
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": "GS averages 1.6–2.5 million shares/day with tight bid-ask spreads as a mega-cap financial. No slippage concern. Dividend announcement and pre-earnings positioning will likely push volume above average on Monday open."
+        },
+        "marketAlignment": {
+          "score": 65,
+          "reasoning": "Rotation regime carries a -3 conviction penalty and financials are NOT the regime-favored sector (materials is). However, the +2 directional bias is a slight tailwind, and GS's catalyst is idiosyncratic (dividend raise), not sector-dependent. The risk is that tariff headlines weigh on the broader market open, dragging GS lower despite company news."
+        },
+        "informationEdge": {
+          "score": 80,
+          "reasoning": "The dividend increase announcement on the morning of July 14 is fresh and not priced into Friday's close. Goldman also has a historical pattern of beating consensus by ~20%, and the IG Bank Earnings Preview notes strong expectations for equities trading and IB revenues in Q2. This creates an asymmetric information advantage before Wednesday's print."
+        },
+        "timingUrgency": {
+          "score": 85,
+          "reasoning": "The dividend catalyst is live TODAY before the open — the window to enter before the market prices in the 33% dividend raise is narrow. Q2 earnings on Wednesday create a hard time stop. Waiting risks missing the initial catalyst pop as institutional desks react to the dividend news Monday morning."
+        }
+      }
+    }
+  ],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.15,
+    "technicalSetup": 0.14,
+    "riskReward": 0.2,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.1,
+    "timingUrgency": 0.11
+  },
+  "opusReviewNotes": "The most glaring problem with this algorithm is not its signal quality — it's the catastrophic no-trade rate of 78.6%. Out of 70 trials, only 15 produced trades, meaning the algorithm is sitting on the sidelines 55 days earning nothing. This is a fundamental pipeline failure. The threshold is too high, the conviction scoring is too conservative, or the regime classifier is systematically suppressing actionable signals. When the algorithm DOES trade, its outcomes are bimodal: either perfect (100 score, 100% win rate) or terrible (0% win rate). There is no middle ground, which suggests the algorithm lacks the ability to size positions or modulate conviction — it's either all-in or silent. A 33.3% win rate with a 35.63 profit factor means the wins are enormous relative to losses, but with only 15 trading days out of 70, the algorithm is leaving massive edge on the table.\n\nLooking at the last 10 trials specifically: Trials 61, 62, 63, 65, 67, 69, and 70 all produced NO trades. That's 7 out of 10 days with zero activity. Trial 64 (2024-09-23) correctly identified a risk-on regime at 63% confidence with low stress (14) and decent appetite (61), then recommended 4 correlated commodity/EM plays (GDX, FCX, KWEB, SCCO) — all of which lost. This reveals a critical failure: the algorithm piled into a single thematic bet (China stimulus + commodities) with zero diversification across uncorrelated themes. When that one thesis failed, all 4 positions failed simultaneously. Trial 66 went long GS in a low-conviction rotation regime (32% confidence) — this was a low-probability setup from the start and should never have been taken. Trial 68 was the standout: correctly identifying risk-off, shorting GME for +34.43% and IWM (slight loss), netting a 65 score. The GME short was brilliant; the IWM short in a risk-off regime was directionally correct but poorly timed against index support.\n\nThe dimension predictive power data reveals something important: timingUrgency (71.3) and catalystClarity (71.0) are the most predictive dimensions, yet timingUrgency carries only 11.6% weight and has been systematically reduced from its peak. Meanwhile, riskReward (19.9%) and marketAlignment (19.4%) dominate the weighting despite having below-average predictive power (68.5 and 66.4 respectively). The weight evolution shows the algorithm has been drifting AWAY from what actually predicts winners. volumeLiquidity at 9.4% weight with 66.1 predictive power is appropriately low, but the gap between timingUrgency/catalystClarity predictive power and their weights is the single biggest alpha leak in the system.\n\nThe regime classifier appears reasonably calibrated in isolation — risk-off calls (Trials 67, 68, 69) consistently show elevated stress and low appetite, and the risk-on calls (64, 65) show the inverse. However, the classifier's CONFIDENCE levels are too low and are being used as a gate rather than a signal modifier. Trial 63 had 38% confidence in range-bound — that's essentially saying 'I don't know' — and the algorithm correctly abstained. But Trial 65 had 64% confidence in risk-on with a +2.29% Russell surge and still produced no trades. This suggests the downstream conviction scoring is too restrictive even when the regime classifier provides a clear signal. The pipeline is double-filtering: once at regime classification and again at conviction scoring, creating an excessively conservative system.\n\nThe best trades in the algorithm's history (IWM long, PLTR short, PNC long, PLUG long, GME short) share common traits: they were single-name or single-ETF bets with a clear, specific catalyst, taken in regimes with >60% confidence. The worst trades (Trial 64's commodity basket, Trial 58's scattered shorts) were multi-position correlated bets or trades taken against the regime. The algorithm should be constrained to 1-2 uncorrelated positions maximum, with each requiring an independent catalyst thesis."
+}

@@ -1,15 +1,15 @@
 {
-  "totalTrials": 60,
-  "lastUpdated": "2026-04-06T01:56:22.998Z",
+  "totalTrials": 70,
+  "lastUpdated": "2026-04-06T03:10:50.502Z",
   "bestScore": 100,
   "currentWeights": {
-    "catalystClarity": 0.2,
-    "technicalSetup": 0.15,
-    "riskReward": 0.18,
+    "catalystClarity": 0.15,
+    "technicalSetup": 0.14,
+    "riskReward": 0.2,
     "volumeLiquidity": 0.1,
-    "marketAlignment": 0.17,
-    "informationEdge": 0.12,
-    "timingUrgency": 0.08
+    "marketAlignment": 0.2,
+    "informationEdge": 0.1,
+    "timingUrgency": 0.11
   },
   "trials": [
     {
@@ -610,6 +610,106 @@
       "winRate": 50,
       "profitFactor": 2.65,
       "numRecs": 2,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 61,
+      "date": "2025-09-25",
+      "regime": "range-bound",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 62,
+      "date": "2024-10-09",
+      "regime": "range-bound",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 63,
+      "date": "2025-10-17",
+      "regime": "range-bound",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 64,
+      "date": "2024-09-23",
+      "regime": "risk-on",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 4,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 65,
+      "date": "2026-03-23",
+      "regime": "risk-on",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 66,
+      "date": "2025-07-14",
+      "regime": "rotation",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 1,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 67,
+      "date": "2024-10-31",
+      "regime": "risk-off",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 68,
+      "date": "2024-06-07",
+      "regime": "risk-off",
+      "score": 65,
+      "winRate": 50,
+      "profitFactor": 491.86,
+      "numRecs": 2,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 69,
+      "date": "2025-03-06",
+      "regime": "risk-off",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": true
+    },
+    {
+      "trialId": 70,
+      "date": "2026-01-28",
+      "regime": "rotation",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
       "hasOpusReview": true
     }
   ]
