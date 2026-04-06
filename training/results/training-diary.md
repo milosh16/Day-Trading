@@ -4586,3 +4586,282 @@
 
 ---
 
+## Day 171/500 — Monday, June 30, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 172/500 — Wednesday, June 25, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 173/500 — Wednesday, April 9, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 174/500 — Monday, March 17, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 175/500 — Tuesday, March 3, 2026
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 176/500 — Monday, January 13, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 177/500 — Wednesday, October 2, 2024
+
+### Recommendations (2)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| RTX | long | $123.5 | $128.5 | $119.5 | 78 | RTX (Raytheon) is the primary manufacturer of Patriot missil... |
+| LMT | long | $600 | $622 | $585 | 77 | Lockheed Martin, as the world's largest defense contractor w... |
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| RTX | $125.22 | $125.53 | $123.15 | $124.91 | Correct | No | No | +1.14% |
+| LMT | $604.94 | $610 | $599.32 | $605.13 | Correct | No | No | +0.85% |
+
+- **RTX:** 3-day window (2024-10-02, 2024-10-03, 2024-10-04). Open $125.22, High $125.53, Low $123.15, Close $124.91.
+- **LMT:** 3-day window (2024-10-02, 2024-10-03, 2024-10-04). Open $604.94, High $610, Low $599.32, Close $605.13.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +0.99% |
+| Profit Factor | 10 |
+| **Composite Score** | **75/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 86 | 0 | 100 (strong) |
+| technicalSetup | 73 | 0 | 100 (strong) |
+| riskReward | 71 | 0 | 100 (strong) |
+| volumeLiquidity | 80 | 0 | 100 (strong) |
+| marketAlignment | 74 | 0 | 100 (strong) |
+| informationEdge | 77 | 0 | 100 (strong) |
+| timingUrgency | 81 | 0 | 100 (strong) |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 178/500 — Thursday, January 30, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 179/500 — Thursday, July 11, 2024
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+## Day 180/500 — Friday, May 2, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 14.0% | riskReward: 14.0% | volumeLiquidity: 10.0% | marketAlignment: 16.0% | informationEdge: 14.0% | timingUrgency: 12.0%*
+
+---
+
+# ========== MILESTONE: 180 TRIALS COMPLETE ==========
+
+### Last 10 Trials Performance
+
+| Metric | Value |
+|--------|-------|
+| Avg Composite Score | 75.0/100 |
+| Avg Win Rate | 100.0% |
+| Avg Direction Accuracy | 100.0% |
+| Avg Profit Factor | 10.00 |
+| Avg Return per Trade | +0.99% |
+| No-Trade Days | 9/10 |
+| Best Score (all time) | 100/100 |
+
+### Overall (180 trials, 29 with trades)
+
+- Overall avg composite: 57.3/100
+- Total tokens used: 3,759,171
+
+### Learnings & Weight Changes
+
+- **catalystClarity**: 20.0% → 18.0% (DECREASED)
+  - *Strong predictor: winners scored 86 vs losers 0 (spread: +86)*
+- **volumeLiquidity**: 10.0% → 11.5% (INCREASED)
+  - *Strong predictor: winners scored 80 vs losers 0 (spread: +80)*
+- **marketAlignment**: 16.0% → 15.4% (DECREASED)
+  - *Strong predictor: winners scored 74 vs losers 0 (spread: +74)*
+- **timingUrgency**: 12.0% → 12.8% (INCREASED)
+  - *Strong predictor: winners scored 81 vs losers 0 (spread: +81)*
+
+**New weights:** catalystClarity: 18.0% | technicalSetup: 14.1% | riskReward: 14.1% | volumeLiquidity: 11.5% | marketAlignment: 15.4% | informationEdge: 14.1% | timingUrgency: 12.8%
+
+---
+

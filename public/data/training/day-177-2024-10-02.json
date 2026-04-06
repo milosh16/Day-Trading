@@ -1,0 +1,381 @@
+{
+  "trialId": 177,
+  "date": "2024-10-02",
+  "dateDisplay": "Wednesday, October 2, 2024",
+  "generatedAt": "2026-04-06T16:48:40.428Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.01,
+      "nasdaqFuturesChange": 0.08,
+      "dowFuturesChange": 0.09,
+      "russellFuturesChange": -0.09,
+      "vixFuturesChange": 8.41,
+      "vix": 20.49,
+      "vixChange": 8.41,
+      "vixTermStructure": "flat",
+      "vix9d": 0,
+      "vix3m": 20.59,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.79,
+      "tenYearYieldChange": 1.12,
+      "twoYearYield": 3.83,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.13,
+      "threeMonthYield": 4.47,
+      "twoTenSpread": -0.04,
+      "threeMoTenYrSpread": -0.68,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 101.99,
+      "dollarIndexChange": 0.3,
+      "eurUsd": 1.1,
+      "eurUsdChange": -0.14,
+      "usdJpy": 146.58,
+      "usdJpyChange": 1.98,
+      "usdCny": 7.04,
+      "usdCnyChange": 0.1,
+      "oilWTI": 73.71,
+      "oilChange": 5.15,
+      "brentOil": 77.62,
+      "brentOilChange": 5.03,
+      "natGasChange": 2.91,
+      "goldPrice": 2657.1,
+      "goldChange": 0.38,
+      "silverChange": 1.77,
+      "copperChange": -2.05,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 1.97,
+      "daxChange": -0.78,
+      "ftseChange": -0.1,
+      "shanghaiChange": 8.06,
+      "hangSengChange": -1.47,
+      "kospiChange": -1.22,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 100.60000000000001,
+      "spreadChange": -0.01,
+      "igSpread": -25.72,
+      "igSpreadChange": 0.22,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.99,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.74,
+      "xlfChange": 0.11,
+      "xleChange": 1.02,
+      "xlvChange": -0.2,
+      "xlpChange": -0.85,
+      "xluChange": 0.05,
+      "xlreChange": -0.36,
+      "xliChange": -0.18,
+      "xlbChange": -0.38,
+      "xlcChange": -0.31,
+      "xlyChange": -0.85,
+      "smhChange": 1.44,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.21,
+      "ethereumChange": -0.65,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": -0.22,
+      "sp20DayReturn": 3.43,
+      "nasdaqVsRussell5d": -0.76,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 35,
+      "directionalBias": "5",
+      "volatilityRegime": "normal",
+      "stressIndex": 27,
+      "riskAppetiteIndex": 46,
+      "sectorTilts": {
+        "energy": "overweight",
+        "airlines": "underweight",
+        "materials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets are flashing a classic rotation signature on October 2nd: the S&P is essentially flat (+0.01%) while sharp divergence beneath the surface — Shanghai surging 8.06%, oil spiking 5.15%, semis leading domestically, and defensives/discretionary getting sold hard — points to capital reshuffling rather than directional conviction. The regime is classified as ROTATION with only 35% confidence, reflecting genuine cross-current tension: extreme fear (F&G: 0) and a near-52-week-low S&P are colliding with international strength and commodity momentum, making this a day to trade positioning, not trend. Both long and short trades carry a -3 conviction penalty — the market is telling you to size down and stay selective.",
+      "marketCondition": "volatile",
+      "sections": [
+        {
+          "title": "🧭 Market Posture & Regime",
+          "content": "The regime classification is ROTATION at 35% confidence — and that low confidence number is itself a signal. When the system can't cleanly identify the environment, it means multiple forces are actively competing. The directional bias is a mild +5, but this is drowned out by the noise. VIX at 20.49, up 8.41%, is the clearest warning: volatility is expanding even as price stays pinned. A flat term structure on VIX means the market isn't pricing a specific near-term event shock — it's pricing diffuse, persistent uncertainty. Stress at 27/100 is manageable, but risk appetite at 46/100 is sub-neutral. The regime penalty on both longs AND shorts is the system's way of saying: do not confuse activity for opportunity today. Breadth is dismal — 0% of the index above the 200 DMA in the regime input — and the S&P sitting near a 52-week low means any bounce lacks the structural support of a healthy trend. Today is about surviving the rotation cleanly and identifying what's being accumulated versus abandoned.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "The sector tape is telling a very clear story: growth-sensitive and consumer-facing sectors are being liquidated, while energy and technology hardware are attracting capital. The big losers — Staples (XLP -0.85%), Discretionary (XLY -0.85%), Real Estate (XLRE -0.36%), and Materials (XLB -0.38%) — represent a mix of yield-sensitive and consumer-cycle names. That's not a classic defensive rotation; it's more nuanced. Staples selling off alongside discretionary suggests this isn't a flight to safety — it's a specific repositioning. On the winning side, Semis (SMH +1.44%) leading is notable given the broader uncertainty. This could reflect AI/data-center demand resilience or simply catch-up from prior underperformance. Energy (XLE +1.02%) is a direct mirror of WTI's 5.15% surge. The regime correctly overweights energy while flagging airlines as a headwind — jet fuel costs will pressure UAL, DAL, and AAL if crude holds these levels. The China recovery trade embedded in the Materials overweight signal is interesting given Shanghai's 8.06% explosion — but domestic XLB is down 0.38%, suggesting the market isn't yet convinced this is durable. Watch whether the China move holds; if it does, materials names with Asia exposure (FCX, CLF, NUE) could see belated flows. Value is leading growth over 5 days (Nasdaq vs Russell: value leading -0.76%), reinforcing the rotation away from high-multiple names.",
+          "importance": "high"
+        },
+        {
+          "title": "📉 Yield Curve & Rate Signals",
+          "content": "The yield curve remains deeply problematic. The 2-10 spread is -0.04 — essentially flat, a whisker from uninverted — while the 3M-10Y spread sits at -0.68, still deeply inverted. This bifurcation is important: the long end of the curve is beginning to normalize (2s10s nearly zero), but the policy-sensitive short end remains locked in restrictive territory. The 10-year at 3.79% (up 1.12% on the day) is moving higher, which is a mild headwind for rate-sensitive sectors like Real Estate (confirmed by XLRE -0.36%) and Utilities (XLU barely green at +0.05%). Rising long rates in a low-growth environment typically compress PE multiples and pressure dividend proxies. However, the curve's trajectory toward normalization is a medium-term constructive signal — disinversion historically precedes economic recovery cycles, though timing it is treacherous. For today, the rate signal argues against REITs, utilities, and long-duration tech, while supporting financials (steeper curve benefits bank NIM) — though XLF's +0.11% suggests the market is only mildly pricing this in.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "Two major macro forces are colliding in the currency and commodity complex. First, USD/JPY at 146.58, up 1.98%, is a significant move. Yen weakness at this pace historically triggers BOJ intervention risk and can unwind carry trades rapidly — this is a tail risk to monitor. A sharp yen reversal could hit risk assets globally, particularly the Nikkei (which surged 1.97% partly ON yen weakness) and any carry-funded positions. The dollar overall is mildly stronger (+0.3%, DXY ~101.99), with EUR/USD at 1.10 — the euro is holding but not surging. Second, WTI crude's 5.15% jump to $73.71 is the commodity story of the day. This magnitude of move in a single session demands an explanation: Middle East tension escalation, supply disruption speculation, or short-covering are the most likely catalysts. Gold's muted +0.38% response to oil's spike is telling — gold is NOT confirming a geopolitical panic bid, which suggests this may be more supply-shock driven than pure risk-off. Bitcoin's slight positive (+0.21%) and Ethereum's small negative (-0.65%) are noise. The copper decline (-2.0% per regime data) is the bearish counterweight — Dr. Copper does not lie. If growth expectations were genuinely recovering, copper would not be falling. This contradiction between oil (supply story) and copper (demand story) is the central commodity tension of the session.",
+          "importance": "high"
+        },
+        {
+          "title": "⚠️ Risk Factors & Tail Risks",
+          "content": "Several risk factors deserve explicit monitoring today: (1) EXTREME FEAR at F&G: 0 — this is a contrarian signal historically, but bottoms require capitulation breadth and volume, not just sentiment. Don't assume the floor is in. (2) Shanghai +8.06% is an enormous single-day move. Likely driven by Chinese stimulus announcements, this kind of gap creates reversion risk if follow-through fails. Hang Seng's -1.47% decline while Shanghai surges suggests offshore investors are skeptical — watch the divergence. (3) USD/JPY at 146.58 and climbing is approaching levels that triggered BOJ intervention in 2022-2023. A policy response could shock global markets. (4) VIX up 8.41% with price flat is a classic 'calm before volatility expansion' pattern. When VIX rises and price doesn't move, it often means the next directional move will be sharp. (5) The S&P near a 52-week low with 0% breadth above the 200 DMA means technical damage is real — any rally attempt faces significant overhead supply. (6) The 5-day return is -0.22% while the 20-day is +3.43% — the short-term trend is rolling over against a still-positive medium-term backdrop. This is a distribution zone until proven otherwise.",
+          "importance": "high"
+        },
+        {
+          "title": "🌍 International Divergence",
+          "content": "The international picture is starkly bifurcated. Nikkei +1.97% (yen-weakness driven, watch for reversal), Shanghai +8.06% (stimulus-driven, credibility test incoming), versus DAX -0.78%, FTSE -0.1%, and Hang Seng -1.47%. European weakness alongside Asian stimulus speculation tells you global growth expectations are not broadly improving — this is a China-specific policy bet, not a synchronized global recovery. The average international gain of +1.08% cited in the regime factors masks enormous dispersion. DAX weakness is particularly concerning given Germany's industrial exposure to slowing global trade and energy costs. Do not extrapolate Shanghai's move to a global risk-on thesis — the data does not support it.",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Oil spike sustainability test — WTI holds above $72 vs. fades back below $70",
+          "scenarios": [
+            {
+              "condition": "If WTI sustains above $72 and geopolitical catalyst confirms (Middle East escalation headlines)",
+              "implication": "Energy sector gets a second leg higher. Airlines, transports, and consumer discretionary face renewed cost pressure. Gold would likely follow with a delayed bid. Inflation re-acceleration narrative gains traction, pushing 10Y yields higher and pressuring rate-sensitive sectors further.",
+              "trade": "Consider XLE or CVX long with tight stop below the 5.15% surge low. Simultaneously consider XLP short as cost-squeeze victim — but apply -3 conviction penalty; size to 50-60% of normal position. Airlines (JETS ETF) short on strength."
+            },
+            {
+              "condition": "If WTI fades sharply and the spike is revealed as short-covering or a false alarm",
+              "implication": "Energy gives back gains quickly. The broader market may interpret the fade as a risk-relief signal, potentially sparking a short-covering bounce in beaten-down names. Gold's muted response already hints at this possibility.",
+              "trade": "Fade XLE on a clean reversal signal below prior-day levels. Look for relief bounce in XLY or XLRE if rates also pull back. Again, -3 conviction penalty applies — use options structures to limit capital at risk."
+            }
+          ]
+        },
+        {
+          "event": "China stimulus follow-through — Shanghai +8% either gets confirmed or fades",
+          "scenarios": [
+            {
+              "condition": "If Chinese markets show follow-through buying Wednesday and Hang Seng reverses its -1.47% decline",
+              "implication": "The materials overweight in the regime triggers. Copper reverses its -2% decline, which would be a significant growth-signal confirmation. Emerging market ETFs (EEM, FXI) see inflows. The regime's China recovery trade activates.",
+              "trade": "FCX (copper/gold miner with China exposure) long on Hang Seng confirmation. Watch copper futures — a reversal above yesterday's close is the trigger. Scale in with 0.9x normal target distances per regime rules."
+            },
+            {
+              "condition": "If the Shanghai surge is a one-day wonder and Hang Seng divergence persists or worsens",
+              "implication": "Offshore skepticism proves prescient. Materials remain under pressure. The copper decline accelerates, reinforcing the global growth slowdown narrative. Risk appetite likely contracts further from its already-sub-neutral 46/100 reading.",
+              "trade": "Avoid materials longs entirely. Consider GDX (gold miners) as defensive commodity play since gold is holding while copper weakens — implies supply-side dynamics over demand-side. Short XLB on failure below recent support."
+            }
+          ]
+        },
+        {
+          "event": "USD/JPY approaches intervention zone near 147-150 and BOJ responds",
+          "scenarios": [
+            {
+              "condition": "If USD/JPY extends to 147+ and BOJ conducts verbal or actual intervention",
+              "implication": "Rapid yen strengthening would reverse Nikkei gains violently, unwind carry trades globally, and pressure risk assets across the board. This is the highest-impact tail risk in today's data. Volatility spike likely — VIX already rising 8.41%.",
+              "trade": "Reduce overall gross exposure aggressively. If holding Japan-correlated positions, hedge or exit. Gold could see a genuine safe-haven bid in this scenario — a small GLD position functions as portfolio insurance. This scenario argues for cash preservation over new position initiation."
+            },
+            {
+              "condition": "If USD/JPY stabilizes or pulls back organically (position unwind, not BOJ)",
+              "implication": "Carry trade remains intact. Nikkei holds gains. Risk sentiment stays in its current ambiguous state. No catalyst for a VIX acceleration.",
+              "trade": "No specific trade from this resolution — maintain current reduced conviction posture per regime rules. The absence of FX shock is simply 'not a headwind' rather than a tailwind."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "RTX",
+      "direction": "long",
+      "entryPrice": 123.5,
+      "targetPrice": 128.5,
+      "stopLoss": 119.5,
+      "thesis": "RTX (Raytheon) is the primary manufacturer of Patriot missile defense systems and Tomahawk cruise missiles — both directly deployed or depleted in the Israel-Iran conflict. With Israel vowing retaliation and the U.S. military on high alert, RTX represents the highest-conviction defense play with the clearest demand signal: depleted missile stockpiles need replenishment.",
+      "catalyst": "October 1: Iran fires 180 ballistic missiles at Israel (most intercepted by Patriot/Arrow systems manufactured by RTX partners); Israel vows imminent significant retaliation. Defense sector up 3-5% on Oct 1. RTX specifically benefits from Iron Dome and Patriot restocking demand and escalating Pentagon emergency contracts.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": "Direct, unambiguous catalyst: RTX manufactures the missile defense and strike systems being actively used and depleted in real-time. Israel vowing 'significant retaliation' keeps the defense bid live into Oct 2. Specific product-level demand signal, not just sector rotation."
+        },
+        "technicalSetup": {
+          "score": 74,
+          "reasoning": "RTX was up 3-5% on Oct 1 off a clean base. Defense stocks tend to exhibit multi-day momentum in genuine geopolitical escalation events. Not a technical breakout from consolidation, but momentum continuation with macro tailwind is constructive."
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": "Entry ~$123.50, target $128.50, stop $119.50. Reward $5.00, risk $4.00 = 1.25:1 R/R. Tighter than ideal given the stock already moved — reflects the already-priced Oct 1 surge. Risk is ceasefire/de-escalation news crushing the defense bid."
+        },
+        "volumeLiquidity": {
+          "score": 82,
+          "reasoning": "RTX is a mega-cap defense name with heavy institutional ownership and strong average daily volume. Liquidity is no concern."
+        },
+        "marketAlignment": {
+          "score": 75,
+          "reasoning": "Defense is a natural rotation destination in a fear/geopolitical environment. The regime's ROTATION classification and extreme fear reading (F&G: 0) supports defensive positioning. Not in explicit sector overweight but strongly aligned with the geopolitical cross-current."
+        },
+        "informationEdge": {
+          "score": 78,
+          "reasoning": "RTX's Patriot and Tomahawk systems are specifically relevant to this conflict. The market may be pricing RTX as a generic defense name; the product-specific demand angle (missile stockpile depletion requiring emergency Pentagon contracts) is an underappreciated edge."
+        },
+        "timingUrgency": {
+          "score": 82,
+          "reasoning": "Israeli retaliation timeline is 'within days' per Axios sourcing. October 2 morning is still within the urgency window before a potential retaliation event. Acting in pre-market captures the escalation premium before it's fully priced."
+        }
+      }
+    },
+    {
+      "symbol": "LMT",
+      "direction": "long",
+      "entryPrice": 600,
+      "targetPrice": 622,
+      "stopLoss": 585,
+      "thesis": "Lockheed Martin, as the world's largest defense contractor with a $193.6B backlog and primary manufacturer of the F-35 and precision-guided munitions used by Israel, is directly in the path of accelerating defense procurement demand triggered by Iran's ballistic missile attack. The stock surged alongside the defense sector on Oct 1 and the retaliation narrative keeps the bid live.",
+      "catalyst": "October 1: Iran fires 180 missiles at Israel; LMT surges ~3-5% with defense sector on news. Israel vows imminent 'significant' retaliation, potentially targeting Iranian oil sites. Lockheed's F-35s, JDAM precision munitions, and Hellfire missiles are core to any Israeli strike package.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 87,
+          "reasoning": "LMT's product portfolio — F-35, JDAM, Hellfire, THAAD — is directly implicated in any Israeli offensive operation against Iran. The catalyst chain is: Iran missile attack → Israeli retaliation → LMT hardware deployed → emergency procurement demand. Extremely clear product-to-catalyst linkage."
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": "LMT was trending near multi-year highs before the Iran event and the Oct 1 surge adds momentum. The risk is a one-day wonder reversal if de-escalation headlines emerge. Technical setup is momentum-continuation, not a fresh breakout."
+        },
+        "riskReward": {
+          "score": 70,
+          "reasoning": "Entry ~$600, target $622 (0.9x regime-scaled), stop $585. Reward $22, risk $15 = 1.47:1 R/R. Acceptable but not exceptional given the stock already moved. Stop below Oct 1 session low support."
+        },
+        "volumeLiquidity": {
+          "score": 78,
+          "reasoning": "LMT is a large-cap defense prime with solid institutional volume but less liquid than XLE or RTX on an intraday basis. Adequate for most position sizes."
+        },
+        "marketAlignment": {
+          "score": 73,
+          "reasoning": "Defense sector is a natural beneficiary of today's regime signal (extreme fear, geopolitical escalation, rotation away from growth/discretionary). Aligns with the cross-current even if not explicitly named in regime overweights."
+        },
+        "informationEdge": {
+          "score": 76,
+          "reasoning": "LMT's $193.6B backlog is a structural edge, and emergency Israeli procurement orders historically move through U.S. FMS (Foreign Military Sales) channels — a channel Lockheed dominates. The market is pricing geopolitical risk; the procurement cycle edge is underappreciated."
+        },
+        "timingUrgency": {
+          "score": 80,
+          "reasoning": "Retaliation timeline from Axios sourcing is 'within days' — Oct 2 is the second morning of that window. Each day without de-escalation keeps LMT's bid alive. Urgency is high but decays if a ceasefire is announced."
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "RTX",
+      "openPrice": 125.22,
+      "highPrice": 125.53,
+      "lowPrice": 123.15,
+      "closePrice": 124.91,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.14,
+      "notes": "3-day window (2024-10-02, 2024-10-03, 2024-10-04). Open $125.22, High $125.53, Low $123.15, Close $124.91."
+    },
+    {
+      "symbol": "LMT",
+      "openPrice": 604.94,
+      "highPrice": 610,
+      "lowPrice": 599.32,
+      "closePrice": 605.13,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.85,
+      "notes": "3-day window (2024-10-02, 2024-10-03, 2024-10-04). Open $604.94, High $610, Low $599.32, Close $605.13."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 100,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0.99,
+    "profitFactor": 10,
+    "winRate": 100,
+    "totalScore": 75
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 86,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 73,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "riskReward": {
+      "avgScoreWinners": 71,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 80,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 74,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "informationEdge": {
+      "avgScoreWinners": 77,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 81,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.14,
+    "riskReward": 0.14,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.16,
+    "informationEdge": 0.14,
+    "timingUrgency": 0.12
+  },
+  "opusReviewNotes": "The most glaring problem with this algorithm is its extreme passivity: 151 no-trade days out of 180 trials (83.9%). The algorithm is leaving enormous amounts of alpha on the table. When it does trade, it wins only 31% of the time, but its profit factor of 19.81 suggests winners are massive relative to losers — this is a classic trend-following profile being applied to day trading, which creates a fundamental mismatch. The algorithm needs to trade more frequently with tighter conviction thresholds, not less.\n\nLooking at the last 10 trials, the pipeline's most critical failure is the disconnect between regime identification and trade generation. Trial 173 identified a CRISIS regime at 90% confidence on April 9, 2025 — the day after a historic +9.5% S&P surge likely driven by a tariff pause — yet generated zero trades. This was arguably one of the highest-conviction trading days in the entire dataset. A crisis regime with a massive relief rally screams for momentum-continuation longs in high-beta names (QQQ, TQQQ, ARKK, SMH) or mean-reversion shorts if you believed the rally was a dead-cat bounce. Similarly, Trial 180 had a risk-on regime at 71% confidence with a 9-session winning streak and generated nothing. Trial 175 identified risk-off at 60% confidence near 52-week lows and did nothing. The regime classifier is working reasonably well — the trade generator is broken.\n\nTrial 177 is the lone success in the last 10: rotation regime on Oct 2, 2024, with defense stocks RTX (+1.14%) and LMT (+0.85%) both winning. This reveals what works — sector rotation plays where the catalyst is clear (geopolitical tensions driving defense), technicals align (sector leadership), and the trade is WITH the rotation, not against it. The algorithm should be pattern-matching more aggressively to this template: identify WHERE capital is flowing and ride it, rather than trying to pick bottoms or tops.\n\nDimension predictive power is remarkably flat (71.5-74.6 range across all 7 dimensions), which suggests either the scoring rubric lacks discriminatory power or the sample size (13) is too small to differentiate. However, timingUrgency (74.6) and catalystClarity (74.5) show marginal edges over volumeLiquidity (71.5) and marketAlignment (71.6). The weight evolution shows catalystClarity has consistently been the highest-weighted dimension (12.6%-24.9%), which aligns with its predictive power. But marketAlignment has been volatile (7.4%-19.8%), suggesting the algorithm can't decide if macro alignment matters — it does, but only as a veto/confirmation, not a primary signal.\n\nThe 3 stop-loss hits averaging -6.3% are devastating for a day-trading algorithm. A 6.3% intraday loss should never happen with proper position sizing and stop discipline. The worst trials (75, 30, 55) all show trades that went against prevailing conditions: BRK.B short during what was likely a bullish market, SNOW long during a period of growth-stock weakness, and three simultaneous energy/materials longs (VLO, CMC, AYI) that suggest over-concentration in a single theme. The algorithm needs hard caps: max 1-2% stop loss per trade, max 1 trade per sector, and position sizing inversely proportional to volatility."
+}
