@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-06T17:48:14.176Z",
+  "lastUpdated": "2026-04-06T17:50:12.067Z",
   "insights": [
     {
       "discoveredAtTrial": 170,
@@ -114,6 +114,121 @@
       "confidenceScore": 60,
       "id": "insight-trade_selection-mnnhhgps",
       "discoveredAt": "2026-04-06T17:48:14.176Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Enforce maximum 1 trade per day — the algorithm's only consistent edge is concentrated single-name bets. When multiple candidates pass threshold, take only the highest-scoring one. Multi-trade days have 0% win rate in the sample.",
+      "promptFragment": "Enforce maximum 1 trade per day — the algorithm's only consistent edge is concentrated single-name bets. When multiple candidates pass threshold, take only the highest-scoring one. Multi-trade days have 0% win rate in the sample.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhjzoj",
+      "discoveredAt": "2026-04-06T17:50:12.067Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Reduce marketAlignment weight from 18% to 12% and redistribute to technicalSetup and riskReward. In rotation and range-bound regimes (which dominate recent trials), market alignment is actively misleading because broad market direction doesn't predict individual stock moves.",
+      "promptFragment": "Reduce marketAlignment weight from 18% to 12% and redistribute to technicalSetup and riskReward. In rotation and range-bound regimes (which dominate recent trials), market alignment is actively misleading because broad market direction doesn't predict individual stock moves.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhjzoj",
+      "discoveredAt": "2026-04-06T17:50:12.067Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Create a 'low-confidence regime' trade pathway: when regime confidence is below 45%, allow trades ONLY if the individual stock catalyst score is above 80 AND technical setup shows a clear breakout/breakdown with volume confirmation. Currently the algorithm goes silent when regime confidence is low, but some of the best individual stock setups occur precisely in uncertain macro environments.",
+      "promptFragment": "Create a 'low-confidence regime' trade pathway: when regime confidence is below 45%, allow trades ONLY if the individual stock catalyst score is above 80 AND technical setup shows a clear breakout/breakdown with volume confirmation. Currently the algorithm goes silent when regime confidence is low, but some of the best individual stock setups occur precisely in uncertain macro environments.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhjzoj",
+      "discoveredAt": "2026-04-06T17:50:12.067Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Add a correlation filter: if recommending multiple trades, reject any pair with trailing 20-day correlation above 0.70. Trials 138 (MSFT+AMD), 161 (LRCX+SMH), and 162 (AMAT+SMH) all failed with highly correlated pairs that doubled down on the same directional bet.",
+      "promptFragment": "Add a correlation filter: if recommending multiple trades, reject any pair with trailing 20-day correlation above 0.70. Trials 138 (MSFT+AMD), 161 (LRCX+SMH), and 162 (AMAT+SMH) all failed with highly correlated pairs that doubled down on the same directional bet.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhjzoj",
+      "discoveredAt": "2026-04-06T17:50:12.067Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Implement a regime-direction consistency check: if regime='rotation' and briefing='bullish', the algorithm should NOT take broad directional bets (long semis, long indices). Rotation regimes demand pair-trade logic or single-name relative strength plays. Add explicit guardrail: rotation regime → only allow trades in the sector showing relative inflow, not the sector showing outflow.",
+      "promptFragment": "Implement a regime-direction consistency check: if regime='rotation' and briefing='bullish', the algorithm should NOT take broad directional bets (long semis, long indices). Rotation regimes demand pair-trade logic or single-name relative strength plays. Add explicit guardrail: rotation regime → only allow trades in the sector showing relative inflow, not the sector showing outflow.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhjzoj",
+      "discoveredAt": "2026-04-06T17:50:12.067Z",
       "validated": false,
       "active": false
     }

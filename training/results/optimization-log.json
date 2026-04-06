@@ -57,6 +57,63 @@
           "trend": "stable"
         }
       }
+    },
+    {
+      "trial": 170,
+      "timestamp": "2026-04-06T17:50:12.067Z",
+      "regimeChanges": [
+        {
+          "regime": "rotation",
+          "dimensionChanges": []
+        },
+        {
+          "regime": "range-bound",
+          "dimensionChanges": []
+        }
+      ],
+      "insightsAdded": [],
+      "insightsRetired": [],
+      "counterfactual": {
+        "improvement": 0,
+        "recommendation": "neutral"
+      },
+      "regimePerformance": {
+        "rotation": {
+          "trials": 15,
+          "avgScore": 52.65,
+          "avgWinRate": 6.67,
+          "avgAlpha": 0,
+          "trend": "declining"
+        },
+        "risk-on": {
+          "trials": 4,
+          "avgScore": 50,
+          "avgWinRate": 0,
+          "avgAlpha": 0,
+          "trend": "stable"
+        },
+        "range-bound": {
+          "trials": 9,
+          "avgScore": 50,
+          "avgWinRate": 0,
+          "avgAlpha": 0,
+          "trend": "stable"
+        },
+        "risk-off": {
+          "trials": 1,
+          "avgScore": 50,
+          "avgWinRate": 0,
+          "avgAlpha": 0,
+          "trend": "stable"
+        },
+        "crisis": {
+          "trials": 1,
+          "avgScore": 50,
+          "avgWinRate": 0,
+          "avgAlpha": 0,
+          "trend": "stable"
+        }
+      }
     }
   ]
 }
