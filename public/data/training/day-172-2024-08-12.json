@@ -1,0 +1,234 @@
+{
+  "trialId": 172,
+  "date": "2024-08-12",
+  "dateDisplay": "Monday, August 12, 2024",
+  "generatedAt": "2026-04-06T18:28:31.501Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0,
+      "nasdaqFuturesChange": 0.21,
+      "dowFuturesChange": -0.36,
+      "russellFuturesChange": -0.91,
+      "vixFuturesChange": -12.51,
+      "vix": 18.12,
+      "vixChange": -12.51,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 21.63,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.91,
+      "tenYearYieldChange": -0.84,
+      "twoYearYield": 4.15,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.2,
+      "threeMonthYield": 5.07,
+      "twoTenSpread": -0.24,
+      "threeMoTenYrSpread": -1.16,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 102.56,
+      "dollarIndexChange": -0.56,
+      "eurUsd": 1.09,
+      "eurUsdChange": 0.21,
+      "usdJpy": 146.98,
+      "usdJpyChange": -0.04,
+      "usdCny": 7.17,
+      "usdCnyChange": 0.11,
+      "oilWTI": 78.35,
+      "oilChange": -2.14,
+      "brentOil": 80.69,
+      "brentOilChange": -1.96,
+      "natGasChange": -1.87,
+      "goldPrice": 2466.7,
+      "goldChange": 0.17,
+      "silverChange": -0.8,
+      "copperChange": -0.47,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 3.45,
+      "daxChange": 0.48,
+      "ftseChange": 0.3,
+      "shanghaiChange": 0.34,
+      "hangSengChange": 0.36,
+      "kospiChange": 0.12,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 109.9,
+      "spreadChange": -0.06,
+      "igSpread": -19.88,
+      "igSpreadChange": -0.21,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.95,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.82,
+      "xlfChange": -0.52,
+      "xleChange": 0.49,
+      "xlvChange": -0.38,
+      "xlpChange": -0.51,
+      "xluChange": 0.18,
+      "xlreChange": -0.6,
+      "xliChange": -0.51,
+      "xlbChange": -0.44,
+      "xlcChange": -0.69,
+      "xlyChange": -0.4,
+      "smhChange": 0.94,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 2.11,
+      "ethereumChange": -0.76,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": true,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 37,
+      "daysToNextCPI": 2,
+      "daysToNextNFP": 25,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 3,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 3.05,
+      "sp20DayReturn": -5.09,
+      "nasdaqVsRussell5d": 2.46,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 36,
+      "directionalBias": "6",
+      "volatilityRegime": "normal",
+      "stressIndex": 16,
+      "riskAppetiteIndex": 45,
+      "sectorTilts": {
+        "airlines": "overweight",
+        "consumer-discretionary": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets enter Monday in a confusing cross-current: the VIX has collapsed 12.5% to 18.12 suggesting the acute panic from recent weeks is subsiding, yet the regime reads RANGE-BOUND with low confidence (36%) and troubling breadth signals — 0% of stocks above their 200 DMA and extreme fear on the Fear & Greed index. The S&P is flat on the session but 5.09% below its 20-day average, suggesting this is a relief bounce within a larger corrective structure, not a fresh trending move. With CPI just 2 days away and the yield curve deeply inverted, the market is in a 'prove it' mode where conviction is expensive and patience is the edge.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🎯 Overall Market Posture & Regime",
+          "content": "The RANGE-BOUND regime classification (36% confidence) is itself a signal — low confidence means the market is at an inflection point, not settled into a clear trend. The S&P is printing a third consecutive up day and is +3.05% over 5 days, which looks like recovery, but the 20-day return of -5.09% tells the real story: we bounced hard off a sharp drawdown and are now consolidating in no-man's land. Critically, the regime flags 'S&P near 52-week low' and '0% above 200 DMA' — these are not conditions consistent with durable bullish momentum. The +6 directional bias is a whisper, not a shout. Stress at 16/100 and risk appetite at 45/100 confirm the market is neither panicking nor risk-on. This is a day to observe, not overcommit. The elevated minimum conviction threshold of 78 and penalties on both long and short trades are the regime's way of saying: the edge today is in NOT trading.",
+          "importance": "high"
+        },
+        {
+          "title": "📊 Sector Rotation & Relative Strength",
+          "content": "The sector tape tells a nuanced story. Winners: Semis (SMH +0.94%), Tech (XLK +0.82%), Energy (XLE +0.49%), Utilities (XLU +0.18%). Losers: Finance (XLF -0.52%), Industrials (XLI -0.51%), Staples (XLP -0.51%), Discretionary (XLY -0.40%), Real Estate (XLRE -0.60%), Comm Services (XLC -0.69%). The tech/semis leadership is the most constructive signal in the data — growth is outperforming value by 2.46% over 5 days (Nasdaq vs Russell). However, the breadth of losers is wide and notable: when defensives like Staples AND cyclicals like Financials and Industrials are both underperforming, there is no clean sector rotation thesis — money is moving into a narrow tech/semi pocket, not rotating broadly into risk. The regime's overweight on Airlines (fuel cost tailwind from WTI -2.14%) and Consumer Discretionary (lower gas prices) are structurally valid but Discretionary itself closed -0.40% Friday, suggesting the tailwind hasn't been priced in yet — watch for a lag effect. Real Estate (XLRE -0.60%) under pressure is consistent with the rate environment. The Utilities +0.18% alongside tech strength hints at a barbell positioning: some defensive hedging coexisting with tech speculation.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The rate picture is one of the most important macro inputs today. The 10-year yield fell 0.84% to 3.91% — a meaningful move that reflects either growth fears, flight to safety, or both. The 2-10 spread sits at -0.24 (inverted) and the 3M-10Y spread is deeply inverted at -1.16, which historically correlates with recession risk over a 6-18 month horizon. The curve has been inverted long enough that the 'recession clock' is ticking. With CPI in 2 days, the bond market is positioning cautiously — the rally in Treasuries (yields down) suggests the market may be expecting a softer inflation print, which would reinforce Fed rate cut expectations. The FOMC is 37 days out, and with no Fed Funds rate data available today, the market is flying somewhat blind on the exact cut pricing. Lower yields are a tailwind for duration-sensitive sectors (REITs, Utilities, Tech) in theory, but XLRE is still lagging — likely because credit conditions and refinancing risk matter more at the individual asset level. Watch the 10Y carefully: a break below 3.85% would be meaningful.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The Dollar (DXY) at 102.56 (-0.56%) is weakening, and this is a critical cross-asset signal. Dollar weakness is: (1) supportive of international equities — confirmed by Nikkei +3.45%, DAX +0.48%, FTSE +0.30%, Hang Seng +0.36%; (2) historically a tailwind for commodities, though WTI crude (-2.14% to $78.35) is bucking that relationship — oil weakness appears demand-driven rather than dollar-driven, consistent with growth concerns; (3) mildly supportive of EM and multi-nationals. The EUR/USD at 1.09 and USD/JPY at 146.98 are notable: the yen at ~147 remains a key watch post the BOJ policy shift that roiled markets weeks ago — any further yen strengthening could reignite the carry trade unwind risk. Gold at $2,466.70 (+0.17%) is holding near all-time highs, confirming that safe-haven demand and dollar weakness are both supportive of the metal. Bitcoin +2.11% while Ethereum -0.76% shows crypto is not moving as a unified risk-on signal — Bitcoin's relative strength may reflect its 'digital gold' narrative more than pure risk appetite. Oil's decline to $78.35 reinforces the regime's airline and consumer discretionary overweights as operationally valid.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors & Key Watchlist",
+          "content": "Five risk factors demand attention heading into this week: (1) CPI in 2 days — this is the single highest-impact event on the calendar and likely explains why the market is range-bound today. A hot print could unwind the Treasury rally and slam tech; a cool print could ignite a breakout. (2) USD/JPY at 146.98 — the yen carry unwind that sparked the August volatility spike is not fully resolved. Any move back toward 143-144 on JPY strength could trigger another deleveraging wave. (3) Breadth collapse — 0% above 200 DMA is an extreme reading that could mean capitulation bottom OR a broken market structure. It cuts both ways. (4) Small caps (Russell -0.91%) lagging by over 1 percentage point versus large cap growth signals that the recovery is narrow and liquidity-driven, not broad-based economic confidence. (5) Credit spreads: HY at 109.9bps is relatively tight, which is a modest positive, but IG spread compression of -19.88bps needs context — if this is compression due to duration, it may not signal true credit quality improvement. OPEX week adds a gamma/options expiration overlay that can exaggerate intraday moves in either direction.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "CPI Print in 2 Days — The Binary Catalyst",
+          "scenarios": [
+            {
+              "condition": "If CPI comes in at or below expectations (soft print, e.g., core MoM ≤ 0.2%)",
+              "implication": "Treasury yields fall further, dollar weakens, rate cut expectations advance. Tech and growth get a second leg. Semis (SMH) and XLK likely lead. Small caps may finally participate if the 'soft landing' narrative firms. Potential regime shift from range-bound to mild bullish trend.",
+              "trade": "On confirmation of soft CPI, monitor SMH and QQQ for breakout above recent resistance with tightened stops. Given range-bound penalties still in effect today, this is a WEDNESDAY trade, not a Monday trade. Prep watchlist now."
+            },
+            {
+              "condition": "If CPI comes in above expectations (hot print, e.g., core MoM ≥ 0.3%)",
+              "implication": "The 3-day S&P bounce gets violently reversed. Tech sells off hardest given elevated valuations. Dollar strengthens, yields spike, and the already-fragile breadth (0% above 200 DMA) deteriorates further. VIX likely reclaims 20+. Yen carry unwind risk re-emerges.",
+              "trade": "Pre-CPI hedge via VIX calls or short-dated SPY puts could be warranted if conviction clears 78 threshold. A hot print validates the bearish regime. Do not chase shorts on Monday — wait for the actual print and a confirmed breakdown."
+            }
+          ]
+        },
+        {
+          "event": "Yen Carry Unwind — Latent Tail Risk",
+          "scenarios": [
+            {
+              "condition": "If USD/JPY breaks below 145 this week (yen strengthening)",
+              "implication": "Carry trade unwind accelerates. We saw this movie in early August when the yen spiked and global equities cratered simultaneously. Nikkei would be first to show stress (after +3.45% today, it has room to give back). US equities would face deleveraging pressure as leveraged positions unwind. Correlation between asset classes would spike.",
+              "trade": "No direct trade recommended today given regime constraints, but monitor USD/JPY as the early warning system. A break below 145 should trigger immediate risk reduction across any open long positions. Consider FXY (yen ETF) as a hedge instrument."
+            },
+            {
+              "condition": "If USD/JPY holds 146-148 range and stabilizes",
+              "implication": "Carry unwind risk stays dormant. Global risk appetite remains supported, international equity outperformance continues (Nikkei, DAX). Dollar weakness can persist in an orderly fashion, supporting commodities and EM.",
+              "trade": "Stable yen supports the current range-bound resolution to the upside. EFA (international developed) or EWJ (Japan) could be beneficiaries if yen stabilizes — watch for volume confirmation before entering."
+            }
+          ]
+        },
+        {
+          "event": "Narrow Tech Rally — Breadth Divergence Resolution",
+          "scenarios": [
+            {
+              "condition": "If SMH and XLK continue to lead but breadth (% above 200 DMA) fails to expand above 20%",
+              "implication": "The rally remains a narrow, liquidity-driven tech squeeze rather than a durable bull move. This is the most likely scenario in the near term given current regime data. Market grinds sideways-to-slightly-up with high chop. Range-bound regime persists or deepens. Small caps (IWM) continue to underperform.",
+              "trade": "No high-conviction trades recommended in this scenario. The regime's advice to consider ZERO trades today is sound. If forced to deploy capital, a pairs trade (long SMH vs short IWM) captures the growth-vs-small-cap divergence with reduced directional exposure."
+            },
+            {
+              "condition": "If breadth expands — Russell recovers, financials and industrials join the rally",
+              "implication": "Regime potentially upgrades from range-bound to trending bullish. The 5-day +3.05% move in S&P gets confirmed as the start of a new leg, not a dead-cat bounce. This would require a catalyst (soft CPI, Fed comment, positive macro data).",
+              "trade": "A breadth expansion signal (IWM reclaiming 200 DMA, XLF turning positive) would be a high-conviction entry signal. Scalable long in SPY or QQQ with targets scaled to 0.7x regime adjustment. This scenario likely requires Wednesday's CPI to trigger."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  }
+}
