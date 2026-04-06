@@ -30,7 +30,7 @@ const DATA_DIR = path.join(PROJECT_ROOT, "public", "data");
 const TRAINING_DATA_DIR = path.join(DATA_DIR, "training");
 
 import { scoreRecommendations, calculateScores, analyzeDimensions } from "./lib/scorer.ts";
-import { getRandomTradingDays } from "./lib/dates.ts";
+import { getRandomTradingDays, getAllTradingDays } from "./lib/dates.ts";
 import { verifyRecommendations } from "./lib/anti-leakage.ts";
 import { classifyRegime, buildRegimePrompt } from "../src/lib/market-regime.ts";
 import type { GlobalSignals, RegimeAssessment } from "../src/lib/market-regime.ts";
@@ -433,12 +433,28 @@ async function runFullDepthTrial(): Promise<void> {
   if (state.fullDepthTotalTrials === undefined) state.fullDepthTotalTrials = TOTAL_TRIALS;
   state.fullDepthTotalTrials = TOTAL_TRIALS; // Allow override via env
 
-  // Generate deterministic date sequence with seed=100 (different from lightweight seed=42)
+  // Generate date sequence: last 45 calendar days guaranteed + random fill
   if (!state.fullDepthDateSequence || state.fullDepthDateSequence.length === 0) {
-    state.fullDepthDateSequence = getRandomTradingDays(TOTAL_TRIALS, START_DATE, END_DATE, FULL_DEPTH_SEED);
+    // Recent dates: every trading day in the last 45 calendar days
+    const today = new Date();
+    const cutoff = new Date(today);
+    cutoff.setDate(cutoff.getDate() - 45);
+    const cutoffStr = cutoff.toISOString().split("T")[0];
+    const todayStr = today.toISOString().split("T")[0];
+    const recentDays = getAllTradingDays(cutoffStr, END_DATE < todayStr ? END_DATE : todayStr);
+
+    // Random fill: remaining slots from the broader range, excluding recent days
+    const recentSet = new Set(recentDays);
+    const remainingSlots = Math.max(0, TOTAL_TRIALS - recentDays.length);
+    const randomPool = getRandomTradingDays(remainingSlots + 50, START_DATE, END_DATE, FULL_DEPTH_SEED)
+      .filter(d => !recentSet.has(d))
+      .slice(0, remainingSlots);
+
+    // Combine: recent days first (chronological), then random days (shuffled)
+    state.fullDepthDateSequence = [...recentDays, ...randomPool];
     state.fullDepthCompletedDates = state.fullDepthCompletedDates || [];
     saveState(state);
-    log(`Generated full-depth date schedule: ${state.fullDepthDateSequence.length} dates (seed=${FULL_DEPTH_SEED})`);
+    log(`Generated full-depth date schedule: ${recentDays.length} recent + ${randomPool.length} random = ${state.fullDepthDateSequence.length} dates`);
   }
 
   if (state.fullDepthCurrentTrial! >= state.fullDepthTotalTrials!) {
