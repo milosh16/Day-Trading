@@ -53,6 +53,7 @@ jobs:
       - name: Generate regime + briefing
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: |
           set -e
           echo "=== Starting briefing generation ==="
