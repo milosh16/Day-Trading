@@ -1,0 +1,383 @@
+{
+  "id": "briefing-2025-07-08-1775510114355",
+  "date": "2025-07-08",
+  "generatedAt": "2026-04-06T21:15:14.326Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG CEG @ $318.25",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $335",
+          "implication": "+5.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $306",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT TSLA @ $293.94",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $272",
+          "implication": "+-7.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $310",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CCJ @ $75.19",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $79.5",
+          "implication": "+5.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $72",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT AA @ $29.81",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $27.5",
+          "implication": "+-7.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $31.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG LMT @ $469.06",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $490",
+          "implication": "+4.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $454",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 34,
+  "recommendations": [
+    {
+      "ticker": "CEG",
+      "direction": "LONG",
+      "entryPrice": 318.25,
+      "targetPrice": 335,
+      "stopPrice": 306,
+      "timeHorizon": "3-5 days",
+      "thesis": "Constellation Energy is the largest US nuclear operator benefiting from durable policy tailwinds. The One Big Beautiful Bill preserved nuclear subsidies while cutting support for rival energy sources. CEG gained +2.04% on July 7 while the broad market sold off hard — clear relative strength. The Microsoft 20-year PPA for Three Mile Island restart anchors long-term demand. AI power demand narrative remains intact. Nuclear is a secular winner in this tariff-heavy environment because it's domestically sourced energy immune to trade policy disruption. Stock is up 36% YTD with momentum continuation likely as rotation favors domestic energy plays.",
+      "catalysts": [
+        "Policy tailwinds from OBBBB intact",
+        "AI data center power demand narrative",
+        "Relative strength in broad selloff",
+        "Domestic energy immune to tariffs"
+      ],
+      "risks": [
+        "Broad market selloff could drag all sectors",
+        "CPI print in 7 days could spike yields",
+        "Already up 36% YTD — crowded trade"
+      ],
+      "conviction": {
+        "total": 74,
+        "dimensions": {
+          "signalStrength": 8,
+          "sectorAlignment": 9,
+          "catalystClarity": 8,
+          "riskReward": 7,
+          "timing": 7,
+          "conviction": 7,
+          "regimeFit": 8
+        },
+        "regimePenalty": -3,
+        "rawTotal": 77,
+        "notes": "Strong sector alignment in rotation regime. Nuclear is the clearest rotation beneficiary — domestic, policy-supported, AI-linked. -3 long penalty applied per regime rules."
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "direction": "SHORT",
+      "entryPrice": 293.94,
+      "targetPrice": 272,
+      "stopPrice": 310,
+      "timeHorizon": "3-5 days",
+      "thesis": "Tesla dropped -6.79% on July 7 after Musk announced his 'America Party,' the exact opposite direction investors want during a critical period for the Tesla story. EV sales fell 13% YoY in Q2, deliveries missed expectations by 14% YoY, and Tesla Takedown protests continue to weigh on brand. This is the worst trading day since June 5 when TSLA fell 14% on Musk-Trump feud. The pattern is clear: every political escalation triggers a sharp leg lower. With tariff uncertainty rising (new Aug 1 tariffs announced), consumer discretionary is a weak sector (XLY -0.34%), and TSLA has significant China exposure vulnerable to retaliation. Momentum is strongly negative. Mean reversion unlikely when driven by fundamental re-rating of Musk political risk.",
+      "catalysts": [
+        "Musk political escalation — 'America Party' launch",
+        "Q2 deliveries miss — 14% YoY decline",
+        "New tariff letters creating Aug 1 deadline uncertainty",
+        "Consumer discretionary sector weakness"
+      ],
+      "risks": [
+        "TSLA can snap back violently on any Musk pivot",
+        "Short squeeze risk in high-short-interest name",
+        "Musk could announce DOGE exit or Tesla refocus"
+      ],
+      "conviction": {
+        "total": 76,
+        "dimensions": {
+          "signalStrength": 9,
+          "sectorAlignment": 8,
+          "catalystClarity": 9,
+          "riskReward": 7,
+          "timing": 8,
+          "conviction": 8,
+          "regimeFit": 7
+        },
+        "regimePenalty": -3,
+        "rawTotal": 79,
+        "notes": "Strong idiosyncratic catalyst with sector headwinds. -6.8% day likely has follow-through as analysts digest Musk political risk. -3 short penalty applied per regime rules. R:R is 1.37:1 (target $22 vs stop $16)."
+      }
+    },
+    {
+      "ticker": "CCJ",
+      "direction": "LONG",
+      "entryPrice": 75.19,
+      "targetPrice": 79.5,
+      "stopPrice": 72,
+      "timeHorizon": "3-5 days",
+      "thesis": "Cameco is the world's largest publicly traded uranium producer, up +2.37% on July 7 while the broad market sold off. This is textbook relative strength in a rotation regime. CCJ blasted 26% higher in June on Westinghouse EBITDA guidance raise (+$170M), and momentum continues. Nuclear energy policy is highly favorable — OBBBB preserved nuclear subsidies. AI data center demand for baseload power is a secular tailwind. Copper's -3.6% decline actually helps nuclear's relative positioning as the clean energy play that doesn't depend on industrial metals supply chains. Uranium is domestically significant and tariff-immune.",
+      "catalysts": [
+        "Westinghouse EBITDA raise driving earnings momentum",
+        "Nuclear policy preservation in OBBBB",
+        "AI power demand for baseload nuclear",
+        "+26% in June with momentum continuation"
+      ],
+      "risks": [
+        "Uranium spot price volatility",
+        "Already had big June run — potential profit-taking",
+        "Broad risk-off could overwhelm sector strength"
+      ],
+      "conviction": {
+        "total": 73,
+        "dimensions": {
+          "signalStrength": 8,
+          "sectorAlignment": 8,
+          "catalystClarity": 7,
+          "riskReward": 7,
+          "timing": 7,
+          "conviction": 7,
+          "regimeFit": 8
+        },
+        "regimePenalty": -3,
+        "rawTotal": 76,
+        "notes": "Momentum continuation in rotation-favorable sector. R:R is 1.35:1 (target $4.31 vs stop $3.19). -3 long penalty applied."
+      }
+    },
+    {
+      "ticker": "AA",
+      "direction": "SHORT",
+      "entryPrice": 29.81,
+      "targetPrice": 27.5,
+      "stopPrice": 31.5,
+      "timeHorizon": "3-5 days",
+      "thesis": "Alcoa dropped -4.3% on July 7, one of the day's biggest losers. Copper -3.6% signals broad industrial metals weakness, and the regime explicitly calls for underweighting materials due to 'Dr. Copper declining — growth concerns.' Aluminum prices are highly correlated with copper and global growth expectations. New tariff letters to 7 countries (including South Korea, Japan) create additional headwinds for aluminum demand. AA is a high-beta materials play that amplifies commodity moves. The sector dispersion (3.8pp) in a rotation regime means laggards get punished harder. With tariff uncertainty through Aug 1, industrial metals face persistent headwind.",
+      "catalysts": [
+        "Copper -3.6% signaling industrial metals weakness",
+        "Regime explicitly underweights materials",
+        "New tariff letters creating demand uncertainty",
+        "High-beta amplifier of commodity weakness"
+      ],
+      "risks": [
+        "Aluminum is not copper — could diverge",
+        "Already down 4.3% — may be overdone short-term",
+        "Any tariff de-escalation could snap back materials"
+      ],
+      "conviction": {
+        "total": 73,
+        "dimensions": {
+          "signalStrength": 8,
+          "sectorAlignment": 9,
+          "catalystClarity": 7,
+          "riskReward": 7,
+          "timing": 7,
+          "conviction": 7,
+          "regimeFit": 8
+        },
+        "regimePenalty": -3,
+        "rawTotal": 76,
+        "notes": "Direct regime alignment — materials underweight called out explicitly. Copper weakness validates thesis. R:R is 1.37:1 (target $2.31 vs stop $1.69). -3 short penalty applied."
+      }
+    },
+    {
+      "ticker": "LMT",
+      "direction": "LONG",
+      "entryPrice": 469.06,
+      "targetPrice": 490,
+      "stopPrice": 454,
+      "timeHorizon": "3-5 days",
+      "thesis": "Lockheed Martin gained +1.41% on July 7 while the broad market fell nearly 1%. Defense is the quintessential rotation beneficiary in a tariff-driven environment: domestic revenue base, government contracts immune to trade disruption, and geopolitical risk premium. With Trump escalating trade tensions via new tariff letters, defense spending becomes a safe harbor. LMT is the largest pure-play defense contractor. The stock is near highs while the market sells off — strong relative strength. In rotation regimes with high sector dispersion (3.8pp), leaders tend to continue leading short-term.",
+      "catalysts": [
+        "Defense sector relative strength in selloff",
+        "Tariff-immune domestic revenue base",
+        "Geopolitical tension premium rising",
+        "Rotation from trade-exposed to domestic plays"
+      ],
+      "risks": [
+        "Defense budget debate could create headline risk",
+        "Already near recent highs — limited upside buffer",
+        "Rotation could reverse if tariff fears fade"
+      ],
+      "conviction": {
+        "total": 72,
+        "dimensions": {
+          "signalStrength": 7,
+          "sectorAlignment": 8,
+          "catalystClarity": 7,
+          "riskReward": 7,
+          "timing": 7,
+          "conviction": 7,
+          "regimeFit": 8
+        },
+        "regimePenalty": -3,
+        "rawTotal": 75,
+        "notes": "Classic defensive rotation play. Tariff-immune revenue base is the key differentiator. R:R is 1.39:1 (target $20.94 vs stop $15.06). -3 long penalty applied."
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10010,
+    "outcomes": [
+      {
+        "symbol": "CEG",
+        "openPrice": 320.68,
+        "highPrice": 320.68,
+        "lowPrice": 307.23,
+        "closePrice": 313.62,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.45,
+        "notes": "3-day window (2025-07-08, 2025-07-09, 2025-07-10). Open $320.68, High $320.68, Low $307.23, Close $313.62."
+      },
+      {
+        "symbol": "TSLA",
+        "openPrice": 297,
+        "highPrice": 310.48,
+        "lowPrice": 293.55,
+        "closePrice": 309.87,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -5.42,
+        "notes": "3-day window (2025-07-08, 2025-07-09, 2025-07-10). Open $297, High $310.48, Low $293.55, Close $309.87."
+      },
+      {
+        "symbol": "CCJ",
+        "openPrice": 74.6,
+        "highPrice": 75.16,
+        "lowPrice": 69.32,
+        "closePrice": 70.82,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.81,
+        "notes": "3-day window (2025-07-08, 2025-07-09, 2025-07-10). Open $74.6, High $75.16, Low $69.32, Close $70.82."
+      },
+      {
+        "symbol": "AA",
+        "openPrice": 30.37,
+        "highPrice": 31.97,
+        "lowPrice": 30.18,
+        "closePrice": 31.57,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -5.9,
+        "notes": "3-day window (2025-07-08, 2025-07-09, 2025-07-10). Open $30.37, High $31.97, Low $30.18, Close $31.57."
+      },
+      {
+        "symbol": "LMT",
+        "openPrice": 464.2,
+        "highPrice": 466.62,
+        "lowPrice": 456,
+        "closePrice": 464.31,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.01,
+        "notes": "3-day window (2025-07-08, 2025-07-09, 2025-07-10). Open $464.2, High $466.62, Low $456, Close $464.31."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 60,
+      "targetHitRate": 60,
+      "stopHitRate": 100,
+      "avgReturnPercent": -0.61,
+      "profitFactor": 0.73,
+      "winRate": 60,
+      "totalScore": 46.9,
+      "benchmarkReturn": -0.16,
+      "alpha": -0.45
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": -0.16,
+    "alpha": -0.45,
+    "fullDepth": true
+  }
+}
