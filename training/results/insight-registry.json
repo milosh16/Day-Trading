@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-06T17:54:09.991Z",
+  "lastUpdated": "2026-04-06T17:56:11.813Z",
   "insights": [
     {
       "discoveredAtTrial": 170,
@@ -482,6 +482,121 @@
       "confidenceScore": 60,
       "id": "insight-trade_selection-mnnhp39j",
       "discoveredAt": "2026-04-06T17:54:09.991Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "MAXIMUM 1 TRADE PER DAY: The best 5 trials all had exactly 1 trade. Enforce a strict single-best-idea policy. When multiple candidates exist, select only the highest-scoring one. Correlated pairs (same sector, same ETF family) should be treated as a single thesis and only the best expression traded.",
+      "promptFragment": "MAXIMUM 1 TRADE PER DAY: The best 5 trials all had exactly 1 trade. Enforce a strict single-best-idea policy. When multiple candidates exist, select only the highest-scoring one. Correlated pairs (same sector, same ETF family) should be treated as a single thesis and only the best expression traded.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhrp9h",
+      "discoveredAt": "2026-04-06T17:56:11.813Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "REGIME-BRIEFING CONSISTENCY GATE: Add a hard validation step that rejects trade recommendations when the regime label contradicts the briefing sentiment. If regime='rotation' but briefing='bearish', force the system to reconcile before generating recommendations. The briefing sentiment should override the regime label when confidence is below 50%.",
+      "promptFragment": "REGIME-BRIEFING CONSISTENCY GATE: Add a hard validation step that rejects trade recommendations when the regime label contradicts the briefing sentiment. If regime='rotation' but briefing='bearish', force the system to reconcile before generating recommendations. The briefing sentiment should override the regime label when confidence is below 50%.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhrp9h",
+      "discoveredAt": "2026-04-06T17:56:11.813Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "LOWER THRESHOLD + ADD REGIME-CONDITIONAL SCORING: Drop the composite threshold from ~70 to 58 to address the 83.5% no-trade rate, BUT add regime-conditional multipliers. Risk-on regimes with >55% confidence get a 1.15x multiplier on long candidates. Range-bound regimes with <40% confidence get a 0.85x penalty on all directional bets. This lets more trades through in high-confidence regimes while staying cautious in ambiguous ones.",
+      "promptFragment": "LOWER THRESHOLD + ADD REGIME-CONDITIONAL SCORING: Drop the composite threshold from ~70 to 58 to address the 83.5% no-trade rate, BUT add regime-conditional multipliers. Risk-on regimes with >55% confidence get a 1.15x multiplier on long candidates. Range-bound regimes with <40% confidence get a 0.85x penalty on all directional bets. This lets more trades through in high-confidence regimes while staying cautious in ambiguous ones.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhrp9h",
+      "discoveredAt": "2026-04-06T17:56:11.813Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "ELIMINATE SECTOR DOUBLING: Add an explicit rule that no two recommended trades can share the same GICS sector or be in the same ETF family (e.g., LRCX+SMH, AMAT+SMH are both semiconductor exposure). If multiple ideas exist in the same sector, take only the single best one.",
+      "promptFragment": "ELIMINATE SECTOR DOUBLING: Add an explicit rule that no two recommended trades can share the same GICS sector or be in the same ETF family (e.g., LRCX+SMH, AMAT+SMH are both semiconductor exposure). If multiple ideas exist in the same sector, take only the single best one.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhrp9h",
+      "discoveredAt": "2026-04-06T17:56:11.813Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "TIMING URGENCY AS A GATE, NOT JUST A WEIGHT: Given timingUrgency has the highest predictive power (72.5), use it as a binary pre-filter. If timingUrgency < 60 for a given candidate, disqualify it regardless of composite score. This dimension captures whether there's a time-sensitive reason to act TODAY vs. waiting, and it's the strongest signal of same-day alpha.",
+      "promptFragment": "TIMING URGENCY AS A GATE, NOT JUST A WEIGHT: Given timingUrgency has the highest predictive power (72.5), use it as a binary pre-filter. If timingUrgency < 60 for a given candidate, disqualify it regardless of composite score. This dimension captures whether there's a time-sensitive reason to act TODAY vs. waiting, and it's the strongest signal of same-day alpha.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnnhrp9h",
+      "discoveredAt": "2026-04-06T17:56:11.813Z",
       "validated": false,
       "active": false
     }
