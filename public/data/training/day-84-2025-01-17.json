@@ -1,0 +1,240 @@
+{
+  "trialId": 84,
+  "date": "2025-01-17",
+  "dateDisplay": "Friday, January 17, 2025",
+  "generatedAt": "2026-04-06T04:47:32.335Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 1,
+      "nasdaqFuturesChange": 1.51,
+      "dowFuturesChange": 0.78,
+      "russellFuturesChange": 0.4,
+      "vixFuturesChange": -3.8,
+      "vix": 15.97,
+      "vixChange": -3.8,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 18.19,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.61,
+      "tenYearYieldChange": 0.07,
+      "twoYearYield": 4.34,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.84,
+      "threeMonthYield": 4.19,
+      "twoTenSpread": 0.27,
+      "threeMoTenYrSpread": 0.42,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 109.35,
+      "dollarIndexChange": 0.36,
+      "eurUsd": 1.03,
+      "eurUsdChange": 0.06,
+      "usdJpy": 155.36,
+      "usdJpyChange": -0.58,
+      "usdCny": 7.33,
+      "usdCnyChange": 0.01,
+      "oilWTI": 77.88,
+      "oilChange": -1.02,
+      "brentOil": 80.79,
+      "brentOilChange": -0.62,
+      "natGasChange": -7.28,
+      "goldPrice": 2744.3,
+      "goldChange": -0.08,
+      "silverChange": -1.81,
+      "copperChange": -1.66,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.31,
+      "daxChange": 1.2,
+      "ftseChange": 1.35,
+      "shanghaiChange": 0.18,
+      "hangSengChange": 0.31,
+      "kospiChange": -0.16,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 102.69999999999999,
+      "spreadChange": -0.09,
+      "igSpread": -13.56,
+      "igSpreadChange": -0.08,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.95,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1.57,
+      "xlfChange": 0.84,
+      "xleChange": 0.77,
+      "xlvChange": -0.67,
+      "xlpChange": 0.57,
+      "xluChange": 0.14,
+      "xlreChange": -0.02,
+      "xliChange": 0.6,
+      "xlbChange": 0.65,
+      "xlcChange": 0.87,
+      "xlyChange": 1.4,
+      "smhChange": 2.36,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.05,
+      "ethereumChange": -4.84,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 2.91,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": -1.51,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 40,
+      "directionalBias": "10",
+      "volatilityRegime": "normal",
+      "stressIndex": 13,
+      "riskAppetiteIndex": 56,
+      "sectorTilts": {
+        "semiconductors": "overweight",
+        "materials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets printed a broad risk-on session Thursday led by semiconductors (+2.36%) and tech (+1.51%), yet the regime reads as RANGE-BOUND with only 40% confidence — a classic 'noisy up day inside a choppy tape' signature. The contradiction between headline green and underlying stress signals (extreme fear F&G: 0, S&P near 52-week low, 0% of names above 200 DMA, copper -1.7%) argues for skepticism: this looks more like a relief bounce than a durable trend reversal. With the conviction threshold raised to 78 and penalties on both long and short trades, the default posture today is disciplined observation over forced participation.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🧭 Overall Market Posture & Regime",
+          "content": "The regime classification is RANGE-BOUND at only 40% confidence — meaning the model itself is uncertain, which is itself a signal. Futures are up +1.25% pre-market, creating surface-level optimism, but the internals tell a more complicated story. The S&P is sitting near a 52-week low with zero percent of constituents above their 200 DMA — a breadth reading that is structurally bearish regardless of yesterday's bounce. The Fear & Greed index at 0 (extreme fear) is a contrarian data point: historically, single-day bounces from extreme fear are common, but they frequently fail without breadth confirmation. VIX at 15.97 (-3.8%) is declining — a short-term positive — and term structure remains in contango, suggesting the options market is not pricing in an imminent volatility spike. However, the 5-day S&P return of +2.91% against a flat 20-day return means the tape is recovering from a hole, not breaking out. Net posture: cautiously neutral, not aggressively positioned in either direction.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "The rotation picture is the most interesting signal in today's data. Semiconductors (SMH +2.36%) are the clear leader, consistent with the regime's overweight tilt driven by semi momentum and Korea fab demand signals. Tech (XLK +1.57%) and Discretionary (XLY +1.4%) follow — a growth-and-risk tilt that would normally be bullish. However, two red flags undercut the narrative: (1) Russell 2000 lagged by 0.85 percentage points, indicating small-cap/domestic cyclicals are NOT participating — genuine risk-on rotations typically lift all boats, especially small caps. (2) Healthcare (XLV -0.67%) and Real Estate (XLRE -0.02%) are the only red sectors. Healthcare underperformance is notable given it tends to be defensive; its weakness here may reflect rate sensitivity and sector-specific headwinds rather than pure risk-on selling of defensives. The 5-day picture shows value leading growth by -1.51% (Nasdaq vs Russell), reinforcing that this tech bounce is recent and not yet a sustained rotation. Cyclicals outperforming defensives is a positive regime input, but without small-cap confirmation, it lacks conviction.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10-year yield ticked up to 4.61% (+7 bps), which is a meaningful move — risk assets rallied INTO a rate rise, suggesting the bounce was equity-driven rather than bond-driven. The 2-10 spread at +27 bps and the 3M-10Y spread at +42 bps both show a positively sloped curve, technically un-inverted — a shift from the prolonged inversion of 2023-2024. A steepening, un-inverted curve is historically associated with early economic expansion OR with credit stress where short rates are being cut while long rates rise (bear steepener). Given the current context — Fed on hold, inflation sticky — this steepening reads more as a bear steepener signal: long-end yields rising on fiscal/inflation concerns rather than genuine growth optimism. At 4.61%, the 10Y is at a level that historically creates multiple compression pressure on equities, particularly growth/tech. The fact that tech rallied anyway yesterday may reflect short-covering rather than fundamental rerating. Watch 4.65-4.70% on the 10Y as a potential inflection — a break above that level would likely reprice risk assets lower.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The dollar (DXY 109.35, +0.36%) continues its grind higher — a persistent headwind for multinationals and EM assets. EUR/USD at 1.03 is near parity stress levels for Europe. USD/JPY at 155.36 but declining -0.58% on the session is worth watching: yen strength (dollar weakness vs yen) can signal a risk-off undercurrent in FX even as equities bounce — carry trade unwind risk remains latent. Oil (WTI $77.88, -1.02%) falling alongside copper (-1.7%) sends a coordinated demand-destruction signal. Dr. Copper's decline is the regime's clearest bearish input — copper leads global industrial demand and its weakness argues against a genuine cyclical recovery. Gold (-0.08%) is flat, neither confirming risk-off nor risk-on. Crypto is mixed-to-weak: Bitcoin flat (-0.05%) but Ethereum down -4.84% — ETH's underperformance relative to BTC often signals risk appetite contraction within the crypto complex. International markets are mixed: European bourses (DAX +1.2%, FTSE +1.35%) outperforming Asian markets (Nikkei -0.31%), with China essentially flat (Shanghai +0.18%, Hang Seng +0.31%). The commodity weakness + strong dollar + selective international participation paints a picture of selective, fragile risk appetite.",
+          "importance": "high"
+        },
+        {
+          "title": "⚠️ Risk Factors & Stress Signals",
+          "content": "Despite surface-level calm (Stress: 13/100), several latent risks deserve monitoring: (1) Zero percent of S&P names above their 200 DMA is an extraordinary breadth failure — bounces without breadth participation tend to be traps. (2) Extreme Fear (F&G: 0) can fuel short-covering rallies but represents fragile sentiment — any negative catalyst can re-accelerate selling. (3) The strong dollar is a systemic headwind for Q4 earnings guidance from multinationals — this is particularly relevant heading into earnings season. (4) Copper and oil both declining simultaneously removes two key 'growth is fine' pillars from the bull case. (5) Russell 2000 lagging suggests credit/financing stress for smaller companies in a higher-for-longer rate environment — small caps are disproportionately floating-rate borrowers. (6) The regime confidence of only 40% means the model is essentially saying 'I don't know what this tape is doing' — operating in low-conviction, ambiguous conditions increases the cost of being wrong. Risk Appetite at 56/100 is middling — not fearful enough to be a strong contrarian buy, not greedy enough to chase.",
+          "importance": "high"
+        },
+        {
+          "title": "🎯 Trade Posture for Today",
+          "content": "The regime explicitly raises the minimum conviction threshold to 78 and applies a -5 penalty to both longs and shorts. Combined with the instruction that range-bound days favor ZERO trades, the primary message is: don't force it. The only regime-endorsed overweight is semiconductors (SMH/SOXX), which also happens to be yesterday's price leader — meaning it's already moved. Chasing a +2.36% gap-up in semis on a range-bound, low-conviction day violates multiple risk management principles simultaneously. If anything, the setup for today is to watch whether yesterday's bounce has legs (breadth expansion, small caps catching up, yields stabilizing below 4.65%) or fails (semis give back gains, Russell rolls over, dollar strengthens further). Let price confirm before deploying capital.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Semiconductor bounce sustainability test — SMH gap-up follow-through or fade",
+          "scenarios": [
+            {
+              "condition": "If SMH holds above Thursday's close and Russell 2000 (IWM) begins closing the 0.85pp lag — breadth broadens, 10Y yield stabilizes below 4.63%",
+              "implication": "The bounce has legs. Market internals are confirming the semi-led recovery. Risk appetite is genuinely expanding, not just short-covering. A broader tech/growth rotation could sustain for 2-3 sessions.",
+              "trade": "Consider a measured long in SMH or SOXX with tight stops below Thursday's open. Scale targets to 0.7x normal given range-bound regime. Conviction prerequisite: must see IWM participation before entry. Position size 50-60% of normal."
+            },
+            {
+              "condition": "If SMH fades the gap-up open, Russell continues to lag, and 10Y yield pushes above 4.65%",
+              "implication": "Yesterday was a short-covering event, not a trend change. The breadth and rate signals reassert bearish internals. S&P likely revisits recent lows. Semi strength evaporates as rate headwinds dominate growth multiples.",
+              "trade": "No new longs. Monitor for a short setup in XLK or QQQ if they fail their Thursday highs intraday. Given the -5 short conviction penalty and 78 threshold, wait for a clean technical failure pattern before acting. SQQQ as defined-risk vehicle if short conviction materializes."
+            }
+          ]
+        },
+        {
+          "event": "Dollar strength continuation vs. reversal — DXY 109+ impact on risk assets",
+          "scenarios": [
+            {
+              "condition": "If DXY extends above 110 alongside continued EUR/USD weakness toward parity, combined with oil holding below $78",
+              "implication": "Dollar strength + commodity weakness = global growth headwinds are real, not transient. Multinational earnings guidance risk rises sharply heading into reporting season. EM assets face pressure. This macro backdrop argues for sustained equity multiple compression.",
+              "trade": "Defensive lean: review any open longs for dollar exposure. Gold (GLD) becomes more interesting as a hedge if dollar strength coincides with equity weakness — the classic 'dollar up, equities down' stress scenario. Avoid materials (XLB) — the regime already has this as underweight and copper is confirming."
+            },
+            {
+              "condition": "If USD/JPY continues its -0.58% trend (yen strengthening), dollar broadly stabilizes or reverses, and EUR/USD recovers above 1.04",
+              "implication": "Dollar peak may be forming. Yen strength is historically associated with risk-off carry unwind in the short term but can set up a more stable macro backdrop. If dollar tops here, multinationals get relief, EM recovers, and gold could break higher.",
+              "trade": "GLD long becomes more compelling on dollar reversal. Watch GDX (gold miners) for leverage if gold breaks above $2,750 with dollar declining. International exposure (EFA, EWG for Europe given DAX strength) becomes viable. This is a higher-conviction setup if dollar reversal is confirmed."
+            }
+          ]
+        },
+        {
+          "event": "Extreme Fear (F&G: 0) contrarian setup — capitulation bounce vs. continued deterioration",
+          "scenarios": [
+            {
+              "condition": "If today's session sees continued buying with volume expansion, VIX drops below 15, and at least 30-40% of S&P names recover above their 10-day MAs",
+              "implication": "The F&G extreme fear reading is acting as a classic contrarian buy signal. Short-covering is transitioning into genuine accumulation. The market found a short-term low and a multi-day recovery is underway. The 5-day +2.91% gain becomes the foundation of a broader recovery.",
+              "trade": "Risk-on posture becomes defensible, but only with strict regime discipline: targets scaled to 0.7x, conviction must clear 78 post-penalty. Best-in-class longs: SMH (semi overweight), XLK, potentially XLF if yields stabilize (financials benefit from steeper curve). Use defined-risk structures (spreads) given range-bound uncertainty."
+            },
+            {
+              "condition": "If F&G at 0 reflects genuine fundamental deterioration rather than sentiment overshoot — copper, oil, and Russell all confirm by declining further today",
+              "implication": "Extreme fear is warranted, not contrarian. The market is pricing in real growth slowdown risk. The single-day bounce was noise. S&P tests or breaks below its 52-week low in coming sessions. Breadth at 0% above 200 DMA is the canary — it's already singing.",
+              "trade": "Preserve capital. No new longs until breadth improves materially. Short ideas (SQQQ, SDOW) are intellectually valid but face the -5 conviction penalty — only act if conviction would otherwise be 83+. Cash is a position. The regime says 'consider zero trades' — this scenario validates that instruction fully."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.18,
+    "technicalSetup": 0.15,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.12,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.13,
+    "timingUrgency": 0.12
+  },
+  "opusReviewNotes": "The most critical problem with this algorithm is not signal quality — it's the 80% no-trade rate that has collapsed it into a passive observer. Across 90 trials, only 18 produced trades, and the last 10 trials produced ZERO trades. This means the scoring threshold and/or the conviction pipeline is systematically too conservative. The algorithm is optimizing for avoiding losses rather than capturing gains, which is a fatal flaw for a day trading system. A day trading algorithm that doesn't trade is worthless regardless of its win rate on the rare occasions it acts.\n\nLooking at the last 10 trials specifically: Trial 87 (2026-03-02) was classified as a crisis regime with 90% confidence and stress=35 — this is the HIGHEST conviction regime signal in the entire batch, yet no trade was generated. Crisis regimes are historically the best environments for short trades, volatility plays, and mean-reversion setups. The algorithm should have been aggressively recommending short positions or defensive plays (long TLT, long VIX products, short overextended growth). Similarly, Trial 83 (2025-05-01) identified risk-on with 58% confidence, appetite=64, and an 8-day win streak — this screamed for either momentum continuation longs or, more likely, a mean-reversion short given the overbought condition the briefing itself flagged. The briefing and regime identification are doing their jobs; the trade recommendation engine is completely disconnected from them.\n\nThe dimension predictive power data reveals that all six dimensions cluster between 62.9 and 67.0 — an absurdly narrow range suggesting either (a) the scoring rubric doesn't differentiate meaningfully between dimensions, or (b) the sample is too small (10 samples each) to detect real differences. TimingUrgency (67.0) and CatalystClarity (66.8) lead slightly, while VolumeLiquidity (62.9) and MarketAlignment (63.1) trail. The current weights already over-index on CatalystClarity (18.4%) which aligns with its predictive power, but MarketAlignment (14.5%) is over-weighted relative to its weak predictive signal. InformationEdge (13.3%) is under-weighted given its 66.1 score. The weight evolution shows wild oscillation — from Trial 30's technicalSetup peak of 18.4% to Trial 80's collapse to 12.0% — suggesting the learning algorithm is overfitting to individual trial outcomes rather than converging on stable weights.\n\nThe winning trades tell a clear story: single-position, high-conviction plays with clear catalysts (IWM risk-on broad market long, PLTR short on likely overextension, PNC long likely on earnings, UBER long, PLUG long). The losers show a pattern of either fighting the regime (BRK.B short in Trial 30 scored 0) or low-catalyst speculative entries (SNOW long in Trial 55 scored 15, the multi-trade Trial 75 with VLO/CMC/AYI scored 5). The algorithm performs best with ONE trade at high conviction, not multiple trades diluting conviction. Every trial with 1 trade and a win scored 75-100; Trial 75 with 3 trades scored 5. This is a strong signal: the system should NEVER recommend more than 1-2 trades per day.\n\nThe profit factor of 30.25 average is misleading — it's driven entirely by the perfect 100-score trials where PF=10 (likely a cap). The actual distribution is bimodal: either perfect wins or total losses. There's almost no middle ground, suggesting the conviction scoring doesn't have a 'partial win' zone. The 3 stop-loss hits averaging -6.30% is concerning — that's a large average loss for day trades, implying stops are too wide or position sizing doesn't account for volatility regime."
+}
