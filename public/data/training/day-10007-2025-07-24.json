@@ -1,0 +1,499 @@
+{
+  "trialId": 10007,
+  "date": "2025-07-24",
+  "dateDisplay": "Thursday, July 24, 2025",
+  "generatedAt": "2026-04-06T21:03:19.965Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.07,
+      "nasdaqFuturesChange": 0.18,
+      "dowFuturesChange": -0.7,
+      "russellFuturesChange": -1.36,
+      "vixFuturesChange": -2.99,
+      "vix": 14.93,
+      "vixChange": -2.99,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 18.56,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.41,
+      "tenYearYieldChange": 0.46,
+      "twoYearYield": 4.05,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.95,
+      "threeMonthYield": 4.24,
+      "twoTenSpread": 0.36,
+      "threeMoTenYrSpread": 0.17,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 97.65,
+      "dollarIndexChange": 0.28,
+      "eurUsd": 1.18,
+      "eurUsdChange": -0.15,
+      "usdJpy": 147.01,
+      "usdJpyChange": 0.45,
+      "usdCny": 7.15,
+      "usdCnyChange": -0.08,
+      "oilWTI": 65.16,
+      "oilChange": -1.32,
+      "brentOil": 68.44,
+      "brentOilChange": -1.07,
+      "natGasChange": 0.52,
+      "goldPrice": 3334,
+      "goldChange": -1.1,
+      "silverChange": -2.19,
+      "copperChange": -0.23,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.88,
+      "daxChange": -0.32,
+      "ftseChange": -0.2,
+      "shanghaiChange": -0.33,
+      "hangSengChange": -1.09,
+      "kospiChange": 0.18,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 97.8,
+      "spreadChange": 0.12,
+      "igSpread": -17.28,
+      "igSpreadChange": 0.15,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.96,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.42,
+      "xlfChange": -0.06,
+      "xleChange": 0.71,
+      "xlvChange": -0.37,
+      "xlpChange": -0.36,
+      "xluChange": -0.13,
+      "xlreChange": -0.14,
+      "xliChange": -0.17,
+      "xlbChange": -1.03,
+      "xlcChange": 0.17,
+      "xlyChange": -1.66,
+      "smhChange": 0.42,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.62,
+      "ethereumChange": 0.52,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 6,
+      "daysToNextCPI": 19,
+      "daysToNextNFP": 8,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 4,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.05,
+      "sp20DayReturn": 4.45,
+      "nasdaqVsRussell5d": 0.89,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 42,
+      "directionalBias": -12,
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 43,
+      "keyFactors": [
+        "Russell lagging by 1.49pp",
+        "Weak breadth: 0% above 200 DMA",
+        "Defensives outperforming cyclicals",
+        "Extreme fear (F&G: 0)",
+        "S&P near 52-week low",
+        "Sector dispersion 2.4pp with flat futures — rotation day"
+      ],
+      "sectorTilts": [],
+      "convictionModifiers": {
+        "longPenalty": 3,
+        "shortPenalty": 3,
+        "targetMultiplier": 0.9
+      }
+    },
+    "briefing": {
+      "summary": "Rotation regime with negative bias (-12). Market is at record highs (SPX 4 consecutive up days) but breadth is narrow -- Russell lagging 1.49pp, A/D ratio 0.96. The pattern is clear: money rotating FROM growth/momentum (crypto, clean energy, high-multiple software) INTO value/quality (defense, traditional energy, healthcare, financials). FOMC in 6 days creates a catalyst window. With VIX at 14.93 and contango structure, options market is complacent. The rotation trade has legs for another 1-2 sessions but extended SPX streak (4 up days, +4.45% in 20d) increases mean-reversion risk. Best opportunities are in sector pairs and continuation of the rotation theme.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Geopolitics",
+          "content": "Low geopolitical risk. White House proposed 13% increase to $1.01T defense budget for FY2026, prioritizing Space Force ($40B) and next-gen missile defense ($25B). This is a direct tailwind for defense names that reported strong earnings (RTX, GD, HII, LMT). No major escalations elsewhere.",
+          "importance": "medium"
+        },
+        {
+          "title": "Macro",
+          "content": "S&P 500 hit 12th record close of 2025 at 6,358.91; Nasdaq crossed 21,000 for the first time. 4 consecutive up days on SPX with 5d return +1.05% and 20d return +4.45%. 10Y yield rose to 4.41% (+0.46%), 2-10 spread positive at 36bp. Dollar firming at 97.65 (+0.28%). VIX low at 14.93 in contango. FOMC in 6 days -- market expects no change. Existing home sales fell 2.7% vs -0.7% expected. Rotation regime: Russell lagging SPX by 1.49pp, sector dispersion 2.4pp, defensives outperforming cyclicals.",
+          "importance": "medium"
+        },
+        {
+          "title": "Corporate",
+          "content": "Major Q2 earnings drove price action. RTX beat by 8.3% (sales +9%, book-to-bill 1.86, $236B backlog). GD beat and raised FY guidance (rev +8.9%, EPS +14.7%, op margin expanded 30bp). TMO surged 9.14% on Q2 beat (rev +3% to $10.85B). ENPH crashed 14% despite Q2 beat -- Q3 guidance $330-370M missed consensus $368M, tariff impact on margins, clean energy tax credit expiration concerns. NEE sold off 6% despite strong Q2 (EPS +9% YoY) after a 16% run-up in prior 3 months -- classic sell-the-news.",
+          "importance": "medium"
+        },
+        {
+          "title": "Tech",
+          "content": "Nasdaq outperforming on Alphabet AI results from prior session fueling mega-cap tech confidence. NVDA +2.25%, AMD +2.54%, AVGO +1.83%, ARM +1.78%, MRVL +1.78% -- semis broadly strong on AI narrative. Software mixed: CRM +1.38%, ORCL +1.59% but CRWD -2.06%, NOW -0.61%, NET -0.73%. Crypto miners hit hard -- MARA -11.62%, MSTR -3.22%, COIN -1.64% despite BTC only -0.62%.",
+          "importance": "medium"
+        },
+        {
+          "title": "Energy",
+          "content": "Traditional energy strong: XLE +1.54%. Oil services rallied (HAL +2.71%, SLB +2.30%). E&Ps up (COP +2.22%, CVX +2.05%, OXY +2.02%). WTI oil at $65.16 (-1.32%) -- stocks rallied despite oil price weakness, suggesting earnings/value rotation flow. Nuclear/power theme very strong: SMR +7.67%, VST +5.83%, CEG +1.86%, CCJ +1.60% driven by AI electricity demand thesis. Clean energy diverged sharply -- ENPH -14.16% on guidance miss, FSLR flat.",
+          "importance": "medium"
+        },
+        {
+          "title": "Policy",
+          "content": "Key policy drivers: (1) Defense budget expansion proposal boosting defense stocks. (2) Tariff impacts hitting ENPH margins by 3-5% in Q3. (3) Residential clean energy tax credit expiration expected to shrink US residential solar market in 2026. (4) FOMC in 6 days -- market calm, VIX at 14.93 in contango suggests no fear of surprise. (5) Clean hydrogen tax credits potentially benefiting nuclear names.",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "RTX",
+      "direction": "long",
+      "entryPrice": 156.49,
+      "targetPrice": 163,
+      "stopLoss": 151.5,
+      "thesis": "RTX delivered the strongest order book in company history. The +4.91% move barely prices in the magnitude of the backlog growth and defense budget catalyst. Defense sector is the clear rotation winner. Rising 10Y yield (4.41%) does not hurt defense the way it hurts growth. Among defense names, RTX has the best combination of commercial (Pratt & Whitney) and defense exposure.",
+      "catalyst": "Post-earnings momentum continuation. Q2 beat by 8.3%, $236B record backlog, book-to-bill 1.86. Defense budget expansion to $1.01T provides multi-year tailwind. Pratt & Whitney work stoppage resolution upcoming.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 9,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 6,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 8,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 9,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 7,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "GD",
+      "direction": "long",
+      "entryPrice": 316.94,
+      "targetPrice": 330,
+      "stopLoss": 306,
+      "thesis": "GD had the best margin expansion among defense peers and raised guidance -- the most bullish signal a company can give. Cash conversion at 158% of net earnings is exceptional. Paired with RTX, this creates a defense sector basket aligned with the rotation regime. Stock gapped up 6.5% but guidance raise typically sustains momentum for 2-5 sessions.",
+      "catalyst": "Q2 earnings beat with raised full-year guidance. Revenue +8.9%, EPS +14.7%, 30bp margin expansion. Record backlog. $1T defense budget tailwind.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 9,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 6,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 5,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 9,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 8,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 7,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "ENPH",
+      "direction": "short",
+      "entryPrice": 36.48,
+      "targetPrice": 32.5,
+      "stopLoss": 39.5,
+      "thesis": "This is not just a miss -- it is a structural deterioration story. Tariffs + tax credit expiration create a double headwind that worsens over the next 2-3 quarters. ENPH is the most US-residential-exposed solar name, exactly where policy headwinds hit hardest. The -14% move was sharp but guidance cuts often lead to further analyst downgrades over 1-2 weeks. In a rotation regime where money leaves growth for value, ENPH is a natural short.",
+      "catalyst": "Weak Q3 guidance ($350M midpoint vs $368M consensus), tariff drag of 3-5% on margins, clean energy tax credit expiration shrinking TAM in 2026. Structural headwinds beyond one-quarter miss.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 8,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 6,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 8,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 6,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "VST",
+      "direction": "long",
+      "entryPrice": 200.12,
+      "targetPrice": 212,
+      "stopLoss": 192,
+      "thesis": "VST is the best risk-adjusted nuclear play -- it has an existing, operating nuclear fleet generating revenue NOW, unlike pre-revenue peers (SMR, OKLO). The +5.83% move reflects momentum in the nuclear/AI power theme. SMR moved +7.67%, suggesting the theme has broad legs. In a rotation regime, VST straddles both value (existing assets) and growth (AI power demand), making it regime-resilient.",
+      "catalyst": "AI-driven electricity demand thesis accelerating. Behind-the-meter deals with tech giants. Existing nuclear fleet generating immediate cash flow. Clean hydrogen tax credit potential benefit. Nuclear renaissance theme has multi-month runway.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 6,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 6,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "MARA",
+      "direction": "short",
+      "entryPrice": 17.57,
+      "targetPrice": 15.5,
+      "stopLoss": 19.2,
+      "thesis": "MARA disproportionate selloff vs BTC reveals broken sentiment among crypto miners. When beta works asymmetrically against you (more downside than upside per BTC move), it signals institutional selling and structural weakness. Dollar firming (+0.28%) is headwind for crypto. In a rotation regime where defensives outperform cyclicals, crypto miners are the ultimate cyclical short.",
+      "catalyst": "Extreme negative beta to BTC -- dropped 11.62% on only -0.62% BTC move. Crypto miners in structural decline with 46% YTD losses. Rotation regime is moving money OUT of speculative names and INTO value/quality.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 6,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 7,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 6,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 6,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 8,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 5,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 5,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "RTX",
+      "openPrice": 156.25,
+      "highPrice": 157.33,
+      "lowPrice": 154.26,
+      "closePrice": 156.07,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.27,
+      "notes": "3-day window (2025-07-24, 2025-07-25, 2025-07-28). Open $156.25, High $157.33, Low $154.26, Close $156.07."
+    },
+    {
+      "symbol": "GD",
+      "openPrice": 319,
+      "highPrice": 322.5,
+      "lowPrice": 311,
+      "closePrice": 313.1,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.21,
+      "notes": "3-day window (2025-07-24, 2025-07-25, 2025-07-28). Open $319, High $322.5, Low $311, Close $313.1."
+    },
+    {
+      "symbol": "ENPH",
+      "openPrice": 36.65,
+      "highPrice": 37.27,
+      "lowPrice": 34.52,
+      "closePrice": 34.95,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 4.19,
+      "notes": "3-day window (2025-07-24, 2025-07-25, 2025-07-28). Open $36.65, High $37.27, Low $34.52, Close $34.95."
+    },
+    {
+      "symbol": "VST",
+      "openPrice": 202.1,
+      "highPrice": 203.6,
+      "lowPrice": 190.51,
+      "closePrice": 195.88,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -2.12,
+      "notes": "3-day window (2025-07-24, 2025-07-25, 2025-07-28). Open $202.1, High $203.6, Low $190.51, Close $195.88."
+    },
+    {
+      "symbol": "MARA",
+      "openPrice": 17.55,
+      "highPrice": 17.68,
+      "lowPrice": 16.63,
+      "closePrice": 17.16,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.33,
+      "notes": "3-day window (2025-07-24, 2025-07-25, 2025-07-28). Open $17.55, High $17.68, Low $16.63, Close $17.16."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 40,
+    "targetHitRate": 0,
+    "stopHitRate": 20,
+    "avgReturnPercent": 0.58,
+    "profitFactor": 1.81,
+    "winRate": 40,
+    "totalScore": 55.4,
+    "benchmarkReturn": -0.03,
+    "alpha": 0.61
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 7,
+      "avgScoreLosers": 8.3,
+      "predictivePower": 48.7
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 7,
+      "avgScoreLosers": 6.7,
+      "predictivePower": 50.3
+    },
+    "riskReward": {
+      "avgScoreWinners": 6,
+      "avgScoreLosers": 6,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 6.5,
+      "avgScoreLosers": 7.3,
+      "predictivePower": 49.2
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 8,
+      "avgScoreLosers": 8.3,
+      "predictivePower": 49.7
+    },
+    "informationEdge": {
+      "avgScoreWinners": 6,
+      "avgScoreLosers": 7,
+      "predictivePower": 49
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 5.5,
+      "avgScoreLosers": 6.7,
+      "predictivePower": 48.8
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
