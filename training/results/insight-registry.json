@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "lastUpdated": "2026-04-06T18:08:09.355Z",
+  "lastUpdated": "2026-04-06T18:10:06.565Z",
   "insights": [
     {
       "discoveredAtTrial": 170,
@@ -1402,6 +1402,144 @@
       "confidenceScore": 60,
       "id": "insight-trade_selection-mnni72x7",
       "discoveredAt": "2026-04-06T18:08:09.355Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Enforce a STRICT one-trade-per-day maximum. Every winning trial had exactly 1 trade. Multi-trade days (Trials 75, 138, 161, 162) all lost. When multiple candidates pass threshold, select only the highest-scoring one.",
+      "promptFragment": "Enforce a STRICT one-trade-per-day maximum. Every winning trial had exactly 1 trade. Multi-trade days (Trials 75, 138, 161, 162) all lost. When multiple candidates pass threshold, select only the highest-scoring one.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnni9ld1",
+      "discoveredAt": "2026-04-06T18:10:06.565Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Replace the 4-regime classifier (risk-on, risk-off, rotation, range-bound) with a binary signal: DIRECTIONAL (trend day, pick a side) vs NON-DIRECTIONAL (chop day, no trades). The current 'rotation' and 'range-bound' labels are too ambiguous and account for 7 of last 10 classifications while producing no actionable signal.",
+      "promptFragment": "Replace the 4-regime classifier (risk-on, risk-off, rotation, range-bound) with a binary signal: DIRECTIONAL (trend day, pick a side) vs NON-DIRECTIONAL (chop day, no trades). The current 'rotation' and 'range-bound' labels are too ambiguous and account for 7 of last 10 classifications while producing no actionable signal.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnni9ld1",
+      "discoveredAt": "2026-04-06T18:10:06.565Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Add a CORRELATION GATE: if recommending multiple trades, compute pairwise correlation of underlying assets. Reject any trade set where average pairwise correlation exceeds 0.70. Trials 161 (LRCX + SMH) and 162 (AMAT + SMH) were effectively double-sizing the same semiconductor bet.",
+      "promptFragment": "Add a CORRELATION GATE: if recommending multiple trades, compute pairwise correlation of underlying assets. Reject any trade set where average pairwise correlation exceeds 0.70. Trials 161 (LRCX + SMH) and 162 (AMAT + SMH) were effectively double-sizing the same semiconductor bet.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnni9ld1",
+      "discoveredAt": "2026-04-06T18:10:06.565Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Lower the composite score threshold from current effective ~70+ to 65, BUT add a mandatory 'catalyst specificity' check: the trade must reference a specific, dated catalyst (earnings date, FDA decision, economic data release) occurring within the trade horizon. This should increase trade frequency without sacrificing quality.",
+      "promptFragment": "Lower the composite score threshold from current effective ~70+ to 65, BUT add a mandatory 'catalyst specificity' check: the trade must reference a specific, dated catalyst (earnings date, FDA decision, economic data release) occurring within the trade horizon. This should increase trade frequency without sacrificing quality.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnni9ld1",
+      "discoveredAt": "2026-04-06T18:10:06.565Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Implement a REGIME CONFIDENCE FLOOR: if regime classification confidence is below 50%, default to 'no directional bias' and only allow mean-reversion trades on individual names with extreme RSI readings. Currently, low-confidence regime calls (34-41%) are being used to justify directional bets.",
+      "promptFragment": "Implement a REGIME CONFIDENCE FLOOR: if regime classification confidence is below 50%, default to 'no directional bias' and only allow mean-reversion trades on individual names with extreme RSI readings. Currently, low-confidence regime calls (34-41%) are being used to justify directional bets.",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnni9ld1",
+      "discoveredAt": "2026-04-06T18:10:06.565Z",
+      "validated": false,
+      "active": false
+    },
+    {
+      "discoveredAtTrial": 170,
+      "category": "trade_selection",
+      "insight": "Add an asymmetric scoring bonus: short trades should require 10 points HIGHER composite score than longs to pass threshold, unless VIX is above 25 or the regime is explicitly risk-off with >60% confidence. The algorithm's best shorts (PLTR, TGT) were high-conviction, but its worst trades include several low-conviction shorts (MSFT, AMAT, SMH).",
+      "promptFragment": "Add an asymmetric scoring bonus: short trades should require 10 points HIGHER composite score than longs to pass threshold, unless VIX is above 25 or the regime is explicitly risk-off with >60% confidence. The algorithm's best shorts (PLTR, TGT) were high-conviction, but its worst trades include several low-conviction shorts (MSFT, AMAT, SMH).",
+      "supportingTrials": [
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170
+      ],
+      "confidenceScore": 60,
+      "id": "insight-trade_selection-mnni9ld1",
+      "discoveredAt": "2026-04-06T18:10:06.565Z",
       "validated": false,
       "active": false
     }
