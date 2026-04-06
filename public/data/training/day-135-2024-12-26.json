@@ -1,0 +1,231 @@
+{
+  "trialId": 135,
+  "date": "2024-12-26",
+  "dateDisplay": "Thursday, December 26, 2024",
+  "generatedAt": "2026-04-06T11:31:11.263Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.04,
+      "nasdaqFuturesChange": -0.05,
+      "dowFuturesChange": 0.07,
+      "russellFuturesChange": 0.9,
+      "vixFuturesChange": 8.28,
+      "vix": 15.95,
+      "vixChange": 8.28,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 17.36,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.58,
+      "tenYearYieldChange": -0.26,
+      "twoYearYield": 4.37,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.76,
+      "threeMonthYield": 4.22,
+      "twoTenSpread": 0.21,
+      "threeMoTenYrSpread": 0.36,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 108,
+      "dollarIndexChange": -0.12,
+      "eurUsd": 1.04,
+      "eurUsdChange": 0.23,
+      "usdJpy": 157.75,
+      "usdJpyChange": 0.39,
+      "usdCny": 7.3,
+      "usdCnyChange": 0,
+      "oilWTI": 70.6,
+      "oilChange": 1.41,
+      "brentOil": 74.17,
+      "brentOilChange": 1.24,
+      "natGasChange": -5.41,
+      "goldPrice": 2617.2,
+      "goldChange": -0.82,
+      "silverChange": -1.3,
+      "copperChange": -0.23,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 1.8,
+      "daxChange": 0.68,
+      "ftseChange": 0.16,
+      "shanghaiChange": 0.06,
+      "hangSengChange": -0.04,
+      "kospiChange": -1.02,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 105.9,
+      "spreadChange": -0.25,
+      "igSpread": -14.2,
+      "igSpreadChange": -0.09,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.02,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.07,
+      "xlfChange": 0.24,
+      "xleChange": -0.08,
+      "xlvChange": 0.2,
+      "xlpChange": 0.31,
+      "xluChange": -0.24,
+      "xlreChange": 0.15,
+      "xliChange": 0.07,
+      "xlbChange": -0.15,
+      "xlcChange": -0.13,
+      "xlyChange": -0.37,
+      "smhChange": -0.18,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -1.7,
+      "ethereumChange": -0.07,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": 2.82,
+      "sp20DayReturn": 0.27,
+      "nasdaqVsRussell5d": 1.06,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 36,
+      "directionalBias": "6",
+      "volatilityRegime": "normal",
+      "stressIndex": 16,
+      "riskAppetiteIndex": 51,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "Markets are grinding in a post-Christmas range with negligible S&P/Nasdaq movement (-0.04%/-0.05%) while small caps stage a modest outperformance (+0.9%), suggesting a thin-volume rotation day rather than any directional conviction. The regime classification is RANGE-BOUND with only 36% confidence, fear gauges are elevated (VIX +8.28% to 15.95), and the system flags extreme fear conditions — this is a day for discipline over activity. International markets (Nikkei +1.8%, DAX +0.68%) are carrying more constructive tones than domestic tape, pointing to divergence that warrants monitoring rather than chasing.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🎯 Overall Market Posture & Regime",
+          "content": "The regime engine classifies today as RANGE-BOUND with only 36% confidence — meaning even the model is unsure about its own call. That uncertainty itself is a signal: stay small, stay selective. The directional bias is a modest +6 (barely positive), stress reads a benign 16/100, and risk appetite sits at 51/100 — right on the fence. The S&P is flagged as near a 52-week low with zero percent of stocks above the 200 DMA, which is a stark internal breadth warning that contradicts any casual bullish narrative. The VIX jumping 8.28% to 15.95 on a flat tape is a quiet alarm — options markets are pricing in more uncertainty than the price action admits. Post-Christmas low-volume sessions can produce misleading signals; regime rules appropriately penalize both long and short conviction by 5 points today, raising the minimum trade conviction threshold to 78. The system's own advice: consider outputting zero trades. That is sound counsel.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "The sector story today reads as a classic defensive/risk-off rotation dressed up in thin-volume holiday clothes. Winners: Staples (XLP +0.31%), Financials (XLF +0.24%), Healthcare (XLV +0.20%), Real Estate (XLRE +0.15%). Losers: Discretionary (XLY -0.37%), Utilities (XLU -0.24%), Semis (SMH -0.18%), Materials (XLB -0.15%). The defensive bid in Staples and Healthcare aligns with the Extreme Fear reading. Financials outperforming is interesting — it could reflect the steeper yield curve (2-10 at +21bps) benefiting net interest margins, or simply sector rotation in a thin tape. Discretionary weakness is notable given the holiday shopping context — XLY underperforming on December 26 is a subtle bearish datapoint for consumer sentiment. Semis (SMH -0.18%) lagging while Nasdaq is flat suggests mega-cap tech names are holding the index while the semiconductor complex quietly deteriorates beneath the surface. The Russell +0.9% outperformance is the day's most interesting anomaly — small caps leading is historically a risk-on signal, but against a backdrop of zero breadth and extreme fear, it reads more like short-covering or rebalancing than genuine risk appetite expansion.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10-year yield at 4.58% pulled back modestly (-0.26% on the day), offering slight relief to rate-sensitive sectors. The 2-10 spread sits at +21bps and the 3M-10Y at +36bps — both positive, meaning the curve is technically no longer inverted, a development that historically has preceded economic cycle inflections (though the lag can be 6-18 months). The return to positive slope is a double-edged signal: it can mean markets are pricing in economic recovery and normalization, OR it can signal the long end selling off faster than the short end as inflation/fiscal concerns re-emerge. At 4.58% on the 10-year, mortgage rates and corporate borrowing costs remain elevated enough to act as a macro headwind. The VIX term structure being in contango (near-term vol cheaper than deferred) suggests the market is not pricing in imminent catastrophe — but the 8.28% VIX spike on a flat tape warrants watching. If 10Y yields break back above 4.65-4.70%, expect renewed pressure on equity multiples.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The Dollar Index at 108 (-0.12%) is retreating marginally from elevated levels, providing a micro tailwind to commodities and international assets. EUR/USD at 1.04 remains historically depressed, reflecting persistent European growth concerns and ECB dovishness vs. Fed patience. USD/JPY at 157.75 is deep in intervention-risk territory for the Bank of Japan — any BoJ hawkish surprise could trigger rapid yen strengthening and a global risk-off unwind. Oil (WTI +1.41% to $70.60) is bouncing modestly — constructive for Energy in isolation, but XLE still closed -0.08%, suggesting the energy complex isn't buying the oil rally conviction. Gold (-0.82% to $2,617) is selling off alongside the slight dollar softness, which is unusual — gold typically benefits from dollar weakness. This divergence may reflect profit-taking or repositioning into year-end. Bitcoin -1.7% while Ethereum is essentially flat (-0.07%) suggests crypto rotation rather than wholesale risk-off within digital assets. International equity outperformance (Nikkei +1.8%, DAX +0.68%) vs. flat U.S. markets is a notable divergence — foreign markets may be catching up after recent underperformance, or U.S. exceptionalism premium is beginning to compress.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors to Monitor",
+          "content": "1) VIX SPIKE ON FLAT TAPE: An 8.28% VIX move on near-zero S&P movement is a red flag. Someone is buying protection quietly. 2) ZERO BREADTH vs. POSITIVE INDEX: S&P flagged near 52-week low with 0% of stocks above 200 DMA — index-level calm masks severe internal deterioration. 3) USD/JPY at 157.75: BoJ intervention risk is real and would hit global risk assets suddenly and hard. 4) YEAR-END LIQUIDITY: Post-Christmas through New Year's is the lowest liquidity window of the year. Thin tapes can produce outsized moves in either direction on minimal volume — price discovery is unreliable. 5) JANUARY EFFECT POSITIONING: Russell +0.9% today could be early small-cap January Effect pre-positioning, which reverses violently if macro conditions don't support the thesis into mid-January. 6) GOLD/DOLLAR DIVERGENCE: Gold falling despite dollar softness suggests safe-haven demand is not building — could mean real yields are the dominant driver, or gold is simply digesting its 2024 gains.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Small Cap Outperformance Persistence (Russell +0.9% leadership)",
+          "scenarios": [
+            {
+              "condition": "If Russell continues to lead, breadth improves, and VIX fades back below 15 over next 1-2 sessions",
+              "implication": "January Effect pre-positioning is real; genuine risk appetite rotation from mega-cap growth to small/mid caps underway. Could signal a broader market recovery attempt into early 2025.",
+              "trade": "IWM long on pullback toward $218-220 support with defined risk — BUT regime conviction penalty applies; wait for minimum 78 conviction score before sizing. Scale target distances to 0.7x normal. Keep size at 50% of normal allocation."
+            },
+            {
+              "condition": "If Russell rally fades and reverts, failing to hold gains in subsequent sessions",
+              "implication": "Today's small-cap move was thin-volume short-covering or window dressing with no real demand. Bearish reversal signal. Internals (0% above 200 DMA) dominate.",
+              "trade": "Avoid new longs in small caps. Watch for IWM rejection at $222-224 resistance as potential short setup — again, only if conviction exceeds 78 threshold after regime penalties."
+            }
+          ]
+        },
+        {
+          "event": "10-Year Yield Trajectory at 4.58%",
+          "scenarios": [
+            {
+              "condition": "If 10Y yields continue to compress toward 4.40-4.45% on softer macro data or flight-to-safety",
+              "implication": "Rate-sensitive sectors (XLRE, XLU, XLF) would get a tailwind. Growth stocks would re-rate higher. Dollar likely weakens, supporting commodities and international equities.",
+              "trade": "TLT long on yield compression, or XLRE/XLU pairs if yields break below 4.50% convincingly. Regime penalty still applies — wait for confirmation, don't anticipate."
+            },
+            {
+              "condition": "If 10Y yields reverse and climb back above 4.65-4.70% on strong data or fiscal concerns",
+              "implication": "Equity multiple compression resumes, particularly in high-PE tech names and rate-sensitive sectors. Dollar strengthens, gold faces more pressure, EM assets hit.",
+              "trade": "Defensive posture: reduce duration exposure, avoid XLRE and XLU. TBT (inverse bond ETF) or short TLT considered only with high conviction. Energy (XLE) may hold relatively better in a rising-rate/stronger-dollar reflationary scenario."
+            }
+          ]
+        },
+        {
+          "event": "VIX Spike Continuation vs. Mean Reversion",
+          "scenarios": [
+            {
+              "condition": "If VIX continues expanding toward 18-20 despite muted index moves",
+              "implication": "Hidden stress building in the system — smart money buying protection ahead of January risks (Fed commentary, jobs data, earnings season). Could precede a sharp index move lower once liquidity returns post-New Year.",
+              "trade": "Do NOT sell volatility into this environment. Avoid naked short options strategies. If holding equity longs, consider buying cheap January put spreads as portfolio insurance while vol is still relatively affordable at 15.95."
+            },
+            {
+              "condition": "If VIX fades back toward 14-15 as markets stabilize and thin-volume calm returns",
+              "implication": "Today's VIX spike was a holiday-liquidity artifact with no follow-through. Risk appetite at 51/100 is adequate to support a grind higher. Contango term structure reasserts itself.",
+              "trade": "Short-dated covered calls on existing equity positions to collect premium in a range-bound environment — consistent with regime classification. No new directional bets warranted until breadth improves meaningfully above 0% of stocks over 200 DMA."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.1,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.1,
+    "timingUrgency": 0.15
+  }
+}

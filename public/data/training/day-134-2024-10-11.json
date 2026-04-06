@@ -1,0 +1,239 @@
+{
+  "trialId": 134,
+  "date": "2024-10-11",
+  "dateDisplay": "Friday, October 11, 2024",
+  "generatedAt": "2026-04-06T11:24:12.500Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.61,
+      "nasdaqFuturesChange": 0.33,
+      "dowFuturesChange": 0.97,
+      "russellFuturesChange": 2.1,
+      "vixFuturesChange": -2.25,
+      "vix": 20.46,
+      "vixChange": -2.25,
+      "vixTermStructure": "flat",
+      "vix9d": 0,
+      "vix3m": 20.77,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.07,
+      "tenYearYieldChange": -0.56,
+      "twoYearYield": 4.07,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.38,
+      "threeMonthYield": 4.51,
+      "twoTenSpread": 0,
+      "threeMoTenYrSpread": -0.44,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 102.89,
+      "dollarIndexChange": -0.1,
+      "eurUsd": 1.09,
+      "eurUsdChange": -0.09,
+      "usdJpy": 148.7,
+      "usdJpyChange": -0.31,
+      "usdCny": 7.08,
+      "usdCnyChange": 0,
+      "oilWTI": 75.56,
+      "oilChange": -0.38,
+      "brentOil": 79.04,
+      "brentOilChange": -0.45,
+      "natGasChange": -1.61,
+      "goldPrice": 2657.6,
+      "goldChange": 1.41,
+      "silverChange": 1.66,
+      "copperChange": 1.52,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.57,
+      "daxChange": 0.85,
+      "ftseChange": 0.19,
+      "shanghaiChange": -2.55,
+      "hangSengChange": 2.98,
+      "kospiChange": -0.09,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 102.15,
+      "spreadChange": -0.26,
+      "igSpread": -21.62,
+      "igSpreadChange": 0.02,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.04,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.17,
+      "xlfChange": 1.93,
+      "xleChange": 0.62,
+      "xlvChange": 0.73,
+      "xlpChange": 0.55,
+      "xluChange": 0.88,
+      "xlreChange": 1.02,
+      "xliChange": 1.79,
+      "xlbChange": 0.65,
+      "xlcChange": 0.69,
+      "xlyChange": -0.43,
+      "smhChange": 0.8,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 1.2,
+      "ethereumChange": 1.64,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.11,
+      "sp20DayReturn": 3.36,
+      "nasdaqVsRussell5d": 0.15,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 49,
+      "directionalBias": "19",
+      "volatilityRegime": "normal",
+      "stressIndex": 23,
+      "riskAppetiteIndex": 57,
+      "sectorTilts": {
+        "materials": "overweight",
+        "industrials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets are flashing a classic rotation signal heading into Friday — Russell 2000 is leading large-caps by 163bps, financials and industrials are topping the sector leaderboard, and copper is up 1.5% while VIX has retreated to 20.46. The regime classifier has this pegged as ROTATION with moderate confidence (49%), meaning capital is shifting rather than broadly advancing — tech is lagging badly at +0.17% while cyclicals, value, and rate-sensitives capture the flows. With 10Y yields dipping to 4.07% and a softening dollar, the setup favors small-caps, materials, and financials over mega-cap growth, but extreme fear readings (F&G: 0) and weak internal breadth demand tactical humility.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🧭 Regime & Market Posture",
+          "content": "The regime engine has classified today as ROTATION at 49% confidence — a deliberately cautious read that deserves respect. Stress sits at just 23/100 and risk appetite is a constructive 57/100, but the Fear & Greed Index reading of 0 (extreme fear) is a significant internal contradiction worth flagging. This divergence — fear sentiment at rock bottom while markets grind higher — historically appears during early-stage recoveries or relief rallies where institutional money rotates before retail confidence returns. Futures are up a modest +0.47%, the S&P is near 52-week lows per regime data, and breadth is poor (0% above 200 DMA), which tells us this is not a broad momentum day. It's a day where the wrong sector exposure will cost you. Both long and short trades carry a -3 conviction penalty under current regime rules, which is the regime engine telling you: be selective, size down, and don't force it.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "The sector tape is the clearest signal in today's data. Financials (XLF +1.93%) and Industrials (XLI +1.79%) are the standout leaders — both are classic cyclical/value plays that benefit from rate normalization and economic expansion narratives. Real Estate (XLRE +1.02%) and Utilities (XLU +0.88%) are also outperforming, which is notable: rate-sensitives rallying alongside cyclicals suggests the market is pricing in a Goldilocks scenario where growth holds but yields soften. The critical data point is Tech (XLK +0.17%) — essentially flat while everything else runs. Semis (SMH +0.80%) are doing better within the tech complex, suggesting hardware/infrastructure demand is intact while software/mega-cap is being faded. Consumer Discretionary (XLY -0.43%) is the sole loser, a warning shot on the consumer health narrative. The sector dispersion of 2.4pp on flat futures confirms this is textbook rotation — money is moving, not being created. The regime overweights materials and industrials as preferred tilts, and the data validates that call.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10-year yield at 4.07% — down 5.6bps on the session — is doing meaningful work here. The modest yield retreat is enough to unlock rate-sensitive sectors (XLRE, XLU) without triggering a 'growth scare' selloff. The 2-10 spread is essentially flat at 0bps, indicating the curve is right at inversion/disinversion threshold. The 3M-10Y spread remains inverted at -44bps, maintaining a recession signal on the longer-horizon indicator. Historically, the period between 2-10 disinversion and 3M-10Y disinversion is a critical transition zone — the curve is normalizing but not yet clean. This ambiguity is a key reason stress reads only 23 (not alarming) while the fear gauge reads extreme. Rates falling modestly with a softening dollar is the most benign macro backdrop possible for a rotation day — it creates the conditions for financials to run (steeper curve benefits NIM) while also supporting real assets and international equities.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The dollar (DXY 102.89, -0.10%) is softening at the margin, and that's doing real work across asset classes. EUR/USD at 1.09 is holding strength, DAX is up 0.85%, and the dollar weakness is providing a tailwind to commodity prices broadly. Copper +1.5% is the most important single data point in today's macro picture — copper is the industrial economy's real-time sentiment indicator, and a 1.5% move is material. Combined with the regime's flagging of China recovery trade (Hang Seng +2.98% is notable, even as Shanghai dropped -2.55% — divergence within Chinese markets worth watching), copper's strength supports the materials and industrials overweight. Gold +1.41% to $2,657.60 is running alongside copper, which muddies the signal slightly — gold typically rallies on fear/dollar weakness, while copper rallies on growth. Both moving together today suggests the dollar weakness narrative is the primary driver. WTI crude at $75.56 (-0.38%) is the outlier — energy is lagging despite the commodity complex strength, possibly reflecting demand concerns or supply normalization. Bitcoin +1.2% and Ethereum +1.64% add a risk-on flavor to the crypto sleeve without being a screaming signal.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors & Internal Contradictions",
+          "content": "Several tensions in today's data demand attention before putting capital to work. First, the breadth problem: 0% of S&P components above their 200 DMA is not a healthy market — it's a market where index-level gains are masking significant underlying damage. Second, the Fear & Greed reading of 0 (extreme fear) while futures are positive and VIX is falling creates a sentiment paradox — either the fear gauge is a contrarian buy signal or it's reflecting something the price action hasn't yet processed. Third, the Shanghai -2.55% vs. Hang Seng +2.98% divergence in China is unusual and could reflect policy/liquidity dynamics that whipsaw quickly. Fourth, the rotation confidence is only 49% — just barely above a coin flip, meaning the regime engine is not high-conviction. Small-cap leadership (Russell +2.1%) is constructive but needs to see follow-through to confirm a genuine risk-on rotation rather than a one-day mean reversion. The S&P near 52-week lows context is the most important structural risk — any negative catalyst could accelerate selling into technically damaged levels.",
+          "importance": "high"
+        },
+        {
+          "title": "🌍 International Markets & Cross-Asset Context",
+          "content": "The international picture is broadly constructive but uneven. European markets (DAX +0.85%, FTSE +0.19%) are participating in the risk-on mood, with Germany's outperformance suggesting industrial and manufacturing sentiment is improving — consistent with copper's strength. Japan's Nikkei +0.57% is steady with USD/JPY at 148.7, a level that remains historically elevated and keeps Japanese exporters competitive. The Hang Seng's 2.98% surge is the headline number but warrants caution given Shanghai's simultaneous -2.55% decline — this likely reflects Hong Kong-listed Chinese ADRs and offshore sentiment rather than a clean China growth signal. The regime flags a 'China recovery trade' tilt in materials, which has some support from Hong Kong's move, but the A-share weakness undercuts the thesis and demands a tighter stop on any China-linked materials plays.",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Small-Cap/Cyclical Rotation Extends Through the Session",
+          "scenarios": [
+            {
+              "condition": "If Russell 2000 maintains its leadership into the first hour and XLF holds above yesterday's close",
+              "implication": "Rotation is confirmed as institutional, not just pre-market noise. Financials and small-caps become the dominant intraday trend. The S&P near 52-week lows becomes a launchpad narrative rather than a resistance problem.",
+              "trade": "Consider long XLF or IWM with targets scaled 0.9x from normal (regime rule). Tight stops below pre-market lows. Avoid over-sizing given -3 conviction penalty on longs. XLI as a secondary expression of the same theme with less rate sensitivity."
+            },
+            {
+              "condition": "If Russell 2000 fades in the first 30 minutes and tech/mega-cap begins to lead",
+              "implication": "The pre-market rotation signal was a head fake. Growth resumes leadership, and today becomes a normal continuation day rather than a sector rotation. Extreme fear reading may start to normalize with retail buying QQQ-type products.",
+              "trade": "Step aside from cyclical longs. Reassess at 10:30 AM for clearer trend. Any pullback in SMH toward session lows could be a buy if the broader tape is holding green."
+            }
+          ]
+        },
+        {
+          "event": "Gold & Copper Divergence — Safe Haven vs. Growth Signal Clarification",
+          "scenarios": [
+            {
+              "condition": "If copper holds +1.5% gains and gold begins to give back its advance through the session",
+              "implication": "The commodity complex is repricing toward growth/industrial demand rather than fear. Dollar weakness is amplifying cyclical commodity gains. This validates the materials overweight and supports the China recovery trade thesis despite Shanghai's weakness.",
+              "trade": "Long XLB (Materials ETF) as the clearest regime-aligned expression. FCX (Freeport-McMoRan) as a copper-leverage play. Scale targets 0.9x per regime. Watch China-exposed miners for volatility given Shanghai/Hang Seng divergence."
+            },
+            {
+              "condition": "If gold continues to surge (+2%+ intraday) while copper fades",
+              "implication": "The market is in a 'fear bid' mode despite the surface-level calm. The F&G reading of 0 is the correct signal. Risk assets are vulnerable to a sharp reversal, and the S&P near 52-week lows becomes a magnet rather than a support.",
+              "trade": "Reduce cyclical exposure. GLD as a defensive long. Consider hedging with VIX calls given VIX at 20.46 — cheap insurance if fear accelerates. Do NOT short aggressively given the -3 conviction penalty on shorts."
+            }
+          ]
+        },
+        {
+          "event": "Rate & Yield Curve Dynamics Drive Financials",
+          "scenarios": [
+            {
+              "condition": "If the 10-year yield stabilizes or ticks higher from 4.07% and the 2-10 spread turns meaningfully positive intraday",
+              "implication": "Net interest margin narrative for banks strengthens. XLF's +1.93% gain has fundamental backing beyond just the rotation trade. Regional banks (KRE) could outperform as the yield curve steepening story gains traction. This would be the most durable version of today's rotation.",
+              "trade": "Add to or initiate XLF. Look at KRE for higher-beta exposure to steepening curve. JPMorgan (JPM) as a large-cap anchor with earnings catalyst potential. Targets 0.9x scaled per regime rules, stops below 4.00% on 10Y yield as a risk trigger."
+            },
+            {
+              "condition": "If yields continue falling sharply (10Y toward 3.95%) on growth scare or flight-to-safety buying",
+              "implication": "The financial sector rally loses its fundamental support and becomes purely a rotation/technical trade. XLRE and XLU continue to benefit (rate-sensitive defensives), but XLF faces headwinds. The market narrative shifts from 'soft landing steepener' to 'recession hedge.'",
+              "trade": "Rotate out of XLF into XLRE or XLU if yields break below 4.00%. TLT as a rate play. Avoid KRE and regional bank names. The overall market posture becomes more defensive, consistent with the F&G extreme fear reading."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.1,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.1,
+    "timingUrgency": 0.15
+  }
+}

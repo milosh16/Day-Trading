@@ -1,0 +1,218 @@
+{
+  "trialId": 131,
+  "date": "2024-08-27",
+  "dateDisplay": "Tuesday, August 27, 2024",
+  "generatedAt": "2026-04-06T11:00:10.081Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.16,
+      "nasdaqFuturesChange": 0.16,
+      "dowFuturesChange": 0.02,
+      "russellFuturesChange": -0.67,
+      "vixFuturesChange": 10.89,
+      "vix": 17.11,
+      "vixChange": 10.89,
+      "vixTermStructure": "flat",
+      "vix9d": 0,
+      "vix3m": 17.73,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.83,
+      "tenYearYieldChange": 0.39,
+      "twoYearYield": 4.05,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.13,
+      "threeMonthYield": 4.97,
+      "twoTenSpread": -0.22,
+      "threeMoTenYrSpread": -1.14,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 101.09,
+      "dollarIndexChange": 0.54,
+      "eurUsd": 1.12,
+      "eurUsdChange": 0.12,
+      "usdJpy": 143.98,
+      "usdJpyChange": -0.37,
+      "usdCny": 7.12,
+      "usdCnyChange": 0.07,
+      "oilWTI": 74.52,
+      "oilChange": -1.34,
+      "brentOil": 78.65,
+      "brentOilChange": -1.13,
+      "natGasChange": 1.37,
+      "goldPrice": 2501,
+      "goldChange": -0.6,
+      "silverChange": -2.59,
+      "copperChange": -2.02,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.22,
+      "daxChange": 0.54,
+      "ftseChange": -0.02,
+      "shanghaiChange": -0.4,
+      "hangSengChange": -1.02,
+      "kospiChange": 0.02,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 103.55000000000001,
+      "spreadChange": -0.06,
+      "igSpread": -23.88,
+      "igSpreadChange": 0.08,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.99,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.61,
+      "xlfChange": 0.52,
+      "xleChange": -0.93,
+      "xlvChange": 0.15,
+      "xlpChange": 0.24,
+      "xluChange": -0.79,
+      "xlreChange": 0.25,
+      "xliChange": 0.06,
+      "xlbChange": 0.01,
+      "xlcChange": -0.23,
+      "xlyChange": -0.26,
+      "smhChange": 1.01,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.8,
+      "ethereumChange": 2.83,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 0.51,
+      "sp20DayReturn": 3.48,
+      "nasdaqVsRussell5d": -3.19,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 45,
+      "directionalBias": "-15",
+      "volatilityRegime": "normal",
+      "stressIndex": 24,
+      "riskAppetiteIndex": 45,
+      "sectorTilts": {
+        "materials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets are sending conflicting signals on August 27: large-caps are barely holding gains (+0.16%) while small-caps are rolling over (-0.67%), copper is sliding -2.0%, and the VIX is spiking +10.89% to 17.11 — a combination that suggests rotation rather than broad risk-on expansion. The regime classification of ROTATION at only 45% confidence reflects genuine ambiguity: semis and tech are leading, but the dollar is strengthening, commodities are weakening, and Fear & Greed sits at extreme fear with S&P near 52-week lows, creating a fragile, bifurcated tape.",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "🧭 Overall Market Posture & Regime",
+          "content": "The current regime is classified as ROTATION with 45% confidence — the lowest conviction threshold, signaling genuine regime ambiguity. Both long and short trades carry a -3 conviction penalty, meaning the market is not rewarding directional bets cleanly. The directional bias is -15 (mild negative lean), and risk appetite scores only 45/100. Critically, the S&P is described as near a 52-week low while the 20-day return is +3.48% — this tension between short-term recovery and structural weakness is the defining feature of today's session. Breadth is alarming: 0% of stocks above their 200 DMA signals that this is a narrow, leadership-driven tape rather than a healthy broad advance. The VIX spike of +10.89% to 17.11 on a flat S&P day is a yellow flag — volatility is being bid independently of price, often a precursor to a more decisive move. Stress at 24/100 is manageable but rising.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation & Relative Strength",
+          "content": "The sector picture tells a nuanced rotation story with a defensive undertone masking tech resilience. Winners: Semis (SMH +1.01%) and Tech (XLK +0.61%) are leading — this is growth-at-any-price momentum, not cyclical expansion. Financials (XLF +0.52%) are positive, consistent with the 10Y yield nudging up. Defensives like Staples (+0.24%) and Healthcare (+0.15%) are participating modestly. Losers tell the more important story: Utilities (XLU -0.79%) and Energy (XLE -0.93%) are the worst performers. Utilities selling off alongside rising VIX is atypical — usually safety trades attract capital during vol spikes, suggesting this vol bid is short-covering/hedging rather than true risk-off rotation. Energy weakness aligns with oil at $74.52 (-1.34%) and copper -2.0%, painting a coherent demand-destruction narrative for commodities. Discretionary (XLY -0.26%) lagging while Staples hold is a classic risk-off rotation signal within consumer sectors. The Russell underperforming by 0.83pp versus large-cap confirms that small-cap domestic cyclicals are being avoided — consistent with growth concerns flagged by copper and dollar strength. Key takeaway: This is a narrow tech/semi-driven tape with commodity and cyclical deterioration underneath.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The yield curve remains deeply inverted and sends a persistent recession warning. The 2-10 spread is -0.22, and the 3M-10Y spread is a severe -1.14 — historically one of the most reliable leading recession indicators when sustained at these levels. The 10Y yield ticked up modestly to 3.83% (+0.39%), and the term structure is flat — no meaningful steepening catalyst is visible today. The modest 10Y rise alongside dollar strength (+0.54%) suggests this is not a flight-to-quality bond rally; rather, it's a mild rate normalization move. Financials benefiting from a slightly higher 10Y is consistent but limited without curve steepening. The -1.14 3M-10Y spread remains the most important number on this sheet: it argues for caution on cyclicals and favors quality/duration in fixed income. Until this spread narrows materially, the macro backdrop does not support aggressive risk-on positioning. Watch for any Fed commentary this week that could shift rate cut expectations and influence this spread.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "The dollar index at 101.09 (+0.54%) is strengthening, and this is the connective tissue linking several bearish signals. Dollar up = commodity pressure: oil -1.34%, gold -0.60%, copper -2.0%. This trifecta of commodity weakness under a rising dollar is not noise — it reflects slowing global growth demand, particularly from China (Shanghai -0.4%, Hang Seng -1.02%). EUR/USD at 1.12 and USD/JPY at 143.98 reflect dollar dominance across majors. The JPY at 143.98 is worth watching: yen weakness (dollar strength vs JPY) historically correlates with carry trade stability, but any sharp JPY strengthening could trigger carry unwind risk similar to early August volatility. Gold at $2,501 (-0.60%) is slightly soft but remains at historically elevated levels — this is a consolidation, not a breakdown. Bitcoin -0.8% while Ethereum +2.83% shows crypto divergence that may reflect Ethereum-specific catalysts (ETF flows, staking narrative) rather than broad crypto risk appetite. International picture is mostly risk-off: Hang Seng -1.02% and Shanghai -0.4% confirm China demand concerns that copper has already priced.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors & Red Flags",
+          "content": "Five compounding risk factors demand attention today: (1) VIX +10.89% on a flat tape — volatility expanding without a price catalyst is structurally concerning and often precedes a directional resolution. (2) Extreme Fear on Fear & Greed (score: 0) — while contrarian in isolation, it combines with weak breadth (0% above 200 DMA) to suggest distribution, not capitulation. True capitulation bottoms typically see breadth collapse followed by snap-back breadth thrusts, which we are not seeing. (3) Copper -2.0% is Dr. Copper's warning: industrial demand is weakening globally, with China the primary suspect. The regime has already flagged this as a formal underweight signal on Materials. (4) Russell lagging by 0.83pp reflects domestic cyclical avoidance — small-caps are a leading indicator of domestic economic health and they are underperforming consistently. (5) Nasdaq vs Russell 5-day: Value is leading by -3.19pp, meaning growth is being abandoned in favor of value over the weekly timeframe even as semis led yesterday — this intraday vs. weekly divergence creates whipsaw risk for momentum traders. Combined risk assessment: The market is at an inflection point with compressed conviction. The -3 penalty on both long and short trades is appropriate — forced positioning in either direction into this ambiguity is a low-quality trade.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "VIX Expansion Resolves to the Downside — Broad Risk-Off Leg",
+          "scenarios": [
+            {
+              "condition": "If VIX breaks above 19-20, Russell continues to lag, and copper extends below recent lows while dollar strength accelerates above 101.50",
+              "implication": "The rotation regime transitions to a risk-off/bearish regime. The narrow tech leadership fails to hold as institutional hedging overwhelms momentum. Cyclicals, energy, and small-caps lead a broad decline. S&P tests recent lows with conviction.",
+              "trade": "Consider reducing gross exposure immediately. Short XLY (discretionary) or IWM (Russell) on any intraday bounce with tight stops above recent highs. Underweight Materials (XLB) confirmed by regime. Long TLT as flight-to-quality if 10Y yield rolls back below 3.75%. Note: -3 conviction penalty applies — size at 50-60% of normal position. Target scaling at 0.9x regime rule."
+            }
+          ]
+        },
+        {
+          "event": "Semis/Tech Leadership Broadens — Rotation Into Risk-On",
+          "scenarios": [
+            {
+              "condition": "If SMH sustains gains above +1% early session, breadth improves with advancing issues outpacing decliners 2:1, and VIX fades back below 16 by midday",
+              "implication": "The late-August recovery narrative takes hold. Nvidia earnings anticipation (reporting this week) acts as a sentiment catalyst. Institutional money rotates from defensives back into growth/tech. Dollar may fade, providing relief to commodities. Fear & Greed begins to recover from extreme fear, which itself is a mean-reversion setup.",
+              "trade": "Consider long SMH or QQQ on a confirmed morning hold above prior day close. XLK is the cleaner risk-adjusted expression. Avoid leveraged small-cap longs until Russell shows independent strength. Target 0.9x normal sizing per regime rules. Stop below yesterday's low on any position. Watch for Nvidia pre-earnings positioning as the primary catalyst — if SMH stalls, exit quickly."
+            }
+          ]
+        },
+        {
+          "event": "JPY Volatility Triggers Carry Unwind — Systemic Risk Episode",
+          "scenarios": [
+            {
+              "condition": "If USD/JPY breaks below 142 (yen strengthening sharply), coinciding with continued Hang Seng/Shanghai weakness and a gold reversal higher above $2,520",
+              "implication": "Carry trade unwind risk re-emerges, similar to the early August episode. This would pressure equities broadly, particularly high-beta tech and semis that benefited from carry-funded positioning. Gold and JGBs would rally as safe havens. This is a tail risk, but the setup (JPY near 144, China weakness, elevated VIX) has structural similarities to the early August conditions.",
+              "trade": "This is a hedge/insurance scenario, not a primary trade. Consider small long GLD as portfolio insurance — gold at $2,501 is consolidating near all-time highs and has favorable risk/reward if carry risk materializes. Alternatively, long VIX calls (via UVXY small size) as a cheap tail hedge. Do not short equities aggressively into this thesis without JPY confirmation — false signals on carry unwind are frequent. Monitor USD/JPY at 143 as the tripwire level."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.1,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.1,
+    "timingUrgency": 0.15
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "trialId": 132,
+  "date": "2026-03-09",
+  "dateDisplay": "Monday, March 9, 2026",
+  "generatedAt": "2026-04-06T11:08:30.734Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.83,
+      "nasdaqFuturesChange": 1.38,
+      "dowFuturesChange": 0.5,
+      "russellFuturesChange": 1.12,
+      "vixFuturesChange": -2.24,
+      "vix": 24.93,
+      "vixChange": -2.24,
+      "vixTermStructure": "flat",
+      "vix9d": 0,
+      "vix3m": 25.34,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.14,
+      "tenYearYieldChange": 0.07,
+      "twoYearYield": 3.7,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.74,
+      "threeMonthYield": 3.59,
+      "twoTenSpread": 0.44,
+      "threeMoTenYrSpread": 0.55,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.83,
+      "dollarIndexChange": -0.35,
+      "eurUsd": 1.16,
+      "eurUsdChange": 0.82,
+      "usdJpy": 157.85,
+      "usdJpyChange": -0.37,
+      "usdCny": 6.91,
+      "usdCnyChange": 0.21,
+      "oilWTI": 83.45,
+      "oilChange": -11.94,
+      "brentOil": 87.8,
+      "brentOilChange": -11.28,
+      "natGasChange": -3.21,
+      "goldPrice": 5229.7,
+      "goldChange": 2.71,
+      "silverChange": 6.01,
+      "copperChange": 1.78,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 2.88,
+      "daxChange": 2.39,
+      "ftseChange": 1.59,
+      "shanghaiChange": 0.65,
+      "hangSengChange": 2.17,
+      "kospiChange": 5.35,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 99.14999999999999,
+      "spreadChange": -0.6,
+      "igSpread": -21.64,
+      "igSpreadChange": -0.6,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.95,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1.8,
+      "xlfChange": -0.47,
+      "xleChange": -0.44,
+      "xlvChange": 1.02,
+      "xlpChange": 0.22,
+      "xluChange": 0.24,
+      "xlreChange": 0.21,
+      "xliChange": 0.59,
+      "xlbChange": 0.26,
+      "xlcChange": 0.09,
+      "xlyChange": 0.13,
+      "smhChange": 3.63,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 2.23,
+      "ethereumChange": 2.22,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": -1.24,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": 3.62,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-on",
+      "confidence": 68,
+      "directionalBias": "38",
+      "volatilityRegime": "elevated",
+      "stressIndex": 31,
+      "riskAppetiteIndex": 68,
+      "sectorTilts": {
+        "tech": "overweight",
+        "consumer-discretionary": "overweight",
+        "utilities": "underweight",
+        "semiconductors": "overweight",
+        "airlines": "overweight",
+        "materials": "overweight",
+        "industrials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets are staging a technically significant risk-on bounce with futures +1.10%, semis leading (+3.63%), and international markets broadly higher (+2.5% avg), yet the backdrop remains deeply stressed — S&P sits near 52-week lows, breadth is catastrophic (0% above 200 DMA), and Fear & Greed reads at an extreme zero. The contradiction is the story: this looks like a classic capitulation-relief rally, not a durable trend reversal. Gold surging +2.71% to $5,229 simultaneously with copper +1.8% and oil cratering -11.94% creates a rare macro cocktail that demands careful interpretation — commodity deflation meeting monetary fear, cyclical optimism meeting safe-haven panic.",
+      "marketCondition": "volatile",
+      "sections": [
+        {
+          "title": "⚡ REGIME READ: Risk-On With Caveats — Capitulation Bounce, Not All-Clear",
+          "content": "The system classifies today as RISK-ON at 68% confidence, and the surface data supports it: futures green, dollar weak, international markets ripping, semis leading hard. But the internal contradictions are too significant to ignore. Zero percent of S&P constituents above their 200 DMA is not a setup you see in healthy bull markets — it's a breadth reading associated with market crashes and panic bottoms. Fear & Greed at 0 (extreme fear) confirms capitulation sentiment. The directional bias of +38 and stress at 31/100 suggest the market is bouncing hard off an oversold extreme, which historically produces violent but sometimes short-lived rallies. Regime conviction penalty on shorts (-8) warns against fading this move. Respect the tape: trade with the bounce, but keep position sizing disciplined and define your exits because the structural damage beneath this rally is real.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 SECTOR ROTATION: Semis Screaming, Energy Bleeding — Growth Over Value Today",
+          "content": "The sector tape is unambiguous in its message: semiconductor leadership is the dominant signal. SMH +3.63% is not a rounding error — that's a sector declaring itself the risk-on vanguard. XLK +1.80% confirms tech broadly participating. The regime tilt toward semis is reinforced by Korea leading internationally (fab demand read-through) and the AI/tech narrative remaining intact despite broader market stress. Critically, the 5-day Nasdaq vs. Russell spread shows growth leading by +3.62% — a decisive growth-over-value rotation. Energy (XLE -0.44%) is the clear loser, battered by WTI's brutal -11.94% collapse. Financials (XLF -0.47%) also in the red — this is notable. Banks underperforming on a risk-on day suggests credit concerns or net interest margin compression fears aren't going away. Defensives (utilities, staples, XLRE) are all green but minimal — they're not leading, which is consistent with a risk-on posture. Industrials and materials participating modestly, in line with the copper/China recovery read. Healthcare's +1.02% beat is a quiet outlier worth watching — defensive growth holding up in a volatile tape is a quality signal.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 YIELD CURVE & RATES: Steepening Incrementally, But Not Yet a Clean Signal",
+          "content": "The 10-year yield at 4.14% (+7 bps) is rising on a risk-on day — this is the correct behavior in a genuine growth-optimism scenario (bonds selling off as equities attract capital). The 2-10 spread at +44 bps and 3M-10Y at +55 bps confirm the curve is positively sloped, a meaningful shift from the prolonged inversion we saw through much of 2023-2024. A positive curve is structurally bullish for banks and cyclicals over a multi-month horizon, yet XLF is down today — suggesting the market isn't yet pricing duration risk or banking profitability improvement, possibly due to credit quality concerns in a stressed macro environment. The 7 bps move higher in the 10Y on a single session warrants monitoring: if yields continue rising rapidly alongside equities, the equity rally has a ceiling (risk-free rate competition). For now, the move is orderly and consistent with the risk-on narrative. VIX at 24.93 with a flat term structure (no panic backwardation premium) and declining -2.24% is constructive — fear is receding but not gone. A VIX still above 20 means the options market is pricing continued turbulence ahead.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 CURRENCY & COMMODITY FLOWS: Dollar Weakness Fueling the Move — Watch the Gold Signal",
+          "content": "Dollar weakness (-0.35%, DXY 98.83) is the lubricant for today's risk-on move. EUR/USD at 1.16 is notably strong — a weaker dollar mechanically boosts international equity returns for USD-based investors, partially explaining the enthusiasm around Nikkei (+2.88%), DAX (+2.39%), and Hang Seng (+2.17%). USD/JPY at 157.85 is interesting: despite global risk-on, the yen hasn't strengthened dramatically, suggesting BOJ policy expectations remain in flux. The commodity picture is genuinely split. Oil -11.94% in a single session is an extraordinary collapse — this is not routine. At $83.45 WTI, this move signals either a demand shock fear (global recession narrative), a supply surge (OPEC+ decision?), or both. This is simultaneously a headwind for energy stocks and an inflation relief valve — lower energy costs are bullish for consumer discretionary and airlines (regime correctly tilts overweight). Gold at $5,229 (+2.71%) tells a different story entirely: simultaneous with a risk-on bounce, gold surging to these levels screams monetary debasement concern, geopolitical hedging, and loss of confidence in fiat. Copper +1.8% is the genuine cyclical/industrial demand signal — aligned with China recovery trade and materials overweight. The gold-copper duo rising together is unusual and suggests institutional money is hedging multiple scenarios simultaneously.",
+          "importance": "high"
+        },
+        {
+          "title": "⚠️ RISK FACTORS: The Bear Case Lives Beneath the Bounce",
+          "content": "Do not mistake a violent oversold bounce for a new bull market. The structural risks are substantial: (1) Breadth catastrophe — 0% above 200 DMA means the average stock is in a downtrend. Single-session rallies don't repair this damage. (2) Oil collapse — while beneficial for inflation, a -11.94% single-day WTI crash may be signaling genuine global demand deterioration that equity markets haven't priced. (3) Gold at $5,229 — at these levels, gold is pricing something severe in monetary or geopolitical terms that equities are ignoring. The divergence between gold and equities is a tension that resolves one way or another. (4) Financials underperforming on a risk-on day — credit stress is a latent risk that can materialize quickly. (5) S&P near 52-week lows on a 5-day basis (-1.24%) — one good day doesn't change the trajectory. (6) VIX still elevated at 24.93 with flat term structure — the market isn't convinced the storm has passed. The bear case scenario: today's bounce is a dead-cat relief rally that fades into the close as sellers reemerge near technical resistance levels. Hedge accordingly.",
+          "importance": "high"
+        },
+        {
+          "title": "🌏 INTERNATIONAL MARKETS: Coordinated Global Bid — Read the Korea Signal",
+          "content": "The global tape is strongly supportive: Nikkei +2.88%, DAX +2.39%, Hang Seng +2.17%, FTSE +1.59%, Shanghai +0.65%. A coordinated global rally of this magnitude on dollar weakness is a powerful risk-on confirmation — this is not a US-isolated bounce. The DAX leadership is notable: European industrials and auto sectors (heavily exposed to China demand) are leading, consistent with the China recovery trade. Korea's leadership (referenced in the regime semiconductor tilt) is the most actionable signal for US investors — Korea's KOSPI is a real-time barometer of global semiconductor and electronics demand. If Korean semis are leading, TSMC/Samsung fab demand is real, which directly supports NVDA, AMD, AMAT, LRCX, and the broader SMH complex. Shanghai's +0.65% is the laggard — Chinese domestic markets are participating but less enthusiastically, which tempers the pure China recovery enthusiasm. Still, Hang Seng +2.17% captures the offshore China optimism more cleanly.",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Oversold Capitulation Bounce Continues Intraday — Semi/Tech Leadership Holds",
+          "scenarios": [
+            {
+              "condition": "If SMH holds gains above prior session close and Nasdaq sustains +1%+ through the first hour of trading, with VIX continuing to decline toward 22",
+              "implication": "Institutional buyers are absorbing supply at oversold levels. The bounce has legs intraday and potentially into a multi-day relief rally. Fear & Greed at 0 historically precedes mean-reversion bounces of 3-8% over 5-10 sessions.",
+              "trade": "Overweight SMH (semis), XLK (tech), and select AI/chip names (NVDA, AMD, AVGO). Consider XLY for consumer tailwind from oil collapse. Size up to 70-80% of normal position — regime supports longs with zero conviction penalty. Set stops below today's opening range low. Target initial resistance at 20-day moving average for the S&P."
+            },
+            {
+              "condition": "If the rally fades in the first 90 minutes and Nasdaq reverses below flat with VIX spiking back above 26",
+              "implication": "This is the classic dead-cat pattern — an overnight/futures gap that institutional sellers use as liquidity to reduce exposure. The 0% above 200 DMA breadth disaster reasserts itself as the dominant narrative.",
+              "trade": "Step aside from new longs. Honor stops on existing positions. Short bias carries -8 penalty so avoid aggressive shorts, but reduce exposure to cyclicals. Rotate defensively into gold (GLD), which has its own momentum and fundamental tailwind regardless of equity direction."
+            }
+          ]
+        },
+        {
+          "event": "Oil Collapse Spillover — Does -11.94% WTI Trigger Credit/Financial Contagion?",
+          "scenarios": [
+            {
+              "condition": "If XLF continues to underperform and high-yield credit spreads widen intraday, with energy-sector bonds drawing selling pressure from the WTI collapse",
+              "implication": "The oil crash isn't just sector-specific — energy companies carry significant debt loads, and a rapid price collapse threatens credit quality in the high-yield space. Financials are already signaling stress. This could be the mechanism that turns today's equity bounce into a head-fake.",
+              "trade": "Avoid XLE entirely. Reduce XLF exposure. Watch HYG (high-yield ETF) as a real-time credit stress indicator. If HYG breaks below its 5-day low while equities rally, the divergence is a major red flag. Consider TLT as a flight-to-quality hedge on credit contagion scenario."
+            },
+            {
+              "condition": "If lower oil is cleanly interpreted as an inflation relief catalyst — Treasury yields stabilize or dip, and consumer discretionary/airlines accelerate their gains",
+              "implication": "The market correctly prices oil collapse as a consumer stimulus and Fed flexibility unlock. Lower energy = lower CPI = Fed optionality to cut if needed. This is unambiguously bullish for rate-sensitive consumer sectors.",
+              "trade": "Overweight XLY (consumer discretionary), airlines (JETS ETF), and rate-sensitive growth. The regime already tilts overweight here — add conviction. Consider a pairs trade: long XLY vs. short XLE to capture the energy-to-consumer wealth transfer with hedged directionality."
+            }
+          ]
+        },
+        {
+          "event": "Gold at $5,229 + Risk-On Equities: The Divergence Resolution Trade",
+          "scenarios": [
+            {
+              "condition": "If gold continues to grind higher through the session while equities also hold gains — both rallying simultaneously",
+              "implication": "This is the 'debasement trade' in full force. Institutions are buying hard assets AND risk assets simultaneously — interpreting the macro environment as one of both monetary instability AND eventual liquidity injection (QE expectation, fiscal spending). This historically precedes a period of broad asset inflation.",
+              "trade": "Hold long GLD/gold miners (GDX) alongside tech/semi longs. Add materials exposure (XLB, FCX for copper). Consider a barbell: semis + gold as the core portfolio expression of the AI-driven growth narrative meeting monetary hedge demand. This is an unusually high-conviction dual-engine trade in the current regime."
+            },
+            {
+              "condition": "If gold sells off as equities rally (classic risk-on rotation OUT of safe havens), bringing gold back below $5,100",
+              "implication": "More conventional risk-on behavior. Capital rotating from safe havens back into growth assets is a clean bull signal and validates that today's equity move is more than a bounce — it may mark a genuine short-term bottom.",
+              "trade": "Reduce GLD position, rotate aggressively into the regime-favored sectors: SMH, XLK, XLY, XLI. If gold drops while copper holds, the industrial expansion signal is cleaner and materials plays (FCX, NEM, XLB) become even more attractive. This scenario would upgrade the regime confidence and support larger position sizing."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.1,
+    "volumeLiquidity": 0.08,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.1,
+    "timingUrgency": 0.15
+  }
+}

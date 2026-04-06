@@ -1,14 +1,14 @@
 {
-  "totalTrials": 130,
-  "lastUpdated": "2026-04-06T10:53:27.774Z",
+  "totalTrials": 137,
+  "lastUpdated": "2026-04-06T11:46:45.049Z",
   "bestScore": 100,
   "currentWeights": {
     "catalystClarity": 0.22,
-    "technicalSetup": 0.13,
-    "riskReward": 0.12,
+    "technicalSetup": 0.15,
+    "riskReward": 0.1,
     "volumeLiquidity": 0.08,
-    "marketAlignment": 0.18,
-    "informationEdge": 0.12,
+    "marketAlignment": 0.2,
+    "informationEdge": 0.1,
     "timingUrgency": 0.15
   },
   "trials": [
@@ -1311,6 +1311,76 @@
       "profitFactor": 0,
       "numRecs": 0,
       "hasOpusReview": true
+    },
+    {
+      "trialId": 131,
+      "date": "2024-08-27",
+      "regime": "rotation",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": false
+    },
+    {
+      "trialId": 132,
+      "date": "2026-03-09",
+      "regime": "risk-on",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": false
+    },
+    {
+      "trialId": 133,
+      "date": "2025-09-03",
+      "regime": "range-bound",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 1,
+      "hasOpusReview": false
+    },
+    {
+      "trialId": 134,
+      "date": "2024-10-11",
+      "regime": "rotation",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": false
+    },
+    {
+      "trialId": 135,
+      "date": "2024-12-26",
+      "regime": "range-bound",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": false
+    },
+    {
+      "trialId": 136,
+      "date": "2024-09-03",
+      "regime": "risk-off",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": false
+    },
+    {
+      "trialId": 137,
+      "date": "2026-01-26",
+      "regime": "range-bound",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": false
     }
   ]
 }
