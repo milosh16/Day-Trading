@@ -1,0 +1,360 @@
+{
+  "id": "briefing-2025-04-09-1775509598654",
+  "date": "2025-04-09",
+  "generatedAt": "2026-04-06T21:06:38.624Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG NVDA @ $96.3",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $110",
+          "implication": "+14.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $89",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AAPL @ $172.42",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $198",
+          "implication": "+14.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $162",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $78.21",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $92",
+          "implication": "+17.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $72",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG LMT @ $443.36",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $475",
+          "implication": "+7.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $425",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GLD @ $275.2",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $295",
+          "implication": "+7.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $265",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG DAL @ $35.88",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $42",
+          "implication": "+17.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $33",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG RTX @ $120.46",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $132",
+          "implication": "+9.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $114",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "crisis",
+  "regimeConfidence": 90,
+  "recommendations": [
+    {
+      "ticker": "NVDA",
+      "direction": "LONG",
+      "entryPrice": 96.3,
+      "targetPrice": 110,
+      "stopPrice": 89,
+      "positionSize": "2%",
+      "conviction": 82,
+      "timeframe": "1-3 days",
+      "thesis": "Semiconductor leader with AI capex tailwind. Relatively resilient in selloff (-1.37% vs AMD -6.49%). SMH futures +17% signals massive semi bounce. Supply chain is diversified vs pure China plays. If any tariff resolution comes, semis snap back hardest.",
+      "catalyst": "Tariff de-escalation catalyst, AI spending resilience, oversold bounce",
+      "risks": "Continued tariff escalation hits hardware supply chains. VIX 40+ means violent swings both ways.",
+      "sector": "Technology/Semiconductors"
+    },
+    {
+      "ticker": "AAPL",
+      "direction": "LONG",
+      "entryPrice": 172.42,
+      "targetPrice": 198,
+      "stopPrice": 162,
+      "positionSize": "2%",
+      "conviction": 85,
+      "timeframe": "1-5 days",
+      "thesis": "Most oversold mega-cap (-4.98%) due to direct China manufacturing exposure. This is exactly why it bounces hardest on ANY tariff resolution. Services revenue (60%+ margin) unaffected by tariffs. Massive buyback program provides floor. At 172 this is approaching valuations not seen since mid-2024.",
+      "catalyst": "Tariff pause/negotiation, oversold technical bounce, buyback support",
+      "risks": "Tariffs sustained = material margin hit from China manufacturing. Could see 160 if crisis deepens.",
+      "sector": "Technology"
+    },
+    {
+      "ticker": "AMD",
+      "direction": "LONG",
+      "entryPrice": 78.21,
+      "targetPrice": 92,
+      "stopPrice": 72,
+      "positionSize": "1.5%",
+      "conviction": 81,
+      "timeframe": "1-5 days",
+      "thesis": "Down -6.49%, significantly more than NVDA (-1.37%), creating a catch-up trade. AI data center demand is structural and tariff-independent. AMD's fab partner TSMC is in Taiwan not China. The 6.5% drop prices in worst-case that likely doesn't materialize for this name specifically.",
+      "catalyst": "Oversold bounce, AI spending announcements, tariff de-escalation",
+      "risks": "Broader semiconductor export controls. Continued market-wide deleveraging.",
+      "sector": "Technology/Semiconductors"
+    },
+    {
+      "ticker": "LMT",
+      "direction": "LONG",
+      "entryPrice": 443.36,
+      "targetPrice": 475,
+      "stopPrice": 425,
+      "positionSize": "2%",
+      "conviction": 88,
+      "timeframe": "1-5 days",
+      "thesis": "Up +2.91% while everything else crashed. Defense is the ultimate tariff hedge - revenue is US government, no trade exposure. Geopolitical tensions (trade war = geopolitical instability) are bullish for defense spending. If crisis continues, LMT keeps outperforming. If crisis resolves, LMT holds gains. Asymmetric setup.",
+      "catalyst": "Continued geopolitical tension, defense budget visibility, flight to quality",
+      "risks": "Sharp risk-on reversal could see rotation OUT of defensives. But downside is limited given government revenue certainty.",
+      "sector": "Defense/Industrials"
+    },
+    {
+      "ticker": "GLD",
+      "direction": "LONG",
+      "entryPrice": 275.2,
+      "targetPrice": 295,
+      "stopPrice": 265,
+      "positionSize": "2%",
+      "conviction": 90,
+      "timeframe": "1-10 days",
+      "thesis": "Gold is THE crisis asset. Up +3.23% while equities crashed. Dollar weakening (-1.97%) is directly bullish for gold. Bond market turmoil (10Y spiking on forced selling, not growth optimism) drives safe haven flows. Central bank buying continues. Gold works in BOTH scenarios: crisis continues = more flight to safety; crisis resolves = dollar stays weak from tariff damage.",
+      "catalyst": "Continued dollar weakness, bond market stress, central bank buying, CPI tomorrow",
+      "risks": "Sharp dollar reversal on tariff resolution. But gold has been trending higher for months regardless.",
+      "sector": "Commodities/Safe Haven"
+    },
+    {
+      "ticker": "DAL",
+      "direction": "LONG",
+      "entryPrice": 35.88,
+      "targetPrice": 42,
+      "stopPrice": 33,
+      "positionSize": "1.5%",
+      "conviction": 80,
+      "timeframe": "1-5 days",
+      "thesis": "Down -3.78% and airlines (JETS -3.61%) massively oversold on recession fears. But DAL reports earnings THIS WEEK and is expected to beat on strong travel demand. Oil crash (-3.66% WTI) is DIRECTLY bullish for airline margins. If tariff fears ease even slightly, airlines snap back hard as recession probability reprices lower. Oil at $60 = massive fuel cost tailwind.",
+      "catalyst": "Earnings beat, oil price collapse helping margins, tariff de-escalation",
+      "risks": "Recession materializes and kills travel demand. But at 35.88 the stock prices in significant demand destruction already.",
+      "sector": "Airlines/Travel"
+    },
+    {
+      "ticker": "RTX",
+      "direction": "LONG",
+      "entryPrice": 120.46,
+      "targetPrice": 132,
+      "stopPrice": 114,
+      "positionSize": "1.5%",
+      "conviction": 85,
+      "timeframe": "1-5 days",
+      "thesis": "Up +2.68% in the crash, confirming defensive leadership alongside LMT. RTX has both defense AND commercial aerospace exposure. Tariffs don't impact defense contracts. Commercial aerospace backlog is multi-year. At 120.46 trading at reasonable multiple for a business with decade-long order visibility.",
+      "catalyst": "Defense spending momentum, commercial aerospace backlog, crisis safe haven flows",
+      "risks": "Broad market liquidation event could drag down even defensives temporarily.",
+      "sector": "Defense/Industrials"
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10008,
+    "outcomes": [
+      {
+        "symbol": "NVDA",
+        "openPrice": 98.89,
+        "highPrice": 115.1,
+        "lowPrice": 97.53,
+        "closePrice": 110.93,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -15.19,
+        "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $98.89, High $115.1, Low $97.53, Close $110.93."
+      },
+      {
+        "symbol": "AAPL",
+        "openPrice": 171.95,
+        "highPrice": 200.61,
+        "lowPrice": 171.89,
+        "closePrice": 198.15,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -14.92,
+        "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $171.95, High $200.61, Low $171.89, Close $198.15."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 79.22,
+        "highPrice": 97.91,
+        "lowPrice": 78.87,
+        "closePrice": 93.4,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -19.42,
+        "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $79.22, High $97.91, Low $78.87, Close $93.4."
+      },
+      {
+        "symbol": "LMT",
+        "openPrice": 439.25,
+        "highPrice": 478.18,
+        "lowPrice": 435.38,
+        "closePrice": 474.9,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -7.11,
+        "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $439.25, High $478.18, Low $435.38, Close $474.9."
+      },
+      {
+        "symbol": "GLD",
+        "openPrice": 282.22,
+        "highPrice": 299.27,
+        "lowPrice": 281.04,
+        "closePrice": 297.93,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -8.26,
+        "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $282.22, High $299.27, Low $281.04, Close $297.93."
+      },
+      {
+        "symbol": "DAL",
+        "openPrice": 36.91,
+        "highPrice": 44.99,
+        "lowPrice": 36.56,
+        "closePrice": 40.88,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -13.94,
+        "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $36.91, High $44.99, Low $36.56, Close $40.88."
+      },
+      {
+        "symbol": "RTX",
+        "openPrice": 119.02,
+        "highPrice": 129.32,
+        "lowPrice": 118.17,
+        "closePrice": 128.26,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -6.48,
+        "notes": "3-day window (2025-04-09, 2025-04-10, 2025-04-11). Open $119.02, High $129.32, Low $118.17, Close $128.26."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 0,
+      "targetHitRate": 100,
+      "stopHitRate": 100,
+      "avgReturnPercent": -12.19,
+      "profitFactor": 0,
+      "winRate": 0,
+      "totalScore": 42,
+      "benchmarkReturn": 11.18,
+      "alpha": -23.37
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 11.18,
+    "alpha": -23.37,
+    "fullDepth": true
+  }
+}
