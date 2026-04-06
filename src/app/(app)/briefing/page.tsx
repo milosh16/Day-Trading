@@ -657,6 +657,20 @@ export default function BriefingPage() {
     </>
   );
 
+  /* --- TradingView mini chart embed --- */
+  const MiniChart = ({ symbol }: { symbol: string }) => (
+    <div className="rounded-lg overflow-hidden mb-2 bg-ios-elevated" style={{ height: 140 }}>
+      <iframe
+        src={`https://s.tradingview.com/embed-widget/mini-symbol-overview/?symbol=${encodeURIComponent(symbol)}&dateRange=1M&colorTheme=dark&isTransparent=true&autosize=true&largeChartUrl=`}
+        width="100%"
+        height="140"
+        frameBorder="0"
+        style={{ pointerEvents: "none" }}
+        loading="lazy"
+      />
+    </div>
+  );
+
   /* --- Conviction bar --- */
   const ConvictionBar = ({ score, threshold }: { score: number; threshold: number }) => {
     const pct = Math.min(100, score);
@@ -672,6 +686,58 @@ export default function BriefingPage() {
           className="absolute top-0 h-full w-0.5 bg-white/40"
           style={{ left: `${threshPct}%` }}
         />
+      </div>
+    );
+  };
+
+  /* --- Trade buttons component (reused across all card types) --- */
+  const TradeButtons = ({ ticker, direction, entryPrice, targetPrice, stopPrice }: {
+    ticker: string;
+    direction?: string;
+    entryPrice?: number | null;
+    targetPrice?: number | null;
+    stopPrice?: number | null;
+  }) => {
+    const side = direction === "short" ? "sell" : "buy";
+    const hasFullOrder = entryPrice != null && targetPrice != null && stopPrice != null;
+    return (
+      <div className="flex gap-2 mt-2 pt-2 border-t border-ios-separator/30">
+        <button
+          onClick={(e) => { e.stopPropagation(); window.open(`${alpacaBaseUrl}/${ticker}`, "_blank"); }}
+          className="flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg bg-ios-blue/15 text-ios-blue active:bg-ios-blue/25 transition-colors"
+        >
+          Trade on Alpaca
+        </button>
+        {settings.alpacaKeys && hasFullOrder && (
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setTradeConfirm({
+                symbol: ticker,
+                direction: direction === "short" ? "short" : "long",
+                entryPrice: entryPrice!,
+                targetPrice: targetPrice!,
+                stopLoss: stopPrice!,
+              } as Recommendation);
+            }}
+            disabled={executingTrade === ticker}
+            className={`flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg transition-colors ${
+              direction === "short"
+                ? "bg-ios-red/15 text-ios-red active:bg-ios-red/25"
+                : "bg-ios-green/15 text-ios-green active:bg-ios-green/25"
+            } disabled:opacity-50`}
+          >
+            {executingTrade === ticker ? "Sending..." : `Execute ${side === "buy" ? "Buy" : "Sell"}`}
+          </button>
+        )}
+        {tradeResult && tradeResult.symbol === ticker && (
+          <div className={`absolute bottom-0 left-0 right-0 text-[11px] p-2 rounded-b-lg ${
+            tradeResult.success ? "bg-ios-green/10 text-ios-green" : "bg-ios-red/10 text-ios-red"
+          }`}>
+            {tradeResult.message}
+            <button onClick={() => setTradeResult(null)} className="ml-2 underline">dismiss</button>
+          </div>
+        )}
       </div>
     );
   };
@@ -812,22 +878,45 @@ export default function BriefingPage() {
                 </div>
               )}
 
+              {/* Chart */}
+              <MiniChart symbol={rec.ticker} />
+
+              {/* Conviction dimensions — always visible */}
+              <div className="bg-ios-elevated rounded-lg p-2.5 mb-2">
+                <div className="space-y-1.5">
+                  {Object.entries(rec.conviction)
+                    .sort(([, a], [, b]) => b - a)
+                    .map(([dim, val]) => (
+                      <div key={dim} className="flex items-center gap-2">
+                        <span className="text-[10px] text-white/60 w-16 shrink-0">{CONVICTION_LABELS[dim] || dim}</span>
+                        <div className="flex-1 h-1.5 bg-ios-gray-3 rounded-full overflow-hidden">
+                          <div
+                            className={`h-full rounded-full ${val >= 80 ? "bg-ios-green" : val >= 60 ? "bg-ios-blue" : val >= 40 ? "bg-ios-orange" : "bg-ios-red"}`}
+                            style={{ width: `${Math.min(100, val)}%` }}
+                          />
+                        </div>
+                        <span className="text-[10px] font-semibold text-white/80 w-6 text-right">{val}</span>
+                      </div>
+                    ))}
+                </div>
+              </div>
+
               {/* Catalyst */}
               {rec.catalyst && (
                 <p className="text-[11px] text-ios-blue mb-2">{rec.catalyst}</p>
               )}
 
               {/* Below threshold warning */}
-              {!passed && rec.NOTE && (
+              {!passed && (
                 <div className="bg-ios-orange/10 border border-ios-orange/20 rounded-lg p-2.5 mb-2">
-                  <p className="text-[11px] text-ios-orange">
+                  <p className="text-[11px] text-ios-orange font-medium">
                     Below regime minimum ({rec.compositeScore} &lt; {CONVICTION_THRESHOLD})
                   </p>
-                  <p className="text-[11px] text-white/70 mt-1">{rec.NOTE}</p>
+                  {rec.NOTE && <p className="text-[11px] text-white/70 mt-1">{rec.NOTE}</p>}
                 </div>
               )}
 
-              {/* Expandable analysis */}
+              {/* Expandable deep analysis */}
               <button
                 onClick={() => toggleCandidate(rec.ticker)}
                 className="flex items-center gap-1 text-[11px] text-ios-blue mt-1 mb-1"
@@ -843,34 +932,10 @@ export default function BriefingPage() {
 
               {isExpanded && (
                 <div className="mt-2 space-y-3">
-                  {/* Conviction dimensions */}
-                  <div className="bg-ios-elevated rounded-lg p-2.5">
-                    <p className="text-[10px] text-ios-gray uppercase tracking-wider mb-2">Conviction Dimensions</p>
-                    <div className="space-y-1.5">
-                      {Object.entries(rec.conviction)
-                        .sort(([, a], [, b]) => b - a)
-                        .map(([dim, val]) => (
-                          <div key={dim} className="flex items-center gap-2">
-                            <span className="text-[10px] text-white/60 w-16 shrink-0">{CONVICTION_LABELS[dim] || dim}</span>
-                            <div className="flex-1 h-1.5 bg-ios-gray-3 rounded-full overflow-hidden">
-                              <div
-                                className={`h-full rounded-full ${val >= 80 ? "bg-ios-green" : val >= 60 ? "bg-ios-blue" : val >= 40 ? "bg-ios-orange" : "bg-ios-red"}`}
-                                style={{ width: `${Math.min(100, val)}%` }}
-                              />
-                            </div>
-                            <span className="text-[10px] font-semibold text-white/80 w-6 text-right">{val}</span>
-                          </div>
-                        ))}
-                    </div>
-                  </div>
-
-                  {/* Reasoning */}
                   <div>
                     <p className="text-[10px] text-ios-gray uppercase tracking-wider mb-1">Reasoning</p>
                     <p className="text-[11px] text-white/70 leading-relaxed">{rec.reasoning}</p>
                   </div>
-
-                  {/* Bear case */}
                   {rec.bearCase && (
                     <div>
                       <p className="text-[10px] text-ios-gray uppercase tracking-wider mb-1">Bear Case</p>
@@ -880,17 +945,14 @@ export default function BriefingPage() {
                 </div>
               )}
 
-              {/* Trade action buttons — only for above-threshold */}
-              {passed && rec.entryPrice != null && (
-                <div className="flex gap-2 mt-2 pt-2 border-t border-ios-separator/30">
-                  <button
-                    onClick={() => window.open(`${alpacaBaseUrl}/${rec.ticker}`, "_blank")}
-                    className="flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg bg-ios-blue/15 text-ios-blue active:bg-ios-blue/25 transition-colors"
-                  >
-                    Trade on Alpaca
-                  </button>
-                </div>
-              )}
+              {/* Trade buttons — ALL candidates, not just above threshold */}
+              <TradeButtons
+                ticker={rec.ticker}
+                direction={rec.direction}
+                entryPrice={rec.entryPrice}
+                targetPrice={rec.targetPrice}
+                stopPrice={rec.stopPrice}
+              />
             </Card>
           );
         })}
@@ -908,41 +970,50 @@ export default function BriefingPage() {
         </h2>
         {items.map((item) => {
           const isExpanded = expandedWatchlist.has(item.ticker);
-          // Extract price from trigger text
           const priceMatch = item.trigger.match(/\$[\d,.]+(?:\s*-\s*\$?[\d,.]+)?/);
+          // Infer direction from trigger text
+          const isBuy = /buy|long|call/i.test(item.trigger);
+          const direction = isBuy ? "long" : /short|sell|put/i.test(item.trigger) ? "short" : "long";
+          // Extract target price for potential order
+          const allPrices = [...(item.trigger.matchAll(/\$([\d,.]+)/g))].map(m => parseFloat(m[1].replace(",", "")));
+          const triggerPrice = allPrices.length > 0 ? allPrices[0] : null;
+
           return (
-            <Card key={item.ticker} className="mb-2">
-              <div className="flex items-center justify-between mb-1.5">
+            <Card key={item.ticker} className="mb-3">
+              <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-bold">{item.ticker}</span>
-                  <span className="text-xs text-ios-gray">&#9203;</span>
-                  {priceMatch && (
-                    <span className="text-[11px] font-medium text-ios-blue">{priceMatch[0]}</span>
-                  )}
+                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                    isBuy ? "bg-ios-green/20 text-ios-green" : "bg-ios-red/20 text-ios-red"
+                  }`}>
+                    {isBuy ? "WATCH BUY" : "WATCH SELL"}
+                  </span>
                 </div>
-                <button
-                  onClick={() => window.open(`${alpacaBaseUrl}/${item.ticker}`, "_blank")}
-                  className="text-[10px] font-medium px-2 py-0.5 rounded bg-ios-blue/15 text-ios-blue"
-                >
-                  Chart
-                </button>
+                {priceMatch && (
+                  <span className="text-sm font-semibold text-ios-blue">{priceMatch[0]}</span>
+                )}
               </div>
-              <p className="text-[11px] text-white/80 leading-relaxed">{item.trigger}</p>
-              <button
-                onClick={() => toggleWatchlistItem(item.ticker)}
-                className="flex items-center gap-1 text-[11px] text-ios-blue mt-1.5"
-              >
-                <svg
-                  className={`w-3 h-3 transition-transform ${isExpanded ? "rotate-90" : ""}`}
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
-                >
-                  <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-                </svg>
-                {isExpanded ? "Hide Reasoning" : "Why"}
-              </button>
-              {isExpanded && (
-                <p className="text-[11px] text-white/60 leading-relaxed mt-1.5">{item.reasoning}</p>
-              )}
+
+              {/* Chart */}
+              <MiniChart symbol={item.ticker} />
+
+              {/* Trigger condition */}
+              <div className="bg-ios-elevated rounded-lg p-2.5 mb-2">
+                <p className="text-[10px] text-ios-gray uppercase tracking-wider mb-1">Trigger</p>
+                <p className="text-[11px] text-white/80 leading-relaxed">{item.trigger}</p>
+              </div>
+
+              {/* Reasoning — always visible for watchlist */}
+              <p className="text-[11px] text-white/60 leading-relaxed mb-1">{item.reasoning}</p>
+
+              {/* Trade buttons */}
+              <TradeButtons
+                ticker={item.ticker}
+                direction={direction}
+                entryPrice={triggerPrice}
+                targetPrice={null}
+                stopPrice={null}
+              />
             </Card>
           );
         })}
@@ -959,12 +1030,27 @@ export default function BriefingPage() {
           Avoid ({items.length})
         </h2>
         {items.map((item) => (
-          <Card key={item.ticker} className="mb-2 border border-ios-red/15">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs text-ios-red">&#10007;</span>
-              <span className="text-sm font-bold text-ios-red/80">{item.ticker}</span>
+          <Card key={item.ticker} className="mb-3 border border-ios-red/15">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-ios-red">&#10007;</span>
+                <span className="text-sm font-bold">{item.ticker}</span>
+                <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-ios-red/20 text-ios-red">
+                  AVOID
+                </span>
+              </div>
             </div>
-            <p className="text-[11px] text-white/60 leading-relaxed">{item.reasoning}</p>
+
+            {/* Chart */}
+            <MiniChart symbol={item.ticker} />
+
+            {/* Why to avoid */}
+            <div className="bg-ios-red/5 rounded-lg p-2.5 mb-2">
+              <p className="text-[11px] text-white/70 leading-relaxed">{item.reasoning}</p>
+            </div>
+
+            {/* Trade buttons — user might want to take the other side */}
+            <TradeButtons ticker={item.ticker} />
           </Card>
         ))}
       </div>
