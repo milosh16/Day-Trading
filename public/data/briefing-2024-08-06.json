@@ -1,0 +1,103 @@
+{
+  "id": "briefing-2024-08-06-1775507057091",
+  "date": "2024-08-06",
+  "generatedAt": "2026-04-06T20:24:17.077Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorAnalysis",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "TechnicalSetup",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "FlowsAndPositioning",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "CatalystsAndEvents",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [],
+  "regimeType": "range-bound",
+  "regimeConfidence": 44,
+  "recommendations": [],
+  "watchlist": [
+    {
+      "ticker": "NVDA",
+      "price": 100.45,
+      "reason": "Down 29% from 52-week highs after Aug 5 close at 100.45. AI thesis fully intact — datacenter capex cycle continues. Watching for stabilization above $95 (200-day MA area) as entry signal. Pre-market SMH +1.95% is encouraging. The oversold bounce could be violent given the crowded short positioning, but want to see volume confirmation before entry.",
+      "triggerCondition": "Hold above $95 with volume; enter on break above $105"
+    },
+    {
+      "ticker": "JPM",
+      "price": 194.9,
+      "reason": "Largest US bank down only 2.1% vs broader market -3%. Relative strength in a crash signals institutional conviction. Yield curve steepening (2-10 improving) structurally bullish for bank NIM. Pre-market XLF +1.62%. Jamie Dimon's commentary on economy will be closely watched. Entry attractive below $190 or on confirmed hold of $195.",
+      "triggerCondition": "Hold above $190; enter on yield curve continued steepening"
+    },
+    {
+      "ticker": "TLT",
+      "price": 98.8,
+      "reason": "Long-duration treasuries rallied +0.53% on Aug 5 while everything else crashed — pure flight to quality. If recession narrative intensifies, TLT could run significantly as 10Y yield pushes toward 3.5%. However, if the bounce holds and VIX normalizes, treasury rally may stall. Watching for CPI data in 8 days as key catalyst.",
+      "triggerCondition": "Enter on any equity market re-test of Aug 5 lows; take profit if VIX drops below 20"
+    },
+    {
+      "ticker": "AMD",
+      "price": 134.82,
+      "reason": "AMD was one of only 3 stocks in the price file that closed GREEN on Aug 5 (+1.75%). Extreme relative strength during a crash day is one of the strongest bullish signals possible. MI300 AI accelerator cycle is ramping. If semis bounce, AMD likely leads. Waiting for confirmation of broad semi recovery.",
+      "triggerCondition": "Enter on pullback to $130 or breakout above $140 with volume"
+    }
+  ],
+  "avoidList": [
+    {
+      "ticker": "UVXY (long side)",
+      "reason": "UVXY is up 58% in one day and will face devastating contango decay as VIX normalizes. The product is designed to go to zero over time. Buying UVXY after a VIX spike is one of the most reliably losing trades in markets. The BIS analysis showed 85% of the VIX spike was driven by illiquid put option bid-ask widening — the 'fear' was more mechanical than fundamental. VIX has already dropped from 65 to 28 in 24 hours."
+    },
+    {
+      "ticker": "AAL",
+      "reason": "American Airlines at $9.28 is facing a triple headwind: (1) recession fears crushing travel demand outlook, (2) oil up 2.8% increasing fuel costs, (3) already weak fundamentals with high debt load. Airlines are the worst sector to own heading into a potential recession. The pre-market bounce is likely to be weak and temporary for the most levered carrier. Down 3.6% Aug 5 and has no margin of safety."
+    },
+    {
+      "ticker": "CLF",
+      "reason": "Cleveland-Cliffs at $13.32 (-4.5%) is a levered play on steel/industrial activity. Copper -1.8% is Dr. Copper signaling growth concerns. Materials sector (XLB +0.51%) has the weakest pre-market bounce of any sector. If the recession narrative has any truth, cyclical/commodity producers get hit hardest. China's Shanghai +0.09% bounce is anemic vs rest of Asia, suggesting Chinese demand (crucial for materials) remains weak."
+    }
+  ],
+  "trainingData": {
+    "trialId": 10004,
+    "outcomes": [],
+    "scores": {
+      "directionAccuracy": 0,
+      "targetHitRate": 0,
+      "stopHitRate": 0,
+      "avgReturnPercent": 0,
+      "profitFactor": 0,
+      "winRate": 0,
+      "totalScore": 50,
+      "benchmarkReturn": 0.56,
+      "alpha": -0.56
+    },
+    "dimensionAnalysis": {},
+    "benchmarkReturn": 0.56,
+    "alpha": -0.56,
+    "fullDepth": true
+  }
+}
