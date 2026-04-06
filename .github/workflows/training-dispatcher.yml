@@ -39,15 +39,22 @@ jobs:
             TRIAL=0
             TOTAL=500
           fi
+
+          # Count existing Opus review files to determine last review point
+          REVIEW_COUNT=$(ls training/results/opus-review-trial-*.json 2>/dev/null | wc -l | tr -d ' ')
+          LAST_REVIEW_TRIAL=$(ls training/results/opus-review-trial-*.json 2>/dev/null | sed 's/.*trial-//' | sed 's/\.json//' | sort -n | tail -1)
+          LAST_REVIEW_TRIAL=${LAST_REVIEW_TRIAL:-0}
+
           echo "current_trial=$TRIAL" >> $GITHUB_OUTPUT
           echo "total_trials=$TOTAL" >> $GITHUB_OUTPUT
+          echo "Current: $TRIAL/$TOTAL | $REVIEW_COUNT reviews done | last review at trial $LAST_REVIEW_TRIAL"
 
           if [ "$TRIAL" -ge "$TOTAL" ]; then
             echo "action=complete" >> $GITHUB_OUTPUT
             echo "Training complete at trial $TRIAL/$TOTAL"
-          elif [ $((TRIAL % 10)) -eq 0 ] && [ "$TRIAL" -gt 0 ] && [ "${{ github.event.inputs.action }}" != "start" ]; then
+          elif [ $((TRIAL % 10)) -eq 0 ] && [ "$TRIAL" -gt 0 ] && [ "$LAST_REVIEW_TRIAL" -lt "$TRIAL" ]; then
             echo "action=review" >> $GITHUB_OUTPUT
-            echo "Triggering review at trial $TRIAL"
+            echo "Review needed: trial $TRIAL, last review was at $LAST_REVIEW_TRIAL"
           else
             echo "action=trial" >> $GITHUB_OUTPUT
             echo "Triggering trial $((TRIAL + 1))"
