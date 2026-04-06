@@ -1,0 +1,322 @@
+{
+  "id": "briefing-2025-04-11-1775508279016",
+  "date": "2025-04-11",
+  "generatedAt": "2026-04-06T20:44:38.993Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorAnalysis",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "TechnicalSetup",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "FlowsAndPositioning",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "CatalystsAndEvents",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG TLT @ $undefined",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $undefined",
+          "implication": "+NaN% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $undefined",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMT @ $undefined",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $undefined",
+          "implication": "+NaN% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $undefined",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XLV @ $undefined",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $undefined",
+          "implication": "+NaN% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $undefined",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG FSLR @ $undefined",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $undefined",
+          "implication": "+NaN% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $undefined",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "crisis",
+  "regimeConfidence": 90,
+  "recommendations": [
+    {
+      "ticker": "TLT",
+      "direction": "long",
+      "entry": 86.24,
+      "target": 88.8,
+      "stop": 85.1,
+      "timeframe": "1-3 days",
+      "thesis": "Post-CPI bond rally. The cleanest event-driven trade available. April CPI came in soft: +0.2% MoM / 2.3% YoY (vs +0.3% / 2.4% expected) -- lowest headline YoY since Feb 2021. The 10Y yield at 4.5% spiked on May 12 risk-on rotation out of bonds, creating an overdone selloff. Soft CPI directly supports rate cut expectations and bond prices. TLT was down -0.93% on May 12 as money fled to equities -- classic mean-reversion setup reinforced by the fundamental catalyst. Bonds price CPI data more directly than any equity. Entry at prior close $86.24 after CPI confirmation. Target $88.80 (+2.97%). Stop $85.10 (-1.32%). R:R = 2.56 / 1.14 = 2.2:1.",
+      "conviction": {
+        "catalyst": 88,
+        "technicals": 78,
+        "riskReward": 82,
+        "timing": 82,
+        "conviction": 80,
+        "liquidity": 95,
+        "regime": 82,
+        "total": 84
+      }
+    },
+    {
+      "ticker": "AMT",
+      "direction": "long",
+      "entry": 207.92,
+      "target": 218,
+      "stop": 203,
+      "timeframe": "2-5 days",
+      "thesis": "Rate-sensitive REIT catch-up on soft CPI. AMT dropped -5.48% on May 12 -- the single worst equity performer outside gold miners and inverse ETFs -- as money rotated aggressively into risk assets. This is a cell tower REIT with recurring revenue and zero tariff exposure. The -5.48% move was purely a rates/rotation effect, not fundamental. Soft CPI at 2.3% YoY (lowest since Feb 2021) directly supports rate-sensitive names by pulling forward rate cut expectations. AMT is the most oversold quality name in the universe, creating a classic dislocation trade. If 10Y yield reverses from 4.5% toward 4.35-4.40%, AMT recovers $10+. Entry $207.92. Target $218.00 (+4.85%). Stop $203.00 (-2.37%). R:R = 10.08 / 4.92 = 2.0:1.",
+      "conviction": {
+        "catalyst": 82,
+        "technicals": 80,
+        "riskReward": 78,
+        "timing": 79,
+        "conviction": 77,
+        "liquidity": 85,
+        "regime": 78,
+        "total": 80
+      }
+    },
+    {
+      "ticker": "XLV",
+      "direction": "short",
+      "entry": 135.96,
+      "target": 132.5,
+      "stop": 137.8,
+      "timeframe": "2-5 days",
+      "thesis": "Healthcare sector short on Trump drug pricing EO. Most-favored-nation pricing order signed May 12 targets 30-80% drug cost reductions. HHS directed to implement direct-to-consumer programs. FDA approval revocation threatened for non-compliance. This is a structural policy headwind independent of CPI outcome. Major pharma names (JNJ, MRK, PFE, ABBV, LLY, BMY, AMGN) all in the crosshairs. XLV was among the weakest sectors on May 12 despite the broad rally. The EO overhang persists for weeks as implementation details emerge. Short conviction penalty -5 applied per event-driven regime rules. Entry $135.96. Target $132.50 (-2.55%). Stop $137.80 (+1.35%). R:R = 3.46 / 1.84 = 1.9:1.",
+      "conviction": {
+        "catalyst": 80,
+        "technicals": 76,
+        "riskReward": 77,
+        "timing": 78,
+        "conviction": 74,
+        "liquidity": 90,
+        "regime": 75,
+        "total": 79
+      }
+    },
+    {
+      "ticker": "FSLR",
+      "direction": "long",
+      "entry": 156.21,
+      "target": 165,
+      "stop": 150,
+      "timeframe": "1-3 days",
+      "thesis": "Post-CPI continuation in domestic solar manufacturing. FSLR surged +11.04% on May 12 -- the top non-leveraged gainer. FSLR is the rare stock that benefits from BOTH the tariff deal AND domestic manufacturing push. As the only US-based large-scale solar manufacturer, tariffs on Chinese solar imports HELP FSLR's competitive position (Chinese solar competitors pay the 30% tariff, FSLR doesn't). Soft CPI supports the lower-rate environment that helps capital-intensive renewables projects get financed. The +11% move signals massive institutional accumulation, not retail froth. Momentum continuation play. Entry $156.21. Target $165.00 (+5.63%). Stop $150.00 (-3.98%). R:R = 8.79 / 6.21 = 1.4:1. NOTE: R:R is below ideal 1.5:1 threshold but the catalyst quality and momentum justify inclusion. Reduced sizing mandatory.",
+      "conviction": {
+        "catalyst": 79,
+        "technicals": 75,
+        "riskReward": 70,
+        "timing": 76,
+        "conviction": 73,
+        "liquidity": 80,
+        "regime": 75,
+        "total": 75
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "GLD",
+      "price": 298.19,
+      "reason": "Gold sold -2.82% on May 12 risk-on rotation. Soft CPI creates conflicting force: rate cut expectations bullish for gold, but risk-on trade bearish. Watch for stabilization above 295 as potential reversal entry. If 10Y yield drops below 4.45%, gold benefits.",
+      "triggerCondition": "Post-CPI stabilization above 295; 10Y yield declining below 4.45%"
+    },
+    {
+      "ticker": "DUK",
+      "price": 115.85,
+      "reason": "Utility sector laggard, down -3.72% on May 12 risk-on rotation. Soft CPI directly helps rate-sensitive utilities. DUK is a quality name oversold purely on rotation, not fundamentals. If 10Y yield reverses, utilities are the catch-up trade alongside REITs.",
+      "triggerCondition": "10Y yield below 4.45%; DUK holds above 114 post-CPI"
+    },
+    {
+      "ticker": "SMH",
+      "price": 237.41,
+      "reason": "Semis led May 12 at +6.27%. Most leveraged to trade deal + AI capex. Extremely extended but momentum could continue if soft CPI adds fuel. Risk of profit-taking is elevated. Only enter on a confirmed pullback that holds 233 support.",
+      "triggerCondition": "Pullback to 233-234 range that holds; volume confirmation on bounce"
+    },
+    {
+      "ticker": "NFLX",
+      "price": 111,
+      "reason": "One of the few tech names DOWN on May 12 (-2.65%). Domestic revenue, no tariff exposure, no drug pricing risk. If this is just rotation-driven selling (money leaving defensives for cyclicals), NFLX is mispriced. But could also signal stock-specific weakness. Monitor for stabilization.",
+      "triggerCondition": "Holds above 109; reversal pattern on intraday chart; broad tech strength continuing"
+    }
+  ],
+  "avoidList": [
+    {
+      "ticker": "TQQQ",
+      "price": 33.06,
+      "reason": "Already +12.11% on May 12. 3x leveraged Nasdaq after a 12% single-day move has catastrophic mean-reversion risk. Any 2% QQQ pullback = 6% TQQQ loss. If bullish Nasdaq, use QQQ at 1x leverage. The risk/reward at these levels is objectively terrible."
+    },
+    {
+      "ticker": "UVXY",
+      "price": 108.55,
+      "reason": "Down -19.56% on May 12. VIX in contango means relentless time decay. Soft CPI removes the only catalyst for a vol spike. Structurally designed to lose value. Even a brief vol pop gets eaten by contango bleed."
+    },
+    {
+      "ticker": "GDX",
+      "price": 46.62,
+      "reason": "Gold miners collapsed -7.44% on May 12. Adds company-specific operational risk on top of gold price risk. If gold bounces, GLD is cleaner. The risk-on rotation may be structural (trade deal), not noise, meaning gold miners may not recover quickly."
+    },
+    {
+      "ticker": "LULU",
+      "price": 304.2,
+      "reason": "Up +8.73% on May 12 -- among the biggest movers. Consumer discretionary beneficiary of tariff deal, but at $304 after a single-day 8.7% move, the stock is priced for perfection. Any disappointment in consumer spending data or tariff deal implementation reverses this aggressively. Chasing momentum after nearly 9% in a day is negative expected value."
+    }
+  ],
+  "trainingData": {
+    "trialId": 10006,
+    "outcomes": [
+      {
+        "symbol": "TLT",
+        "openPrice": 85.87,
+        "highPrice": 88.19,
+        "lowPrice": 85,
+        "closePrice": 87.82,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.83,
+        "notes": "3-day window (2025-04-11, 2025-04-14, 2025-04-15). Open $85.87, High $88.19, Low $85, Close $87.82."
+      },
+      {
+        "symbol": "AMT",
+        "openPrice": 206.52,
+        "highPrice": 220.82,
+        "lowPrice": 205.15,
+        "closePrice": 218.01,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.85,
+        "notes": "3-day window (2025-04-11, 2025-04-14, 2025-04-15). Open $206.52, High $220.82, Low $205.15, Close $218.01."
+      },
+      {
+        "symbol": "XLV",
+        "openPrice": 135.15,
+        "highPrice": 139.04,
+        "lowPrice": 133.65,
+        "closePrice": 137.69,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.27,
+        "notes": "3-day window (2025-04-11, 2025-04-14, 2025-04-15). Open $135.15, High $139.04, Low $133.65, Close $137.69."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 66.7,
+      "targetHitRate": 33.3,
+      "stopHitRate": 66.7,
+      "avgReturnPercent": 1.8,
+      "profitFactor": 5.26,
+      "winRate": 66.7,
+      "totalScore": 70.6,
+      "benchmarkReturn": 2.09,
+      "alpha": -0.29
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 80,
+        "avgScoreLosers": 77,
+        "predictivePower": 53
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 2.09,
+    "alpha": -0.29,
+    "fullDepth": true
+  }
+}
