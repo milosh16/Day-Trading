@@ -9,6 +9,33 @@ import type { BriefingSection, ScenarioAnalysis } from "@/lib/types";
    TYPES
    ================================================================ */
 
+interface BriefingRecommendation {
+  ticker: string;
+  direction: string;
+  entryPrice: number | null;
+  targetPrice: number | null;
+  stopPrice: number | null;
+  riskRewardRatio: number | null;
+  positionSize: string;
+  catalyst: string;
+  reasoning: string;
+  bearCase: string;
+  conviction: Record<string, number>;
+  compositeScore: number;
+  NOTE?: string;
+}
+
+interface WatchlistItem {
+  ticker: string;
+  trigger: string;
+  reasoning: string;
+}
+
+interface AvoidItem {
+  ticker: string;
+  reasoning: string;
+}
+
 interface StoredBriefing {
   id: string;
   date: string;
@@ -18,6 +45,9 @@ interface StoredBriefing {
   marketCondition: "bullish" | "bearish" | "neutral" | "volatile";
   sections: BriefingSection[];
   scenarios: ScenarioAnalysis[];
+  recommendations?: BriefingRecommendation[];
+  watchlist?: WatchlistItem[];
+  avoidList?: AvoidItem[];
   accuracy?: {
     scoredAt: string;
     marketConditionCorrect: boolean;
@@ -236,6 +266,8 @@ export default function BriefingPage() {
 
   // --- Expandable sections ---
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set());
+  const [expandedCandidates, setExpandedCandidates] = useState<Set<string>>(new Set());
+  const [expandedWatchlist, setExpandedWatchlist] = useState<Set<string>>(new Set());
 
   // --- Trade execution ---
   const { settings } = useSettingsStore();
@@ -625,14 +657,334 @@ export default function BriefingPage() {
     </>
   );
 
+  /* --- Conviction bar --- */
+  const ConvictionBar = ({ score, threshold }: { score: number; threshold: number }) => {
+    const pct = Math.min(100, score);
+    const threshPct = Math.min(100, threshold);
+    const passed = score >= threshold;
+    return (
+      <div className="relative h-2 bg-ios-gray-3 rounded-full overflow-hidden">
+        <div
+          className={`h-full rounded-full ${passed ? "bg-ios-green" : "bg-ios-orange"}`}
+          style={{ width: `${pct}%` }}
+        />
+        <div
+          className="absolute top-0 h-full w-0.5 bg-white/40"
+          style={{ left: `${threshPct}%` }}
+        />
+      </div>
+    );
+  };
+
+  const toggleCandidate = (ticker: string) => {
+    setExpandedCandidates((prev) => {
+      const next = new Set(prev);
+      if (next.has(ticker)) next.delete(ticker);
+      else next.add(ticker);
+      return next;
+    });
+  };
+
+  const toggleWatchlistItem = (ticker: string) => {
+    setExpandedWatchlist((prev) => {
+      const next = new Set(prev);
+      if (next.has(ticker)) next.delete(ticker);
+      else next.add(ticker);
+      return next;
+    });
+  };
+
+  const CONVICTION_THRESHOLD = 78;
+  const CONVICTION_LABELS: Record<string, string> = {
+    catalystClarity: "Catalyst",
+    technicalSetup: "Technical",
+    riskReward: "Risk/Reward",
+    volumeLiquidity: "Volume",
+    marketAlignment: "Mkt Align",
+    informationEdge: "Info Edge",
+    timingUrgency: "Timing",
+  };
+
+  /* --- Trade Candidates Section --- */
+  const renderTradeCandidates = (recs: BriefingRecommendation[]) => {
+    const realCandidates = recs.filter((r) => r.ticker !== "NO_TRADE_RECOMMENDED");
+    const noTrade = recs.find((r) => r.ticker === "NO_TRADE_RECOMMENDED");
+
+    if (realCandidates.length === 0 && !noTrade) return null;
+
+    return (
+      <div className="mt-4">
+        <h2 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3 px-1">
+          Trade Candidates
+        </h2>
+
+        {/* No-Trade Rationale */}
+        {noTrade && (
+          <Card className="mb-3 border border-ios-orange/20">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="text-lg">&#128176;</span>
+              <h3 className="text-[15px] font-semibold">Cash is the Position</h3>
+            </div>
+            <p className="text-sm text-white/80 leading-relaxed mb-3">{noTrade.reasoning}</p>
+            {realCandidates.length > 0 && (
+              <div className="bg-ios-elevated rounded-lg p-2.5">
+                <p className="text-xs text-ios-gray">
+                  Best candidate: <span className="text-white font-medium">{realCandidates[0].ticker} {realCandidates[0].direction}</span>{" "}
+                  ({realCandidates[0].compositeScore}/{CONVICTION_THRESHOLD})
+                </p>
+                {realCandidates[0].NOTE && (
+                  <p className="text-[11px] text-ios-orange mt-1">{realCandidates[0].NOTE.split(".")[0]}</p>
+                )}
+              </div>
+            )}
+          </Card>
+        )}
+
+        {/* Real trade candidates */}
+        {realCandidates.map((rec) => {
+          const passed = rec.compositeScore >= CONVICTION_THRESHOLD;
+          const isExpanded = expandedCandidates.has(rec.ticker);
+          const gainPct = rec.entryPrice && rec.targetPrice
+            ? Math.abs(((rec.targetPrice - rec.entryPrice) / rec.entryPrice) * 100)
+            : null;
+          const riskPct = rec.entryPrice && rec.stopPrice
+            ? Math.abs(((rec.stopPrice - rec.entryPrice) / rec.entryPrice) * 100)
+            : null;
+
+          return (
+            <Card key={rec.ticker} className={`mb-3 ${!passed ? "border border-ios-orange/20" : "border border-ios-green/20"}`}>
+              {/* Header: ticker, direction, score, pass/fail */}
+              <div className="flex items-center justify-between mb-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold">{rec.ticker}</span>
+                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                    rec.direction === "long" ? "bg-ios-green/20 text-ios-green" :
+                    rec.direction === "short" ? "bg-ios-red/20 text-ios-red" :
+                    "bg-ios-gray/20 text-ios-gray"
+                  }`}>
+                    {rec.direction.toUpperCase()}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className={`text-lg font-bold ${passed ? "text-ios-green" : "text-ios-orange"}`}>
+                    {rec.compositeScore}
+                  </span>
+                  <span className="text-xs text-ios-gray">/100</span>
+                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                    passed ? "bg-ios-green/20 text-ios-green" : "bg-ios-orange/20 text-ios-orange"
+                  }`}>
+                    {passed ? "PASS" : "BELOW"}
+                  </span>
+                </div>
+              </div>
+
+              {/* Conviction bar */}
+              <div className="mb-3">
+                <ConvictionBar score={rec.compositeScore} threshold={CONVICTION_THRESHOLD} />
+                <p className="text-[10px] text-ios-gray text-right mt-0.5">{CONVICTION_THRESHOLD} min</p>
+              </div>
+
+              {/* Prices */}
+              {rec.entryPrice != null && (
+                <div className="bg-ios-elevated rounded-lg p-2.5 mb-2">
+                  <div className="flex items-center justify-between text-sm mb-1">
+                    <span className="text-white/70">
+                      Entry <span className="font-semibold text-white">${rec.entryPrice.toFixed(2)}</span>
+                      {rec.targetPrice != null && (
+                        <> &rarr; Target <span className="text-ios-green font-semibold">${rec.targetPrice.toFixed(2)}</span></>
+                      )}
+                      {gainPct != null && (
+                        <span className="text-ios-green ml-1">({gainPct.toFixed(1)}%)</span>
+                      )}
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3 text-[11px] text-white/60">
+                    {rec.stopPrice != null && (
+                      <span>Stop <span className="text-ios-red">${rec.stopPrice.toFixed(2)}</span>{riskPct != null && ` (${riskPct.toFixed(1)}% risk)`}</span>
+                    )}
+                    {rec.riskRewardRatio != null && (
+                      <span>R:R <span className="font-semibold text-white/80">{rec.riskRewardRatio.toFixed(2)}</span></span>
+                    )}
+                  </div>
+                  {rec.positionSize && rec.positionSize !== "0%" && (
+                    <p className="text-[11px] text-ios-gray mt-1">Size: {rec.positionSize}</p>
+                  )}
+                </div>
+              )}
+
+              {/* Catalyst */}
+              {rec.catalyst && (
+                <p className="text-[11px] text-ios-blue mb-2">{rec.catalyst}</p>
+              )}
+
+              {/* Below threshold warning */}
+              {!passed && rec.NOTE && (
+                <div className="bg-ios-orange/10 border border-ios-orange/20 rounded-lg p-2.5 mb-2">
+                  <p className="text-[11px] text-ios-orange">
+                    Below regime minimum ({rec.compositeScore} &lt; {CONVICTION_THRESHOLD})
+                  </p>
+                  <p className="text-[11px] text-white/70 mt-1">{rec.NOTE}</p>
+                </div>
+              )}
+
+              {/* Expandable analysis */}
+              <button
+                onClick={() => toggleCandidate(rec.ticker)}
+                className="flex items-center gap-1 text-[11px] text-ios-blue mt-1 mb-1"
+              >
+                <svg
+                  className={`w-3 h-3 transition-transform ${isExpanded ? "rotate-90" : ""}`}
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+                >
+                  <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {isExpanded ? "Hide Analysis" : "Full Analysis"}
+              </button>
+
+              {isExpanded && (
+                <div className="mt-2 space-y-3">
+                  {/* Conviction dimensions */}
+                  <div className="bg-ios-elevated rounded-lg p-2.5">
+                    <p className="text-[10px] text-ios-gray uppercase tracking-wider mb-2">Conviction Dimensions</p>
+                    <div className="space-y-1.5">
+                      {Object.entries(rec.conviction)
+                        .sort(([, a], [, b]) => b - a)
+                        .map(([dim, val]) => (
+                          <div key={dim} className="flex items-center gap-2">
+                            <span className="text-[10px] text-white/60 w-16 shrink-0">{CONVICTION_LABELS[dim] || dim}</span>
+                            <div className="flex-1 h-1.5 bg-ios-gray-3 rounded-full overflow-hidden">
+                              <div
+                                className={`h-full rounded-full ${val >= 80 ? "bg-ios-green" : val >= 60 ? "bg-ios-blue" : val >= 40 ? "bg-ios-orange" : "bg-ios-red"}`}
+                                style={{ width: `${Math.min(100, val)}%` }}
+                              />
+                            </div>
+                            <span className="text-[10px] font-semibold text-white/80 w-6 text-right">{val}</span>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+
+                  {/* Reasoning */}
+                  <div>
+                    <p className="text-[10px] text-ios-gray uppercase tracking-wider mb-1">Reasoning</p>
+                    <p className="text-[11px] text-white/70 leading-relaxed">{rec.reasoning}</p>
+                  </div>
+
+                  {/* Bear case */}
+                  {rec.bearCase && (
+                    <div>
+                      <p className="text-[10px] text-ios-gray uppercase tracking-wider mb-1">Bear Case</p>
+                      <p className="text-[11px] text-white/70 leading-relaxed">{rec.bearCase}</p>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Trade action buttons — only for above-threshold */}
+              {passed && rec.entryPrice != null && (
+                <div className="flex gap-2 mt-2 pt-2 border-t border-ios-separator/30">
+                  <button
+                    onClick={() => window.open(`${alpacaBaseUrl}/${rec.ticker}`, "_blank")}
+                    className="flex-1 text-[11px] font-semibold py-1.5 px-3 rounded-lg bg-ios-blue/15 text-ios-blue active:bg-ios-blue/25 transition-colors"
+                  >
+                    Trade on Alpaca
+                  </button>
+                </div>
+              )}
+            </Card>
+          );
+        })}
+      </div>
+    );
+  };
+
+  /* --- Watchlist Section --- */
+  const renderWatchlist = (items: WatchlistItem[]) => {
+    if (!items || items.length === 0) return null;
+    return (
+      <div className="mt-4">
+        <h2 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3 px-1">
+          Watchlist ({items.length})
+        </h2>
+        {items.map((item) => {
+          const isExpanded = expandedWatchlist.has(item.ticker);
+          // Extract price from trigger text
+          const priceMatch = item.trigger.match(/\$[\d,.]+(?:\s*-\s*\$?[\d,.]+)?/);
+          return (
+            <Card key={item.ticker} className="mb-2">
+              <div className="flex items-center justify-between mb-1.5">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold">{item.ticker}</span>
+                  <span className="text-xs text-ios-gray">&#9203;</span>
+                  {priceMatch && (
+                    <span className="text-[11px] font-medium text-ios-blue">{priceMatch[0]}</span>
+                  )}
+                </div>
+                <button
+                  onClick={() => window.open(`${alpacaBaseUrl}/${item.ticker}`, "_blank")}
+                  className="text-[10px] font-medium px-2 py-0.5 rounded bg-ios-blue/15 text-ios-blue"
+                >
+                  Chart
+                </button>
+              </div>
+              <p className="text-[11px] text-white/80 leading-relaxed">{item.trigger}</p>
+              <button
+                onClick={() => toggleWatchlistItem(item.ticker)}
+                className="flex items-center gap-1 text-[11px] text-ios-blue mt-1.5"
+              >
+                <svg
+                  className={`w-3 h-3 transition-transform ${isExpanded ? "rotate-90" : ""}`}
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
+                >
+                  <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {isExpanded ? "Hide Reasoning" : "Why"}
+              </button>
+              {isExpanded && (
+                <p className="text-[11px] text-white/60 leading-relaxed mt-1.5">{item.reasoning}</p>
+              )}
+            </Card>
+          );
+        })}
+      </div>
+    );
+  };
+
+  /* --- Avoid List Section --- */
+  const renderAvoidList = (items: AvoidItem[]) => {
+    if (!items || items.length === 0) return null;
+    return (
+      <div className="mt-4">
+        <h2 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3 px-1">
+          Avoid ({items.length})
+        </h2>
+        {items.map((item) => (
+          <Card key={item.ticker} className="mb-2 border border-ios-red/15">
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs text-ios-red">&#10007;</span>
+              <span className="text-sm font-bold text-ios-red/80">{item.ticker}</span>
+            </div>
+            <p className="text-[11px] text-white/60 leading-relaxed">{item.reasoning}</p>
+          </Card>
+        ))}
+      </div>
+    );
+  };
+
   const renderScenarios = (scenarios: ScenarioAnalysis[]) => {
-    if (scenarios.length === 0) return null;
+    // Filter out broken scenarios (NO_TRADE sentinel, null prices)
+    const validScenarios = scenarios.filter((s) => {
+      if (s.event.includes("NO_TRADE")) return false;
+      if (s.event.includes("@ $null")) return false;
+      return true;
+    });
+    if (validScenarios.length === 0) return null;
     return (
       <div className="mt-4">
         <h2 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3 px-1">
           Scenario Analysis
         </h2>
-        {scenarios.map((scenario, i) => (
+        {validScenarios.map((scenario, i) => (
           <Card key={i} className="mb-3">
             <h3 className="text-[15px] font-semibold mb-3">{scenario.event}</h3>
             <div className="space-y-3">
@@ -1093,6 +1445,15 @@ export default function BriefingPage() {
               {/* Sections */}
               {renderSections(todayBriefing.sections || [])}
 
+              {/* Trade Candidates */}
+              {todayBriefing.recommendations && renderTradeCandidates(todayBriefing.recommendations)}
+
+              {/* Watchlist */}
+              {todayBriefing.watchlist && renderWatchlist(todayBriefing.watchlist)}
+
+              {/* Avoid List */}
+              {todayBriefing.avoidList && renderAvoidList(todayBriefing.avoidList)}
+
               {/* Scenarios */}
               {renderScenarios(todayBriefing.scenarios || [])}
             </div>
@@ -1256,6 +1617,15 @@ export default function BriefingPage() {
 
               {/* Sections */}
               {renderSections(selectedBriefing.sections || [])}
+
+              {/* Trade Candidates */}
+              {selectedBriefing.recommendations && renderTradeCandidates(selectedBriefing.recommendations)}
+
+              {/* Watchlist */}
+              {selectedBriefing.watchlist && renderWatchlist(selectedBriefing.watchlist)}
+
+              {/* Avoid List */}
+              {selectedBriefing.avoidList && renderAvoidList(selectedBriefing.avoidList)}
 
               {/* Scenarios */}
               {renderScenarios(selectedBriefing.scenarios || [])}
