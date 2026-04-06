@@ -1,0 +1,219 @@
+{
+  "trialId": 46,
+  "date": "2025-04-28",
+  "dateDisplay": "Monday, April 28, 2025",
+  "generatedAt": "2026-04-06T00:03:52.095Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.06,
+      "nasdaqFuturesChange": -0.1,
+      "dowFuturesChange": 0.28,
+      "russellFuturesChange": 0.41,
+      "vixFuturesChange": -3.9,
+      "vix": 24.17,
+      "vixChange": -3.9,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 25.73,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.22,
+      "tenYearYieldChange": -1.17,
+      "twoYearYield": 3.93,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.69,
+      "threeMonthYield": 4.19,
+      "twoTenSpread": 0.29,
+      "threeMoTenYrSpread": 0.03,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 99.24,
+      "dollarIndexChange": 0.23,
+      "eurUsd": 1.14,
+      "eurUsdChange": 0.58,
+      "usdJpy": 142.18,
+      "usdJpyChange": -1.16,
+      "usdCny": 7.29,
+      "usdCnyChange": 0.1,
+      "oilWTI": 60.42,
+      "oilChange": -2.63,
+      "brentOil": 64.25,
+      "brentOilChange": -2.44,
+      "natGasChange": 6.81,
+      "goldPrice": 3318.8,
+      "goldChange": -0.41,
+      "silverChange": 0.86,
+      "copperChange": -0.31,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.38,
+      "daxChange": 0.69,
+      "ftseChange": 0.55,
+      "shanghaiChange": -0.05,
+      "hangSengChange": 0.16,
+      "kospiChange": 0.65,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 105.95,
+      "spreadChange": -0.05,
+      "igSpread": -16.48,
+      "igSpreadChange": -0.23,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.02,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.16,
+      "xlfChange": 0.31,
+      "xleChange": 0.7,
+      "xlvChange": 0.4,
+      "xlpChange": -0.33,
+      "xluChange": 0.61,
+      "xlreChange": 0.62,
+      "xliChange": 0.33,
+      "xlbChange": 0.18,
+      "xlcChange": 0.38,
+      "xlyChange": 0.04,
+      "smhChange": -0.62,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.73,
+      "ethereumChange": 0.02,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 5,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 7.18,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": 2.62,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 34,
+      "directionalBias": "-4",
+      "volatilityRegime": "elevated",
+      "stressIndex": 24,
+      "riskAppetiteIndex": 40,
+      "sectorTilts": {
+        "airlines": "overweight",
+        "consumer-discretionary": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets enter Monday in a range-bound regime with low confidence (34%), sitting near 52-week lows despite a 5-day, 7.18% relief rally that has stretched near-term technicals into overbought territory. The macro backdrop is contradictory — VIX declining but still elevated at 24, extreme fear (F&G: 0), a flattening yield curve with a razor-thin 3bps 3M-10Y spread, and a weakening dollar/yen cross that signals ongoing risk-off pressure beneath the surface. With both long and short trades penalized and the conviction threshold raised to 78, the disciplined posture today is extreme selectivity — the data argues for observation over action.",
+      "marketCondition": "volatile",
+      "sections": [
+        {
+          "title": "🧭 Market Posture & Regime: Relief Rally on Thin Ice",
+          "content": "The S&P is essentially flat (+0.06%) while the Russell outperforms (+0.41%), and the 5-day surge of 7.18% has produced zero net change over 20 days — a classic dead-cat bounce pattern rather than a trend reversal. Regime confidence sits at just 34%, the lowest tier of conviction, which means the system cannot reliably classify whether we are transitioning to bullish or resuming the bear leg. Critically, breadth is catastrophically weak: 0% of stocks above their 200-day moving average. A 7% rally on zero breadth participation is a textbook bear market bounce — distribution disguised as recovery. Five consecutive up days near a 52-week low, with extreme fear still registering, tells us this is short-covering and positioning cleanup, not genuine demand. The stress index at 24/100 and risk appetite at 40/100 confirm the market is not yet in a healthy accumulation phase. Today's posture: defensive, patient, size-down.",
+          "importance": "high"
+        },
+        {
+          "title": "🔄 Sector Rotation: Defensives & Value Assert, Tech Fades",
+          "content": "The sector tape Friday told a clear story: leadership is rotating firmly toward defensives and rate-sensitives. Energy (XLE +0.7%), Real Estate (XLRE +0.62%), and Utilities (XLU +0.61%) led — a trio that typically dominates when investors are repositioning for slower growth or a Fed pivot. Healthcare (XLV +0.4%) adds to the defensive tilt. Meanwhile, Tech (XLK -0.16%) and Semis (SMH -0.62%) were the day's notable laggards, with Semis underperforming by a full percentage point relative to the broad market. This is notable given that growth led over the 5-day window (+2.62% Nasdaq vs Russell). The daily action is diverging from the weekly trend — suggesting the growth leadership of the bounce may be exhausting. The regime's sector overweights — Airlines (fuel cost tailwind from WTI at $60.42, down 2.63%) and Consumer Discretionary (lower gas prices) — have fundamental logic but require patience in a directionless tape. Staples (XLP -0.33%) lagging is a minor anomaly in the defensive rotation story, possibly profit-taking after prior defensive flows.",
+          "importance": "high"
+        },
+        {
+          "title": "📉 Yield Curve & Rate Signals: Flat and Fragile",
+          "content": "The 10-year yield fell 1.17% to 4.22%, a meaningful single-day move that signals either a flight-to-safety bid or growing recession expectations being priced in. The 2-10 spread at 29bps is positive but narrow — not yet re-inverted, but far from the steepening that would signal a clean economic re-acceleration. The 3M-10Y spread at just 3bps is the alarm bell: near-zero spread between very short and very long rates means the market is pricing essentially no term premium and no confident growth outlook. This is a near-flat curve that historically precedes economic weakness or policy pivots. The rate move lower combined with Real Estate and Utilities leading is textbook 'rates-down trade' behavior. If 10Y continues toward 4.0%, expect XLRE and XLU to extend gains — but watch whether the move is driven by growth fears (bad for equities broadly) or genuine Fed pivot expectations (more constructive).",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows: Dollar Stress, Oil Weakness",
+          "content": "USD/JPY at 142.18, down 1.16%, is a significant macro signal. Yen strengthening of this magnitude typically reflects risk-off positioning, unwinding of carry trades, or expectations of Bank of Japan policy normalization — all of which historically create headwinds for risk assets, particularly EM and high-beta equities. The dollar index at 99.24 is technically weak, sitting near multi-year support levels. EUR/USD at 1.14 reflects continued dollar softness. WTI crude cratering 2.63% to $60.42 is a double-edged sword: it's a tailwind for airlines and consumer discretionary (the regime's overweights) through lower input costs, but at these levels, $60 WTI also signals demand destruction fears or OPEC supply dynamics that speak to a slowing global economy. Gold pulling back 0.41% to $3,318 after its historic run is a minor consolidation, not a reversal — geopolitical and dollar-weakness bids remain structurally intact. Bitcoin -0.73% and Ethereum flat suggest crypto is not providing risk-on leadership.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors: The Contradiction Matrix",
+          "content": "Multiple contradictions demand caution today. (1) VIX at 24.17 is declining but remains in the 'elevated' band — options markets are still pricing meaningful tail risk. (2) International markets are mildly green (DAX +0.69%, FTSE +0.55%, Nikkei +0.38%) which provides some macro cover, but Shanghai -0.05% and Hang Seng barely positive suggest Asian risk appetite is not confirming the European recovery tone. (3) The extreme fear reading (F&G: 0) means sentiment is maximally bearish — historically a contrarian buy signal — but the 0% above 200 DMA breadth means the technicals don't support a sustained reversal yet. Sentiment can stay depressed while prices continue distributing. (4) Five consecutive up days into a 52-week low zone with overbought short-term conditions means mean-reversion risk is high for Monday. The path of least resistance for a weak open or early fade is elevated. The regime penalty on both longs and shorts reflects this paralysis — the market is in a resolution zone but the direction is not yet confirmed.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Continuation Rally Attempt — Bulls Push Through Overbought Resistance",
+          "scenarios": [
+            {
+              "condition": "If S&P opens with follow-through above Friday's close, Russell sustains leadership, and VIX drops below 22",
+              "implication": "Short-covering continues, but without breadth confirmation (0% above 200 DMA), any extension is likely to be short-lived and sector-narrow. Real estate and utilities would extend on rate-decline momentum. Tech would need to re-join for the move to be credible.",
+              "trade": "Regime penalizes longs -5 conviction. If forced to participate, XLRE or XLU on a pullback to intraday VWAP with tight stops — scale targets 0.7x normal. Avoid chasing Semis or high-beta Nasdaq names on a 6th consecutive up day near 52-week lows. Conviction must clear 78 before any entry."
+            }
+          ]
+        },
+        {
+          "event": "Mean Reversion / Bull Trap — 5-Day Rally Exhausts",
+          "scenarios": [
+            {
+              "condition": "If S&P opens flat-to-down and fails to reclaim the prior day's high within the first 30 minutes, with USD/JPY continuing to weaken and VIX not declining further",
+              "implication": "The 7.18% 5-day relief rally stalls at resistance near the 52-week low zone. Weak breadth was the tell — distribution was occurring beneath the surface. A reversal here would be technically significant and could retest the prior lows. XLK and SMH would lead the decline.",
+              "trade": "Short side is equally penalized (-5 conviction). In this environment, the most actionable posture is to HOLD CASH and let the setup clarify. If actively positioning for a fade, inverse ETFs (SQQQ, SDS) with very small size and 0.7x scaled targets are the instrument — not individual short names in a volatile tape. This scenario requires the 78-conviction threshold to be met on the short side, which means waiting for multiple confirming signals: VIX bid, USD/JPY break below 141.50, and S&P failure at a defined intraday level."
+            }
+          ]
+        },
+        {
+          "event": "Macro Catalyst Shock — Yen / Rates Dislocation Accelerates",
+          "scenarios": [
+            {
+              "condition": "If USD/JPY breaks below 141.00 (accelerating yen strength) or 10Y yield drops sharply toward 4.00% on unexpected macro data or Fed commentary over the weekend",
+              "implication": "Carry trade unwind accelerates, creating correlated selling across equities, particularly high-beta and leveraged names. This is the scenario where 'range-bound' breaks to the downside and the extreme fear reading becomes self-reinforcing. Gold would likely bid strongly while oil could continue lower. Japanese exporters and global equity correlations tighten negatively.",
+              "trade": "This is a tail risk scenario, not a base case, but it is the highest-consequence outcome given current yen positioning. Gold (GLD) as a defensive long retains structural support — it is the cleanest hedge in this environment. Airlines (regime overweight) paradoxically could hold up if oil continues falling, creating a rare pocket of relative strength. Do not add equity risk ahead of this potential catalyst. Monitor the 141.50 USD/JPY level as the tripwire."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [],
+  "outcomes": [],
+  "scores": {
+    "directionAccuracy": 0,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 0,
+    "profitFactor": 0,
+    "winRate": 0,
+    "totalScore": 50
+  },
+  "dimensionAnalysis": {},
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.12,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.15,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.13,
+    "timingUrgency": 0.1
+  }
+}

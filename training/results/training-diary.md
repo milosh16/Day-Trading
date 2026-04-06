@@ -1110,3 +1110,161 @@
 
 ---
 
+## Day 41/500 — Tuesday, August 12, 2025
+
+### Recommendations (1)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| PLUG | long | $1.55 | $1.85 | $1.38 | 78 | Plug Power posted a decisive Q2 beat ($174M vs $158M est) wi... |
+
+### Actual Outcomes
+
+| Symbol | Open | High | Low | Close | Direction | Target Hit | Stop Hit | Return |
+|--------|------|------|-----|-------|-----------|------------|----------|--------|
+| PLUG | $1.56 | $1.72 | $1.43 | $1.65 | Correct | No | No | +6.45% |
+
+- **PLUG:** 3-day window (2025-08-12, 2025-08-13, 2025-08-14). Open $1.56, High $1.72, Low $1.43, Close $1.65.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 100.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 100.0% |
+| Avg Return | +6.45% |
+| Profit Factor | 10 |
+| **Composite Score** | **75/100** |
+
+### Dimension Analysis
+
+| Dimension | Avg (Winners) | Avg (Losers) | Predictive Power |
+|-----------|---------------|--------------|------------------|
+| catalystClarity | 88 | 0 | 100 (strong) |
+| technicalSetup | 65 | 0 | 100 (strong) |
+| riskReward | 76 | 0 | 100 (strong) |
+| volumeLiquidity | 78 | 0 | 100 (strong) |
+| marketAlignment | 78 | 0 | 100 (strong) |
+| informationEdge | 75 | 0 | 100 (strong) |
+| timingUrgency | 80 | 0 | 100 (strong) |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 15.0% | marketAlignment: 15.0% | informationEdge: 13.0% | timingUrgency: 10.0%*
+
+---
+
+## Day 42/500 — Wednesday, January 29, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 15.0% | marketAlignment: 15.0% | informationEdge: 13.0% | timingUrgency: 10.0%*
+
+---
+
+## Day 43/500 — Thursday, July 31, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 15.0% | marketAlignment: 15.0% | informationEdge: 13.0% | timingUrgency: 10.0%*
+
+---
+
+## Day 44/500 — Tuesday, August 20, 2024
+
+### Recommendations (3)
+
+| Symbol | Direction | Entry | Target | Stop | Conviction | Thesis |
+|--------|-----------|-------|--------|------|------------|--------|
+| MDT | long | $87 | $91.5 | $84.5 | 80 | Medtronic delivered a clean pre-market beat (adj. EPS $1.23 ... |
+| LOW | short | $231 | $219 | $238 | 78 | Lowe's Q2 2024 results delivered a headline EPS beat but the... |
+| VNQ | long | $92.5 | $96 | $90 | 76 | Vanguard Real Estate ETF is the cleanest expression of the d... |
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 15.0% | marketAlignment: 15.0% | informationEdge: 13.0% | timingUrgency: 10.0%*
+
+---
+
+## Day 45/500 — Tuesday, July 15, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 15.0% | marketAlignment: 15.0% | informationEdge: 13.0% | timingUrgency: 10.0%*
+
+---
+
+## Day 46/500 — Monday, April 28, 2025
+
+**Recommendations:** None — no setups met the conviction threshold.
+
+**Result:** Stayed flat. Sometimes the best trade is no trade.
+
+### Accuracy
+
+| Metric | Value |
+|--------|-------|
+| Direction Accuracy | 0.0% |
+| Target Hit Rate | 0.0% |
+| Stop Hit Rate | 0.0% |
+| Win Rate | 0.0% |
+| Avg Return | +0% |
+| Profit Factor | 0 |
+| **Composite Score** | **50/100** |
+
+*Weights used: catalystClarity: 20.0% | technicalSetup: 12.0% | riskReward: 15.0% | volumeLiquidity: 15.0% | marketAlignment: 15.0% | informationEdge: 13.0% | timingUrgency: 10.0%*
+
+---
+

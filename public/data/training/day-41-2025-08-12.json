@@ -1,0 +1,326 @@
+{
+  "trialId": 41,
+  "date": "2025-08-12",
+  "dateDisplay": "Tuesday, August 12, 2025",
+  "generatedAt": "2026-04-05T23:28:07.812Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 1.13,
+      "nasdaqFuturesChange": 1.39,
+      "dowFuturesChange": 1.1,
+      "russellFuturesChange": 2.99,
+      "vixFuturesChange": -1.63,
+      "vix": 14.49,
+      "vixChange": -1.63,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 18.34,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.29,
+      "tenYearYieldChange": 0.47,
+      "twoYearYield": 3.91,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.89,
+      "threeMonthYield": 4.13,
+      "twoTenSpread": 0.38,
+      "threeMoTenYrSpread": 0.16,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 97.84,
+      "dollarIndexChange": -0.27,
+      "eurUsd": 1.17,
+      "eurUsdChange": 0.5,
+      "usdJpy": 147.76,
+      "usdJpyChange": -0.25,
+      "usdCny": 7.18,
+      "usdCnyChange": -0.13,
+      "oilWTI": 62.65,
+      "oilChange": -0.82,
+      "brentOil": 65.63,
+      "brentOilChange": -0.74,
+      "natGasChange": 0.71,
+      "goldPrice": 3358.7,
+      "goldChange": 0.29,
+      "silverChange": 1.58,
+      "copperChange": -0.59,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 1.3,
+      "daxChange": 0.67,
+      "ftseChange": 0.19,
+      "shanghaiChange": 0.48,
+      "hangSengChange": 2.58,
+      "kospiChange": 1.08,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 98,
+      "spreadChange": -0.22,
+      "igSpread": -19.36,
+      "igSpreadChange": -0.09,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.01,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1.55,
+      "xlfChange": 1.22,
+      "xleChange": 0.49,
+      "xlvChange": 0.69,
+      "xlpChange": 0.27,
+      "xluChange": 0.43,
+      "xlreChange": 0.17,
+      "xliChange": 1.04,
+      "xlbChange": 1.3,
+      "xlcChange": 1.91,
+      "xlyChange": 1.06,
+      "smhChange": 2.28,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 2.64,
+      "ethereumChange": 3.6,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 0,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 2.33,
+      "sp20DayReturn": 3.24,
+      "nasdaqVsRussell5d": 1.09,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-on",
+      "confidence": 68,
+      "directionalBias": "38",
+      "volatilityRegime": "normal",
+      "stressIndex": 10,
+      "riskAppetiteIndex": 74,
+      "sectorTilts": {
+        "tech": "overweight",
+        "consumer-discretionary": "overweight",
+        "utilities": "underweight",
+        "semiconductors": "overweight",
+        "materials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "Markets are staging a broad-based risk-on rally with the Russell 2000 leading at +2.99%, semis surging +2.28%, and international markets joining in — all while VIX compresses to 14.49 and stress reads just 10/100. The setup is textbook cyclical rotation: small caps, growth, and risk assets outperforming defensives across the board, with a weaker dollar and recovering crypto adding fuel. One critical tension exists however: Fear & Greed sits at extreme fear (0) and the S&P is near 52-week lows with 0% of names above the 200 DMA — suggesting this may be a relief/short-covering rally rather than a durable trend reversal.",
+      "marketCondition": "bullish",
+      "sections": [
+        {
+          "title": "🎯 Overall Market Posture & Regime",
+          "content": "SIGNAL classifies the regime as RISK-ON with 68% confidence, directional bias +38. Futures opened +1.26%, the VIX dropped 1.63% to 14.49 in contango (a healthy vol structure), and market stress reads just 10/100 against a risk appetite score of 74/100. The contradiction to flag immediately: while price action is aggressively bullish — small caps ripping +2.99%, all 11 sectors green — the underlying breadth is broken. Zero percent of S&P names are above the 200 DMA, and the S&P itself sits near 52-week lows. This profile matches a bear market relief rally or a technical flush recovery rather than a clean breakout. Conviction on longs carries no penalty today per regime rules, while shorts face a -8 penalty. Trade with the tape, but size appropriately — this is a high-velocity, potentially low-durability move.",
+          "importance": "high"
+        },
+        {
+          "title": "📊 Sector Rotation & Relative Strength",
+          "content": "The sector scorecard tells a clean cyclical rotation story. Semis (SMH +2.28%) lead everything — the AI/tech bellwether is acting as a risk appetite proxy and its outperformance validates the regime call. Comm Services (XLC +1.91%) and Tech (XLK +1.55%) follow, confirming growth over value at the margin. Materials (XLB +1.30%) is the sleeper — its strength alongside Hang Seng +2.58% and Shanghai +0.48% signals a China recovery trade is being priced in, supporting the regime's materials overweight. Financials (XLF +1.22%) and Industrials (XLI +1.04%) confirm cyclical breadth. Defensives are participating but lagging badly: Utilities +0.43%, Staples +0.27%, Real Estate +0.17%. No sector is red. When defensives lag this decisively while cyclicals surge, the rotation is unambiguous — money is moving out of safety and into growth. The regime tilts — overweight tech, semis, discretionary, materials; underweight utilities — are fully validated by today's tape.",
+          "importance": "high"
+        },
+        {
+          "title": "📈 Yield Curve & Rate Signals",
+          "content": "The 10-year yield ticked up 4.7bps to 4.29% even as equities rallied — this is the 'good inflation' or 'growth optimism' dynamic where rates rise because the economy looks stronger, not because inflation is scaring the bond market. The 2-10 spread is +38bps (positively sloped), and the 3M-10Y is +16bps — both segments of the curve are now in normal positive territory, eliminating inversion as a recession signal in the near term. A normal, upward-sloping curve in a risk-on tape is constructive for financials (XLF +1.22% confirms this — steeper curves boost bank net interest margins). Watch whether the 10Y can hold above 4.25%: a sustained move toward 4.40-4.50% would eventually pressure high-multiple tech, but at 4.29% we're not there yet. The curve's normalization is quietly one of the most bullish macro reads in today's data.",
+          "importance": "high"
+        },
+        {
+          "title": "💱 Currency & Commodity Flows",
+          "content": "Dollar weakness (DXY 97.84, -0.27%) is a key enabler of this rally. A softer dollar is simultaneously: bullish for multinational earnings, bullish for commodities priced in USD, bullish for EM and international markets, and supportive of the China recovery trade. EUR/USD at 1.17 reflects dollar softness as a trend, not a one-day event. USD/JPY at 147.76 is worth monitoring — JPY has been strengthening in the broader trend, and any acceleration toward 145 could trigger carry unwind stress. Gold (+0.29% to $3,358) is holding near all-time highs even in a risk-on tape — this is unusual and suggests persistent safe-haven demand as a hedge, likely geopolitical/macro insurance rather than fear-driven buying. Oil's decline (-0.82% to $62.65) is a two-sided signal: it reduces inflation pressure (good for Fed optionality) but signals softer global demand expectations. Bitcoin +2.64% and Ethereum +3.6% confirm the risk-on theme and suggest retail/speculative capital is re-engaging. Crypto leading is often an early signal of risk appetite expansion.",
+          "importance": "medium"
+        },
+        {
+          "title": "⚠️ Risk Factors & Contradictions",
+          "content": "Three risk factors demand respect today. First, the Fear & Greed Index at 0 (extreme fear) is the single biggest contradiction in this data set. Price action is bullish, but sentiment is historically capitulatory — this could mean the rally is the beginning of a recovery FROM fear (bullish), or that the move is a dead-cat bounce being sold into by institutional players (bearish). History favors the former in multi-day sequences, but one day does not confirm. Second, 0% of S&P names above the 200 DMA means no technical confirmation of a trend change — the S&P near 52-week lows with this breadth reading means the index is recovering from a deeply oversold state, not building on strength. Third, the Russell leading by 1.73pp over large caps suggests short-covering mechanics in the most-beaten-down names rather than pure fundamental buying. Small caps are NOT earnings leaders in an uncertain rate environment — their outperformance today is more technical than fundamental. International participation (Nikkei +1.3%, Hang Seng +2.58%) is genuine and constructive; this is not a US-only bounce.",
+          "importance": "high"
+        }
+      ],
+      "scenarios": [
+        {
+          "event": "Relief Rally Gains Traction — Fear Unwind Continues",
+          "scenarios": [
+            {
+              "condition": "If breadth expands over the next 2-3 sessions (% above 200 DMA begins recovering from 0%), volume confirms the move, and VIX continues to compress toward 12-13",
+              "implication": "The extreme fear reading (F&G: 0) marks a sentiment low, and this rally evolves from short-covering into genuine risk re-entry. Small caps sustain leadership, semis extend gains, and the S&P reclaims technical levels that bring more systematic buyers off the sidelines.",
+              "trade": "Overweight SMH (semis leading, AI demand intact), XLY (discretionary benefits from rate stability + risk appetite), and XLB (materials — China recovery trade with dollar tailwind). Consider IWM calls if Russell sustains above prior resistance. Reduce hedges and trail stops wider to allow for volatility."
+            },
+            {
+              "condition": "If fear sentiment remains at extremes and the rally stalls within 1-2 days with volume failing to confirm",
+              "implication": "This is a bear market bounce being distributed into by institutional sellers. The 0% above 200 DMA reading was always a warning — without breadth improvement, the rally lacks structural support and fades.",
+              "trade": "Fade strength into resistance with defined-risk put spreads on SPY or QQQ. Maintain defensive exposure in GLD (gold near ATH suggests smart money is hedging). Do not chase momentum names without stop discipline."
+            }
+          ]
+        },
+        {
+          "event": "China Recovery Trade Accelerates",
+          "scenarios": [
+            {
+              "condition": "If Hang Seng and Shanghai continue to outperform (+2.58% and +0.48% today), dollar stays soft (DXY below 98), and commodity demand signals pick up",
+              "implication": "Materials (XLB already +1.30%), industrial metals, and multinational consumer names benefit from a genuine China demand recovery narrative. This is a multi-week trade if confirmed. Dollar weakness amplifies returns for USD-denominated investors in international assets.",
+              "trade": "Increase XLB exposure (materials overweight per regime). Consider FXI or KWEB for direct China exposure with tight stops. Copper-related names (FCX) and mining ETFs benefit. Pair with short DXY expression (long EUR/USD or commodity FX) if you have currency capability."
+            },
+            {
+              "condition": "If China data disappoints or geopolitical friction re-escalates, causing Hang Seng to reverse",
+              "implication": "Materials leadership evaporates quickly, global risk-on thesis weakens, and the dollar may catch a safety bid reversing the currency tailwind.",
+              "trade": "Cut materials exposure on any Hang Seng reversal below yesterday's levels. Rotate back toward domestic-facing tech and semis (AI demand is a US-centric structural story less dependent on China recovery)."
+            }
+          ]
+        },
+        {
+          "event": "Rate Sensitivity Test — 10Y Yield Continues Climbing",
+          "scenarios": [
+            {
+              "condition": "If the 10-year yield pushes through 4.40-4.50% on strong economic data (CPI, retail sales this week), testing the market's tolerance for higher rates in a risk-on environment",
+              "implication": "High-duration growth stocks and semis come under pressure as discount rates reprice. The current rally's leadership (XLK, SMH, XLC) is most vulnerable. Financials (XLF) would benefit from steeper curve but risk appetite contraction offsets that. Real estate (XLRE +0.17% already the laggard) gets crushed.",
+              "trade": "Hedge tech/semi longs with rate-sensitive put protection if 10Y breaks 4.40%. Rotate within equities from long-duration growth to value cyclicals (energy, industrials, financials). Watch TLT as a signal — if bonds can't catch a bid even on equity weakness, the regime may be shifting."
+            },
+            {
+              "condition": "If yields stabilize or dip (inflation data comes in soft), confirming the Fed has rate-cut optionality",
+              "implication": "The Goldilocks scenario: soft rates + risk-on equity environment = extended rally with the full growth stack participating. This would be the highest-conviction environment for the current regime's overweights.",
+              "trade": "Add to quality growth names in tech and semis. Extend duration on any rate dip. The 2-10 spread normalization (+38bps) combined with soft inflation would be the clearest green light for a sustained recovery from 52-week lows."
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "PLUG",
+      "direction": "long",
+      "entryPrice": 1.55,
+      "targetPrice": 1.85,
+      "stopLoss": 1.38,
+      "thesis": "Plug Power posted a decisive Q2 beat ($174M vs $158M est) with electrolyzer revenue tripling YoY and gross margins inflecting from -92% to -31% — a structural turning point. Stock rose 5.63% in after-hours, and the beaten-down base near 52-week lows creates asymmetric upside if the margin narrative gains traction in today's risk-on environment.",
+      "catalyst": "Aug 11 after-hours Q2 earnings: $174M revenue (beat by $15.5M/+10%), electrolyzer revenue tripled YoY, gross margin inflection from -92% to -31%, Q4 gross margin neutrality target reaffirmed.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": "Hard revenue beat confirmed ($174M vs $158M). Electrolyzer tripling and margin trajectory are clear, quantifiable, and represent a structural inflection — not a one-time item."
+        },
+        "technicalSetup": {
+          "score": 65,
+          "reasoning": "Stock near low end of 52-week range ($0.69-$3.32). AH move to $1.55 signals momentum building from a compressed base. High beta amplifies regime gains."
+        },
+        "riskReward": {
+          "score": 76,
+          "reasoning": "Entry $1.55, target $1.85 (+19.4%), stop $1.38 (-10.9%) = ~1.8:1 R/R. Asymmetric given beaten-down base and potential for re-rating on margin story."
+        },
+        "volumeLiquidity": {
+          "score": 78,
+          "reasoning": "PLUG trades 20-50M shares daily with strong retail following. Earnings events see volume spikes of 3-5x. High liquidity despite low share price."
+        },
+        "marketAlignment": {
+          "score": 78,
+          "reasoning": "Risk-on regime favors speculative growth and small caps. Clean energy intersects with materials overweight thesis. Beat-driven momentum fits the day's narrative."
+        },
+        "informationEdge": {
+          "score": 75,
+          "reasoning": "Market may be slow to fully price the margin improvement story given PLUG's history of disappointments. The -92% to -31% gross margin jump is under-appreciated and creates a repricing opportunity."
+        },
+        "timingUrgency": {
+          "score": 80,
+          "reasoning": "Post-earnings AH move of +5.63% continues at open. Entry urgency is high as first-hour volume will determine whether the move sustains or fades."
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "PLUG",
+      "openPrice": 1.56,
+      "highPrice": 1.72,
+      "lowPrice": 1.43,
+      "closePrice": 1.65,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.45,
+      "notes": "3-day window (2025-08-12, 2025-08-13, 2025-08-14). Open $1.56, High $1.72, Low $1.43, Close $1.65."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 100,
+    "targetHitRate": 0,
+    "stopHitRate": 0,
+    "avgReturnPercent": 6.45,
+    "profitFactor": 10,
+    "winRate": 100,
+    "totalScore": 75
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 88,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 65,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "riskReward": {
+      "avgScoreWinners": 76,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 78,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 78,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "informationEdge": {
+      "avgScoreWinners": 75,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 80,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.12,
+    "riskReward": 0.15,
+    "volumeLiquidity": 0.15,
+    "marketAlignment": 0.15,
+    "informationEdge": 0.13,
+    "timingUrgency": 0.1
+  }
+}
