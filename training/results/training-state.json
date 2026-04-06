@@ -52861,6 +52861,336 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10013,
+      "date": "2025-01-10",
+      "generatedAt": "2026-04-06T22:49:28.765Z",
+      "signals": {
+        "spFuturesChange": -1.54,
+        "nasdaqFuturesChange": -1.63,
+        "dowFuturesChange": -1.63,
+        "russellFuturesChange": -2.22,
+        "vixFuturesChange": 10.4,
+        "vix": 19.54,
+        "vixChange": 10.4,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 20.97,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.78,
+        "tenYearYieldChange": 1.77,
+        "twoYearYield": 4.48,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.97,
+        "threeMonthYield": 4.21,
+        "twoTenSpread": 0.3,
+        "threeMoTenYrSpread": 0.57,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 109.65,
+        "dollarIndexChange": 0.43,
+        "eurUsd": 1.03,
+        "eurUsdChange": -0.17,
+        "usdJpy": 158.05,
+        "usdJpyChange": -0.09,
+        "usdCny": 7.33,
+        "usdCnyChange": 0.01,
+        "oilWTI": 76.57,
+        "oilChange": 3.58,
+        "brentOil": 79.76,
+        "brentOilChange": 3.69,
+        "natGasChange": 7.78,
+        "goldPrice": 2708.5,
+        "goldChange": 0.92,
+        "silverChange": 0.97,
+        "copperChange": -0.12,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -1.05,
+        "daxChange": -0.5,
+        "ftseChange": -0.86,
+        "shanghaiChange": -1.33,
+        "hangSengChange": -0.92,
+        "kospiChange": -0.24,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 107.35,
+        "spreadChange": 0.52,
+        "igSpread": -10.8,
+        "igSpreadChange": 0.58,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1.01,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": -2.18,
+        "xlfChange": -2.41,
+        "xleChange": 0.41,
+        "xlvChange": -0.56,
+        "xlpChange": -1.34,
+        "xluChange": -0.57,
+        "xlreChange": -2.42,
+        "xliChange": -1.12,
+        "xlbChange": -1.02,
+        "xlcChange": -1.49,
+        "xlyChange": -0.98,
+        "smhChange": -2,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -0.14,
+        "ethereumChange": 0.45,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": true,
+        "econDataType": "NFP",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 19,
+        "daysToNextCPI": 5,
+        "daysToNextNFP": 0,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 1,
+        "sp5DayReturn": -0.71,
+        "sp20DayReturn": 0,
+        "nasdaqVsRussell5d": 1.28,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "event-driven",
+        "confidence": 70,
+        "directionalBias": "-24",
+        "volatilityRegime": "normal",
+        "stressIndex": 26,
+        "riskAppetiteIndex": 25,
+        "sectorTilts": {}
+      },
+      "briefing": {
+        "summary": "Strongly bearish for equities on Jan 10 due to blowout Dec NFP (256K vs 155K expected) crushing rate cut hopes, hawkish FOMC minutes from Jan 8, 10Y Treasury yields spiking to highest since late 2023, and University of Michigan inflation expectations jumping to 3.3%. Energy is the standout long sector due to Biden's sweeping Russia oil sanctions announced same morning. Market closed: S&P -1.54%, Dow -697pts, Nasdaq -1.63%.",
+        "marketCondition": "neutral",
+        "sections": [
+          {
+            "title": "Geopolitics",
+            "content": "Biden administration announced its most aggressive Russia sanctions package on Jan 10, targeting oil majors Gazprom Neft and Surgutneftegas, 183 shadow fleet tankers, LNG producers, and energy traders. Expected to cost Russia billions/month. Timed as parting blow before Trump inauguration Jan 20. Russia-Ukraine war ongoing with no ceasefire in sight. Israel-Hamas conflict continues in Gaza. These sanctions directly tightened global oil supply expectations.",
+            "importance": "medium"
+          },
+          {
+            "title": "Macro",
+            "content": "FOMC minutes released Jan 8 showed hawkish pivot: only 2 rate cuts expected in 2025 (down from 4 at Sept meeting). Nearly 100% probability of no cut at Jan 28-29 meeting. Core PCE running at 2.4%, Fed doesn't see 2% target until 2027. Dec NFP released Jan 10 at 8:30 AM: 256K jobs vs 155K expected (massive upside surprise). Unemployment fell to 4.1% from 4.2%. University of Michigan consumer sentiment missed at 73.2 vs 74 expected, with 1-year inflation expectations surging to 3.3% from 2.8%. 10Y Treasury yield spiked to highest level since late 2023. Initial jobless claims hit 2-year low of 201K in early January.",
+            "importance": "medium"
+          },
+          {
+            "title": "Corporate",
+            "content": "Delta Air Lines (DAL) reported strong Q4 2024 earnings on Jan 10 with bullish 2025 guidance: EPS >$7.35, pre-tax income >$6B, calling it potentially the best year in Delta's 100-year history. Walgreens (WBA) reported Q1 FY2025 earnings Jan 10: adjusted EPS $0.51 vs $0.37 expected, revenue $39.5B vs $37.1B expected, stock surged 27%. Constellation Energy (CEG) announced $26.6B Calpine acquisition Jan 10, stock surged ~15% pre-market. NVIDIA had sell-the-news reaction post-CES keynote Jan 6, stock fell ~6% on Jan 7.",
+            "importance": "medium"
+          },
+          {
+            "title": "TechAI",
+            "content": "NVIDIA CES 2025 keynote Jan 6: RTX 5090 announced ($1,999, 92B transistors, 2x RTX 4090 performance), NVIDIA Cosmos world foundation model for robotics, GB10 AI superchip, DRIVE Hyperion AV platform. Despite impressive announcements, stock sold off ~6% on Jan 7 in classic sell-the-news pattern. Gene Munster and some analysts expressed mild disappointment that keynote focused on gaming/consumer rather than enterprise AI. However, other analysts said don't read into it and remained bullish on AI supercycle thesis.",
+            "importance": "medium"
+          },
+          {
+            "title": "Energy",
+            "content": "Oil prices surged ~3.7% on Jan 10 due to Biden's sweeping Russia sanctions. Brent closed at $79.76/bbl, WTI at $76.57/bbl -- highest levels since October 2024. Cold weather across Northern Hemisphere boosting heating demand. January 2025 was the coldest in 30+ years by gas-weighted heating degree days. Natural gas prices rose sharply, with Henry Hub futures peaking at $4.23/MMBtu on Jan 16. Natural gas demand hit all-time high of 183 Bcf on Jan 21. Record storage withdrawals reported.",
+            "importance": "medium"
+          },
+          {
+            "title": "Policy",
+            "content": "Trump inauguration set for Jan 20, 2025. Markets pricing in tariff risks: Trump's America First Trade Policy memo expected Day 1. Potential 25% tariffs on Mexico/Canada, 10% on China. These tariff fears adding to inflation concerns. Fed officials flagging potential inflationary effects of trade and immigration policy changes. Biden's parting Russia sanctions creating geopolitical uncertainty for incoming administration. SEC enforcement actions ongoing but no major Jan 10 catalysts.",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "XOM",
+          "direction": "long",
+          "entryPrice": 106,
+          "targetPrice": 112,
+          "stopLoss": 103.5,
+          "thesis": "Global event: Biden sanctions on Russian oil majors + 183 shadow fleet tankers -> Sector impact: Oil prices surge to 3-month highs, Brent breaks $80 -> Company exposure: XOM is #1 US integrated oil major with highest absolute production volume -> Trade thesis: Supply squeeze + demand boost from cold weather creates multi-week uptrend in energy. XOM also benefits from potential Trump drill-baby-drill policy post-inauguration Jan 20.",
+          "catalyst": "Biden's sweeping Russia oil sanctions announced Jan 10 morning targeting Gazprom Neft, Surgutneftegas, and 183 tankers. Oil surging 3.7%. XOM is the largest US integrated oil company and primary beneficiary of Russian supply displacement. Cold weather across Northern Hemisphere provides additional demand support.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 95,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 85,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TLT",
+          "direction": "short",
+          "entryPrice": 87.5,
+          "targetPrice": 84,
+          "stopLoss": 89.5,
+          "thesis": "Macro event: Blowout NFP + hawkish FOMC minutes + surging inflation expectations -> Market impact: 10Y yield at multi-month highs, rate cut repricing accelerating -> Instrument exposure: TLT holds 20+ year duration Treasuries, most sensitive to long-end yield moves -> Trade thesis: The combination of strong labor market, sticky inflation, hawkish Fed, and tariff-driven inflation fears creates sustained selling pressure in long bonds. Jan 28-29 FOMC meeting (no cut expected) will reinforce bearish bond narrative.",
+          "catalyst": "10Y Treasury yield spiking to highest level since late 2023 on blowout Dec NFP (256K vs 155K expected). Rate cut expectations being demolished: from 4 cuts to 2 cuts expected in 2025. University of Michigan inflation expectations jumped to 3.3% from 2.8%. Bond selloff has momentum.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 95,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 85,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "XOM",
+          "openPrice": 108.7,
+          "highPrice": 110.1,
+          "lowPrice": 105.78,
+          "closePrice": 109.72,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.51,
+          "notes": "3-day window (2025-01-10, 2025-01-13, 2025-01-14). Open $108.7, High $110.1, Low $105.78, Close $109.72."
+        },
+        {
+          "symbol": "TLT",
+          "openPrice": 85.28,
+          "highPrice": 85.85,
+          "lowPrice": 84.89,
+          "closePrice": 85.29,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.53,
+          "notes": "3-day window (2025-01-10, 2025-01-13, 2025-01-14). Open $85.28, High $85.85, Low $84.89, Close $85.29."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 100,
+        "targetHitRate": 0,
+        "stopHitRate": 0,
+        "avgReturnPercent": 3.02,
+        "profitFactor": 10,
+        "winRate": 100,
+        "totalScore": 92,
+        "benchmarkReturn": -0.92,
+        "alpha": 3.94
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 90,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 75,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "riskReward": {
+          "avgScoreWinners": 75,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 95,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 87.5,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "informationEdge": {
+          "avgScoreWinners": 70,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 85,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -52874,7 +53204,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T22:39:06.486Z",
+  "lastUpdatedAt": "2026-04-06T22:49:28.802Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -53320,7 +53650,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 12,
+  "fullDepthCurrentTrial": 13,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -53436,7 +53766,8 @@
     "2025-10-16",
     "2025-07-08",
     "2024-08-16",
-    "2026-01-15"
+    "2026-01-15",
+    "2025-01-10"
   ],
   "dateSequence": [
     "2025-09-09",
