@@ -139,4 +139,9 @@ export interface TrainingState {
   regimeWeightTable?: RegimeWeightTable;  // regime-conditional weights (v2)
   dateSequence?: string[];                // deterministic date list
   completedDates?: string[];              // dates already tested
+  // Full-depth training (separate counters, seed=100)
+  fullDepthCurrentTrial?: number;
+  fullDepthTotalTrials?: number;
+  fullDepthDateSequence?: string[];
+  fullDepthCompletedDates?: string[];
 }

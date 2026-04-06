@@ -1,8 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Card, { StatusBadge } from "@/components/Card";
-import type { MarketBriefing, BriefingSection, ScenarioAnalysis } from "@/lib/types";
+import type { BriefingSection, ScenarioAnalysis } from "@/lib/types";
+
+/* ================================================================
+   TYPES
+   ================================================================ */
 
 interface StoredBriefing {
   id: string;
@@ -27,82 +31,237 @@ interface StoredBriefing {
   };
 }
 
+interface RegimeData {
+  regime: string;
+  volatilityRegime: string;
+  confidence: number;
+  directionalBias: number;
+  keyFactors: string[];
+  sectorTilts: { sector: string; bias: string; reason: string }[];
+  convictionModifiers: {
+    longPenalty: number;
+    shortPenalty: number;
+    targetMultiplier: number;
+    minConvictionOverride?: number;
+  };
+  leadingIndicators?: {
+    stressIndex: number;
+    stressIndexTrend: string;
+    stressDaysRising: number;
+    riskAppetiteIndex: number;
+    riskAppetiteTrend: string;
+    daysOfHistory: number;
+    patterns: { name: string; severity: string; description: string; actionableInsight: string }[];
+  };
+}
+
+interface TrialSummary {
+  trialId: number;
+  date: string;
+  regime: string;
+  score: number;
+  winRate: number;
+  profitFactor: number;
+  numRecs: number;
+  hasOpusReview: boolean;
+}
+
+interface TrainingIndex {
+  totalTrials: number;
+  lastUpdated: string;
+  bestScore: number;
+  currentWeights: Record<string, number>;
+  trials: TrialSummary[];
+}
+
+interface Recommendation {
+  symbol: string;
+  direction: "long" | "short";
+  entryPrice: number;
+  targetPrice: number;
+  stopLoss: number;
+  thesis: string;
+  catalyst: string;
+  conviction: Record<string, { score: number; reasoning: string }>;
+}
+
+interface Outcome {
+  symbol: string;
+  openPrice: number;
+  highPrice: number;
+  lowPrice: number;
+  closePrice: number;
+  hitTarget: boolean;
+  hitStop: boolean;
+  directionCorrect: boolean;
+  actualReturnPercent: number;
+  notes: string;
+}
+
+interface TrialDetail {
+  trialId: number;
+  date: string;
+  dateDisplay: string;
+  generatedAt: string;
+  pipeline: {
+    signals: Record<string, unknown>;
+    regime: {
+      regime: string;
+      confidence: number;
+      directionalBias: string;
+      volatilityRegime: string;
+      stressIndex: number;
+      riskAppetiteIndex: number;
+      sectorTilts: Record<string, string>;
+    };
+    briefing: {
+      summary: string;
+      marketCondition: "bullish" | "bearish" | "neutral" | "volatile";
+      sections: { title: string; content: string; importance: string }[];
+      scenarios: { event: string; scenarios: { condition: string; implication: string; trade: string }[] }[];
+    };
+  };
+  recommendations: Recommendation[];
+  outcomes: Outcome[];
+  scores: {
+    directionAccuracy: number;
+    targetHitRate: number;
+    stopHitRate: number;
+    avgReturnPercent: number;
+    profitFactor: number;
+    winRate: number;
+    totalScore: number;
+  };
+  dimensionAnalysis: Record<string, { avgScoreWinners: number; avgScoreLosers: number; predictivePower: number }>;
+  weights: Record<string, number>;
+  revisedRecommendations?: Recommendation[];
+  opusReviewNotes?: string;
+  opusReviewTrial?: number;
+}
+
+interface HistoryEntry {
+  id: string;
+  date: string;
+  source: "live" | "training";
+  regime: string;
+  regimeConfidence?: number;
+  marketCondition: string;
+  summary: string;
+  score?: number;
+  numRecs: number;
+  winRate?: number;
+  hasOpusReview?: boolean;
+  trialId?: number;
+}
+
+type HistoryFilter = "all" | "live" | "training";
+type ViewState = "today" | "history" | "detail";
+
+/* ================================================================
+   HELPERS
+   ================================================================ */
+
+function scoreColor(score: number): string {
+  if (score >= 70) return "text-ios-green";
+  if (score >= 50) return "text-ios-orange";
+  return "text-ios-red";
+}
+
+function scoreBgColor(score: number): string {
+  if (score >= 70) return "bg-ios-green";
+  if (score >= 50) return "bg-ios-orange";
+  return "bg-ios-red";
+}
+
+function pctColor(value: number): string {
+  if (value > 0) return "text-ios-green";
+  if (value < 0) return "text-ios-red";
+  return "text-ios-gray";
+}
+
+function regimeBadgeClass(regime: string): string {
+  switch (regime) {
+    case "risk-on":
+      return "bg-ios-green/20 text-ios-green";
+    case "risk-off":
+      return "bg-ios-red/20 text-ios-red";
+    case "crisis":
+      return "bg-ios-red/30 text-ios-red";
+    case "event-driven":
+      return "bg-ios-orange/20 text-ios-orange";
+    default:
+      return "bg-ios-gray/20 text-ios-gray";
+  }
+}
+
+function formatDate(dateStr: string): string {
+  return new Date(dateStr + "T12:00:00").toLocaleDateString("en-US", {
+    weekday: "short",
+    month: "short",
+    day: "numeric",
+  });
+}
+
+function formatDateLong(dateStr: string): string {
+  return new Date(dateStr + "T12:00:00").toLocaleDateString("en-US", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+/* ================================================================
+   COMPONENT
+   ================================================================ */
+
 export default function BriefingPage() {
-  const [briefing, setBriefing] = useState<MarketBriefing | null>(null);
+  // --- Data state ---
+  const [todayBriefing, setTodayBriefing] = useState<StoredBriefing | null>(null);
+  const [regime, setRegime] = useState<RegimeData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // --- History state ---
+  const [historyEntries, setHistoryEntries] = useState<HistoryEntry[]>([]);
+  const [historyLoaded, setHistoryLoaded] = useState(false);
+  const [historyFilter, setHistoryFilter] = useState<HistoryFilter>("all");
+
+  // --- View state ---
+  const [viewState, setViewState] = useState<ViewState>("today");
+  const [selectedEntry, setSelectedEntry] = useState<HistoryEntry | null>(null);
+  const [selectedBriefing, setSelectedBriefing] = useState<StoredBriefing | null>(null);
+  const [selectedTrialDetail, setSelectedTrialDetail] = useState<TrialDetail | null>(null);
+  const [loadingDetail, setLoadingDetail] = useState(false);
+
+  // --- Expandable sections ---
   const [expandedSections, setExpandedSections] = useState<Set<number>>(new Set());
 
-  // History state
-  const [showHistory, setShowHistory] = useState(false);
-  const [historyDates, setHistoryDates] = useState<string[]>([]);
-  const [historyBriefing, setHistoryBriefing] = useState<StoredBriefing | null>(null);
-  const [selectedDate, setSelectedDate] = useState<string | null>(null);
-  const [loadingHistory, setLoadingHistory] = useState(false);
-
-  // Regime state
-  const [regime, setRegime] = useState<{
-    regime: string;
-    volatilityRegime: string;
-    confidence: number;
-    directionalBias: number;
-    keyFactors: string[];
-    sectorTilts: { sector: string; bias: string; reason: string }[];
-    convictionModifiers: {
-      longPenalty: number;
-      shortPenalty: number;
-      targetMultiplier: number;
-      minConvictionOverride?: number;
-    };
-    leadingIndicators?: {
-      stressIndex: number;
-      stressIndexTrend: string;
-      stressDaysRising: number;
-      riskAppetiteIndex: number;
-      riskAppetiteTrend: string;
-      daysOfHistory: number;
-      patterns: { name: string; severity: string; description: string; actionableInsight: string }[];
-    };
-  } | null>(null);
-
-  // Load on mount
+  // --- Load on mount ---
   useEffect(() => {
-    loadLatestBriefing();
-    loadRegime();
+    loadInitialData();
   }, []);
 
-  const loadRegime = async () => {
-    try {
-      const res = await fetch("/api/regime");
-      if (res.ok) {
-        const data = await res.json();
-        if (data.available !== false && data.regime) {
-          setRegime(data);
-        }
-      }
-    } catch { /* regime not available */ }
-  };
-
-  const loadLatestBriefing = async () => {
+  const loadInitialData = async () => {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch("/api/briefing");
-      const data = await res.json();
+      const [briefingRes, regimeRes] = await Promise.allSettled([
+        fetch("/api/briefing"),
+        fetch("/api/regime"),
+      ]);
 
-      if (data.id) {
-        setBriefing({
-          id: data.id,
-          timestamp: data.generatedAt,
-          summary: data.summary,
-          marketCondition: data.marketCondition,
-          sections: data.sections || [],
-          scenarios: data.scenarios || [],
-        });
-        setHistoryBriefing(data as StoredBriefing);
-      } else if (data.error) {
-        // No briefing available — show empty state
-        setError(null);
+      if (briefingRes.status === "fulfilled" && briefingRes.value.ok) {
+        const data = await briefingRes.value.json();
+        if (data.id) {
+          setTodayBriefing(data as StoredBriefing);
+        }
+      }
+
+      if (regimeRes.status === "fulfilled" && regimeRes.value.ok) {
+        const data = await regimeRes.value.json();
+        if (data.available !== false && data.regime) {
+          setRegime(data);
+        }
       }
     } catch {
       setError("Failed to load briefing. Pull to refresh.");
@@ -111,40 +270,127 @@ export default function BriefingPage() {
     }
   };
 
-  const loadHistory = async () => {
-    setLoadingHistory(true);
+  const loadHistory = useCallback(async () => {
+    if (historyLoaded) return;
     try {
-      const res = await fetch("/api/briefing?history=true");
-      if (res.ok) {
-        const data = await res.json();
-        setHistoryDates(data.dates || []);
+      const [briefingHistRes, trainingRes] = await Promise.allSettled([
+        fetch("/api/briefing?history=true"),
+        fetch("/api/training"),
+      ]);
+
+      const entries: HistoryEntry[] = [];
+
+      // Live briefing dates
+      if (briefingHistRes.status === "fulfilled" && briefingHistRes.value.ok) {
+        const data = await briefingHistRes.value.json();
+        const dates: string[] = data.dates || [];
+        for (const date of dates) {
+          // Fetch each date's briefing for summary info
+          try {
+            const res = await fetch(`/api/briefing?date=${date}`);
+            if (res.ok) {
+              const b = await res.json();
+              entries.push({
+                id: `live-${date}`,
+                date,
+                source: "live",
+                regime: "",
+                marketCondition: b.marketCondition || "neutral",
+                summary: b.summary || "",
+                score: b.accuracy?.overallScore,
+                numRecs: 0,
+                winRate: undefined,
+              });
+            }
+          } catch {
+            // Still add the date with minimal info
+            entries.push({
+              id: `live-${date}`,
+              date,
+              source: "live",
+              regime: "",
+              marketCondition: "neutral",
+              summary: "",
+              numRecs: 0,
+            });
+          }
+        }
       }
-    } catch { /* ok */ } finally {
-      setLoadingHistory(false);
+
+      // Training trials
+      if (trainingRes.status === "fulfilled" && trainingRes.value.ok) {
+        const data = await trainingRes.value.json();
+        if (!data.error && data.trials) {
+          const idx = data as TrainingIndex;
+          for (const trial of idx.trials) {
+            entries.push({
+              id: `training-${trial.trialId}`,
+              date: trial.date,
+              source: "training",
+              regime: trial.regime,
+              marketCondition: "",
+              summary: "",
+              score: trial.score,
+              numRecs: trial.numRecs,
+              winRate: trial.winRate,
+              hasOpusReview: trial.hasOpusReview,
+              trialId: trial.trialId,
+            });
+          }
+        }
+      }
+
+      // Sort by date descending
+      entries.sort((a, b) => b.date.localeCompare(a.date));
+      setHistoryEntries(entries);
+      setHistoryLoaded(true);
+    } catch {
+      // silently fail history load
     }
+  }, [historyLoaded]);
+
+  const openHistory = () => {
+    setViewState("history");
+    setExpandedSections(new Set());
+    loadHistory();
   };
 
-  const loadDateBriefing = async (date: string) => {
-    setSelectedDate(date);
-    setLoadingHistory(true);
+  const backToToday = () => {
+    setViewState("today");
+    setSelectedEntry(null);
+    setSelectedBriefing(null);
+    setSelectedTrialDetail(null);
+    setExpandedSections(new Set());
+  };
+
+  const selectHistoryEntry = async (entry: HistoryEntry) => {
+    setSelectedEntry(entry);
+    setViewState("detail");
+    setLoadingDetail(true);
+    setExpandedSections(new Set());
+    setSelectedBriefing(null);
+    setSelectedTrialDetail(null);
+
     try {
-      const res = await fetch(`/api/briefing?date=${date}`);
-      if (res.ok) {
-        const data: StoredBriefing = await res.json();
-        setHistoryBriefing(data);
-        setBriefing({
-          id: data.id,
-          timestamp: data.generatedAt,
-          summary: data.summary,
-          marketCondition: data.marketCondition,
-          sections: data.sections || [],
-          scenarios: data.scenarios || [],
-        });
+      if (entry.source === "live") {
+        const res = await fetch(`/api/briefing?date=${entry.date}`);
+        if (res.ok) {
+          const data = await res.json();
+          setSelectedBriefing(data as StoredBriefing);
+        }
+      } else if (entry.source === "training" && entry.trialId != null) {
+        const res = await fetch(`/api/training?id=${entry.trialId}`);
+        if (res.ok) {
+          const data = await res.json();
+          if (!data.error) {
+            setSelectedTrialDetail(data as TrialDetail);
+          }
+        }
       }
     } catch {
-      setError("Failed to load briefing for that date");
+      setError("Failed to load detail");
     } finally {
-      setLoadingHistory(false);
+      setLoadingDetail(false);
     }
   };
 
@@ -157,88 +403,491 @@ export default function BriefingPage() {
     });
   };
 
-  const accuracyColor = (score: number) => {
-    if (score >= 70) return "text-ios-green";
-    if (score >= 50) return "text-ios-orange";
-    return "text-ios-red";
+  const filteredHistory = historyEntries.filter((e) => {
+    if (historyFilter === "all") return true;
+    return e.source === historyFilter;
+  });
+
+  /* ================================================================
+     RENDER HELPERS
+     ================================================================ */
+
+  const renderRegimeCard = (regimeData: RegimeData) => (
+    <Card>
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2">
+          <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${regimeBadgeClass(regimeData.regime)}`}>
+            {regimeData.regime.toUpperCase()}
+          </span>
+          <span className="text-xs text-ios-gray">
+            {regimeData.volatilityRegime} vol
+          </span>
+        </div>
+        <span className="text-sm font-semibold">
+          {regimeData.confidence}% conf
+        </span>
+      </div>
+      <div className="flex items-center gap-3 mb-3">
+        <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Bias</p>
+          <p className={`text-sm font-bold ${regimeData.directionalBias > 0 ? "text-ios-green" : regimeData.directionalBias < 0 ? "text-ios-red" : "text-ios-gray"}`}>
+            {regimeData.directionalBias > 0 ? "+" : ""}{regimeData.directionalBias}
+          </p>
+        </div>
+        <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Long Pen.</p>
+          <p className="text-sm font-bold text-ios-red">-{regimeData.convictionModifiers.longPenalty}</p>
+        </div>
+        <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Short Pen.</p>
+          <p className="text-sm font-bold text-ios-red">-{regimeData.convictionModifiers.shortPenalty}</p>
+        </div>
+        <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Target</p>
+          <p className="text-sm font-bold">{regimeData.convictionModifiers.targetMultiplier.toFixed(1)}x</p>
+        </div>
+      </div>
+      {regimeData.keyFactors.length > 0 && (
+        <div className="space-y-1">
+          {regimeData.keyFactors.map((f, i) => (
+            <p key={i} className="text-xs text-white/70">- {f}</p>
+          ))}
+        </div>
+      )}
+      {regimeData.sectorTilts.length > 0 && (
+        <div className="mt-2 pt-2 border-t border-ios-gray/10 flex flex-wrap gap-1.5">
+          {regimeData.sectorTilts.map((t, i) => (
+            <span key={i} className={`text-[10px] px-1.5 py-0.5 rounded ${
+              t.bias === "overweight" ? "bg-ios-green/15 text-ios-green" :
+              t.bias === "underweight" ? "bg-ios-red/15 text-ios-red" :
+              "bg-ios-gray/15 text-ios-gray"
+            }`}>
+              {t.sector} {t.bias === "overweight" ? "OW" : t.bias === "underweight" ? "UW" : "N"}
+            </span>
+          ))}
+        </div>
+      )}
+    </Card>
+  );
+
+  const renderLeadingIndicators = (indicators: NonNullable<RegimeData["leadingIndicators"]>) => (
+    <Card>
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-[15px] font-semibold">Leading Indicators</h3>
+        <span className="text-xs text-ios-gray">{indicators.daysOfHistory}d history</span>
+      </div>
+      <div className="flex items-center gap-3 mb-3">
+        <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Stress</p>
+          <p className={`text-sm font-bold ${
+            indicators.stressIndex > 60 ? "text-ios-red" :
+            indicators.stressIndex > 35 ? "text-ios-orange" : "text-ios-green"
+          }`}>
+            {indicators.stressIndex}
+          </p>
+          <p className={`text-[10px] ${
+            indicators.stressIndexTrend === "building" ? "text-ios-red" :
+            indicators.stressIndexTrend === "easing" ? "text-ios-green" : "text-ios-gray"
+          }`}>
+            {indicators.stressIndexTrend}
+            {indicators.stressDaysRising > 0 && ` (${indicators.stressDaysRising}d)`}
+          </p>
+        </div>
+        <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Risk Appetite</p>
+          <p className={`text-sm font-bold ${
+            indicators.riskAppetiteIndex > 60 ? "text-ios-green" :
+            indicators.riskAppetiteIndex < 40 ? "text-ios-red" : "text-ios-gray"
+          }`}>
+            {indicators.riskAppetiteIndex}
+          </p>
+          <p className={`text-[10px] ${
+            indicators.riskAppetiteTrend === "improving" ? "text-ios-green" :
+            indicators.riskAppetiteTrend === "deteriorating" ? "text-ios-red" : "text-ios-gray"
+          }`}>
+            {indicators.riskAppetiteTrend}
+          </p>
+        </div>
+      </div>
+      {indicators.patterns.length > 0 && (
+        <div className="space-y-2">
+          {indicators.patterns.map((p, i) => (
+            <div key={i} className={`rounded-lg p-2 ${
+              p.severity === "critical" ? "bg-ios-red/15 border border-ios-red/30" :
+              p.severity === "high" ? "bg-ios-orange/15 border border-ios-orange/30" :
+              p.severity === "medium" ? "bg-ios-blue/10 border border-ios-blue/20" :
+              "bg-ios-elevated"
+            }`}>
+              <div className="flex items-center gap-1.5 mb-1">
+                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                  p.severity === "critical" ? "bg-ios-red/30 text-ios-red" :
+                  p.severity === "high" ? "bg-ios-orange/30 text-ios-orange" :
+                  p.severity === "medium" ? "bg-ios-blue/20 text-ios-blue" :
+                  "bg-ios-gray/20 text-ios-gray"
+                }`}>
+                  {p.severity.toUpperCase()}
+                </span>
+                <span className="text-xs font-semibold">{p.name}</span>
+              </div>
+              <p className="text-[11px] text-white/70 mb-1">{p.description}</p>
+              <p className="text-[11px] text-ios-blue">{p.actionableInsight}</p>
+            </div>
+          ))}
+        </div>
+      )}
+      {indicators.patterns.length === 0 && (
+        <p className="text-xs text-ios-gray text-center">No significant multi-day patterns detected</p>
+      )}
+    </Card>
+  );
+
+  const renderSections = (sections: BriefingSection[]) => (
+    <>
+      {sections.map((section, i) => (
+        <Card key={i} onClick={() => toggleSection(i)} className="cursor-pointer">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <StatusBadge status={section.importance} />
+              <h3 className="text-[15px] font-semibold">{section.title}</h3>
+            </div>
+            <svg
+              className={`w-4 h-4 text-ios-gray transition-transform ${expandedSections.has(i) ? "rotate-180" : ""}`}
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+            >
+              <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          {expandedSections.has(i) && (
+            <p className="mt-3 text-sm text-white/80 leading-relaxed whitespace-pre-line">
+              {section.content}
+            </p>
+          )}
+        </Card>
+      ))}
+    </>
+  );
+
+  const renderScenarios = (scenarios: ScenarioAnalysis[]) => {
+    if (scenarios.length === 0) return null;
+    return (
+      <div className="mt-4">
+        <h2 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3 px-1">
+          Scenario Analysis
+        </h2>
+        {scenarios.map((scenario, i) => (
+          <Card key={i} className="mb-3">
+            <h3 className="text-[15px] font-semibold mb-3">{scenario.event}</h3>
+            <div className="space-y-3">
+              {scenario.scenarios.map((s, j) => (
+                <div key={j} className="bg-ios-elevated rounded-lg p-3">
+                  <p className="text-sm font-medium text-ios-blue mb-1">{s.condition}</p>
+                  <p className="text-sm text-white/80 mb-1">{s.implication}</p>
+                  <p className="text-sm text-ios-green">{s.trade}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
+        ))}
+      </div>
+    );
   };
+
+  const renderAccuracyCard = (accuracy: NonNullable<StoredBriefing["accuracy"]>) => (
+    <Card className="mb-4 border border-ios-gray/20">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-sm font-semibold">Accuracy Score</h3>
+        <span className={`text-2xl font-bold ${scoreColor(accuracy.overallScore)}`}>
+          {accuracy.overallScore}
+        </span>
+      </div>
+      <div className="w-full bg-ios-gray-3 rounded-full h-2 mb-3">
+        <div
+          className={`h-2 rounded-full transition-all ${scoreBgColor(accuracy.overallScore)}`}
+          style={{ width: `${accuracy.overallScore}%` }}
+        />
+      </div>
+      <p className="text-sm text-white/80 mb-3">{accuracy.notes}</p>
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-xs text-ios-gray">Market Direction:</span>
+        {accuracy.marketConditionCorrect ? (
+          <span className="text-xs text-ios-green font-medium">Correct</span>
+        ) : (
+          <span className="text-xs text-ios-red font-medium">Incorrect</span>
+        )}
+      </div>
+      {accuracy.scenarioOutcomes.length > 0 && (
+        <div className="space-y-2">
+          <p className="text-[11px] text-ios-gray uppercase tracking-wider">Scenario Outcomes</p>
+          {accuracy.scenarioOutcomes.map((outcome, i) => (
+            <div key={i} className="bg-ios-elevated rounded-lg p-2.5">
+              <div className="flex items-center gap-2 mb-1">
+                {outcome.accurate ? (
+                  <svg className="w-3.5 h-3.5 text-ios-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                ) : (
+                  <svg className="w-3.5 h-3.5 text-ios-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                )}
+                <span className="text-xs font-medium">{outcome.event}</span>
+              </div>
+              <p className="text-[11px] text-white/60 ml-5.5">Predicted: {outcome.predictedCondition}</p>
+              <p className="text-[11px] text-white/80 ml-5.5">Actual: {outcome.actualOutcome}</p>
+            </div>
+          ))}
+        </div>
+      )}
+    </Card>
+  );
+
+  /* --- Training detail sub-renders --- */
+
+  const renderTrialScores = (scores: TrialDetail["scores"]) => (
+    <Card>
+      <h3 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3">Scores</h3>
+      <div className="grid grid-cols-3 gap-2">
+        <div className="bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Direction</p>
+          <p className={`text-sm font-bold ${scoreColor(scores.directionAccuracy * 100)}`}>
+            {(scores.directionAccuracy * 100).toFixed(0)}%
+          </p>
+        </div>
+        <div className="bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Target Hit</p>
+          <p className={`text-sm font-bold ${scoreColor(scores.targetHitRate * 100)}`}>
+            {(scores.targetHitRate * 100).toFixed(0)}%
+          </p>
+        </div>
+        <div className="bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Stop Hit</p>
+          <p className="text-sm font-bold text-ios-red">
+            {(scores.stopHitRate * 100).toFixed(0)}%
+          </p>
+        </div>
+        <div className="bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Avg Return</p>
+          <p className={`text-sm font-bold ${pctColor(scores.avgReturnPercent)}`}>
+            {scores.avgReturnPercent > 0 ? "+" : ""}{scores.avgReturnPercent.toFixed(2)}%
+          </p>
+        </div>
+        <div className="bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Win Rate</p>
+          <p className={`text-sm font-bold ${scoreColor(scores.winRate * 100)}`}>
+            {(scores.winRate * 100).toFixed(0)}%
+          </p>
+        </div>
+        <div className="bg-ios-elevated rounded-lg p-2 text-center">
+          <p className="text-[10px] text-ios-gray mb-0.5">Profit Factor</p>
+          <p className={`text-sm font-bold ${scores.profitFactor >= 1 ? "text-ios-green" : "text-ios-red"}`}>
+            {scores.profitFactor.toFixed(2)}
+          </p>
+        </div>
+      </div>
+    </Card>
+  );
+
+  const renderRecommendations = (recs: Recommendation[], label?: string) => {
+    if (recs.length === 0) return null;
+    const isRevised = label === "OPUS REVISED";
+    return (
+      <Card className={isRevised ? "border border-ios-blue/30" : ""}>
+        {isRevised ? (
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-ios-blue/20 text-ios-blue">
+              OPUS REVISED
+            </span>
+            <h3 className="text-sm font-semibold">Revised Recommendations</h3>
+          </div>
+        ) : (
+          <h3 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3">
+            Recommendations
+          </h3>
+        )}
+        <div className="space-y-2">
+          {recs.map((rec, i) => (
+            <div key={i} className="bg-ios-elevated rounded-lg p-3">
+              <div className="flex items-center justify-between mb-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold">{rec.symbol}</span>
+                  <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${
+                    rec.direction === "long" ? "bg-ios-green/20 text-ios-green" : "bg-ios-red/20 text-ios-red"
+                  }`}>
+                    {rec.direction.toUpperCase()}
+                  </span>
+                </div>
+                <span className="text-xs text-ios-gray">${rec.entryPrice.toFixed(2)}</span>
+              </div>
+              <div className="flex gap-4 text-[11px] text-white/60 mb-1">
+                <span>Target: ${rec.targetPrice.toFixed(2)}</span>
+                <span>Stop: ${rec.stopLoss.toFixed(2)}</span>
+              </div>
+              <p className="text-[11px] text-white/70">{rec.thesis}</p>
+              {rec.catalyst && (
+                <p className="text-[11px] text-ios-blue mt-1">Catalyst: {rec.catalyst}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </Card>
+    );
+  };
+
+  const renderOutcomes = (outcomes: Outcome[]) => {
+    if (outcomes.length === 0) return null;
+    return (
+      <Card>
+        <h3 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3">Outcomes</h3>
+        <div className="space-y-2">
+          {outcomes.map((out, i) => (
+            <div key={i} className="bg-ios-elevated rounded-lg p-3">
+              <div className="flex items-center justify-between mb-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-sm font-bold">{out.symbol}</span>
+                  {out.hitTarget && (
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-ios-green/20 text-ios-green">TARGET</span>
+                  )}
+                  {out.hitStop && (
+                    <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-ios-red/20 text-ios-red">STOPPED</span>
+                  )}
+                  {out.directionCorrect && (
+                    <svg className="w-3.5 h-3.5 text-ios-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  )}
+                </div>
+                <span className={`text-sm font-bold ${pctColor(out.actualReturnPercent)}`}>
+                  {out.actualReturnPercent > 0 ? "+" : ""}{out.actualReturnPercent.toFixed(2)}%
+                </span>
+              </div>
+              <div className="flex gap-3 text-[11px] text-white/60">
+                <span>O: ${out.openPrice.toFixed(2)}</span>
+                <span>H: ${out.highPrice.toFixed(2)}</span>
+                <span>L: ${out.lowPrice.toFixed(2)}</span>
+                <span>C: ${out.closePrice.toFixed(2)}</span>
+              </div>
+              {out.notes && <p className="text-[11px] text-white/50 mt-1">{out.notes}</p>}
+            </div>
+          ))}
+        </div>
+      </Card>
+    );
+  };
+
+  const renderDimensionAnalysis = (analysis: TrialDetail["dimensionAnalysis"]) => {
+    if (!analysis || Object.keys(analysis).length === 0) return null;
+    return (
+      <Card>
+        <h3 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3">Dimension Analysis</h3>
+        <div className="space-y-2">
+          {Object.entries(analysis)
+            .sort(([, a], [, b]) => b.predictivePower - a.predictivePower)
+            .map(([dim, a]) => (
+              <div key={dim} className="bg-ios-elevated rounded-lg p-2.5 flex items-center justify-between">
+                <div>
+                  <span className="text-xs font-medium">{dim}</span>
+                  <div className="flex gap-3 text-[10px] text-white/50 mt-0.5">
+                    <span>Win avg: {a.avgScoreWinners.toFixed(1)}</span>
+                    <span>Loss avg: {a.avgScoreLosers.toFixed(1)}</span>
+                  </div>
+                </div>
+                <div className="text-right">
+                  <p className="text-[10px] text-ios-gray">Predictive</p>
+                  <p className={`text-sm font-bold ${
+                    a.predictivePower >= 0.5 ? "text-ios-green" :
+                    a.predictivePower >= 0.3 ? "text-ios-orange" : "text-ios-gray"
+                  }`}>
+                    {(a.predictivePower * 100).toFixed(0)}%
+                  </p>
+                </div>
+              </div>
+            ))}
+        </div>
+      </Card>
+    );
+  };
+
+  const renderOpusReview = (notes: string, reviewTrial?: number) => (
+    <Card className="border border-ios-blue/30">
+      <div className="flex items-center gap-2 mb-2">
+        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-ios-blue/20 text-ios-blue">
+          OPUS REVIEW
+        </span>
+        {reviewTrial && (
+          <span className="text-[10px] text-ios-gray">Trial {reviewTrial}</span>
+        )}
+      </div>
+      <p className="text-sm text-white/80 leading-relaxed whitespace-pre-line">{notes}</p>
+    </Card>
+  );
+
+  const renderWeights = (weights: Record<string, number>, trialId: number) => {
+    if (!weights || Object.keys(weights).length === 0) return null;
+    return (
+      <Card>
+        <h3 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-2">
+          Weights (Trial {trialId})
+        </h3>
+        <div className="flex flex-wrap gap-1.5">
+          {Object.entries(weights)
+            .sort(([, a], [, b]) => b - a)
+            .map(([dim, weight]) => (
+              <span key={dim} className="text-[10px] px-2 py-1 rounded bg-ios-elevated text-white/80">
+                {dim}: <span className="font-semibold">{(weight * 100).toFixed(0)}%</span>
+              </span>
+            ))}
+        </div>
+      </Card>
+    );
+  };
+
+  /* ================================================================
+     MAIN RENDER
+     ================================================================ */
 
   return (
     <div className="px-4 pt-14 pb-28">
-      {/* Header */}
+      {/* ---- Header ---- */}
       <div className="mb-6 flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">Morning Briefing</h1>
           <p className="text-sm text-ios-gray mt-1">
-            {selectedDate
-              ? new Date(selectedDate + "T12:00:00").toLocaleDateString("en-US", {
-                  weekday: "long",
-                  month: "long",
-                  day: "numeric",
-                })
-              : new Date().toLocaleDateString("en-US", {
-                  weekday: "long",
-                  month: "long",
-                  day: "numeric",
-                })}
+            {viewState === "detail" && selectedEntry
+              ? formatDateLong(selectedEntry.date)
+              : new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}
           </p>
         </div>
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => {
-              setShowHistory(!showHistory);
-              if (!showHistory && historyDates.length === 0) loadHistory();
-            }}
-            className="text-ios-blue text-sm font-medium"
-          >
-            {showHistory ? "Close" : "History"}
-          </button>
-          <button
-            onClick={loadLatestBriefing}
-            disabled={loading}
-            className="text-ios-blue text-sm font-medium disabled:opacity-50"
-          >
-            Refresh
-          </button>
+          {viewState === "today" && (
+            <>
+              <button
+                onClick={openHistory}
+                className="text-ios-blue text-sm font-medium"
+              >
+                History
+              </button>
+              <button
+                onClick={loadInitialData}
+                disabled={loading}
+                className="text-ios-blue text-sm font-medium disabled:opacity-50"
+              >
+                Refresh
+              </button>
+            </>
+          )}
+          {(viewState === "history" || viewState === "detail") && (
+            <button
+              onClick={backToToday}
+              className="text-ios-blue text-sm font-medium"
+            >
+              Back to Today
+            </button>
+          )}
         </div>
       </div>
 
-      {/* History Panel */}
-      {showHistory && (
-        <Card className="mb-4">
-          <h3 className="text-sm font-semibold mb-3">Previous Briefings</h3>
-          {loadingHistory && historyDates.length === 0 && (
-            <p className="text-xs text-ios-gray">Loading...</p>
-          )}
-          {historyDates.length === 0 && !loadingHistory && (
-            <p className="text-xs text-ios-gray">
-              No history yet. Briefings are auto-generated at 6:15 AM ET on weekdays.
-            </p>
-          )}
-          <div className="space-y-1">
-            {historyDates.map((date) => (
-              <button
-                key={date}
-                onClick={() => loadDateBriefing(date)}
-                className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors ${
-                  selectedDate === date
-                    ? "bg-ios-blue/20 text-ios-blue"
-                    : "bg-ios-elevated text-white/80 active:bg-ios-gray-3"
-                }`}
-              >
-                {new Date(date + "T12:00:00").toLocaleDateString("en-US", {
-                  weekday: "short",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </button>
-            ))}
-          </div>
-        </Card>
-      )}
-
-      {/* Loading */}
-      {loading && (
+      {/* ---- LOADING STATE ---- */}
+      {loading && viewState === "today" && (
         <Card className="mb-4">
           <div className="flex items-center justify-center py-8">
             <div className="w-8 h-8 border-2 border-ios-blue/30 border-t-ios-blue rounded-full animate-spin" />
@@ -247,314 +896,306 @@ export default function BriefingPage() {
         </Card>
       )}
 
-      {/* Error */}
+      {/* ---- ERROR ---- */}
       {error && (
         <Card className="mb-4 border border-ios-red/30">
           <p className="text-ios-red text-sm">{error}</p>
         </Card>
       )}
 
-      {/* Accuracy Card (for stored briefings) */}
-      {historyBriefing?.accuracy && (
-        <Card className="mb-4 border border-ios-gray/20">
-          <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-semibold">Accuracy Score</h3>
-            <span className={`text-2xl font-bold ${accuracyColor(historyBriefing.accuracy.overallScore)}`}>
-              {historyBriefing.accuracy.overallScore}
-            </span>
-          </div>
-          <div className="w-full bg-ios-gray-3 rounded-full h-2 mb-3">
-            <div
-              className={`h-2 rounded-full transition-all ${
-                historyBriefing.accuracy.overallScore >= 70
-                  ? "bg-ios-green"
-                  : historyBriefing.accuracy.overallScore >= 50
-                  ? "bg-ios-orange"
-                  : "bg-ios-red"
-              }`}
-              style={{ width: `${historyBriefing.accuracy.overallScore}%` }}
-            />
-          </div>
-          <p className="text-sm text-white/80 mb-3">{historyBriefing.accuracy.notes}</p>
-
-          {/* Market Condition */}
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-xs text-ios-gray">Market Direction:</span>
-            {historyBriefing.accuracy.marketConditionCorrect ? (
-              <span className="text-xs text-ios-green font-medium">Correct</span>
-            ) : (
-              <span className="text-xs text-ios-red font-medium">Incorrect</span>
-            )}
-          </div>
-
-          {/* Scenario Outcomes */}
-          {historyBriefing.accuracy.scenarioOutcomes.length > 0 && (
-            <div className="space-y-2">
-              <p className="text-[11px] text-ios-gray uppercase tracking-wider">Scenario Outcomes</p>
-              {historyBriefing.accuracy.scenarioOutcomes.map((outcome, i) => (
-                <div key={i} className="bg-ios-elevated rounded-lg p-2.5">
-                  <div className="flex items-center gap-2 mb-1">
-                    {outcome.accurate ? (
-                      <svg className="w-3.5 h-3.5 text-ios-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    ) : (
-                      <svg className="w-3.5 h-3.5 text-ios-red" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                        <path d="M6 18L18 6M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    )}
-                    <span className="text-xs font-medium">{outcome.event}</span>
-                  </div>
-                  <p className="text-[11px] text-white/60 ml-5.5">
-                    Predicted: {outcome.predictedCondition}
-                  </p>
-                  <p className="text-[11px] text-white/80 ml-5.5">
-                    Actual: {outcome.actualOutcome}
-                  </p>
-                </div>
-              ))}
-            </div>
-          )}
-        </Card>
-      )}
-
-      {/* Briefing Content */}
-      {briefing && !loading && (
-        <div className="space-y-3">
-          {/* Summary Card */}
-          <Card>
-            <div className="flex items-center gap-2 mb-3">
-              <StatusBadge status={briefing.marketCondition} size="md" />
-              <span className="text-xs text-ios-gray">
-                {new Date(briefing.timestamp).toLocaleTimeString("en-US", {
-                  hour: "numeric",
-                  minute: "2-digit",
-                })}
-              </span>
-              {historyBriefing?.model && (
-                <span className="text-[10px] text-ios-gray/60 ml-auto">
-                  {historyBriefing.model.includes("opus") ? "Opus" : "Sonnet"}
-                </span>
-              )}
-            </div>
-            <p className="text-[15px] leading-relaxed text-white/90">
-              {briefing.summary}
-            </p>
-          </Card>
-
-          {/* Regime Card */}
-          {regime && (
-            <Card>
-              <div className="flex items-center justify-between mb-3">
-                <div className="flex items-center gap-2">
-                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-                    regime.regime === "risk-on" ? "bg-ios-green/20 text-ios-green" :
-                    regime.regime === "risk-off" ? "bg-ios-red/20 text-ios-red" :
-                    regime.regime === "crisis" ? "bg-ios-red/30 text-ios-red" :
-                    regime.regime === "event-driven" ? "bg-ios-orange/20 text-ios-orange" :
-                    "bg-ios-gray/20 text-ios-gray"
-                  }`}>
-                    {regime.regime.toUpperCase()}
-                  </span>
+      {/* ================================================================
+         VIEW: TODAY
+         ================================================================ */}
+      {viewState === "today" && !loading && (
+        <>
+          {todayBriefing ? (
+            <div className="space-y-3">
+              {/* Summary */}
+              <Card>
+                <div className="flex items-center gap-2 mb-3">
+                  <StatusBadge status={todayBriefing.marketCondition} size="md" />
                   <span className="text-xs text-ios-gray">
-                    {regime.volatilityRegime} vol
+                    {new Date(todayBriefing.generatedAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
                   </span>
-                </div>
-                <span className="text-sm font-semibold">
-                  {regime.confidence}% conf
-                </span>
-              </div>
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
-                  <p className="text-[10px] text-ios-gray mb-0.5">Bias</p>
-                  <p className={`text-sm font-bold ${regime.directionalBias > 0 ? "text-ios-green" : regime.directionalBias < 0 ? "text-ios-red" : "text-ios-gray"}`}>
-                    {regime.directionalBias > 0 ? "+" : ""}{regime.directionalBias}
-                  </p>
-                </div>
-                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
-                  <p className="text-[10px] text-ios-gray mb-0.5">Long Pen.</p>
-                  <p className="text-sm font-bold text-ios-red">-{regime.convictionModifiers.longPenalty}</p>
-                </div>
-                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
-                  <p className="text-[10px] text-ios-gray mb-0.5">Short Pen.</p>
-                  <p className="text-sm font-bold text-ios-red">-{regime.convictionModifiers.shortPenalty}</p>
-                </div>
-                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
-                  <p className="text-[10px] text-ios-gray mb-0.5">Target</p>
-                  <p className="text-sm font-bold">{regime.convictionModifiers.targetMultiplier.toFixed(1)}x</p>
-                </div>
-              </div>
-              {regime.keyFactors.length > 0 && (
-                <div className="space-y-1">
-                  {regime.keyFactors.map((f, i) => (
-                    <p key={i} className="text-xs text-white/70">- {f}</p>
-                  ))}
-                </div>
-              )}
-              {regime.sectorTilts.length > 0 && (
-                <div className="mt-2 pt-2 border-t border-ios-gray/10 flex flex-wrap gap-1.5">
-                  {regime.sectorTilts.map((t, i) => (
-                    <span key={i} className={`text-[10px] px-1.5 py-0.5 rounded ${
-                      t.bias === "overweight" ? "bg-ios-green/15 text-ios-green" :
-                      t.bias === "underweight" ? "bg-ios-red/15 text-ios-red" :
-                      "bg-ios-gray/15 text-ios-gray"
-                    }`}>
-                      {t.sector} {t.bias === "overweight" ? "OW" : t.bias === "underweight" ? "UW" : "N"}
+                  {todayBriefing.model && (
+                    <span className="text-[10px] text-ios-gray/60 ml-auto">
+                      {todayBriefing.model.includes("opus") ? "Opus" : "Sonnet"}
                     </span>
-                  ))}
+                  )}
                 </div>
-              )}
-            </Card>
-          )}
+                <p className="text-[15px] leading-relaxed text-white/90">{todayBriefing.summary}</p>
+              </Card>
 
-          {/* Leading Indicators Card */}
-          {regime?.leadingIndicators && (
-            <Card>
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="text-[15px] font-semibold">Leading Indicators</h3>
-                <span className="text-xs text-ios-gray">
-                  {regime.leadingIndicators.daysOfHistory}d history
-                </span>
-              </div>
-              <div className="flex items-center gap-3 mb-3">
-                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
-                  <p className="text-[10px] text-ios-gray mb-0.5">Stress</p>
-                  <p className={`text-sm font-bold ${
-                    regime.leadingIndicators.stressIndex > 60 ? "text-ios-red" :
-                    regime.leadingIndicators.stressIndex > 35 ? "text-ios-orange" :
-                    "text-ios-green"
-                  }`}>
-                    {regime.leadingIndicators.stressIndex}
-                  </p>
-                  <p className={`text-[10px] ${
-                    regime.leadingIndicators.stressIndexTrend === "building" ? "text-ios-red" :
-                    regime.leadingIndicators.stressIndexTrend === "easing" ? "text-ios-green" :
-                    "text-ios-gray"
-                  }`}>
-                    {regime.leadingIndicators.stressIndexTrend}
-                    {regime.leadingIndicators.stressDaysRising > 0 && ` (${regime.leadingIndicators.stressDaysRising}d)`}
-                  </p>
-                </div>
-                <div className="flex-1 bg-ios-elevated rounded-lg p-2 text-center">
-                  <p className="text-[10px] text-ios-gray mb-0.5">Risk Appetite</p>
-                  <p className={`text-sm font-bold ${
-                    regime.leadingIndicators.riskAppetiteIndex > 60 ? "text-ios-green" :
-                    regime.leadingIndicators.riskAppetiteIndex < 40 ? "text-ios-red" :
-                    "text-ios-gray"
-                  }`}>
-                    {regime.leadingIndicators.riskAppetiteIndex}
-                  </p>
-                  <p className={`text-[10px] ${
-                    regime.leadingIndicators.riskAppetiteTrend === "improving" ? "text-ios-green" :
-                    regime.leadingIndicators.riskAppetiteTrend === "deteriorating" ? "text-ios-red" :
-                    "text-ios-gray"
-                  }`}>
-                    {regime.leadingIndicators.riskAppetiteTrend}
-                  </p>
-                </div>
-              </div>
-              {regime.leadingIndicators.patterns.length > 0 && (
-                <div className="space-y-2">
-                  {regime.leadingIndicators.patterns.map((p, i) => (
-                    <div key={i} className={`rounded-lg p-2 ${
-                      p.severity === "critical" ? "bg-ios-red/15 border border-ios-red/30" :
-                      p.severity === "high" ? "bg-ios-orange/15 border border-ios-orange/30" :
-                      p.severity === "medium" ? "bg-ios-blue/10 border border-ios-blue/20" :
-                      "bg-ios-elevated"
-                    }`}>
-                      <div className="flex items-center gap-1.5 mb-1">
-                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
-                          p.severity === "critical" ? "bg-ios-red/30 text-ios-red" :
-                          p.severity === "high" ? "bg-ios-orange/30 text-ios-orange" :
-                          p.severity === "medium" ? "bg-ios-blue/20 text-ios-blue" :
-                          "bg-ios-gray/20 text-ios-gray"
-                        }`}>
-                          {p.severity.toUpperCase()}
-                        </span>
-                        <span className="text-xs font-semibold">{p.name}</span>
-                      </div>
-                      <p className="text-[11px] text-white/70 mb-1">{p.description}</p>
-                      <p className="text-[11px] text-ios-blue">{p.actionableInsight}</p>
-                    </div>
-                  ))}
-                </div>
-              )}
-              {regime.leadingIndicators.patterns.length === 0 && (
-                <p className="text-xs text-ios-gray text-center">No significant multi-day patterns detected</p>
-              )}
-            </Card>
-          )}
+              {/* Accuracy */}
+              {todayBriefing.accuracy && renderAccuracyCard(todayBriefing.accuracy)}
 
-          {/* Sections */}
-          {briefing.sections.map((section: BriefingSection, i: number) => (
-            <Card key={i} onClick={() => toggleSection(i)} className="cursor-pointer">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <StatusBadge status={section.importance} />
-                  <h3 className="text-[15px] font-semibold">{section.title}</h3>
-                </div>
-                <svg
-                  className={`w-4 h-4 text-ios-gray transition-transform ${
-                    expandedSections.has(i) ? "rotate-180" : ""
-                  }`}
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                >
-                  <path d="M6 9l6 6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+              {/* Regime */}
+              {regime && renderRegimeCard(regime)}
+
+              {/* Leading Indicators */}
+              {regime?.leadingIndicators && renderLeadingIndicators(regime.leadingIndicators)}
+
+              {/* Sections */}
+              {renderSections(todayBriefing.sections || [])}
+
+              {/* Scenarios */}
+              {renderScenarios(todayBriefing.scenarios || [])}
+            </div>
+          ) : (
+            /* Empty state */
+            <div className="flex flex-col items-center justify-center pt-20 text-center">
+              <div className="w-16 h-16 rounded-full bg-ios-card flex items-center justify-center mb-4">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-ios-gray">
+                  <path d="M4 6h16M4 10h16M4 14h10M4 18h8" strokeLinecap="round" />
                 </svg>
               </div>
-              {expandedSections.has(i) && (
-                <p className="mt-3 text-sm text-white/80 leading-relaxed whitespace-pre-line">
-                  {section.content}
-                </p>
-              )}
-            </Card>
-          ))}
+              <h3 className="text-lg font-semibold mb-1">No Briefing Yet</h3>
+              <p className="text-sm text-ios-gray max-w-[260px]">
+                Briefings are auto-generated at 6:15 AM ET on weekdays. Check History for previous days.
+              </p>
+            </div>
+          )}
+        </>
+      )}
 
-          {/* Scenario Analysis */}
-          {briefing.scenarios.length > 0 && (
-            <div className="mt-4">
-              <h2 className="text-sm font-semibold text-ios-gray uppercase tracking-wider mb-3 px-1">
-                Scenario Analysis
-              </h2>
-              {briefing.scenarios.map((scenario: ScenarioAnalysis, i: number) => (
-                <Card key={i} className="mb-3">
-                  <h3 className="text-[15px] font-semibold mb-3">{scenario.event}</h3>
-                  <div className="space-y-3">
-                    {scenario.scenarios.map((s, j) => (
-                      <div
-                        key={j}
-                        className="bg-ios-elevated rounded-lg p-3"
-                      >
-                        <p className="text-sm font-medium text-ios-blue mb-1">
-                          {s.condition}
-                        </p>
-                        <p className="text-sm text-white/80 mb-1">{s.implication}</p>
-                        <p className="text-sm text-ios-green">{s.trade}</p>
-                      </div>
-                    ))}
+      {/* ================================================================
+         VIEW: HISTORY
+         ================================================================ */}
+      {viewState === "history" && (
+        <div className="space-y-4">
+          {/* Filter tabs — iOS segmented control style */}
+          <div className="flex bg-ios-elevated rounded-lg p-0.5">
+            {(["all", "live", "training"] as HistoryFilter[]).map((f) => (
+              <button
+                key={f}
+                onClick={() => setHistoryFilter(f)}
+                className={`flex-1 py-1.5 text-sm font-medium rounded-md transition-colors ${
+                  historyFilter === f
+                    ? "bg-ios-card text-white shadow-sm"
+                    : "text-ios-gray"
+                }`}
+              >
+                {f === "all" ? "All" : f === "live" ? "Live" : "Training"}
+              </button>
+            ))}
+          </div>
+
+          {/* History list */}
+          {!historyLoaded && (
+            <Card>
+              <div className="flex items-center justify-center py-6">
+                <div className="w-6 h-6 border-2 border-ios-blue/30 border-t-ios-blue rounded-full animate-spin" />
+                <span className="ml-2 text-sm text-ios-gray">Loading history...</span>
+              </div>
+            </Card>
+          )}
+
+          {historyLoaded && filteredHistory.length === 0 && (
+            <Card>
+              <p className="text-sm text-ios-gray text-center py-4">
+                No {historyFilter === "all" ? "" : historyFilter + " "}briefings found.
+              </p>
+            </Card>
+          )}
+
+          {historyLoaded && filteredHistory.length > 0 && (
+            <div className="space-y-px">
+              {filteredHistory.map((entry) => (
+                <button
+                  key={entry.id}
+                  onClick={() => selectHistoryEntry(entry)}
+                  className="w-full text-left bg-ios-card p-3.5 first:rounded-t-ios last:rounded-b-ios border-b border-ios-separator last:border-b-0 active:bg-ios-elevated transition-colors"
+                >
+                  {/* Row 1: Date, regime, score */}
+                  <div className="flex items-center justify-between mb-1.5">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-semibold">{formatDate(entry.date)}</span>
+                      {entry.regime && (
+                        <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${regimeBadgeClass(entry.regime)}`}>
+                          {entry.regime.toUpperCase()}
+                        </span>
+                      )}
+                      {entry.marketCondition && !entry.regime && (
+                        <StatusBadge status={entry.marketCondition} />
+                      )}
+                    </div>
+                    <div className="flex items-center gap-2">
+                      {entry.score != null && (
+                        <span className={`text-lg font-bold ${scoreColor(entry.score)}`}>
+                          {typeof entry.score === "number" ? (Number.isInteger(entry.score) ? entry.score : entry.score.toFixed(1)) : entry.score}
+                        </span>
+                      )}
+                      <svg className="w-4 h-4 text-ios-gray" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </div>
                   </div>
-                </Card>
+
+                  {/* Row 2: Summary preview */}
+                  {entry.summary && (
+                    <p className="text-xs text-white/60 line-clamp-1 mb-1.5">{entry.summary}</p>
+                  )}
+
+                  {/* Row 3: Stats + badges */}
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="text-[11px] text-white/50">{entry.numRecs} recs</span>
+                    {entry.winRate != null && (
+                      <span className="text-[11px] text-white/50">
+                        {(entry.winRate * 100).toFixed(0)}% win
+                      </span>
+                    )}
+                    {entry.source === "training" && (
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-ios-orange/20 text-ios-orange">
+                        TRAINING
+                      </span>
+                    )}
+                    {entry.hasOpusReview && (
+                      <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-ios-blue/20 text-ios-blue">
+                        OPUS
+                      </span>
+                    )}
+                  </div>
+                </button>
               ))}
             </div>
           )}
         </div>
       )}
 
-      {/* Empty State */}
-      {!briefing && !loading && !error && (
-        <div className="flex flex-col items-center justify-center pt-20 text-center">
-          <div className="w-16 h-16 rounded-full bg-ios-card flex items-center justify-center mb-4">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-ios-gray">
-              <path d="M4 6h16M4 10h16M4 14h10M4 18h8" strokeLinecap="round" />
-            </svg>
-          </div>
-          <h3 className="text-lg font-semibold mb-1">No Briefing Yet</h3>
-          <p className="text-sm text-ios-gray max-w-[260px]">
-            Briefings are auto-generated at 6:15 AM ET on weekdays. Check History for previous days.
-          </p>
+      {/* ================================================================
+         VIEW: DETAIL
+         ================================================================ */}
+      {viewState === "detail" && (
+        <div className="space-y-3">
+          {/* Loading */}
+          {loadingDetail && (
+            <Card>
+              <div className="flex items-center justify-center py-8">
+                <div className="w-8 h-8 border-2 border-ios-blue/30 border-t-ios-blue rounded-full animate-spin" />
+                <span className="ml-3 text-sm text-ios-gray">Loading detail...</span>
+              </div>
+            </Card>
+          )}
+
+          {/* --- Live briefing detail --- */}
+          {!loadingDetail && selectedEntry?.source === "live" && selectedBriefing && (
+            <>
+              {/* Summary */}
+              <Card>
+                <div className="flex items-center gap-2 mb-3">
+                  <StatusBadge status={selectedBriefing.marketCondition} size="md" />
+                  <span className="text-xs text-ios-gray">
+                    {new Date(selectedBriefing.generatedAt).toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit" })}
+                  </span>
+                  {selectedBriefing.model && (
+                    <span className="text-[10px] text-ios-gray/60 ml-auto">
+                      {selectedBriefing.model.includes("opus") ? "Opus" : "Sonnet"}
+                    </span>
+                  )}
+                </div>
+                <p className="text-[15px] leading-relaxed text-white/90">{selectedBriefing.summary}</p>
+              </Card>
+
+              {/* Accuracy */}
+              {selectedBriefing.accuracy && renderAccuracyCard(selectedBriefing.accuracy)}
+
+              {/* Sections */}
+              {renderSections(selectedBriefing.sections || [])}
+
+              {/* Scenarios */}
+              {renderScenarios(selectedBriefing.scenarios || [])}
+            </>
+          )}
+
+          {/* --- Training trial detail --- */}
+          {!loadingDetail && selectedEntry?.source === "training" && selectedTrialDetail && (
+            <>
+              {/* Header badges */}
+              <Card>
+                <div className="flex items-center gap-2 mb-3 flex-wrap">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-ios-orange/20 text-ios-orange">
+                    TRAINING
+                  </span>
+                  <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${regimeBadgeClass(selectedTrialDetail.pipeline?.regime?.regime || "")}`}>
+                    {(selectedTrialDetail.pipeline?.regime?.regime || "unknown").toUpperCase()}
+                  </span>
+                  {selectedTrialDetail.opusReviewNotes && (
+                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-ios-blue/20 text-ios-blue">
+                      OPUS REVIEWED
+                    </span>
+                  )}
+                  <span className="ml-auto text-xs text-ios-gray">Trial {selectedTrialDetail.trialId}</span>
+                </div>
+
+                {/* Total score */}
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-semibold">Total Score</span>
+                  <span className={`text-2xl font-bold ${scoreColor(selectedTrialDetail.scores.totalScore)}`}>
+                    {selectedTrialDetail.scores.totalScore.toFixed(1)}
+                  </span>
+                </div>
+                <div className="w-full bg-ios-gray-3 rounded-full h-2">
+                  <div
+                    className={`h-2 rounded-full transition-all ${scoreBgColor(selectedTrialDetail.scores.totalScore)}`}
+                    style={{ width: `${Math.min(100, selectedTrialDetail.scores.totalScore)}%` }}
+                  />
+                </div>
+              </Card>
+
+              {/* Scores grid */}
+              {renderTrialScores(selectedTrialDetail.scores)}
+
+              {/* Briefing Summary */}
+              {selectedTrialDetail.pipeline?.briefing && (
+                <Card>
+                  <div className="flex items-center gap-2 mb-3">
+                    <StatusBadge status={selectedTrialDetail.pipeline.briefing.marketCondition} size="md" />
+                  </div>
+                  <p className="text-[15px] leading-relaxed text-white/90">
+                    {selectedTrialDetail.pipeline.briefing.summary}
+                  </p>
+                </Card>
+              )}
+
+              {/* Briefing Sections */}
+              {selectedTrialDetail.pipeline?.briefing?.sections &&
+                renderSections(selectedTrialDetail.pipeline.briefing.sections as BriefingSection[])}
+
+              {/* Scenarios */}
+              {selectedTrialDetail.pipeline?.briefing?.scenarios &&
+                renderScenarios(selectedTrialDetail.pipeline.briefing.scenarios as ScenarioAnalysis[])}
+
+              {/* Recommendations */}
+              {renderRecommendations(selectedTrialDetail.recommendations)}
+
+              {/* Outcomes */}
+              {renderOutcomes(selectedTrialDetail.outcomes)}
+
+              {/* Dimension Analysis */}
+              {renderDimensionAnalysis(selectedTrialDetail.dimensionAnalysis)}
+
+              {/* Revised Recommendations */}
+              {selectedTrialDetail.revisedRecommendations &&
+                selectedTrialDetail.revisedRecommendations.length > 0 &&
+                renderRecommendations(selectedTrialDetail.revisedRecommendations, "OPUS REVISED")}
+
+              {/* Opus Review Notes */}
+              {selectedTrialDetail.opusReviewNotes &&
+                renderOpusReview(selectedTrialDetail.opusReviewNotes, selectedTrialDetail.opusReviewTrial)}
+
+              {/* Weights */}
+              {renderWeights(selectedTrialDetail.weights, selectedTrialDetail.trialId)}
+            </>
+          )}
+
+          {/* Not loaded or error state for detail */}
+          {!loadingDetail && !selectedBriefing && !selectedTrialDetail && (
+            <Card>
+              <p className="text-sm text-ios-gray text-center py-4">
+                No detail available for this entry.
+              </p>
+            </Card>
+          )}
         </div>
       )}
     </div>
