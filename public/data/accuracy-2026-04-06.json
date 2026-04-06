@@ -1,0 +1,66 @@
+{
+  "date": "2026-04-06",
+  "scoredAt": "2026-04-06T21:42:14.435Z",
+  "regime": {
+    "predicted": "range-bound",
+    "actual": "range-bound",
+    "correct": true,
+    "predictedBias": 9,
+    "actualBias": 10,
+    "biasError": 1
+  },
+  "recommendations": [
+    {
+      "symbol": "NO_TRADE_RECOMMENDED",
+      "direction": "long",
+      "predictedEntry": 0,
+      "predictedTarget": 0,
+      "predictedStop": 0,
+      "convictionScore": 0,
+      "actualOpen": 0,
+      "actualHigh": 0,
+      "actualLow": 0,
+      "actualClose": 0,
+      "entryAchievable": false,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "returnPercent": 0
+    },
+    {
+      "symbol": "DAL",
+      "direction": "short",
+      "predictedEntry": 66.7,
+      "predictedTarget": 62.5,
+      "predictedStop": 68.75,
+      "convictionScore": 74,
+      "actualOpen": 66.56,
+      "actualHigh": 67.81,
+      "actualLow": 65.94,
+      "actualClose": 66.78,
+      "entryAchievable": true,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "returnPercent": -0.33
+    }
+  ],
+  "summary": {
+    "totalRecs": 2,
+    "directionCorrect": 0,
+    "targetsHit": 0,
+    "stopsHit": 0,
+    "avgReturn": -0.33,
+    "bestTrade": {
+      "symbol": "DAL",
+      "return": -0.33
+    },
+    "worstTrade": {
+      "symbol": "DAL",
+      "return": -0.33
+    }
+  },
+  "compositeScore": 49,
+  "spyReturn": 0.47,
+  "alpha": -0.8
+}

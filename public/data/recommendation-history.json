@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-06T18:31:04.575Z",
+  "lastUpdated": "2026-04-06T21:42:14.436Z",
   "totalRecords": 2,
   "records": [
     {
@@ -11,7 +11,13 @@
       "stopPrice": 0,
       "convictionScore": 0,
       "regime": "range-bound",
-      "scored": false
+      "scored": true,
+      "actualOpen": 0,
+      "actualClose": 0,
+      "actualReturn": 0,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false
     },
     {
       "date": "2026-04-06",
@@ -22,7 +28,13 @@
       "stopPrice": 68.75,
       "convictionScore": 74,
       "regime": "range-bound",
-      "scored": false
+      "scored": true,
+      "actualOpen": 66.56,
+      "actualClose": 66.78,
+      "actualReturn": -0.33,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false
     }
   ]
 }
