@@ -1,9 +1,10 @@
 name: Training Dispatcher
 
 on:
-  push:
-    branches: [main]
-    paths: ['training/**', '.github/workflows/training-*.yml']
+  # push trigger disabled — training runs locally via Claude Code (Max plan)
+  # push:
+  #   branches: [main]
+  #   paths: ['training/**', '.github/workflows/training-*.yml']
   workflow_dispatch:
     inputs:
       action:
