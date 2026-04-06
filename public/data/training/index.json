@@ -1,15 +1,15 @@
 {
-  "totalTrials": 90,
-  "lastUpdated": "2026-04-06T05:36:46.235Z",
+  "totalTrials": 92,
+  "lastUpdated": "2026-04-06T05:50:44.518Z",
   "bestScore": 100,
   "currentWeights": {
-    "catalystClarity": 0.18,
-    "technicalSetup": 0.15,
-    "riskReward": 0.15,
-    "volumeLiquidity": 0.12,
-    "marketAlignment": 0.15,
-    "informationEdge": 0.13,
-    "timingUrgency": 0.12
+    "catalystClarity": 0.2,
+    "technicalSetup": 0.13,
+    "riskReward": 0.14,
+    "volumeLiquidity": 0.1,
+    "marketAlignment": 0.12,
+    "informationEdge": 0.15,
+    "timingUrgency": 0.16
   },
   "trials": [
     {
@@ -911,6 +911,26 @@
       "profitFactor": 0,
       "numRecs": 0,
       "hasOpusReview": true
+    },
+    {
+      "trialId": 91,
+      "date": "2024-07-05",
+      "regime": "range-bound",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": false
+    },
+    {
+      "trialId": 92,
+      "date": "2024-10-03",
+      "regime": "rotation",
+      "score": 50,
+      "winRate": 0,
+      "profitFactor": 0,
+      "numRecs": 0,
+      "hasOpusReview": false
     }
   ]
 }
