@@ -44065,7 +44065,7 @@
     {
       "trialId": 10004,
       "date": "2024-08-06",
-      "generatedAt": "2026-04-06T20:24:58.827Z",
+      "generatedAt": "2026-04-06T20:25:23.337Z",
       "signals": {
         "spFuturesChange": 1.04,
         "nasdaqFuturesChange": 1.03,
@@ -44263,8 +44263,217 @@
         ],
         "scenarios": []
       },
-      "recommendations": [],
-      "outcomes": [],
+      "recommendations": [
+        {
+          "symbol": "SVXY",
+          "direction": "long",
+          "entryPrice": 39.22,
+          "targetPrice": 44.5,
+          "stopLoss": 35.5,
+          "thesis": "Volatility crush play. VIX spiked to 65 on Aug 5 (biggest ever), now at 27.85 and falling fast. SVXY tracks inverse VIX — as VIX mean-reverts toward 20, SVXY recovers. This is the single highest-conviction trade setup: VIX has NEVER stayed above 40 for more than a few days outside of 2008/2020 systemic crises. The carry trade unwind is a positioning event, not a fundamental crisis. SVXY at 39.22 vs prior close of 49.92 = 21% discount that will compress as vol normalizes. The BIS found 85% of the Aug 5 VIX spike was from illiquid put option bid-ask widening, not real hedging demand — further supporting rapid normalization.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 14,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "QQQ",
+          "direction": "long",
+          "entryPrice": 435.37,
+          "targetPrice": 452,
+          "stopLoss": 425,
+          "thesis": "Oversold mega-cap tech bounce. QQQ closed Aug 5 at 435.37 (-2.98%), down sharply from recent highs near 480. Nasdaq futures +1.03% pre-market. The selloff was driven by carry trade mechanics and Buffett's Apple sale — NOT by deteriorating AI/tech fundamentals. NVDA, AAPL, MSFT, GOOGL all down 3-6% in a single day on forced liquidation. Historical precedent: every VIX spike above 40 has been followed by Nasdaq recovery within 2 weeks. SMH pre-market +1.95% shows semiconductor leadership returning. Risk is further carry trade unwind or recession data, but the base case is mean reversion after 6% 20-day drawdown.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 12,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XLRE",
+          "direction": "long",
+          "entryPrice": 40.65,
+          "targetPrice": 43,
+          "stopLoss": 39,
+          "thesis": "Rate-cut beneficiary play. XLRE leading the pre-market bounce at +2.21% — strongest sector. The 10Y yield collapse from 4.2% to 3.89% is a massive tailwind for REITs and rate-sensitive equities. Market is now pricing 100% probability of a September cut with debate on 25 vs 50bps. The crash accelerated the rate-cut timeline, which is structurally bullish for real estate. XLRE at 40.65 represents a 2.89% discount to prior close with clear upside as yield-sensitive investors rotate back. The 2-10 spread improving (-0.25) signals yield curve normalization which historically benefits financials and real estate.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 12,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "UVXY",
+          "direction": "short",
+          "entryPrice": 308.85,
+          "targetPrice": 220,
+          "stopLoss": 360,
+          "thesis": "Volatility decay / mean reversion short. UVXY surged 58% on Aug 5 to 308.85 — this is a leveraged VIX product that suffers from severe contango decay and daily rebalancing drag. With VIX already down from 65 to 28 in pre-market, UVXY faces enormous headwinds. Historical pattern: after every major VIX spike, UVXY loses 40-60% within 2-3 weeks as contango reasserts. The structural decay of the product means time is on the short's side. Risk is another panic leg, but with Nikkei +10% and global futures green, the acute phase appears over. Target of 220 represents ~29% decline, which is conservative given the product's typical post-spike decay. Note: this is a higher-risk trade due to potential for secondary vol spikes.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 13,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": {
+        "outcomes": [
+          {
+            "symbol": "SVXY",
+            "openPrice": 41.86,
+            "highPrice": 46.53,
+            "lowPrice": 41.15,
+            "closePrice": 45.73,
+            "hitTarget": true,
+            "hitStop": false,
+            "directionCorrect": true,
+            "actualReturnPercent": 16.6,
+            "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $41.86, High $46.53, Low $41.15, Close $45.73."
+          },
+          {
+            "symbol": "QQQ",
+            "openPrice": 437.23,
+            "highPrice": 449,
+            "lowPrice": 434.37,
+            "closePrice": 448.07,
+            "hitTarget": false,
+            "hitStop": false,
+            "directionCorrect": true,
+            "actualReturnPercent": 2.92,
+            "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $437.23, High $449, Low $434.37, Close $448.07."
+          },
+          {
+            "symbol": "XLRE",
+            "openPrice": 40.68,
+            "highPrice": 42.24,
+            "lowPrice": 40.53,
+            "closePrice": 41.6,
+            "hitTarget": false,
+            "hitStop": false,
+            "directionCorrect": true,
+            "actualReturnPercent": 2.34,
+            "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $40.68, High $42.24, Low $40.53, Close $41.6."
+          },
+          {
+            "symbol": "UVXY",
+            "openPrice": 256.9,
+            "highPrice": 273.65,
+            "lowPrice": 173.7,
+            "closePrice": 188.75,
+            "hitTarget": true,
+            "hitStop": false,
+            "directionCorrect": true,
+            "actualReturnPercent": 38.89,
+            "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $256.9, High $273.65, Low $173.7, Close $188.75."
+          }
+        ],
+        "tokensUsed": 0
+      },
       "scores": {
         "directionAccuracy": 0,
         "targetHitRate": 0,
@@ -44300,7 +44509,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T20:24:58.853Z",
+  "lastUpdatedAt": "2026-04-06T20:25:23.353Z",
   "totalTokensUsed": 3625689,
   "weightHistory": [
     {
