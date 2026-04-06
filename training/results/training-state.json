@@ -44192,6 +44192,4936 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10004,
+      "date": "2024-08-06",
+      "generatedAt": "2026-04-06T20:44:32.627Z",
+      "signals": {},
+      "regime": {
+        "regime": "range-bound",
+        "confidence": 44,
+        "directionalBias": 14,
+        "volatilityRegime": "extreme",
+        "stressIndex": 31,
+        "riskAppetiteIndex": 46,
+        "keyFactors": [],
+        "sectorTilts": [],
+        "convictionModifiers": {}
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "SVXY",
+          "direction": "long",
+          "entryPrice": 39.22,
+          "targetPrice": 45.1,
+          "stopLoss": 36.08,
+          "thesis": "VIX collapsed from 65 to 28 overnight. SVXY mechanically recovers as vol normalizes. -21% is extreme overshoot for a 1-day vol spike that's already reversing. Highest conviction mean-reversion.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "UVXY",
+          "direction": "short",
+          "entryPrice": 308.85,
+          "targetPrice": 231.64,
+          "stopLoss": 355.18,
+          "thesis": "UVXY +58% on VIX spike that's already unwinding. VIX from 65 to 28 pre-market. Vol ETFs have massive contango decay. Puts capture both mean-reversion and structural decay.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TQQQ",
+          "direction": "long",
+          "entryPrice": 26.81,
+          "targetPrice": 30.03,
+          "stopLoss": 25.2,
+          "thesis": "3x leveraged Nasdaq. -8.72% yesterday. Pre-market green, Nikkei +10%. If QQQ bounces 2%, TQQQ does ~6%. Mechanical amplification of broad recovery.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "UPRO",
+          "direction": "long",
+          "entryPrice": 64.53,
+          "targetPrice": 70.98,
+          "stopLoss": 60.66,
+          "thesis": "3x S&P leveraged ETF. -8.82%. Same mechanical bounce thesis as TQQQ but S&P is broader, slightly less tech-heavy bounce potential.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "VXX",
+          "direction": "short",
+          "entryPrice": 87.26,
+          "targetPrice": 69.81,
+          "stopLoss": 97.73,
+          "thesis": "VXX +39% on vol spike already reversing. VIX term structure will steepen back into contango. Structural short-vol thesis with mean-reversion catalyst.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "direction": "long",
+          "entryPrice": 100.45,
+          "targetPrice": 106.48,
+          "stopLoss": 96.43,
+          "thesis": "NVDA -6.36% on forced liquidation, not fundamentals. AI capex cycle intact. Most oversold mega-cap semi. Bounce candidate #1 in tech.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "direction": "long",
+          "entryPrice": 209.27,
+          "targetPrice": 219.73,
+          "stopLoss": 202.99,
+          "thesis": "AAPL -4.82% partly on Buffett halving position, partly on broad crash. Buffett news is backward-looking (Q2 filing). iPhone cycle intact. Oversold blue-chip bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "direction": "long",
+          "entryPrice": 159.25,
+          "targetPrice": 167.21,
+          "stopLoss": 154.47,
+          "thesis": "GOOGL -4.45%. Search/cloud moat intact. Oversold on indiscriminate selling. Pre-market green.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MSFT",
+          "direction": "long",
+          "entryPrice": 395.15,
+          "targetPrice": 410.96,
+          "stopLoss": 383.3,
+          "thesis": "MSFT -3.27%. Azure/AI narrative intact. Less oversold than NVDA/AAPL but highest quality name. Steady bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AMZN",
+          "direction": "long",
+          "entryPrice": 161.02,
+          "targetPrice": 169.07,
+          "stopLoss": 156.19,
+          "thesis": "AMZN -4.1%. AWS + retail dual engine. Oversold on forced selling, not fundamentals.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "META",
+          "direction": "long",
+          "entryPrice": 475.73,
+          "targetPrice": 494.76,
+          "stopLoss": 461.46,
+          "thesis": "META -2.54%. Less oversold than peers but AI/Reels momentum strong. Good bounce candidate with lower risk.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "direction": "long",
+          "entryPrice": 198.88,
+          "targetPrice": 210.81,
+          "stopLoss": 188.94,
+          "thesis": "TSLA -4.23%. High-beta name bounces hardest in recovery. Robotaxi catalyst coming. Meme energy helps in bounces.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "INTC",
+          "direction": "long",
+          "entryPrice": 20.11,
+          "targetPrice": 21.72,
+          "stopLoss": 19.1,
+          "thesis": "INTC -6.38%. Already beaten down pre-crash, now extreme oversold. Mean-reversion bounce even if long-term challenged. Dead cat bounce territory.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "ARM",
+          "direction": "long",
+          "entryPrice": 110.45,
+          "targetPrice": 115.97,
+          "stopLoss": 106.03,
+          "thesis": "ARM -2.64%. AI chip design enabler. Less oversold than NVDA but still attractive bounce setup.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MRVL",
+          "direction": "long",
+          "entryPrice": 57.67,
+          "targetPrice": 60.55,
+          "stopLoss": 55.36,
+          "thesis": "MRVL -2.67%. Custom silicon for cloud. Oversold on indiscriminate selling. Data center demand intact.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MU",
+          "direction": "long",
+          "entryPrice": 90.42,
+          "targetPrice": 94.94,
+          "stopLoss": 86.8,
+          "thesis": "MU -2.46%. HBM demand for AI training intact. Memory cycle turning. Oversold on broad selloff.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SMH",
+          "direction": "long",
+          "entryPrice": 213.31,
+          "targetPrice": 221.84,
+          "stopLoss": 206.91,
+          "thesis": "SMH -2.34%. Broad semi ETF. Diversified bounce play on the AI hardware theme.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AVGO",
+          "direction": "long",
+          "entryPrice": 142.08,
+          "targetPrice": 147.76,
+          "stopLoss": 137.82,
+          "thesis": "AVGO -1.21%. Less oversold, but VMware integration + AI networking. Quality name for recovery.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MSTR",
+          "direction": "long",
+          "entryPrice": 130.9,
+          "targetPrice": 150.53,
+          "stopLoss": 120.43,
+          "thesis": "MSTR -9.6%, biggest single-stock loser. BTC proxy with leverage. If BTC recovers, MSTR bounces hard. High risk but extreme mean-reversion setup.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "COIN",
+          "direction": "long",
+          "entryPrice": 189.47,
+          "targetPrice": 208.42,
+          "stopLoss": 178.1,
+          "thesis": "COIN -7.32%. Crypto exchange, oversold with BTC. Trading volume spikes during volatility (good for COIN revenue). Mean-reversion bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "RIOT",
+          "direction": "long",
+          "entryPrice": 8.31,
+          "targetPrice": 9.14,
+          "stopLoss": 7.73,
+          "thesis": "RIOT -3.03%. BTC miner, leveraged BTC exposure. If crypto bounces, miners bounce harder.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MARA",
+          "direction": "long",
+          "entryPrice": 16.95,
+          "targetPrice": 18.31,
+          "stopLoss": 16.1,
+          "thesis": "MARA -1.4%. Less oversold crypto miner. Stock position for lower-risk crypto bounce exposure.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MA",
+          "direction": "long",
+          "entryPrice": 442,
+          "targetPrice": 464.1,
+          "stopLoss": 428.74,
+          "thesis": "MA -4.33%. Payment network with consumer spending moat. Oversold on rate fear. Consumer spending data strong. Quality bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "V",
+          "direction": "long",
+          "entryPrice": 256.44,
+          "targetPrice": 269.26,
+          "stopLoss": 248.75,
+          "thesis": "V -3.80%. Same payments thesis as MA. Duopoly position. Oversold on macro fear not fundamentals.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "C",
+          "direction": "long",
+          "entryPrice": 56.21,
+          "targetPrice": 59.58,
+          "stopLoss": 53.96,
+          "thesis": "C -4.34%. Citi has significant international/FX exposure, directly hit by carry trade unwind. But the unwind is stabilizing. Bounce as fear fades.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MS",
+          "direction": "long",
+          "entryPrice": 92.07,
+          "targetPrice": 96.67,
+          "stopLoss": 88.39,
+          "thesis": "MS -3.94%. Trading desks actually benefit from vol. Oversold as a financial but trading revenue likely spiked. Contrarian setup.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "GS",
+          "direction": "long",
+          "entryPrice": 459.02,
+          "targetPrice": 477.38,
+          "stopLoss": 445.25,
+          "thesis": "GS -2.47%. Trading-heavy bank, vol is revenue. Less oversold than MS but higher quality franchise.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "JPM",
+          "direction": "long",
+          "entryPrice": 194.9,
+          "targetPrice": 202.7,
+          "stopLoss": 189.05,
+          "thesis": "JPM -2.13%. Fortress balance sheet. Less oversold but safest financial. Will bounce with sector.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "BAC",
+          "direction": "long",
+          "entryPrice": 36.65,
+          "targetPrice": 38.12,
+          "stopLoss": 35.55,
+          "thesis": "BAC -2.47%. Most rate-sensitive big bank. If rate cut expectations stabilize, BAC bounces.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "KRE",
+          "direction": "long",
+          "entryPrice": 52.35,
+          "targetPrice": 54.97,
+          "stopLoss": 50.26,
+          "thesis": "KRE -2.75%. Regional banks oversold on recession/Sahm Rule fear. If macro stabilizes, regionals bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XLF",
+          "direction": "long",
+          "entryPrice": 40.84,
+          "targetPrice": 42.47,
+          "stopLoss": 39.61,
+          "thesis": "XLF -2.90%. Broad financial sector bounce play. Diversified exposure to the carry-trade recovery theme.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MET",
+          "direction": "long",
+          "entryPrice": 67.96,
+          "targetPrice": 71.36,
+          "stopLoss": 65.92,
+          "thesis": "MET -3.68%. Insurance/financial oversold. Rate-sensitive but rates still elevated. Mean-reversion candidate.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SCHW",
+          "direction": "long",
+          "entryPrice": 62.29,
+          "targetPrice": 64.78,
+          "stopLoss": 60.42,
+          "thesis": "SCHW -1.74%. Brokerage benefits from trading volume spikes. Less oversold but volume tailwind.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AIG",
+          "direction": "long",
+          "entryPrice": 70.16,
+          "targetPrice": 72.97,
+          "stopLoss": 68.06,
+          "thesis": "AIG -2.51%. Insurance turnaround story, oversold on broad financial selloff. Mean-reversion.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "UAL",
+          "direction": "long",
+          "entryPrice": 37.88,
+          "targetPrice": 40.91,
+          "stopLoss": 35.99,
+          "thesis": "UAL -5.75%. Most oversold airline. Summer travel demand strong. Recession fear overdone (Sahm Rule is lagging indicator). Fuel costs falling with oil.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "LUV",
+          "direction": "long",
+          "entryPrice": 23.7,
+          "targetPrice": 25.6,
+          "stopLoss": 22.51,
+          "thesis": "LUV -5.39%. Southwest oversold. Activist pressure (Elliott) is a positive catalyst. Domestic travel strong.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "DAL",
+          "direction": "long",
+          "entryPrice": 37.93,
+          "targetPrice": 40.59,
+          "stopLoss": 36.03,
+          "thesis": "DAL -4.77%. Delta is highest quality airline. Oversold on recession fear. Premium travel resilient.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AAL",
+          "direction": "long",
+          "entryPrice": 9.28,
+          "targetPrice": 10.02,
+          "stopLoss": 8.82,
+          "thesis": "AAL -3.63%. Most leveraged airline, bounces hardest in recovery. Higher risk but higher beta.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "JETS",
+          "direction": "long",
+          "entryPrice": 16.76,
+          "targetPrice": 17.77,
+          "stopLoss": 16.09,
+          "thesis": "JETS -3.68%. Broad airline ETF. Diversified bounce on travel recovery thesis.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NCLH",
+          "direction": "long",
+          "entryPrice": 15.33,
+          "targetPrice": 16.4,
+          "stopLoss": 14.56,
+          "thesis": "NCLH -3.77%. Cruise line oversold on recession fear. Bookings strong through 2025. High-beta leisure bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CCL",
+          "direction": "long",
+          "entryPrice": 14.4,
+          "targetPrice": 15.12,
+          "stopLoss": 13.82,
+          "thesis": "CCL -2.70%. Carnival cruise oversold. Booking trends strong. Lower beta than NCLH but more liquid.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "ABNB",
+          "direction": "long",
+          "entryPrice": 125.31,
+          "targetPrice": 131.58,
+          "stopLoss": 120.3,
+          "thesis": "ABNB -2.28%. Travel demand intact. Platform model = high margins. Oversold on macro fear.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SPY",
+          "direction": "long",
+          "entryPrice": 517.38,
+          "targetPrice": 532.9,
+          "stopLoss": 507.03,
+          "thesis": "SPY -2.91%. Broad market bounce play. Nikkei +10%, VIX halved. Pre-market green. Most liquid way to play mean-reversion.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "QQQ",
+          "direction": "long",
+          "entryPrice": 435.37,
+          "targetPrice": 452.78,
+          "stopLoss": 426.66,
+          "thesis": "QQQ -2.98%. Nasdaq bounce. Tech more oversold than S&P. Higher beta recovery potential.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "IWM",
+          "direction": "long",
+          "entryPrice": 202.2,
+          "targetPrice": 212.31,
+          "stopLoss": 196.13,
+          "thesis": "IWM -3.22%. Small caps more oversold than large caps. Rate cut expectations help small caps. Rotation thesis still alive.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "DIA",
+          "direction": "long",
+          "entryPrice": 386.81,
+          "targetPrice": 398.41,
+          "stopLoss": 379.07,
+          "thesis": "DIA -2.60%. Dow recovery. Blue-chip defensive bounce. Less volatile but steady recovery candidate.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SNOW",
+          "direction": "long",
+          "entryPrice": 112.63,
+          "targetPrice": 121.64,
+          "stopLoss": 107,
+          "thesis": "SNOW -5.96%. Most oversold cloud/SaaS name. Data cloud demand secular. Extreme oversold bounce candidate.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "PANW",
+          "direction": "long",
+          "entryPrice": 147.09,
+          "targetPrice": 154.44,
+          "stopLoss": 141.21,
+          "thesis": "PANW -3.74%. Cybersecurity spend is non-discretionary. Oversold on broad tech selloff. Defensive growth bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "ADBE",
+          "direction": "long",
+          "entryPrice": 509.32,
+          "targetPrice": 534.79,
+          "stopLoss": 494.04,
+          "thesis": "ADBE -3.20%. Creative/document cloud monopoly. AI integration catalyst. Oversold on broad tech fear.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CRM",
+          "direction": "long",
+          "entryPrice": 239.01,
+          "targetPrice": 248.57,
+          "stopLoss": 231.84,
+          "thesis": "CRM -2.03%. Enterprise cloud leader. Less oversold but quality name. AI assistant narrative.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "ORCL",
+          "direction": "long",
+          "entryPrice": 127.86,
+          "targetPrice": 134.25,
+          "stopLoss": 122.75,
+          "thesis": "ORCL -4.07%. Cloud infrastructure growth story. OCI gaining share. Oversold on broad selling.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "DDOG",
+          "direction": "long",
+          "entryPrice": 104.97,
+          "targetPrice": 109.17,
+          "stopLoss": 101.82,
+          "thesis": "DDOG -2.13%. Cloud observability leader. Usage-based model means revenue resilient. Oversold.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NET",
+          "direction": "long",
+          "entryPrice": 77.7,
+          "targetPrice": 81.59,
+          "stopLoss": 74.59,
+          "thesis": "NET -2.21%. Edge/CDN leader. Workers AI platform gaining traction. Oversold growth name.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "ZS",
+          "direction": "long",
+          "entryPrice": 165.23,
+          "targetPrice": 171.84,
+          "stopLoss": 160.27,
+          "thesis": "ZS -2.53%. Zero trust security leader. Non-discretionary spend. Oversold on broad tech selloff.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NOW",
+          "direction": "long",
+          "entryPrice": 156.25,
+          "targetPrice": 160.94,
+          "stopLoss": 153.12,
+          "thesis": "NOW -1.19%. Less oversold but highest quality SaaS. Enterprise IT workflow monopoly. Steady bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "LLY",
+          "direction": "long",
+          "entryPrice": 775.26,
+          "targetPrice": 814.02,
+          "stopLoss": 752,
+          "thesis": "LLY -3.63%. GLP-1/obesity drug leader oversold on broad crash. Secular growth story intact. Mounjaro demand exceeding supply. Quality defensive bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "UNH",
+          "direction": "long",
+          "entryPrice": 569.96,
+          "targetPrice": 592.76,
+          "stopLoss": 552.86,
+          "thesis": "UNH -3.37%. Largest health insurer, defensive quality. Oversold on broad crash. Steady bounce candidate.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "BIIB",
+          "direction": "long",
+          "entryPrice": 198.39,
+          "targetPrice": 208.31,
+          "stopLoss": 190.45,
+          "thesis": "BIIB -3.53%. Alzheimer's drug catalyst. Oversold biotech. Mean-reversion candidate.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MRNA",
+          "direction": "long",
+          "entryPrice": 83.75,
+          "targetPrice": 87.94,
+          "stopLoss": 80.4,
+          "thesis": "MRNA -3.27%. High-beta biotech. Cancer vaccine pipeline. Oversold on broad crash.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XBI",
+          "direction": "long",
+          "entryPrice": 93.43,
+          "targetPrice": 98.1,
+          "stopLoss": 90.63,
+          "thesis": "XBI -3.15%. Biotech sector ETF. Diversified biotech bounce exposure. M&A activity picking up.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "EQIX",
+          "direction": "long",
+          "entryPrice": 768.24,
+          "targetPrice": 814.33,
+          "stopLoss": 737.51,
+          "thesis": "EQIX -4.76%. Data center REIT with AI secular demand. Most oversold REIT. Rate fears overdone since cuts coming.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "PLD",
+          "direction": "long",
+          "entryPrice": 118.94,
+          "targetPrice": 124.89,
+          "stopLoss": 114.18,
+          "thesis": "PLD -4.07%. Industrial/logistics REIT. E-commerce demand secular. Oversold on rate fear.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CCI",
+          "direction": "long",
+          "entryPrice": 110.77,
+          "targetPrice": 116.31,
+          "stopLoss": 107.45,
+          "thesis": "CCI -3.85%. Cell tower REIT. 5G buildout continuing. Rate-sensitive oversold.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AMT",
+          "direction": "long",
+          "entryPrice": 226.19,
+          "targetPrice": 237.5,
+          "stopLoss": 219.4,
+          "thesis": "AMT -3.60%. American Tower, largest tower REIT. Oversold on rate fear. Global 5G expansion.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "VNQ",
+          "direction": "long",
+          "entryPrice": 88.66,
+          "targetPrice": 92.21,
+          "stopLoss": 86,
+          "thesis": "VNQ -2.86%. Broad REIT ETF. Rate cut expectations help entire sector. Diversified recovery play.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TGT",
+          "direction": "long",
+          "entryPrice": 133.87,
+          "targetPrice": 140.56,
+          "stopLoss": 128.52,
+          "thesis": "TGT -3.81%. Target oversold on recession fear. Consumer spending data still solid. Back-to-school catalyst. Mean-reversion.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NKE",
+          "direction": "long",
+          "entryPrice": 71.42,
+          "targetPrice": 74.99,
+          "stopLoss": 68.56,
+          "thesis": "NKE -3.50%. Nike oversold. Already depressed pre-crash. Turnaround story with new leadership. Paris Olympics catalyst.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SBUX",
+          "direction": "long",
+          "entryPrice": 73.86,
+          "targetPrice": 76.81,
+          "stopLoss": 71.64,
+          "thesis": "SBUX -2.66%. Starbucks oversold. Activist/turnaround potential. Consumer habit = resilient revenue.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MCD",
+          "direction": "long",
+          "entryPrice": 268.45,
+          "targetPrice": 279.19,
+          "stopLoss": 263.08,
+          "thesis": "MCD -2.98%. McDonald's = consumer defensive. Oversold on broad crash. $5 value meal driving traffic.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "DVN",
+          "direction": "long",
+          "entryPrice": 41.48,
+          "targetPrice": 43.14,
+          "stopLoss": 40.24,
+          "thesis": "DVN -3.06%. Devon Energy oversold. Oil still $70+. Shareholder return model with variable dividend. Mean-reversion.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "HAL",
+          "direction": "long",
+          "entryPrice": 30.88,
+          "targetPrice": 32.12,
+          "stopLoss": 29.95,
+          "thesis": "HAL -2.95%. Oilfield services oversold. International drilling cycle intact. Value bounce candidate.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SLB",
+          "direction": "long",
+          "entryPrice": 43.77,
+          "targetPrice": 45.52,
+          "stopLoss": 42.46,
+          "thesis": "SLB -2.58%. Schlumberger oversold. International cycle strong. Digital transformation of E&P.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SLV",
+          "direction": "long",
+          "entryPrice": 24.86,
+          "targetPrice": 26.35,
+          "stopLoss": 23.87,
+          "thesis": "SLV -4.53%. Silver oversold more than gold. Industrial + precious metal dual demand. Rate cuts bullish for metals.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CLF",
+          "direction": "long",
+          "entryPrice": 13.32,
+          "targetPrice": 14.25,
+          "stopLoss": 12.65,
+          "thesis": "CLF -4.52%. Cleveland-Cliffs steel oversold on recession fear. Infrastructure spend continues. High-beta materials bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AA",
+          "direction": "long",
+          "entryPrice": 28.44,
+          "targetPrice": 30.15,
+          "stopLoss": 27.3,
+          "thesis": "AA -3.50%. Alcoa oversold. Aluminum prices stabilizing. EV + packaging demand secular.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "FCX",
+          "direction": "long",
+          "entryPrice": 40.87,
+          "targetPrice": 42.91,
+          "stopLoss": 39.24,
+          "thesis": "FCX -2.62%. Freeport copper play. Electrification/AI data center demand for copper. Oversold on growth fear.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "FDX",
+          "direction": "long",
+          "entryPrice": 283.09,
+          "targetPrice": 297.24,
+          "stopLoss": 274.6,
+          "thesis": "FDX -3.15%. FedEx restructuring + e-commerce volumes. Oversold on recession fear. DRIVE program cutting costs.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CSX",
+          "direction": "long",
+          "entryPrice": 33,
+          "targetPrice": 34.32,
+          "stopLoss": 32.01,
+          "thesis": "CSX -3.17%. Railroad oversold. Infrastructure backbone of economy. Precision railroading improving margins.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "DE",
+          "direction": "long",
+          "entryPrice": 344.84,
+          "targetPrice": 358.63,
+          "stopLoss": 334.49,
+          "thesis": "DE -2.52%. Deere oversold. Ag cycle bottoming. Precision ag technology leadership.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NEE",
+          "direction": "long",
+          "entryPrice": 76.68,
+          "targetPrice": 79.75,
+          "stopLoss": 74.38,
+          "thesis": "NEE -3.18%. NextEra oversold on rate fear. Renewable energy leader. Rate cuts = tailwind for utilities.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "D",
+          "direction": "long",
+          "entryPrice": 54.04,
+          "targetPrice": 56.2,
+          "stopLoss": 52.42,
+          "thesis": "D -3.64%. Dominion Energy oversold. Regulated utility, rate-sensitive. Mean-reversion as rates stabilize.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AEP",
+          "direction": "long",
+          "entryPrice": 98.06,
+          "targetPrice": 101.98,
+          "stopLoss": 95.12,
+          "thesis": "AEP -3.66%. AEP oversold utility. Data center demand driving load growth. Rate cut tailwind.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "VST",
+          "direction": "long",
+          "entryPrice": 70.2,
+          "targetPrice": 73.71,
+          "stopLoss": 67.39,
+          "thesis": "VST -3.08%. Vistra power generation. AI data center power demand thesis. Oversold on broad crash.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CEG",
+          "direction": "long",
+          "entryPrice": 169.97,
+          "targetPrice": 178.47,
+          "stopLoss": 164.87,
+          "thesis": "CEG +1.73%. Already recovering - nuclear power demand thesis strong. AI data centers need baseload power. Momentum continuing.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SQQQ",
+          "direction": "short",
+          "entryPrice": 269.75,
+          "targetPrice": 229.29,
+          "stopLoss": 296.73,
+          "thesis": "Sell puts on SQQQ as hedge income. If market bounces (base case), SQQQ falls and puts expire worthless = keep premium. If crash resumes, puts activate as portfolio hedge.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TLT",
+          "direction": "long",
+          "entryPrice": 98.8,
+          "targetPrice": 101.76,
+          "stopLoss": 96.82,
+          "thesis": "TLT +0.53%. Bonds already bid on flight to safety. If Sahm Rule signal is real, rates drop further. Hedge against bounce-failure scenario.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "GLD",
+          "direction": "long",
+          "entryPrice": 222.48,
+          "targetPrice": 229.15,
+          "stopLoss": 218.03,
+          "thesis": "GLD -1.27%. Gold typically recovers after forced-liquidation selloffs. Safe haven with rate-cut tailwind. Portfolio hedge.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AFRM",
+          "direction": "long",
+          "entryPrice": 24.56,
+          "targetPrice": 26.52,
+          "stopLoss": 23.33,
+          "thesis": "AFRM -4.70%. BNPL leader oversold. Consumer credit quality actually improving. High-beta fintech bounce.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "WBD",
+          "direction": "long",
+          "entryPrice": 7.88,
+          "targetPrice": 8.43,
+          "stopLoss": 7.49,
+          "thesis": "WBD -4.72%. Warner Bros Discovery. Deeply oversold media. Max streaming growing. NBA deal potential catalyst.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "PYPL",
+          "direction": "long",
+          "entryPrice": 60.46,
+          "targetPrice": 62.88,
+          "stopLoss": 58.65,
+          "thesis": "PYPL -2.45%. PayPal turnaround under new CEO. Oversold on broad fintech selloff. Venmo + checkout improvements.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NFLX",
+          "direction": "long",
+          "entryPrice": 59.85,
+          "targetPrice": 62.24,
+          "stopLoss": 58.05,
+          "thesis": "NFLX -2.46%. Netflix streaming leader. Ad tier gaining traction. Oversold on broad consumer fear.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "BRK-B",
+          "direction": "long",
+          "entryPrice": 413.72,
+          "targetPrice": 430.27,
+          "stopLoss": 405.45,
+          "thesis": "BRK-B -3.42%. Berkshire oversold despite $277B cash pile. Ironic given Buffett is the one selling. Cash fortress = safe haven quality.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "ISRG",
+          "direction": "long",
+          "entryPrice": 438,
+          "targetPrice": 455.52,
+          "stopLoss": 424.86,
+          "thesis": "ISRG -2.61%. Intuitive Surgical. Da Vinci monopoly. Procedure volumes growing. Oversold quality growth.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "COST",
+          "direction": "long",
+          "entryPrice": 801.83,
+          "targetPrice": 825.88,
+          "stopLoss": 785.79,
+          "thesis": "COST -2.46%. Costco membership model = recurring revenue. Oversold defensive. Membership fee increase catalyst.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "FSLR",
+          "direction": "long",
+          "entryPrice": 207.09,
+          "targetPrice": 217.44,
+          "stopLoss": 198.81,
+          "thesis": "FSLR -2.80%. First Solar, US solar manufacturing. IRA subsidies locked in. Oversold on broad energy transition selloff.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "SVXY",
+          "openPrice": 41.86,
+          "highPrice": 46.53,
+          "lowPrice": 41.15,
+          "closePrice": 45.73,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 16.6,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $41.86, High $46.53, Low $41.15, Close $45.73."
+        },
+        {
+          "symbol": "UVXY",
+          "openPrice": 256.9,
+          "highPrice": 273.65,
+          "lowPrice": 173.7,
+          "closePrice": 188.75,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 38.89,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $256.9, High $273.65, Low $173.7, Close $188.75."
+        },
+        {
+          "symbol": "TQQQ",
+          "openPrice": 27.07,
+          "highPrice": 29.25,
+          "lowPrice": 26.5,
+          "closePrice": 29.03,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 8.28,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $27.07, High $29.25, Low $26.5, Close $29.03."
+        },
+        {
+          "symbol": "UPRO",
+          "openPrice": 65.21,
+          "highPrice": 69.86,
+          "lowPrice": 64.68,
+          "closePrice": 69.39,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.53,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $65.21, High $69.86, Low $64.68, Close $69.39."
+        },
+        {
+          "symbol": "VXX",
+          "openPrice": 77.48,
+          "highPrice": 80.42,
+          "lowPrice": 60.38,
+          "closePrice": 63.47,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 27.26,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $77.48, High $80.42, Low $60.38, Close $63.47."
+        },
+        {
+          "symbol": "NVDA",
+          "openPrice": 103.84,
+          "highPrice": 108.8,
+          "lowPrice": 97.52,
+          "closePrice": 104.97,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.5,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $103.84, High $108.8, Low $97.52, Close $104.97."
+        },
+        {
+          "symbol": "AAPL",
+          "openPrice": 205.3,
+          "highPrice": 214.2,
+          "lowPrice": 201.07,
+          "closePrice": 213.31,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.93,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $205.3, High $214.2, Low $201.07, Close $213.31."
+        },
+        {
+          "symbol": "GOOGL",
+          "openPrice": 159.33,
+          "highPrice": 163.69,
+          "lowPrice": 156.41,
+          "closePrice": 162.03,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.75,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $159.33, High $163.69, Low $156.41, Close $162.03."
+        },
+        {
+          "symbol": "MSFT",
+          "openPrice": 400,
+          "highPrice": 410.08,
+          "lowPrice": 397.47,
+          "closePrice": 402.69,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.91,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $400, High $410.08, Low $397.47, Close $402.69."
+        },
+        {
+          "symbol": "AMZN",
+          "openPrice": 161.71,
+          "highPrice": 167.58,
+          "lowPrice": 158.54,
+          "closePrice": 165.8,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.97,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $161.71, High $167.58, Low $158.54, Close $165.8."
+        },
+        {
+          "symbol": "META",
+          "openPrice": 479,
+          "highPrice": 510.15,
+          "lowPrice": 478.65,
+          "closePrice": 509.63,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.13,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $479, High $510.15, Low $478.65, Close $509.63."
+        },
+        {
+          "symbol": "TSLA",
+          "openPrice": 200.75,
+          "highPrice": 203.49,
+          "lowPrice": 191.48,
+          "closePrice": 198.84,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.02,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $200.75, High $203.49, Low $191.48, Close $198.84."
+        },
+        {
+          "symbol": "INTC",
+          "openPrice": 20.32,
+          "highPrice": 20.63,
+          "lowPrice": 18.84,
+          "closePrice": 20.49,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.89,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $20.32, High $20.63, Low $18.84, Close $20.49."
+        },
+        {
+          "symbol": "ARM",
+          "openPrice": 115.53,
+          "highPrice": 120.09,
+          "lowPrice": 106.53,
+          "closePrice": 118.43,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.22,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $115.53, High $120.09, Low $106.53, Close $118.43."
+        },
+        {
+          "symbol": "MRVL",
+          "openPrice": 58.96,
+          "highPrice": 61.52,
+          "lowPrice": 56.03,
+          "closePrice": 61.16,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 6.05,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $58.96, High $61.52, Low $56.03, Close $61.16."
+        },
+        {
+          "symbol": "MU",
+          "openPrice": 89.2,
+          "highPrice": 93.58,
+          "lowPrice": 86.58,
+          "closePrice": 92.07,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.82,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $89.2, High $93.58, Low $86.58, Close $92.07."
+        },
+        {
+          "symbol": "SMH",
+          "openPrice": 216.54,
+          "highPrice": 226.1,
+          "lowPrice": 211.01,
+          "closePrice": 224.91,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 5.44,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $216.54, High $226.1, Low $211.01, Close $224.91."
+        },
+        {
+          "symbol": "AVGO",
+          "openPrice": 141.73,
+          "highPrice": 150.1,
+          "lowPrice": 135.83,
+          "closePrice": 145.74,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.58,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $141.73, High $150.1, Low $135.83, Close $145.74."
+        },
+        {
+          "symbol": "MSTR",
+          "openPrice": 132.6,
+          "highPrice": 142.16,
+          "lowPrice": 124.01,
+          "closePrice": 135.99,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.89,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $132.6, High $142.16, Low $124.01, Close $135.99."
+        },
+        {
+          "symbol": "COIN",
+          "openPrice": 191.99,
+          "highPrice": 199.95,
+          "lowPrice": 177.39,
+          "closePrice": 192.32,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.5,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $191.99, High $199.95, Low $177.39, Close $192.32."
+        },
+        {
+          "symbol": "RIOT",
+          "openPrice": 8.51,
+          "highPrice": 8.63,
+          "lowPrice": 7.61,
+          "closePrice": 8.29,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.24,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $8.51, High $8.63, Low $7.61, Close $8.29."
+        },
+        {
+          "symbol": "MARA",
+          "openPrice": 17.38,
+          "highPrice": 17.8,
+          "lowPrice": 15.74,
+          "closePrice": 17.39,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.6,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $17.38, High $17.8, Low $15.74, Close $17.39."
+        },
+        {
+          "symbol": "MA",
+          "openPrice": 443.22,
+          "highPrice": 456.92,
+          "lowPrice": 442.11,
+          "closePrice": 455.58,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.07,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $443.22, High $456.92, Low $442.11, Close $455.58."
+        },
+        {
+          "symbol": "V",
+          "openPrice": 256.5,
+          "highPrice": 262.03,
+          "lowPrice": 255.77,
+          "closePrice": 259.83,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.32,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $256.5, High $262.03, Low $255.77, Close $259.83."
+        },
+        {
+          "symbol": "C",
+          "openPrice": 56.39,
+          "highPrice": 58.45,
+          "lowPrice": 55.87,
+          "closePrice": 58,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.18,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $56.39, High $58.45, Low $55.87, Close $58."
+        },
+        {
+          "symbol": "MS",
+          "openPrice": 92.2,
+          "highPrice": 95.33,
+          "lowPrice": 91.52,
+          "closePrice": 94.63,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.78,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $92.2, High $95.33, Low $91.52, Close $94.63."
+        },
+        {
+          "symbol": "GS",
+          "openPrice": 461.01,
+          "highPrice": 488.55,
+          "lowPrice": 457.43,
+          "closePrice": 485.77,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 5.83,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $461.01, High $488.55, Low $457.43, Close $485.77."
+        },
+        {
+          "symbol": "JPM",
+          "openPrice": 195.4,
+          "highPrice": 205.75,
+          "lowPrice": 194,
+          "closePrice": 204.06,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.7,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $195.4, High $205.75, Low $194, Close $204.06."
+        },
+        {
+          "symbol": "BAC",
+          "openPrice": 36.65,
+          "highPrice": 38.59,
+          "lowPrice": 36.54,
+          "closePrice": 38.21,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.26,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $36.65, High $38.59, Low $36.54, Close $38.21."
+        },
+        {
+          "symbol": "KRE",
+          "openPrice": 52.31,
+          "highPrice": 53.67,
+          "lowPrice": 51.73,
+          "closePrice": 53.07,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.38,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $52.31, High $53.67, Low $51.73, Close $53.07."
+        },
+        {
+          "symbol": "XLF",
+          "openPrice": 41.02,
+          "highPrice": 42.36,
+          "lowPrice": 40.91,
+          "closePrice": 42.22,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.38,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $41.02, High $42.36, Low $40.91, Close $42.22."
+        },
+        {
+          "symbol": "MET",
+          "openPrice": 67.78,
+          "highPrice": 70.2,
+          "lowPrice": 67.46,
+          "closePrice": 69.65,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.49,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $67.78, High $70.2, Low $67.46, Close $69.65."
+        },
+        {
+          "symbol": "SCHW",
+          "openPrice": 62.42,
+          "highPrice": 63.95,
+          "lowPrice": 61.58,
+          "closePrice": 62.78,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.79,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $62.42, High $63.95, Low $61.58, Close $62.78."
+        },
+        {
+          "symbol": "AIG",
+          "openPrice": 70.18,
+          "highPrice": 72.64,
+          "lowPrice": 70.11,
+          "closePrice": 72.14,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.82,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $70.18, High $72.64, Low $70.11, Close $72.14."
+        },
+        {
+          "symbol": "UAL",
+          "openPrice": 38.35,
+          "highPrice": 41.35,
+          "lowPrice": 38.05,
+          "closePrice": 41.18,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 8.71,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $38.35, High $41.35, Low $38.05, Close $41.18."
+        },
+        {
+          "symbol": "LUV",
+          "openPrice": 24.08,
+          "highPrice": 25.31,
+          "lowPrice": 23.87,
+          "closePrice": 25.22,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 6.41,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $24.08, High $25.31, Low $23.87, Close $25.22."
+        },
+        {
+          "symbol": "DAL",
+          "openPrice": 38.23,
+          "highPrice": 39.71,
+          "lowPrice": 37.29,
+          "closePrice": 39.61,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.43,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $38.23, High $39.71, Low $37.29, Close $39.61."
+        },
+        {
+          "symbol": "AAL",
+          "openPrice": 9.46,
+          "highPrice": 9.91,
+          "lowPrice": 9.21,
+          "closePrice": 9.89,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 6.57,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $9.46, High $9.91, Low $9.21, Close $9.89."
+        },
+        {
+          "symbol": "JETS",
+          "openPrice": 16.91,
+          "highPrice": 17.48,
+          "lowPrice": 16.75,
+          "closePrice": 17.47,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.24,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $16.91, High $17.48, Low $16.75, Close $17.47."
+        },
+        {
+          "symbol": "NCLH",
+          "openPrice": 15.6,
+          "highPrice": 16.06,
+          "lowPrice": 14.84,
+          "closePrice": 15.52,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.24,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $15.6, High $16.06, Low $14.84, Close $15.52."
+        },
+        {
+          "symbol": "CCL",
+          "openPrice": 14.45,
+          "highPrice": 15.04,
+          "lowPrice": 13.95,
+          "closePrice": 14.49,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.62,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $14.45, High $15.04, Low $13.95, Close $14.49."
+        },
+        {
+          "symbol": "ABNB",
+          "openPrice": 126.9,
+          "highPrice": 131.45,
+          "lowPrice": 110.38,
+          "closePrice": 114.64,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -8.51,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $126.9, High $131.45, Low $110.38, Close $114.64."
+        },
+        {
+          "symbol": "SPY",
+          "openPrice": 519.22,
+          "highPrice": 531.59,
+          "lowPrice": 517.87,
+          "closePrice": 530.65,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.56,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $519.22, High $531.59, Low $517.87, Close $530.65."
+        },
+        {
+          "symbol": "QQQ",
+          "openPrice": 437.23,
+          "highPrice": 449,
+          "lowPrice": 434.37,
+          "closePrice": 448.07,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.92,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $437.23, High $449, Low $434.37, Close $448.07."
+        },
+        {
+          "symbol": "IWM",
+          "openPrice": 203.01,
+          "highPrice": 207.96,
+          "lowPrice": 201.2,
+          "closePrice": 206.89,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.32,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $203.01, High $207.96, Low $201.2, Close $206.89."
+        },
+        {
+          "symbol": "DIA",
+          "openPrice": 387.56,
+          "highPrice": 395.14,
+          "lowPrice": 386.26,
+          "closePrice": 394.52,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.99,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $387.56, High $395.14, Low $386.26, Close $394.52."
+        },
+        {
+          "symbol": "SNOW",
+          "openPrice": 114.64,
+          "highPrice": 122.06,
+          "lowPrice": 113.33,
+          "closePrice": 121.6,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.96,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $114.64, High $122.06, Low $113.33, Close $121.6."
+        },
+        {
+          "symbol": "PANW",
+          "openPrice": 150.06,
+          "highPrice": 158.9,
+          "lowPrice": 147.43,
+          "closePrice": 158.68,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.88,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $150.06, High $158.9, Low $147.43, Close $158.68."
+        },
+        {
+          "symbol": "ADBE",
+          "openPrice": 513.69,
+          "highPrice": 531.07,
+          "lowPrice": 509.01,
+          "closePrice": 530.24,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.11,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $513.69, High $531.07, Low $509.01, Close $530.24."
+        },
+        {
+          "symbol": "CRM",
+          "openPrice": 241.09,
+          "highPrice": 249.43,
+          "lowPrice": 238.03,
+          "closePrice": 249.12,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.23,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $241.09, High $249.43, Low $238.03, Close $249.12."
+        },
+        {
+          "symbol": "ORCL",
+          "openPrice": 130.54,
+          "highPrice": 131.04,
+          "lowPrice": 125.75,
+          "closePrice": 128.96,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.86,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $130.54, High $131.04, Low $125.75, Close $128.96."
+        },
+        {
+          "symbol": "DDOG",
+          "openPrice": 105.64,
+          "highPrice": 118.07,
+          "lowPrice": 103.51,
+          "closePrice": 114.06,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 8.66,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $105.64, High $118.07, Low $103.51, Close $114.06."
+        },
+        {
+          "symbol": "NET",
+          "openPrice": 78.67,
+          "highPrice": 79.98,
+          "lowPrice": 75.13,
+          "closePrice": 76.82,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.13,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $78.67, High $79.98, Low $75.13, Close $76.82."
+        },
+        {
+          "symbol": "ZS",
+          "openPrice": 168.62,
+          "highPrice": 174.77,
+          "lowPrice": 164.16,
+          "closePrice": 171.71,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.92,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $168.62, High $174.77, Low $164.16, Close $171.71."
+        },
+        {
+          "symbol": "NOW",
+          "openPrice": 157.4,
+          "highPrice": 163.31,
+          "lowPrice": 154.99,
+          "closePrice": 159.23,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.91,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $157.4, High $163.31, Low $154.99, Close $159.23."
+        },
+        {
+          "symbol": "LLY",
+          "openPrice": 789.14,
+          "highPrice": 877.78,
+          "lowPrice": 763.02,
+          "closePrice": 845.31,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 9.04,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $789.14, High $877.78, Low $763.02, Close $845.31."
+        },
+        {
+          "symbol": "UNH",
+          "openPrice": 568.21,
+          "highPrice": 577.52,
+          "lowPrice": 557.03,
+          "closePrice": 566.24,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.65,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $568.21, High $577.52, Low $557.03, Close $566.24."
+        },
+        {
+          "symbol": "BIIB",
+          "openPrice": 198.76,
+          "highPrice": 204.14,
+          "lowPrice": 198.15,
+          "closePrice": 204.07,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.86,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $198.76, High $204.14, Low $198.15, Close $204.07."
+        },
+        {
+          "symbol": "MRNA",
+          "openPrice": 84.92,
+          "highPrice": 85.75,
+          "lowPrice": 80.17,
+          "closePrice": 84.32,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.68,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $84.92, High $85.75, Low $80.17, Close $84.32."
+        },
+        {
+          "symbol": "XBI",
+          "openPrice": 94.21,
+          "highPrice": 96.16,
+          "lowPrice": 92.12,
+          "closePrice": 95,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.68,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $94.21, High $96.16, Low $92.12, Close $95."
+        },
+        {
+          "symbol": "EQIX",
+          "openPrice": 767.52,
+          "highPrice": 812.75,
+          "lowPrice": 763.49,
+          "closePrice": 809.48,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 5.37,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $767.52, High $812.75, Low $763.49, Close $809.48."
+        },
+        {
+          "symbol": "PLD",
+          "openPrice": 118.96,
+          "highPrice": 124.07,
+          "lowPrice": 118.08,
+          "closePrice": 121.99,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.56,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $118.96, High $124.07, Low $118.08, Close $121.99."
+        },
+        {
+          "symbol": "CCI",
+          "openPrice": 110.5,
+          "highPrice": 114.12,
+          "lowPrice": 109.72,
+          "closePrice": 110.9,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.12,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $110.5, High $114.12, Low $109.72, Close $110.9."
+        },
+        {
+          "symbol": "AMT",
+          "openPrice": 225.02,
+          "highPrice": 230.65,
+          "lowPrice": 221.5,
+          "closePrice": 223.61,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.14,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $225.02, High $230.65, Low $221.5, Close $223.61."
+        },
+        {
+          "symbol": "VNQ",
+          "openPrice": 88.64,
+          "highPrice": 91.85,
+          "lowPrice": 88.27,
+          "closePrice": 90.67,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.27,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $88.64, High $91.85, Low $88.27, Close $90.67."
+        },
+        {
+          "symbol": "TGT",
+          "openPrice": 134.51,
+          "highPrice": 137.75,
+          "lowPrice": 133.07,
+          "closePrice": 133.97,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.07,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $134.51, High $137.75, Low $133.07, Close $133.97."
+        },
+        {
+          "symbol": "NKE",
+          "openPrice": 71.66,
+          "highPrice": 74.21,
+          "lowPrice": 71.51,
+          "closePrice": 74.19,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.88,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $71.66, High $74.21, Low $71.51, Close $74.19."
+        },
+        {
+          "symbol": "SBUX",
+          "openPrice": 73.92,
+          "highPrice": 76.83,
+          "lowPrice": 73.84,
+          "closePrice": 75.75,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.56,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $73.92, High $76.83, Low $73.84, Close $75.75."
+        },
+        {
+          "symbol": "MCD",
+          "openPrice": 269.86,
+          "highPrice": 273.65,
+          "lowPrice": 268.08,
+          "closePrice": 271.19,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.02,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $269.86, High $273.65, Low $268.08, Close $271.19."
+        },
+        {
+          "symbol": "DVN",
+          "openPrice": 41.54,
+          "highPrice": 45.21,
+          "lowPrice": 41.33,
+          "closePrice": 45.11,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 8.75,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $41.54, High $45.21, Low $41.33, Close $45.11."
+        },
+        {
+          "symbol": "HAL",
+          "openPrice": 30.87,
+          "highPrice": 31.47,
+          "lowPrice": 30.67,
+          "closePrice": 31.23,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.13,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $30.87, High $31.47, Low $30.67, Close $31.23."
+        },
+        {
+          "symbol": "SLB",
+          "openPrice": 43.8,
+          "highPrice": 44.42,
+          "lowPrice": 42.81,
+          "closePrice": 43.69,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.18,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $43.8, High $44.42, Low $42.81, Close $43.69."
+        },
+        {
+          "symbol": "SLV",
+          "openPrice": 24.53,
+          "highPrice": 25.18,
+          "lowPrice": 24.25,
+          "closePrice": 25.01,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.6,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $24.53, High $25.18, Low $24.25, Close $25.01."
+        },
+        {
+          "symbol": "CLF",
+          "openPrice": 13.4,
+          "highPrice": 13.94,
+          "lowPrice": 13.3,
+          "closePrice": 13.34,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.15,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $13.4, High $13.94, Low $13.3, Close $13.34."
+        },
+        {
+          "symbol": "AA",
+          "openPrice": 28.5,
+          "highPrice": 30.66,
+          "lowPrice": 28.2,
+          "closePrice": 30.63,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.7,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $28.5, High $30.66, Low $28.2, Close $30.63."
+        },
+        {
+          "symbol": "FCX",
+          "openPrice": 40.7,
+          "highPrice": 41.87,
+          "lowPrice": 39.49,
+          "closePrice": 41.04,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.42,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $40.7, High $41.87, Low $39.49, Close $41.04."
+        },
+        {
+          "symbol": "FDX",
+          "openPrice": 284.8,
+          "highPrice": 289.7,
+          "lowPrice": 276.46,
+          "closePrice": 278.62,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.58,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $284.8, High $289.7, Low $276.46, Close $278.62."
+        },
+        {
+          "symbol": "CSX",
+          "openPrice": 32.14,
+          "highPrice": 34.5,
+          "lowPrice": 32.12,
+          "closePrice": 34.25,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.79,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $32.14, High $34.5, Low $32.12, Close $34.25."
+        },
+        {
+          "symbol": "DE",
+          "openPrice": 347.49,
+          "highPrice": 354.04,
+          "lowPrice": 342.7,
+          "closePrice": 349.14,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.25,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $347.49, High $354.04, Low $342.7, Close $349.14."
+        },
+        {
+          "symbol": "NEE",
+          "openPrice": 76.85,
+          "highPrice": 78.76,
+          "lowPrice": 76.6,
+          "closePrice": 77.54,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.12,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $76.85, High $78.76, Low $76.6, Close $77.54."
+        },
+        {
+          "symbol": "D",
+          "openPrice": 54.12,
+          "highPrice": 55.57,
+          "lowPrice": 53.9,
+          "closePrice": 54.19,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.28,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $54.12, High $55.57, Low $53.9, Close $54.19."
+        },
+        {
+          "symbol": "AEP",
+          "openPrice": 97.28,
+          "highPrice": 100.61,
+          "lowPrice": 97.22,
+          "closePrice": 98.04,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.02,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $97.28, High $100.61, Low $97.22, Close $98.04."
+        },
+        {
+          "symbol": "VST",
+          "openPrice": 70,
+          "highPrice": 80.46,
+          "lowPrice": 70,
+          "closePrice": 79.08,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 12.65,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $70, High $80.46, Low $70, Close $79.08."
+        },
+        {
+          "symbol": "CEG",
+          "openPrice": 173.64,
+          "highPrice": 190.09,
+          "lowPrice": 168.39,
+          "closePrice": 187.03,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 10.04,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $173.64, High $190.09, Low $168.39, Close $187.03."
+        },
+        {
+          "symbol": "SQQQ",
+          "openPrice": 266.5,
+          "highPrice": 271.5,
+          "lowPrice": 244.5,
+          "closePrice": 246,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 8.8,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $266.5, High $271.5, Low $244.5, Close $246."
+        },
+        {
+          "symbol": "TLT",
+          "openPrice": 98.15,
+          "highPrice": 98.41,
+          "lowPrice": 94.84,
+          "closePrice": 95.32,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -3.52,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $98.15, High $98.41, Low $94.84, Close $95.32."
+        },
+        {
+          "symbol": "GLD",
+          "openPrice": 221.5,
+          "highPrice": 224.25,
+          "lowPrice": 220.11,
+          "closePrice": 224.01,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.69,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $221.5, High $224.25, Low $220.11, Close $224.01."
+        },
+        {
+          "symbol": "AFRM",
+          "openPrice": 24.74,
+          "highPrice": 26.41,
+          "lowPrice": 23.89,
+          "closePrice": 25.22,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.69,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $24.74, High $26.41, Low $23.89, Close $25.22."
+        },
+        {
+          "symbol": "WBD",
+          "openPrice": 7.87,
+          "highPrice": 7.88,
+          "lowPrice": 6.73,
+          "closePrice": 7.02,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -10.91,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $7.87, High $7.88, Low $6.73, Close $7.02."
+        },
+        {
+          "symbol": "PYPL",
+          "openPrice": 60.6,
+          "highPrice": 65.01,
+          "lowPrice": 60.3,
+          "closePrice": 64.28,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 6.32,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $60.6, High $65.01, Low $60.3, Close $64.28."
+        },
+        {
+          "symbol": "NFLX",
+          "openPrice": 60.06,
+          "highPrice": 63.23,
+          "lowPrice": 60.06,
+          "closePrice": 63.03,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 5.31,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $60.06, High $63.23, Low $60.06, Close $63.03."
+        },
+        {
+          "symbol": "BRK-B",
+          "openPrice": 416.41,
+          "highPrice": 433.17,
+          "lowPrice": 415.1,
+          "closePrice": 431.54,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.31,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $416.41, High $433.17, Low $415.1, Close $431.54."
+        },
+        {
+          "symbol": "ISRG",
+          "openPrice": 439.01,
+          "highPrice": 464.14,
+          "lowPrice": 438.66,
+          "closePrice": 463.61,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 5.85,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $439.01, High $464.14, Low $438.66, Close $463.61."
+        },
+        {
+          "symbol": "COST",
+          "openPrice": 805.06,
+          "highPrice": 842.76,
+          "lowPrice": 805.06,
+          "closePrice": 839.43,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.69,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $805.06, High $842.76, Low $805.06, Close $839.43."
+        },
+        {
+          "symbol": "FSLR",
+          "openPrice": 206.31,
+          "highPrice": 219.67,
+          "lowPrice": 204,
+          "closePrice": 213.13,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.92,
+          "notes": "3-day window (2024-08-06, 2024-08-07, 2024-08-08). Open $206.31, High $219.67, Low $204, Close $213.13."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 88.4,
+        "targetHitRate": 33.7,
+        "stopHitRate": 11.6,
+        "avgReturnPercent": 3.82,
+        "profitFactor": 14.01,
+        "winRate": 88.4,
+        "totalScore": 92.1,
+        "benchmarkReturn": 0.56,
+        "alpha": 3.26
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -44205,7 +49135,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-06T20:44:05.258Z",
+  "lastUpdatedAt": "2026-04-06T20:44:32.658Z",
   "totalTokensUsed": 3625689,
   "weightHistory": [
     {
@@ -44651,7 +49581,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 3,
+  "fullDepthCurrentTrial": 4,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -44758,7 +49688,8 @@
   "fullDepthCompletedDates": [
     "2025-03-18",
     "2026-03-04",
-    "2024-12-20"
+    "2024-12-20",
+    "2024-08-06"
   ],
   "dateSequence": [
     "2025-09-09",
