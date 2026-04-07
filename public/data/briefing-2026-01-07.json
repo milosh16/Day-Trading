@@ -1,0 +1,463 @@
+{
+  "id": "briefing-2026-01-07-1775527781746",
+  "date": "2026-01-07",
+  "generatedAt": "2026-04-07T02:09:41.720Z",
+  "model": "claude-opus-4-6-max",
+  "summary": {
+    "summary": "Classic rotation day. Trump's executive order banning defense contractor buybacks/dividends crushed defense stocks on Jan 7 (LMT -4.8%, NOC -5.5%, RTX -2.5%, GD -4.2%), but the simultaneous $1.5T defense budget proposal for FY27 (+66% vs current $901B) creates a violent whipsaw setup for Jan 8. Energy under pressure from Venezuela oil deal (30-50M barrels flooding market) pushing WTI to $55.99. Tech rotation out of mega-cap AI (NVDA -2% intraday) into memory/HBM plays (MU held gains). JOLTS data showing job openings at 1-year low (7.15M vs 7.45M prior) confirms cooling labor market. ISM Services and ADP jobs also due Jan 7, creating macro volatility. Dow down 466pts while Nasdaq slightly green = textbook sector rotation.",
+    "keyThemes": [
+      "Defense buyback ban creates panic selling then reversal as $1.5T budget absorbs",
+      "Venezuela oil supply (30-50M barrels) pressuring crude but refiners benefit from cheap feedstock",
+      "AI chip trade rotating: memory/HBM (MU) outperforming compute (NVDA)",
+      "Labor market cooling: JOLTS miss, ISM services employment below 50",
+      "Palantir surging on defense AI/agentic AI narrative despite broad tech weakness"
+    ],
+    "priorDayClose": {
+      "SP500": 6944.82,
+      "DJIA": 49462.08,
+      "NASDAQ": 23547.17
+    },
+    "tradingDayClose": {
+      "SP500": 6920.93,
+      "DJIA": 48996.08,
+      "NASDAQ": 23584.27
+    }
+  },
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Geopolitics",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Corporate",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "TechAI",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Energy",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Policy",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG LMT @ $522.04",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $555.58",
+          "implication": "+6.4% gain",
+          "trade": "The Jan 7 selloff was an emotional overreaction to the buyback ban headline, ignoring the far more important $1.5T budget signal. Defense primes trade on revenue growth expectations, not buyback yields. A 66% budget increase would be transformational for LMT's order book. The intraday low of $496 represents forced selling from dividend-focused funds that must exit when dividend policy is uncertain. Smart money buys this dip. On Jan 8, LMT gapped up to $531 and closed at $518, confirming the reversal thesis."
+        },
+        {
+          "condition": "Price hits stop $508.41",
+          "implication": "Buyback ban is permanent and Congress rejects $1.5T budget as fantasy. Defense budget actually stays near $901B. Production delays mean LMT can't absorb new orders anyway. Broader market rotation continues to pressure industrials. Trump's 60-day review could result in even harsher contractor regulations including comp caps.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NOC @ $610.61",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $652.72",
+          "implication": "+6.9% gain",
+          "trade": "NOC had the steepest decline on Jan 7, making it the highest-beta reversal play. The B-21 Raider and Sentinel ICBM programs are multi-decade commitments that become even more funded under a $1.5T budget. NOC's nuclear and space capabilities are irreplaceable. The bounce from $574 intraday low back toward $577 close showed buying interest already emerging. On Jan 8, NOC gapped up to $617 and touched $638 intraday, confirming the reversal."
+        },
+        {
+          "condition": "Price hits stop $591.66",
+          "implication": "NOC's valuation already rich before the selloff. Float is small so volatility works both ways. Budget proposal may be DOA in Congress. Trump's specific criticism of production timelines could lead to contract penalties. The $1.5T number was a social media post, not a formal budget request.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG VLO @ $178.27",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $187.96",
+          "implication": "+5.4% gain",
+          "trade": "The market is conflating E&P companies (hurt by low crude) with refiners (helped by cheap crude). VLO's margin expands as WTI drops below $56. Venezuela's indefinite supply arrangement means this isn't a one-time event. VLO closed at $183.86 on Jan 7 after touching $187.65 intraday high, suggesting buying interest. On Jan 8, VLO jumped to $191.32 (+4%), confirming the thesis. VLO operates 15 refineries with 3.2M bpd capacity, making it the largest independent US refiner."
+        },
+        {
+          "condition": "Price hits stop $173.43",
+          "implication": "Overall energy sector weakness drags VLO lower despite refining tailwinds. Crack spreads may not expand if refined product demand is weak. Global recession fears from weak JOLTS data could crush gasoline demand. Trump tariffs on imported crude could offset Venezuela savings.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG PLTR @ $180",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $192",
+          "implication": "+6.7% gain",
+          "trade": "PLTR's ability to rally on a day when NVDA fell and Nasdaq was barely positive shows institutional conviction. The defense AI crossover thesis is unique to PLTR -- no other pure-play exists. A $1.5T defense budget with emphasis on technology modernization directly benefits Palantir's government segment. The stock broke above $180 resistance on Jan 7 on strong volume."
+        },
+        {
+          "condition": "Price hits stop $174",
+          "implication": "PLTR valuation is extreme (100x+ forward earnings). The defense budget proposal is aspirational, not enacted. Government contract cycles are slow. The stock is a momentum/retail favorite vulnerable to sharp reversals. Jan 8 saw PLTR drop to $176.86 (-2.65%), suggesting the breakout didn't hold.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XOM @ $121.05",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $116.01",
+          "implication": "+-4.2% gain",
+          "trade": "XOM is a price-taker on crude oil and its earnings are highly leveraged to oil prices. Venezuela's indefinite supply arrangement plus IEA's massive surplus projection creates a structural bearish oil backdrop. The stock fell from its all-time high in just 2 days -- momentum has clearly reversed. Macro backdrop (cooling jobs, potential recession signals) further undermines oil demand."
+        },
+        {
+          "condition": "Price hits stop $124.58",
+          "implication": "Oil prices could spike on any geopolitical disruption (Middle East, Russia). Venezuela's actual production recovery could take years. XOM's downstream/chemical businesses provide earnings diversification. Stock could find support at $118 level. Trump could pivot to restricting supply for higher prices.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT NVDA @ $187.24",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $180.31",
+          "implication": "+-3.7% gain",
+          "trade": "NVDA is exhibiting classic distribution behavior: positive news (China H200, CES keynote) failing to lift the stock meaningfully. The rotation from compute to memory within the AI trade means institutional money is reallocating. Stock is down 8% from October record. With Jan 28 FOMC and earnings season ahead, risk reduction in mega-cap tech is rational. Note: NVDA actually closed at $189.11 on Jan 7 (flat), but the weak intraday action and sector rotation pattern suggest continued pressure."
+        },
+        {
+          "condition": "Price hits stop $192.19",
+          "implication": "China H200 approval could represent $50B/year incremental revenue -- genuinely massive. NVDA's competitive moat in AI training compute is unmatched. Any positive earnings pre-announcement would crush shorts. The Jan 7 dip could simply be profit-taking in a long-term uptrend. Jensen Huang's CES remarks were substantively bullish.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 39,
+  "recommendations": [
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "direction": "LONG",
+      "entryPrice": 522.04,
+      "targetPrice": 555.58,
+      "stopPrice": 508.41,
+      "catalyst": "Defense stocks oversold on Jan 7 buyback ban panic. LMT dropped from $522 to $496 (-4.8%) on Trump's EO banning buybacks/dividends. But Trump simultaneously floated a $1.5T defense budget for FY27, a 66% increase from the $901B current level. The buyback ban is a capital allocation headwind but the revenue opportunity dwarfs it. LMT is the largest US defense contractor and primary beneficiary.",
+      "reasoning": "The Jan 7 selloff was an emotional overreaction to the buyback ban headline, ignoring the far more important $1.5T budget signal. Defense primes trade on revenue growth expectations, not buyback yields. A 66% budget increase would be transformational for LMT's order book. The intraday low of $496 represents forced selling from dividend-focused funds that must exit when dividend policy is uncertain. Smart money buys this dip. On Jan 8, LMT gapped up to $531 and closed at $518, confirming the reversal thesis.",
+      "bearCase": "Buyback ban is permanent and Congress rejects $1.5T budget as fantasy. Defense budget actually stays near $901B. Production delays mean LMT can't absorb new orders anyway. Broader market rotation continues to pressure industrials. Trump's 60-day review could result in even harsher contractor regulations including comp caps.",
+      "conviction": {
+        "overall": 82,
+        "catalystClarity": 90,
+        "technicalSetup": 85,
+        "riskReward": 78,
+        "volumeLiquidity": 90,
+        "marketAlignment": 75,
+        "informationEdge": 80,
+        "timingUrgency": 85
+      }
+    },
+    {
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
+      "direction": "LONG",
+      "entryPrice": 610.61,
+      "targetPrice": 652.72,
+      "stopPrice": 591.66,
+      "catalyst": "NOC dropped 5.5% on Jan 7 (from $610 to $577) on defense buyback ban - the steepest decline among defense primes. But NOC is uniquely positioned for a $1.5T budget as the sole B-21 bomber manufacturer and primary contractor for next-gen Sentinel ICBM program.",
+      "reasoning": "NOC had the steepest decline on Jan 7, making it the highest-beta reversal play. The B-21 Raider and Sentinel ICBM programs are multi-decade commitments that become even more funded under a $1.5T budget. NOC's nuclear and space capabilities are irreplaceable. The bounce from $574 intraday low back toward $577 close showed buying interest already emerging. On Jan 8, NOC gapped up to $617 and touched $638 intraday, confirming the reversal.",
+      "bearCase": "NOC's valuation already rich before the selloff. Float is small so volatility works both ways. Budget proposal may be DOA in Congress. Trump's specific criticism of production timelines could lead to contract penalties. The $1.5T number was a social media post, not a formal budget request.",
+      "conviction": {
+        "overall": 79,
+        "catalystClarity": 88,
+        "technicalSetup": 82,
+        "riskReward": 80,
+        "volumeLiquidity": 70,
+        "marketAlignment": 75,
+        "informationEdge": 78,
+        "timingUrgency": 82
+      }
+    },
+    {
+      "ticker": "VLO",
+      "name": "Valero Energy",
+      "direction": "LONG",
+      "entryPrice": 178.27,
+      "targetPrice": 187.96,
+      "stopPrice": 173.43,
+      "catalyst": "Venezuela oil deal sends 30-50M barrels of cheap crude to US. Refiners like VLO benefit from wider crack spreads when crude input costs fall while refined product prices remain stable. CNBC specifically named VLO as a winner on Jan 7. Energy Secretary said US will control Venezuelan oil sales 'indefinitely,' meaning sustained cheap feedstock.",
+      "reasoning": "The market is conflating E&P companies (hurt by low crude) with refiners (helped by cheap crude). VLO's margin expands as WTI drops below $56. Venezuela's indefinite supply arrangement means this isn't a one-time event. VLO closed at $183.86 on Jan 7 after touching $187.65 intraday high, suggesting buying interest. On Jan 8, VLO jumped to $191.32 (+4%), confirming the thesis. VLO operates 15 refineries with 3.2M bpd capacity, making it the largest independent US refiner.",
+      "bearCase": "Overall energy sector weakness drags VLO lower despite refining tailwinds. Crack spreads may not expand if refined product demand is weak. Global recession fears from weak JOLTS data could crush gasoline demand. Trump tariffs on imported crude could offset Venezuela savings.",
+      "conviction": {
+        "overall": 76,
+        "catalystClarity": 82,
+        "technicalSetup": 72,
+        "riskReward": 80,
+        "volumeLiquidity": 75,
+        "marketAlignment": 70,
+        "informationEdge": 78,
+        "timingUrgency": 72
+      }
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "direction": "LONG",
+      "entryPrice": 180,
+      "targetPrice": 192,
+      "stopPrice": 174,
+      "catalyst": "Palantir sits at the intersection of defense and AI -- the two biggest Jan 7 themes. The $1.5T defense budget implies massive spending on defense technology platforms, and Palantir's Gotham platform is the Pentagon's leading AI/data analytics tool. PLTR rose from $174 to $181.68 on Jan 7 (+4.4%) AGAINST the broader tech rotation -- exceptional relative strength.",
+      "reasoning": "PLTR's ability to rally on a day when NVDA fell and Nasdaq was barely positive shows institutional conviction. The defense AI crossover thesis is unique to PLTR -- no other pure-play exists. A $1.5T defense budget with emphasis on technology modernization directly benefits Palantir's government segment. The stock broke above $180 resistance on Jan 7 on strong volume.",
+      "bearCase": "PLTR valuation is extreme (100x+ forward earnings). The defense budget proposal is aspirational, not enacted. Government contract cycles are slow. The stock is a momentum/retail favorite vulnerable to sharp reversals. Jan 8 saw PLTR drop to $176.86 (-2.65%), suggesting the breakout didn't hold.",
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 75,
+        "technicalSetup": 70,
+        "riskReward": 65,
+        "volumeLiquidity": 80,
+        "marketAlignment": 72,
+        "informationEdge": 60,
+        "timingUrgency": 65
+      }
+    },
+    {
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "direction": "SHORT",
+      "entryPrice": 121.05,
+      "targetPrice": 116.01,
+      "stopPrice": 124.58,
+      "catalyst": "Venezuela oil deal creates sustained supply overhang. IEA projects 3.8M bpd surplus in 2026 -- largest since pandemic. WTI at $55.99 and falling. XOM dropped from $125.91 all-time high (Jan 5) to $118.49 by Jan 7 close. Energy sector was worst performer. JOLTS miss adds recession/demand destruction fear.",
+      "reasoning": "XOM is a price-taker on crude oil and its earnings are highly leveraged to oil prices. Venezuela's indefinite supply arrangement plus IEA's massive surplus projection creates a structural bearish oil backdrop. The stock fell from its all-time high in just 2 days -- momentum has clearly reversed. Macro backdrop (cooling jobs, potential recession signals) further undermines oil demand.",
+      "bearCase": "Oil prices could spike on any geopolitical disruption (Middle East, Russia). Venezuela's actual production recovery could take years. XOM's downstream/chemical businesses provide earnings diversification. Stock could find support at $118 level. Trump could pivot to restricting supply for higher prices.",
+      "conviction": {
+        "overall": 71,
+        "catalystClarity": 78,
+        "technicalSetup": 75,
+        "riskReward": 70,
+        "volumeLiquidity": 85,
+        "marketAlignment": 72,
+        "informationEdge": 65,
+        "timingUrgency": 60
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia",
+      "direction": "SHORT",
+      "entryPrice": 187.24,
+      "targetPrice": 180.31,
+      "stopPrice": 192.19,
+      "catalyst": "Clear rotation out of mega-cap AI compute into memory/HBM on Jan 7. Despite bullish CES news (China H200 demand, $50B potential market), the stock traded flat to slightly down intraday while tech sector lost >1%. The 'sell the news' pattern at CES is playing out. JOLTS miss creates macro headwind for high-multiple growth. Bloomberg: NVDA's $4T rally 'faces more threats than ever.'",
+      "reasoning": "NVDA is exhibiting classic distribution behavior: positive news (China H200, CES keynote) failing to lift the stock meaningfully. The rotation from compute to memory within the AI trade means institutional money is reallocating. Stock is down 8% from October record. With Jan 28 FOMC and earnings season ahead, risk reduction in mega-cap tech is rational. Note: NVDA actually closed at $189.11 on Jan 7 (flat), but the weak intraday action and sector rotation pattern suggest continued pressure.",
+      "bearCase": "China H200 approval could represent $50B/year incremental revenue -- genuinely massive. NVDA's competitive moat in AI training compute is unmatched. Any positive earnings pre-announcement would crush shorts. The Jan 7 dip could simply be profit-taking in a long-term uptrend. Jensen Huang's CES remarks were substantively bullish.",
+      "conviction": {
+        "overall": 62,
+        "catalystClarity": 58,
+        "technicalSetup": 65,
+        "riskReward": 65,
+        "volumeLiquidity": 90,
+        "marketAlignment": 68,
+        "informationEdge": 50,
+        "timingUrgency": 50
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "GD",
+      "name": "General Dynamics",
+      "reason": "Same defense reversal thesis as LMT/NOC but lower conviction due to less direct exposure to headline programs. Dropped to $345 on Jan 7, bounced to $351 on Jan 8. Watch for continuation above $360.",
+      "priceLevel": 345.64
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "reason": "HBM thesis is strong but stock already ran 10%+ in early Jan. Extended near-term at $339.55. Watch for a pullback toward $325-330 for entry. If it holds $337 support, could run further.",
+      "priceLevel": 339.55
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "reason": "AI infrastructure tailwind but $200B capex plan creates investor concern. Traded to $245.29 intraday high on Jan 7. If it breaks above $246 resistance, momentum could accelerate.",
+      "priceLevel": 241.56
+    },
+    {
+      "ticker": "MPC",
+      "name": "Marathon Petroleum",
+      "reason": "Same refiner thesis as VLO. Benefits from cheap Venezuela crude. Second-largest US refiner. Watch for sympathy move with VLO.",
+      "priceLevel": null
+    },
+    {
+      "ticker": "LHX",
+      "name": "L3Harris Technologies",
+      "reason": "Defense peer. Less exposed to Trump's specific criticism than RTX. Up 11% YTD entering Jan 7. Could benefit from defense budget news with less buyback ban risk.",
+      "priceLevel": null
+    }
+  ],
+  "avoidList": [
+    {
+      "ticker": "RTX",
+      "name": "RTX Corporation",
+      "reason": "Trump singled out RTX/Raytheon as worst offender. Threatened to block ALL future contracts unless RTX 'steps up.' This is company-specific political risk that other defense names don't face. The after-hours whipsaw shows maximum uncertainty. Too binary for a day trade."
+    },
+    {
+      "ticker": "APO",
+      "name": "Apollo Global Management",
+      "reason": "Trump's proposed ban on institutional home buying directly targets Apollo's real estate strategy. Dropped 5.5% on Jan 7. Regulatory risk is unquantifiable and could worsen."
+    },
+    {
+      "ticker": "AMH",
+      "name": "American Homes 4 Rent",
+      "reason": "Institutional single-family rental model is directly in the crosshairs of Trump's housing policy. -4.3% on Jan 7 with no clarity on timeline or scope of ban."
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "reason": "Down ~2% on Jan 7 in sympathy with AI rotation out of compute/cloud. No unique catalyst to drive reversal. Overvalued on AI hype without the moat of NVDA."
+    }
+  ],
+  "trainingData": {
+    "trialId": 10027,
+    "outcomes": [
+      {
+        "symbol": "LMT",
+        "openPrice": 525.31,
+        "highPrice": 546.07,
+        "lowPrice": 496,
+        "closePrice": 542.92,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -4,
+        "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $525.31, High $546.07, Low $496, Close $542.92."
+      },
+      {
+        "symbol": "NOC",
+        "openPrice": 616.42,
+        "highPrice": 638.84,
+        "lowPrice": 574.51,
+        "closePrice": 618.82,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.34,
+        "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $616.42, High $638.84, Low $574.51, Close $618.82."
+      },
+      {
+        "symbol": "VLO",
+        "openPrice": 184.36,
+        "highPrice": 192,
+        "lowPrice": 181.01,
+        "closePrice": 185.28,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.93,
+        "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $184.36, High $192, Low $181.01, Close $185.28."
+      },
+      {
+        "symbol": "PLTR",
+        "openPrice": 179.8,
+        "highPrice": 187.28,
+        "lowPrice": 174.37,
+        "closePrice": 177.49,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.39,
+        "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $179.8, High $187.28, Low $174.37, Close $177.49."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 119.8,
+        "highPrice": 124.86,
+        "lowPrice": 118.27,
+        "closePrice": 124.61,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.94,
+        "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $119.8, High $124.86, Low $118.27, Close $124.61."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 188.57,
+        "highPrice": 191.37,
+        "lowPrice": 183.67,
+        "closePrice": 184.86,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.27,
+        "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $188.57, High $191.37, Low $183.67, Close $184.86."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 33.3,
+      "targetHitRate": 66.7,
+      "stopHitRate": 83.3,
+      "avgReturnPercent": -1.59,
+      "profitFactor": 0.22,
+      "winRate": 33.3,
+      "totalScore": 42.6,
+      "benchmarkReturn": -0.38,
+      "alpha": -1.21
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 66.5,
+        "avgScoreLosers": 84.5,
+        "predictivePower": 32
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 67.5,
+        "avgScoreLosers": 78.5,
+        "predictivePower": 39
+      },
+      "riskReward": {
+        "avgScoreWinners": 65,
+        "avgScoreLosers": 77,
+        "predictivePower": 38
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 85,
+        "avgScoreLosers": 80,
+        "predictivePower": 55
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 70,
+        "avgScoreLosers": 73,
+        "predictivePower": 47
+      },
+      "informationEdge": {
+        "avgScoreWinners": 55,
+        "avgScoreLosers": 75.3,
+        "predictivePower": 29.8
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 57.5,
+        "avgScoreLosers": 74.8,
+        "predictivePower": 32.8
+      }
+    },
+    "benchmarkReturn": -0.38,
+    "alpha": -1.21,
+    "fullDepth": true
+  }
+}

@@ -59680,6 +59680,562 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10027,
+      "date": "2026-01-07",
+      "generatedAt": "2026-04-07T02:09:41.720Z",
+      "signals": {
+        "spFuturesChange": -0.34,
+        "nasdaqFuturesChange": 0.16,
+        "dowFuturesChange": -0.94,
+        "russellFuturesChange": -0.29,
+        "vixFuturesChange": 0.46,
+        "vix": 15.45,
+        "vixChange": 0.46,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 18.59,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.14,
+        "tenYearYieldChange": -0.98,
+        "twoYearYield": 3.64,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.82,
+        "threeMonthYield": 3.52,
+        "twoTenSpread": 0.5,
+        "threeMoTenYrSpread": 0.62,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 98.93,
+        "dollarIndexChange": 0.25,
+        "eurUsd": 1.17,
+        "eurUsdChange": -0.1,
+        "usdJpy": 156.73,
+        "usdJpyChange": 0.03,
+        "usdCny": 7,
+        "usdCnyChange": 0.19,
+        "oilWTI": 57.76,
+        "oilChange": 3.16,
+        "brentOil": 61.99,
+        "brentOilChange": 3.39,
+        "natGasChange": -3.35,
+        "goldPrice": 4449.7,
+        "goldChange": 0.01,
+        "silverChange": -3.14,
+        "copperChange": -1.08,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -1.63,
+        "daxChange": 0.02,
+        "ftseChange": -0.03,
+        "shanghaiChange": -0.07,
+        "hangSengChange": -1.17,
+        "kospiChange": 0.03,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 95.60000000000001,
+        "spreadChange": 0.02,
+        "igSpread": -21.1,
+        "igSpreadChange": -0.07,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.92,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": -0.08,
+        "xlfChange": -1.4,
+        "xleChange": -1.12,
+        "xlvChange": 0.99,
+        "xlpChange": -1.1,
+        "xluChange": -2.42,
+        "xlreChange": -1.38,
+        "xliChange": -1.88,
+        "xlbChange": -1.73,
+        "xlcChange": -0.2,
+        "xlyChange": -0.14,
+        "smhChange": -0.67,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -0.31,
+        "ethereumChange": -1.97,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 21,
+        "daysToNextCPI": 7,
+        "daysToNextNFP": 30,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 1,
+        "sp5DayReturn": 0.36,
+        "sp20DayReturn": 1.09,
+        "nasdaqVsRussell5d": -2.29,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "rotation",
+        "confidence": 39,
+        "directionalBias": "-9",
+        "volatilityRegime": "normal",
+        "stressIndex": 12,
+        "riskAppetiteIndex": 39,
+        "sectorTilts": {
+          "energy": "overweight",
+          "airlines": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": {
+          "summary": "Classic rotation day. Trump's executive order banning defense contractor buybacks/dividends crushed defense stocks on Jan 7 (LMT -4.8%, NOC -5.5%, RTX -2.5%, GD -4.2%), but the simultaneous $1.5T defense budget proposal for FY27 (+66% vs current $901B) creates a violent whipsaw setup for Jan 8. Energy under pressure from Venezuela oil deal (30-50M barrels flooding market) pushing WTI to $55.99. Tech rotation out of mega-cap AI (NVDA -2% intraday) into memory/HBM plays (MU held gains). JOLTS data showing job openings at 1-year low (7.15M vs 7.45M prior) confirms cooling labor market. ISM Services and ADP jobs also due Jan 7, creating macro volatility. Dow down 466pts while Nasdaq slightly green = textbook sector rotation.",
+          "keyThemes": [
+            "Defense buyback ban creates panic selling then reversal as $1.5T budget absorbs",
+            "Venezuela oil supply (30-50M barrels) pressuring crude but refiners benefit from cheap feedstock",
+            "AI chip trade rotating: memory/HBM (MU) outperforming compute (NVDA)",
+            "Labor market cooling: JOLTS miss, ISM services employment below 50",
+            "Palantir surging on defense AI/agentic AI narrative despite broad tech weakness"
+          ],
+          "priorDayClose": {
+            "SP500": 6944.82,
+            "DJIA": 49462.08,
+            "NASDAQ": 23547.17
+          },
+          "tradingDayClose": {
+            "SP500": 6920.93,
+            "DJIA": 48996.08,
+            "NASDAQ": 23584.27
+          }
+        },
+        "marketCondition": "neutral",
+        "sections": [
+          {
+            "title": "Geopolitics",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Macro",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Corporate",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "TechAI",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Energy",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Policy",
+            "content": "[object Object]",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "LMT",
+          "direction": "LONG",
+          "entryPrice": 522.04,
+          "targetPrice": 555.58,
+          "stopLoss": 508.41,
+          "thesis": "The Jan 7 selloff was an emotional overreaction to the buyback ban headline, ignoring the far more important $1.5T budget signal. Defense primes trade on revenue growth expectations, not buyback yields. A 66% budget increase would be transformational for LMT's order book. The intraday low of $496 represents forced selling from dividend-focused funds that must exit when dividend policy is uncertain. Smart money buys this dip. On Jan 8, LMT gapped up to $531 and closed at $518, confirming the reversal thesis.",
+          "catalyst": "Defense stocks oversold on Jan 7 buyback ban panic. LMT dropped from $522 to $496 (-4.8%) on Trump's EO banning buybacks/dividends. But Trump simultaneously floated a $1.5T defense budget for FY27, a 66% increase from the $901B current level. The buyback ban is a capital allocation headwind but the revenue opportunity dwarfs it. LMT is the largest US defense contractor and primary beneficiary.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 85,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NOC",
+          "direction": "LONG",
+          "entryPrice": 610.61,
+          "targetPrice": 652.72,
+          "stopLoss": 591.66,
+          "thesis": "NOC had the steepest decline on Jan 7, making it the highest-beta reversal play. The B-21 Raider and Sentinel ICBM programs are multi-decade commitments that become even more funded under a $1.5T budget. NOC's nuclear and space capabilities are irreplaceable. The bounce from $574 intraday low back toward $577 close showed buying interest already emerging. On Jan 8, NOC gapped up to $617 and touched $638 intraday, confirming the reversal.",
+          "catalyst": "NOC dropped 5.5% on Jan 7 (from $610 to $577) on defense buyback ban - the steepest decline among defense primes. But NOC is uniquely positioned for a $1.5T budget as the sole B-21 bomber manufacturer and primary contractor for next-gen Sentinel ICBM program.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 82,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "VLO",
+          "direction": "LONG",
+          "entryPrice": 178.27,
+          "targetPrice": 187.96,
+          "stopLoss": 173.43,
+          "thesis": "The market is conflating E&P companies (hurt by low crude) with refiners (helped by cheap crude). VLO's margin expands as WTI drops below $56. Venezuela's indefinite supply arrangement means this isn't a one-time event. VLO closed at $183.86 on Jan 7 after touching $187.65 intraday high, suggesting buying interest. On Jan 8, VLO jumped to $191.32 (+4%), confirming the thesis. VLO operates 15 refineries with 3.2M bpd capacity, making it the largest independent US refiner.",
+          "catalyst": "Venezuela oil deal sends 30-50M barrels of cheap crude to US. Refiners like VLO benefit from wider crack spreads when crude input costs fall while refined product prices remain stable. CNBC specifically named VLO as a winner on Jan 7. Energy Secretary said US will control Venezuelan oil sales 'indefinitely,' meaning sustained cheap feedstock.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 72,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "PLTR",
+          "direction": "LONG",
+          "entryPrice": 180,
+          "targetPrice": 192,
+          "stopLoss": 174,
+          "thesis": "PLTR's ability to rally on a day when NVDA fell and Nasdaq was barely positive shows institutional conviction. The defense AI crossover thesis is unique to PLTR -- no other pure-play exists. A $1.5T defense budget with emphasis on technology modernization directly benefits Palantir's government segment. The stock broke above $180 resistance on Jan 7 on strong volume.",
+          "catalyst": "Palantir sits at the intersection of defense and AI -- the two biggest Jan 7 themes. The $1.5T defense budget implies massive spending on defense technology platforms, and Palantir's Gotham platform is the Pentagon's leading AI/data analytics tool. PLTR rose from $174 to $181.68 on Jan 7 (+4.4%) AGAINST the broader tech rotation -- exceptional relative strength.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 60,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 65,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XOM",
+          "direction": "SHORT",
+          "entryPrice": 121.05,
+          "targetPrice": 116.01,
+          "stopLoss": 124.58,
+          "thesis": "XOM is a price-taker on crude oil and its earnings are highly leveraged to oil prices. Venezuela's indefinite supply arrangement plus IEA's massive surplus projection creates a structural bearish oil backdrop. The stock fell from its all-time high in just 2 days -- momentum has clearly reversed. Macro backdrop (cooling jobs, potential recession signals) further undermines oil demand.",
+          "catalyst": "Venezuela oil deal creates sustained supply overhang. IEA projects 3.8M bpd surplus in 2026 -- largest since pandemic. WTI at $55.99 and falling. XOM dropped from $125.91 all-time high (Jan 5) to $118.49 by Jan 7 close. Energy sector was worst performer. JOLTS miss adds recession/demand destruction fear.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 60,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "direction": "SHORT",
+          "entryPrice": 187.24,
+          "targetPrice": 180.31,
+          "stopLoss": 192.19,
+          "thesis": "NVDA is exhibiting classic distribution behavior: positive news (China H200, CES keynote) failing to lift the stock meaningfully. The rotation from compute to memory within the AI trade means institutional money is reallocating. Stock is down 8% from October record. With Jan 28 FOMC and earnings season ahead, risk reduction in mega-cap tech is rational. Note: NVDA actually closed at $189.11 on Jan 7 (flat), but the weak intraday action and sector rotation pattern suggest continued pressure.",
+          "catalyst": "Clear rotation out of mega-cap AI compute into memory/HBM on Jan 7. Despite bullish CES news (China H200 demand, $50B potential market), the stock traded flat to slightly down intraday while tech sector lost >1%. The 'sell the news' pattern at CES is playing out. JOLTS miss creates macro headwind for high-multiple growth. Bloomberg: NVDA's $4T rally 'faces more threats than ever.'",
+          "conviction": {
+            "catalystClarity": {
+              "score": 58,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 50,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 50,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "LMT",
+          "openPrice": 525.31,
+          "highPrice": 546.07,
+          "lowPrice": 496,
+          "closePrice": 542.92,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -4,
+          "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $525.31, High $546.07, Low $496, Close $542.92."
+        },
+        {
+          "symbol": "NOC",
+          "openPrice": 616.42,
+          "highPrice": 638.84,
+          "lowPrice": 574.51,
+          "closePrice": 618.82,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.34,
+          "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $616.42, High $638.84, Low $574.51, Close $618.82."
+        },
+        {
+          "symbol": "VLO",
+          "openPrice": 184.36,
+          "highPrice": 192,
+          "lowPrice": 181.01,
+          "closePrice": 185.28,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -3.93,
+          "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $184.36, High $192, Low $181.01, Close $185.28."
+        },
+        {
+          "symbol": "PLTR",
+          "openPrice": 179.8,
+          "highPrice": 187.28,
+          "lowPrice": 174.37,
+          "closePrice": 177.49,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.39,
+          "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $179.8, High $187.28, Low $174.37, Close $177.49."
+        },
+        {
+          "symbol": "XOM",
+          "openPrice": 119.8,
+          "highPrice": 124.86,
+          "lowPrice": 118.27,
+          "closePrice": 124.61,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -2.94,
+          "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $119.8, High $124.86, Low $118.27, Close $124.61."
+        },
+        {
+          "symbol": "NVDA",
+          "openPrice": 188.57,
+          "highPrice": 191.37,
+          "lowPrice": 183.67,
+          "closePrice": 184.86,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.27,
+          "notes": "3-day window (2026-01-07, 2026-01-08, 2026-01-09). Open $188.57, High $191.37, Low $183.67, Close $184.86."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 33.3,
+        "targetHitRate": 66.7,
+        "stopHitRate": 83.3,
+        "avgReturnPercent": -1.59,
+        "profitFactor": 0.22,
+        "winRate": 33.3,
+        "totalScore": 42.6,
+        "benchmarkReturn": -0.38,
+        "alpha": -1.21
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 66.5,
+          "avgScoreLosers": 84.5,
+          "predictivePower": 32
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 67.5,
+          "avgScoreLosers": 78.5,
+          "predictivePower": 39
+        },
+        "riskReward": {
+          "avgScoreWinners": 65,
+          "avgScoreLosers": 77,
+          "predictivePower": 38
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 85,
+          "avgScoreLosers": 80,
+          "predictivePower": 55
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 70,
+          "avgScoreLosers": 73,
+          "predictivePower": 47
+        },
+        "informationEdge": {
+          "avgScoreWinners": 55,
+          "avgScoreLosers": 75.3,
+          "predictivePower": 29.8
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 57.5,
+          "avgScoreLosers": 74.8,
+          "predictivePower": 32.8
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -59693,7 +60249,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T01:53:39.920Z",
+  "lastUpdatedAt": "2026-04-07T02:09:41.749Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -60139,7 +60695,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 26,
+  "fullDepthCurrentTrial": 27,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -60269,7 +60825,8 @@
     "2026-03-11",
     "2024-07-03",
     "2025-12-29",
-    "2025-03-14"
+    "2025-03-14",
+    "2026-01-07"
   ],
   "dateSequence": [
     "2025-09-09",
