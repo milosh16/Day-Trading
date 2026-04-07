@@ -1,0 +1,404 @@
+{
+  "trialId": 10220,
+  "date": "2023-06-06",
+  "dateDisplay": "Tuesday, June 6, 2023",
+  "generatedAt": "2026-04-07T19:21:58.806Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.24,
+      "nasdaqFuturesChange": 0.36,
+      "dowFuturesChange": 0.03,
+      "russellFuturesChange": 2.69,
+      "vixFuturesChange": -0.14,
+      "vix": 13.94,
+      "vixChange": -0.14,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 17.04,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.7,
+      "tenYearYieldChange": 0.16,
+      "twoYearYield": 4.25,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.87,
+      "threeMonthYield": 5.16,
+      "twoTenSpread": -0.55,
+      "threeMoTenYrSpread": -1.46,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 104.1,
+      "dollarIndexChange": -0.03,
+      "eurUsd": 1.07,
+      "eurUsdChange": -0.13,
+      "usdJpy": 139.53,
+      "usdJpyChange": 0.1,
+      "usdCny": 7.12,
+      "usdCnyChange": 0.19,
+      "oilWTI": 72.53,
+      "oilChange": 1.1,
+      "brentOil": 76.95,
+      "brentOilChange": 0.87,
+      "natGasChange": 2.96,
+      "goldPrice": 1942.7,
+      "goldChange": -1.16,
+      "silverChange": -0.57,
+      "copperChange": -0.33,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -1.82,
+      "daxChange": -0.2,
+      "ftseChange": -0.05,
+      "shanghaiChange": 0.08,
+      "hangSengChange": 0.8,
+      "kospiChange": 0.01,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 126.8,
+      "spreadChange": -0.16,
+      "igSpread": -14.58,
+      "igSpreadChange": -0.2,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.04,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.02,
+      "xlfChange": 1.26,
+      "xleChange": 0.81,
+      "xlvChange": -0.83,
+      "xlpChange": -0.5,
+      "xluChange": -0.08,
+      "xlreChange": 0.6,
+      "xliChange": 0.63,
+      "xlbChange": 0.64,
+      "xlcChange": 0.41,
+      "xlyChange": 1.04,
+      "smhChange": 0.71,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -3.28,
+      "ethereumChange": -2.76,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 239,
+      "daysToNextCPI": 219,
+      "daysToNextNFP": 213,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.86,
+      "sp20DayReturn": 3.52,
+      "nasdaqVsRussell5d": -3,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 46,
+      "directionalBias": "16",
+      "volatilityRegime": "normal",
+      "stressIndex": 10,
+      "riskAppetiteIndex": 57,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "AAPL",
+      "direction": "long",
+      "entryPrice": 179.8,
+      "targetPrice": 183.8,
+      "stopLoss": 177.3,
+      "thesis": "WWDC Vision Pro catalyst with tighter risk management. Enter on any morning pullback from gap-up. Vision Pro announcement dominates news cycle. Massive institutional interest in AR/VR platform play.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AMD",
+      "direction": "long",
+      "entryPrice": 117.93,
+      "targetPrice": 122.28,
+      "stopLoss": 115.32,
+      "thesis": "AI semiconductor momentum trade. AMD MI300 AI accelerator narrative building as NVDA alternative. Stock breaking out above $120 resistance. Weak ISM = Fed pause = tech/growth tailwind. Broad semiconductor strength with SOX at highs.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XLE",
+      "direction": "short",
+      "entryPrice": 39.69,
+      "targetPrice": 38.46,
+      "stopLoss": 40.43,
+      "thesis": "Energy sector weakness despite Saudi voluntary production cut. If 1M bbl/day cut can't lift oil, demand picture is worse than expected. Weak ISM Services confirms economic cooling. Rotation OUT of energy INTO tech/AI. XLE breaking below support.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "MRVL",
+      "direction": "long",
+      "entryPrice": 58.03,
+      "targetPrice": 60.86,
+      "stopLoss": 56.43,
+      "thesis": "Marvell Technology riding AI/custom silicon wave. Data center and cloud connectivity beneficiary. Less extended than NVDA/AMD. Earnings were May 25 - beat and raised on AI demand. Post-earnings consolidation creating entry. Apple M2 Ultra announcement adds tailwind to semiconductor complex.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "AAPL",
+      "openPrice": 179.97,
+      "highPrice": 181.21,
+      "lowPrice": 177.32,
+      "closePrice": 180.57,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.43,
+      "notes": "3-day window (2023-06-06, 2023-06-07, 2023-06-08). Open $179.97, High $181.21, Low $177.32, Close $180.57."
+    },
+    {
+      "symbol": "AMD",
+      "openPrice": 117.91,
+      "highPrice": 125.34,
+      "lowPrice": 117.05,
+      "closePrice": 121.05,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.65,
+      "notes": "3-day window (2023-06-06, 2023-06-07, 2023-06-08). Open $117.91, High $125.34, Low $117.05, Close $121.05."
+    },
+    {
+      "symbol": "XLE",
+      "openPrice": 39.16,
+      "highPrice": 41.26,
+      "lowPrice": 39.12,
+      "closePrice": 40.89,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.02,
+      "notes": "3-day window (2023-06-06, 2023-06-07, 2023-06-08). Open $39.16, High $41.26, Low $39.12, Close $40.89."
+    },
+    {
+      "symbol": "MRVL",
+      "openPrice": 58.1,
+      "highPrice": 63.64,
+      "lowPrice": 58.04,
+      "closePrice": 59.72,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.91,
+      "notes": "3-day window (2023-06-06, 2023-06-07, 2023-06-08). Open $58.1, High $63.64, Low $58.04, Close $59.72."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 75,
+    "targetHitRate": 50,
+    "stopHitRate": 25,
+    "avgReturnPercent": 0.74,
+    "profitFactor": 1.98,
+    "winRate": 75,
+    "totalScore": 76.9,
+    "benchmarkReturn": 0.32,
+    "alpha": 0.42
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

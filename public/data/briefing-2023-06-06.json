@@ -1,0 +1,233 @@
+{
+  "id": "briefing-2023-06-06-1775589718821",
+  "date": "2023-06-06",
+  "generatedAt": "2026-04-07T19:21:58.806Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG AAPL @ $179.8",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $183.8",
+          "implication": "+2.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $177.3",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $117.93",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $122.28",
+          "implication": "+3.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $115.32",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XLE @ $39.69",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $38.46",
+          "implication": "+-3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $40.43",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG MRVL @ $58.03",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $60.86",
+          "implication": "+4.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $56.43",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 46,
+  "recommendations": [
+    {
+      "ticker": "AAPL",
+      "direction": "long",
+      "conviction": "high",
+      "thesis": "WWDC Vision Pro catalyst with tighter risk management. Enter on any morning pullback from gap-up. Vision Pro announcement dominates news cycle. Massive institutional interest in AR/VR platform play.",
+      "entryPrice": 179.8,
+      "targetPrice": 183.8,
+      "stopPrice": 177.3,
+      "riskRewardRatio": 1.6,
+      "notes": "Tighter entry on pullback gives proper 1.6:1 R:R. Stop below prior day's close.",
+      "riskPct": 1.39,
+      "rewardPct": 2.22
+    },
+    {
+      "ticker": "AMD",
+      "direction": "long",
+      "conviction": "high",
+      "thesis": "AI semiconductor momentum trade. AMD MI300 AI accelerator narrative building as NVDA alternative. Stock breaking out above $120 resistance. Weak ISM = Fed pause = tech/growth tailwind. Broad semiconductor strength with SOX at highs.",
+      "entryPrice": 117.93,
+      "targetPrice": 122.28,
+      "stopPrice": 115.32,
+      "riskRewardRatio": 1.67,
+      "notes": "Riding AI wave. AMD is the clear #2 beneficiary behind NVDA. Clean breakout setup.",
+      "riskPct": 2.21,
+      "rewardPct": 3.69
+    },
+    {
+      "ticker": "XLE",
+      "direction": "short",
+      "conviction": "medium",
+      "thesis": "Energy sector weakness despite Saudi voluntary production cut. If 1M bbl/day cut can't lift oil, demand picture is worse than expected. Weak ISM Services confirms economic cooling. Rotation OUT of energy INTO tech/AI. XLE breaking below support.",
+      "entryPrice": 39.69,
+      "targetPrice": 38.46,
+      "stopPrice": 40.43,
+      "riskRewardRatio": 1.67,
+      "notes": "Fading the failed OPEC catalyst. Energy losing relative strength.",
+      "riskPct": 1.86,
+      "rewardPct": 3.11
+    },
+    {
+      "ticker": "MRVL",
+      "direction": "long",
+      "conviction": "medium-high",
+      "thesis": "Marvell Technology riding AI/custom silicon wave. Data center and cloud connectivity beneficiary. Less extended than NVDA/AMD. Earnings were May 25 - beat and raised on AI demand. Post-earnings consolidation creating entry. Apple M2 Ultra announcement adds tailwind to semiconductor complex.",
+      "entryPrice": 58.03,
+      "targetPrice": 60.86,
+      "stopPrice": 56.43,
+      "riskRewardRatio": 1.76,
+      "notes": "Clean post-earnings consolidation breakout. AI beneficiary with better risk/reward than NVDA.",
+      "riskPct": 2.76,
+      "rewardPct": 4.88
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10220,
+    "outcomes": [
+      {
+        "symbol": "AAPL",
+        "openPrice": 179.97,
+        "highPrice": 181.21,
+        "lowPrice": 177.32,
+        "closePrice": 180.57,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.43,
+        "notes": "3-day window (2023-06-06, 2023-06-07, 2023-06-08). Open $179.97, High $181.21, Low $177.32, Close $180.57."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 117.91,
+        "highPrice": 125.34,
+        "lowPrice": 117.05,
+        "closePrice": 121.05,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.65,
+        "notes": "3-day window (2023-06-06, 2023-06-07, 2023-06-08). Open $117.91, High $125.34, Low $117.05, Close $121.05."
+      },
+      {
+        "symbol": "XLE",
+        "openPrice": 39.16,
+        "highPrice": 41.26,
+        "lowPrice": 39.12,
+        "closePrice": 40.89,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.02,
+        "notes": "3-day window (2023-06-06, 2023-06-07, 2023-06-08). Open $39.16, High $41.26, Low $39.12, Close $40.89."
+      },
+      {
+        "symbol": "MRVL",
+        "openPrice": 58.1,
+        "highPrice": 63.64,
+        "lowPrice": 58.04,
+        "closePrice": 59.72,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.91,
+        "notes": "3-day window (2023-06-06, 2023-06-07, 2023-06-08). Open $58.1, High $63.64, Low $58.04, Close $59.72."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 75,
+      "targetHitRate": 50,
+      "stopHitRate": 25,
+      "avgReturnPercent": 0.74,
+      "profitFactor": 1.98,
+      "winRate": 75,
+      "totalScore": 76.9,
+      "benchmarkReturn": 0.32,
+      "alpha": 0.42
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.32,
+    "alpha": 0.42,
+    "fullDepth": true
+  }
+}
