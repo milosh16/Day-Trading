@@ -1,0 +1,506 @@
+{
+  "trialId": 10054,
+  "date": "2025-01-22",
+  "dateDisplay": "Wednesday, January 22, 2025",
+  "generatedAt": "2026-04-07T18:54:20.331Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.61,
+      "nasdaqFuturesChange": 1.28,
+      "dowFuturesChange": 0.3,
+      "russellFuturesChange": -0.61,
+      "vixFuturesChange": -0.53,
+      "vix": 15.02,
+      "vixChange": -0.53,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 17.81,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.6,
+      "tenYearYieldChange": 0.55,
+      "twoYearYield": 4.37,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.81,
+      "threeMonthYield": 4.22,
+      "twoTenSpread": 0.23,
+      "threeMoTenYrSpread": 0.38,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 108.05,
+      "dollarIndexChange": -0.11,
+      "eurUsd": 1.04,
+      "eurUsdChange": 0.04,
+      "usdJpy": 156.44,
+      "usdJpyChange": 0.43,
+      "usdCny": 7.27,
+      "usdCnyChange": 0,
+      "oilWTI": 74.62,
+      "oilChange": -1.09,
+      "brentOil": 78.29,
+      "brentOilChange": -0.9,
+      "natGasChange": -0.38,
+      "goldPrice": 2763.1,
+      "goldChange": -0.16,
+      "silverChange": -1.81,
+      "copperChange": 0.66,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.79,
+      "daxChange": 0.74,
+      "ftseChange": 0.24,
+      "shanghaiChange": 0.51,
+      "hangSengChange": -0.4,
+      "kospiChange": -1.24,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 102.2,
+      "spreadChange": 0.14,
+      "igSpread": -14.12,
+      "igSpreadChange": 0.32,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.9,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 2.26,
+      "xlfChange": -0.47,
+      "xleChange": -1.82,
+      "xlvChange": -0.22,
+      "xlpChange": -0.49,
+      "xluChange": -2.16,
+      "xlreChange": -1.75,
+      "xliChange": -0.23,
+      "xlbChange": -0.8,
+      "xlcChange": 1,
+      "xlyChange": -0.38,
+      "smhChange": 1.82,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.3,
+      "ethereumChange": 2.92,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 7,
+      "daysToNextCPI": 21,
+      "daysToNextNFP": 16,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 3,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 4.17,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": 1.26,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 37,
+      "directionalBias": "7",
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 62,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "ORCL",
+      "direction": "long",
+      "entryPrice": 172.57,
+      "targetPrice": 177.87,
+      "stopLoss": 169.2,
+      "thesis": "",
+      "catalyst": "Direct Stargate beneficiary — named partner in $500B AI JV. Stock gapped up 7% Jan 21, pre-market up another 8%. Momentum continuation as analysts raise targets. Larry Ellison personally appeared at WH announcement.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "ARM",
+      "direction": "long",
+      "entryPrice": 155.2,
+      "targetPrice": 161.99,
+      "stopLoss": 150.84,
+      "thesis": "",
+      "catalyst": "Named Stargate technology partner alongside Nvidia and Microsoft. ARM chip architecture underpins AI data center buildout. Surging 16% pre-market — gap-and-go momentum play. Zacks explicitly issued 'Buy ARM Amid Stargate Announcement'.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "entryPrice": 140.83,
+      "targetPrice": 145.07,
+      "stopLoss": 137.53,
+      "thesis": "",
+      "catalyst": "Key Stargate technology partner. $500B AI infra spend flows directly to Nvidia GPUs for data center buildout. Already up 2.3% Jan 21, pre-market extending. UBS Buy rating, $185 PT. AI capex supercycle confirmation.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NFLX",
+      "direction": "long",
+      "entryPrice": 86.97,
+      "targetPrice": 90.61,
+      "stopLoss": 85.15,
+      "thesis": "",
+      "catalyst": "Blowout Q4 earnings — 19M record sub adds, 300M+ total, revenue beat, raised FY25 guidance by $500M. Surged 14%+ after-hours. Price hike announced. Ad tier 55% of signups. Massive gap-up expected at open.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "PG",
+      "direction": "long",
+      "entryPrice": 161.72,
+      "targetPrice": 165.57,
+      "stopLoss": 159.31,
+      "thesis": "",
+      "catalyst": "Beat Q2 FY25 earnings before market open — organic +3%, China improving (only -3% vs prior -15%), EPS $1.88 beat. Guidance maintained. Defensive strength in risk-on tape provides floor. Already gained 2% Jan 21 on leaked strength.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CEG",
+      "direction": "short",
+      "entryPrice": 323.64,
+      "targetPrice": 309.52,
+      "stopLoss": 331.24,
+      "thesis": "",
+      "catalyst": "AI power play rotation AWAY from utilities/nuclear into direct AI infrastructure (ORCL, ARM, NVDA) post-Stargate. CEG sold off Jan 21 (-4.2% from highs despite broader market rally). Stargate validates GPU/cloud spend, not necessarily power stocks near-term. Profit-taking setup.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "ORCL",
+      "openPrice": 191.51,
+      "highPrice": 191.99,
+      "lowPrice": 180.57,
+      "closePrice": 183.6,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.39,
+      "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $191.51, High $191.99, Low $180.57, Close $183.6."
+    },
+    {
+      "symbol": "ARM",
+      "openPrice": 160.37,
+      "highPrice": 182.88,
+      "lowPrice": 159.95,
+      "closePrice": 162.52,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 4.72,
+      "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $160.37, High $182.88, Low $159.95, Close $162.52."
+    },
+    {
+      "symbol": "NVDA",
+      "openPrice": 144.66,
+      "highPrice": 148.97,
+      "lowPrice": 141.88,
+      "closePrice": 142.62,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.27,
+      "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $144.66, High $148.97, Low $141.88, Close $142.62."
+    },
+    {
+      "symbol": "NFLX",
+      "openPrice": 99.8,
+      "highPrice": 99.9,
+      "lowPrice": 95.08,
+      "closePrice": 97.76,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 12.41,
+      "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $99.8, High $99.9, Low $95.08, Close $97.76."
+    },
+    {
+      "symbol": "PG",
+      "openPrice": 167.1,
+      "highPrice": 168.14,
+      "lowPrice": 163.2,
+      "closePrice": 164.12,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.48,
+      "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $167.1, High $168.14, Low $163.2, Close $164.12."
+    },
+    {
+      "symbol": "CEG",
+      "openPrice": 329,
+      "highPrice": 352,
+      "lowPrice": 319,
+      "closePrice": 347.44,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -7.35,
+      "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $329, High $352, Low $319, Close $347.44."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 83.3,
+    "targetHitRate": 83.3,
+    "stopHitRate": 16.7,
+    "avgReturnPercent": 3.15,
+    "profitFactor": 3.57,
+    "winRate": 83.3,
+    "totalScore": 95,
+    "benchmarkReturn": 0.09,
+    "alpha": 3.06
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

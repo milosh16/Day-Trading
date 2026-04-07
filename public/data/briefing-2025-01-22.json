@@ -1,0 +1,313 @@
+{
+  "id": "briefing-2025-01-22-1775588060354",
+  "date": "2025-01-22",
+  "generatedAt": "2026-04-07T18:54:20.331Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG ORCL @ $172.57",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $177.87",
+          "implication": "+3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $169.2",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ARM @ $155.2",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $161.99",
+          "implication": "+4.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $150.84",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $140.83",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $145.07",
+          "implication": "+3.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $137.53",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NFLX @ $86.97",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $90.61",
+          "implication": "+4.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $85.15",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG PG @ $161.72",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $165.57",
+          "implication": "+2.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $159.31",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT CEG @ $323.64",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $309.52",
+          "implication": "+-4.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $331.24",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 37,
+  "recommendations": [
+    {
+      "ticker": "ORCL",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 172.57,
+      "targetPrice": 177.87,
+      "stopPrice": 169.2,
+      "riskRewardRatio": "1.57:1",
+      "catalyst": "Direct Stargate beneficiary — named partner in $500B AI JV. Stock gapped up 7% Jan 21, pre-market up another 8%. Momentum continuation as analysts raise targets. Larry Ellison personally appeared at WH announcement.",
+      "sector": "Technology/Cloud",
+      "timeframe": "intraday",
+      "notes": "Enter on pullback from pre-market highs toward VWAP. Strong institutional flow expected. Watch for profit-taking above $180 resistance."
+    },
+    {
+      "ticker": "ARM",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 155.2,
+      "targetPrice": 161.99,
+      "stopPrice": 150.84,
+      "riskRewardRatio": "1.56:1",
+      "catalyst": "Named Stargate technology partner alongside Nvidia and Microsoft. ARM chip architecture underpins AI data center buildout. Surging 16% pre-market — gap-and-go momentum play. Zacks explicitly issued 'Buy ARM Amid Stargate Announcement'.",
+      "sector": "Semiconductors",
+      "timeframe": "intraday",
+      "notes": "Volatile — wide range expected. Use tight risk management. Entry on first consolidation after open. Stop below pre-market low."
+    },
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 140.83,
+      "targetPrice": 145.07,
+      "stopPrice": 137.53,
+      "riskRewardRatio": "1.29:1",
+      "catalyst": "Key Stargate technology partner. $500B AI infra spend flows directly to Nvidia GPUs for data center buildout. Already up 2.3% Jan 21, pre-market extending. UBS Buy rating, $185 PT. AI capex supercycle confirmation.",
+      "sector": "Semiconductors",
+      "timeframe": "intraday",
+      "notes": "Most liquid AI name. Lower beta play vs ARM/ORCL but safer. Watch $150 psychological resistance. R:R slightly below 1.5:1 but high probability setup justifies inclusion."
+    },
+    {
+      "ticker": "NFLX",
+      "direction": "long",
+      "conviction": "medium",
+      "entryPrice": 86.97,
+      "targetPrice": 90.61,
+      "stopPrice": 85.15,
+      "riskRewardRatio": "2.0:1",
+      "catalyst": "Blowout Q4 earnings — 19M record sub adds, 300M+ total, revenue beat, raised FY25 guidance by $500M. Surged 14%+ after-hours. Price hike announced. Ad tier 55% of signups. Massive gap-up expected at open.",
+      "sector": "Communication Services",
+      "timeframe": "intraday",
+      "notes": "Gap-up play. Extremely extended — risk of gap-and-fade. Enter only on strength above $950 support. Sell into strength near $990-1000 zone. Do NOT chase above $980."
+    },
+    {
+      "ticker": "PG",
+      "direction": "long",
+      "conviction": "medium",
+      "entryPrice": 161.72,
+      "targetPrice": 165.57,
+      "stopPrice": 159.31,
+      "riskRewardRatio": "1.60:1",
+      "catalyst": "Beat Q2 FY25 earnings before market open — organic +3%, China improving (only -3% vs prior -15%), EPS $1.88 beat. Guidance maintained. Defensive strength in risk-on tape provides floor. Already gained 2% Jan 21 on leaked strength.",
+      "sector": "Consumer Staples",
+      "timeframe": "intraday",
+      "notes": "Lower volatility defensive play to balance portfolio. Steady grinder. Works even if broader market pulls back from extended levels."
+    },
+    {
+      "ticker": "CEG",
+      "direction": "short",
+      "conviction": "medium",
+      "entryPrice": 323.64,
+      "targetPrice": 309.52,
+      "stopPrice": 331.24,
+      "riskRewardRatio": "1.86:1",
+      "catalyst": "AI power play rotation AWAY from utilities/nuclear into direct AI infrastructure (ORCL, ARM, NVDA) post-Stargate. CEG sold off Jan 21 (-4.2% from highs despite broader market rally). Stargate validates GPU/cloud spend, not necessarily power stocks near-term. Profit-taking setup.",
+      "sector": "Utilities/Energy",
+      "timeframe": "intraday",
+      "notes": "Contrarian play. AI power thesis intact long-term but near-term rotation out is underway. Short on bounce toward $300 with stop above $305. Cover into $285-287 support zone."
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10054,
+    "outcomes": [
+      {
+        "symbol": "ORCL",
+        "openPrice": 191.51,
+        "highPrice": 191.99,
+        "lowPrice": 180.57,
+        "closePrice": 183.6,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 6.39,
+        "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $191.51, High $191.99, Low $180.57, Close $183.6."
+      },
+      {
+        "symbol": "ARM",
+        "openPrice": 160.37,
+        "highPrice": 182.88,
+        "lowPrice": 159.95,
+        "closePrice": 162.52,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.72,
+        "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $160.37, High $182.88, Low $159.95, Close $162.52."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 144.66,
+        "highPrice": 148.97,
+        "lowPrice": 141.88,
+        "closePrice": 142.62,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.27,
+        "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $144.66, High $148.97, Low $141.88, Close $142.62."
+      },
+      {
+        "symbol": "NFLX",
+        "openPrice": 99.8,
+        "highPrice": 99.9,
+        "lowPrice": 95.08,
+        "closePrice": 97.76,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 12.41,
+        "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $99.8, High $99.9, Low $95.08, Close $97.76."
+      },
+      {
+        "symbol": "PG",
+        "openPrice": 167.1,
+        "highPrice": 168.14,
+        "lowPrice": 163.2,
+        "closePrice": 164.12,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.48,
+        "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $167.1, High $168.14, Low $163.2, Close $164.12."
+      },
+      {
+        "symbol": "CEG",
+        "openPrice": 329,
+        "highPrice": 352,
+        "lowPrice": 319,
+        "closePrice": 347.44,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -7.35,
+        "notes": "3-day window (2025-01-22, 2025-01-23, 2025-01-24). Open $329, High $352, Low $319, Close $347.44."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 83.3,
+      "stopHitRate": 16.7,
+      "avgReturnPercent": 3.15,
+      "profitFactor": 3.57,
+      "winRate": 83.3,
+      "totalScore": 95,
+      "benchmarkReturn": 0.09,
+      "alpha": 3.06
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.09,
+    "alpha": 3.06,
+    "fullDepth": true
+  }
+}
