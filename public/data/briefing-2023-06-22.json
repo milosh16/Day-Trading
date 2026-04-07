@@ -1,0 +1,345 @@
+{
+  "id": "briefing-2023-06-22-1775600507750",
+  "date": "2023-06-22",
+  "generatedAt": "2026-04-07T22:21:47.720Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "Powell Day 2 Congressional testimony (Senate Banking). Day 1 (Jun 21) was hawkish - reiterated more hikes likely, inflation well above target. Fed paused Jun 14 at 5.00-5.25% but dot plot signals 2 more hikes in 2023. Markets partially digested hawkish message on Day 1. BoE rate decision due Jun 22 - surprise 50bp hike (vs 25bp expected) will ripple into US rate-sensitive sectors.",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "Titan submersible search ongoing (debris to be found Jun 22). Ukraine counteroffensive active. US-China relations stabilizing after Blinken visit Jun 18-19. No acute geopolitical shock.",
+      "importance": "medium"
+    },
+    {
+      "title": "Earnings",
+      "content": "Accenture (ACN) reports before open Jun 22 - consensus expects solid results. KBH beat Q2 estimates after close Jun 21 - signals homebuilder strength. FedEx rallied on strong results Jun 20. Between major earnings seasons.",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorFlows",
+      "content": "Tech/AI rally extended but overbought. Homebuilders strong on new home demand. Financials mixed on rate outlook. Energy stable with WTI ~$72. Utilities and REITs under pressure from higher-for-longer rates.",
+      "importance": "medium"
+    },
+    {
+      "title": "Technicals",
+      "content": "SPX ~4,366 at multi-month highs, extended rally. VIX compressed ~13-14 (complacent). 10Y yield ~3.73%. DXY ~102. Breadth narrow - mega-cap tech driving indices.",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "Bullish momentum but increasingly stretched. Low VIX suggests complacency. Powell Day 2 unlikely to add new hawkish shock (already priced from Day 1). BoE surprise could create intraday volatility in rate-sensitive names.",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG KBH @ $52.01",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $54.27",
+          "implication": "+4.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $50.65",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ACN @ $313",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $320",
+          "implication": "+2.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $307",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $43.04",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $44.04",
+          "implication": "+2.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $42.34",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XHB @ $77.14",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $79.08",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $75.49",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT TLT @ $103.56",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $101.83",
+          "implication": "+-1.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $104.89",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XLU @ $33.26",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $32.67",
+          "implication": "+-1.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $33.66",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 44,
+  "recommendations": [
+    {
+      "ticker": "KBH",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 52.01,
+      "targetPrice": 54.27,
+      "stopPrice": 50.65,
+      "riskRewardRatio": 1.67,
+      "thesis": "KB Home beat Q2 earnings after close Jun 21 with strong orders and margins. Homebuilder sector has momentum. Gap-up expected at open. Entry on initial pullback from gap with target at prior resistance zone.",
+      "catalyst": "Post-earnings momentum, homebuilder sector strength, new home demand robust as existing inventory stays low",
+      "risks": "BoE 50bp surprise hike could briefly pressure rate-sensitive housing names; Powell Day 2 hawkish repeat",
+      "sector": "Homebuilders"
+    },
+    {
+      "ticker": "ACN",
+      "direction": "long",
+      "conviction": "medium",
+      "entryPrice": 313,
+      "targetPrice": 320,
+      "stopPrice": 307,
+      "riskRewardRatio": 1.17,
+      "thesis": "Accenture reports before open Jun 22. Consensus expects solid IT consulting demand driven by AI/digital transformation spending. If results beat, stock should rally into AI narrative tailwind. Entry after initial reaction confirms positive.",
+      "catalyst": "Q3 earnings release before market open; AI consulting demand narrative",
+      "risks": "Miss on bookings or guidance could send it lower; entry only if earnings are positive",
+      "sector": "IT Services",
+      "conditional": "ONLY enter if earnings reaction is positive. Skip if gap-down."
+    },
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "conviction": "medium",
+      "entryPrice": 43.04,
+      "targetPrice": 44.04,
+      "stopPrice": 42.34,
+      "riskRewardRatio": 1.43,
+      "thesis": "AI momentum leader continues to attract flows. Any dip from Powell Day 2 or BoE noise is buyable in this regime. Stock has been consolidating after massive May earnings move. Looking for continuation pattern.",
+      "catalyst": "Persistent AI narrative, institutional FOMO, sector rotation into mega-cap tech on any macro uncertainty",
+      "risks": "Extended valuation, profit-taking risk at these levels, broad market pullback",
+      "sector": "Semiconductors"
+    },
+    {
+      "ticker": "XHB",
+      "direction": "long",
+      "conviction": "medium",
+      "entryPrice": 77.14,
+      "targetPrice": 79.08,
+      "stopPrice": 75.49,
+      "riskRewardRatio": 1.18,
+      "thesis": "Homebuilder ETF benefits from KBH beat and existing home sales data due Jun 22. Low existing inventory continues to drive new home demand. Sector trend is strong.",
+      "catalyst": "KBH earnings beat spillover, existing home sales data, sector momentum",
+      "risks": "BoE surprise 50bp hike could temporarily weigh on rate-sensitive housing sector; Powell hawkish repeat",
+      "sector": "Homebuilders"
+    },
+    {
+      "ticker": "TLT",
+      "direction": "short",
+      "conviction": "high",
+      "entryPrice": 103.56,
+      "targetPrice": 101.83,
+      "stopPrice": 104.89,
+      "riskRewardRatio": 1.31,
+      "thesis": "BoE surprise 50bp hike (vs 25bp expected) will create global rate repricing pressure. Powell Day 2 reinforces higher-for-longer. Long-end Treasury prices should decline (yields rise). TLT is the cleanest expression of this view.",
+      "catalyst": "BoE 50bp surprise hike ripple effect, Powell Day 2 hawkish reinforcement, jobless claims data",
+      "risks": "Flight to safety if equity selloff intensifies; already partially priced after Powell Day 1",
+      "sector": "Fixed Income"
+    },
+    {
+      "ticker": "XLU",
+      "direction": "short",
+      "conviction": "medium",
+      "entryPrice": 33.26,
+      "targetPrice": 32.67,
+      "stopPrice": 33.66,
+      "riskRewardRatio": 1.5,
+      "thesis": "Utilities sector is the classic rate-sensitive defensive play. BoE 50bp surprise and Powell hawkish Day 2 create a double headwind. Higher rates reduce the relative attractiveness of utility dividends. Range-bound regime with negative bias favors this short.",
+      "catalyst": "BoE surprise hike global rate repricing, Powell testimony reinforcement, rotation out of defensives into growth/AI",
+      "risks": "Broad market selloff could trigger flight to defensives; oversold bounce",
+      "sector": "Utilities"
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10231,
+    "outcomes": [
+      {
+        "symbol": "KBH",
+        "openPrice": 51.64,
+        "highPrice": 52.88,
+        "lowPrice": 50.06,
+        "closePrice": 51.15,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.65,
+        "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $51.64, High $52.88, Low $50.06, Close $51.15."
+      },
+      {
+        "symbol": "ACN",
+        "openPrice": 298.21,
+        "highPrice": 307.57,
+        "lowPrice": 296,
+        "closePrice": 297.41,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -4.98,
+        "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $298.21, High $307.57, Low $296, Close $297.41."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 42.25,
+        "highPrice": 43.43,
+        "lowPrice": 40.1,
+        "closePrice": 40.63,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -5.6,
+        "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $42.25, High $43.43, Low $40.1, Close $40.63."
+      },
+      {
+        "symbol": "XHB",
+        "openPrice": 76.92,
+        "highPrice": 77.96,
+        "lowPrice": 76.19,
+        "closePrice": 77.33,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.25,
+        "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $76.92, High $77.96, Low $76.19, Close $77.33."
+      },
+      {
+        "symbol": "TLT",
+        "openPrice": 102.8,
+        "highPrice": 103.95,
+        "lowPrice": 102.2,
+        "closePrice": 103.44,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.12,
+        "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $102.8, High $103.95, Low $102.2, Close $103.44."
+      },
+      {
+        "symbol": "XLU",
+        "openPrice": 33.38,
+        "highPrice": 33.44,
+        "lowPrice": 32.44,
+        "closePrice": 32.83,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.29,
+        "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $33.38, High $33.44, Low $32.44, Close $32.83."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 50,
+      "targetHitRate": 16.7,
+      "stopHitRate": 50,
+      "avgReturnPercent": -1.76,
+      "profitFactor": 0.14,
+      "winRate": 50,
+      "totalScore": 39.4,
+      "benchmarkReturn": 0.59,
+      "alpha": -2.35
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.59,
+    "alpha": -2.35,
+    "fullDepth": true
+  }
+}

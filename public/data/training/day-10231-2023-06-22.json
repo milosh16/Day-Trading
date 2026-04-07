@@ -1,0 +1,539 @@
+{
+  "trialId": 10231,
+  "date": "2023-06-22",
+  "dateDisplay": "Thursday, June 22, 2023",
+  "generatedAt": "2026-04-07T22:21:47.720Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.37,
+      "nasdaqFuturesChange": 0.95,
+      "dowFuturesChange": -0.01,
+      "russellFuturesChange": -0.8,
+      "vixFuturesChange": 4.11,
+      "vix": 13.44,
+      "vixChange": 4.11,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 16.56,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.8,
+      "tenYearYieldChange": 2.04,
+      "twoYearYield": 4.38,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.87,
+      "threeMonthYield": 5.14,
+      "twoTenSpread": -0.58,
+      "threeMoTenYrSpread": -1.34,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 102.9,
+      "dollarIndexChange": 0.5,
+      "eurUsd": 1.1,
+      "eurUsdChange": -0.31,
+      "usdJpy": 143.03,
+      "usdJpyChange": 0.95,
+      "usdCny": 7.18,
+      "usdCnyChange": 0,
+      "oilWTI": 69.16,
+      "oilChange": -0.5,
+      "brentOil": 73.85,
+      "brentOilChange": -0.39,
+      "natGasChange": 4.64,
+      "goldPrice": 1919.1,
+      "goldChange": 0.33,
+      "silverChange": -0.48,
+      "copperChange": -2.12,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -1.45,
+      "daxChange": -0.99,
+      "ftseChange": -0.53,
+      "shanghaiChange": -1.31,
+      "hangSengChange": -1.71,
+      "kospiChange": -0.91,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 128.4,
+      "spreadChange": 0.3,
+      "igSpread": -14.8,
+      "igSpreadChange": 0.52,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.92,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.82,
+      "xlfChange": -0.78,
+      "xleChange": -1.34,
+      "xlvChange": 0.68,
+      "xlpChange": 0.58,
+      "xluChange": -0.77,
+      "xlreChange": -1.41,
+      "xliChange": -0.72,
+      "xlbChange": -0.24,
+      "xlcChange": 0.78,
+      "xlyChange": 1.28,
+      "smhChange": 0.5,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 2.62,
+      "ethereumChange": 1.06,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 223,
+      "daysToNextCPI": 203,
+      "daysToNextNFP": 197,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 0.21,
+      "sp20DayReturn": 5.7,
+      "nasdaqVsRussell5d": 1.41,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 44,
+      "directionalBias": "-14",
+      "volatilityRegime": "normal",
+      "stressIndex": 14,
+      "riskAppetiteIndex": 50,
+      "sectorTilts": {
+        "materials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Macro",
+          "content": "Powell Day 2 Congressional testimony (Senate Banking). Day 1 (Jun 21) was hawkish - reiterated more hikes likely, inflation well above target. Fed paused Jun 14 at 5.00-5.25% but dot plot signals 2 more hikes in 2023. Markets partially digested hawkish message on Day 1. BoE rate decision due Jun 22 - surprise 50bp hike (vs 25bp expected) will ripple into US rate-sensitive sectors.",
+          "importance": "medium"
+        },
+        {
+          "title": "Geopolitical",
+          "content": "Titan submersible search ongoing (debris to be found Jun 22). Ukraine counteroffensive active. US-China relations stabilizing after Blinken visit Jun 18-19. No acute geopolitical shock.",
+          "importance": "medium"
+        },
+        {
+          "title": "Earnings",
+          "content": "Accenture (ACN) reports before open Jun 22 - consensus expects solid results. KBH beat Q2 estimates after close Jun 21 - signals homebuilder strength. FedEx rallied on strong results Jun 20. Between major earnings seasons.",
+          "importance": "medium"
+        },
+        {
+          "title": "SectorFlows",
+          "content": "Tech/AI rally extended but overbought. Homebuilders strong on new home demand. Financials mixed on rate outlook. Energy stable with WTI ~$72. Utilities and REITs under pressure from higher-for-longer rates.",
+          "importance": "medium"
+        },
+        {
+          "title": "Technicals",
+          "content": "SPX ~4,366 at multi-month highs, extended rally. VIX compressed ~13-14 (complacent). 10Y yield ~3.73%. DXY ~102. Breadth narrow - mega-cap tech driving indices.",
+          "importance": "medium"
+        },
+        {
+          "title": "Sentiment",
+          "content": "Bullish momentum but increasingly stretched. Low VIX suggests complacency. Powell Day 2 unlikely to add new hawkish shock (already priced from Day 1). BoE surprise could create intraday volatility in rate-sensitive names.",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "KBH",
+      "direction": "long",
+      "entryPrice": 52.01,
+      "targetPrice": 54.27,
+      "stopLoss": 50.65,
+      "thesis": "KB Home beat Q2 earnings after close Jun 21 with strong orders and margins. Homebuilder sector has momentum. Gap-up expected at open. Entry on initial pullback from gap with target at prior resistance zone.",
+      "catalyst": "Post-earnings momentum, homebuilder sector strength, new home demand robust as existing inventory stays low",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "ACN",
+      "direction": "long",
+      "entryPrice": 313,
+      "targetPrice": 320,
+      "stopLoss": 307,
+      "thesis": "Accenture reports before open Jun 22. Consensus expects solid IT consulting demand driven by AI/digital transformation spending. If results beat, stock should rally into AI narrative tailwind. Entry after initial reaction confirms positive.",
+      "catalyst": "Q3 earnings release before market open; AI consulting demand narrative",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "entryPrice": 43.04,
+      "targetPrice": 44.04,
+      "stopLoss": 42.34,
+      "thesis": "AI momentum leader continues to attract flows. Any dip from Powell Day 2 or BoE noise is buyable in this regime. Stock has been consolidating after massive May earnings move. Looking for continuation pattern.",
+      "catalyst": "Persistent AI narrative, institutional FOMO, sector rotation into mega-cap tech on any macro uncertainty",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XHB",
+      "direction": "long",
+      "entryPrice": 77.14,
+      "targetPrice": 79.08,
+      "stopLoss": 75.49,
+      "thesis": "Homebuilder ETF benefits from KBH beat and existing home sales data due Jun 22. Low existing inventory continues to drive new home demand. Sector trend is strong.",
+      "catalyst": "KBH earnings beat spillover, existing home sales data, sector momentum",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "TLT",
+      "direction": "short",
+      "entryPrice": 103.56,
+      "targetPrice": 101.83,
+      "stopLoss": 104.89,
+      "thesis": "BoE surprise 50bp hike (vs 25bp expected) will create global rate repricing pressure. Powell Day 2 reinforces higher-for-longer. Long-end Treasury prices should decline (yields rise). TLT is the cleanest expression of this view.",
+      "catalyst": "BoE 50bp surprise hike ripple effect, Powell Day 2 hawkish reinforcement, jobless claims data",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XLU",
+      "direction": "short",
+      "entryPrice": 33.26,
+      "targetPrice": 32.67,
+      "stopLoss": 33.66,
+      "thesis": "Utilities sector is the classic rate-sensitive defensive play. BoE 50bp surprise and Powell hawkish Day 2 create a double headwind. Higher rates reduce the relative attractiveness of utility dividends. Range-bound regime with negative bias favors this short.",
+      "catalyst": "BoE surprise hike global rate repricing, Powell testimony reinforcement, rotation out of defensives into growth/AI",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "KBH",
+      "openPrice": 51.64,
+      "highPrice": 52.88,
+      "lowPrice": 50.06,
+      "closePrice": 51.15,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.65,
+      "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $51.64, High $52.88, Low $50.06, Close $51.15."
+    },
+    {
+      "symbol": "ACN",
+      "openPrice": 298.21,
+      "highPrice": 307.57,
+      "lowPrice": 296,
+      "closePrice": 297.41,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -4.98,
+      "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $298.21, High $307.57, Low $296, Close $297.41."
+    },
+    {
+      "symbol": "NVDA",
+      "openPrice": 42.25,
+      "highPrice": 43.43,
+      "lowPrice": 40.1,
+      "closePrice": 40.63,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -5.6,
+      "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $42.25, High $43.43, Low $40.1, Close $40.63."
+    },
+    {
+      "symbol": "XHB",
+      "openPrice": 76.92,
+      "highPrice": 77.96,
+      "lowPrice": 76.19,
+      "closePrice": 77.33,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.25,
+      "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $76.92, High $77.96, Low $76.19, Close $77.33."
+    },
+    {
+      "symbol": "TLT",
+      "openPrice": 102.8,
+      "highPrice": 103.95,
+      "lowPrice": 102.2,
+      "closePrice": 103.44,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.12,
+      "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $102.8, High $103.95, Low $102.2, Close $103.44."
+    },
+    {
+      "symbol": "XLU",
+      "openPrice": 33.38,
+      "highPrice": 33.44,
+      "lowPrice": 32.44,
+      "closePrice": 32.83,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.29,
+      "notes": "3-day window (2023-06-22, 2023-06-23, 2023-06-26). Open $33.38, High $33.44, Low $32.44, Close $32.83."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 50,
+    "targetHitRate": 16.7,
+    "stopHitRate": 50,
+    "avgReturnPercent": -1.76,
+    "profitFactor": 0.14,
+    "winRate": 50,
+    "totalScore": 39.4,
+    "benchmarkReturn": 0.59,
+    "alpha": -2.35
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

@@ -20,6 +20,17 @@ function mulberry32(seed: number): () => number {
 
 // US market holidays 2024-2026 (observed dates)
 const US_MARKET_HOLIDAYS = new Set([
+  // 2023
+  "2023-01-02", // New Year's Day (observed)
+  "2023-01-16", // MLK Day
+  "2023-02-20", // Presidents' Day
+  "2023-04-07", // Good Friday
+  "2023-05-29", // Memorial Day
+  "2023-06-19", // Juneteenth
+  "2023-07-04", // Independence Day
+  "2023-09-04", // Labor Day
+  "2023-11-23", // Thanksgiving
+  "2023-12-25", // Christmas
   // 2024
   "2024-01-01", // New Year's Day
   "2024-01-15", // MLK Day
