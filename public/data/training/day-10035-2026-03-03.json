@@ -1,0 +1,533 @@
+{
+  "trialId": 10035,
+  "date": "2026-03-03",
+  "dateDisplay": "Tuesday, March 3, 2026",
+  "generatedAt": "2026-04-07T17:06:46.153Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.94,
+      "nasdaqFuturesChange": -1.02,
+      "dowFuturesChange": -0.83,
+      "russellFuturesChange": -1.79,
+      "vixFuturesChange": -10.27,
+      "vix": 21.15,
+      "vixChange": -10.27,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 23.54,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.06,
+      "tenYearYieldChange": 0.2,
+      "twoYearYield": 3.62,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.7,
+      "threeMonthYield": 3.6,
+      "twoTenSpread": 0.44,
+      "threeMoTenYrSpread": 0.46,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.77,
+      "dollarIndexChange": -0.28,
+      "eurUsd": 1.16,
+      "eurUsdChange": -0.73,
+      "usdJpy": 157.77,
+      "usdJpyChange": 0.33,
+      "usdCny": 6.9,
+      "usdCnyChange": 0.26,
+      "oilWTI": 74.66,
+      "oilChange": 0.13,
+      "brentOil": 81.4,
+      "brentOilChange": 0,
+      "natGasChange": -4.49,
+      "goldPrice": 5120.2,
+      "goldChange": 0.25,
+      "silverChange": -0.35,
+      "copperChange": 1.41,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -3.61,
+      "daxChange": 1.74,
+      "ftseChange": 0.8,
+      "shanghaiChange": -0.98,
+      "hangSengChange": -2.01,
+      "kospiChange": -12.06,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 99.39999999999999,
+      "spreadChange": 0.2,
+      "igSpread": -21.74,
+      "igSpreadChange": 0.05,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.97,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -1.46,
+      "xlfChange": -0.18,
+      "xleChange": -0.91,
+      "xlvChange": -1.13,
+      "xlpChange": -1.09,
+      "xluChange": -0.63,
+      "xlreChange": -0.5,
+      "xliChange": -1.93,
+      "xlbChange": -2.46,
+      "xlcChange": 0.08,
+      "xlyChange": -0.92,
+      "smhChange": -3.77,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 6.47,
+      "ethereumChange": 7.25,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 15,
+      "daysToNextCPI": 8,
+      "daysToNextNFP": 3,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": -1.07,
+      "sp20DayReturn": -2.29,
+      "nasdaqVsRussell5d": 0.14,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-off",
+      "confidence": 60,
+      "directionalBias": "-30",
+      "volatilityRegime": "normal",
+      "stressIndex": 20,
+      "riskAppetiteIndex": 29,
+      "sectorTilts": {
+        "utilities": "overweight",
+        "healthcare": "overweight",
+        "staples": "overweight",
+        "tech": "underweight",
+        "semiconductors": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "bearish",
+      "sections": [
+        {
+          "title": "Macroeconomic",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Geopolitical",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "SectorImpact",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "MarketContext",
+          "content": "[object Object]",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "NOC",
+      "direction": "long",
+      "entryPrice": 768.02,
+      "targetPrice": 801.28,
+      "stopLoss": 747.86,
+      "thesis": "Strongest defense momentum (+6% Mar 2 to ATH). Autonomous surveillance systems are mission-critical for Iran operations. Futures down sharply pre-market Mar 3 but defense names decoupled from broader market on Mar 2 and should continue outperforming. Buy the opening dip if broad market gaps down.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 68,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "UAL",
+      "direction": "short",
+      "entryPrice": 103.21,
+      "targetPrice": 96.9,
+      "stopLoss": 107.22,
+      "thesis": "Most internationally exposed US carrier. Already -6% on Mar 2 with futures deeply red for Mar 3. Jet fuel costs surging (kerosene doubled). Strait of Hormuz closure is catastrophic for international routes and fuel pricing. Momentum breakdown with no floor in sight. Short into any bounce.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 72,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XOM",
+      "direction": "long",
+      "entryPrice": 154.22,
+      "targetPrice": 161.32,
+      "stopLoss": 150.16,
+      "thesis": "Direct beneficiary of Hormuz closure and $80+ crude. Record production at 5M boe/day means every dollar of oil price increase flows to bottom line. Energy is THE safe-haven trade of this conflict. Near ATH with institutional rotation accelerating. XLE +1.7% even on a deep red day.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 65,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AAL",
+      "direction": "short",
+      "entryPrice": 12.52,
+      "targetPrice": 11.77,
+      "stopLoss": 13.04,
+      "thesis": "Weakest balance sheet among major US carriers. Highest leverage to fuel cost increases. -5% Mar 2 with acceleration expected as Hormuz disruption persists. Highest beta to downside in airline space. Futures deeply red Mar 3 pre-market compounds selling pressure.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 58,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "PLTR",
+      "direction": "long",
+      "entryPrice": 145.17,
+      "targetPrice": 154.31,
+      "stopLoss": 138.06,
+      "thesis": "Defense-AI convergence play. 13% gain over 4 sessions on Iran escalation. Rosenblatt PT raised to $200 on Mar 3. Software guiding munitions valued as highly as the munitions. Unlike broad tech which is selling off, defense-tech is in its own momentum channel. Higher vol name - wider stop.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 55,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LMT",
+      "direction": "long",
+      "entryPrice": 678,
+      "targetPrice": 700,
+      "stopLoss": 662,
+      "thesis": "ATH at $676.70 on Mar 2. LRASM and PAC-3 production ramp is the centerpiece of Iran munition replenishment. $194B backlog provides floor. Goldman added to conviction list. Lower vol than PLTR with clearer institutional support.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 62,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "NOC",
+      "openPrice": 768.85,
+      "highPrice": 774,
+      "lowPrice": 734.36,
+      "closePrice": 740.01,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.65,
+      "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $768.85, High $774, Low $734.36, Close $740.01."
+    },
+    {
+      "symbol": "UAL",
+      "openPrice": 99.33,
+      "highPrice": 105.72,
+      "lowPrice": 92.37,
+      "closePrice": 95.43,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 7.54,
+      "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $99.33, High $105.72, Low $92.37, Close $95.43."
+    },
+    {
+      "symbol": "XOM",
+      "openPrice": 155.43,
+      "highPrice": 156.05,
+      "lowPrice": 147.86,
+      "closePrice": 150.76,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -2.24,
+      "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $155.43, High $156.05, Low $147.86, Close $150.76."
+    },
+    {
+      "symbol": "AAL",
+      "openPrice": 12.06,
+      "highPrice": 12.93,
+      "lowPrice": 11.53,
+      "closePrice": 11.79,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 5.83,
+      "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $12.06, High $12.93, Low $11.53, Close $11.79."
+    },
+    {
+      "symbol": "PLTR",
+      "openPrice": 142.1,
+      "highPrice": 156.38,
+      "lowPrice": 138.2,
+      "closePrice": 152.67,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 5.17,
+      "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $142.1, High $156.38, Low $138.2, Close $152.67."
+    },
+    {
+      "symbol": "LMT",
+      "openPrice": 682,
+      "highPrice": 686.47,
+      "lowPrice": 647.23,
+      "closePrice": 655,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.39,
+      "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $682, High $686.47, Low $647.23, Close $655."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 50,
+    "targetHitRate": 50,
+    "stopHitRate": 50,
+    "avgReturnPercent": 1.54,
+    "profitFactor": 2,
+    "winRate": 50,
+    "totalScore": 62.6,
+    "benchmarkReturn": 0.78,
+    "alpha": 0.76
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 85,
+      "avgScoreLosers": 86,
+      "predictivePower": 49
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 68.3,
+      "avgScoreLosers": 72.3,
+      "predictivePower": 46
+    },
+    "riskReward": {
+      "avgScoreWinners": 60,
+      "avgScoreLosers": 66.3,
+      "predictivePower": 43.7
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 77.7,
+      "avgScoreLosers": 74.7,
+      "predictivePower": 53
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 79.7,
+      "avgScoreLosers": 80.7,
+      "predictivePower": 49
+    },
+    "informationEdge": {
+      "avgScoreWinners": 67.3,
+      "avgScoreLosers": 71.7,
+      "predictivePower": 45.7
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 61.7,
+      "avgScoreLosers": 65,
+      "predictivePower": 46.7
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

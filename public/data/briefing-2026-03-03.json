@@ -1,0 +1,394 @@
+{
+  "id": "briefing-2026-03-03-1775581606175",
+  "date": "2026-03-03",
+  "generatedAt": "2026-04-07T17:06:46.153Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "bearish",
+  "sections": [
+    {
+      "title": "Macroeconomic",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorImpact",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "MarketContext",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG NOC @ $768.02",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $801.28",
+          "implication": "+4.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $747.86",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT UAL @ $103.21",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $96.9",
+          "implication": "+-6.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $107.22",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $154.22",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $161.32",
+          "implication": "+4.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $150.16",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT AAL @ $12.52",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $11.77",
+          "implication": "+-6.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $13.04",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG PLTR @ $145.17",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $154.31",
+          "implication": "+6.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $138.06",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG LMT @ $678",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $700",
+          "implication": "+3.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $662",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "risk-off",
+  "regimeConfidence": 60,
+  "recommendations": [
+    {
+      "id": 1,
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
+      "direction": "long",
+      "thesis": "Strongest defense momentum (+6% Mar 2 to ATH). Autonomous surveillance systems are mission-critical for Iran operations. Futures down sharply pre-market Mar 3 but defense names decoupled from broader market on Mar 2 and should continue outperforming. Buy the opening dip if broad market gaps down.",
+      "entryPrice": 768.02,
+      "targetPrice": 801.28,
+      "stopPrice": 747.86,
+      "riskRewardRatio": 1.65,
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 74,
+        "catalystClarity": 88,
+        "technicalSetup": 72,
+        "riskReward": 65,
+        "volumeLiquidity": 70,
+        "marketAlignment": 80,
+        "informationEdge": 75,
+        "timingUrgency": 68
+      }
+    },
+    {
+      "id": 2,
+      "ticker": "UAL",
+      "name": "United Airlines",
+      "direction": "short",
+      "thesis": "Most internationally exposed US carrier. Already -6% on Mar 2 with futures deeply red for Mar 3. Jet fuel costs surging (kerosene doubled). Strait of Hormuz closure is catastrophic for international routes and fuel pricing. Momentum breakdown with no floor in sight. Short into any bounce.",
+      "entryPrice": 103.21,
+      "targetPrice": 96.9,
+      "stopPrice": 107.22,
+      "riskRewardRatio": 1.57,
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 77,
+        "catalystClarity": 90,
+        "technicalSetup": 75,
+        "riskReward": 65,
+        "volumeLiquidity": 80,
+        "marketAlignment": 85,
+        "informationEdge": 72,
+        "timingUrgency": 72
+      }
+    },
+    {
+      "id": 3,
+      "ticker": "XOM",
+      "name": "Exxon Mobil",
+      "direction": "long",
+      "thesis": "Direct beneficiary of Hormuz closure and $80+ crude. Record production at 5M boe/day means every dollar of oil price increase flows to bottom line. Energy is THE safe-haven trade of this conflict. Near ATH with institutional rotation accelerating. XLE +1.7% even on a deep red day.",
+      "entryPrice": 154.22,
+      "targetPrice": 161.32,
+      "stopPrice": 150.16,
+      "riskRewardRatio": 1.75,
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 76,
+        "catalystClarity": 85,
+        "technicalSetup": 75,
+        "riskReward": 72,
+        "volumeLiquidity": 82,
+        "marketAlignment": 82,
+        "informationEdge": 70,
+        "timingUrgency": 65
+      }
+    },
+    {
+      "id": 4,
+      "ticker": "AAL",
+      "name": "American Airlines",
+      "direction": "short",
+      "thesis": "Weakest balance sheet among major US carriers. Highest leverage to fuel cost increases. -5% Mar 2 with acceleration expected as Hormuz disruption persists. Highest beta to downside in airline space. Futures deeply red Mar 3 pre-market compounds selling pressure.",
+      "entryPrice": 12.52,
+      "targetPrice": 11.77,
+      "stopPrice": 13.04,
+      "riskRewardRatio": 1.43,
+      "timeframe": "intraday",
+      "positionSize": "reduced",
+      "conviction": {
+        "overall": 70,
+        "catalystClarity": 85,
+        "technicalSetup": 68,
+        "riskReward": 60,
+        "volumeLiquidity": 78,
+        "marketAlignment": 82,
+        "informationEdge": 62,
+        "timingUrgency": 58
+      }
+    },
+    {
+      "id": 5,
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "direction": "long",
+      "thesis": "Defense-AI convergence play. 13% gain over 4 sessions on Iran escalation. Rosenblatt PT raised to $200 on Mar 3. Software guiding munitions valued as highly as the munitions. Unlike broad tech which is selling off, defense-tech is in its own momentum channel. Higher vol name - wider stop.",
+      "entryPrice": 145.17,
+      "targetPrice": 154.31,
+      "stopPrice": 138.06,
+      "riskRewardRatio": 1.29,
+      "timeframe": "intraday",
+      "positionSize": "reduced",
+      "conviction": {
+        "overall": 66,
+        "catalystClarity": 80,
+        "technicalSetup": 62,
+        "riskReward": 55,
+        "volumeLiquidity": 75,
+        "marketAlignment": 72,
+        "informationEdge": 68,
+        "timingUrgency": 55
+      }
+    },
+    {
+      "id": 6,
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "direction": "long",
+      "thesis": "ATH at $676.70 on Mar 2. LRASM and PAC-3 production ramp is the centerpiece of Iran munition replenishment. $194B backlog provides floor. Goldman added to conviction list. Lower vol than PLTR with clearer institutional support.",
+      "entryPrice": 678,
+      "targetPrice": 700,
+      "stopPrice": 662,
+      "riskRewardRatio": 1.38,
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 72,
+        "catalystClarity": 85,
+        "technicalSetup": 70,
+        "riskReward": 62,
+        "volumeLiquidity": 72,
+        "marketAlignment": 80,
+        "informationEdge": 70,
+        "timingUrgency": 62
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10035,
+    "outcomes": [
+      {
+        "symbol": "NOC",
+        "openPrice": 768.85,
+        "highPrice": 774,
+        "lowPrice": 734.36,
+        "closePrice": 740.01,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.65,
+        "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $768.85, High $774, Low $734.36, Close $740.01."
+      },
+      {
+        "symbol": "UAL",
+        "openPrice": 99.33,
+        "highPrice": 105.72,
+        "lowPrice": 92.37,
+        "closePrice": 95.43,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 7.54,
+        "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $99.33, High $105.72, Low $92.37, Close $95.43."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 155.43,
+        "highPrice": 156.05,
+        "lowPrice": 147.86,
+        "closePrice": 150.76,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.24,
+        "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $155.43, High $156.05, Low $147.86, Close $150.76."
+      },
+      {
+        "symbol": "AAL",
+        "openPrice": 12.06,
+        "highPrice": 12.93,
+        "lowPrice": 11.53,
+        "closePrice": 11.79,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.83,
+        "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $12.06, High $12.93, Low $11.53, Close $11.79."
+      },
+      {
+        "symbol": "PLTR",
+        "openPrice": 142.1,
+        "highPrice": 156.38,
+        "lowPrice": 138.2,
+        "closePrice": 152.67,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.17,
+        "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $142.1, High $156.38, Low $138.2, Close $152.67."
+      },
+      {
+        "symbol": "LMT",
+        "openPrice": 682,
+        "highPrice": 686.47,
+        "lowPrice": 647.23,
+        "closePrice": 655,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.39,
+        "notes": "3-day window (2026-03-03, 2026-03-04, 2026-03-05). Open $682, High $686.47, Low $647.23, Close $655."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 50,
+      "targetHitRate": 50,
+      "stopHitRate": 50,
+      "avgReturnPercent": 1.54,
+      "profitFactor": 2,
+      "winRate": 50,
+      "totalScore": 62.6,
+      "benchmarkReturn": 0.78,
+      "alpha": 0.76
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 85,
+        "avgScoreLosers": 86,
+        "predictivePower": 49
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 68.3,
+        "avgScoreLosers": 72.3,
+        "predictivePower": 46
+      },
+      "riskReward": {
+        "avgScoreWinners": 60,
+        "avgScoreLosers": 66.3,
+        "predictivePower": 43.7
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 77.7,
+        "avgScoreLosers": 74.7,
+        "predictivePower": 53
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 79.7,
+        "avgScoreLosers": 80.7,
+        "predictivePower": 49
+      },
+      "informationEdge": {
+        "avgScoreWinners": 67.3,
+        "avgScoreLosers": 71.7,
+        "predictivePower": 45.7
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 61.7,
+        "avgScoreLosers": 65,
+        "predictivePower": 46.7
+      }
+    },
+    "benchmarkReturn": 0.78,
+    "alpha": 0.76,
+    "fullDepth": true
+  }
+}
