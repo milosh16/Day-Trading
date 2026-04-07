@@ -1,0 +1,359 @@
+{
+  "id": "briefing-2025-10-14-1775586176680",
+  "date": "2025-10-14",
+  "generatedAt": "2026-04-07T18:22:56.663Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sectors",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Companies",
+      "content": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG MP @ $95.06",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $102.37",
+          "implication": "+7.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $90.67",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AVGO @ $356.7",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $371.44",
+          "implication": "+4.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $346.38",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GLD @ $378.09",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $386.35",
+          "implication": "+2.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $370.86",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT ASML @ $984.66",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $951.36",
+          "implication": "+-3.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $1010.82",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $216.42",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $225.78",
+          "implication": "+4.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $209.99",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XLE @ $43.19",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $41.85",
+          "implication": "+-3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $44.26",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "event-driven",
+  "regimeConfidence": 70,
+  "recommendations": [
+    {
+      "ticker": "MP",
+      "direction": "long",
+      "conviction": 82,
+      "rationale": "The only scaled US rare earth mine and processor. China's Oct 9 export controls requiring licenses for any product with >0.1% Chinese rare earths are an existential threat to global supply chains. Trump's 100% tariff retaliation further validates US reshoring narrative. Stock surged 15-36% since Friday but the structural tailwind is multi-year. Momentum traders and institutional positioning still building. Day trade the continuation pattern on elevated volume.",
+      "entryPrice": 95.06,
+      "targetPrice": 102.37,
+      "stopPrice": 90.67,
+      "riskReward": 1.67,
+      "timeframe": "intraday",
+      "catalystClarity": 92,
+      "technicalSetup": 70,
+      "riskReward_score": 72,
+      "volumeLiquidity": 75,
+      "marketAlignment": 80,
+      "informationEdge": 85,
+      "timingUrgency": 78
+    },
+    {
+      "ticker": "AVGO",
+      "direction": "long",
+      "conviction": 78,
+      "rationale": "OpenAI custom AI chip deal announced Oct 13 is a massive multi-year catalyst. Stock gapped up 9% Monday. Oct 14 should see continued momentum as analysts digest the deal's multi-billion dollar revenue implications. Strong institutional buying expected on Tuesday as bond market reopens and full capital markets are active. Custom silicon TAM expanding rapidly.",
+      "entryPrice": 356.7,
+      "targetPrice": 371.44,
+      "stopPrice": 346.38,
+      "riskReward": 1.43,
+      "timeframe": "intraday",
+      "catalystClarity": 90,
+      "technicalSetup": 72,
+      "riskReward_score": 68,
+      "volumeLiquidity": 85,
+      "marketAlignment": 70,
+      "informationEdge": 80,
+      "timingUrgency": 82
+    },
+    {
+      "ticker": "GLD",
+      "direction": "long",
+      "conviction": 76,
+      "rationale": "Gold hitting new ATHs on safe-haven flows from US-China rare earth/tariff escalation. Government shutdown means no economic data anchor — uncertainty premium growing. Bond market reopening Oct 14 after Columbus Day may see flight-to-quality flows. Gold broke above R1 pivot Oct 13 signaling strong uptrend. Trade war escalation with soybean threats adding fuel.",
+      "entryPrice": 378.09,
+      "targetPrice": 386.35,
+      "stopPrice": 370.86,
+      "riskReward": 1.14,
+      "timeframe": "intraday",
+      "catalystClarity": 80,
+      "technicalSetup": 78,
+      "riskReward_score": 60,
+      "volumeLiquidity": 90,
+      "marketAlignment": 85,
+      "informationEdge": 65,
+      "timingUrgency": 70
+    },
+    {
+      "ticker": "ASML",
+      "direction": "short",
+      "conviction": 71,
+      "rationale": "Rare earth export controls directly threaten ASML's supply chain — components require Chinese-origin rare earth magnets. Q3 earnings Oct 15 creates binary risk that may cause pre-earnings de-risking on Oct 14. Stock retreated to session lows Oct 13. Semiconductor equipment names most exposed to rare earth disruption. ASML shipments could face weeks-long delays per Bloomberg reporting.",
+      "entryPrice": 984.66,
+      "targetPrice": 951.36,
+      "stopPrice": 1010.82,
+      "riskReward": 1.27,
+      "timeframe": "intraday",
+      "catalystClarity": 75,
+      "technicalSetup": 68,
+      "riskReward_score": 62,
+      "volumeLiquidity": 80,
+      "marketAlignment": 72,
+      "informationEdge": 70,
+      "timingUrgency": 75
+    },
+    {
+      "ticker": "AMD",
+      "direction": "long",
+      "conviction": 74,
+      "rationale": "OpenAI 6GW deal from Oct 6 still driving momentum. AMD was October's best S&P 500 performer (+60% for month). Broadcom deal on Oct 13 validates multi-vendor AI chip strategy — AMD is key beneficiary alongside AVGO. OpenAI equity stake (up to 10% via warrants) creates long-term alignment. Day trade the dip if market sells off on China noise — AMD is the buy-the-dip candidate.",
+      "entryPrice": 216.42,
+      "targetPrice": 225.78,
+      "stopPrice": 209.99,
+      "riskReward": 1.45,
+      "timeframe": "intraday",
+      "catalystClarity": 85,
+      "technicalSetup": 65,
+      "riskReward_score": 66,
+      "volumeLiquidity": 88,
+      "marketAlignment": 72,
+      "informationEdge": 75,
+      "timingUrgency": 68
+    },
+    {
+      "ticker": "XLE",
+      "direction": "short",
+      "conviction": 68,
+      "rationale": "Energy sector bearing the brunt of trade war growth fears. Oil prices declining as global demand outlook deteriorates with US-China 100% tariff escalation. Sector already down ~20% since tariff announcements. Oct 14 soybean comments from Trump signal further agricultural/commodity trade disruption. Use XLE ETF for liquidity on sector-wide short.",
+      "entryPrice": 43.19,
+      "targetPrice": 41.85,
+      "stopPrice": 44.26,
+      "riskReward": 1.25,
+      "timeframe": "intraday",
+      "catalystClarity": 70,
+      "technicalSetup": 65,
+      "riskReward_score": 60,
+      "volumeLiquidity": 85,
+      "marketAlignment": 75,
+      "informationEdge": 60,
+      "timingUrgency": 65
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10049,
+    "outcomes": [
+      {
+        "symbol": "MP",
+        "openPrice": 97.79,
+        "highPrice": 100.25,
+        "lowPrice": 83.33,
+        "closePrice": 83.84,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -11.8,
+        "notes": "3-day window (2025-10-14, 2025-10-15, 2025-10-16). Open $97.79, High $100.25, Low $83.33, Close $83.84."
+      },
+      {
+        "symbol": "AVGO",
+        "openPrice": 350.13,
+        "highPrice": 363.24,
+        "lowPrice": 339.65,
+        "closePrice": 354.15,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.71,
+        "notes": "3-day window (2025-10-14, 2025-10-15, 2025-10-16). Open $350.13, High $363.24, Low $339.65, Close $354.15."
+      },
+      {
+        "symbol": "GLD",
+        "openPrice": 378.21,
+        "highPrice": 396.87,
+        "lowPrice": 377.9,
+        "closePrice": 396.45,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.86,
+        "notes": "3-day window (2025-10-14, 2025-10-15, 2025-10-16). Open $378.21, High $396.87, Low $377.9, Close $396.45."
+      },
+      {
+        "symbol": "ASML",
+        "openPrice": 967.46,
+        "highPrice": 1049.38,
+        "lowPrice": 966,
+        "closePrice": 1019.59,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.55,
+        "notes": "3-day window (2025-10-14, 2025-10-15, 2025-10-16). Open $967.46, High $1049.38, Low $966, Close $1019.59."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 219.2,
+        "highPrice": 241.2,
+        "lowPrice": 215.9,
+        "closePrice": 234.56,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 8.38,
+        "notes": "3-day window (2025-10-14, 2025-10-15, 2025-10-16). Open $219.2, High $241.2, Low $215.9, Close $234.56."
+      },
+      {
+        "symbol": "XLE",
+        "openPrice": 42.58,
+        "highPrice": 43.71,
+        "lowPrice": 42.35,
+        "closePrice": 42.64,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.27,
+        "notes": "3-day window (2025-10-14, 2025-10-15, 2025-10-16). Open $42.58, High $43.71, Low $42.35, Close $42.64."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 50,
+      "targetHitRate": 33.3,
+      "stopHitRate": 50,
+      "avgReturnPercent": -0.26,
+      "profitFactor": 0.9,
+      "winRate": 50,
+      "totalScore": 46.5,
+      "benchmarkReturn": 0.77,
+      "alpha": -1.03
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.77,
+    "alpha": -1.03,
+    "fullDepth": true
+  }
+}
