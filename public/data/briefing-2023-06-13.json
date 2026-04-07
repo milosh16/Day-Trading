@@ -1,0 +1,268 @@
+{
+  "id": "briefing-2023-06-13-1775590438016",
+  "date": "2023-06-13",
+  "generatedAt": "2026-04-07T19:33:57.989Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG NVDA @ $39.48",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $41.19",
+          "implication": "+4.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $38.48",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG META @ $271.05",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $280.8",
+          "implication": "+3.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $265.2",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG TSLA @ $250",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $262",
+          "implication": "+4.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $243.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $129.19",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $135.06",
+          "implication": "+4.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $125.76",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMZN @ $126.57",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $131.04",
+          "implication": "+3.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $123.59",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 49,
+  "recommendations": [
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "thesis": "AI juggernaut continuing post-earnings momentum. Soft CPI would send risk assets higher. NVDA the consensus AI pick but momentum is real. Pre-market likely gap up on CPI beat. Target is continuation toward $420 resistance area.",
+      "entryPrice": 39.48,
+      "targetPrice": 41.19,
+      "stopPrice": 38.48,
+      "riskRewardRatio": "1.7:1",
+      "catalyst": "CPI release 8:30am + AI momentum",
+      "sector": "Semiconductors",
+      "timeframe": "intraday"
+    },
+    {
+      "ticker": "META",
+      "direction": "long",
+      "thesis": "META in sustained rally from $88 lows to ~$280. Efficiency year narrative intact. AI integration boosting ad targeting. Soft CPI extends growth rotation. Less extended than NVDA on RSI.",
+      "entryPrice": 271.05,
+      "targetPrice": 280.8,
+      "stopPrice": 265.2,
+      "riskRewardRatio": "1.7:1",
+      "catalyst": "CPI release + growth rotation + AI narrative",
+      "sector": "Technology",
+      "timeframe": "intraday"
+    },
+    {
+      "ticker": "TSLA",
+      "direction": "long",
+      "thesis": "TSLA on massive winning streak - 13 consecutive up days as of June 12. Momentum extreme but CPI tailwind could extend it. Short squeeze dynamics still in play with high short interest. Risky but regime favors momentum.",
+      "entryPrice": 250,
+      "targetPrice": 262,
+      "stopPrice": 243.5,
+      "riskRewardRatio": "1.8:1",
+      "catalyst": "CPI + momentum continuation + short squeeze",
+      "sector": "Consumer Discretionary",
+      "timeframe": "intraday"
+    },
+    {
+      "ticker": "AMD",
+      "direction": "long",
+      "thesis": "AMD riding AI wave as the #2 GPU play behind NVDA. MI300 expectations building. Trading around $132, breaking out of multi-week range. Soft CPI supports semis broadly.",
+      "entryPrice": 129.19,
+      "targetPrice": 135.06,
+      "stopPrice": 125.76,
+      "riskRewardRatio": "1.7:1",
+      "catalyst": "CPI + AI/semi momentum + MI300 narrative",
+      "sector": "Semiconductors",
+      "timeframe": "intraday"
+    },
+    {
+      "ticker": "AMZN",
+      "direction": "long",
+      "thesis": "AMZN benefiting from both AI (AWS) and consumer discretionary (soft landing). Trading ~$127, approaching breakout above $130 resistance. CPI beat could trigger the breakout. AWS AI services ramping.",
+      "entryPrice": 126.57,
+      "targetPrice": 131.04,
+      "stopPrice": 123.59,
+      "riskRewardRatio": "1.5:1",
+      "catalyst": "CPI + dual AI/consumer narrative",
+      "sector": "Consumer Discretionary / Technology",
+      "timeframe": "intraday"
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10225,
+    "outcomes": [
+      {
+        "symbol": "NVDA",
+        "openPrice": 40.19,
+        "highPrice": 43.29,
+        "lowPrice": 39.74,
+        "closePrice": 42.65,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 8.03,
+        "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $40.19, High $43.29, Low $39.74, Close $42.65."
+      },
+      {
+        "symbol": "META",
+        "openPrice": 274.88,
+        "highPrice": 283.99,
+        "lowPrice": 268.32,
+        "closePrice": 281.83,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.98,
+        "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $274.88, High $283.99, Low $268.32, Close $281.83."
+      },
+      {
+        "symbol": "TSLA",
+        "openPrice": 253.51,
+        "highPrice": 261.57,
+        "lowPrice": 247.29,
+        "closePrice": 255.9,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.36,
+        "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $253.51, High $261.57, Low $247.29, Close $255.9."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 132.32,
+        "highPrice": 132.83,
+        "lowPrice": 122.26,
+        "closePrice": 124.24,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.83,
+        "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $132.32, High $132.83, Low $122.26, Close $124.24."
+      },
+      {
+        "symbol": "AMZN",
+        "openPrice": 128.12,
+        "highPrice": 128.41,
+        "lowPrice": 124.12,
+        "closePrice": 127.11,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.43,
+        "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $128.12, High $128.41, Low $124.12, Close $127.11."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 80,
+      "targetHitRate": 40,
+      "stopHitRate": 20,
+      "avgReturnPercent": 2.19,
+      "profitFactor": 3.86,
+      "winRate": 80,
+      "totalScore": 87.1,
+      "benchmarkReturn": 0.31,
+      "alpha": 1.88
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.31,
+    "alpha": 1.88,
+    "fullDepth": true
+  }
+}

@@ -1,0 +1,455 @@
+{
+  "trialId": 10225,
+  "date": "2023-06-13",
+  "dateDisplay": "Tuesday, June 13, 2023",
+  "generatedAt": "2026-04-07T19:33:57.989Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.69,
+      "nasdaqFuturesChange": 0.83,
+      "dowFuturesChange": 0.43,
+      "russellFuturesChange": 1.23,
+      "vixFuturesChange": -5,
+      "vix": 13.88,
+      "vixChange": -5,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 17.23,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.84,
+      "tenYearYieldChange": 1.97,
+      "twoYearYield": 4.34,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.94,
+      "threeMonthYield": 5.1,
+      "twoTenSpread": -0.5,
+      "threeMoTenYrSpread": -1.26,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 103.01,
+      "dollarIndexChange": -0.32,
+      "eurUsd": 1.08,
+      "eurUsdChange": 0.24,
+      "usdJpy": 140.18,
+      "usdJpyChange": 0.51,
+      "usdCny": 7.17,
+      "usdCnyChange": 0.31,
+      "oilWTI": 68.27,
+      "oilChange": -1.66,
+      "brentOil": 73.2,
+      "brentOilChange": -1.47,
+      "natGasChange": 0.09,
+      "goldPrice": 1955.3,
+      "goldChange": 0.55,
+      "silverChange": 1.21,
+      "copperChange": 0.98,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 1.47,
+      "daxChange": 0.49,
+      "ftseChange": 0.1,
+      "shanghaiChange": -0.14,
+      "hangSengChange": -0.58,
+      "kospiChange": -0.72,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 126.35,
+      "spreadChange": -0.12,
+      "igSpread": -13.24,
+      "igSpreadChange": 0.45,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.03,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.61,
+      "xlfChange": 0.6,
+      "xleChange": 0.47,
+      "xlvChange": 0.5,
+      "xlpChange": 0.41,
+      "xluChange": -0.02,
+      "xlreChange": 0.73,
+      "xliChange": 1.16,
+      "xlbChange": 2.32,
+      "xlcChange": 0.33,
+      "xlyChange": 1.04,
+      "smhChange": 1.38,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -3.06,
+      "ethereumChange": -5.09,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": true,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 232,
+      "daysToNextCPI": 212,
+      "daysToNextNFP": 206,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 4,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.99,
+      "sp20DayReturn": 5.63,
+      "nasdaqVsRussell5d": 0.03,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 49,
+      "directionalBias": "19",
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 62,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "entryPrice": 39.48,
+      "targetPrice": 41.19,
+      "stopLoss": 38.48,
+      "thesis": "AI juggernaut continuing post-earnings momentum. Soft CPI would send risk assets higher. NVDA the consensus AI pick but momentum is real. Pre-market likely gap up on CPI beat. Target is continuation toward $420 resistance area.",
+      "catalyst": "CPI release 8:30am + AI momentum",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "META",
+      "direction": "long",
+      "entryPrice": 271.05,
+      "targetPrice": 280.8,
+      "stopLoss": 265.2,
+      "thesis": "META in sustained rally from $88 lows to ~$280. Efficiency year narrative intact. AI integration boosting ad targeting. Soft CPI extends growth rotation. Less extended than NVDA on RSI.",
+      "catalyst": "CPI release + growth rotation + AI narrative",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "direction": "long",
+      "entryPrice": 250,
+      "targetPrice": 262,
+      "stopLoss": 243.5,
+      "thesis": "TSLA on massive winning streak - 13 consecutive up days as of June 12. Momentum extreme but CPI tailwind could extend it. Short squeeze dynamics still in play with high short interest. Risky but regime favors momentum.",
+      "catalyst": "CPI + momentum continuation + short squeeze",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AMD",
+      "direction": "long",
+      "entryPrice": 129.19,
+      "targetPrice": 135.06,
+      "stopLoss": 125.76,
+      "thesis": "AMD riding AI wave as the #2 GPU play behind NVDA. MI300 expectations building. Trading around $132, breaking out of multi-week range. Soft CPI supports semis broadly.",
+      "catalyst": "CPI + AI/semi momentum + MI300 narrative",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "direction": "long",
+      "entryPrice": 126.57,
+      "targetPrice": 131.04,
+      "stopLoss": 123.59,
+      "thesis": "AMZN benefiting from both AI (AWS) and consumer discretionary (soft landing). Trading ~$127, approaching breakout above $130 resistance. CPI beat could trigger the breakout. AWS AI services ramping.",
+      "catalyst": "CPI + dual AI/consumer narrative",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "NVDA",
+      "openPrice": 40.19,
+      "highPrice": 43.29,
+      "lowPrice": 39.74,
+      "closePrice": 42.65,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 8.03,
+      "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $40.19, High $43.29, Low $39.74, Close $42.65."
+    },
+    {
+      "symbol": "META",
+      "openPrice": 274.88,
+      "highPrice": 283.99,
+      "lowPrice": 268.32,
+      "closePrice": 281.83,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 3.98,
+      "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $274.88, High $283.99, Low $268.32, Close $281.83."
+    },
+    {
+      "symbol": "TSLA",
+      "openPrice": 253.51,
+      "highPrice": 261.57,
+      "lowPrice": 247.29,
+      "closePrice": 255.9,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.36,
+      "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $253.51, High $261.57, Low $247.29, Close $255.9."
+    },
+    {
+      "symbol": "AMD",
+      "openPrice": 132.32,
+      "highPrice": 132.83,
+      "lowPrice": 122.26,
+      "closePrice": 124.24,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.83,
+      "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $132.32, High $132.83, Low $122.26, Close $124.24."
+    },
+    {
+      "symbol": "AMZN",
+      "openPrice": 128.12,
+      "highPrice": 128.41,
+      "lowPrice": 124.12,
+      "closePrice": 127.11,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.43,
+      "notes": "3-day window (2023-06-13, 2023-06-14, 2023-06-15). Open $128.12, High $128.41, Low $124.12, Close $127.11."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 80,
+    "targetHitRate": 40,
+    "stopHitRate": 20,
+    "avgReturnPercent": 2.19,
+    "profitFactor": 3.86,
+    "winRate": 80,
+    "totalScore": 87.1,
+    "benchmarkReturn": 0.31,
+    "alpha": 1.88
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
