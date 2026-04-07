@@ -1,0 +1,348 @@
+{
+  "id": "briefing-2025-12-30-1775583486466",
+  "date": "2025-12-30",
+  "generatedAt": "2026-04-07T17:38:06.453Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "SHORT TSLA @ $459.64",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $444.39",
+          "implication": "+-3.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $472.71",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG META @ $658.69",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $668.61",
+          "implication": "+1.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $650.75",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG APLD @ $24.81",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $26.58",
+          "implication": "+7.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $23.48",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NIO @ $5.34",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $5.63",
+          "implication": "+5.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $5.14",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT NVDA @ $188.22",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $183.46",
+          "implication": "+-2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $191.62",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 43,
+  "recommendations": [
+    {
+      "ticker": "TSLA",
+      "company": "Tesla Inc",
+      "direction": "short",
+      "entryPrice": 459.64,
+      "targetPrice": 444.39,
+      "stopPrice": 472.71,
+      "timeframe": "intraday",
+      "rationale": "TSLA fell 3.3% on Dec 29 from ATH territory ($498.83 on Dec 22) on L&F supplier deal collapse. Momentum selling in thin holiday volume with AI trade cooling broadly. Fed minutes released Dec 30 showing division on rate cuts adds growth-stock headwind. Santa Claus rally stumbling. S&P down 4 consecutive sessions. Continuation short on further tech weakness.",
+      "riskRewardRatio": 1.67,
+      "maxRiskPercent": 2.84,
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 72,
+        "technicalSetup": 70,
+        "riskReward": 65,
+        "volumeLiquidity": 60,
+        "marketAlignment": 75,
+        "informationEdge": 62,
+        "timingUrgency": 65
+      },
+      "risks": [
+        "Holiday thin volume can cause sharp reversals",
+        "Year-end window dressing by funds may provide buying support",
+        "Elon Musk social media catalyst could spike stock at any time",
+        "Dead-cat bounce after 3.3% prior-day drop"
+      ]
+    },
+    {
+      "ticker": "META",
+      "company": "Meta Platforms",
+      "direction": "long",
+      "entryPrice": 658.69,
+      "targetPrice": 668.61,
+      "stopPrice": 650.75,
+      "timeframe": "intraday",
+      "rationale": "Meta announced $2B+ Manus AI acquisition — fastest startup to $100M ARR in 8 months. Strategic agentic AI play that solidifies Meta AI leadership against OpenAI. Stock gained only 1.1% on announcement despite S&P falling — relative strength signal. Communication Services showing relative strength vs broader tech weakness.",
+      "riskRewardRatio": 1.25,
+      "maxRiskPercent": 1.2,
+      "conviction": {
+        "overall": 62,
+        "catalystClarity": 78,
+        "technicalSetup": 55,
+        "riskReward": 50,
+        "volumeLiquidity": 70,
+        "marketAlignment": 55,
+        "informationEdge": 68,
+        "timingUrgency": 58
+      },
+      "risks": [
+        "Institutional flow data showed selling 10 days before announcement — sell-the-news pattern",
+        "Broad tech weakness could drag even positive-catalyst names",
+        "Fed minutes afternoon release could shift sentiment",
+        "$2B price tag may face scrutiny as overpay for AI startup"
+      ]
+    },
+    {
+      "ticker": "APLD",
+      "company": "Applied Digital",
+      "direction": "long",
+      "entryPrice": 24.81,
+      "targetPrice": 26.58,
+      "stopPrice": 23.48,
+      "timeframe": "intraday",
+      "rationale": "Applied Digital announced ChronoScale spinoff with Ekso Bionics — cloud GPU compute platform for AI workloads with $75.2M trailing revenue. APLD rose 3.16% on news. AI infrastructure theme remains strong despite broader tech cooling. Spinoff creates value unlocking narrative. Momentum continuation play on specific catalyst in thin holiday volume.",
+      "riskRewardRatio": 1.33,
+      "maxRiskPercent": 5,
+      "conviction": {
+        "overall": 58,
+        "catalystClarity": 72,
+        "technicalSetup": 50,
+        "riskReward": 52,
+        "volumeLiquidity": 45,
+        "marketAlignment": 55,
+        "informationEdge": 65,
+        "timingUrgency": 62
+      },
+      "risks": [
+        "Small-cap with lower liquidity — wider spreads in holiday trading",
+        "Deal is non-binding term sheet, not final — execution risk",
+        "Broad tech selling could overwhelm company-specific catalyst",
+        "EKSO's 103% move may pull back dragging APLD sentiment"
+      ]
+    },
+    {
+      "ticker": "NIO",
+      "company": "NIO Inc",
+      "direction": "long",
+      "entryPrice": 5.34,
+      "targetPrice": 5.63,
+      "stopPrice": 5.14,
+      "timeframe": "intraday",
+      "rationale": "NIO +3.9% premarket on upbeat Q4 sales outlook and China extending EV trade-in subsidies. Volume 32% above average signals strong participation. China EV policy tailwind is a clear catalyst. US-China trade truce still holding per Bloomberg Dec 29. Quick momentum trade early in session before potential profit-taking. MUST exit intraday — stock dropped 8.9% next session.",
+      "riskRewardRatio": 1.5,
+      "maxRiskPercent": 3.67,
+      "conviction": {
+        "overall": 55,
+        "catalystClarity": 68,
+        "technicalSetup": 52,
+        "riskReward": 55,
+        "volumeLiquidity": 65,
+        "marketAlignment": 42,
+        "informationEdge": 50,
+        "timingUrgency": 55
+      },
+      "risks": [
+        "CRITICAL: NIO dropped 8.9% the next day (Dec 31) on profit-taking — intraday exit essential",
+        "Fragile US-China trade truce could break on any headline",
+        "Sub-$6 stock with high volatility — gaps possible",
+        "Broad market weakness works against long positions"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "company": "Nvidia",
+      "direction": "short",
+      "entryPrice": 188.22,
+      "targetPrice": 183.46,
+      "stopPrice": 191.62,
+      "timeframe": "intraday",
+      "rationale": "AI trade cooling after Nvidia's +5% prior-week rally. Gave back >1% on Dec 29 as tech led losses. Fed minutes showing divided rate cut outlook adds headwind for high-multiple growth. S&P down 4 straight sessions. Santa Claus rally failing. Holiday thin volume amplifies directional moves. Short-term mean reversion from overbought prior-week surge.",
+      "riskRewardRatio": 1.4,
+      "maxRiskPercent": 1.81,
+      "conviction": {
+        "overall": 60,
+        "catalystClarity": 58,
+        "technicalSetup": 65,
+        "riskReward": 58,
+        "volumeLiquidity": 72,
+        "marketAlignment": 70,
+        "informationEdge": 48,
+        "timingUrgency": 55
+      },
+      "risks": [
+        "China H200 sales approval is a lingering positive catalyst",
+        "Nvidia long-term AI narrative attracts dip-buyers",
+        "Holiday volume makes timing difficult — could gap either way",
+        "Any positive AI headline could reverse sentiment instantly"
+      ]
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10042,
+    "outcomes": [
+      {
+        "symbol": "TSLA",
+        "openPrice": 461.09,
+        "highPrice": 463.12,
+        "lowPrice": 435.3,
+        "closePrice": 438.07,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.69,
+        "notes": "3-day window (2025-12-30, 2025-12-31, 2026-01-02). Open $461.09, High $463.12, Low $435.3, Close $438.07."
+      },
+      {
+        "symbol": "META",
+        "openPrice": 658.69,
+        "highPrice": 672.22,
+        "lowPrice": 643.5,
+        "closePrice": 650.41,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.26,
+        "notes": "3-day window (2025-12-30, 2025-12-31, 2026-01-02). Open $658.69, High $672.22, Low $643.5, Close $650.41."
+      },
+      {
+        "symbol": "APLD",
+        "openPrice": 25.88,
+        "highPrice": 28.44,
+        "lowPrice": 24.07,
+        "closePrice": 28.11,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 13.3,
+        "notes": "3-day window (2025-12-30, 2025-12-31, 2026-01-02). Open $25.88, High $28.44, Low $24.07, Close $28.11."
+      },
+      {
+        "symbol": "NIO",
+        "openPrice": 5.54,
+        "highPrice": 5.79,
+        "lowPrice": 4.95,
+        "closePrice": 5.14,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.75,
+        "notes": "3-day window (2025-12-30, 2025-12-31, 2026-01-02). Open $5.54, High $5.79, Low $4.95, Close $5.14."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 188.24,
+        "highPrice": 192.93,
+        "lowPrice": 186.49,
+        "closePrice": 188.85,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.33,
+        "notes": "3-day window (2025-12-30, 2025-12-31, 2026-01-02). Open $188.24, High $192.93, Low $186.49, Close $188.85."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 40,
+      "targetHitRate": 80,
+      "stopHitRate": 60,
+      "avgReturnPercent": 2.53,
+      "profitFactor": 3.37,
+      "winRate": 40,
+      "totalScore": 72.8,
+      "benchmarkReturn": -0.06,
+      "alpha": 2.59
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 72,
+        "avgScoreLosers": 68,
+        "predictivePower": 54
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 60,
+        "avgScoreLosers": 57.3,
+        "predictivePower": 52.7
+      },
+      "riskReward": {
+        "avgScoreWinners": 58.5,
+        "avgScoreLosers": 54.3,
+        "predictivePower": 54.2
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 52.5,
+        "avgScoreLosers": 69,
+        "predictivePower": 33.5
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 65,
+        "avgScoreLosers": 55.7,
+        "predictivePower": 59.3
+      },
+      "informationEdge": {
+        "avgScoreWinners": 63.5,
+        "avgScoreLosers": 55.3,
+        "predictivePower": 58.2
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 63.5,
+        "avgScoreLosers": 56,
+        "predictivePower": 57.5
+      }
+    },
+    "benchmarkReturn": -0.06,
+    "alpha": 2.59,
+    "fullDepth": true
+  }
+}
