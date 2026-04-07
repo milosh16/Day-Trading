@@ -1,0 +1,397 @@
+{
+  "id": "briefing-2025-06-23-1775584605942",
+  "date": "2025-06-23",
+  "generatedAt": "2026-04-07T17:56:45.924Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "bullish",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG NVDA @ $143.85",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $148.4",
+          "implication": "+3.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $141.43",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG DAL @ $47.2",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $49.15",
+          "implication": "+4.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $45.96",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $128.24",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $132.85",
+          "implication": "+3.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $125.31",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GOOGL @ $166.64",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $172.09",
+          "implication": "+3.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $163.46",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG LMT @ $470.56",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $486.65",
+          "implication": "+3.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $460.51",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XOM @ $114.7",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $110.45",
+          "implication": "+-3.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $117.36",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "risk-on",
+  "regimeConfidence": 62,
+  "recommendations": [
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA Corp",
+      "direction": "long",
+      "tradeType": "dayTrade",
+      "entryPrice": 143.85,
+      "targetPrice": 148.4,
+      "stopPrice": 141.43,
+      "positionSize": "20%",
+      "rationale": "Iran fear washout creates springboard for AI leader. NVDA was up 4.3% intraday as risk-on sentiment surged. Approaching Jan ATH of $149.43. Record close of $154.31 hit two days later on June 25 confirms the momentum. Oil collapse removes inflation fear, supporting growth/tech rotation. S&P within 1% of ATH pulls mega-caps higher.",
+      "catalyst": "Iran de-escalation reversal + AI momentum + approaching ATH breakout",
+      "riskFactors": [
+        "Geopolitical re-escalation if Iran retaliates more forcefully",
+        "Broad market reversal on new Middle East headlines",
+        "China export control headlines"
+      ],
+      "conviction": {
+        "overall": 88,
+        "catalystClarity": 90,
+        "technicalSetup": 92,
+        "riskReward": 82,
+        "volumeLiquidity": 95,
+        "marketAlignment": 90,
+        "informationEdge": 85,
+        "timingUrgency": 88
+      }
+    },
+    {
+      "ticker": "DAL",
+      "company": "Delta Air Lines",
+      "direction": "long",
+      "tradeType": "dayTrade",
+      "entryPrice": 47.2,
+      "targetPrice": 49.15,
+      "stopPrice": 45.96,
+      "positionSize": "15%",
+      "rationale": "WTI crude crashed 7.2% to $68.51 - biggest single-day drop since April. Jet fuel is airlines' largest variable cost after labor. Delta as premium carrier captures the margin expansion fastest. Summer peak travel season provides demand tailwind. Oil below $70 for first time since pre-Israel strikes. Airlines could save $1.5-2B in 2025 fuel costs at these levels.",
+      "catalyst": "Oil crash of 7.2% = direct margin expansion for fuel-intensive airlines",
+      "riskFactors": [
+        "Oil price reversal on new Iran escalation",
+        "Consumer spending slowdown",
+        "Flight disruptions from Middle East conflict"
+      ],
+      "conviction": {
+        "overall": 84,
+        "catalystClarity": 92,
+        "technicalSetup": 78,
+        "riskReward": 85,
+        "volumeLiquidity": 88,
+        "marketAlignment": 85,
+        "informationEdge": 82,
+        "timingUrgency": 80
+      }
+    },
+    {
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices",
+      "direction": "long",
+      "tradeType": "dayTrade",
+      "entryPrice": 128.24,
+      "targetPrice": 132.85,
+      "stopPrice": 125.31,
+      "positionSize": "15%",
+      "rationale": "Up 3.6% Monday riding NVDA's coattails. AI chip demand expanding beyond just NVDA. Risk-on regime + fear washout = semiconductor momentum. Flash PMI manufacturing at 52.0 supports chip demand narrative. Iran de-escalation removes macro headwind. Tech leading June at +9.8%.",
+      "catalyst": "Semiconductor momentum spillover from NVDA + Iran de-escalation risk-on",
+      "riskFactors": [
+        "NVDA reversal drags semis down",
+        "China export control escalation",
+        "Valuation compression if growth narrative falters"
+      ],
+      "conviction": {
+        "overall": 80,
+        "catalystClarity": 82,
+        "technicalSetup": 80,
+        "riskReward": 78,
+        "volumeLiquidity": 90,
+        "marketAlignment": 85,
+        "informationEdge": 72,
+        "timingUrgency": 75
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "company": "Alphabet Inc",
+      "direction": "long",
+      "tradeType": "dayTrade",
+      "entryPrice": 166.64,
+      "targetPrice": 172.09,
+      "stopPrice": 163.46,
+      "positionSize": "15%",
+      "rationale": "Up 2.3% on Monday. AI beneficiary with Gemini momentum. Communication Services is June's second-best sector at +7.3%. Risk-on rotation into mega-cap growth. Broad market rally lifts all mega-caps. S&P approaching ATH pulls top-weighted names higher.",
+      "catalyst": "Risk-on mega-cap rotation + AI narrative + Iran de-escalation",
+      "riskFactors": [
+        "Antitrust regulatory headlines",
+        "Ad market slowdown signals",
+        "Geopolitical re-escalation"
+      ],
+      "conviction": {
+        "overall": 79,
+        "catalystClarity": 80,
+        "technicalSetup": 78,
+        "riskReward": 76,
+        "volumeLiquidity": 95,
+        "marketAlignment": 85,
+        "informationEdge": 70,
+        "timingUrgency": 72
+      }
+    },
+    {
+      "ticker": "LMT",
+      "company": "Lockheed Martin",
+      "direction": "long",
+      "tradeType": "dayTrade",
+      "entryPrice": 470.56,
+      "targetPrice": 486.65,
+      "stopPrice": 460.51,
+      "positionSize": "15%",
+      "rationale": "US is actively conducting military operations against Iran as of June 21. Defense spending in active wartime surges. Analyst consensus target of $521 implies 11.2% upside. F-35 program, missile systems, and ISR platforms all in active use. LMT stock rose 38% in 2025 driven by Middle East operations. Even as oil fear fades, the defense spending reality persists.",
+      "catalyst": "Active US military operations against Iran + defense spending surge",
+      "riskFactors": [
+        "Rapid ceasefire removes urgency premium",
+        "Budget sequestration risk",
+        "Program delays"
+      ],
+      "conviction": {
+        "overall": 82,
+        "catalystClarity": 88,
+        "technicalSetup": 80,
+        "riskReward": 78,
+        "volumeLiquidity": 85,
+        "marketAlignment": 75,
+        "informationEdge": 85,
+        "timingUrgency": 82
+      }
+    },
+    {
+      "ticker": "XOM",
+      "company": "Exxon Mobil",
+      "direction": "short",
+      "tradeType": "dayTrade",
+      "entryPrice": 114.7,
+      "targetPrice": 110.45,
+      "stopPrice": 117.36,
+      "positionSize": "10%",
+      "rationale": "WTI crashed 7.2% to $68.51 on June 23 - below $70 for first time since June 12. Iran retaliation was symbolic and did NOT target oil infrastructure. OPEC+ expected to boost output. Market concluded oil supply disruption is unlikely. Energy was Friday's best sector but Monday's worst as the fear trade completely reversed. Oil initially spiked 6% Sunday night then reversed hard, trapping late longs.",
+      "catalyst": "Oil crash of 7.2% + Iran de-escalation removes crude fear premium",
+      "riskFactors": [
+        "Iran retaliates against oil infrastructure (Strait of Hormuz)",
+        "OPEC+ delays output increase",
+        "New geopolitical shock spikes oil"
+      ],
+      "conviction": {
+        "overall": 76,
+        "catalystClarity": 85,
+        "technicalSetup": 75,
+        "riskReward": 72,
+        "volumeLiquidity": 90,
+        "marketAlignment": 78,
+        "informationEdge": 75,
+        "timingUrgency": 70
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10045,
+    "outcomes": [
+      {
+        "symbol": "NVDA",
+        "openPrice": 142.5,
+        "highPrice": 154.45,
+        "lowPrice": 142.03,
+        "closePrice": 154.31,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 7.27,
+        "notes": "3-day window (2025-06-23, 2025-06-24, 2025-06-25). Open $142.5, High $154.45, Low $142.03, Close $154.31."
+      },
+      {
+        "symbol": "DAL",
+        "openPrice": 46.8,
+        "highPrice": 50.29,
+        "lowPrice": 45.28,
+        "closePrice": 48.31,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.35,
+        "notes": "3-day window (2025-06-23, 2025-06-24, 2025-06-25). Open $46.8, High $50.29, Low $45.28, Close $48.31."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 130.47,
+        "highPrice": 144.18,
+        "lowPrice": 126.82,
+        "closePrice": 143.4,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 11.82,
+        "notes": "3-day window (2025-06-23, 2025-06-24, 2025-06-25). Open $130.47, High $144.18, Low $126.82, Close $143.4."
+      },
+      {
+        "symbol": "GOOGL",
+        "openPrice": 166.27,
+        "highPrice": 172.36,
+        "lowPrice": 162,
+        "closePrice": 170.68,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.42,
+        "notes": "3-day window (2025-06-23, 2025-06-24, 2025-06-25). Open $166.27, High $172.36, Low $162, Close $170.68."
+      },
+      {
+        "symbol": "LMT",
+        "openPrice": 472.93,
+        "highPrice": 482.37,
+        "lowPrice": 456.5,
+        "closePrice": 458.39,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.59,
+        "notes": "3-day window (2025-06-23, 2025-06-24, 2025-06-25). Open $472.93, High $482.37, Low $456.5, Close $458.39."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 116.7,
+        "highPrice": 116.95,
+        "lowPrice": 107.7,
+        "closePrice": 108.37,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.52,
+        "notes": "3-day window (2025-06-23, 2025-06-24, 2025-06-25). Open $116.7, High $116.95, Low $107.7, Close $108.37."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 83.3,
+      "stopHitRate": 50,
+      "avgReturnPercent": 4.47,
+      "profitFactor": 11.34,
+      "winRate": 83.3,
+      "totalScore": 92.3,
+      "benchmarkReturn": 0.86,
+      "alpha": 3.61
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 85.8,
+        "avgScoreLosers": 88,
+        "predictivePower": 47.8
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 80.6,
+        "avgScoreLosers": 80,
+        "predictivePower": 50.6
+      },
+      "riskReward": {
+        "avgScoreWinners": 78.6,
+        "avgScoreLosers": 78,
+        "predictivePower": 50.6
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 91.6,
+        "avgScoreLosers": 85,
+        "predictivePower": 56.6
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 84.6,
+        "avgScoreLosers": 75,
+        "predictivePower": 59.6
+      },
+      "informationEdge": {
+        "avgScoreWinners": 76.8,
+        "avgScoreLosers": 85,
+        "predictivePower": 41.8
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 77,
+        "avgScoreLosers": 82,
+        "predictivePower": 45
+      }
+    },
+    "benchmarkReturn": 0.86,
+    "alpha": 3.61,
+    "fullDepth": true
+  }
+}
