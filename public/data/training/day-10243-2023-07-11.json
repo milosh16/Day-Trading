@@ -1,0 +1,461 @@
+{
+  "trialId": 10243,
+  "date": "2023-07-11",
+  "dateDisplay": "Tuesday, July 11, 2023",
+  "generatedAt": "2026-04-07T23:43:23.733Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.67,
+      "nasdaqFuturesChange": 0.55,
+      "dowFuturesChange": 0.93,
+      "russellFuturesChange": 0.96,
+      "vixFuturesChange": -8.76,
+      "vix": 13.54,
+      "vixChange": -8.76,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 16.97,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.98,
+      "tenYearYieldChange": -0.65,
+      "twoYearYield": 4.54,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.02,
+      "threeMonthYield": 5.24,
+      "twoTenSpread": -0.56,
+      "threeMoTenYrSpread": -1.26,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 100.52,
+      "dollarIndexChange": -1.19,
+      "eurUsd": 1.1,
+      "eurUsdChange": 0.07,
+      "usdJpy": 140.12,
+      "usdJpyChange": -0.83,
+      "usdCny": 7.21,
+      "usdCnyChange": -0.3,
+      "oilWTI": 75.75,
+      "oilChange": 1.23,
+      "brentOil": 80.11,
+      "brentOilChange": 0.89,
+      "natGasChange": -3.63,
+      "goldPrice": 1956.2,
+      "goldChange": 1.29,
+      "silverChange": 4.47,
+      "copperChange": 2.36,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.81,
+      "daxChange": 1.47,
+      "ftseChange": 1.83,
+      "shanghaiChange": -0.78,
+      "hangSengChange": 1.08,
+      "kospiChange": 0.48,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 126.89999999999999,
+      "spreadChange": -0.54,
+      "igSpread": -13.18,
+      "igSpreadChange": -0.47,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.05,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.22,
+      "xlfChange": 1.19,
+      "xleChange": 2.2,
+      "xlvChange": 0.02,
+      "xlpChange": 0.15,
+      "xluChange": 1.24,
+      "xlreChange": 1.13,
+      "xliChange": 1.18,
+      "xlbChange": 0.98,
+      "xlcChange": 1.74,
+      "xlyChange": 0.84,
+      "smhChange": 0.11,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.75,
+      "ethereumChange": -0.33,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 204,
+      "daysToNextCPI": 184,
+      "daysToNextNFP": 178,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 2,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": -0.37,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": -1.28,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-on",
+      "confidence": 61,
+      "directionalBias": "31",
+      "volatilityRegime": "normal",
+      "stressIndex": 13,
+      "riskAppetiteIndex": 63,
+      "sectorTilts": {
+        "tech": "overweight",
+        "consumer-discretionary": "overweight",
+        "utilities": "underweight",
+        "materials": "overweight",
+        "industrials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "bullish",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "META",
+      "direction": "long",
+      "entryPrice": 295.5,
+      "targetPrice": 302,
+      "stopLoss": 291.5,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "entryPrice": 42.18,
+      "targetPrice": 43.43,
+      "stopLoss": 41.41,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "MSFT",
+      "direction": "long",
+      "entryPrice": 331.83,
+      "targetPrice": 337.72,
+      "stopLoss": 328.39,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "GOOGL",
+      "direction": "long",
+      "entryPrice": 116.45,
+      "targetPrice": 119.35,
+      "stopLoss": 114.52,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CAT",
+      "direction": "long",
+      "entryPrice": 248.81,
+      "targetPrice": 254.18,
+      "stopLoss": 245.39,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "META",
+      "openPrice": 293.9,
+      "highPrice": 316.24,
+      "lowPrice": 291.9,
+      "closePrice": 313.41,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.06,
+      "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $293.9, High $316.24, Low $291.9, Close $313.41."
+    },
+    {
+      "symbol": "NVDA",
+      "openPrice": 42.48,
+      "highPrice": 46.15,
+      "lowPrice": 42.07,
+      "closePrice": 45.98,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 9.01,
+      "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $42.48, High $46.15, Low $42.07, Close $45.98."
+    },
+    {
+      "symbol": "MSFT",
+      "openPrice": 331.06,
+      "highPrice": 343.74,
+      "lowPrice": 327,
+      "closePrice": 342.66,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 3.26,
+      "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $331.06, High $343.74, Low $327, Close $342.66."
+    },
+    {
+      "symbol": "GOOGL",
+      "openPrice": 116.29,
+      "highPrice": 124.83,
+      "lowPrice": 115.35,
+      "closePrice": 124.54,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.95,
+      "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $116.29, High $124.83, Low $115.35, Close $124.54."
+    },
+    {
+      "symbol": "CAT",
+      "openPrice": 249.84,
+      "highPrice": 257.64,
+      "lowPrice": 249.84,
+      "closePrice": 255.86,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.83,
+      "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $249.84, High $257.64, Low $249.84, Close $255.86."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 100,
+    "targetHitRate": 100,
+    "stopHitRate": 20,
+    "avgReturnPercent": 5.62,
+    "profitFactor": 10,
+    "winRate": 100,
+    "totalScore": 100,
+    "benchmarkReturn": 0.46,
+    "alpha": 5.16
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

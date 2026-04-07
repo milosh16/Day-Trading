@@ -1,0 +1,268 @@
+{
+  "id": "briefing-2023-07-11-1775605403752",
+  "date": "2023-07-11",
+  "generatedAt": "2026-04-07T23:43:23.733Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "bullish",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG META @ $295.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $302",
+          "implication": "+2.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $291.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $42.18",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $43.43",
+          "implication": "+3.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $41.41",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG MSFT @ $331.83",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $337.72",
+          "implication": "+1.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $328.39",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GOOGL @ $116.45",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $119.35",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $114.52",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CAT @ $248.81",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $254.18",
+          "implication": "+2.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $245.39",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "risk-on",
+  "regimeConfidence": 61,
+  "recommendations": [
+    {
+      "ticker": "META",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Communication Services",
+      "rationale": "Threads surpassed 100M signups — fastest app adoption ever. Stock up ~140% YTD, strong momentum. Institutional positioning still underweight from 2022 washout. AI monetization + Reels growth. Risk-on + weakening dollar supports mega-cap growth. Pre-market showing strength.",
+      "entryPrice": 295.5,
+      "targetPrice": 302,
+      "stopPrice": 291.5,
+      "riskReward": 1.62,
+      "riskPct": 1.35
+    },
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Technology",
+      "rationale": "AI infrastructure buildout accelerating. Every hyperscaler increasing GPU orders. H100 demand far exceeds supply. Consolidating after May earnings gap-up. Falling yields directly support high-growth names. Multiple analyst upgrades targeting $500+.",
+      "entryPrice": 42.18,
+      "targetPrice": 43.43,
+      "stopPrice": 41.41,
+      "riskReward": 1.62,
+      "riskPct": 1.83
+    },
+    {
+      "ticker": "MSFT",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Technology",
+      "rationale": "Copilot AI monetization strengthening. Azure growth reaccelerating on AI workloads. Breaking out of consolidation. FY Q4 earnings Jul 25 — positioning starts now. Enterprise AI spending leader. Defensive growth profile with tight risk.",
+      "entryPrice": 331.83,
+      "targetPrice": 337.72,
+      "stopPrice": 328.39,
+      "riskReward": 1.71,
+      "riskPct": 1.04
+    },
+    {
+      "ticker": "GOOGL",
+      "direction": "long",
+      "conviction": "medium-high",
+      "sector": "Communication Services",
+      "rationale": "Search ad revenue recovering. AI integration (SGE) narrative positive. YouTube growing. Cloud profitable for first time. Stock undervalued vs peers. Digital ad market bottomed. Weakening dollar helps intl revenue (55%+ of total). Basing above $120 support.",
+      "entryPrice": 116.45,
+      "targetPrice": 119.35,
+      "stopPrice": 114.52,
+      "riskReward": 1.5,
+      "riskPct": 1.66
+    },
+    {
+      "ticker": "CAT",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Industrials",
+      "rationale": "IIJA infrastructure spending ramping. Reshoring driving non-res construction. Up ~20% YTD in strong uptrend. Pricing power intact. Services/aftermarket growing. Soft landing = continued capex. Backlog near record. Rotation into cyclicals if CPI confirms disinflation.",
+      "entryPrice": 248.81,
+      "targetPrice": 254.18,
+      "stopPrice": 245.39,
+      "riskReward": 1.57,
+      "riskPct": 1.37
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10243,
+    "outcomes": [
+      {
+        "symbol": "META",
+        "openPrice": 293.9,
+        "highPrice": 316.24,
+        "lowPrice": 291.9,
+        "closePrice": 313.41,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 6.06,
+        "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $293.9, High $316.24, Low $291.9, Close $313.41."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 42.48,
+        "highPrice": 46.15,
+        "lowPrice": 42.07,
+        "closePrice": 45.98,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 9.01,
+        "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $42.48, High $46.15, Low $42.07, Close $45.98."
+      },
+      {
+        "symbol": "MSFT",
+        "openPrice": 331.06,
+        "highPrice": 343.74,
+        "lowPrice": 327,
+        "closePrice": 342.66,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.26,
+        "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $331.06, High $343.74, Low $327, Close $342.66."
+      },
+      {
+        "symbol": "GOOGL",
+        "openPrice": 116.29,
+        "highPrice": 124.83,
+        "lowPrice": 115.35,
+        "closePrice": 124.54,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 6.95,
+        "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $116.29, High $124.83, Low $115.35, Close $124.54."
+      },
+      {
+        "symbol": "CAT",
+        "openPrice": 249.84,
+        "highPrice": 257.64,
+        "lowPrice": 249.84,
+        "closePrice": 255.86,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.83,
+        "notes": "3-day window (2023-07-11, 2023-07-12, 2023-07-13). Open $249.84, High $257.64, Low $249.84, Close $255.86."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 100,
+      "targetHitRate": 100,
+      "stopHitRate": 20,
+      "avgReturnPercent": 5.62,
+      "profitFactor": 10,
+      "winRate": 100,
+      "totalScore": 100,
+      "benchmarkReturn": 0.46,
+      "alpha": 5.16
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.46,
+    "alpha": 5.16,
+    "fullDepth": true
+  }
+}
