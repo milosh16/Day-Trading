@@ -1,0 +1,311 @@
+{
+  "id": "briefing-2023-06-08-1775589971505",
+  "date": "2023-06-08",
+  "generatedAt": "2026-04-07T19:26:11.491Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG JPM @ $140.69",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $143.72",
+          "implication": "+2.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $138.67",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG META @ $263.6",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $272.35",
+          "implication": "+3.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $257.76",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $108.53",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $112.37",
+          "implication": "+3.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $105.97",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CAT @ $235.55",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $242.4",
+          "implication": "+2.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $230.98",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $37.47",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $39.11",
+          "implication": "+4.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $36.38",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 37,
+  "recommendations": [
+    {
+      "ticker": "JPM",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 140.69,
+      "targetPrice": 143.72,
+      "stopPrice": 138.67,
+      "riskRewardRatio": 1.5,
+      "thesis": "Sector rotation into financials accelerating. JPM closed June 7 at ~$139.60 after Dow outperformed. Fed pause is positive for net interest income outlook. JPM broke above its 50-day MA. Volume increasing on up days. Claims data could temporarily spook but JPM is defensive within financials. Targeting move toward $142 resistance with tight stop below $137.50 support.",
+      "catalysts": [
+        "Sector rotation from tech to financials",
+        "Fed pause narrative supportive",
+        "Relative strength vs market"
+      ],
+      "risks": [
+        "Jobless claims spike could hit bank sentiment",
+        "Broad market reversal"
+      ],
+      "stopPercent": 1.43
+    },
+    {
+      "ticker": "META",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 263.6,
+      "targetPrice": 272.35,
+      "stopPrice": 257.76,
+      "riskRewardRatio": 1.5,
+      "thesis": "META pulled back from ~$279 high on June 7 Nasdaq weakness, closing ~$272. Year of efficiency narrative intact - massive cost cuts, AI investments, Reels monetization improving. Stock up ~120% YTD but still cheap at ~15x forward PE vs tech peers. Dip buying opportunity as broader tech consolidation creates entry. Support at $268-270 range.",
+      "catalysts": [
+        "Year of efficiency cost cuts",
+        "AI integration across products",
+        "Reels monetization ramp",
+        "Cheap relative valuation"
+      ],
+      "risks": [
+        "Tech sector rotation continues",
+        "Broader market risk-off on claims data"
+      ],
+      "stopPercent": 2.21
+    },
+    {
+      "ticker": "XOM",
+      "direction": "long",
+      "conviction": "medium",
+      "entryPrice": 108.53,
+      "targetPrice": 112.37,
+      "stopPrice": 105.97,
+      "riskRewardRatio": 1.5,
+      "thesis": "Saudi voluntary 1M bpd cut announced June 4 should provide floor for oil prices. XOM trading near $106 with improving technical setup after holding support at $104. Energy names getting rotation bid from tech. Strong free cash flow, buybacks, dividend yield ~3.4%. Oil range-bound but XOM can rally on sector rotation alone.",
+      "catalysts": [
+        "Saudi production cut supporting oil floor",
+        "Sector rotation into value/energy",
+        "Strong shareholder returns"
+      ],
+      "risks": [
+        "China demand weakness pressuring crude",
+        "Claims data if bad could signal recession fears"
+      ],
+      "stopPercent": 2.36
+    },
+    {
+      "ticker": "CAT",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 235.55,
+      "targetPrice": 242.4,
+      "stopPrice": 230.98,
+      "riskRewardRatio": 1.5,
+      "thesis": "CAT at all-time highs, closed ~$232 on June 7. Infrastructure spending tailwind from IRA/CHIPS Act creating multi-year demand cycle. Industrials catching rotation bid. Strong backlog visibility. Dow outperformed Nasdaq on June 7 confirming rotation. Momentum breakout with volume confirmation. Targeting $237.50 extension.",
+      "catalysts": [
+        "Infrastructure spending cycle (IRA/CHIPS)",
+        "Sector rotation into industrials",
+        "All-time high breakout momentum"
+      ],
+      "risks": [
+        "Overbought on RSI",
+        "Claims data could shift cyclical sentiment",
+        "China construction slowdown"
+      ],
+      "stopPercent": 1.94
+    },
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "conviction": "medium",
+      "entryPrice": 37.47,
+      "targetPrice": 39.11,
+      "stopPrice": 36.38,
+      "riskRewardRatio": 1.5,
+      "thesis": "NVDA pulled back from ~$394 high to ~$379 on June 7 as tech rotated out. After blowout May 24 earnings (beat + massive guidance raise), stock rallied ~30% in two weeks and needs to consolidate. AI demand cycle is real and structural. Any dip toward $375-380 support zone is a buying opportunity. High conviction on multi-day basis but intraday vol elevated. Using wider stop given the stock's beta.",
+      "catalysts": [
+        "AI infrastructure buildout - data center GPU demand",
+        "Post-earnings momentum",
+        "Institutional FOMO - underweight funds adding"
+      ],
+      "risks": [
+        "Tech rotation headwind near-term",
+        "Extended on short-term technicals",
+        "High beta means sharp selloffs possible"
+      ],
+      "stopPercent": 2.91
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10222,
+    "outcomes": [
+      {
+        "symbol": "JPM",
+        "openPrice": 140.67,
+        "highPrice": 141.8,
+        "lowPrice": 139.48,
+        "closePrice": 141,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.22,
+        "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $140.67, High $141.8, Low $139.48, Close $141."
+      },
+      {
+        "symbol": "META",
+        "openPrice": 260.62,
+        "highPrice": 271.75,
+        "lowPrice": 258.88,
+        "closePrice": 271.05,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.83,
+        "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $260.62, High $271.75, Low $258.88, Close $271.05."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 108.77,
+        "highPrice": 109.14,
+        "lowPrice": 105.56,
+        "closePrice": 106.42,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.94,
+        "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $108.77, High $109.14, Low $105.56, Close $106.42."
+      },
+      {
+        "symbol": "CAT",
+        "openPrice": 234.54,
+        "highPrice": 238.89,
+        "lowPrice": 231.43,
+        "closePrice": 237.9,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1,
+        "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $234.54, High $238.89, Low $231.43, Close $237.9."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 37.72,
+        "highPrice": 39.71,
+        "lowPrice": 37.51,
+        "closePrice": 39.48,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.36,
+        "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $37.72, High $39.71, Low $37.51, Close $39.48."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 80,
+      "targetHitRate": 20,
+      "stopHitRate": 20,
+      "avgReturnPercent": 1.49,
+      "profitFactor": 4.85,
+      "winRate": 80,
+      "totalScore": 81.8,
+      "benchmarkReturn": 0.59,
+      "alpha": 0.9
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.59,
+    "alpha": 0.9,
+    "fullDepth": true
+  }
+}

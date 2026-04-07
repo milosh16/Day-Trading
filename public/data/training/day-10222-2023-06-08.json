@@ -1,0 +1,455 @@
+{
+  "trialId": 10222,
+  "date": "2023-06-08",
+  "dateDisplay": "Thursday, June 8, 2023",
+  "generatedAt": "2026-04-07T19:26:11.491Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.62,
+      "nasdaqFuturesChange": 1.02,
+      "dowFuturesChange": 0.5,
+      "russellFuturesChange": -0.41,
+      "vixFuturesChange": 1.32,
+      "vix": 13.83,
+      "vixChange": 1.32,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 16.86,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.71,
+      "tenYearYieldChange": -1.85,
+      "twoYearYield": 4.23,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.88,
+      "threeMonthYield": 5.1,
+      "twoTenSpread": -0.52,
+      "threeMoTenYrSpread": -1.39,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 103.56,
+      "dollarIndexChange": 0.21,
+      "eurUsd": 1.08,
+      "eurUsdChange": 0.7,
+      "usdJpy": 138.86,
+      "usdJpyChange": -0.74,
+      "usdCny": 7.11,
+      "usdCnyChange": -0.25,
+      "oilWTI": 70.17,
+      "oilChange": -1.57,
+      "brentOil": 74.79,
+      "brentOilChange": -1.54,
+      "natGasChange": -4.17,
+      "goldPrice": 1962.2,
+      "goldChange": -0.07,
+      "silverChange": 0.29,
+      "copperChange": -0.2,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 1.97,
+      "daxChange": -0.25,
+      "ftseChange": -0.49,
+      "shanghaiChange": 0.55,
+      "hangSengChange": 0.47,
+      "kospiChange": 1.16,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 126.5,
+      "spreadChange": -0.63,
+      "igSpread": -14.08,
+      "igSpreadChange": -0.67,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.94,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1.08,
+      "xlfChange": -0.09,
+      "xleChange": -0.43,
+      "xlvChange": 0.64,
+      "xlpChange": 0.69,
+      "xluChange": 0.44,
+      "xlreChange": -0.61,
+      "xliChange": 0.18,
+      "xlbChange": -0.36,
+      "xlcChange": 0.51,
+      "xlyChange": 1.48,
+      "smhChange": 1.16,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.11,
+      "ethereumChange": -0.33,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 237,
+      "daysToNextCPI": 217,
+      "daysToNextNFP": 211,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.73,
+      "sp20DayReturn": 3.78,
+      "nasdaqVsRussell5d": -5.33,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 37,
+      "directionalBias": "7",
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 55,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "JPM",
+      "direction": "long",
+      "entryPrice": 140.69,
+      "targetPrice": 143.72,
+      "stopLoss": 138.67,
+      "thesis": "Sector rotation into financials accelerating. JPM closed June 7 at ~$139.60 after Dow outperformed. Fed pause is positive for net interest income outlook. JPM broke above its 50-day MA. Volume increasing on up days. Claims data could temporarily spook but JPM is defensive within financials. Targeting move toward $142 resistance with tight stop below $137.50 support.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "META",
+      "direction": "long",
+      "entryPrice": 263.6,
+      "targetPrice": 272.35,
+      "stopLoss": 257.76,
+      "thesis": "META pulled back from ~$279 high on June 7 Nasdaq weakness, closing ~$272. Year of efficiency narrative intact - massive cost cuts, AI investments, Reels monetization improving. Stock up ~120% YTD but still cheap at ~15x forward PE vs tech peers. Dip buying opportunity as broader tech consolidation creates entry. Support at $268-270 range.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XOM",
+      "direction": "long",
+      "entryPrice": 108.53,
+      "targetPrice": 112.37,
+      "stopLoss": 105.97,
+      "thesis": "Saudi voluntary 1M bpd cut announced June 4 should provide floor for oil prices. XOM trading near $106 with improving technical setup after holding support at $104. Energy names getting rotation bid from tech. Strong free cash flow, buybacks, dividend yield ~3.4%. Oil range-bound but XOM can rally on sector rotation alone.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CAT",
+      "direction": "long",
+      "entryPrice": 235.55,
+      "targetPrice": 242.4,
+      "stopLoss": 230.98,
+      "thesis": "CAT at all-time highs, closed ~$232 on June 7. Infrastructure spending tailwind from IRA/CHIPS Act creating multi-year demand cycle. Industrials catching rotation bid. Strong backlog visibility. Dow outperformed Nasdaq on June 7 confirming rotation. Momentum breakout with volume confirmation. Targeting $237.50 extension.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "entryPrice": 37.47,
+      "targetPrice": 39.11,
+      "stopLoss": 36.38,
+      "thesis": "NVDA pulled back from ~$394 high to ~$379 on June 7 as tech rotated out. After blowout May 24 earnings (beat + massive guidance raise), stock rallied ~30% in two weeks and needs to consolidate. AI demand cycle is real and structural. Any dip toward $375-380 support zone is a buying opportunity. High conviction on multi-day basis but intraday vol elevated. Using wider stop given the stock's beta.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "JPM",
+      "openPrice": 140.67,
+      "highPrice": 141.8,
+      "lowPrice": 139.48,
+      "closePrice": 141,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.22,
+      "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $140.67, High $141.8, Low $139.48, Close $141."
+    },
+    {
+      "symbol": "META",
+      "openPrice": 260.62,
+      "highPrice": 271.75,
+      "lowPrice": 258.88,
+      "closePrice": 271.05,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.83,
+      "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $260.62, High $271.75, Low $258.88, Close $271.05."
+    },
+    {
+      "symbol": "XOM",
+      "openPrice": 108.77,
+      "highPrice": 109.14,
+      "lowPrice": 105.56,
+      "closePrice": 106.42,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.94,
+      "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $108.77, High $109.14, Low $105.56, Close $106.42."
+    },
+    {
+      "symbol": "CAT",
+      "openPrice": 234.54,
+      "highPrice": 238.89,
+      "lowPrice": 231.43,
+      "closePrice": 237.9,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1,
+      "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $234.54, High $238.89, Low $231.43, Close $237.9."
+    },
+    {
+      "symbol": "NVDA",
+      "openPrice": 37.72,
+      "highPrice": 39.71,
+      "lowPrice": 37.51,
+      "closePrice": 39.48,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 5.36,
+      "notes": "3-day window (2023-06-08, 2023-06-09, 2023-06-12). Open $37.72, High $39.71, Low $37.51, Close $39.48."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 80,
+    "targetHitRate": 20,
+    "stopHitRate": 20,
+    "avgReturnPercent": 1.49,
+    "profitFactor": 4.85,
+    "winRate": 80,
+    "totalScore": 81.8,
+    "benchmarkReturn": 0.59,
+    "alpha": 0.9
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
