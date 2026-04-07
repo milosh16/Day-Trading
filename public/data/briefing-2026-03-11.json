@@ -1,0 +1,453 @@
+{
+  "id": "briefing-2026-03-11-1775524858778",
+  "date": "2026-03-11",
+  "generatedAt": "2026-04-07T01:20:58.759Z",
+  "model": "claude-opus-4-6-max",
+  "summary": {
+    "regime": "CRISIS",
+    "confidence": 0.9,
+    "directionalBias": -60,
+    "stressIndex": 39,
+    "riskAppetite": 42,
+    "summary": "Extreme multi-front pressure: US-Iran war Day 12 with Hegseth declaring March 11 'most intense day of strikes'; Strait of Hormuz under active military confrontation with ships being attacked; CPI report (Feb) due at 8:30 AM showing 2.4% YoY (in-line) but forward oil-driven inflation fears dominating; steel/aluminum tariff threat to double to 50% on Canada announced morning of March 11 (later walked back); Oracle earnings beat driving +11% premarket gap but sector rotation firmly into defensives. VIX elevated near 29.5. Massive defensive rotation underway: XLP +13.2% YTD vs XLK -4.6% YTD."
+  },
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Geopolitics",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Corporate",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "TechAI",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Energy",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Policy",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG ORCL @ $149.4",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $157.75",
+          "implication": "+5.6% gain",
+          "trade": "Oracle delivered one of the strongest SaaS/cloud prints in recent memory. Cloud infrastructure revenue of $4.9B growing 84% shows AI-driven demand acceleration. The $553B RPO backlog is extraordinary — 325% YoY growth signals multi-year revenue visibility. Management raising FY27 guidance by $1B to $90B demonstrates confidence. In a market starved for growth certainty amid geopolitical chaos, ORCL becomes a flight-to-quality within tech. The 11% premarket gap suggests strong demand but there is room for continuation as analysts raise targets throughout the day."
+        },
+        {
+          "condition": "Price hits stop $144.3",
+          "implication": "Gap-and-fade risk if broader market sells off hard on Iran escalation. General risk-off sentiment could overwhelm even strong earnings. High valuation multiple already prices in significant AI growth. Volume may thin as day traders take profits on the gap.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT CCL @ $26.21",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $24.23",
+          "implication": "+-7.6% gain",
+          "trade": "Carnival is the most fuel-exposed major cruise operator with the weakest balance sheet in the group (highest debt-to-equity). Marine fuel is one of their largest cost items and bunker fuel prices track crude closely. With Hegseth declaring March 11 the 'most intense day of strikes,' any hopes of de-escalation from March 10 will be dashed. Carnival has less fuel hedging than RCL, making it more vulnerable to spot price spikes. The stock has already shown it trades down 7%+ on oil spikes — another escalation should produce a similar move. Consumer discretionary is the worst-ranked sector."
+        },
+        {
+          "condition": "Price hits stop $27.2",
+          "implication": "If ceasefire headlines emerge, oil could plunge and cruise stocks would snap back violently. Carnival has strong booking trends and yield growth that partially offset fuel costs. Short squeeze risk if war ends suddenly.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT AAL @ $11.11",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $10.13",
+          "implication": "+-8.8% gain",
+          "trade": "American Airlines carries the highest debt load and weakest balance sheet among major US carriers. Jet fuel costs have more than doubled from pre-war levels. Unlike DAL and UAL which have stronger balance sheets and more fuel hedging, AAL has minimal hedging and razor-thin margins even in good times. The March 11 escalation ('most intense day of strikes,' ships attacked in Hormuz) will reverse the March 10 oil price relief. Airline stocks saw single-day drops in high single to low double digits on prior escalations. AAL is the weakest link in the chain."
+        },
+        {
+          "condition": "Price hits stop $11.64",
+          "implication": "If Iran war de-escalation materializes, airlines would rally hard and AAL as the highest-beta name would rally most. Fuel surcharges and fare increases partially offset costs. Spring/summer travel demand remains strong.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG LMT @ $648",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $680",
+          "implication": "+4.9% gain",
+          "trade": "Lockheed Martin is the primary beneficiary of US military escalation. With Hegseth explicitly declaring March 11 the 'most intense day of strikes,' demand for precision munitions, missile defense systems, and F-35s is clearly accelerating. The $194B backlog provides enormous revenue visibility. Defense spending is bipartisan and recession-resistant. LMT recently hit ATH at $692 and a strong day of war news could push it back toward those levels. In a crisis regime, defense is the ultimate offensive sector position."
+        },
+        {
+          "condition": "Price hits stop $632",
+          "implication": "Already near ATH — 'buy the rumor sell the news' risk if market is already pricing in maximum escalation. If ceasefire talks gain traction, defense stocks would pull back. Valuation is stretched at current levels. R:R tightened by proximity to ATH.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NUE @ $170.43",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $183.36",
+          "implication": "+7.6% gain",
+          "trade": "Trump's March 11 morning announcement of doubling steel/aluminum tariffs from 25% to 50% on Canada is a direct catalyst for US steel producers. Nucor as the largest US steelmaker with the strongest balance sheet in the sector benefits most. Unlike CLF (highly leveraged), NUE has lower risk if the tariff is walked back. The 50% tariff announcement should drive an immediate gap-up. Even though it was later walked back, for a day trade the morning reaction is the play. Nucor has been holding steel prices at $950/ton showing pricing discipline."
+        },
+        {
+          "condition": "Price hits stop $164.55",
+          "implication": "Trump walked back the tariff increase later the same day — if news of walkback leaks early or market prices it in, the trade reverses. Tariff rollback fears from February still overhang. Steel demand could weaken if economy slows from oil shock.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $148.13",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $157.88",
+          "implication": "+6.6% gain",
+          "trade": "March 10 saw oil fall 15% on de-escalation hopes (US Navy escort news). But March 11 brings dramatic re-escalation: ships attacked in Hormuz, IRGC stopping vessels, Hegseth declaring most intense strikes. This reversal sets up a snap-back in oil prices and energy stocks. XOM dropped on the March 10 relief trade, creating a dip-buy opportunity ahead of the March 11 escalation. ExxonMobil's integrated operations (upstream + downstream + chemicals) provide multiple revenue streams benefiting from the current environment. The company is near all-time high market cap of $643B."
+        },
+        {
+          "condition": "Price hits stop $143.26",
+          "implication": "If ceasefire materializes, oil crashes and XOM with it. Energy stocks have been whipsawing violently — could easily see another 5% down day. March 10 price drop may continue if market decides de-escalation is real despite March 11 noise.",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "crisis",
+  "regimeConfidence": 90,
+  "recommendations": [
+    {
+      "ticker": "ORCL",
+      "direction": "LONG",
+      "entryPrice": 149.4,
+      "targetPrice": 157.75,
+      "stopPrice": 144.3,
+      "catalyst": "Q3 earnings blowout: Rev $17.2B (+22%), cloud infra +84%, RPO +325% YoY, FY27 guidance raised $1B. Premarket +11% to ~$163.89. Gap-up momentum with institutional chase.",
+      "reasoning": "Oracle delivered one of the strongest SaaS/cloud prints in recent memory. Cloud infrastructure revenue of $4.9B growing 84% shows AI-driven demand acceleration. The $553B RPO backlog is extraordinary — 325% YoY growth signals multi-year revenue visibility. Management raising FY27 guidance by $1B to $90B demonstrates confidence. In a market starved for growth certainty amid geopolitical chaos, ORCL becomes a flight-to-quality within tech. The 11% premarket gap suggests strong demand but there is room for continuation as analysts raise targets throughout the day.",
+      "bearCase": "Gap-and-fade risk if broader market sells off hard on Iran escalation. General risk-off sentiment could overwhelm even strong earnings. High valuation multiple already prices in significant AI growth. Volume may thin as day traders take profits on the gap.",
+      "timeframe": "Intraday to 2 days",
+      "conviction": {
+        "overall": 78,
+        "catalystClarity": 95,
+        "technicalSetup": 70,
+        "riskReward": 72,
+        "volumeLiquidity": 85,
+        "marketAlignment": 55,
+        "informationEdge": 80,
+        "timingUrgency": 85
+      }
+    },
+    {
+      "ticker": "CCL",
+      "direction": "SHORT",
+      "entryPrice": 26.21,
+      "targetPrice": 24.23,
+      "stopPrice": 27.2,
+      "catalyst": "Marine fuel costs surging from Iran war Hormuz disruption. Bunker fuel tied to crude which is re-escalating. Already down 7% on prior oil spike. March 11 'most intense day of strikes' declaration will push crude back up after March 10 dip.",
+      "reasoning": "Carnival is the most fuel-exposed major cruise operator with the weakest balance sheet in the group (highest debt-to-equity). Marine fuel is one of their largest cost items and bunker fuel prices track crude closely. With Hegseth declaring March 11 the 'most intense day of strikes,' any hopes of de-escalation from March 10 will be dashed. Carnival has less fuel hedging than RCL, making it more vulnerable to spot price spikes. The stock has already shown it trades down 7%+ on oil spikes — another escalation should produce a similar move. Consumer discretionary is the worst-ranked sector.",
+      "bearCase": "If ceasefire headlines emerge, oil could plunge and cruise stocks would snap back violently. Carnival has strong booking trends and yield growth that partially offset fuel costs. Short squeeze risk if war ends suddenly.",
+      "timeframe": "Intraday to 3 days",
+      "conviction": {
+        "overall": 74,
+        "catalystClarity": 82,
+        "technicalSetup": 72,
+        "riskReward": 78,
+        "volumeLiquidity": 80,
+        "marketAlignment": 85,
+        "informationEdge": 60,
+        "timingUrgency": 75
+      }
+    },
+    {
+      "ticker": "AAL",
+      "direction": "SHORT",
+      "entryPrice": 11.11,
+      "targetPrice": 10.13,
+      "stopPrice": 11.64,
+      "catalyst": "Weakest balance sheet among US airlines. Jet fuel surging from $85-90 to $150-200/bbl. March 11 military escalation will re-spike oil. Airlines sector already battered but AAL is most levered to fuel costs.",
+      "reasoning": "American Airlines carries the highest debt load and weakest balance sheet among major US carriers. Jet fuel costs have more than doubled from pre-war levels. Unlike DAL and UAL which have stronger balance sheets and more fuel hedging, AAL has minimal hedging and razor-thin margins even in good times. The March 11 escalation ('most intense day of strikes,' ships attacked in Hormuz) will reverse the March 10 oil price relief. Airline stocks saw single-day drops in high single to low double digits on prior escalations. AAL is the weakest link in the chain.",
+      "bearCase": "If Iran war de-escalation materializes, airlines would rally hard and AAL as the highest-beta name would rally most. Fuel surcharges and fare increases partially offset costs. Spring/summer travel demand remains strong.",
+      "timeframe": "Intraday to 2 days",
+      "conviction": {
+        "overall": 72,
+        "catalystClarity": 80,
+        "technicalSetup": 68,
+        "riskReward": 73,
+        "volumeLiquidity": 75,
+        "marketAlignment": 85,
+        "informationEdge": 55,
+        "timingUrgency": 80
+      }
+    },
+    {
+      "ticker": "LMT",
+      "direction": "LONG",
+      "entryPrice": 648,
+      "targetPrice": 680,
+      "stopPrice": 632,
+      "catalyst": "Iran war Day 12 escalation. Hegseth: 'most intense day of strikes.' US destroyed 16 mine-laying vessels. World's largest defense contractor with $194B backlog. ATH was $692 on March 2.",
+      "reasoning": "Lockheed Martin is the primary beneficiary of US military escalation. With Hegseth explicitly declaring March 11 the 'most intense day of strikes,' demand for precision munitions, missile defense systems, and F-35s is clearly accelerating. The $194B backlog provides enormous revenue visibility. Defense spending is bipartisan and recession-resistant. LMT recently hit ATH at $692 and a strong day of war news could push it back toward those levels. In a crisis regime, defense is the ultimate offensive sector position.",
+      "bearCase": "Already near ATH — 'buy the rumor sell the news' risk if market is already pricing in maximum escalation. If ceasefire talks gain traction, defense stocks would pull back. Valuation is stretched at current levels. R:R tightened by proximity to ATH.",
+      "timeframe": "Intraday to 3 days",
+      "conviction": {
+        "overall": 71,
+        "catalystClarity": 88,
+        "technicalSetup": 65,
+        "riskReward": 68,
+        "volumeLiquidity": 80,
+        "marketAlignment": 82,
+        "informationEdge": 60,
+        "timingUrgency": 72
+      }
+    },
+    {
+      "ticker": "NUE",
+      "direction": "LONG",
+      "entryPrice": 170.43,
+      "targetPrice": 183.36,
+      "stopPrice": 164.55,
+      "catalyst": "Trump announced morning of March 11: doubling steel tariffs to 50% on Canada. Nucor is largest US steelmaker, direct beneficiary of import protection. Stock +16% YTD already on tariff tailwinds.",
+      "reasoning": "Trump's March 11 morning announcement of doubling steel/aluminum tariffs from 25% to 50% on Canada is a direct catalyst for US steel producers. Nucor as the largest US steelmaker with the strongest balance sheet in the sector benefits most. Unlike CLF (highly leveraged), NUE has lower risk if the tariff is walked back. The 50% tariff announcement should drive an immediate gap-up. Even though it was later walked back, for a day trade the morning reaction is the play. Nucor has been holding steel prices at $950/ton showing pricing discipline.",
+      "bearCase": "Trump walked back the tariff increase later the same day — if news of walkback leaks early or market prices it in, the trade reverses. Tariff rollback fears from February still overhang. Steel demand could weaken if economy slows from oil shock.",
+      "timeframe": "Intraday (MORNING ONLY — exit before walkback)",
+      "conviction": {
+        "overall": 65,
+        "catalystClarity": 75,
+        "technicalSetup": 60,
+        "riskReward": 72,
+        "volumeLiquidity": 70,
+        "marketAlignment": 55,
+        "informationEdge": 70,
+        "timingUrgency": 90
+      }
+    },
+    {
+      "ticker": "XOM",
+      "direction": "LONG",
+      "entryPrice": 148.13,
+      "targetPrice": 157.88,
+      "stopPrice": 143.26,
+      "catalyst": "Iran war re-escalation March 11 after March 10 oil dip. Ships attacked in Hormuz. 'Most intense day of strikes.' Oil re-spiking from $80 dip back toward $90+. XOM near ATH at $643B market cap.",
+      "reasoning": "March 10 saw oil fall 15% on de-escalation hopes (US Navy escort news). But March 11 brings dramatic re-escalation: ships attacked in Hormuz, IRGC stopping vessels, Hegseth declaring most intense strikes. This reversal sets up a snap-back in oil prices and energy stocks. XOM dropped on the March 10 relief trade, creating a dip-buy opportunity ahead of the March 11 escalation. ExxonMobil's integrated operations (upstream + downstream + chemicals) provide multiple revenue streams benefiting from the current environment. The company is near all-time high market cap of $643B.",
+      "bearCase": "If ceasefire materializes, oil crashes and XOM with it. Energy stocks have been whipsawing violently — could easily see another 5% down day. March 10 price drop may continue if market decides de-escalation is real despite March 11 noise.",
+      "timeframe": "Intraday to 2 days",
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 78,
+        "technicalSetup": 65,
+        "riskReward": 70,
+        "volumeLiquidity": 85,
+        "marketAlignment": 75,
+        "informationEdge": 55,
+        "timingUrgency": 70
+      }
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "RTX",
+      "reason": "Defense electronics/missiles. +4.5% early March on war. Could break out on continued escalation but already extended."
+    },
+    {
+      "ticker": "FRO",
+      "reason": "Tanker rates at records from Hormuz disruption. Direct beneficiary but thin liquidity and volatile."
+    },
+    {
+      "ticker": "DVN",
+      "reason": "E&P pure play. Aggressive production + oil premium. Better beta to oil than XOM but more volatile."
+    },
+    {
+      "ticker": "PM",
+      "reason": "Consumer staples rotation leader. IQOS/Zyn growth. But may be extended after XLP +13.2% YTD."
+    },
+    {
+      "ticker": "CLF",
+      "reason": "Higher leverage to steel tariff headline than NUE. More upside but more downside risk. Monitor for tariff walkback."
+    },
+    {
+      "ticker": "DAL",
+      "reason": "Short candidate but better balance sheet and more hedging than AAL. Monitor for breakdown below support."
+    },
+    {
+      "ticker": "GLD",
+      "reason": "Gold at $5,170+. Safe haven but being weighed by dollar strength and rate expectations. Mixed signals."
+    },
+    {
+      "ticker": "SJM",
+      "reason": "J.M. Smucker upgraded to outperform with $145 PT, +1% premarket. Defensive staples play."
+    }
+  ],
+  "avoidList": [
+    {
+      "ticker": "NVDA",
+      "reason": "Semiconductor supply chain stress (Qatar helium, DRAM shortages). Massive rotation out of tech. $4.3T market cap exposed to any selling pressure. Do not short (too risky) but do not go long either."
+    },
+    {
+      "ticker": "TSLA",
+      "reason": "Consumer discretionary headwinds. Tariff impact on materials costs. DRAM shortage slowing production. Political controversy around CEO. Worst sector for current regime."
+    },
+    {
+      "ticker": "BA",
+      "reason": "Only +5% over 3 years vs defense peers up 37-110%. Execution issues persist. War premium already priced into better-run defense names."
+    },
+    {
+      "ticker": "RCL",
+      "reason": "Better hedged than CCL (50%+ of 2026 fuel needs hedged) — makes it a worse short. Avoid both sides."
+    },
+    {
+      "ticker": "AAPL",
+      "reason": "Narrowly avoided longest losing streak since 1991. DRAM shortage slowing production. Revenue growth decelerating. Rotation headwind."
+    }
+  ],
+  "trainingData": {
+    "trialId": 10023,
+    "outcomes": [
+      {
+        "symbol": "ORCL",
+        "openPrice": 166.38,
+        "highPrice": 171.76,
+        "lowPrice": 154.15,
+        "closePrice": 155.11,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.82,
+        "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $166.38, High $171.76, Low $154.15, Close $155.11."
+      },
+      {
+        "symbol": "CCL",
+        "openPrice": 26.01,
+        "highPrice": 26.55,
+        "lowPrice": 23.78,
+        "closePrice": 23.99,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 8.47,
+        "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $26.01, High $26.55, Low $23.78, Close $23.99."
+      },
+      {
+        "symbol": "AAL",
+        "openPrice": 11.12,
+        "highPrice": 11.35,
+        "lowPrice": 10.26,
+        "closePrice": 10.3,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 7.29,
+        "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $11.12, High $11.35, Low $10.26, Close $10.3."
+      },
+      {
+        "symbol": "LMT",
+        "openPrice": 645.32,
+        "highPrice": 661,
+        "lowPrice": 640.5,
+        "closePrice": 646,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.31,
+        "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $645.32, High $661, Low $640.5, Close $646."
+      },
+      {
+        "symbol": "NUE",
+        "openPrice": 170.16,
+        "highPrice": 173.17,
+        "lowPrice": 162,
+        "closePrice": 163.48,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.08,
+        "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $170.16, High $173.17, Low $162, Close $163.48."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 147.99,
+        "highPrice": 156.89,
+        "lowPrice": 147.66,
+        "closePrice": 156.12,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -5.39,
+        "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $147.99, High $156.89, Low $147.66, Close $156.12."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 66.7,
+      "targetHitRate": 83.3,
+      "stopHitRate": 66.7,
+      "avgReturnPercent": 1.82,
+      "profitFactor": 2.19,
+      "winRate": 66.7,
+      "totalScore": 75.7,
+      "benchmarkReturn": -0.18,
+      "alpha": 2
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 81.3,
+        "avgScoreLosers": 86.5,
+        "predictivePower": 44.8
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 66.3,
+        "avgScoreLosers": 67.5,
+        "predictivePower": 48.8
+      },
+      "riskReward": {
+        "avgScoreWinners": 72.8,
+        "avgScoreLosers": 71,
+        "predictivePower": 51.8
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 76.3,
+        "avgScoreLosers": 85,
+        "predictivePower": 41.3
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 76.8,
+        "avgScoreLosers": 65,
+        "predictivePower": 61.8
+      },
+      "informationEdge": {
+        "avgScoreWinners": 61.3,
+        "avgScoreLosers": 67.5,
+        "predictivePower": 43.8
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 79.3,
+        "avgScoreLosers": 77.5,
+        "predictivePower": 51.8
+      }
+    },
+    "benchmarkReturn": -0.18,
+    "alpha": 2,
+    "fullDepth": true
+  }
+}

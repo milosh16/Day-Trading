@@ -1,0 +1,549 @@
+{
+  "trialId": 10023,
+  "date": "2026-03-11",
+  "dateDisplay": "Wednesday, March 11, 2026",
+  "generatedAt": "2026-04-07T01:20:58.759Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.08,
+      "nasdaqFuturesChange": 0.08,
+      "dowFuturesChange": -0.61,
+      "russellFuturesChange": -0.2,
+      "vixFuturesChange": 12.63,
+      "vix": 27.29,
+      "vixChange": 12.63,
+      "vixTermStructure": "backwardation",
+      "vix9d": 0,
+      "vix3m": 24.97,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.21,
+      "tenYearYieldChange": 1.74,
+      "twoYearYield": 3.73,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.86,
+      "threeMonthYield": 3.6,
+      "twoTenSpread": 0.48,
+      "threeMoTenYrSpread": 0.61,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 99.74,
+      "dollarIndexChange": 0.51,
+      "eurUsd": 1.15,
+      "eurUsdChange": -0.59,
+      "usdJpy": 159.07,
+      "usdJpyChange": 0.61,
+      "usdCny": 6.87,
+      "usdCnyChange": -0.16,
+      "oilWTI": 95.73,
+      "oilChange": 9.72,
+      "brentOil": 100.46,
+      "brentOilChange": 9.22,
+      "natGasChange": 0.75,
+      "goldPrice": 5115.8,
+      "goldChange": -1,
+      "silverChange": -0.46,
+      "copperChange": -0.36,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -1.04,
+      "daxChange": -0.21,
+      "ftseChange": -0.47,
+      "shanghaiChange": -0.1,
+      "hangSengChange": -0.7,
+      "kospiChange": -0.48,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 100.7,
+      "spreadChange": 0.22,
+      "igSpread": -18.32,
+      "igSpreadChange": 0.82,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.98,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 0.48,
+      "xlfChange": -0.84,
+      "xleChange": 2.48,
+      "xlvChange": -0.2,
+      "xlpChange": -1.32,
+      "xluChange": -0.84,
+      "xlreChange": -1.19,
+      "xliChange": -0.31,
+      "xlbChange": -0.08,
+      "xlcChange": -0.32,
+      "xlyChange": -0.26,
+      "smhChange": 0.93,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.41,
+      "ethereumChange": 1.05,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": true,
+      "econDataType": "CPI",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 7,
+      "daysToNextCPI": 0,
+      "daysToNextNFP": 23,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 2,
+      "sp5DayReturn": -1.36,
+      "sp20DayReturn": -2.39,
+      "nasdaqVsRussell5d": 3.13,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "crisis",
+      "confidence": 90,
+      "directionalBias": "-60",
+      "volatilityRegime": "elevated",
+      "stressIndex": 39,
+      "riskAppetiteIndex": 42,
+      "sectorTilts": {
+        "tech": "underweight",
+        "utilities": "overweight",
+        "healthcare": "overweight",
+        "financials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": {
+        "regime": "CRISIS",
+        "confidence": 0.9,
+        "directionalBias": -60,
+        "stressIndex": 39,
+        "riskAppetite": 42,
+        "summary": "Extreme multi-front pressure: US-Iran war Day 12 with Hegseth declaring March 11 'most intense day of strikes'; Strait of Hormuz under active military confrontation with ships being attacked; CPI report (Feb) due at 8:30 AM showing 2.4% YoY (in-line) but forward oil-driven inflation fears dominating; steel/aluminum tariff threat to double to 50% on Canada announced morning of March 11 (later walked back); Oracle earnings beat driving +11% premarket gap but sector rotation firmly into defensives. VIX elevated near 29.5. Massive defensive rotation underway: XLP +13.2% YTD vs XLK -4.6% YTD."
+      },
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Geopolitics",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Macro",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Corporate",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "TechAI",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Energy",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Policy",
+          "content": "[object Object]",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "ORCL",
+      "direction": "LONG",
+      "entryPrice": 149.4,
+      "targetPrice": 157.75,
+      "stopLoss": 144.3,
+      "thesis": "Oracle delivered one of the strongest SaaS/cloud prints in recent memory. Cloud infrastructure revenue of $4.9B growing 84% shows AI-driven demand acceleration. The $553B RPO backlog is extraordinary — 325% YoY growth signals multi-year revenue visibility. Management raising FY27 guidance by $1B to $90B demonstrates confidence. In a market starved for growth certainty amid geopolitical chaos, ORCL becomes a flight-to-quality within tech. The 11% premarket gap suggests strong demand but there is room for continuation as analysts raise targets throughout the day.",
+      "catalyst": "Q3 earnings blowout: Rev $17.2B (+22%), cloud infra +84%, RPO +325% YoY, FY27 guidance raised $1B. Premarket +11% to ~$163.89. Gap-up momentum with institutional chase.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 85,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CCL",
+      "direction": "SHORT",
+      "entryPrice": 26.21,
+      "targetPrice": 24.23,
+      "stopLoss": 27.2,
+      "thesis": "Carnival is the most fuel-exposed major cruise operator with the weakest balance sheet in the group (highest debt-to-equity). Marine fuel is one of their largest cost items and bunker fuel prices track crude closely. With Hegseth declaring March 11 the 'most intense day of strikes,' any hopes of de-escalation from March 10 will be dashed. Carnival has less fuel hedging than RCL, making it more vulnerable to spot price spikes. The stock has already shown it trades down 7%+ on oil spikes — another escalation should produce a similar move. Consumer discretionary is the worst-ranked sector.",
+      "catalyst": "Marine fuel costs surging from Iran war Hormuz disruption. Bunker fuel tied to crude which is re-escalating. Already down 7% on prior oil spike. March 11 'most intense day of strikes' declaration will push crude back up after March 10 dip.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AAL",
+      "direction": "SHORT",
+      "entryPrice": 11.11,
+      "targetPrice": 10.13,
+      "stopLoss": 11.64,
+      "thesis": "American Airlines carries the highest debt load and weakest balance sheet among major US carriers. Jet fuel costs have more than doubled from pre-war levels. Unlike DAL and UAL which have stronger balance sheets and more fuel hedging, AAL has minimal hedging and razor-thin margins even in good times. The March 11 escalation ('most intense day of strikes,' ships attacked in Hormuz) will reverse the March 10 oil price relief. Airline stocks saw single-day drops in high single to low double digits on prior escalations. AAL is the weakest link in the chain.",
+      "catalyst": "Weakest balance sheet among US airlines. Jet fuel surging from $85-90 to $150-200/bbl. March 11 military escalation will re-spike oil. Airlines sector already battered but AAL is most levered to fuel costs.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 73,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 80,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LMT",
+      "direction": "LONG",
+      "entryPrice": 648,
+      "targetPrice": 680,
+      "stopLoss": 632,
+      "thesis": "Lockheed Martin is the primary beneficiary of US military escalation. With Hegseth explicitly declaring March 11 the 'most intense day of strikes,' demand for precision munitions, missile defense systems, and F-35s is clearly accelerating. The $194B backlog provides enormous revenue visibility. Defense spending is bipartisan and recession-resistant. LMT recently hit ATH at $692 and a strong day of war news could push it back toward those levels. In a crisis regime, defense is the ultimate offensive sector position.",
+      "catalyst": "Iran war Day 12 escalation. Hegseth: 'most intense day of strikes.' US destroyed 16 mine-laying vessels. World's largest defense contractor with $194B backlog. ATH was $692 on March 2.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 72,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NUE",
+      "direction": "LONG",
+      "entryPrice": 170.43,
+      "targetPrice": 183.36,
+      "stopLoss": 164.55,
+      "thesis": "Trump's March 11 morning announcement of doubling steel/aluminum tariffs from 25% to 50% on Canada is a direct catalyst for US steel producers. Nucor as the largest US steelmaker with the strongest balance sheet in the sector benefits most. Unlike CLF (highly leveraged), NUE has lower risk if the tariff is walked back. The 50% tariff announcement should drive an immediate gap-up. Even though it was later walked back, for a day trade the morning reaction is the play. Nucor has been holding steel prices at $950/ton showing pricing discipline.",
+      "catalyst": "Trump announced morning of March 11: doubling steel tariffs to 50% on Canada. Nucor is largest US steelmaker, direct beneficiary of import protection. Stock +16% YTD already on tariff tailwinds.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 90,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XOM",
+      "direction": "LONG",
+      "entryPrice": 148.13,
+      "targetPrice": 157.88,
+      "stopLoss": 143.26,
+      "thesis": "March 10 saw oil fall 15% on de-escalation hopes (US Navy escort news). But March 11 brings dramatic re-escalation: ships attacked in Hormuz, IRGC stopping vessels, Hegseth declaring most intense strikes. This reversal sets up a snap-back in oil prices and energy stocks. XOM dropped on the March 10 relief trade, creating a dip-buy opportunity ahead of the March 11 escalation. ExxonMobil's integrated operations (upstream + downstream + chemicals) provide multiple revenue streams benefiting from the current environment. The company is near all-time high market cap of $643B.",
+      "catalyst": "Iran war re-escalation March 11 after March 10 oil dip. Ships attacked in Hormuz. 'Most intense day of strikes.' Oil re-spiking from $80 dip back toward $90+. XOM near ATH at $643B market cap.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 70,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "ORCL",
+      "openPrice": 166.38,
+      "highPrice": 171.76,
+      "lowPrice": 154.15,
+      "closePrice": 155.11,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.82,
+      "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $166.38, High $171.76, Low $154.15, Close $155.11."
+    },
+    {
+      "symbol": "CCL",
+      "openPrice": 26.01,
+      "highPrice": 26.55,
+      "lowPrice": 23.78,
+      "closePrice": 23.99,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 8.47,
+      "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $26.01, High $26.55, Low $23.78, Close $23.99."
+    },
+    {
+      "symbol": "AAL",
+      "openPrice": 11.12,
+      "highPrice": 11.35,
+      "lowPrice": 10.26,
+      "closePrice": 10.3,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 7.29,
+      "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $11.12, High $11.35, Low $10.26, Close $10.3."
+    },
+    {
+      "symbol": "LMT",
+      "openPrice": 645.32,
+      "highPrice": 661,
+      "lowPrice": 640.5,
+      "closePrice": 646,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.31,
+      "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $645.32, High $661, Low $640.5, Close $646."
+    },
+    {
+      "symbol": "NUE",
+      "openPrice": 170.16,
+      "highPrice": 173.17,
+      "lowPrice": 162,
+      "closePrice": 163.48,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 4.08,
+      "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $170.16, High $173.17, Low $162, Close $163.48."
+    },
+    {
+      "symbol": "XOM",
+      "openPrice": 147.99,
+      "highPrice": 156.89,
+      "lowPrice": 147.66,
+      "closePrice": 156.12,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -5.39,
+      "notes": "3-day window (2026-03-11, 2026-03-12, 2026-03-13). Open $147.99, High $156.89, Low $147.66, Close $156.12."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 66.7,
+    "targetHitRate": 83.3,
+    "stopHitRate": 66.7,
+    "avgReturnPercent": 1.82,
+    "profitFactor": 2.19,
+    "winRate": 66.7,
+    "totalScore": 75.7,
+    "benchmarkReturn": -0.18,
+    "alpha": 2
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 81.3,
+      "avgScoreLosers": 86.5,
+      "predictivePower": 44.8
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 66.3,
+      "avgScoreLosers": 67.5,
+      "predictivePower": 48.8
+    },
+    "riskReward": {
+      "avgScoreWinners": 72.8,
+      "avgScoreLosers": 71,
+      "predictivePower": 51.8
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 76.3,
+      "avgScoreLosers": 85,
+      "predictivePower": 41.3
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 76.8,
+      "avgScoreLosers": 65,
+      "predictivePower": 61.8
+    },
+    "informationEdge": {
+      "avgScoreWinners": 61.3,
+      "avgScoreLosers": 67.5,
+      "predictivePower": 43.8
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 79.3,
+      "avgScoreLosers": 77.5,
+      "predictivePower": 51.8
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
