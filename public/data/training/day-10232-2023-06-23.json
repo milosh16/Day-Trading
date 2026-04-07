@@ -1,0 +1,512 @@
+{
+  "trialId": 10232,
+  "date": "2023-06-23",
+  "dateDisplay": "Friday, June 23, 2023",
+  "generatedAt": "2026-04-07T22:23:32.897Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.77,
+      "nasdaqFuturesChange": -1.01,
+      "dowFuturesChange": -0.65,
+      "russellFuturesChange": -1.44,
+      "vixFuturesChange": 4.11,
+      "vix": 13.44,
+      "vixChange": 4.11,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 16.87,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.74,
+      "tenYearYieldChange": -1.58,
+      "twoYearYield": 4.34,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.82,
+      "threeMonthYield": 5.14,
+      "twoTenSpread": -0.6,
+      "threeMoTenYrSpread": -1.4,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 102.9,
+      "dollarIndexChange": 0.5,
+      "eurUsd": 1.1,
+      "eurUsdChange": -0.31,
+      "usdJpy": 143.03,
+      "usdJpyChange": 0.95,
+      "usdCny": 7.18,
+      "usdCnyChange": 0,
+      "oilWTI": 69.16,
+      "oilChange": -0.5,
+      "brentOil": 73.85,
+      "brentOilChange": -0.39,
+      "natGasChange": 4.64,
+      "goldPrice": 1919.1,
+      "goldChange": 0.33,
+      "silverChange": -0.48,
+      "copperChange": -2.12,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -1.45,
+      "daxChange": -0.99,
+      "ftseChange": -0.53,
+      "shanghaiChange": -1.31,
+      "hangSengChange": -1.71,
+      "kospiChange": -0.91,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 129.04999999999998,
+      "spreadChange": 0.17,
+      "igSpread": -15.4,
+      "igSpreadChange": -0.28,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.99,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -1.09,
+      "xlfChange": -0.43,
+      "xleChange": -0.72,
+      "xlvChange": -0.33,
+      "xlpChange": -0.66,
+      "xluChange": -1.47,
+      "xlreChange": -1.08,
+      "xliChange": -0.76,
+      "xlbChange": -0.81,
+      "xlcChange": -0.22,
+      "xlyChange": -1.16,
+      "smhChange": -1.7,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.48,
+      "ethereumChange": -0.89,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 222,
+      "daysToNextCPI": 202,
+      "daysToNextNFP": 196,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": -1.75,
+      "sp20DayReturn": 5.66,
+      "nasdaqVsRussell5d": 1.47,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-off",
+      "confidence": 63,
+      "directionalBias": "-33",
+      "volatilityRegime": "normal",
+      "stressIndex": 14,
+      "riskAppetiteIndex": 31,
+      "sectorTilts": {
+        "utilities": "overweight",
+        "healthcare": "overweight",
+        "staples": "overweight",
+        "tech": "underweight",
+        "materials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "bearish",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "QQQ",
+      "direction": "short",
+      "entryPrice": 366.5,
+      "targetPrice": 360,
+      "stopLoss": 369.5,
+      "thesis": "",
+      "catalyst": "Powell hawkish follow-through, global rate shock from BoE, profit-taking after extended rally",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "direction": "short",
+      "entryPrice": 264.61,
+      "targetPrice": 254.39,
+      "stopLoss": 270.23,
+      "thesis": "",
+      "catalyst": "Risk-off rotation, profit-taking in high-beta momentum names, rate sensitivity",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XHB",
+      "direction": "short",
+      "entryPrice": 76.72,
+      "targetPrice": 74.34,
+      "stopLoss": 78.15,
+      "thesis": "",
+      "catalyst": "BoE shock hike repricing global rate expectations, mortgage rate increase, existing home sales weakness",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XLU",
+      "direction": "long",
+      "entryPrice": 33,
+      "targetPrice": 33.49,
+      "stopLoss": 32.65,
+      "thesis": "",
+      "catalyst": "Defensive rotation on risk-off day, relative value after YTD underperformance",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "short",
+      "entryPrice": 43.03,
+      "targetPrice": 41.71,
+      "stopLoss": 43.84,
+      "thesis": "",
+      "catalyst": "Profit-taking after parabolic move, risk-off regime, overbought technical conditions",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "GLD",
+      "direction": "long",
+      "entryPrice": 178,
+      "targetPrice": 180.5,
+      "stopLoss": 176.8,
+      "thesis": "",
+      "catalyst": "Wagner/Russia geopolitical escalation, safe-haven flows on risk-off day, weekend hedge",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "QQQ",
+      "openPrice": 362.21,
+      "highPrice": 364.88,
+      "lowPrice": 357.59,
+      "closePrice": 363.83,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.73,
+      "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $362.21, High $364.88, Low $357.59, Close $363.83."
+    },
+    {
+      "symbol": "TSLA",
+      "openPrice": 259.29,
+      "highPrice": 262.45,
+      "lowPrice": 240.7,
+      "closePrice": 250.21,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 5.44,
+      "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $259.29, High $262.45, Low $240.7, Close $250.21."
+    },
+    {
+      "symbol": "XHB",
+      "openPrice": 76.26,
+      "highPrice": 79.74,
+      "lowPrice": 76.19,
+      "closePrice": 79.55,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.69,
+      "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $76.26, High $79.74, Low $76.19, Close $79.55."
+    },
+    {
+      "symbol": "XLU",
+      "openPrice": 33.1,
+      "highPrice": 33.21,
+      "lowPrice": 32.44,
+      "closePrice": 32.85,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.45,
+      "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $33.1, High $33.21, Low $32.44, Close $32.85."
+    },
+    {
+      "symbol": "NVDA",
+      "openPrice": 42.46,
+      "highPrice": 42.81,
+      "lowPrice": 40.1,
+      "closePrice": 41.88,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.67,
+      "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $42.46, High $42.81, Low $40.1, Close $41.88."
+    },
+    {
+      "symbol": "GLD",
+      "openPrice": 179.6,
+      "highPrice": 179.95,
+      "lowPrice": 177.43,
+      "closePrice": 177.69,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.17,
+      "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $179.6, High $179.95, Low $177.43, Close $177.69."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 50,
+    "targetHitRate": 50,
+    "stopHitRate": 33.3,
+    "avgReturnPercent": 0.75,
+    "profitFactor": 2.05,
+    "winRate": 50,
+    "totalScore": 63.2,
+    "benchmarkReturn": 0.06,
+    "alpha": 0.69
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

@@ -1,0 +1,307 @@
+{
+  "id": "briefing-2023-06-23-1775600612917",
+  "date": "2023-06-23",
+  "generatedAt": "2026-04-07T22:23:32.897Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "bearish",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "SHORT QQQ @ $366.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $360",
+          "implication": "+-1.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $369.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT TSLA @ $264.61",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $254.39",
+          "implication": "+-3.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $270.23",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XHB @ $76.72",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $74.34",
+          "implication": "+-3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $78.15",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XLU @ $33",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $33.49",
+          "implication": "+1.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $32.65",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT NVDA @ $43.03",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $41.71",
+          "implication": "+-3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $43.84",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GLD @ $178",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $180.5",
+          "implication": "+1.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $176.8",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "risk-off",
+  "regimeConfidence": 63,
+  "recommendations": [
+    {
+      "ticker": "QQQ",
+      "direction": "short",
+      "conviction": "high",
+      "rationale": "Nasdaq dropped 1.21% on June 22 after Powell hawkish testimony. Tech/AI names extended after parabolic run. Higher-for-longer rate narrative directly pressures long-duration growth. Risk-off regime + bearish bias favors fading the rally. Narrow breadth (top 7 stocks driving most gains) makes index fragile.",
+      "entryPrice": 366.5,
+      "targetPrice": 360,
+      "stopPrice": 369.5,
+      "riskRewardRatio": 2.17,
+      "stopPercent": 0.82,
+      "catalyst": "Powell hawkish follow-through, global rate shock from BoE, profit-taking after extended rally"
+    },
+    {
+      "ticker": "TSLA",
+      "direction": "short",
+      "conviction": "high",
+      "rationale": "TSLA had rallied ~130% YTD into June 23 on AI/EV enthusiasm. Extremely extended. High beta name vulnerable in risk-off. Consumer discretionary weakness from higher rates. Valuation stretched at ~75x forward earnings. Technical exhaustion signals after parabolic move from $100 to $260+ range.",
+      "entryPrice": 264.61,
+      "targetPrice": 254.39,
+      "stopPrice": 270.23,
+      "riskRewardRatio": 1.82,
+      "stopPercent": 2.12,
+      "catalyst": "Risk-off rotation, profit-taking in high-beta momentum names, rate sensitivity"
+    },
+    {
+      "ticker": "XHB",
+      "direction": "short",
+      "conviction": "medium",
+      "rationale": "SPDR Homebuilders ETF. BoE 50bp surprise signals global rates going higher than expected. Powell confirming more Fed hikes. 30-year mortgage rate pushing toward 7%. Existing home sales declining. Homebuilders had a strong run in 2023 but rate-sensitive to repricing.",
+      "entryPrice": 76.72,
+      "targetPrice": 74.34,
+      "stopPrice": 78.15,
+      "riskRewardRatio": 1.67,
+      "stopPercent": 1.86,
+      "catalyst": "BoE shock hike repricing global rate expectations, mortgage rate increase, existing home sales weakness"
+    },
+    {
+      "ticker": "XLU",
+      "direction": "long",
+      "conviction": "medium",
+      "rationale": "Utilities Select Sector SPDR. Classic risk-off defensive play. Underperformed significantly YTD as money chased AI/tech. Mean reversion candidate on any risk-off day. Dividend yield attractive. Low beta provides portfolio hedge against short positions.",
+      "entryPrice": 33,
+      "targetPrice": 33.49,
+      "stopPrice": 32.65,
+      "riskRewardRatio": 1.43,
+      "stopPercent": 1.05,
+      "catalyst": "Defensive rotation on risk-off day, relative value after YTD underperformance"
+    },
+    {
+      "ticker": "NVDA",
+      "direction": "short",
+      "conviction": "medium",
+      "rationale": "NVDA had surged from ~$300 to ~$430 in just weeks after the blowout May 24 earnings/guidance. The AI frenzy was at peak intensity. After a 30%+ move in under a month, short-term exhaustion likely. Hawkish rate environment and risk-off regime favor fading the most extended momentum names. RSI deeply overbought on multiple timeframes.",
+      "entryPrice": 43.03,
+      "targetPrice": 41.71,
+      "stopPrice": 43.84,
+      "riskRewardRatio": 1.63,
+      "stopPercent": 1.88,
+      "catalyst": "Profit-taking after parabolic move, risk-off regime, overbought technical conditions"
+    },
+    {
+      "ticker": "GLD",
+      "direction": "long",
+      "conviction": "medium",
+      "rationale": "Gold SPDR ETF. Geopolitical risk rising (Wagner mutiny tensions escalating). Safe-haven demand in risk-off environment. Gold held ~$1920 despite hawkish rates, showing resilience. If equity weakness accelerates, gold benefits from flight to safety. Wagner situation could escalate over the weekend, making Friday a good entry for hedging.",
+      "entryPrice": 178,
+      "targetPrice": 180.5,
+      "stopPrice": 176.8,
+      "riskRewardRatio": 2.08,
+      "stopPercent": 0.67,
+      "catalyst": "Wagner/Russia geopolitical escalation, safe-haven flows on risk-off day, weekend hedge"
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10232,
+    "outcomes": [
+      {
+        "symbol": "QQQ",
+        "openPrice": 362.21,
+        "highPrice": 364.88,
+        "lowPrice": 357.59,
+        "closePrice": 363.83,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.73,
+        "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $362.21, High $364.88, Low $357.59, Close $363.83."
+      },
+      {
+        "symbol": "TSLA",
+        "openPrice": 259.29,
+        "highPrice": 262.45,
+        "lowPrice": 240.7,
+        "closePrice": 250.21,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.44,
+        "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $259.29, High $262.45, Low $240.7, Close $250.21."
+      },
+      {
+        "symbol": "XHB",
+        "openPrice": 76.26,
+        "highPrice": 79.74,
+        "lowPrice": 76.19,
+        "closePrice": 79.55,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.69,
+        "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $76.26, High $79.74, Low $76.19, Close $79.55."
+      },
+      {
+        "symbol": "XLU",
+        "openPrice": 33.1,
+        "highPrice": 33.21,
+        "lowPrice": 32.44,
+        "closePrice": 32.85,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.45,
+        "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $33.1, High $33.21, Low $32.44, Close $32.85."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 42.46,
+        "highPrice": 42.81,
+        "lowPrice": 40.1,
+        "closePrice": 41.88,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.67,
+        "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $42.46, High $42.81, Low $40.1, Close $41.88."
+      },
+      {
+        "symbol": "GLD",
+        "openPrice": 179.6,
+        "highPrice": 179.95,
+        "lowPrice": 177.43,
+        "closePrice": 177.69,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.17,
+        "notes": "3-day window (2023-06-23, 2023-06-26, 2023-06-27). Open $179.6, High $179.95, Low $177.43, Close $177.69."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 50,
+      "targetHitRate": 50,
+      "stopHitRate": 33.3,
+      "avgReturnPercent": 0.75,
+      "profitFactor": 2.05,
+      "winRate": 50,
+      "totalScore": 63.2,
+      "benchmarkReturn": 0.06,
+      "alpha": 0.69
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.06,
+    "alpha": 0.69,
+    "fullDepth": true
+  }
+}
