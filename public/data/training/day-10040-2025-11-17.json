@@ -1,0 +1,517 @@
+{
+  "trialId": 10040,
+  "date": "2025-11-17",
+  "dateDisplay": "Monday, November 17, 2025",
+  "generatedAt": "2026-04-07T17:29:55.197Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.92,
+      "nasdaqFuturesChange": -0.84,
+      "dowFuturesChange": -1.18,
+      "russellFuturesChange": -1.96,
+      "vixFuturesChange": 10.32,
+      "vix": 24.69,
+      "vixChange": 10.32,
+      "vixTermStructure": "backwardation",
+      "vix9d": 0,
+      "vix3m": 23.18,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.13,
+      "tenYearYieldChange": -0.36,
+      "twoYearYield": 3.74,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.74,
+      "threeMonthYield": 3.77,
+      "twoTenSpread": 0.39,
+      "threeMoTenYrSpread": 0.36,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 99.55,
+      "dollarIndexChange": -0.04,
+      "eurUsd": 1.16,
+      "eurUsdChange": -0.21,
+      "usdJpy": 155.27,
+      "usdJpyChange": 0.45,
+      "usdCny": 7.11,
+      "usdCnyChange": 0.12,
+      "oilWTI": 60.74,
+      "oilChange": 1.39,
+      "brentOil": 64.89,
+      "brentOilChange": 1.07,
+      "natGasChange": 0.23,
+      "goldPrice": 4061.3,
+      "goldChange": -0.17,
+      "silverChange": -0.35,
+      "copperChange": -0.75,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -3.22,
+      "daxChange": -1.74,
+      "ftseChange": -1.27,
+      "shanghaiChange": -0.81,
+      "hangSengChange": -1.72,
+      "kospiChange": -3.32,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 99.55,
+      "spreadChange": 0.16,
+      "igSpread": -20.64,
+      "igSpreadChange": -0.06,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.96,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -1.57,
+      "xlfChange": -1.91,
+      "xleChange": -1.83,
+      "xlvChange": -0.09,
+      "xlpChange": -0.63,
+      "xluChange": 0.9,
+      "xlreChange": -0.66,
+      "xliChange": -0.98,
+      "xlbChange": -1.52,
+      "xlcChange": -0.13,
+      "xlyChange": -0.94,
+      "smhChange": -1.36,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.93,
+      "ethereumChange": 3.25,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": true,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 30,
+      "daysToNextCPI": 23,
+      "daysToNextNFP": 18,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 3,
+      "sp5DayReturn": -2.34,
+      "sp20DayReturn": -0.93,
+      "nasdaqVsRussell5d": 1.17,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "crisis",
+      "confidence": 90,
+      "directionalBias": "-60",
+      "volatilityRegime": "elevated",
+      "stressIndex": 34,
+      "riskAppetiteIndex": 22,
+      "sectorTilts": {
+        "tech": "underweight",
+        "utilities": "overweight",
+        "healthcare": "overweight",
+        "financials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "MarketContext",
+          "content": "[object Object]",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "DELL",
+      "direction": "short",
+      "entryPrice": 133.76,
+      "targetPrice": 126.45,
+      "stopLoss": 138.46,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 88,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AMD",
+      "direction": "short",
+      "entryPrice": 246.81,
+      "targetPrice": 234.67,
+      "stopLoss": 253.38,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 80,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "short",
+      "entryPrice": 190.17,
+      "targetPrice": 183.61,
+      "stopLoss": 193.7,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "PLTR",
+      "direction": "short",
+      "entryPrice": 174.01,
+      "targetPrice": 166.93,
+      "stopLoss": 179.07,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 65,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LLY",
+      "direction": "long",
+      "entryPrice": 1025.28,
+      "targetPrice": 1048.58,
+      "stopLoss": 1011.1,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 65,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AMZN",
+      "direction": "short",
+      "entryPrice": 234.69,
+      "targetPrice": 228.72,
+      "stopLoss": 238.17,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 58,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 70,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "DELL",
+      "openPrice": 124,
+      "highPrice": 128.41,
+      "lowPrice": 118.87,
+      "closePrice": 119.38,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 10.75,
+      "notes": "3-day window (2025-11-17, 2025-11-18, 2025-11-19). Open $124, High $128.41, Low $118.87, Close $119.38."
+    },
+    {
+      "symbol": "AMD",
+      "openPrice": 242.75,
+      "highPrice": 248.77,
+      "lowPrice": 219.71,
+      "closePrice": 223.55,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 9.42,
+      "notes": "3-day window (2025-11-17, 2025-11-18, 2025-11-19). Open $242.75, High $248.77, Low $219.71, Close $223.55."
+    },
+    {
+      "symbol": "NVDA",
+      "openPrice": 185.97,
+      "highPrice": 189,
+      "lowPrice": 179.65,
+      "closePrice": 186.52,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.92,
+      "notes": "3-day window (2025-11-17, 2025-11-18, 2025-11-19). Open $185.97, High $189, Low $179.65, Close $186.52."
+    },
+    {
+      "symbol": "PLTR",
+      "openPrice": 170.53,
+      "highPrice": 174.24,
+      "lowPrice": 162.42,
+      "closePrice": 165.42,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 4.94,
+      "notes": "3-day window (2025-11-17, 2025-11-18, 2025-11-19). Open $170.53, High $174.24, Low $162.42, Close $165.42."
+    },
+    {
+      "symbol": "LLY",
+      "openPrice": 1003.72,
+      "highPrice": 1055.59,
+      "lowPrice": 998.3,
+      "closePrice": 1049.6,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.37,
+      "notes": "3-day window (2025-11-17, 2025-11-18, 2025-11-19). Open $1003.72, High $1055.59, Low $998.3, Close $1049.6."
+    },
+    {
+      "symbol": "AMZN",
+      "openPrice": 233.25,
+      "highPrice": 234.6,
+      "lowPrice": 218.52,
+      "closePrice": 222.69,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 5.11,
+      "notes": "3-day window (2025-11-17, 2025-11-18, 2025-11-19). Open $233.25, High $234.6, Low $218.52, Close $222.69."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 100,
+    "targetHitRate": 100,
+    "stopHitRate": 16.7,
+    "avgReturnPercent": 5.75,
+    "profitFactor": 10,
+    "winRate": 100,
+    "totalScore": 100,
+    "benchmarkReturn": -0.6,
+    "alpha": 6.35
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 81.7,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 74,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "riskReward": {
+      "avgScoreWinners": 72.5,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 82.5,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 87.7,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "informationEdge": {
+      "avgScoreWinners": 69.2,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 73.8,
+      "avgScoreLosers": 0,
+      "predictivePower": 100
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
