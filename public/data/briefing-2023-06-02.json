@@ -1,0 +1,465 @@
+{
+  "id": "briefing-2023-06-02-1775589490558",
+  "date": "2023-06-02",
+  "generatedAt": "2026-04-07T19:18:10.534Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "bullish",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG KRE @ $39.76",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $42.13",
+          "implication": "+6.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $38.58",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CAT @ $209.07",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $217.15",
+          "implication": "+3.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $203.69",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG IWM @ $175.65",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $180.54",
+          "implication": "+2.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $171.74",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AVGO @ $79",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $81.67",
+          "implication": "+3.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $77.1",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG UNH @ $493.63",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $512.06",
+          "implication": "+3.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $481.34",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG MDB @ $293.96",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $311.99",
+          "implication": "+6.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $283.77",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG LULU @ $328.35",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $343.44",
+          "implication": "+4.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $318.59",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "risk-on",
+  "regimeConfidence": 71,
+  "recommendations": [
+    {
+      "ticker": "KRE",
+      "company": "SPDR S&P Regional Banking ETF",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Regional Banks",
+      "thesis": "Regional banks were the most beaten-down sector in 2023 after SVB/FRC collapses. Debt ceiling resolution + blowout 339K jobs report = dramatically reduced recession and deposit-flight fears. KRE surged 6.21% on June 2 with massive volume. Still 30%+ below pre-SVB levels -- enormous room for short covering continuation. The macro backdrop (strong economy, no default, Fed pause) is maximally supportive for bank stocks.",
+      "entryPrice": 39.76,
+      "targetPrice": 42.13,
+      "stopPrice": 38.58,
+      "riskRewardRatio": 2,
+      "timeframe": "intraday",
+      "catalysts": [
+        "Debt ceiling resolved -- systemic risk removed",
+        "339K jobs = strong economy, healthy loan demand",
+        "Massive short covering in most-shorted sector",
+        "+6.21% momentum with breakout volume"
+      ],
+      "convictionScores": {
+        "overall": 85,
+        "catalystClarity": 92,
+        "technicalSetup": 80,
+        "riskReward": 88,
+        "volumeLiquidity": 82,
+        "marketAlignment": 95,
+        "informationEdge": 70,
+        "timingUrgency": 90
+      }
+    },
+    {
+      "ticker": "CAT",
+      "company": "Caterpillar Inc.",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Industrials",
+      "thesis": "Caterpillar surged ~10% on June 2 as cyclical rotation accelerated on the strongest jobs report of the year. 339K jobs directly confirms construction/infrastructure demand. CHIPS Act and IRA infrastructure spending tailwinds still ramping. CAT is THE bellwether industrial -- the +10% move signals major institutional rotation into cyclicals. When recession fears fade, CAT leads the pack.",
+      "entryPrice": 209.07,
+      "targetPrice": 217.15,
+      "stopPrice": 203.69,
+      "riskRewardRatio": 1.5,
+      "timeframe": "intraday",
+      "catalysts": [
+        "339K jobs = strong construction/infrastructure demand",
+        "Cyclical rotation from growth to value",
+        "Infrastructure spending tailwind (CHIPS Act, IRA)",
+        "+10% institutional rotation signal"
+      ],
+      "convictionScores": {
+        "overall": 80,
+        "catalystClarity": 88,
+        "technicalSetup": 78,
+        "riskReward": 75,
+        "volumeLiquidity": 85,
+        "marketAlignment": 90,
+        "informationEdge": 68,
+        "timingUrgency": 82
+      }
+    },
+    {
+      "ticker": "IWM",
+      "company": "iShares Russell 2000 ETF",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Small Cap Broad",
+      "thesis": "Russell 2000 breaking above its 200-day moving average for the first time since March on massive breadth expansion. Debt ceiling resolution + 339K jobs = recession risk dramatically reduced, which disproportionately benefits small caps. Best small-cap day since Nov 2022 (+3.56%). Technical breakout + macro catalyst + maximum breadth = textbook momentum continuation.",
+      "entryPrice": 175.65,
+      "targetPrice": 180.54,
+      "stopPrice": 171.74,
+      "riskRewardRatio": 1.25,
+      "timeframe": "intraday",
+      "catalysts": [
+        "200-day MA breakout -- first since March",
+        "339K jobs = no recession narrative crystallized",
+        "Debt ceiling signed this weekend",
+        "Short covering across small-cap universe"
+      ],
+      "convictionScores": {
+        "overall": 82,
+        "catalystClarity": 90,
+        "technicalSetup": 85,
+        "riskReward": 70,
+        "volumeLiquidity": 90,
+        "marketAlignment": 92,
+        "informationEdge": 65,
+        "timingUrgency": 85
+      }
+    },
+    {
+      "ticker": "AVGO",
+      "company": "Broadcom Inc.",
+      "direction": "long",
+      "conviction": "medium-high",
+      "sector": "Semiconductors",
+      "thesis": "Broadcom beat earnings after close June 1 and is up +4.84% on June 2. AI infrastructure demand confirmed as broad-based across the semiconductor supply chain, not just NVDA. Less extended than NVDA (+170% YTD and pausing). Apple custom chip partnership + enterprise AI networking demand provide diversified AI exposure. Better risk/reward entry than chasing NVDA at all-time highs.",
+      "entryPrice": 79,
+      "targetPrice": 81.67,
+      "stopPrice": 77.1,
+      "riskRewardRatio": 1.4,
+      "timeframe": "intraday",
+      "catalysts": [
+        "Earnings beat released after close June 1",
+        "AI infrastructure demand broadening beyond NVDA",
+        "Apple custom chip partnership catalyst",
+        "Broad market risk-on + semi sector tailwind"
+      ],
+      "convictionScores": {
+        "overall": 79,
+        "catalystClarity": 88,
+        "technicalSetup": 75,
+        "riskReward": 72,
+        "volumeLiquidity": 85,
+        "marketAlignment": 88,
+        "informationEdge": 70,
+        "timingUrgency": 78
+      }
+    },
+    {
+      "ticker": "UNH",
+      "company": "UnitedHealth Group",
+      "direction": "long",
+      "conviction": "medium-high",
+      "sector": "Healthcare",
+      "thesis": "UNH surged +9.4% on June 2 -- an extraordinary single-day move for a $450B+ market cap name. Recovering from an oversold condition after Medicare Advantage policy concerns drove a selloff. Strong jobs report = healthy insurance enrollment and consumer ability to pay premiums. The magnitude of the move (+9.4% for a mega-cap) signals institutional repositioning, not retail chasing. Quality defensive-growth compounder at a discount.",
+      "entryPrice": 493.63,
+      "targetPrice": 512.06,
+      "stopPrice": 481.34,
+      "riskRewardRatio": 1.5,
+      "timeframe": "intraday",
+      "catalysts": [
+        "Recovery bounce from oversold Medicare Advantage selloff",
+        "339K jobs = insurance enrollment strength",
+        "+9.4% institutional rotation into quality healthcare",
+        "Broad risk-on supports large-cap quality"
+      ],
+      "convictionScores": {
+        "overall": 77,
+        "catalystClarity": 75,
+        "technicalSetup": 80,
+        "riskReward": 78,
+        "volumeLiquidity": 88,
+        "marketAlignment": 82,
+        "informationEdge": 62,
+        "timingUrgency": 75
+      }
+    },
+    {
+      "ticker": "MDB",
+      "company": "MongoDB Inc.",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Software / Cloud Database",
+      "thesis": "MongoDB gapped up ~28% pre-market June 2 on a massive earnings beat. Cloud/data infrastructure demand accelerating as AI workloads require more database capacity. This represents the data layer of the AI stack getting repriced -- proving the AI trade extends beyond chips. Post-earnings gap-ups of this magnitude in bull markets typically see multi-day continuation. High-beta AI infrastructure play with fresh earnings catalyst.",
+      "entryPrice": 293.96,
+      "targetPrice": 311.99,
+      "stopPrice": 283.77,
+      "riskRewardRatio": 1.77,
+      "timeframe": "intraday",
+      "catalysts": [
+        "Massive earnings beat driving ~28% gap-up",
+        "AI-driven database demand acceleration",
+        "Cloud infrastructure spending recovery confirmed",
+        "Post-earnings momentum in bull market regime"
+      ],
+      "convictionScores": {
+        "overall": 74,
+        "catalystClarity": 90,
+        "technicalSetup": 65,
+        "riskReward": 78,
+        "volumeLiquidity": 72,
+        "marketAlignment": 85,
+        "informationEdge": 68,
+        "timingUrgency": 80
+      }
+    },
+    {
+      "ticker": "LULU",
+      "company": "Lululemon Athletica",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Consumer Discretionary",
+      "thesis": "Lululemon surged +11.25% on June 2 after beating earnings and raising full-year guidance. The 339K jobs report confirms the strong consumer spending narrative -- employed consumers spend on premium discretionary brands. Earnings gap-up + raised guidance in a bullish regime is a classic momentum continuation setup. Consumer discretionary directly benefits from the 'no recession' narrative that crystallized on this day.",
+      "entryPrice": 328.35,
+      "targetPrice": 343.44,
+      "stopPrice": 318.59,
+      "riskRewardRatio": 1.55,
+      "timeframe": "intraday",
+      "catalysts": [
+        "Earnings beat + raised full-year guidance",
+        "339K jobs = strong consumer spending power",
+        "Gap-up momentum continuation in bull market",
+        "Premium consumer brand = resilient discretionary spend"
+      ],
+      "convictionScores": {
+        "overall": 73,
+        "catalystClarity": 88,
+        "technicalSetup": 70,
+        "riskReward": 75,
+        "volumeLiquidity": 78,
+        "marketAlignment": 82,
+        "informationEdge": 65,
+        "timingUrgency": 72
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10218,
+    "outcomes": [
+      {
+        "symbol": "KRE",
+        "openPrice": 40.52,
+        "highPrice": 43.8,
+        "lowPrice": 40.29,
+        "closePrice": 43.16,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 8.55,
+        "notes": "3-day window (2023-06-02, 2023-06-05, 2023-06-06). Open $40.52, High $43.8, Low $40.29, Close $43.16."
+      },
+      {
+        "symbol": "CAT",
+        "openPrice": 214.95,
+        "highPrice": 228.27,
+        "lowPrice": 214.01,
+        "closePrice": 226.68,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 8.42,
+        "notes": "3-day window (2023-06-02, 2023-06-05, 2023-06-06). Open $214.95, High $228.27, Low $214.01, Close $226.68."
+      },
+      {
+        "symbol": "IWM",
+        "openPrice": 178.01,
+        "highPrice": 184.96,
+        "lowPrice": 177.45,
+        "closePrice": 184.31,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.93,
+        "notes": "3-day window (2023-06-02, 2023-06-05, 2023-06-06). Open $178.01, High $184.96, Low $177.45, Close $184.31."
+      },
+      {
+        "symbol": "AVGO",
+        "openPrice": 79.06,
+        "highPrice": 82.38,
+        "lowPrice": 77.64,
+        "closePrice": 79,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": 0,
+        "notes": "3-day window (2023-06-02, 2023-06-05, 2023-06-06). Open $79.06, High $82.38, Low $77.64, Close $79."
+      },
+      {
+        "symbol": "UNH",
+        "openPrice": 492,
+        "highPrice": 502.9,
+        "lowPrice": 483.67,
+        "closePrice": 487.57,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.23,
+        "notes": "3-day window (2023-06-02, 2023-06-05, 2023-06-06). Open $492, High $502.9, Low $483.67, Close $487.57."
+      },
+      {
+        "symbol": "MDB",
+        "openPrice": 380.75,
+        "highPrice": 398.89,
+        "lowPrice": 370,
+        "closePrice": 387.62,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 31.86,
+        "notes": "3-day window (2023-06-02, 2023-06-05, 2023-06-06). Open $380.75, High $398.89, Low $370, Close $387.62."
+      },
+      {
+        "symbol": "LULU",
+        "openPrice": 378.23,
+        "highPrice": 386.33,
+        "lowPrice": 354.78,
+        "closePrice": 356.02,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 8.43,
+        "notes": "3-day window (2023-06-02, 2023-06-05, 2023-06-06). Open $378.23, High $386.33, Low $354.78, Close $356.02."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 71.4,
+      "targetHitRate": 85.7,
+      "stopHitRate": 0,
+      "avgReturnPercent": 8.71,
+      "profitFactor": 50.56,
+      "winRate": 71.4,
+      "totalScore": 88.9,
+      "benchmarkReturn": 0.81,
+      "alpha": 7.9
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.81,
+    "alpha": 7.9,
+    "fullDepth": true
+  }
+}
