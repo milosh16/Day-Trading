@@ -85902,6 +85902,509 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10239,
+      "date": "2023-07-05",
+      "generatedAt": "2026-04-07T23:03:05.438Z",
+      "signals": {
+        "spFuturesChange": -0.2,
+        "nasdaqFuturesChange": -0.18,
+        "dowFuturesChange": -0.38,
+        "russellFuturesChange": -1.26,
+        "vixFuturesChange": 8.89,
+        "vix": 15.44,
+        "vixChange": 8.89,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 16.51,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 3.94,
+        "tenYearYieldChange": 2.26,
+        "twoYearYield": 4.54,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 3.94,
+        "threeMonthYield": 5.19,
+        "twoTenSpread": -0.6,
+        "threeMoTenYrSpread": -1.25,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 103.17,
+        "dollarIndexChange": -0.19,
+        "eurUsd": 1.09,
+        "eurUsdChange": -0.26,
+        "usdJpy": 144.49,
+        "usdJpyChange": 0.06,
+        "usdCny": 7.25,
+        "usdCnyChange": 0.46,
+        "oilWTI": 71.8,
+        "oilChange": 0.01,
+        "brentOil": 76.52,
+        "brentOilChange": -0.17,
+        "natGasChange": -1.81,
+        "goldPrice": 1908.7,
+        "goldChange": -0.57,
+        "silverChange": -2.2,
+        "copperChange": -0.89,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -1.7,
+        "daxChange": -2.57,
+        "ftseChange": -2.17,
+        "shanghaiChange": -0.54,
+        "hangSengChange": -3.02,
+        "kospiChange": -0.88,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 128.4,
+        "spreadChange": 0.31,
+        "igSpread": -13.44,
+        "igSpreadChange": 0.72,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.98,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": -0.62,
+        "xlfChange": -0.21,
+        "xleChange": -0.55,
+        "xlvChange": -0.05,
+        "xlpChange": -0.17,
+        "xluChange": 1.14,
+        "xlreChange": 0.5,
+        "xliChange": -0.54,
+        "xlbChange": -2.46,
+        "xlcChange": 0.77,
+        "xlyChange": 0.04,
+        "smhChange": -1.89,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -1.98,
+        "ethereumChange": -3.24,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 210,
+        "daysToNextCPI": 190,
+        "daysToNextNFP": 184,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 1,
+        "sp5DayReturn": 1.56,
+        "sp20DayReturn": 4.05,
+        "nasdaqVsRussell5d": 0.5,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "rotation",
+        "confidence": 53,
+        "directionalBias": "-23",
+        "volatilityRegime": "normal",
+        "stressIndex": 17,
+        "riskAppetiteIndex": 23,
+        "sectorTilts": {}
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "AMAT",
+          "direction": "short",
+          "entryPrice": 145.47,
+          "targetPrice": 141.06,
+          "stopLoss": 148.41,
+          "thesis": "Applied Materials directly exposed to China gallium/germanium export restrictions announced July 3. Semiconductor equipment stocks face double headwind: supply chain disruption + potential Chinese retaliation against US chip equipment makers. AMAT extended ~45% YTD. Post-holiday session with bearish rotation regime. ISM manufacturing at 46.0 confirms capex cycle weakening. Targeting gap-fill from late June rally.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "LRCX",
+          "direction": "short",
+          "entryPrice": 65.1,
+          "targetPrice": 63.13,
+          "stopLoss": 66.38,
+          "thesis": "Lam Research — another semi equipment name directly impacted by China export controls on critical materials. More China revenue exposure than peers (~30% of sales). Extended technically with RSI elevated. Rotation regime favors fading overextended winners. Weak ISM signals cooling capex spend.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "PACW",
+          "direction": "short",
+          "entryPrice": 9.8,
+          "targetPrice": 9.1,
+          "stopLoss": 10.26,
+          "thesis": "PacWest Bancorp remains fragile post-regional banking crisis. Stock bounced off lows but still in structural downtrend. Rising rates and CRE exposure create ongoing pressure. Approaching earnings season with low expectations. Bearish rotation regime supports short in weakest sector names. High short interest creates potential for volatility in either direction — sizing accordingly.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "RH",
+          "direction": "short",
+          "entryPrice": 331.79,
+          "targetPrice": 319.72,
+          "stopLoss": 339.83,
+          "thesis": "Restoration Hardware — high-end consumer discretionary directly tied to housing cycle. ISM manufacturing miss signals broader economic weakness. Student loan restart approaching. Housing market mixed signals. Stock extended from May lows. Bearish rotation should pressure discretionary names with housing exposure.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XOM",
+          "direction": "long",
+          "entryPrice": 107.46,
+          "targetPrice": 110.03,
+          "stopLoss": 105.92,
+          "thesis": "Exxon Mobil benefits from Saudi voluntary production cut extension through August. WTI holding above $70 support. If rotation hits growth/tech names, energy offers relative value as defensive commodity play. XOM trading below 50-day MA — potential bounce setup. Dividend yield provides floor. Contrarian long in a bearish rotation regime — sizing smaller.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "QQQ",
+          "direction": "short",
+          "entryPrice": 370.5,
+          "targetPrice": 364,
+          "stopLoss": 374.5,
+          "thesis": "Nasdaq 100 ETF — broadest expression of the bearish rotation thesis. QQQ up 39% YTD through July 3 with extreme concentration in 7-8 names. Breadth deteriorating (only 25% of S&P above 200-day MA). VIX at 13.6 signals complacency. Fed minutes due July 5 afternoon could inject hawkish volatility. Post-holiday low-volume session increases gap risk. China export restrictions add tech sector headwind.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "AMAT",
+          "openPrice": 144.25,
+          "highPrice": 144.92,
+          "lowPrice": 138.76,
+          "closePrice": 139.57,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.06,
+          "notes": "3-day window (2023-07-05, 2023-07-06, 2023-07-07). Open $144.25, High $144.92, Low $138.76, Close $139.57."
+        },
+        {
+          "symbol": "LRCX",
+          "openPrice": 64.41,
+          "highPrice": 64.61,
+          "lowPrice": 61.17,
+          "closePrice": 61.79,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 5.08,
+          "notes": "3-day window (2023-07-05, 2023-07-06, 2023-07-07). Open $64.41, High $64.61, Low $61.17, Close $61.79."
+        },
+        {
+          "symbol": "PACW",
+          "openPrice": 0,
+          "highPrice": 0,
+          "lowPrice": 0,
+          "closePrice": 0,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": 0,
+          "notes": "data unavailable"
+        },
+        {
+          "symbol": "RH",
+          "openPrice": 330.19,
+          "highPrice": 334,
+          "lowPrice": 319.19,
+          "closePrice": 329.57,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.67,
+          "notes": "3-day window (2023-07-05, 2023-07-06, 2023-07-07). Open $330.19, High $334, Low $319.19, Close $329.57."
+        },
+        {
+          "symbol": "XOM",
+          "openPrice": 107.63,
+          "highPrice": 107.92,
+          "lowPrice": 101.56,
+          "closePrice": 103.16,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -4,
+          "notes": "3-day window (2023-07-05, 2023-07-06, 2023-07-07). Open $107.63, High $107.92, Low $101.56, Close $103.16."
+        },
+        {
+          "symbol": "QQQ",
+          "openPrice": 368.7,
+          "highPrice": 372.01,
+          "lowPrice": 364.52,
+          "closePrice": 366.24,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.15,
+          "notes": "3-day window (2023-07-05, 2023-07-06, 2023-07-07). Open $368.7, High $372.01, Low $364.52, Close $366.24."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 80,
+        "targetHitRate": 60,
+        "stopHitRate": 20,
+        "avgReturnPercent": 1.39,
+        "profitFactor": 2.74,
+        "winRate": 80,
+        "totalScore": 87.5,
+        "benchmarkReturn": 0.28,
+        "alpha": 1.11
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -85915,7 +86418,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T23:01:06.504Z",
+  "lastUpdatedAt": "2026-04-07T23:03:05.453Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -86361,7 +86864,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 79,
+  "fullDepthCurrentTrial": 80,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -86544,7 +87047,8 @@
     "2023-06-28",
     "2023-06-29",
     "2023-06-30",
-    "2023-07-03"
+    "2023-07-03",
+    "2023-07-05"
   ],
   "dateSequence": [
     "2025-09-09",
