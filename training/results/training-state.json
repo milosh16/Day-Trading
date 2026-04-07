@@ -57978,6 +57978,551 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10024,
+      "date": "2024-07-03",
+      "generatedAt": "2026-04-07T01:34:41.898Z",
+      "signals": {
+        "spFuturesChange": 0.51,
+        "nasdaqFuturesChange": 0.88,
+        "dowFuturesChange": -0.06,
+        "russellFuturesChange": 0.14,
+        "vixFuturesChange": 0.5,
+        "vix": 12.09,
+        "vixChange": 0.5,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 14.02,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.36,
+        "tenYearYieldChange": -1.83,
+        "twoYearYield": 4.59,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.52,
+        "threeMonthYield": 5.23,
+        "twoTenSpread": -0.23,
+        "threeMoTenYrSpread": -0.87,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 105.4,
+        "dollarIndexChange": -0.3,
+        "eurUsd": 1.08,
+        "eurUsdChange": 0.42,
+        "usdJpy": 161.62,
+        "usdJpyChange": 0.07,
+        "usdCny": 7.27,
+        "usdCnyChange": -0.01,
+        "oilWTI": 83.88,
+        "oilChange": 1.29,
+        "brentOil": 87.34,
+        "brentOilChange": 1.28,
+        "natGasChange": -0.7,
+        "goldPrice": 2359.8,
+        "goldChange": 1.58,
+        "silverChange": 4.07,
+        "copperChange": 2.52,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": 0.82,
+        "daxChange": 0.41,
+        "ftseChange": 0.86,
+        "shanghaiChange": -0.83,
+        "hangSengChange": 0.28,
+        "kospiChange": 1.11,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 114,
+        "spreadChange": -0.35,
+        "igSpread": -15.16,
+        "igSpreadChange": -0.74,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.95,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 1.35,
+        "xlfChange": -0.31,
+        "xleChange": 0.44,
+        "xlvChange": -0.76,
+        "xlpChange": -0.17,
+        "xluChange": 0.6,
+        "xlreChange": -0.1,
+        "xliChange": 0.36,
+        "xlbChange": 0.75,
+        "xlcChange": 0.03,
+        "xlyChange": 0.64,
+        "smhChange": 2.27,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -5.31,
+        "ethereumChange": -7.24,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 28,
+        "daysToNextCPI": 8,
+        "daysToNextNFP": 2,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 3,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 1.08,
+        "sp20DayReturn": 4.64,
+        "nasdaqVsRussell5d": 1.24,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "rotation",
+        "confidence": 47,
+        "directionalBias": "17",
+        "volatilityRegime": "compressed",
+        "stressIndex": 13,
+        "riskAppetiteIndex": 60,
+        "sectorTilts": {
+          "semiconductors": "overweight",
+          "materials": "overweight",
+          "industrials": "overweight"
+        }
+      },
+      "briefing": {
+        "summary": {
+          "regime": "Rotation (47% confidence)",
+          "directionalBias": "+17 (mildly bullish)",
+          "stressIndex": "13/100 (very low)",
+          "riskAppetite": "60/100 (elevated)",
+          "keyTheme": "Record highs on half-day with muted volume. Tesla delivery beat momentum carrying over. ISM Services contraction (48.8) released morning of July 3 creates cross-current. ADP jobs at 150K (soft). Fed Powell at ECB Sintra signaling patience on cuts but acknowledging disinflation. VIX near 12 = extreme complacency. Hurricane Beryl watch for energy. France election first round relief rally in Europe.",
+          "halfDayImplications": "Thinner liquidity, smaller absolute moves, earlier stops. Institutional desks skeletal ahead of July 4. Momentum trades favored over mean reversion in low-volume tape."
+        },
+        "marketCondition": "neutral",
+        "sections": [
+          {
+            "title": "GeopoliticsAndWar",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "MacroAndCentralBanks",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "CorporateAndEarnings",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "TechAndAIAndSupplyChain",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "EnergyAndCommodities",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "PolicyAndRegulation",
+            "content": "[object Object]",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "TSLA",
+          "direction": "LONG",
+          "entryPrice": 231.26,
+          "targetPrice": 239.83,
+          "stopLoss": 225.55,
+          "thesis": "Tesla is in a multi-day breakout after the deliveries beat reversed a months-long downtrend. Volume was massive on July 2. Half-day sessions favor momentum continuation. The stock produced a 42% rally over the following month. With the market at record highs and risk appetite elevated, TSLA is the highest-conviction momentum name.",
+          "catalyst": "Q2 deliveries beat momentum extending into day 2. 443,956 deliveries vs 439K expected plus record energy storage deployments.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 92,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 85,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "direction": "LONG",
+          "entryPrice": 221,
+          "targetPrice": 225,
+          "stopLoss": 218.5,
+          "thesis": "AAPL in breakout mode to new ATH on AI narrative - strongest catalyst in years. Largest S&P 500 weight benefits from index momentum. Clean technical breakout, no overhead resistance.",
+          "catalyst": "Apple Intelligence momentum post-WWDC. New ATH. Analyst upgrades (Jefferies PT $230). $3.1T market cap.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 95,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 70,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "PARA",
+          "direction": "LONG",
+          "entryPrice": 11.8,
+          "targetPrice": 13,
+          "stopLoss": 10.8,
+          "thesis": "Event-driven M&A trade. $15 cash election creates hard floor once deal announced. At $11.80 entry, significant upside to deal price. M&A plays move independently of broader market.",
+          "catalyst": "Skydance-Paramount merger deal. $15/share cash election for Class B (48% premium to July 1). Deal announcement expected July 7-8.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 60,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 55,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 75,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XOM",
+          "direction": "LONG",
+          "entryPrice": 114.75,
+          "targetPrice": 117.5,
+          "stopLoss": 113,
+          "thesis": "Multiple bullish energy catalysts converging. XOM highest-quality energy name with best liquidity for half-day trade. Oil at 2-month highs directly benefits earnings.",
+          "catalyst": "WTI at 2-month highs. EIA crude draw -12.16M bbls (largest since May 2023). Hurricane Beryl Gulf Coast threat. Summer driving demand.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 65,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CEG",
+          "direction": "LONG",
+          "entryPrice": 206.15,
+          "targetPrice": 213.51,
+          "stopLoss": 200.89,
+          "thesis": "Premier play on AI infrastructure power demand beyond semiconductors. Institutional flows accelerating. ISM contraction may drive rotation into structural growth themes.",
+          "catalyst": "AI data center power demand secular theme. Largest US nuclear fleet (21 reactors, 19,400 MW). +81% YTD. Early innings of AI power trade.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 60,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 55,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "direction": "SHORT",
+          "entryPrice": 122.67,
+          "targetPrice": 119.24,
+          "stopLoss": 125.12,
+          "thesis": "Counter-trend rotation trade. Most crowded position in H1 2024. July 2 underperformance while SPX/QQQ hit records = divergence. Thin half-day volume could accelerate profit-taking. ISM contraction adds risk-off backdrop.",
+          "catalyst": "Down 1.3% July 2 while market hit records - divergence signal. Consolidating after $140 peak. Rotation from mega-cap AI into broader market beginning.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 55,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 50,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 55,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 60,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "TSLA",
+          "openPrice": 234.56,
+          "highPrice": 259.44,
+          "lowPrice": 234.25,
+          "closePrice": 252.94,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -9.37,
+          "notes": "3-day window (2024-07-03, 2024-07-05, 2024-07-08). Open $234.56, High $259.44, Low $234.25, Close $252.94."
+        },
+        {
+          "symbol": "AAPL",
+          "openPrice": 220,
+          "highPrice": 227.85,
+          "lowPrice": 219.03,
+          "closePrice": 227.82,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -3.09,
+          "notes": "3-day window (2024-07-03, 2024-07-05, 2024-07-08). Open $220, High $227.85, Low $219.03, Close $227.82."
+        },
+        {
+          "symbol": "PARA",
+          "openPrice": 0,
+          "highPrice": 0,
+          "lowPrice": 0,
+          "closePrice": 0,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": 0,
+          "notes": "data unavailable"
+        },
+        {
+          "symbol": "XOM",
+          "openPrice": 114.27,
+          "highPrice": 115.66,
+          "lowPrice": 111.42,
+          "closePrice": 112.18,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.24,
+          "notes": "3-day window (2024-07-03, 2024-07-05, 2024-07-08). Open $114.27, High $115.66, Low $111.42, Close $112.18."
+        },
+        {
+          "symbol": "CEG",
+          "openPrice": 205.31,
+          "highPrice": 216.43,
+          "lowPrice": 202.01,
+          "closePrice": 215.73,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -4.65,
+          "notes": "3-day window (2024-07-03, 2024-07-05, 2024-07-08). Open $205.31, High $216.43, Low $202.01, Close $215.73."
+        },
+        {
+          "symbol": "NVDA",
+          "openPrice": 121.66,
+          "highPrice": 130.77,
+          "lowPrice": 121.36,
+          "closePrice": 128.2,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -4.51,
+          "notes": "3-day window (2024-07-03, 2024-07-05, 2024-07-08). Open $121.66, High $130.77, Low $121.36, Close $128.2."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 20,
+        "targetHitRate": 80,
+        "stopHitRate": 100,
+        "avgReturnPercent": -3.88,
+        "profitFactor": 0.1,
+        "winRate": 20,
+        "totalScore": 38.8,
+        "benchmarkReturn": 0.5,
+        "alpha": -4.38
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 75,
+          "avgScoreLosers": 77.3,
+          "predictivePower": 47.8
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 72,
+          "avgScoreLosers": 78.3,
+          "predictivePower": 43.8
+        },
+        "riskReward": {
+          "avgScoreWinners": 68,
+          "avgScoreLosers": 71.5,
+          "predictivePower": 46.5
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 90,
+          "avgScoreLosers": 82.5,
+          "predictivePower": 57.5
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 70,
+          "avgScoreLosers": 73.3,
+          "predictivePower": 46.8
+        },
+        "informationEdge": {
+          "avgScoreWinners": 70,
+          "avgScoreLosers": 68.8,
+          "predictivePower": 51.3
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 65,
+          "avgScoreLosers": 67.5,
+          "predictivePower": 47.5
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -57991,7 +58536,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T01:20:58.779Z",
+  "lastUpdatedAt": "2026-04-07T01:34:41.915Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -58437,7 +58982,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 23,
+  "fullDepthCurrentTrial": 24,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -58564,7 +59109,8 @@
     "2025-04-01",
     "2024-12-16",
     "2025-04-16",
-    "2026-03-11"
+    "2026-03-11",
+    "2024-07-03"
   ],
   "dateSequence": [
     "2025-09-09",
