@@ -1,0 +1,361 @@
+{
+  "id": "briefing-2025-03-25-1775581307975",
+  "date": "2025-03-25",
+  "generatedAt": "2026-04-07T17:01:47.949Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG JPM @ $248.06",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $256.72",
+          "implication": "+3.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $242.46",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GS @ $580.1",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $600.74",
+          "implication": "+3.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $566.68",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CAT @ $341.67",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $354.29",
+          "implication": "+3.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $333.42",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT TSLA @ $278.39",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $266.11",
+          "implication": "+-4.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $286.58",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GM @ $51.46",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $53.54",
+          "implication": "+4.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $50.21",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT AAPL @ $220.73",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $212.32",
+          "implication": "+-3.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $226.17",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 31,
+  "recommendations": [
+    {
+      "ticker": "JPM",
+      "direction": "long",
+      "entryPrice": 248.06,
+      "targetPrice": 256.72,
+      "stopPrice": 242.46,
+      "thesis": "Leading rotation beneficiary into financials. March 24 rally showed strong momentum in banks. Yield curve steepening supports NIM expansion. Consumer confidence data, even if weak, keeps rate-cut narrative alive which supports loan demand. JPM as quality large-cap financials leader captures both the value rotation and the quality premium in uncertain markets.",
+      "catalyst": "Rotation into value/financials + consumer confidence data reinforcing soft-landing narrative",
+      "timeframe": "intraday",
+      "riskRewardRatio": 1.55,
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 72,
+        "technicalSetup": 65,
+        "riskReward": 55,
+        "volumeLiquidity": 85,
+        "marketAlignment": 78,
+        "informationEdge": 50,
+        "timingUrgency": 62
+      }
+    },
+    {
+      "ticker": "GS",
+      "direction": "long",
+      "entryPrice": 580.1,
+      "targetPrice": 600.74,
+      "stopPrice": 566.68,
+      "thesis": "Goldman benefits from rotation trade AND capital markets recovery. M&A pipeline building as CEO confidence improves with tariff fears easing. Trading desk benefits from elevated volatility. More beta than JPM to the financials rotation theme. Post-March 24 momentum continuation play.",
+      "catalyst": "Financials rotation + capital markets recovery on reduced tariff fears",
+      "timeframe": "intraday",
+      "riskRewardRatio": 1.54,
+      "conviction": {
+        "overall": 64,
+        "catalystClarity": 68,
+        "technicalSetup": 62,
+        "riskReward": 52,
+        "volumeLiquidity": 80,
+        "marketAlignment": 75,
+        "informationEdge": 48,
+        "timingUrgency": 60
+      }
+    },
+    {
+      "ticker": "CAT",
+      "direction": "long",
+      "entryPrice": 341.67,
+      "targetPrice": 354.29,
+      "stopPrice": 333.42,
+      "thesis": "Caterpillar is the purest play on the narrower tariff narrative benefiting domestic industrials. Infrastructure spending tailwind continues. As a domestic manufacturer with global reach, narrower sector-specific tariffs remove the worst-case scenario. Rotation from tech into industrials provides flow support. March 24 industrial rally has follow-through potential.",
+      "catalyst": "Narrower April 2 tariff scope + industrial rotation + infrastructure spend",
+      "timeframe": "intraday",
+      "riskRewardRatio": 1.53,
+      "conviction": {
+        "overall": 66,
+        "catalystClarity": 70,
+        "technicalSetup": 63,
+        "riskReward": 60,
+        "volumeLiquidity": 75,
+        "marketAlignment": 76,
+        "informationEdge": 52,
+        "timingUrgency": 64
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "direction": "short",
+      "entryPrice": 278.39,
+      "targetPrice": 266.11,
+      "stopPrice": 286.58,
+      "thesis": "Tesla is the short leg of a rotation pair trade (long GM / short TSLA). Consumer confidence expected to decline, hitting discretionary names. Tesla brand sentiment deteriorating due to Musk political involvement. Auto tariff concerns disproportionately hit high-ASP EVs. In a rotation regime, overvalued growth names like TSLA are source of funds. Deliveries guidance concerns for Q1.",
+      "catalyst": "Weak consumer confidence data + brand headwinds + rotation out of growth",
+      "timeframe": "intraday",
+      "riskRewardRatio": 1.5,
+      "conviction": {
+        "overall": 62,
+        "catalystClarity": 65,
+        "technicalSetup": 58,
+        "riskReward": 68,
+        "volumeLiquidity": 90,
+        "marketAlignment": 70,
+        "informationEdge": 45,
+        "timingUrgency": 55
+      }
+    },
+    {
+      "ticker": "GM",
+      "direction": "long",
+      "entryPrice": 51.46,
+      "targetPrice": 53.54,
+      "stopPrice": 50.21,
+      "thesis": "Long leg of auto pair (long GM / short TSLA). GM benefits from domestic manufacturing narrative under tariff regime. Deep value at ~5x forward earnings. Consumer confidence data is catalyst - even weak data supports rate cut expectations which help auto financing. GM gaining EV market share while TSLA loses it. Rotation into value/domestic cyclicals favors GM.",
+      "catalyst": "Domestic manufacturing tariff beneficiary + value rotation + consumer data catalyst",
+      "timeframe": "intraday",
+      "riskRewardRatio": 1.67,
+      "conviction": {
+        "overall": 65,
+        "catalystClarity": 68,
+        "technicalSetup": 60,
+        "riskReward": 72,
+        "volumeLiquidity": 78,
+        "marketAlignment": 74,
+        "informationEdge": 48,
+        "timingUrgency": 58
+      }
+    },
+    {
+      "ticker": "AAPL",
+      "direction": "short",
+      "entryPrice": 220.73,
+      "targetPrice": 212.32,
+      "stopPrice": 226.17,
+      "thesis": "Apple is the quintessential source-of-funds name in a rotation regime. China supply chain makes it directly exposed to tariff risk even under narrower scope. iPhone demand cycle weakening. No AI catalyst near-term compared to NVDA/META. Mega-cap tech rotation selling pressure continues. Pair this short against long financials/industrials for a rotation-aligned sector pair.",
+      "catalyst": "Mega-cap tech rotation selling + China tariff exposure + weak demand cycle",
+      "timeframe": "intraday",
+      "riskRewardRatio": 1.55,
+      "conviction": {
+        "overall": 60,
+        "catalystClarity": 62,
+        "technicalSetup": 55,
+        "riskReward": 58,
+        "volumeLiquidity": 92,
+        "marketAlignment": 72,
+        "informationEdge": 42,
+        "timingUrgency": 52
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10034,
+    "outcomes": [
+      {
+        "symbol": "JPM",
+        "openPrice": 249.31,
+        "highPrice": 254.67,
+        "lowPrice": 247.18,
+        "closePrice": 248.12,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.02,
+        "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $249.31, High $254.67, Low $247.18, Close $248.12."
+      },
+      {
+        "symbol": "GS",
+        "openPrice": 584.69,
+        "highPrice": 592.64,
+        "lowPrice": 552.55,
+        "closePrice": 558.92,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.65,
+        "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $584.69, High $592.64, Low $552.55, Close $558.92."
+      },
+      {
+        "symbol": "CAT",
+        "openPrice": 343.58,
+        "highPrice": 347.27,
+        "lowPrice": 336.63,
+        "closePrice": 339.3,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.69,
+        "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $343.58, High $347.27, Low $336.63, Close $339.3."
+      },
+      {
+        "symbol": "TSLA",
+        "openPrice": 283.6,
+        "highPrice": 291.85,
+        "lowPrice": 266.51,
+        "closePrice": 273.13,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.89,
+        "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $283.6, High $291.85, Low $266.51, Close $273.13."
+      },
+      {
+        "symbol": "GM",
+        "openPrice": 51.5,
+        "highPrice": 53.29,
+        "lowPrice": 46.26,
+        "closePrice": 47.2,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -8.28,
+        "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $51.5, High $53.29, Low $46.26, Close $47.2."
+      },
+      {
+        "symbol": "AAPL",
+        "openPrice": 220.77,
+        "highPrice": 225.02,
+        "lowPrice": 220.08,
+        "closePrice": 223.85,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.41,
+        "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $220.77, High $225.02, Low $220.08, Close $223.85."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 33.3,
+      "targetHitRate": 0,
+      "stopHitRate": 50,
+      "avgReturnPercent": -2.02,
+      "profitFactor": 0.14,
+      "winRate": 33.3,
+      "totalScore": 35.9,
+      "benchmarkReturn": 0.03,
+      "alpha": -2.05
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 68.5,
+        "avgScoreLosers": 67,
+        "predictivePower": 51.5
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 61.5,
+        "avgScoreLosers": 60,
+        "predictivePower": 51.5
+      },
+      "riskReward": {
+        "avgScoreWinners": 61.5,
+        "avgScoreLosers": 60.5,
+        "predictivePower": 51
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 87.5,
+        "avgScoreLosers": 81.3,
+        "predictivePower": 56.3
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 74,
+        "avgScoreLosers": 74.3,
+        "predictivePower": 49.8
+      },
+      "informationEdge": {
+        "avgScoreWinners": 47.5,
+        "avgScoreLosers": 47.5,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 58.5,
+        "avgScoreLosers": 58.5,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.03,
+    "alpha": -2.05,
+    "fullDepth": true
+  }
+}

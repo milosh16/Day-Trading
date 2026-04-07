@@ -62981,6 +62981,509 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10034,
+      "date": "2025-03-25",
+      "generatedAt": "2026-04-07T17:01:47.949Z",
+      "signals": {
+        "spFuturesChange": 0.16,
+        "nasdaqFuturesChange": 0.46,
+        "dowFuturesChange": 0.01,
+        "russellFuturesChange": -0.66,
+        "vixFuturesChange": 6.88,
+        "vix": 18.33,
+        "vixChange": 6.88,
+        "vixTermStructure": "flat",
+        "vix9d": 0,
+        "vix3m": 19.05,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.31,
+        "tenYearYieldChange": -0.55,
+        "twoYearYield": 4.1,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.66,
+        "threeMonthYield": 4.18,
+        "twoTenSpread": 0.21,
+        "threeMoTenYrSpread": 0.13,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 104.55,
+        "dollarIndexChange": 0.36,
+        "eurUsd": 1.08,
+        "eurUsdChange": -0.15,
+        "usdJpy": 149.95,
+        "usdJpyChange": -0.55,
+        "usdCny": 7.26,
+        "usdCnyChange": 0.05,
+        "oilWTI": 69.65,
+        "oilChange": 0.94,
+        "brentOil": 73.79,
+        "brentOilChange": 1.05,
+        "natGasChange": 0.55,
+        "goldPrice": 3020.9,
+        "goldChange": -0.09,
+        "silverChange": 0.09,
+        "copperChange": 0.64,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": 0.65,
+        "daxChange": -1.17,
+        "ftseChange": 0.3,
+        "shanghaiChange": -0.04,
+        "hangSengChange": 0.6,
+        "kospiChange": 1.08,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 102.95,
+        "spreadChange": 0.05,
+        "igSpread": -16.8,
+        "igSpreadChange": -0.1,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.96,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 0.33,
+        "xlfChange": 0.56,
+        "xleChange": 0.41,
+        "xlvChange": -1.28,
+        "xlpChange": -0.91,
+        "xluChange": -1.6,
+        "xlreChange": -1.2,
+        "xliChange": 0.15,
+        "xlbChange": -0.02,
+        "xlcChange": 1.27,
+        "xlyChange": 0.8,
+        "smhChange": -0.42,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -0.65,
+        "ethereumChange": -2.83,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 43,
+        "daysToNextCPI": 16,
+        "daysToNextNFP": 10,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 3,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 2.89,
+        "sp20DayReturn": -3,
+        "nasdaqVsRussell5d": 2.17,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "rotation",
+        "confidence": 31,
+        "directionalBias": "1",
+        "volatilityRegime": "normal",
+        "stressIndex": 22,
+        "riskAppetiteIndex": 46,
+        "sectorTilts": {}
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "JPM",
+          "direction": "long",
+          "entryPrice": 248.06,
+          "targetPrice": 256.72,
+          "stopLoss": 242.46,
+          "thesis": "Leading rotation beneficiary into financials. March 24 rally showed strong momentum in banks. Yield curve steepening supports NIM expansion. Consumer confidence data, even if weak, keeps rate-cut narrative alive which supports loan demand. JPM as quality large-cap financials leader captures both the value rotation and the quality premium in uncertain markets.",
+          "catalyst": "Rotation into value/financials + consumer confidence data reinforcing soft-landing narrative",
+          "conviction": {
+            "catalystClarity": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 55,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 50,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 62,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "GS",
+          "direction": "long",
+          "entryPrice": 580.1,
+          "targetPrice": 600.74,
+          "stopLoss": 566.68,
+          "thesis": "Goldman benefits from rotation trade AND capital markets recovery. M&A pipeline building as CEO confidence improves with tariff fears easing. Trading desk benefits from elevated volatility. More beta than JPM to the financials rotation theme. Post-March 24 momentum continuation play.",
+          "catalyst": "Financials rotation + capital markets recovery on reduced tariff fears",
+          "conviction": {
+            "catalystClarity": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 62,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 52,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 48,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 60,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CAT",
+          "direction": "long",
+          "entryPrice": 341.67,
+          "targetPrice": 354.29,
+          "stopLoss": 333.42,
+          "thesis": "Caterpillar is the purest play on the narrower tariff narrative benefiting domestic industrials. Infrastructure spending tailwind continues. As a domestic manufacturer with global reach, narrower sector-specific tariffs remove the worst-case scenario. Rotation from tech into industrials provides flow support. March 24 industrial rally has follow-through potential.",
+          "catalyst": "Narrower April 2 tariff scope + industrial rotation + infrastructure spend",
+          "conviction": {
+            "catalystClarity": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 63,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 60,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 76,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 52,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 64,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "direction": "short",
+          "entryPrice": 278.39,
+          "targetPrice": 266.11,
+          "stopLoss": 286.58,
+          "thesis": "Tesla is the short leg of a rotation pair trade (long GM / short TSLA). Consumer confidence expected to decline, hitting discretionary names. Tesla brand sentiment deteriorating due to Musk political involvement. Auto tariff concerns disproportionately hit high-ASP EVs. In a rotation regime, overvalued growth names like TSLA are source of funds. Deliveries guidance concerns for Q1.",
+          "catalyst": "Weak consumer confidence data + brand headwinds + rotation out of growth",
+          "conviction": {
+            "catalystClarity": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 58,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 45,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 55,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "GM",
+          "direction": "long",
+          "entryPrice": 51.46,
+          "targetPrice": 53.54,
+          "stopLoss": 50.21,
+          "thesis": "Long leg of auto pair (long GM / short TSLA). GM benefits from domestic manufacturing narrative under tariff regime. Deep value at ~5x forward earnings. Consumer confidence data is catalyst - even weak data supports rate cut expectations which help auto financing. GM gaining EV market share while TSLA loses it. Rotation into value/domestic cyclicals favors GM.",
+          "catalyst": "Domestic manufacturing tariff beneficiary + value rotation + consumer data catalyst",
+          "conviction": {
+            "catalystClarity": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 60,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 74,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 48,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 58,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "direction": "short",
+          "entryPrice": 220.73,
+          "targetPrice": 212.32,
+          "stopLoss": 226.17,
+          "thesis": "Apple is the quintessential source-of-funds name in a rotation regime. China supply chain makes it directly exposed to tariff risk even under narrower scope. iPhone demand cycle weakening. No AI catalyst near-term compared to NVDA/META. Mega-cap tech rotation selling pressure continues. Pair this short against long financials/industrials for a rotation-aligned sector pair.",
+          "catalyst": "Mega-cap tech rotation selling + China tariff exposure + weak demand cycle",
+          "conviction": {
+            "catalystClarity": {
+              "score": 62,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 55,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 58,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 92,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 42,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 52,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "JPM",
+          "openPrice": 249.31,
+          "highPrice": 254.67,
+          "lowPrice": 247.18,
+          "closePrice": 248.12,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.02,
+          "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $249.31, High $254.67, Low $247.18, Close $248.12."
+        },
+        {
+          "symbol": "GS",
+          "openPrice": 584.69,
+          "highPrice": 592.64,
+          "lowPrice": 552.55,
+          "closePrice": 558.92,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -3.65,
+          "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $584.69, High $592.64, Low $552.55, Close $558.92."
+        },
+        {
+          "symbol": "CAT",
+          "openPrice": 343.58,
+          "highPrice": 347.27,
+          "lowPrice": 336.63,
+          "closePrice": 339.3,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.69,
+          "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $343.58, High $347.27, Low $336.63, Close $339.3."
+        },
+        {
+          "symbol": "TSLA",
+          "openPrice": 283.6,
+          "highPrice": 291.85,
+          "lowPrice": 266.51,
+          "closePrice": 273.13,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.89,
+          "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $283.6, High $291.85, Low $266.51, Close $273.13."
+        },
+        {
+          "symbol": "GM",
+          "openPrice": 51.5,
+          "highPrice": 53.29,
+          "lowPrice": 46.26,
+          "closePrice": 47.2,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -8.28,
+          "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $51.5, High $53.29, Low $46.26, Close $47.2."
+        },
+        {
+          "symbol": "AAPL",
+          "openPrice": 220.77,
+          "highPrice": 225.02,
+          "lowPrice": 220.08,
+          "closePrice": 223.85,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.41,
+          "notes": "3-day window (2025-03-25, 2025-03-26, 2025-03-27). Open $220.77, High $225.02, Low $220.08, Close $223.85."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 33.3,
+        "targetHitRate": 0,
+        "stopHitRate": 50,
+        "avgReturnPercent": -2.02,
+        "profitFactor": 0.14,
+        "winRate": 33.3,
+        "totalScore": 35.9,
+        "benchmarkReturn": 0.03,
+        "alpha": -2.05
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 68.5,
+          "avgScoreLosers": 67,
+          "predictivePower": 51.5
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 61.5,
+          "avgScoreLosers": 60,
+          "predictivePower": 51.5
+        },
+        "riskReward": {
+          "avgScoreWinners": 61.5,
+          "avgScoreLosers": 60.5,
+          "predictivePower": 51
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 87.5,
+          "avgScoreLosers": 81.3,
+          "predictivePower": 56.3
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 74,
+          "avgScoreLosers": 74.3,
+          "predictivePower": 49.8
+        },
+        "informationEdge": {
+          "avgScoreWinners": 47.5,
+          "avgScoreLosers": 47.5,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 58.5,
+          "avgScoreLosers": 58.5,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -62994,7 +63497,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T16:59:10.448Z",
+  "lastUpdatedAt": "2026-04-07T17:01:47.978Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -63440,7 +63943,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 33,
+  "fullDepthCurrentTrial": 34,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -63577,7 +64080,8 @@
     "2025-10-28",
     "2024-08-23",
     "2024-11-18",
-    "2024-10-04"
+    "2024-10-04",
+    "2025-03-25"
   ],
   "dateSequence": [
     "2025-09-09",
