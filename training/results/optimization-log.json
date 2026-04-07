@@ -928,6 +928,191 @@
           "trend": "stable"
         }
       }
+    },
+    {
+      "trial": 174,
+      "timestamp": "2026-04-07T18:27:23.594Z",
+      "regimeChanges": [
+        {
+          "regime": "rotation",
+          "dimensionChanges": [
+            {
+              "dimension": "catalystClarity",
+              "old": 0.2,
+              "new": 0.197,
+              "delta": -0.003
+            },
+            {
+              "dimension": "technicalSetup",
+              "old": 0.15,
+              "new": 0.152,
+              "delta": 0.002
+            },
+            {
+              "dimension": "riskReward",
+              "old": 0.15,
+              "new": 0.149,
+              "delta": -0.001
+            },
+            {
+              "dimension": "volumeLiquidity",
+              "old": 0.1,
+              "new": 0.104,
+              "delta": 0.004
+            },
+            {
+              "dimension": "informationEdge",
+              "old": 0.15,
+              "new": 0.149,
+              "delta": -0.001
+            },
+            {
+              "dimension": "timingUrgency",
+              "old": 0.1,
+              "new": 0.098,
+              "delta": -0.002
+            }
+          ]
+        },
+        {
+          "regime": "range-bound",
+          "dimensionChanges": [
+            {
+              "dimension": "catalystClarity",
+              "old": 0.2,
+              "new": 0.195,
+              "delta": -0.005
+            },
+            {
+              "dimension": "technicalSetup",
+              "old": 0.15,
+              "new": 0.151,
+              "delta": 0.001
+            },
+            {
+              "dimension": "riskReward",
+              "old": 0.15,
+              "new": 0.151,
+              "delta": 0.001
+            },
+            {
+              "dimension": "volumeLiquidity",
+              "old": 0.1,
+              "new": 0.092,
+              "delta": -0.008
+            },
+            {
+              "dimension": "marketAlignment",
+              "old": 0.15,
+              "new": 0.162,
+              "delta": 0.012
+            },
+            {
+              "dimension": "informationEdge",
+              "old": 0.15,
+              "new": 0.147,
+              "delta": -0.003
+            },
+            {
+              "dimension": "timingUrgency",
+              "old": 0.1,
+              "new": 0.101,
+              "delta": 0.001
+            }
+          ]
+        },
+        {
+          "regime": "event-driven",
+          "dimensionChanges": [
+            {
+              "dimension": "catalystClarity",
+              "old": 0.2,
+              "new": 0.199,
+              "delta": -0.001
+            },
+            {
+              "dimension": "technicalSetup",
+              "old": 0.15,
+              "new": 0.154,
+              "delta": 0.004
+            },
+            {
+              "dimension": "riskReward",
+              "old": 0.15,
+              "new": 0.149,
+              "delta": -0.001
+            },
+            {
+              "dimension": "volumeLiquidity",
+              "old": 0.1,
+              "new": 0.102,
+              "delta": 0.002
+            },
+            {
+              "dimension": "marketAlignment",
+              "old": 0.15,
+              "new": 0.149,
+              "delta": -0.001
+            },
+            {
+              "dimension": "informationEdge",
+              "old": 0.15,
+              "new": 0.148,
+              "delta": -0.002
+            }
+          ]
+        }
+      ],
+      "insightsAdded": [],
+      "insightsRetired": [],
+      "counterfactual": {
+        "improvement": 0,
+        "recommendation": "neutral"
+      },
+      "regimePerformance": {
+        "range-bound": {
+          "trials": 9,
+          "avgScore": 67.97,
+          "avgWinRate": 53.12,
+          "avgAlpha": 1.9,
+          "trend": "stable"
+        },
+        "risk-off": {
+          "trials": 3,
+          "avgScore": 80.27,
+          "avgWinRate": 65.57,
+          "avgAlpha": 6.4,
+          "trend": "stable"
+        },
+        "crisis": {
+          "trials": 3,
+          "avgScore": 88.57,
+          "avgWinRate": 84.13,
+          "avgAlpha": 4.08,
+          "trend": "stable"
+        },
+        "rotation": {
+          "trials": 7,
+          "avgScore": 60.73,
+          "avgWinRate": 49.99,
+          "avgAlpha": 1.21,
+          "trend": "stable"
+        },
+        "risk-on": {
+          "trials": 4,
+          "avgScore": 70.73,
+          "avgWinRate": 59.75,
+          "avgAlpha": 1.35,
+          "trend": "stable"
+        },
+        "event-driven": {
+          "trials": 4,
+          "avgScore": 76.6,
+          "avgWinRate": 62.47,
+          "avgAlpha": 3.79,
+          "trend": "stable"
+        }
+      }
     }
   ]
 }
