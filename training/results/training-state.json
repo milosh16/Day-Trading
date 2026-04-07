@@ -85419,6 +85419,489 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10238,
+      "date": "2023-07-03",
+      "generatedAt": "2026-04-07T23:01:06.495Z",
+      "signals": {
+        "spFuturesChange": 0.12,
+        "nasdaqFuturesChange": 0.21,
+        "dowFuturesChange": 0.03,
+        "russellFuturesChange": 0.43,
+        "vixFuturesChange": -0.15,
+        "vix": 13.57,
+        "vixChange": -0.15,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 16.07,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 3.86,
+        "tenYearYieldChange": 1.02,
+        "twoYearYield": 4.47,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 3.87,
+        "threeMonthYield": 5.14,
+        "twoTenSpread": -0.61,
+        "threeMoTenYrSpread": -1.28,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 102.99,
+        "dollarIndexChange": 0.08,
+        "eurUsd": 1.09,
+        "eurUsdChange": 0.05,
+        "usdJpy": 144.58,
+        "usdJpyChange": 0.13,
+        "usdCny": 7.24,
+        "usdCnyChange": -0.04,
+        "oilWTI": 69.79,
+        "oilChange": -1.2,
+        "brentOil": 74.65,
+        "brentOilChange": -0.33,
+        "natGasChange": -3.18,
+        "goldPrice": 1921.7,
+        "goldChange": 0.03,
+        "silverChange": 0.38,
+        "copperChange": 1.02,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -0.98,
+        "daxChange": -0.26,
+        "ftseChange": -0.1,
+        "shanghaiChange": 0.04,
+        "hangSengChange": 0.57,
+        "kospiChange": -0.35,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 127.25,
+        "spreadChange": 0.69,
+        "igSpread": -14.98,
+        "igSpreadChange": 0.6,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1.01,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": -0.21,
+        "xlfChange": 0.56,
+        "xleChange": 0.23,
+        "xlvChange": -0.82,
+        "xlpChange": 0.78,
+        "xluChange": 0.75,
+        "xlreChange": 0.8,
+        "xliChange": 0.02,
+        "xlbChange": 0.37,
+        "xlcChange": 0.34,
+        "xlyChange": 1.21,
+        "smhChange": 0.89,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -1.22,
+        "ethereumChange": -0.96,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 212,
+        "daysToNextCPI": 192,
+        "daysToNextNFP": 186,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 3,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 2.93,
+        "sp20DayReturn": 0,
+        "nasdaqVsRussell5d": -0.43,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "rotation",
+        "confidence": 35,
+        "directionalBias": "5",
+        "volatilityRegime": "normal",
+        "stressIndex": 11,
+        "riskAppetiteIndex": 56,
+        "sectorTilts": {}
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [
+          {
+            "title": "Macro",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Geopolitical",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "FedCentral",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "SectorRotation",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Technicals",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Flows",
+            "content": "[object Object]",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "JPM",
+          "direction": "long",
+          "entryPrice": 144.8,
+          "targetPrice": 146.2,
+          "stopLoss": 143.8,
+          "thesis": "Stress test all-clear catalyst still being digested. JPM raised quarterly dividend to $1.05 from $1.00 (announced June 30). New quarter flows favor mega-cap financials. Pre-holiday bullish bias. JPM closed June 30 at ~$143.80, likely gaps up on continued post-stress-test momentum and new quarter buying.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "WFC",
+          "direction": "long",
+          "entryPrice": 42.5,
+          "targetPrice": 43.3,
+          "stopLoss": 41.9,
+          "thesis": "WFC raised dividend by 17% to $0.35/quarter post stress test (biggest % increase among major banks). Asset cap removal speculation still in play. Closed June 30 ~$42.20. New quarter inflows + dividend catalyst = continuation. WFC lagged JPM in H1 — more room to catch up in rotation.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XOM",
+          "direction": "long",
+          "entryPrice": 107,
+          "targetPrice": 108.5,
+          "stopLoss": 105.8,
+          "thesis": "Saudi voluntary 1M bpd cut effective July 1 — first trading day to price this in fully. WTI ~$70.50 with bullish supply setup. XOM closed June 30 ~$106.50, bouncing off May-June lows. New quarter starts fresh — energy was H1 laggard, rotation thesis favors catch-up.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "META",
+          "direction": "long",
+          "entryPrice": 287.5,
+          "targetPrice": 291,
+          "stopLoss": 284.5,
+          "thesis": "META +138% YTD through June 30 — Year of Efficiency narrative paying off. Threads (Twitter competitor) launching this week — massive buzz pre-July 4. New quarter flows favor momentum names. Closed June 30 ~$286.98. Less stretched than NVDA or TSLA on valuation basis. Threads launch catalyst imminent.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "direction": "long",
+          "entryPrice": 262,
+          "targetPrice": 267,
+          "stopLoss": 257.5,
+          "thesis": "TSLA reported record Q2 deliveries on July 2 (Sunday) — 466,140 vehicles vs ~445K expected. This is the first trading session to react. Massive beat should drive gap-up and momentum. TSLA closed June 30 at ~$261.77. Delivery beat + new quarter + momentum = bullish open.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "JPM",
+          "openPrice": 146.19,
+          "highPrice": 147.48,
+          "lowPrice": 141.44,
+          "closePrice": 143.21,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.1,
+          "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $146.19, High $147.48, Low $141.44, Close $143.21."
+        },
+        {
+          "symbol": "WFC",
+          "openPrice": 42.88,
+          "highPrice": 43.62,
+          "lowPrice": 42.24,
+          "closePrice": 42.89,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.92,
+          "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $42.88, High $43.62, Low $42.24, Close $42.89."
+        },
+        {
+          "symbol": "XOM",
+          "openPrice": 107.49,
+          "highPrice": 108.46,
+          "lowPrice": 102.43,
+          "closePrice": 102.92,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -3.81,
+          "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $107.49, High $108.46, Low $102.43, Close $102.92."
+        },
+        {
+          "symbol": "META",
+          "openPrice": 286.7,
+          "highPrice": 298.12,
+          "lowPrice": 284.85,
+          "closePrice": 291.99,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 1.56,
+          "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $286.7, High $298.12, Low $284.85, Close $291.99."
+        },
+        {
+          "symbol": "TSLA",
+          "openPrice": 276.49,
+          "highPrice": 284.25,
+          "lowPrice": 272.88,
+          "closePrice": 276.54,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 5.55,
+          "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $276.49, High $284.25, Low $272.88, Close $276.54."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 60,
+        "targetHitRate": 80,
+        "stopHitRate": 40,
+        "avgReturnPercent": 0.62,
+        "profitFactor": 1.64,
+        "winRate": 60,
+        "totalScore": 69.1,
+        "benchmarkReturn": 0.2,
+        "alpha": 0.42
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -85432,7 +85915,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T22:58:25.523Z",
+  "lastUpdatedAt": "2026-04-07T23:01:06.504Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -85878,7 +86361,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 78,
+  "fullDepthCurrentTrial": 79,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -86060,7 +86543,8 @@
     "2023-06-27",
     "2023-06-28",
     "2023-06-29",
-    "2023-06-30"
+    "2023-06-30",
+    "2023-07-03"
   ],
   "dateSequence": [
     "2025-09-09",

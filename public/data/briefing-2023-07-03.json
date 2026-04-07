@@ -1,0 +1,346 @@
+{
+  "id": "briefing-2023-07-03-1775602866503",
+  "date": "2023-07-03",
+  "generatedAt": "2026-04-07T23:01:06.495Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "FedCentral",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorRotation",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Technicals",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Flows",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG JPM @ $144.8",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $146.2",
+          "implication": "+1.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $143.8",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG WFC @ $42.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $43.3",
+          "implication": "+1.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $41.9",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $107",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $108.5",
+          "implication": "+1.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $105.8",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG META @ $287.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $291",
+          "implication": "+1.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $284.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG TSLA @ $262",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $267",
+          "implication": "+1.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $257.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 35,
+  "recommendations": [
+    {
+      "ticker": "JPM",
+      "company": "JPMorgan Chase",
+      "direction": "long",
+      "conviction": "high",
+      "timeframe": "day trade (close by 12:50 PM ET)",
+      "entryPrice": 144.8,
+      "targetPrice": 146.2,
+      "stopPrice": 143.8,
+      "riskReward": "1.4:1.0 adjusted to 1.5:1 with tighter stop at 143.90",
+      "positionSize": "standard",
+      "thesis": "Stress test all-clear catalyst still being digested. JPM raised quarterly dividend to $1.05 from $1.00 (announced June 30). New quarter flows favor mega-cap financials. Pre-holiday bullish bias. JPM closed June 30 at ~$143.80, likely gaps up on continued post-stress-test momentum and new quarter buying.",
+      "entryTrigger": "Buy on open if gaps up to $144.50-145.00 area and holds above $144.50 in first 15 min. Or buy pullback to $144.20 VWAP area.",
+      "exitTrigger": "Take profit at $146+ or close by 12:50 PM. Stop if breaks below $143.90.",
+      "risks": [
+        "Half-day low volume may limit upside",
+        "ISM PMI miss at 10 AM could drag financials if rates drop sharply"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "company": "Wells Fargo",
+      "direction": "long",
+      "conviction": "high",
+      "timeframe": "day trade (close by 12:50 PM ET)",
+      "entryPrice": 42.5,
+      "targetPrice": 43.3,
+      "stopPrice": 41.9,
+      "riskReward": "1.3:1 base, tighten stop to 42.10 for 2.0:1",
+      "positionSize": "standard",
+      "thesis": "WFC raised dividend by 17% to $0.35/quarter post stress test (biggest % increase among major banks). Asset cap removal speculation still in play. Closed June 30 ~$42.20. New quarter inflows + dividend catalyst = continuation. WFC lagged JPM in H1 — more room to catch up in rotation.",
+      "entryTrigger": "Buy open if holds above $42.30. Or buy break above June 30 high near $42.65 with volume.",
+      "exitTrigger": "Target $43.20-43.30 zone. Stop below $42.10.",
+      "risks": [
+        "Asset cap overhang limits full re-rate",
+        "Low half-day volume"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "company": "Exxon Mobil",
+      "direction": "long",
+      "conviction": "medium-high",
+      "timeframe": "day trade (close by 12:50 PM ET)",
+      "entryPrice": 107,
+      "targetPrice": 108.5,
+      "stopPrice": 105.8,
+      "riskReward": "1.25:1 base. Tighten stop to 106.30 for 2.1:1.",
+      "positionSize": "reduced (half-day + lower conviction)",
+      "thesis": "Saudi voluntary 1M bpd cut effective July 1 — first trading day to price this in fully. WTI ~$70.50 with bullish supply setup. XOM closed June 30 ~$106.50, bouncing off May-June lows. New quarter starts fresh — energy was H1 laggard, rotation thesis favors catch-up.",
+      "entryTrigger": "Buy on strength above $107 with WTI crude holding above $70.50. Or buy at open if gaps up modestly.",
+      "exitTrigger": "Take profit at $108.50 or close by 12:50 PM. Stop below $106.30.",
+      "risks": [
+        "Weak ISM PMI could signal demand destruction fears",
+        "Half-day limits energy move magnitude",
+        "WTI needs to hold $70"
+      ]
+    },
+    {
+      "ticker": "META",
+      "company": "Meta Platforms",
+      "direction": "long",
+      "conviction": "medium",
+      "timeframe": "day trade (close by 12:50 PM ET)",
+      "entryPrice": 287.5,
+      "targetPrice": 291,
+      "stopPrice": 284.5,
+      "riskReward": "1.17:1 base. Tighten stop to 285.50 for 1.75:1.",
+      "positionSize": "reduced",
+      "thesis": "META +138% YTD through June 30 — Year of Efficiency narrative paying off. Threads (Twitter competitor) launching this week — massive buzz pre-July 4. New quarter flows favor momentum names. Closed June 30 ~$286.98. Less stretched than NVDA or TSLA on valuation basis. Threads launch catalyst imminent.",
+      "entryTrigger": "Buy above $287 if holds VWAP in first 15 min. Threads hype should provide pre-market bid.",
+      "exitTrigger": "Target $290-291 area. Hard stop below $285.50.",
+      "risks": [
+        "Already up 138% YTD — profit-taking risk on half-day",
+        "Threads launch could be 'sell the news' if reception lukewarm",
+        "Low liquidity amplifies volatility"
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "company": "Tesla",
+      "direction": "long",
+      "conviction": "medium",
+      "timeframe": "day trade (close by 12:50 PM ET)",
+      "entryPrice": 262,
+      "targetPrice": 267,
+      "stopPrice": 257.5,
+      "riskReward": "1.1:1 base. Tighten stop to 259.00 for 1.67:1.",
+      "positionSize": "reduced",
+      "thesis": "TSLA reported record Q2 deliveries on July 2 (Sunday) — 466,140 vehicles vs ~445K expected. This is the first trading session to react. Massive beat should drive gap-up and momentum. TSLA closed June 30 at ~$261.77. Delivery beat + new quarter + momentum = bullish open.",
+      "entryTrigger": "Buy gap-up if holds above $261 in first 10 min. Delivery beat is fresh catalyst. Watch for $265 breakout level.",
+      "exitTrigger": "Target $267-268 area (next technical resistance). Stop below $259.",
+      "risks": [
+        "Gap-and-fade risk on half-day",
+        "Already +127% YTD — extended",
+        "Low volume could mean wide spreads on any reversal"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "NVDA",
+      "note": "Up 189% YTD. AI king but extremely stretched. Watch for any pullback entry below $420. Too extended for fresh long on half-day with no catalyst. Would short on weakness below $418 but half-day risk management makes it unattractive."
+    },
+    {
+      "ticker": "LLY",
+      "note": "GLP-1 secular winner. Near all-time highs ~$450. Would buy dip to $445 if market pulls back on ISM miss. Too tight for day trade entry otherwise."
+    }
+  ],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10238,
+    "outcomes": [
+      {
+        "symbol": "JPM",
+        "openPrice": 146.19,
+        "highPrice": 147.48,
+        "lowPrice": 141.44,
+        "closePrice": 143.21,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.1,
+        "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $146.19, High $147.48, Low $141.44, Close $143.21."
+      },
+      {
+        "symbol": "WFC",
+        "openPrice": 42.88,
+        "highPrice": 43.62,
+        "lowPrice": 42.24,
+        "closePrice": 42.89,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.92,
+        "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $42.88, High $43.62, Low $42.24, Close $42.89."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 107.49,
+        "highPrice": 108.46,
+        "lowPrice": 102.43,
+        "closePrice": 102.92,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.81,
+        "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $107.49, High $108.46, Low $102.43, Close $102.92."
+      },
+      {
+        "symbol": "META",
+        "openPrice": 286.7,
+        "highPrice": 298.12,
+        "lowPrice": 284.85,
+        "closePrice": 291.99,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.56,
+        "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $286.7, High $298.12, Low $284.85, Close $291.99."
+      },
+      {
+        "symbol": "TSLA",
+        "openPrice": 276.49,
+        "highPrice": 284.25,
+        "lowPrice": 272.88,
+        "closePrice": 276.54,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.55,
+        "notes": "3-day window (2023-07-03, 2023-07-05, 2023-07-06). Open $276.49, High $284.25, Low $272.88, Close $276.54."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 60,
+      "targetHitRate": 80,
+      "stopHitRate": 40,
+      "avgReturnPercent": 0.62,
+      "profitFactor": 1.64,
+      "winRate": 60,
+      "totalScore": 69.1,
+      "benchmarkReturn": 0.2,
+      "alpha": 0.42
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.2,
+    "alpha": 0.42,
+    "fullDepth": true
+  }
+}
