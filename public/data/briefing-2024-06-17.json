@@ -1,0 +1,403 @@
+{
+  "id": "briefing-2024-06-17-1775586334732",
+  "date": "2024-06-17",
+  "generatedAt": "2026-04-07T18:25:34.713Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG AVGO @ $173.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $180.56",
+          "implication": "+4.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $168.96",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ADBE @ $525.31",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $550.09",
+          "implication": "+4.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $512.43",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $131.88",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $137.42",
+          "implication": "+4.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $128.36",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG VST @ $87.59",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $92.68",
+          "implication": "+5.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $85.04",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT O @ $53.37",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $51.34",
+          "implication": "+-3.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $54.69",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT MPC @ $170.07",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $162.43",
+          "implication": "+-4.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $174.37",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 50,
+  "recommendations": [
+    {
+      "ticker": "AVGO",
+      "direction": "long",
+      "entryPrice": 173.5,
+      "targetPrice": 180.56,
+      "stopPrice": 168.96,
+      "timeframe": "Intraday (June 17)",
+      "thesis": "Post-earnings momentum continuation. Broadcom surged ~12% on June 14 after blowout Q2 earnings, raised guidance, and 10:1 split announcement. Monday opens with analyst upgrades rolling in, institutional rebalancing, and retail FOMO. AI custom chip and networking demand validated. Entry on first pullback from open, target +4.1% intraday move, stop -2.6%.",
+      "riskReward": 1.56,
+      "positionSize": "8% of portfolio",
+      "conviction": {
+        "catalystClarity": 92,
+        "technicalSetup": 78,
+        "riskReward": 72,
+        "volumeLiquidity": 88,
+        "marketAlignment": 90,
+        "informationEdge": 75,
+        "timingUrgency": 85,
+        "overall": 83
+      },
+      "keyRisks": [
+        "Gap-and-fade after large Friday move",
+        "Profit-taking from Friday buyers",
+        "Broad tech reversal"
+      ],
+      "entryTrigger": "Buy first 15-min pullback that holds above VWAP, or breakout above Friday high with volume confirmation",
+      "exitTrigger": "Close below VWAP after first hour, or target hit"
+    },
+    {
+      "ticker": "ADBE",
+      "direction": "long",
+      "entryPrice": 525.31,
+      "targetPrice": 550.09,
+      "stopPrice": 512.43,
+      "timeframe": "Intraday (June 17)",
+      "thesis": "Post-earnings gap continuation. Adobe surged ~15% on June 14 after strong Q2 beat and raised guidance. AI Firefly features driving incremental revenue. Stock had been under pressure from AI disruption fears — earnings proved model is working. Monday sees continued analyst upgrade cycle and short covering. Entry near open, target +4.7%, stop -2.5%.",
+      "riskReward": 1.92,
+      "positionSize": "7% of portfolio",
+      "conviction": {
+        "catalystClarity": 90,
+        "technicalSetup": 80,
+        "riskReward": 82,
+        "volumeLiquidity": 85,
+        "marketAlignment": 88,
+        "informationEdge": 78,
+        "timingUrgency": 82,
+        "overall": 84
+      },
+      "keyRisks": [
+        "Profit-taking after 15% Friday surge",
+        "Broader tech rotation",
+        "Gap fill risk"
+      ],
+      "entryTrigger": "Buy if holds above $525 support (approx 50% of Friday's range) in first 30 min, or break above Friday close with volume",
+      "exitTrigger": "Close below $520 intraday, or target hit"
+    },
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "entryPrice": 131.88,
+      "targetPrice": 137.42,
+      "stopPrice": 128.36,
+      "timeframe": "Intraday (June 17)",
+      "thesis": "World's most valuable company momentum. Post-split retail accessibility driving demand. AI narrative peak momentum. S&P 500 rebalancing flows (weight increase). Closed Friday ~$131 area post-split. Continuation toward $135+ as institutions add. Entry on pullback to VWAP, target +4.2%, stop -2.7%.",
+      "riskReward": 1.57,
+      "positionSize": "6% of portfolio",
+      "conviction": {
+        "catalystClarity": 80,
+        "technicalSetup": 70,
+        "riskReward": 65,
+        "volumeLiquidity": 95,
+        "marketAlignment": 92,
+        "informationEdge": 60,
+        "timingUrgency": 70,
+        "overall": 76
+      },
+      "keyRisks": [
+        "Extremely extended on all timeframes",
+        "Mean reversion risk after parabolic run",
+        "Crowded long trade"
+      ],
+      "entryTrigger": "Buy pullback to VWAP or break of prior day high with volume. Do NOT chase gap up.",
+      "exitTrigger": "Break below prior day low, or target hit. Tight trail after +2%."
+    },
+    {
+      "ticker": "VST",
+      "direction": "long",
+      "entryPrice": 87.59,
+      "targetPrice": 92.68,
+      "stopPrice": 85.04,
+      "timeframe": "Intraday (June 17)",
+      "thesis": "AI power demand theme accelerating. Vistra is the leading power generation play for data center electricity demand. Utilities sector showing unusual strength driven by this secular theme rather than defensive positioning. Continuation of multi-week momentum. Entry near open, target +5.8%, stop -2.9%.",
+      "riskReward": 2,
+      "positionSize": "5% of portfolio",
+      "conviction": {
+        "catalystClarity": 75,
+        "technicalSetup": 82,
+        "riskReward": 85,
+        "volumeLiquidity": 65,
+        "marketAlignment": 78,
+        "informationEdge": 70,
+        "timingUrgency": 68,
+        "overall": 75
+      },
+      "keyRisks": [
+        "Thematic trade can reverse quickly on sentiment shift",
+        "Lower liquidity than mega-caps",
+        "Utility sector can gap on rate moves"
+      ],
+      "entryTrigger": "Buy above prior day high with volume, or first pullback to rising 9 EMA on 15-min chart",
+      "exitTrigger": "Break below prior day low, or target hit"
+    },
+    {
+      "ticker": "O",
+      "direction": "short",
+      "entryPrice": 53.37,
+      "targetPrice": 51.34,
+      "stopPrice": 54.69,
+      "timeframe": "Intraday (June 17)",
+      "thesis": "Rate-sensitive REIT under pressure from hawkish Fed dot plot. Only 1 rate cut priced for 2024 is directly negative for REITs. Real estate is the worst-positioned sector in current rotation regime. Money flowing out of income/defensive into growth/AI. Realty Income is the highest-profile monthly dividend REIT — bellwether for sector weakness. Target -3.8%, stop -2.5%.",
+      "riskReward": 1.54,
+      "positionSize": "5% of portfolio",
+      "conviction": {
+        "catalystClarity": 78,
+        "technicalSetup": 74,
+        "riskReward": 72,
+        "volumeLiquidity": 70,
+        "marketAlignment": 80,
+        "informationEdge": 65,
+        "timingUrgency": 60,
+        "overall": 71
+      },
+      "keyRisks": [
+        "Dividend support creates a floor",
+        "Any dovish Fed commentary reverses thesis",
+        "Low volatility name — may not move enough intraday"
+      ],
+      "entryTrigger": "Short below prior day low with volume, or rejection at VWAP after weak open",
+      "exitTrigger": "Break above prior day high, or target hit"
+    },
+    {
+      "ticker": "MPC",
+      "direction": "short",
+      "entryPrice": 170.07,
+      "targetPrice": 162.43,
+      "stopPrice": 174.37,
+      "timeframe": "Intraday (June 17)",
+      "thesis": "Energy sector rotation loser. Oil prices pulling back to ~$78 WTI. Refining margins (crack spreads) compressing from peaks. Sector underperforming as money rotates into tech. Marathon Petroleum exposed to refining margin compression. Target -4.5%, stop -2.5%.",
+      "riskReward": 1.78,
+      "positionSize": "4% of portfolio",
+      "conviction": {
+        "catalystClarity": 65,
+        "technicalSetup": 68,
+        "riskReward": 62,
+        "volumeLiquidity": 72,
+        "marketAlignment": 75,
+        "informationEdge": 55,
+        "timingUrgency": 55,
+        "overall": 65
+      },
+      "keyRisks": [
+        "Oil price spike on geopolitical event",
+        "Buyback support",
+        "Energy can snap back quickly"
+      ],
+      "entryTrigger": "Short below $177 support with volume confirmation",
+      "exitTrigger": "Break above $181, or target hit"
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10050,
+    "outcomes": [
+      {
+        "symbol": "AVGO",
+        "openPrice": 180,
+        "highPrice": 185.16,
+        "lowPrice": 172.22,
+        "closePrice": 173.46,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.02,
+        "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $180, High $185.16, Low $172.22, Close $173.46."
+      },
+      {
+        "symbol": "ADBE",
+        "openPrice": 525.51,
+        "highPrice": 533.23,
+        "lowPrice": 505.38,
+        "closePrice": 522.95,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.45,
+        "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $525.51, High $533.23, Low $505.38, Close $522.95."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 132.99,
+        "highPrice": 140.76,
+        "lowPrice": 129.52,
+        "closePrice": 130.78,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.83,
+        "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $132.99, High $140.76, Low $129.52, Close $130.78."
+      },
+      {
+        "symbol": "VST",
+        "openPrice": 87.59,
+        "highPrice": 89.95,
+        "lowPrice": 82.33,
+        "closePrice": 88.19,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.69,
+        "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $87.59, High $89.95, Low $82.33, Close $88.19."
+      },
+      {
+        "symbol": "O",
+        "openPrice": 53.1,
+        "highPrice": 53.6,
+        "lowPrice": 52.68,
+        "closePrice": 53.01,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.67,
+        "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $53.1, High $53.6, Low $52.68, Close $53.01."
+      },
+      {
+        "symbol": "MPC",
+        "openPrice": 169.48,
+        "highPrice": 177.21,
+        "lowPrice": 169.04,
+        "closePrice": 173.66,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.11,
+        "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $169.48, High $177.21, Low $169.04, Close $173.66."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 33.3,
+      "targetHitRate": 33.3,
+      "stopHitRate": 50,
+      "avgReturnPercent": -0.34,
+      "profitFactor": 0.4,
+      "winRate": 33.3,
+      "totalScore": 46.3,
+      "benchmarkReturn": 0.93,
+      "alpha": -1.27
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 76.5,
+        "avgScoreLosers": 81.8,
+        "predictivePower": 44.8
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 78,
+        "avgScoreLosers": 74,
+        "predictivePower": 54
+      },
+      "riskReward": {
+        "avgScoreWinners": 78.5,
+        "avgScoreLosers": 70.3,
+        "predictivePower": 58.3
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 67.5,
+        "avgScoreLosers": 85,
+        "predictivePower": 32.5
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 79,
+        "avgScoreLosers": 86.3,
+        "predictivePower": 42.8
+      },
+      "informationEdge": {
+        "avgScoreWinners": 67.5,
+        "avgScoreLosers": 67,
+        "predictivePower": 50.5
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 64,
+        "avgScoreLosers": 73,
+        "predictivePower": 41
+      }
+    },
+    "benchmarkReturn": 0.93,
+    "alpha": -1.27,
+    "fullDepth": true
+  }
+}

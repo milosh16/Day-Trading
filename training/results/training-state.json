@@ -70966,6 +70966,509 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10050,
+      "date": "2024-06-17",
+      "generatedAt": "2026-04-07T18:25:34.713Z",
+      "signals": {
+        "spFuturesChange": 0.77,
+        "nasdaqFuturesChange": 0.95,
+        "dowFuturesChange": 0.49,
+        "russellFuturesChange": 0.79,
+        "vixFuturesChange": -3.53,
+        "vix": 12.3,
+        "vixChange": -3.53,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 14.79,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.28,
+        "tenYearYieldChange": 1.57,
+        "twoYearYield": 4.58,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.41,
+        "threeMonthYield": 5.24,
+        "twoTenSpread": -0.3,
+        "threeMoTenYrSpread": -0.96,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 105.26,
+        "dollarIndexChange": -0.06,
+        "eurUsd": 1.07,
+        "eurUsdChange": 0.36,
+        "usdJpy": 157.7,
+        "usdJpyChange": 0.1,
+        "usdCny": 7.26,
+        "usdCnyChange": 0.01,
+        "oilWTI": 81.57,
+        "oilChange": 1.54,
+        "brentOil": 85.33,
+        "brentOilChange": 1.28,
+        "natGasChange": 4.34,
+        "goldPrice": 2330.4,
+        "goldChange": 0.78,
+        "silverChange": 0.61,
+        "copperChange": 0.9,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": 1,
+        "daxChange": 0.35,
+        "ftseChange": 0.6,
+        "shanghaiChange": 0.48,
+        "hangSengChange": -0.11,
+        "kospiChange": 0.72,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 114.45,
+        "spreadChange": -0.06,
+        "igSpread": -15.9,
+        "igSpreadChange": 0.47,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 1.52,
+        "xlfChange": 0.89,
+        "xleChange": 0.26,
+        "xlvChange": -0.1,
+        "xlpChange": 0.95,
+        "xluChange": -1.1,
+        "xlreChange": -0.52,
+        "xliChange": 1.11,
+        "xlbChange": 0.74,
+        "xlcChange": 0.48,
+        "xlyChange": 1.76,
+        "smhChange": 1.71,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -2.03,
+        "ethereumChange": -0.79,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": true,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 44,
+        "daysToNextCPI": 24,
+        "daysToNextNFP": 18,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 1,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 2.1,
+        "sp20DayReturn": 0,
+        "nasdaqVsRussell5d": 4.34,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "rotation",
+        "confidence": 50,
+        "directionalBias": "20",
+        "volatilityRegime": "compressed",
+        "stressIndex": 12,
+        "riskAppetiteIndex": 67,
+        "sectorTilts": {}
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "AVGO",
+          "direction": "long",
+          "entryPrice": 173.5,
+          "targetPrice": 180.56,
+          "stopLoss": 168.96,
+          "thesis": "Post-earnings momentum continuation. Broadcom surged ~12% on June 14 after blowout Q2 earnings, raised guidance, and 10:1 split announcement. Monday opens with analyst upgrades rolling in, institutional rebalancing, and retail FOMO. AI custom chip and networking demand validated. Entry on first pullback from open, target +4.1% intraday move, stop -2.6%.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 92,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 85,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "ADBE",
+          "direction": "long",
+          "entryPrice": 525.31,
+          "targetPrice": 550.09,
+          "stopLoss": 512.43,
+          "thesis": "Post-earnings gap continuation. Adobe surged ~15% on June 14 after strong Q2 beat and raised guidance. AI Firefly features driving incremental revenue. Stock had been under pressure from AI disruption fears — earnings proved model is working. Monday sees continued analyst upgrade cycle and short covering. Entry near open, target +4.7%, stop -2.5%.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 88,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 82,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "direction": "long",
+          "entryPrice": 131.88,
+          "targetPrice": 137.42,
+          "stopLoss": 128.36,
+          "thesis": "World's most valuable company momentum. Post-split retail accessibility driving demand. AI narrative peak momentum. S&P 500 rebalancing flows (weight increase). Closed Friday ~$131 area post-split. Continuation toward $135+ as institutions add. Entry on pullback to VWAP, target +4.2%, stop -2.7%.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 95,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 92,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 60,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 70,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "VST",
+          "direction": "long",
+          "entryPrice": 87.59,
+          "targetPrice": 92.68,
+          "stopLoss": 85.04,
+          "thesis": "AI power demand theme accelerating. Vistra is the leading power generation play for data center electricity demand. Utilities sector showing unusual strength driven by this secular theme rather than defensive positioning. Continuation of multi-week momentum. Entry near open, target +5.8%, stop -2.9%.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 68,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "O",
+          "direction": "short",
+          "entryPrice": 53.37,
+          "targetPrice": 51.34,
+          "stopLoss": 54.69,
+          "thesis": "Rate-sensitive REIT under pressure from hawkish Fed dot plot. Only 1 rate cut priced for 2024 is directly negative for REITs. Real estate is the worst-positioned sector in current rotation regime. Money flowing out of income/defensive into growth/AI. Realty Income is the highest-profile monthly dividend REIT — bellwether for sector weakness. Target -3.8%, stop -2.5%.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 74,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 60,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MPC",
+          "direction": "short",
+          "entryPrice": 170.07,
+          "targetPrice": 162.43,
+          "stopLoss": 174.37,
+          "thesis": "Energy sector rotation loser. Oil prices pulling back to ~$78 WTI. Refining margins (crack spreads) compressing from peaks. Sector underperforming as money rotates into tech. Marathon Petroleum exposed to refining margin compression. Target -4.5%, stop -2.5%.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 62,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 55,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 55,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "AVGO",
+          "openPrice": 180,
+          "highPrice": 185.16,
+          "lowPrice": 172.22,
+          "closePrice": 173.46,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.02,
+          "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $180, High $185.16, Low $172.22, Close $173.46."
+        },
+        {
+          "symbol": "ADBE",
+          "openPrice": 525.51,
+          "highPrice": 533.23,
+          "lowPrice": 505.38,
+          "closePrice": 522.95,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.45,
+          "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $525.51, High $533.23, Low $505.38, Close $522.95."
+        },
+        {
+          "symbol": "NVDA",
+          "openPrice": 132.99,
+          "highPrice": 140.76,
+          "lowPrice": 129.52,
+          "closePrice": 130.78,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.83,
+          "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $132.99, High $140.76, Low $129.52, Close $130.78."
+        },
+        {
+          "symbol": "VST",
+          "openPrice": 87.59,
+          "highPrice": 89.95,
+          "lowPrice": 82.33,
+          "closePrice": 88.19,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.69,
+          "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $87.59, High $89.95, Low $82.33, Close $88.19."
+        },
+        {
+          "symbol": "O",
+          "openPrice": 53.1,
+          "highPrice": 53.6,
+          "lowPrice": 52.68,
+          "closePrice": 53.01,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.67,
+          "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $53.1, High $53.6, Low $52.68, Close $53.01."
+        },
+        {
+          "symbol": "MPC",
+          "openPrice": 169.48,
+          "highPrice": 177.21,
+          "lowPrice": 169.04,
+          "closePrice": 173.66,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -2.11,
+          "notes": "3-day window (2024-06-17, 2024-06-18, 2024-06-20). Open $169.48, High $177.21, Low $169.04, Close $173.66."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 33.3,
+        "targetHitRate": 33.3,
+        "stopHitRate": 50,
+        "avgReturnPercent": -0.34,
+        "profitFactor": 0.4,
+        "winRate": 33.3,
+        "totalScore": 46.3,
+        "benchmarkReturn": 0.93,
+        "alpha": -1.27
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 76.5,
+          "avgScoreLosers": 81.8,
+          "predictivePower": 44.8
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 78,
+          "avgScoreLosers": 74,
+          "predictivePower": 54
+        },
+        "riskReward": {
+          "avgScoreWinners": 78.5,
+          "avgScoreLosers": 70.3,
+          "predictivePower": 58.3
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 67.5,
+          "avgScoreLosers": 85,
+          "predictivePower": 32.5
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 79,
+          "avgScoreLosers": 86.3,
+          "predictivePower": 42.8
+        },
+        "informationEdge": {
+          "avgScoreWinners": 67.5,
+          "avgScoreLosers": 67,
+          "predictivePower": 50.5
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 64,
+          "avgScoreLosers": 73,
+          "predictivePower": 41
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -70979,7 +71482,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T18:22:56.681Z",
+  "lastUpdatedAt": "2026-04-07T18:25:34.733Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -71425,7 +71928,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 49,
+  "fullDepthCurrentTrial": 50,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -71578,7 +72081,8 @@
     "2026-02-11",
     "2024-09-10",
     "2026-01-16",
-    "2025-10-14"
+    "2025-10-14",
+    "2024-06-17"
   ],
   "dateSequence": [
     "2025-09-09",
