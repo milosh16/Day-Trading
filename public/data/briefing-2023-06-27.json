@@ -1,0 +1,253 @@
+{
+  "id": "briefing-2023-06-27-1775602281408",
+  "date": "2023-06-27",
+  "generatedAt": "2026-04-07T22:51:21.376Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG AMD @ $107.51",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $111.74",
+          "implication": "+3.9% gain",
+          "trade": "AI broadening play - AMD MI300 AI chip anticipation driving re-rating. Trading near $114 with strong momentum. Consumer confidence beat and risk-on tone support growth names. Break above $115 targets $119 prior resistance. Stop below $112 support shelf."
+        },
+        {
+          "condition": "Price hits stop $105.16",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG DHI @ $119.89",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $124.42",
+          "implication": "+3.8% gain",
+          "trade": "Largest US homebuilder directly benefiting from massive new home sales beat (763K vs 675K). Limited existing home inventory forces buyers to builders. DHI trading ~$119, strong uptrend. Consumer confidence surge adds tailwind. Target $123.50 (prior swing high area), stop $116.50 below recent support."
+        },
+        {
+          "condition": "Price hits stop $117.37",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG JPM @ $139.19",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $143.55",
+          "implication": "+3.1% gain",
+          "trade": "Stress test results due Jun 28 - anticipation trade. JPM consistently strongest performer in stress tests. Higher-for-longer rate environment supports NIM expansion. Trading ~$143.50. Pre-stress-test positioning could push toward $148. Stop below $140.50 support."
+        },
+        {
+          "condition": "Price hits stop $136.28",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CCL @ $14.6",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $15.32",
+          "implication": "+4.9% gain",
+          "trade": "Consumer confidence surge to 18-month high is direct catalyst for discretionary travel. CCL reporting earnings Jun 26 after close - beat expectations with raised guidance. Strong booking trends. Trading ~$16.20 pre-market after earnings beat. Target $17 on post-earnings momentum. Stop $15.70 below pre-earnings level."
+        },
+        {
+          "condition": "Price hits stop $14.15",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 48,
+  "recommendations": [
+    {
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices",
+      "direction": "long",
+      "sector": "Semiconductors",
+      "entryPrice": 107.51,
+      "targetPrice": 111.74,
+      "stopPrice": 105.16,
+      "riskRewardRatio": 1.8,
+      "reasoning": "AI broadening play - AMD MI300 AI chip anticipation driving re-rating. Trading near $114 with strong momentum. Consumer confidence beat and risk-on tone support growth names. Break above $115 targets $119 prior resistance. Stop below $112 support shelf.",
+      "confidence": "High",
+      "catalysts": [
+        "AI chip narrative broadening beyond NVDA",
+        "MI300 launch anticipation",
+        "Risk-on rotation day"
+      ],
+      "stopPercent": 2.18
+    },
+    {
+      "ticker": "DHI",
+      "company": "D.R. Horton Inc",
+      "direction": "long",
+      "sector": "Homebuilders",
+      "entryPrice": 119.89,
+      "targetPrice": 124.42,
+      "stopPrice": 117.37,
+      "riskRewardRatio": 1.8,
+      "reasoning": "Largest US homebuilder directly benefiting from massive new home sales beat (763K vs 675K). Limited existing home inventory forces buyers to builders. DHI trading ~$119, strong uptrend. Consumer confidence surge adds tailwind. Target $123.50 (prior swing high area), stop $116.50 below recent support.",
+      "confidence": "High",
+      "catalysts": [
+        "New home sales +12.2% beat",
+        "Consumer confidence 18-month high",
+        "Limited existing inventory narrative"
+      ],
+      "stopPercent": 2.1
+    },
+    {
+      "ticker": "JPM",
+      "company": "JPMorgan Chase & Co",
+      "direction": "long",
+      "sector": "Financials",
+      "entryPrice": 139.19,
+      "targetPrice": 143.55,
+      "stopPrice": 136.28,
+      "riskRewardRatio": 1.5,
+      "reasoning": "Stress test results due Jun 28 - anticipation trade. JPM consistently strongest performer in stress tests. Higher-for-longer rate environment supports NIM expansion. Trading ~$143.50. Pre-stress-test positioning could push toward $148. Stop below $140.50 support.",
+      "confidence": "High",
+      "catalysts": [
+        "Bank stress test results Jun 28 anticipation",
+        "Higher-for-longer rate narrative supports NIM",
+        "Strongest large bank franchise"
+      ],
+      "stopPercent": 2.09
+    },
+    {
+      "ticker": "CCL",
+      "company": "Carnival Corporation",
+      "direction": "long",
+      "sector": "Consumer Discretionary",
+      "entryPrice": 14.6,
+      "targetPrice": 15.32,
+      "stopPrice": 14.15,
+      "riskRewardRatio": 1.6,
+      "reasoning": "Consumer confidence surge to 18-month high is direct catalyst for discretionary travel. CCL reporting earnings Jun 26 after close - beat expectations with raised guidance. Strong booking trends. Trading ~$16.20 pre-market after earnings beat. Target $17 on post-earnings momentum. Stop $15.70 below pre-earnings level.",
+      "confidence": "High",
+      "catalysts": [
+        "Earnings beat with raised guidance reported Jun 26 after close",
+        "Consumer confidence 109.7 highest since Jan 2022",
+        "Summer travel demand peak"
+      ],
+      "stopPercent": 3.09
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10234,
+    "outcomes": [
+      {
+        "symbol": "AMD",
+        "openPrice": 108.57,
+        "highPrice": 112.76,
+        "lowPrice": 107.08,
+        "closePrice": 111.24,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.47,
+        "notes": "3-day window (2023-06-27, 2023-06-28, 2023-06-29). Open $108.57, High $112.76, Low $107.08, Close $111.24."
+      },
+      {
+        "symbol": "DHI",
+        "openPrice": 120.13,
+        "highPrice": 124.05,
+        "lowPrice": 119.44,
+        "closePrice": 120.34,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.38,
+        "notes": "3-day window (2023-06-27, 2023-06-28, 2023-06-29). Open $120.13, High $124.05, Low $119.44, Close $120.34."
+      },
+      {
+        "symbol": "JPM",
+        "openPrice": 139,
+        "highPrice": 143.56,
+        "lowPrice": 137.96,
+        "closePrice": 143.43,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.05,
+        "notes": "3-day window (2023-06-27, 2023-06-28, 2023-06-29). Open $139, High $143.56, Low $137.96, Close $143.43."
+      },
+      {
+        "symbol": "CCL",
+        "openPrice": 14.75,
+        "highPrice": 17.75,
+        "lowPrice": 14.7,
+        "closePrice": 17.16,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 17.53,
+        "notes": "3-day window (2023-06-27, 2023-06-28, 2023-06-29). Open $14.75, High $17.75, Low $14.7, Close $17.16."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 100,
+      "targetHitRate": 75,
+      "stopHitRate": 0,
+      "avgReturnPercent": 6.11,
+      "profitFactor": 10,
+      "winRate": 100,
+      "totalScore": 100,
+      "benchmarkReturn": 0.88,
+      "alpha": 5.23
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.88,
+    "alpha": 5.23,
+    "fullDepth": true
+  }
+}

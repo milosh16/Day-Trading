@@ -1,0 +1,409 @@
+{
+  "trialId": 10234,
+  "date": "2023-06-27",
+  "dateDisplay": "Tuesday, June 27, 2023",
+  "generatedAt": "2026-04-07T22:51:21.376Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 1.15,
+      "nasdaqFuturesChange": 1.65,
+      "dowFuturesChange": 0.63,
+      "russellFuturesChange": 1.46,
+      "vixFuturesChange": -2.26,
+      "vix": 13.43,
+      "vixChange": -2.26,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 16.44,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.77,
+      "tenYearYieldChange": 1.32,
+      "twoYearYield": 4.38,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.84,
+      "threeMonthYield": 5.18,
+      "twoTenSpread": -0.61,
+      "threeMoTenYrSpread": -1.41,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 102.91,
+      "dollarIndexChange": 0.41,
+      "eurUsd": 1.1,
+      "eurUsdChange": 0.43,
+      "usdJpy": 143.88,
+      "usdJpyChange": 0.29,
+      "usdCny": 7.22,
+      "usdCnyChange": -0.25,
+      "oilWTI": 69.56,
+      "oilChange": 2.75,
+      "brentOil": 74.03,
+      "brentOilChange": 2.45,
+      "natGasChange": -5.79,
+      "goldPrice": 1912.3,
+      "goldChange": -0.09,
+      "silverChange": -0.31,
+      "copperChange": -1.61,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 2.02,
+      "daxChange": 0.64,
+      "ftseChange": 0.52,
+      "shanghaiChange": 0,
+      "hangSengChange": 0.12,
+      "kospiChange": -0.67,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 127.6,
+      "spreadChange": -0.34,
+      "igSpread": -15.4,
+      "igSpreadChange": 0.11,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.01,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1.97,
+      "xlfChange": 0.8,
+      "xleChange": 0.23,
+      "xlvChange": -0.23,
+      "xlpChange": 0.3,
+      "xluChange": 0.03,
+      "xlreChange": 1.09,
+      "xliChange": 1.2,
+      "xlbChange": 1.42,
+      "xlcChange": 1.69,
+      "xlyChange": 2.15,
+      "smhChange": 3.17,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -1.96,
+      "ethereumChange": -3.27,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 218,
+      "daysToNextCPI": 198,
+      "daysToNextNFP": 192,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": -0.23,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": 0.08,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 48,
+      "directionalBias": "18",
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 65,
+      "sectorTilts": {
+        "energy": "overweight",
+        "airlines": "underweight",
+        "semiconductors": "overweight",
+        "materials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "AMD",
+      "direction": "long",
+      "entryPrice": 107.51,
+      "targetPrice": 111.74,
+      "stopLoss": 105.16,
+      "thesis": "AI broadening play - AMD MI300 AI chip anticipation driving re-rating. Trading near $114 with strong momentum. Consumer confidence beat and risk-on tone support growth names. Break above $115 targets $119 prior resistance. Stop below $112 support shelf.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "DHI",
+      "direction": "long",
+      "entryPrice": 119.89,
+      "targetPrice": 124.42,
+      "stopLoss": 117.37,
+      "thesis": "Largest US homebuilder directly benefiting from massive new home sales beat (763K vs 675K). Limited existing home inventory forces buyers to builders. DHI trading ~$119, strong uptrend. Consumer confidence surge adds tailwind. Target $123.50 (prior swing high area), stop $116.50 below recent support.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "JPM",
+      "direction": "long",
+      "entryPrice": 139.19,
+      "targetPrice": 143.55,
+      "stopLoss": 136.28,
+      "thesis": "Stress test results due Jun 28 - anticipation trade. JPM consistently strongest performer in stress tests. Higher-for-longer rate environment supports NIM expansion. Trading ~$143.50. Pre-stress-test positioning could push toward $148. Stop below $140.50 support.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CCL",
+      "direction": "long",
+      "entryPrice": 14.6,
+      "targetPrice": 15.32,
+      "stopLoss": 14.15,
+      "thesis": "Consumer confidence surge to 18-month high is direct catalyst for discretionary travel. CCL reporting earnings Jun 26 after close - beat expectations with raised guidance. Strong booking trends. Trading ~$16.20 pre-market after earnings beat. Target $17 on post-earnings momentum. Stop $15.70 below pre-earnings level.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "AMD",
+      "openPrice": 108.57,
+      "highPrice": 112.76,
+      "lowPrice": 107.08,
+      "closePrice": 111.24,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 3.47,
+      "notes": "3-day window (2023-06-27, 2023-06-28, 2023-06-29). Open $108.57, High $112.76, Low $107.08, Close $111.24."
+    },
+    {
+      "symbol": "DHI",
+      "openPrice": 120.13,
+      "highPrice": 124.05,
+      "lowPrice": 119.44,
+      "closePrice": 120.34,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.38,
+      "notes": "3-day window (2023-06-27, 2023-06-28, 2023-06-29). Open $120.13, High $124.05, Low $119.44, Close $120.34."
+    },
+    {
+      "symbol": "JPM",
+      "openPrice": 139,
+      "highPrice": 143.56,
+      "lowPrice": 137.96,
+      "closePrice": 143.43,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 3.05,
+      "notes": "3-day window (2023-06-27, 2023-06-28, 2023-06-29). Open $139, High $143.56, Low $137.96, Close $143.43."
+    },
+    {
+      "symbol": "CCL",
+      "openPrice": 14.75,
+      "highPrice": 17.75,
+      "lowPrice": 14.7,
+      "closePrice": 17.16,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 17.53,
+      "notes": "3-day window (2023-06-27, 2023-06-28, 2023-06-29). Open $14.75, High $17.75, Low $14.7, Close $17.16."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 100,
+    "targetHitRate": 75,
+    "stopHitRate": 0,
+    "avgReturnPercent": 6.11,
+    "profitFactor": 10,
+    "winRate": 100,
+    "totalScore": 100,
+    "benchmarkReturn": 0.88,
+    "alpha": 5.23
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
