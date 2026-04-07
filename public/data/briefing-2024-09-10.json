@@ -1,0 +1,333 @@
+{
+  "id": "briefing-2024-09-10-1775584964506",
+  "date": "2024-09-10",
+  "generatedAt": "2026-04-07T18:02:44.486Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG ORCL @ $139.89",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $147.11",
+          "implication": "+5.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $136.28",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $106.47",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $111.89",
+          "implication": "+5.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $104.01",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CRM @ $245.76",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $252.59",
+          "implication": "+2.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $240.88",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT AAPL @ $221",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $216",
+          "implication": "+-2.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $224.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XOM @ $115.01",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $111.97",
+          "implication": "+-2.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $117.04",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 35,
+  "recommendations": [
+    {
+      "ticker": "ORCL",
+      "company": "Oracle Corporation",
+      "direction": "long",
+      "catalyst": "Blowout Q1 FY25 earnings reported after close Sep 9. Revenue beat, cloud infrastructure revenue +45% YoY, RPO surged 52% to $99B. Stock indicated +12% pre-market. Strongest enterprise software earnings catalyst of the quarter. Gap-up open with momentum continuation expected as analysts upgrade.",
+      "entryPrice": 139.89,
+      "targetPrice": 147.11,
+      "stopPrice": 136.28,
+      "riskRewardRatio": 2,
+      "stopPercent": 2.6,
+      "positionSize": "standard",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 82,
+        "catalystClarity": 95,
+        "technicalSetup": 75,
+        "riskReward": 80,
+        "volumeLiquidity": 85,
+        "marketAlignment": 78,
+        "informationEdge": 85,
+        "timingUrgency": 90
+      },
+      "entryTiming": "Buy on opening pullback from pre-market highs. Gap-up opens often retrace 30-50% of the gap in first 30 min. Target entry near $155 if pre-market peaks around $160+. If opens above $160 and holds, wait for first 15-min consolidation.",
+      "exitStrategy": "Scale out 50% at $160 (first resistance), remainder at $163. Trail stop to breakeven after first target hit. Hard stop at $151."
+    },
+    {
+      "ticker": "NVDA",
+      "company": "Nvidia Corporation",
+      "direction": "long",
+      "catalyst": "Oracle cloud infrastructure results (+45% YoY) directly validate hyperscaler AI capex thesis that underpins Nvidia demand. Sympathy rally expected. NVDA bouncing from August lows around $100. Pre-market likely to gap up on ORCL read-through. AI narrative re-engaging.",
+      "entryPrice": 106.47,
+      "targetPrice": 111.89,
+      "stopPrice": 104.01,
+      "riskRewardRatio": 2.2,
+      "stopPercent": 2.3,
+      "positionSize": "standard",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 74,
+        "catalystClarity": 70,
+        "technicalSetup": 72,
+        "riskReward": 80,
+        "volumeLiquidity": 90,
+        "marketAlignment": 75,
+        "informationEdge": 65,
+        "timingUrgency": 70
+      },
+      "entryTiming": "Enter on first 30-min pullback. NVDA tends to have volatile opens. Look for support at $107-108 level (prior resistance becomes support). Volume confirmation important.",
+      "exitStrategy": "Target $113.50 (50-day MA area). Scale 50% at $111, rest at $113.50. Stop $105.50."
+    },
+    {
+      "ticker": "CRM",
+      "company": "Salesforce",
+      "direction": "long",
+      "catalyst": "Oracle earnings validate enterprise cloud/AI spend cycle. Salesforce as largest enterprise SaaS name benefits from read-through. Agentforce AI product narrative building. Trading well below August highs - room to run on sector tailwinds.",
+      "entryPrice": 245.76,
+      "targetPrice": 252.59,
+      "stopPrice": 240.88,
+      "riskRewardRatio": 1.6,
+      "stopPercent": 2,
+      "positionSize": "reduced",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 65,
+        "technicalSetup": 68,
+        "riskReward": 65,
+        "volumeLiquidity": 80,
+        "marketAlignment": 72,
+        "informationEdge": 60,
+        "timingUrgency": 60
+      },
+      "entryTiming": "Enter after first 30 min if enterprise software sector showing broad strength. Look for $252 level to hold as support.",
+      "exitStrategy": "Target $259 resistance. Single exit. Stop $247."
+    },
+    {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "direction": "short",
+      "catalyst": "iPhone 16 event on Sep 9 was a classic 'buy the rumor, sell the news' setup. Apple Intelligence features won't be available at launch (coming later via software update). No major hardware surprises. Stock ran up into event. Sell-the-news fade expected as market digests incremental (not revolutionary) upgrade cycle.",
+      "entryPrice": 221,
+      "targetPrice": 216,
+      "stopPrice": 224.5,
+      "riskRewardRatio": 1.7,
+      "stopPercent": 1.6,
+      "positionSize": "reduced",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 65,
+        "catalystClarity": 72,
+        "technicalSetup": 62,
+        "riskReward": 68,
+        "volumeLiquidity": 85,
+        "marketAlignment": 50,
+        "informationEdge": 60,
+        "timingUrgency": 65
+      },
+      "entryTiming": "Short on morning strength/gap-up attempt above $221. If market opens strong on ORCL sympathy, AAPL may initially lift before fading. Wait for first failed breakout attempt above $222.",
+      "exitStrategy": "Cover at $216 support level. Stop $224.50 above pre-event highs."
+    },
+    {
+      "ticker": "XOM",
+      "company": "Exxon Mobil",
+      "direction": "short",
+      "catalyst": "Oil at $68 WTI - weakest level in months. China deflation data (CPI +0.6%, PPI -1.8%) signals continued demand weakness. Energy worst-ranked sector. OPEC+ uncertainty on production. No near-term positive catalyst. Range-bound market favors fading weakest sector.",
+      "entryPrice": 115.01,
+      "targetPrice": 111.97,
+      "stopPrice": 117.04,
+      "riskRewardRatio": 1.5,
+      "stopPercent": 1.8,
+      "positionSize": "reduced",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 62,
+        "catalystClarity": 60,
+        "technicalSetup": 63,
+        "riskReward": 60,
+        "volumeLiquidity": 80,
+        "marketAlignment": 65,
+        "informationEdge": 55,
+        "timingUrgency": 50
+      },
+      "entryTiming": "Short on any morning bounce toward $113.50. Energy names may see brief sympathy lift if broad market opens higher on ORCL, creating better short entry. Patience required.",
+      "exitStrategy": "Cover at $110.50. Stop $115.50. If oil bounces above $69 intraday, reassess."
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10047,
+    "outcomes": [
+      {
+        "symbol": "ORCL",
+        "openPrice": 154.23,
+        "highPrice": 162.34,
+        "lowPrice": 153.12,
+        "closePrice": 161.38,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 15.36,
+        "notes": "3-day window (2024-09-10, 2024-09-11, 2024-09-12). Open $154.23, High $162.34, Low $153.12, Close $161.38."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 107.81,
+        "highPrice": 120.79,
+        "lowPrice": 104.95,
+        "closePrice": 119.14,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 11.9,
+        "notes": "3-day window (2024-09-10, 2024-09-11, 2024-09-12). Open $107.81, High $120.79, Low $104.95, Close $119.14."
+      },
+      {
+        "symbol": "CRM",
+        "openPrice": 247.13,
+        "highPrice": 254.14,
+        "lowPrice": 242.01,
+        "closePrice": 253.37,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.1,
+        "notes": "3-day window (2024-09-10, 2024-09-11, 2024-09-12). Open $247.13, High $254.14, Low $242.01, Close $253.37."
+      },
+      {
+        "symbol": "AAPL",
+        "openPrice": 218.92,
+        "highPrice": 223.55,
+        "lowPrice": 216.73,
+        "closePrice": 222.77,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.8,
+        "notes": "3-day window (2024-09-10, 2024-09-11, 2024-09-12). Open $218.92, High $223.55, Low $216.73, Close $222.77."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 115.1,
+        "highPrice": 115.4,
+        "lowPrice": 107.77,
+        "closePrice": 111.23,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.29,
+        "notes": "3-day window (2024-09-10, 2024-09-11, 2024-09-12). Open $115.1, High $115.4, Low $107.77, Close $111.23."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 80,
+      "targetHitRate": 80,
+      "stopHitRate": 0,
+      "avgReturnPercent": 6.57,
+      "profitFactor": 42.06,
+      "winRate": 80,
+      "totalScore": 93.3,
+      "benchmarkReturn": 0.08,
+      "alpha": 6.49
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 72.5,
+        "avgScoreLosers": 72,
+        "predictivePower": 50.5
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 69.5,
+        "avgScoreLosers": 62,
+        "predictivePower": 57.5
+      },
+      "riskReward": {
+        "avgScoreWinners": 71.3,
+        "avgScoreLosers": 68,
+        "predictivePower": 53.3
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 83.8,
+        "avgScoreLosers": 85,
+        "predictivePower": 48.8
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 72.5,
+        "avgScoreLosers": 50,
+        "predictivePower": 72.5
+      },
+      "informationEdge": {
+        "avgScoreWinners": 66.3,
+        "avgScoreLosers": 60,
+        "predictivePower": 56.3
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 67.5,
+        "avgScoreLosers": 65,
+        "predictivePower": 52.5
+      }
+    },
+    "benchmarkReturn": 0.08,
+    "alpha": 6.49,
+    "fullDepth": true
+  }
+}
