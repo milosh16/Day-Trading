@@ -1,0 +1,284 @@
+{
+  "id": "briefing-2023-06-15-1775599891917",
+  "date": "2023-06-15",
+  "generatedAt": "2026-04-07T22:11:31.893Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorRankings",
+      "content": "[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG NVDA @ $43",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $44.1",
+          "implication": "+2.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $42.32",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG META @ $273.35",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $281.01",
+          "implication": "+2.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $269.04",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMZN @ $126.42",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $130.39",
+          "implication": "+3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $124.19",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AVGO @ $88.62",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $91.39",
+          "implication": "+3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $87.13",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XLE @ $40.05",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $38.94",
+          "implication": "+-2.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $40.76",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 45,
+  "recommendations": [
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Semiconductors",
+      "rationale": "Peak AI momentum. Fed pause + falling yields = macro tailwind for highest-beta growth. Strong uptrend since May earnings beat. Rotation regime funneling capital into tech leaders. Low VIX supports directional positioning.",
+      "entryPrice": 43,
+      "targetPrice": 44.1,
+      "stopPrice": 42.32,
+      "riskRewardRatio": 1.62,
+      "maxStopPct": 1.6
+    },
+    {
+      "ticker": "META",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Communication Services",
+      "rationale": "Year of Efficiency driving re-rating. Disinflation + Fed pause supports growth multiples. Technical breakout above $280 confirmed. Ad revenue trends strong. Less crowded than NVDA in AI trade.",
+      "entryPrice": 273.35,
+      "targetPrice": 281.01,
+      "stopPrice": 269.04,
+      "riskRewardRatio": 1.78,
+      "maxStopPct": 1.6
+    },
+    {
+      "ticker": "AMZN",
+      "direction": "long",
+      "conviction": "medium-high",
+      "sector": "Consumer Discretionary",
+      "rationale": "Dual catalyst: consumer resilience from disinflation + AWS AI narrative. Breaking out of consolidation. Fed pause extends consumer cycle. Prime Day anticipation building for July.",
+      "entryPrice": 126.42,
+      "targetPrice": 130.39,
+      "stopPrice": 124.19,
+      "riskRewardRatio": 1.78,
+      "maxStopPct": 1.8
+    },
+    {
+      "ticker": "AVGO",
+      "direction": "long",
+      "conviction": "medium-high",
+      "sector": "Semiconductors",
+      "rationale": "AI networking and custom ASIC beneficiary riding NVDA coattails. Less extended valuation than NVDA offers better entry risk. Strong technical trend. Yield decline supports semi valuations.",
+      "entryPrice": 88.62,
+      "targetPrice": 91.39,
+      "stopPrice": 87.13,
+      "riskRewardRatio": 1.86,
+      "maxStopPct": 1.7
+    },
+    {
+      "ticker": "XLE",
+      "direction": "short",
+      "conviction": "medium",
+      "sector": "Energy",
+      "rationale": "Rotation OUT of energy into tech/growth. WTI crude weak ~$69. China demand concerns mounting — PBOC easing signals economic weakness. Sector losing relative strength. Hawkish Fed dots imply slowdown risk, bearish for cyclical energy demand.",
+      "entryPrice": 40.05,
+      "targetPrice": 38.94,
+      "stopPrice": 40.76,
+      "riskRewardRatio": 1.57,
+      "maxStopPct": 1.8
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10227,
+    "outcomes": [
+      {
+        "symbol": "NVDA",
+        "openPrice": 42.6,
+        "highPrice": 43.99,
+        "lowPrice": 42.15,
+        "closePrice": 43.81,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.88,
+        "notes": "3-day window (2023-06-15, 2023-06-16, 2023-06-20). Open $42.6, High $43.99, Low $42.15, Close $43.81."
+      },
+      {
+        "symbol": "META",
+        "openPrice": 272.3,
+        "highPrice": 287.85,
+        "lowPrice": 271.42,
+        "closePrice": 284.33,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.02,
+        "notes": "3-day window (2023-06-15, 2023-06-16, 2023-06-20). Open $272.3, High $287.85, Low $271.42, Close $284.33."
+      },
+      {
+        "symbol": "AMZN",
+        "openPrice": 125.21,
+        "highPrice": 127.9,
+        "lowPrice": 124.32,
+        "closePrice": 125.78,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.51,
+        "notes": "3-day window (2023-06-15, 2023-06-16, 2023-06-20). Open $125.21, High $127.9, Low $124.32, Close $125.78."
+      },
+      {
+        "symbol": "AVGO",
+        "openPrice": 88.44,
+        "highPrice": 89,
+        "lowPrice": 86.1,
+        "closePrice": 86.8,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.05,
+        "notes": "3-day window (2023-06-15, 2023-06-16, 2023-06-20). Open $88.44, High $89, Low $86.1, Close $86.8."
+      },
+      {
+        "symbol": "XLE",
+        "openPrice": 40.12,
+        "highPrice": 40.79,
+        "lowPrice": 38.88,
+        "closePrice": 39.18,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.17,
+        "notes": "3-day window (2023-06-15, 2023-06-16, 2023-06-20). Open $40.12, High $40.79, Low $38.88, Close $39.18."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 60,
+      "targetHitRate": 40,
+      "stopHitRate": 60,
+      "avgReturnPercent": 1.1,
+      "profitFactor": 3.15,
+      "winRate": 60,
+      "totalScore": 67.2,
+      "benchmarkReturn": 1.44,
+      "alpha": -0.34
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 1.44,
+    "alpha": -0.34,
+    "fullDepth": true
+  }
+}
