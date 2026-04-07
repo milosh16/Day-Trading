@@ -1,0 +1,460 @@
+{
+  "trialId": 10044,
+  "date": "2024-12-12",
+  "dateDisplay": "Thursday, December 12, 2024",
+  "generatedAt": "2026-04-07T17:48:46.602Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.54,
+      "nasdaqFuturesChange": -0.66,
+      "dowFuturesChange": -0.53,
+      "russellFuturesChange": -1.38,
+      "vixFuturesChange": -0.79,
+      "vix": 13.81,
+      "vixChange": -0.79,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 17.35,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.32,
+      "tenYearYieldChange": 1.24,
+      "twoYearYield": 4.19,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.55,
+      "threeMonthYield": 4.22,
+      "twoTenSpread": 0.13,
+      "threeMoTenYrSpread": 0.1,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 107,
+      "dollarIndexChange": 0.04,
+      "eurUsd": 1.05,
+      "eurUsdChange": -0.31,
+      "usdJpy": 152.59,
+      "usdJpyChange": 0.22,
+      "usdCny": 7.27,
+      "usdCnyChange": 0.09,
+      "oilWTI": 71.29,
+      "oilChange": 1.81,
+      "brentOil": 74.49,
+      "brentOilChange": 1.47,
+      "natGasChange": -5.07,
+      "goldPrice": 2656,
+      "goldChange": -1.17,
+      "silverChange": -1.83,
+      "copperChange": -1.1,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.95,
+      "daxChange": -0.1,
+      "ftseChange": -0.14,
+      "shanghaiChange": -2.01,
+      "hangSengChange": -2.09,
+      "kospiChange": 0.5,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 101.8,
+      "spreadChange": 0.28,
+      "igSpread": -18.66,
+      "igSpreadChange": 0.56,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.02,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.56,
+      "xlfChange": -0.44,
+      "xleChange": -0.81,
+      "xlvChange": -0.79,
+      "xlpChange": 0.29,
+      "xluChange": -0.05,
+      "xlreChange": -0.07,
+      "xliChange": -0.64,
+      "xlbChange": -0.7,
+      "xlcChange": 0.19,
+      "xlyChange": -0.83,
+      "smhChange": -0.97,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 1.42,
+      "ethereumChange": 0.72,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 6,
+      "daysToNextCPI": 34,
+      "daysToNextNFP": 29,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": -0.39,
+      "sp20DayReturn": 1.1,
+      "nasdaqVsRussell5d": 2.49,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-off",
+      "confidence": 56,
+      "directionalBias": "-26",
+      "volatilityRegime": "normal",
+      "stressIndex": 9,
+      "riskAppetiteIndex": 36,
+      "sectorTilts": {
+        "utilities": "overweight",
+        "healthcare": "overweight",
+        "staples": "overweight",
+        "tech": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "bearish",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "ADBE",
+      "direction": "short",
+      "entryPrice": 549.93,
+      "targetPrice": 530.33,
+      "stopLoss": 566.07,
+      "thesis": "Adobe gapped down 13-14% on disastrous FY25 guidance miss ($400M below Street). TD Cowen downgrade to hold adds institutional selling pressure. AI disruption narrative is a structural fear that takes multiple sessions to resolve. Hot PPI on the same morning adds growth stock headwind. First day of a major gap-down typically sees continuation selling as sell-side downgrades cascade and institutional holders reduce positions.",
+      "catalyst": "FY25 revenue guidance $23.4B vs $23.8B expected; Q1 guide $5.63-5.68B vs $5.73B; TD Cowen downgrade; AI disruption fears",
+      "conviction": {
+        "catalystClarity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 85,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AVGO",
+      "direction": "long",
+      "entryPrice": 183.2,
+      "targetPrice": 196.6,
+      "stopLoss": 175.16,
+      "thesis": "Broadcom reported a blowout Q4 with AI revenue +220% YoY and announced custom AI chip partnerships with 3 major cloud customers. The stock jumped 13% after hours and is set to cross $1T market cap for the first time. CEO Hock Tan projected $90B addressable AI chip market by FY2027. This is a historic momentum catalyst — the $1T crossing will generate massive media coverage, index rebalancing interest, and FOMO buying. Despite risk-off regime, stock-specific catalysts this strong override macro.",
+      "catalyst": "Q4 beat, AI rev +220% YoY to $12.2B, custom AI chips for 3 cloud customers, $1T market cap milestone, $90B TAM by FY2027",
+      "conviction": {
+        "catalystClarity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 90,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "TLT",
+      "direction": "short",
+      "entryPrice": 92.2,
+      "targetPrice": 90.41,
+      "stopLoss": 93.57,
+      "thesis": "Hot PPI at 0.4% MoM (double the 0.2% consensus) with YoY at 3.0% — the highest since Feb 2023. Core PPI 3.4% vs 3.2% expected. This directly reprices the long end of the yield curve upward, pressuring long-duration treasuries. While a Dec rate cut is still near-certain, the hot PPI raises questions about the 2025 rate path and keeps long-end yields elevated. TLT is the cleanest vehicle to express a short-duration/rising-yield view.",
+      "catalyst": "Nov PPI 0.4% MoM vs 0.2% expected; YoY 3.0% highest since Feb 2023; core 3.4% vs 3.2% expected",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 80,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "MRVL",
+      "direction": "long",
+      "entryPrice": 111.36,
+      "targetPrice": 117.02,
+      "stopLoss": 108.06,
+      "thesis": "Marvell Technology is the closest publicly-traded comp to Broadcom's custom AI chip business. AVGO's announcement of custom AI chips with 3 major cloud customers and a $90B TAM by FY2027 directly validates Marvell's identical business line. MRVL designs custom AI accelerators for cloud hyperscalers including Amazon and Microsoft. When AVGO runs +24%, the sympathy trade in MRVL is the second-derivative play with better risk/reward.",
+      "catalyst": "Broadcom AI chip TAM validation lifts entire custom silicon ecosystem; MRVL is closest comp with same cloud hyperscaler customer base",
+      "conviction": {
+        "catalystClarity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CRM",
+      "direction": "short",
+      "entryPrice": 354.85,
+      "targetPrice": 344.65,
+      "stopLoss": 361.99,
+      "thesis": "Adobe's massive guidance miss and AI disruption fears create contagion risk across enterprise SaaS. If Adobe cannot monetize AI effectively and faces disruption headwinds, the market will question AI monetization across all enterprise software. Salesforce trades at elevated multiples on its own AI narrative (Agentforce). Hot PPI adds growth stock headwind. Risk-off regime supports short positioning in expensive growth names.",
+      "catalyst": "Adobe AI monetization disappointment creates SaaS contagion; hot PPI compresses growth multiples; risk-off regime",
+      "conviction": {
+        "catalystClarity": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 60,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "ADBE",
+      "openPrice": 487.5,
+      "highPrice": 494,
+      "lowPrice": 456.8,
+      "closePrice": 461.53,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 16.07,
+      "notes": "3-day window (2024-12-12, 2024-12-13, 2024-12-16). Open $487.5, High $494, Low $456.8, Close $461.53."
+    },
+    {
+      "symbol": "AVGO",
+      "openPrice": 180.93,
+      "highPrice": 251.88,
+      "lowPrice": 175.99,
+      "closePrice": 250,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 36.46,
+      "notes": "3-day window (2024-12-12, 2024-12-13, 2024-12-16). Open $180.93, High $251.88, Low $175.99, Close $250."
+    },
+    {
+      "symbol": "TLT",
+      "openPrice": 91.64,
+      "highPrice": 91.75,
+      "lowPrice": 90.05,
+      "closePrice": 90.42,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.93,
+      "notes": "3-day window (2024-12-12, 2024-12-13, 2024-12-16). Open $91.64, High $91.75, Low $90.05, Close $90.42."
+    },
+    {
+      "symbol": "MRVL",
+      "openPrice": 110.53,
+      "highPrice": 126.15,
+      "lowPrice": 107.92,
+      "closePrice": 124.78,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 12.05,
+      "notes": "3-day window (2024-12-12, 2024-12-13, 2024-12-16). Open $110.53, High $126.15, Low $107.92, Close $124.78."
+    },
+    {
+      "symbol": "CRM",
+      "openPrice": 355,
+      "highPrice": 364.8,
+      "lowPrice": 350.56,
+      "closePrice": 357.23,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.67,
+      "notes": "3-day window (2024-12-12, 2024-12-13, 2024-12-16). Open $355, High $364.8, Low $350.56, Close $357.23."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 80,
+    "targetHitRate": 80,
+    "stopHitRate": 40,
+    "avgReturnPercent": 13.17,
+    "profitFactor": 99.27,
+    "winRate": 80,
+    "totalScore": 91.7,
+    "benchmarkReturn": -0.37,
+    "alpha": 13.54
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 88.3,
+      "avgScoreLosers": 65,
+      "predictivePower": 73.3
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 73.8,
+      "avgScoreLosers": 65,
+      "predictivePower": 58.8
+    },
+    "riskReward": {
+      "avgScoreWinners": 72.5,
+      "avgScoreLosers": 70,
+      "predictivePower": 52.5
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 89.3,
+      "avgScoreLosers": 88,
+      "predictivePower": 51.3
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 68,
+      "avgScoreLosers": 75,
+      "predictivePower": 43
+    },
+    "informationEdge": {
+      "avgScoreWinners": 76.3,
+      "avgScoreLosers": 55,
+      "predictivePower": 71.3
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 82.5,
+      "avgScoreLosers": 60,
+      "predictivePower": 72.5
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
