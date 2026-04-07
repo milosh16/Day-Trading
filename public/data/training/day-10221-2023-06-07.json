@@ -1,0 +1,542 @@
+{
+  "trialId": 10221,
+  "date": "2023-06-07",
+  "dateDisplay": "Wednesday, June 7, 2023",
+  "generatedAt": "2026-04-07T19:24:07.262Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.38,
+      "nasdaqFuturesChange": -1.29,
+      "dowFuturesChange": 0.27,
+      "russellFuturesChange": 1.78,
+      "vixFuturesChange": -2.08,
+      "vix": 13.65,
+      "vixChange": -2.08,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 17.14,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.78,
+      "tenYearYieldChange": 2.3,
+      "twoYearYield": 4.29,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.94,
+      "threeMonthYield": 5.15,
+      "twoTenSpread": -0.51,
+      "threeMoTenYrSpread": -1.37,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 103.34,
+      "dollarIndexChange": -0.73,
+      "eurUsd": 1.07,
+      "eurUsdChange": 0.09,
+      "usdJpy": 139.9,
+      "usdJpyChange": 0.27,
+      "usdCny": 7.13,
+      "usdCnyChange": 0.14,
+      "oilWTI": 71.29,
+      "oilChange": -1.71,
+      "brentOil": 75.96,
+      "brentOilChange": -1.29,
+      "natGasChange": 0.99,
+      "goldPrice": 1963.6,
+      "goldChange": 1.08,
+      "silverChange": 3.52,
+      "copperChange": 1.12,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.85,
+      "daxChange": 0.18,
+      "ftseChange": -0.32,
+      "shanghaiChange": 0.5,
+      "hangSengChange": 0.25,
+      "kospiChange": -0.18,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 128.85,
+      "spreadChange": 0.55,
+      "igSpread": -12.66,
+      "igSpreadChange": 0.89,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.11,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -1.49,
+      "xlfChange": 0.39,
+      "xleChange": 2.65,
+      "xlvChange": -0.39,
+      "xlpChange": -0.33,
+      "xluChange": 1.7,
+      "xlreChange": 1.84,
+      "xliChange": 1.61,
+      "xlbChange": 1.19,
+      "xlcChange": -1.12,
+      "xlyChange": -0.68,
+      "smhChange": -0.57,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.62,
+      "ethereumChange": 0.76,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 238,
+      "daysToNextCPI": 218,
+      "daysToNextNFP": 212,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": 2.1,
+      "sp20DayReturn": 3.6,
+      "nasdaqVsRussell5d": -6.62,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 36,
+      "directionalBias": "6",
+      "volatilityRegime": "normal",
+      "stressIndex": 13,
+      "riskAppetiteIndex": 52,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Macro",
+          "content": "Fed skip expected at June 13-14 FOMC. Debt ceiling resolved June 3. Strong May NFP (339k) reported June 2. ISM Services 50.3 on June 5, barely expansionary. Dollar mixed.",
+          "importance": "medium"
+        },
+        {
+          "title": "Equities",
+          "content": "S&P 500 near 4,283 after consolidation day June 6. Nasdaq leading on AI/mega-cap momentum. Breadth narrow. VIX around 14.0. Russell 2000 lagging badly.",
+          "importance": "medium"
+        },
+        {
+          "title": "Geopolitical",
+          "content": "Kakhovka dam destroyed June 6 — major Ukraine escalation. Ukraine counteroffensive beginning. Modest oil impact. Defense names bid.",
+          "importance": "medium"
+        },
+        {
+          "title": "FixedIncome",
+          "content": "10Y yield ~3.67%. 2Y at ~4.50%. Deep inversion. Market pricing Fed pause in June, possible July hike.",
+          "importance": "medium"
+        },
+        {
+          "title": "Commodities",
+          "content": "WTI crude ~$72. Gold ~$1,960 consolidating. Copper weak on China demand concerns.",
+          "importance": "medium"
+        },
+        {
+          "title": "Crypto",
+          "content": "SEC sued Binance June 5, Coinbase June 6. Crypto in sharp selloff. BTC below $26,000. Contagion to crypto-adjacent equities.",
+          "importance": "medium"
+        },
+        {
+          "title": "KeyEvents",
+          "content": "Kakhovka dam destruction — overnight headline,SEC v Coinbase lawsuit filed June 6 — crypto selling,Fed skip narrative strengthening ahead of June 13-14 FOMC,AI/semiconductor momentum continues post-NVDA earnings,Debt ceiling overhang fully removed",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "COIN",
+      "direction": "short",
+      "entryPrice": 51.61,
+      "targetPrice": 48.3,
+      "stopLoss": 53.17,
+      "thesis": "SEC lawsuit filed June 6 — stock dropped ~12% and sentiment is deeply negative. Pre-market likely to see continued selling as analysts downgrade and crypto prices slide. Regulatory overhang is existential-level. Targeting continuation of the June 6 selloff.",
+      "catalyst": "SEC lawsuit aftermath, ongoing crypto selloff, analyst downgrades expected",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "entryPrice": 38.65,
+      "targetPrice": 39.45,
+      "stopLoss": 38,
+      "thesis": "AI momentum leader in parabolic move since May 24 earnings blowout. Consolidation on June 6 sets up continuation. AI spending narrative only strengthening. Narrow market breadth benefits NVDA as funds crowd into the AI trade.",
+      "catalyst": "AI momentum continuation, narrow market leadership favoring mega-cap tech",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "MARA",
+      "direction": "short",
+      "entryPrice": 10.08,
+      "targetPrice": 9.24,
+      "stopLoss": 10.55,
+      "thesis": "Bitcoin miners are high-beta crypto plays. BTC dropping on SEC enforcement against major exchanges. MARA faces double headwind: declining BTC price and regulatory fear suppressing the entire crypto ecosystem. Follow-through selling expected.",
+      "catalyst": "SEC enforcement contagion, BTC price decline, crypto sentiment capitulation",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AMD",
+      "direction": "long",
+      "entryPrice": 124.23,
+      "targetPrice": 128.35,
+      "stopLoss": 121.65,
+      "thesis": "Second-derivative AI play behind NVDA. MI300 positioned as credible H100 alternative. AMD lagged NVDA's initial pop and catching a bid as investors seek cheaper AI exposure. Consolidating near $120 with breakout potential.",
+      "catalyst": "AI spending rotation from NVDA to second-tier semis, MI300 anticipation",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "META",
+      "direction": "long",
+      "entryPrice": 272,
+      "targetPrice": 278,
+      "stopLoss": 268.5,
+      "thesis": "Massive 2023 recovery rally, up over 100% YTD. AI narrative benefits META through LLaMA models and AI-driven ad targeting. Year of Efficiency cost cuts flowing to margins. AAPL Vision Pro announcement validates XR space META invested in.",
+      "catalyst": "AI narrative tailwind, Year of Efficiency margin expansion, AAPL Vision Pro validating XR",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LMT",
+      "direction": "long",
+      "entryPrice": 458.63,
+      "targetPrice": 466.69,
+      "stopLoss": 453.59,
+      "thesis": "Kakhovka dam destruction on June 6 represents significant Ukraine conflict escalation. Defense stocks see a bid on escalation headlines. LMT is highest-quality defense name. Consolidating in $450-460 range, geopolitical catalyst could push to upper end.",
+      "catalyst": "Kakhovka dam escalation, defense spending narrative, geopolitical risk premium",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "COIN",
+      "openPrice": 53.29,
+      "highPrice": 57.42,
+      "lowPrice": 51.7,
+      "closePrice": 53.28,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.24,
+      "notes": "3-day window (2023-06-07, 2023-06-08, 2023-06-09). Open $53.29, High $57.42, Low $51.7, Close $53.28."
+    },
+    {
+      "symbol": "NVDA",
+      "openPrice": 38.92,
+      "highPrice": 39.71,
+      "lowPrice": 37.36,
+      "closePrice": 38.77,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.31,
+      "notes": "3-day window (2023-06-07, 2023-06-08, 2023-06-09). Open $38.92, High $39.71, Low $37.36, Close $38.77."
+    },
+    {
+      "symbol": "MARA",
+      "openPrice": 10,
+      "highPrice": 10.58,
+      "lowPrice": 9.2,
+      "closePrice": 9.38,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.94,
+      "notes": "3-day window (2023-06-07, 2023-06-08, 2023-06-09). Open $10, High $10.58, Low $9.2, Close $9.38."
+    },
+    {
+      "symbol": "AMD",
+      "openPrice": 124.03,
+      "highPrice": 127.25,
+      "lowPrice": 117.05,
+      "closePrice": 124.92,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.56,
+      "notes": "3-day window (2023-06-07, 2023-06-08, 2023-06-09). Open $124.03, High $127.25, Low $117.05, Close $124.92."
+    },
+    {
+      "symbol": "META",
+      "openPrice": 271.67,
+      "highPrice": 274.25,
+      "lowPrice": 258.88,
+      "closePrice": 264.95,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -2.59,
+      "notes": "3-day window (2023-06-07, 2023-06-08, 2023-06-09). Open $271.67, High $274.25, Low $258.88, Close $264.95."
+    },
+    {
+      "symbol": "LMT",
+      "openPrice": 458.12,
+      "highPrice": 466.42,
+      "lowPrice": 455.01,
+      "closePrice": 462.69,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.89,
+      "notes": "3-day window (2023-06-07, 2023-06-08, 2023-06-09). Open $458.12, High $466.42, Low $455.01, Close $462.69."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 66.7,
+    "targetHitRate": 33.3,
+    "stopHitRate": 83.3,
+    "avgReturnPercent": 0.48,
+    "profitFactor": 1.49,
+    "winRate": 66.7,
+    "totalScore": 56.6,
+    "benchmarkReturn": -0.44,
+    "alpha": 0.92
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
