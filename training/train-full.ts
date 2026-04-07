@@ -56,7 +56,7 @@ const API_KEY = process.env.ANTHROPIC_API_KEY;
 const FRED_API_KEY = process.env.FRED_API_KEY;
 const MODEL = process.env.BRIEFING_MODEL || "claude-opus-4-6";
 const API_URL = "https://api.anthropic.com/v1/messages";
-const MAX_RETRIES = 3;
+const MAX_RETRIES = 5;
 const TOTAL_TRIALS = parseInt(process.env.TOTAL_TRIALS || "100", 10);
 const STATE_FILE = path.join(__dirname, "results", "training-state.json");
 const LOG_FILE = path.join(__dirname, "results", "training-full-log.txt");
@@ -210,8 +210,9 @@ async function callClaude(
       return text;
     } catch (err) {
       if (attempt === MAX_RETRIES) throw err;
-      const wait = Math.pow(2, attempt) * 1000;
-      console.error(`  Error: ${err}. Retrying in ${wait / 1000}s...`);
+      const wait = Math.pow(2, attempt) * 3000;
+      const msg = err instanceof Error ? `${err.message} (cause: ${err.cause || 'none'})` : String(err);
+      console.error(`  Error [attempt ${attempt}/${MAX_RETRIES}]: ${msg}. Retrying in ${wait / 1000}s...`);
       await new Promise((r) => setTimeout(r, wait));
     }
   }
