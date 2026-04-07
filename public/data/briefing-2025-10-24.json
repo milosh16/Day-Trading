@@ -1,0 +1,375 @@
+{
+  "id": "briefing-2025-10-24-1775588355881",
+  "date": "2025-10-24",
+  "generatedAt": "2026-04-07T18:59:15.853Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Earnings",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorRotation",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Technicals",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG SPY @ $671",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $680",
+          "implication": "+1.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $666.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG QQQ @ $610.58",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $620.25",
+          "implication": "+1.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $604.53",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $115.98",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $118.43",
+          "implication": "+2.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $114.02",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG UNH @ $360.45",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $366.56",
+          "implication": "+1.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $356.17",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG JPM @ $294.54",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $300.68",
+          "implication": "+2.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $290.24",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NFLX @ $111.36",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $114.25",
+          "implication": "+2.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $109.19",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 51,
+  "recommendations": [
+    {
+      "ticker": "SPY",
+      "company": "SPDR S&P 500 ETF Trust",
+      "direction": "long",
+      "conviction": "HIGH",
+      "thesis": "CPI came in cooler than expected (3.0% vs 3.1%), cementing the Fed rate cut on Oct 29. Pre-market futures surging. S&P 500 poised to break to new all-time highs. Broad rally day with Dow targeting 47,000+ for first time. Low stress (13) and positive bias (+21) in a rotation regime favor broad index participation.",
+      "entryPrice": 671,
+      "targetPrice": 680,
+      "stopPrice": 666.5,
+      "riskRewardRatio": 2,
+      "maxRisk": "0.7%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "CPI beat morning release",
+        "Fed rate cut cemented for Oct 29",
+        "Record Dow 47K breakout momentum"
+      ]
+    },
+    {
+      "ticker": "QQQ",
+      "company": "Invesco QQQ Trust (Nasdaq 100)",
+      "direction": "long",
+      "conviction": "HIGH",
+      "thesis": "Nasdaq dropped 0.9% on Oct 23 from Netflix/TXN drag. CPI beat provides strong reversal catalyst for rate-sensitive tech. Pre-market futures pointing to gap-up open. Tech oversold on a 1-day basis after Netflix-driven selloff. Nasdaq poised for new all-time high close.",
+      "entryPrice": 610.58,
+      "targetPrice": 620.25,
+      "stopPrice": 604.53,
+      "riskRewardRatio": 1.6,
+      "maxRisk": "1.0%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "CPI dovish surprise",
+        "Tech bounce from Oct 23 selloff",
+        "Rate cut tailwind for growth"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "company": "Exxon Mobil Corporation",
+      "direction": "long",
+      "conviction": "MEDIUM-HIGH",
+      "thesis": "Russia sanctions on Rosneft/Lukoil announced Oct 23 create supply disruption. Chinese and Indian refiners suspending Russian crude purchases, redirecting demand to Western producers. Oil headed for weekly gain. XOM as largest US integrated oil major is primary beneficiary of sanctions-driven supply reallocation. CPI beat adds macro tailwind.",
+      "entryPrice": 115.98,
+      "targetPrice": 118.43,
+      "stopPrice": 114.02,
+      "riskRewardRatio": 1.25,
+      "maxRisk": "1.7%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "Rosneft/Lukoil sanctions creating supply gap",
+        "Indian/Chinese refiners cutting Russian imports",
+        "Oil weekly gain trajectory"
+      ]
+    },
+    {
+      "ticker": "UNH",
+      "company": "UnitedHealth Group",
+      "direction": "long",
+      "conviction": "MEDIUM-HIGH",
+      "thesis": "Defensive rotation into healthcare accelerating. Medicare open enrollment (started Oct 15) driving activity for largest Medicare Advantage insurer. Non-cyclical demand insulated from trade tensions. Institutional money rotating out of beaten-down tech into healthcare stability. CPI beat lifts all boats on a broad rally day.",
+      "entryPrice": 360.45,
+      "targetPrice": 366.56,
+      "stopPrice": 356.17,
+      "riskRewardRatio": 1.43,
+      "maxRisk": "1.2%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "Medicare open enrollment driving activity",
+        "Defensive rotation flow",
+        "Broad market rally from CPI beat"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "company": "JPMorgan Chase & Co.",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "thesis": "Financials benefit from imminent Fed rate cut (Oct 29). CPI beat ensures the cut happens. Record market levels boost trading revenue expectations. Rotation from tech into value/financials. JPM as largest US bank captures broad financial sector flows. Dow component benefits from Dow 47K breakout momentum.",
+      "entryPrice": 294.54,
+      "targetPrice": 300.68,
+      "stopPrice": 290.24,
+      "riskRewardRatio": 1.43,
+      "maxRisk": "1.5%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "Fed rate cut cemented by CPI",
+        "Record market levels",
+        "Rotation into value/financials",
+        "Dow 47K breakout participation"
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "company": "Netflix Inc.",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "thesis": "Netflix down ~10% over Oct 22-23 after Q3 earnings miss caused by one-time $619M Brazil tax charge. Revenue grew 17% and was inline. Oversold on technical basis after 2-day selling. Broad market CPI-driven rally provides reversal catalyst for beaten-down names. The Brazil tax is a non-recurring item. Dead-cat bounce setup on a strong tape day.",
+      "entryPrice": 111.36,
+      "targetPrice": 114.25,
+      "stopPrice": 109.19,
+      "riskRewardRatio": 1.33,
+      "maxRisk": "1.9%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "Oversold bounce after 10% 2-day drop",
+        "Non-recurring Brazil tax charge (one-time)",
+        "Broad market rally from CPI beat lifts all boats"
+      ]
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10056,
+    "outcomes": [
+      {
+        "symbol": "SPY",
+        "openPrice": 676.46,
+        "highPrice": 688.91,
+        "lowPrice": 675.65,
+        "closePrice": 687.06,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.39,
+        "notes": "3-day window (2025-10-24, 2025-10-27, 2025-10-28). Open $676.46, High $688.91, Low $675.65, Close $687.06."
+      },
+      {
+        "symbol": "QQQ",
+        "openPrice": 615.99,
+        "highPrice": 634.68,
+        "lowPrice": 615.13,
+        "closePrice": 632.92,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.66,
+        "notes": "3-day window (2025-10-24, 2025-10-27, 2025-10-28). Open $615.99, High $634.68, Low $615.13, Close $632.92."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 116.35,
+        "highPrice": 116.47,
+        "lowPrice": 114.99,
+        "closePrice": 115.03,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.82,
+        "notes": "3-day window (2025-10-24, 2025-10-27, 2025-10-28). Open $116.35, High $116.47, Low $114.99, Close $115.03."
+      },
+      {
+        "symbol": "UNH",
+        "openPrice": 361.37,
+        "highPrice": 381,
+        "lowPrice": 358.63,
+        "closePrice": 367.84,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.05,
+        "notes": "3-day window (2025-10-24, 2025-10-27, 2025-10-28). Open $361.37, High $381, Low $358.63, Close $367.84."
+      },
+      {
+        "symbol": "JPM",
+        "openPrice": 296.08,
+        "highPrice": 307.97,
+        "lowPrice": 295.45,
+        "closePrice": 305.36,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.67,
+        "notes": "3-day window (2025-10-24, 2025-10-27, 2025-10-28). Open $296.08, High $307.97, Low $295.45, Close $305.36."
+      },
+      {
+        "symbol": "NFLX",
+        "openPrice": 111.1,
+        "highPrice": 111.7,
+        "lowPrice": 108.73,
+        "closePrice": 110.25,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1,
+        "notes": "3-day window (2025-10-24, 2025-10-27, 2025-10-28). Open $111.1, High $111.7, Low $108.73, Close $110.25."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 66.7,
+      "targetHitRate": 66.7,
+      "stopHitRate": 16.7,
+      "avgReturnPercent": 1.66,
+      "profitFactor": 6.47,
+      "winRate": 66.7,
+      "totalScore": 83.5,
+      "benchmarkReturn": 0.12,
+      "alpha": 1.54
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.12,
+    "alpha": 1.54,
+    "fullDepth": true
+  }
+}
