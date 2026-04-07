@@ -1,0 +1,319 @@
+{
+  "id": "briefing-2023-06-26-1775602158312",
+  "date": "2023-06-26",
+  "generatedAt": "2026-04-07T22:49:18.285Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG LMT @ $459.36",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $466.81",
+          "implication": "+1.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $454.39",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG JPM @ $138.85",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $141.75",
+          "implication": "+2.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $136.63",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $110.01",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $113.9",
+          "implication": "+3.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $107.58",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT NVDA @ $42.21",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $41.22",
+          "implication": "+-2.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $42.91",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG RTX @ $96.91",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $99.38",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $95.43",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XLE @ $38.68",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $37.96",
+          "implication": "+-1.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $39.16",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 35,
+  "recommendations": [
+    {
+      "ticker": "LMT",
+      "company": "Lockheed Martin",
+      "direction": "long",
+      "conviction": "medium",
+      "rationale": "Wagner mutiny headlines drive Monday morning defense sector attention. LMT is the highest-profile US defense contractor and primary beneficiary of narratives around Russian military instability and increased European defense spending. Weekend news creates a gap-up opportunity.",
+      "entryPrice": 459.36,
+      "targetPrice": 466.81,
+      "stopPrice": 454.39,
+      "riskRewardRatio": 1.5,
+      "stopPercent": 1.08,
+      "catalyst": "Wagner mutiny weekend headlines, European defense spending narrative, geopolitical instability premium",
+      "timeframe": "morning session"
+    },
+    {
+      "ticker": "JPM",
+      "company": "JPMorgan Chase",
+      "direction": "long",
+      "conviction": "medium-high",
+      "rationale": "Pre-stress-test positioning ahead of Wednesday June 28 results. JPM consistently passes with flying colors and often rallies into/after results. Financials have significantly lagged tech YTD, creating relative value. Higher rates support NII. Jamie Dimon confidence premium.",
+      "entryPrice": 138.85,
+      "targetPrice": 141.75,
+      "stopPrice": 136.63,
+      "riskRewardRatio": 1.3,
+      "stopPercent": 1.6,
+      "catalyst": "Bank stress test positioning (results Wed Jun 28), rate environment supports bank earnings, relative value vs tech",
+      "timeframe": "full day, potential swing"
+    },
+    {
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices",
+      "direction": "long",
+      "conviction": "medium-high",
+      "rationale": "AI semiconductor momentum continuation. AMD consolidating after June surge on MI300 AI chip announcements. Trading as the 'cheaper NVDA alternative' for institutional rotation. Friday's broad selloff creates dip-buy opportunity in a name with strong fundamental catalyst (AI chip competition).",
+      "entryPrice": 110.01,
+      "targetPrice": 113.9,
+      "stopPrice": 107.58,
+      "riskRewardRatio": 1.6,
+      "stopPercent": 2.21,
+      "catalyst": "AI momentum continuation, MI300 chip catalyst, dip-buying after Friday weakness, institutional rotation from NVDA",
+      "timeframe": "full day"
+    },
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA",
+      "direction": "short",
+      "conviction": "medium",
+      "rationale": "Mean reversion after parabolic rally from ~$300 to ~$425 in weeks post-earnings. RSI deeply overbought on multiple timeframes. Friday saw selling pressure. Range-bound regime with flat bias favors fading extended moves. Target a pullback to recent consolidation support, not a trend reversal.",
+      "entryPrice": 42.21,
+      "targetPrice": 41.22,
+      "stopPrice": 42.91,
+      "riskRewardRatio": 1.43,
+      "stopPercent": 1.65,
+      "catalyst": "Profit-taking continuation after Friday selloff, overbought technical conditions, mean reversion in range-bound regime",
+      "timeframe": "afternoon fade setup"
+    },
+    {
+      "ticker": "RTX",
+      "company": "Raytheon Technologies",
+      "direction": "long",
+      "conviction": "medium",
+      "rationale": "Second defense play on Wagner mutiny narrative. RTX offers diversified defense/aerospace exposure including missile systems relevant to European rearmament theme. Lower price point than LMT with tighter day-trading spreads. Weekend geopolitical catalyst.",
+      "entryPrice": 96.91,
+      "targetPrice": 99.38,
+      "stopPrice": 95.43,
+      "riskRewardRatio": 1.67,
+      "stopPercent": 1.53,
+      "catalyst": "Wagner mutiny headlines, European defense spending, NATO rearmament narrative",
+      "timeframe": "morning session"
+    },
+    {
+      "ticker": "XLE",
+      "company": "Energy Select Sector SPDR ETF",
+      "direction": "short",
+      "conviction": "medium",
+      "rationale": "Wagner crisis resolution removes geopolitical oil supply premium. Any opening gap-up on weekend Russia headlines should be faded as no actual supply disruption occurred and crisis resolved within 24 hours. WTI demand outlook weak from global central bank tightening. Energy sector already in intermediate downtrend.",
+      "entryPrice": 38.68,
+      "targetPrice": 37.96,
+      "stopPrice": 39.16,
+      "riskRewardRatio": 1.5,
+      "stopPercent": 1.24,
+      "catalyst": "Wagner crisis resolution removes oil premium, fade the geopolitical gap, global demand concerns from rate hikes",
+      "timeframe": "morning session"
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10233,
+    "outcomes": [
+      {
+        "symbol": "LMT",
+        "openPrice": 455.94,
+        "highPrice": 456.16,
+        "lowPrice": 446.68,
+        "closePrice": 449.66,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.11,
+        "notes": "3-day window (2023-06-26, 2023-06-27, 2023-06-28). Open $455.94, High $456.16, Low $446.68, Close $449.66."
+      },
+      {
+        "symbol": "JPM",
+        "openPrice": 138.87,
+        "highPrice": 140.01,
+        "lowPrice": 137.69,
+        "closePrice": 138.59,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.19,
+        "notes": "3-day window (2023-06-26, 2023-06-27, 2023-06-28). Open $138.87, High $140.01, Low $137.69, Close $138.59."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 110.95,
+        "highPrice": 112.55,
+        "lowPrice": 107.08,
+        "closePrice": 110.17,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.15,
+        "notes": "3-day window (2023-06-26, 2023-06-27, 2023-06-28). Open $110.95, High $112.55, Low $107.08, Close $110.17."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 42.46,
+        "highPrice": 42.76,
+        "lowPrice": 40.1,
+        "closePrice": 41.12,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.58,
+        "notes": "3-day window (2023-06-26, 2023-06-27, 2023-06-28). Open $42.46, High $42.76, Low $40.1, Close $41.12."
+      },
+      {
+        "symbol": "RTX",
+        "openPrice": 95.98,
+        "highPrice": 96.75,
+        "lowPrice": 94.75,
+        "closePrice": 95.87,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.07,
+        "notes": "3-day window (2023-06-26, 2023-06-27, 2023-06-28). Open $95.98, High $96.75, Low $94.75, Close $95.87."
+      },
+      {
+        "symbol": "XLE",
+        "openPrice": 38.75,
+        "highPrice": 39.92,
+        "lowPrice": 38.66,
+        "closePrice": 39.87,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.08,
+        "notes": "3-day window (2023-06-26, 2023-06-27, 2023-06-28). Open $38.75, High $39.92, Low $38.66, Close $39.87."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 33.3,
+      "targetHitRate": 16.7,
+      "stopHitRate": 66.7,
+      "avgReturnPercent": -0.62,
+      "profitFactor": 0.42,
+      "winRate": 33.3,
+      "totalScore": 40.1,
+      "benchmarkReturn": -0.27,
+      "alpha": -0.35
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": -0.27,
+    "alpha": -0.35,
+    "fullDepth": true
+  }
+}
