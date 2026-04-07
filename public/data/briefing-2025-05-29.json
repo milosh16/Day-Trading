@@ -1,0 +1,374 @@
+{
+  "id": "briefing-2025-05-29-1775588665738",
+  "date": "2025-05-29",
+  "generatedAt": "2026-04-07T19:04:25.709Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Earnings",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorRotation",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Technicals",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG NVDA @ $134.81",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $139.25",
+          "implication": "+3.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $131.85",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $112.86",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $116.71",
+          "implication": "+3.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $110.72",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AVGO @ $239.43",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $247.58",
+          "implication": "+3.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $234.34",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG BURL @ $238.59",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $247.27",
+          "implication": "+3.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $233.38",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT HPQ @ $27.2",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $25.86",
+          "implication": "+-4.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $28",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT BBY @ $71.52",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $69.04",
+          "implication": "+-3.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $73.01",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 31,
+  "recommendations": [
+    {
+      "ticker": "NVDA",
+      "company": "NVIDIA Corporation",
+      "direction": "long",
+      "conviction": "HIGH",
+      "thesis": "NVIDIA beat on revenue ($44.1B vs $43.3B) and EPS ($0.81 vs $0.73). Data center revenue $39.1B up 73% YoY validates AI spending cycle. Stock +5% pre-market. CIT tariff ruling eases near-term China export overhang. Buy gap-up open targeting intraday momentum to $141 area. Risk: $4.5B H20 charge and $8B China headwind next quarter could cap upside; range-bound regime may limit follow-through.",
+      "entryPrice": 134.81,
+      "targetPrice": 139.25,
+      "stopPrice": 131.85,
+      "riskRewardRatio": 1.5,
+      "maxRisk": "2.2%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "Q1 FY26 earnings beat on revenue and EPS",
+        "Data center segment +73% YoY",
+        "CIT tariff ruling reduces export uncertainty"
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices",
+      "direction": "long",
+      "conviction": "MEDIUM-HIGH",
+      "thesis": "Semiconductor sympathy play off NVIDIA earnings beat. AMD benefits from validated AI spending cycle without NVDA's China H20 charge overhang. MI300X gaining traction in hyperscaler inference workloads. CIT tariff ruling supports chip sector broadly. AMD has lagged NVDA year-to-date and has catch-up potential on confirmation of AI capex cycle.",
+      "entryPrice": 112.86,
+      "targetPrice": 116.71,
+      "stopPrice": 110.72,
+      "riskRewardRatio": 1.8,
+      "maxRisk": "1.9%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "NVDA earnings sympathy -- AI capex validated",
+        "CIT tariff ruling eases chip export concerns",
+        "Catch-up trade vs NVDA outperformance"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "company": "Broadcom Inc.",
+      "direction": "long",
+      "conviction": "MEDIUM-HIGH",
+      "thesis": "Broadcom supplies custom AI accelerators (XPUs) and networking chips to hyperscalers. NVDA's $39.1B data center revenue confirms massive AI infrastructure build that flows directly to AVGO's custom silicon and networking business. Strong sympathy move expected. AVGO trending toward 4.5% gain based on forward data. AI networking is the next capex leg.",
+      "entryPrice": 239.43,
+      "targetPrice": 247.58,
+      "stopPrice": 234.34,
+      "riskRewardRatio": 1.6,
+      "maxRisk": "2.1%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "NVDA data center beat validates AI infra spend",
+        "Custom AI chip (XPU) demand acceleration",
+        "AI networking buildout tailwind"
+      ]
+    },
+    {
+      "ticker": "BURL",
+      "company": "Burlington Stores Inc.",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "thesis": "Burlington already +7% on strong Q1 earnings. Off-price retail is a direct tariff beneficiary -- sources opportunistically from brand inventory disruption caused by tariff uncertainty. CIT ruling blocking tariffs is a double tailwind: lower import costs AND more excess inventory to buy cheaply from brands scrambling on tariff logistics. Gap-up continuation trade on earnings momentum plus tariff catalyst.",
+      "entryPrice": 238.59,
+      "targetPrice": 247.27,
+      "stopPrice": 233.38,
+      "riskRewardRatio": 1.67,
+      "maxRisk": "2.2%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "Strong Q1 earnings beat",
+        "CIT tariff ruling benefits off-price model",
+        "Inventory dislocation creates sourcing opportunities"
+      ]
+    },
+    {
+      "ticker": "HPQ",
+      "company": "HP Inc.",
+      "direction": "short",
+      "conviction": "MEDIUM",
+      "thesis": "HP cut annual profit forecast on tariff headwinds, stock -8.5% after hours. Despite CIT tariff ruling, the appeal means tariff uncertainty persists for hardware makers with heavy Asia supply chains. Guidance cut is fundamental -- lower margins are baked in regardless of court outcome. PC market weakness compounds the issue. Fade any morning bounce attempt targeting further downside as analysts cut estimates.",
+      "entryPrice": 27.2,
+      "targetPrice": 25.86,
+      "stopPrice": 28,
+      "riskRewardRatio": 1.67,
+      "maxRisk": "2.9%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "Annual profit forecast cut",
+        "Tariff uncertainty on PC hardware supply chain",
+        "Analyst estimate revision cycle beginning"
+      ]
+    },
+    {
+      "ticker": "BBY",
+      "company": "Best Buy Co. Inc.",
+      "direction": "short",
+      "conviction": "MEDIUM",
+      "thesis": "Best Buy reporting pre-market May 29 with expected guidance cut on tariff costs. Revenue guide cut to $41.1-41.9B from $41.4-42.2B, EPS guide to $6.15-6.30 from $6.20-6.60. Already raised consumer electronics prices mid-May to offset tariffs. CIT ruling does NOT immediately reverse tariffs (appeal pending). Consumer demand softening under price hikes. Short on guidance cut reaction with stop above pre-earnings levels.",
+      "entryPrice": 71.52,
+      "targetPrice": 69.04,
+      "stopPrice": 73.01,
+      "riskRewardRatio": 1.67,
+      "maxRisk": "2.1%",
+      "timeframe": "Intraday",
+      "catalysts": [
+        "Revenue and EPS guidance cuts",
+        "Tariff cost pass-through hurting demand",
+        "Consumer electronics spending weakness"
+      ]
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10057,
+    "outcomes": [
+      {
+        "symbol": "NVDA",
+        "openPrice": 142.25,
+        "highPrice": 143.49,
+        "lowPrice": 132.92,
+        "closePrice": 137.38,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.91,
+        "notes": "3-day window (2025-05-29, 2025-05-30, 2025-06-02). Open $142.25, High $143.49, Low $132.92, Close $137.38."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 115.49,
+        "highPrice": 115.54,
+        "lowPrice": 108.62,
+        "closePrice": 114.63,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.57,
+        "notes": "3-day window (2025-05-29, 2025-05-30, 2025-06-02). Open $115.49, High $115.54, Low $108.62, Close $114.63."
+      },
+      {
+        "symbol": "AVGO",
+        "openPrice": 245.91,
+        "highPrice": 250,
+        "lowPrice": 234.9,
+        "closePrice": 248.71,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.88,
+        "notes": "3-day window (2025-05-29, 2025-05-30, 2025-06-02). Open $245.91, High $250, Low $234.9, Close $248.71."
+      },
+      {
+        "symbol": "BURL",
+        "openPrice": 255.6,
+        "highPrice": 259.16,
+        "lowPrice": 223.27,
+        "closePrice": 232.86,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.4,
+        "notes": "3-day window (2025-05-29, 2025-05-30, 2025-06-02). Open $255.6, High $259.16, Low $223.27, Close $232.86."
+      },
+      {
+        "symbol": "HPQ",
+        "openPrice": 23.82,
+        "highPrice": 25.9,
+        "lowPrice": 23.59,
+        "closePrice": 24.91,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 8.42,
+        "notes": "3-day window (2025-05-29, 2025-05-30, 2025-06-02). Open $23.82, High $25.9, Low $23.59, Close $24.91."
+      },
+      {
+        "symbol": "BBY",
+        "openPrice": 68.37,
+        "highPrice": 68.9,
+        "lowPrice": 64.31,
+        "closePrice": 68.27,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.54,
+        "notes": "3-day window (2025-05-29, 2025-05-30, 2025-06-02). Open $68.37, High $68.9, Low $64.31, Close $68.27."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 83.3,
+      "stopHitRate": 33.3,
+      "avgReturnPercent": 2.99,
+      "profitFactor": 8.47,
+      "winRate": 83.3,
+      "totalScore": 95,
+      "benchmarkReturn": -0.51,
+      "alpha": 3.5
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": -0.51,
+    "alpha": 3.5,
+    "fullDepth": true
+  }
+}
