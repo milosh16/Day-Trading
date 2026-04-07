@@ -86405,6 +86405,512 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10240,
+      "date": "2023-07-06",
+      "generatedAt": "2026-04-07T23:05:10.144Z",
+      "signals": {
+        "spFuturesChange": -0.79,
+        "nasdaqFuturesChange": -0.82,
+        "dowFuturesChange": -1.07,
+        "russellFuturesChange": -1.64,
+        "vixFuturesChange": -3.95,
+        "vix": 14.83,
+        "vixChange": -3.95,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 17.52,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.04,
+        "tenYearYieldChange": 2.43,
+        "twoYearYield": 4.62,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4,
+        "threeMonthYield": 5.21,
+        "twoTenSpread": -0.58,
+        "threeMoTenYrSpread": -1.17,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 102.27,
+        "dollarIndexChange": -0.87,
+        "eurUsd": 1.09,
+        "eurUsdChange": 0.31,
+        "usdJpy": 143.95,
+        "usdJpyChange": -0.37,
+        "usdCny": 7.25,
+        "usdCnyChange": 0.04,
+        "oilWTI": 73.86,
+        "oilChange": 2.87,
+        "brentOil": 78.47,
+        "brentOilChange": 2.55,
+        "natGasChange": -1.03,
+        "goldPrice": 1926.2,
+        "goldChange": 0.92,
+        "silverChange": 1.79,
+        "copperChange": 1.26,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -1.17,
+        "daxChange": 0.48,
+        "ftseChange": -0.32,
+        "shanghaiChange": -0.28,
+        "hangSengChange": -0.9,
+        "kospiChange": -1.16,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 131.1,
+        "spreadChange": 0.73,
+        "igSpread": -11.28,
+        "igSpreadChange": 1.01,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": -0.27,
+        "xlfChange": -0.86,
+        "xleChange": -2.25,
+        "xlvChange": -0.8,
+        "xlpChange": -0.25,
+        "xluChange": -1.21,
+        "xlreChange": -0.55,
+        "xliChange": -0.75,
+        "xlbChange": -0.73,
+        "xlcChange": -0.79,
+        "xlyChange": -1.61,
+        "smhChange": -1.19,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 1.45,
+        "ethereumChange": 1.19,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 209,
+        "daysToNextCPI": 189,
+        "daysToNextNFP": 183,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 2,
+        "sp5DayReturn": 0.79,
+        "sp20DayReturn": 2.98,
+        "nasdaqVsRussell5d": 1.53,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "range-bound",
+        "confidence": 38,
+        "directionalBias": "-8",
+        "volatilityRegime": "normal",
+        "stressIndex": 14,
+        "riskAppetiteIndex": 37,
+        "sectorTilts": {
+          "energy": "overweight",
+          "airlines": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "XOM",
+          "direction": "long",
+          "entryPrice": 106.91,
+          "targetPrice": 109.23,
+          "stopLoss": 105.3,
+          "thesis": "",
+          "catalyst": "OPEC+ supply cuts, potential crude bounce above $72",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AMD",
+          "direction": "short",
+          "entryPrice": 113.8,
+          "targetPrice": 110.5,
+          "stopLoss": 116.5,
+          "thesis": "",
+          "catalyst": "Hot employment data drives yields higher, pressures growth multiples",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "JPM",
+          "direction": "long",
+          "entryPrice": 144.5,
+          "targetPrice": 147.2,
+          "stopLoss": 141.2,
+          "thesis": "",
+          "catalyst": "Yield curve steepening, pre-earnings positioning, strong employment data",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "direction": "short",
+          "entryPrice": 282,
+          "targetPrice": 274,
+          "stopLoss": 288.5,
+          "thesis": "",
+          "catalyst": "Post-deliveries profit-taking, rising yields, overbought technicals",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "OXY",
+          "direction": "long",
+          "entryPrice": 58.89,
+          "targetPrice": 60.68,
+          "stopLoss": 57.5,
+          "thesis": "",
+          "catalyst": "OPEC+ supply discipline, Berkshire accumulation, crude above $71",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XLU",
+          "direction": "short",
+          "entryPrice": 33.34,
+          "targetPrice": 32.69,
+          "stopLoss": 33.84,
+          "thesis": "",
+          "catalyst": "Hot employment data drives yields above 4%, compressing utility spread",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "XOM",
+          "openPrice": 105.09,
+          "highPrice": 105.72,
+          "lowPrice": 101.56,
+          "closePrice": 104.69,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -2.08,
+          "notes": "3-day window (2023-07-06, 2023-07-07, 2023-07-10). Open $105.09, High $105.72, Low $101.56, Close $104.69."
+        },
+        {
+          "symbol": "AMD",
+          "openPrice": 112.07,
+          "highPrice": 115.33,
+          "lowPrice": 109.88,
+          "closePrice": 113.58,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.19,
+          "notes": "3-day window (2023-07-06, 2023-07-07, 2023-07-10). Open $112.07, High $115.33, Low $109.88, Close $113.58."
+        },
+        {
+          "symbol": "JPM",
+          "openPrice": 143.02,
+          "highPrice": 145.99,
+          "lowPrice": 141.44,
+          "closePrice": 145.15,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.45,
+          "notes": "3-day window (2023-07-06, 2023-07-07, 2023-07-10). Open $143.02, High $145.99, Low $141.44, Close $145.15."
+        },
+        {
+          "symbol": "TSLA",
+          "openPrice": 278.09,
+          "highPrice": 280.78,
+          "lowPrice": 265.1,
+          "closePrice": 269.61,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.39,
+          "notes": "3-day window (2023-07-06, 2023-07-07, 2023-07-10). Open $278.09, High $280.78, Low $265.1, Close $269.61."
+        },
+        {
+          "symbol": "OXY",
+          "openPrice": 58.27,
+          "highPrice": 59.22,
+          "lowPrice": 57.17,
+          "closePrice": 58.7,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.32,
+          "notes": "3-day window (2023-07-06, 2023-07-07, 2023-07-10). Open $58.27, High $59.22, Low $57.17, Close $58.7."
+        },
+        {
+          "symbol": "XLU",
+          "openPrice": 33.08,
+          "highPrice": 33.17,
+          "lowPrice": 32.29,
+          "closePrice": 32.56,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.34,
+          "notes": "3-day window (2023-07-06, 2023-07-07, 2023-07-10). Open $33.08, High $33.17, Low $32.29, Close $32.56."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 66.7,
+        "targetHitRate": 50,
+        "stopHitRate": 33.3,
+        "avgReturnPercent": 0.83,
+        "profitFactor": 3.07,
+        "winRate": 66.7,
+        "totalScore": 75.7,
+        "benchmarkReturn": 0.05,
+        "alpha": 0.78
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -86418,7 +86924,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T23:03:05.453Z",
+  "lastUpdatedAt": "2026-04-07T23:05:10.165Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -86864,7 +87370,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 80,
+  "fullDepthCurrentTrial": 81,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -87048,7 +87554,8 @@
     "2023-06-29",
     "2023-06-30",
     "2023-07-03",
-    "2023-07-05"
+    "2023-07-05",
+    "2023-07-06"
   ],
   "dateSequence": [
     "2025-09-09",
