@@ -1,0 +1,562 @@
+{
+  "trialId": 10036,
+  "date": "2025-10-09",
+  "dateDisplay": "Thursday, October 9, 2025",
+  "generatedAt": "2026-04-07T17:13:54.831Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.28,
+      "nasdaqFuturesChange": -0.08,
+      "dowFuturesChange": -0.52,
+      "russellFuturesChange": -0.61,
+      "vixFuturesChange": 31.83,
+      "vix": 21.66,
+      "vixChange": 31.83,
+      "vixTermStructure": "backwardation",
+      "vix9d": 0,
+      "vix3m": 19.38,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.15,
+      "tenYearYieldChange": 0.46,
+      "twoYearYield": 3.77,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.73,
+      "threeMonthYield": 3.85,
+      "twoTenSpread": 0.38,
+      "threeMoTenYrSpread": 0.3,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.98,
+      "dollarIndexChange": -0.56,
+      "eurUsd": 1.16,
+      "eurUsdChange": -0.56,
+      "usdJpy": 152.96,
+      "usdJpyChange": 0.19,
+      "usdCny": 7.13,
+      "usdCnyChange": 0.13,
+      "oilWTI": 58.9,
+      "oilChange": -4.24,
+      "brentOil": 62.73,
+      "brentOilChange": -3.82,
+      "natGasChange": -4.99,
+      "goldPrice": 3975.9,
+      "goldChange": 0.75,
+      "silverChange": 0.19,
+      "copperChange": -4.47,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -1.01,
+      "daxChange": -1.5,
+      "ftseChange": -0.86,
+      "shanghaiChange": -0.94,
+      "hangSengChange": -1.73,
+      "kospiChange": 1.73,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 97.89999999999999,
+      "spreadChange": 0.29,
+      "igSpread": -22.08,
+      "igSpreadChange": 0.2,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.95,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.17,
+      "xlfChange": -0.36,
+      "xleChange": -1.36,
+      "xlvChange": -0.22,
+      "xlpChange": 0.32,
+      "xluChange": -0.25,
+      "xlreChange": -0.46,
+      "xliChange": -1.48,
+      "xlbChange": -1.37,
+      "xlcChange": -0.57,
+      "xlyChange": -0.5,
+      "smhChange": -0.25,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -6.98,
+      "ethereumChange": -12.04,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 20,
+      "daysToNextCPI": 5,
+      "daysToNextNFP": 29,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": 0.29,
+      "sp20DayReturn": 2.24,
+      "nasdaqVsRussell5d": 0.37,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "crisis",
+      "confidence": 90,
+      "directionalBias": "-60",
+      "volatilityRegime": "elevated",
+      "stressIndex": 34,
+      "riskAppetiteIndex": 20,
+      "sectorTilts": {
+        "tech": "underweight",
+        "utilities": "overweight",
+        "healthcare": "overweight",
+        "financials": "underweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "UVXY",
+      "direction": "long",
+      "entryPrice": 52.25,
+      "targetPrice": 66.5,
+      "stopLoss": 49.78,
+      "thesis": "",
+      "catalyst": "Iran deadline expiration, potential shutdown escalation, delayed economic data creating uncertainty vacuum, trade tension escalation threats from Trump",
+      "conviction": {
+        "catalystClarity": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 92,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "SPY",
+      "direction": "short",
+      "entryPrice": 675,
+      "targetPrice": 660,
+      "stopLoss": 682,
+      "thesis": "",
+      "catalyst": "VIX spike on Oct 10 driven by Trump tariff escalation threats, Iran deadline, continued shutdown",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 78,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "GLD",
+      "direction": "long",
+      "entryPrice": 372.3,
+      "targetPrice": 385.6,
+      "stopLoss": 366.98,
+      "thesis": "",
+      "catalyst": "Iran sanctions deadline, continued DXY weakness, safe-haven rotation accelerating, Fed easing trajectory",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 80,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "QQQ",
+      "direction": "short",
+      "entryPrice": 611.44,
+      "targetPrice": 593.36,
+      "stopLoss": 625.26,
+      "thesis": "",
+      "catalyst": "VIX spike on Oct 10, US-China export control escalation, Iran uncertainty, government shutdown data vacuum",
+      "conviction": {
+        "catalystClarity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 76,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 78,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LMT",
+      "direction": "long",
+      "entryPrice": 514.02,
+      "targetPrice": 529.14,
+      "stopLoss": 503.94,
+      "thesis": "",
+      "catalyst": "Iran sanctions deadline, Ukraine power grid attacks escalating, $849.8B defense budget, earnings guidance raises",
+      "conviction": {
+        "catalystClarity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 72,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "TLT",
+      "direction": "long",
+      "entryPrice": 89.25,
+      "targetPrice": 92.42,
+      "stopLoss": 87.44,
+      "thesis": "",
+      "catalyst": "Dovish FOMC minutes released Oct 8, rate cut priced for Oct 29, shutdown blocking data = more uncertainty = more rate cut conviction",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 74,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 68,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LEVI",
+      "direction": "short",
+      "entryPrice": 24.66,
+      "targetPrice": 21.63,
+      "stopLoss": 25.74,
+      "thesis": "",
+      "catalyst": "Post-earnings profit-taking despite beat, consumer spending headwinds from weak labor data, CRISIS regime punishing discretionary",
+      "conviction": {
+        "catalystClarity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 68,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "UVXY",
+      "openPrice": 52,
+      "highPrice": 63.45,
+      "lowPrice": 51.75,
+      "closePrice": 55.55,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.32,
+      "notes": "3-day window (2025-10-09, 2025-10-10, 2025-10-13). Open $52, High $63.45, Low $51.75, Close $55.55."
+    },
+    {
+      "symbol": "SPY",
+      "openPrice": 673.53,
+      "highPrice": 673.95,
+      "lowPrice": 652.84,
+      "closePrice": 663.04,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.77,
+      "notes": "3-day window (2025-10-09, 2025-10-10, 2025-10-13). Open $673.53, High $673.95, Low $652.84, Close $663.04."
+    },
+    {
+      "symbol": "GLD",
+      "openPrice": 373.14,
+      "highPrice": 378.86,
+      "lowPrice": 362.83,
+      "closePrice": 378.09,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.56,
+      "notes": "3-day window (2025-10-09, 2025-10-10, 2025-10-13). Open $373.14, High $378.86, Low $362.83, Close $378.09."
+    },
+    {
+      "symbol": "QQQ",
+      "openPrice": 611.48,
+      "highPrice": 613.18,
+      "lowPrice": 589.05,
+      "closePrice": 602.01,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.54,
+      "notes": "3-day window (2025-10-09, 2025-10-10, 2025-10-13). Open $611.48, High $613.18, Low $589.05, Close $602.01."
+    },
+    {
+      "symbol": "LMT",
+      "openPrice": 513.89,
+      "highPrice": 515.19,
+      "lowPrice": 500,
+      "closePrice": 503.83,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.98,
+      "notes": "3-day window (2025-10-09, 2025-10-10, 2025-10-13). Open $513.89, High $515.19, Low $500, Close $503.83."
+    },
+    {
+      "symbol": "TLT",
+      "openPrice": 89.17,
+      "highPrice": 90.72,
+      "lowPrice": 89.01,
+      "closePrice": 90.57,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.48,
+      "notes": "3-day window (2025-10-09, 2025-10-10, 2025-10-13). Open $89.17, High $90.72, Low $89.01, Close $90.57."
+    },
+    {
+      "symbol": "LEVI",
+      "openPrice": 24.43,
+      "highPrice": 24.75,
+      "lowPrice": 21.06,
+      "closePrice": 21.16,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 14.19,
+      "notes": "3-day window (2025-10-09, 2025-10-10, 2025-10-13). Open $24.43, High $24.75, Low $21.06, Close $21.16."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 85.7,
+    "targetHitRate": 42.9,
+    "stopHitRate": 28.6,
+    "avgReturnPercent": 3.55,
+    "profitFactor": 13.57,
+    "winRate": 85.7,
+    "totalScore": 90,
+    "benchmarkReturn": -0.35,
+    "alpha": 3.9
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 84.5,
+      "avgScoreLosers": 80,
+      "predictivePower": 54.5
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 78.2,
+      "avgScoreLosers": 75,
+      "predictivePower": 53.2
+    },
+    "riskReward": {
+      "avgScoreWinners": 78.5,
+      "avgScoreLosers": 72,
+      "predictivePower": 56.5
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 85,
+      "avgScoreLosers": 82,
+      "predictivePower": 53
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 87.5,
+      "avgScoreLosers": 85,
+      "predictivePower": 52.5
+    },
+    "informationEdge": {
+      "avgScoreWinners": 78.3,
+      "avgScoreLosers": 75,
+      "predictivePower": 53.3
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 77.3,
+      "avgScoreLosers": 72,
+      "predictivePower": 55.3
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
