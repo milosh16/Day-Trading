@@ -71482,7 +71482,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T18:25:34.733Z",
+  "lastUpdatedAt": "2026-04-07T18:27:23.595Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -71861,6 +71861,19 @@
         "timingUrgency": 0.1
       },
       "score": 50
+    },
+    {
+      "trial": 174,
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "score": 46.3
     }
   ],
   "regimeWeightTable": {
@@ -71883,22 +71896,22 @@
       "timingUrgency": 0.1
     },
     "rotation": {
-      "catalystClarity": 0.2,
-      "technicalSetup": 0.15,
-      "riskReward": 0.15,
-      "volumeLiquidity": 0.1,
+      "catalystClarity": 0.197,
+      "technicalSetup": 0.152,
+      "riskReward": 0.149,
+      "volumeLiquidity": 0.104,
       "marketAlignment": 0.15,
-      "informationEdge": 0.15,
-      "timingUrgency": 0.1
+      "informationEdge": 0.149,
+      "timingUrgency": 0.098
     },
     "range-bound": {
-      "catalystClarity": 0.2,
-      "technicalSetup": 0.15,
-      "riskReward": 0.15,
-      "volumeLiquidity": 0.1,
-      "marketAlignment": 0.15,
-      "informationEdge": 0.15,
-      "timingUrgency": 0.1
+      "catalystClarity": 0.195,
+      "technicalSetup": 0.151,
+      "riskReward": 0.151,
+      "volumeLiquidity": 0.092,
+      "marketAlignment": 0.162,
+      "informationEdge": 0.147,
+      "timingUrgency": 0.101
     },
     "crisis": {
       "catalystClarity": 0.2,
@@ -71910,12 +71923,12 @@
       "timingUrgency": 0.1
     },
     "event-driven": {
-      "catalystClarity": 0.2,
-      "technicalSetup": 0.15,
-      "riskReward": 0.15,
-      "volumeLiquidity": 0.1,
-      "marketAlignment": 0.15,
-      "informationEdge": 0.15,
+      "catalystClarity": 0.199,
+      "technicalSetup": 0.154,
+      "riskReward": 0.149,
+      "volumeLiquidity": 0.102,
+      "marketAlignment": 0.149,
+      "informationEdge": 0.148,
       "timingUrgency": 0.1
     },
     "default": {
