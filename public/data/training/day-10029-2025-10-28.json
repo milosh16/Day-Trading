@@ -2,7 +2,7 @@
   "trialId": 10029,
   "date": "2025-10-28",
   "dateDisplay": "Tuesday, October 28, 2025",
-  "generatedAt": "2026-04-07T16:40:31.037Z",
+  "generatedAt": "2026-04-07T16:41:07.138Z",
   "pipeline": {
     "signals": {
       "spFuturesChange": 0.23,
@@ -139,20 +139,364 @@
       "scenarios": []
     }
   },
-  "recommendations": [],
-  "outcomes": [],
+  "recommendations": [
+    {
+      "symbol": "MSFT",
+      "direction": "long",
+      "entryPrice": 533,
+      "targetPrice": 541,
+      "stopLoss": 525,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 82,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "QCOM",
+      "direction": "long",
+      "entryPrice": 187.68,
+      "targetPrice": 199.94,
+      "stopLoss": 181.08,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 68,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NVDA",
+      "direction": "long",
+      "entryPrice": 191.49,
+      "targetPrice": 197.18,
+      "stopLoss": 186.75,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 70,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "WBD",
+      "direction": "long",
+      "entryPrice": 21.04,
+      "targetPrice": 23.31,
+      "stopLoss": 19.62,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 60,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LMT",
+      "direction": "long",
+      "entryPrice": 486.91,
+      "targetPrice": 498.6,
+      "stopLoss": 479.12,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 58,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "V",
+      "direction": "short",
+      "entryPrice": 349,
+      "targetPrice": 343,
+      "stopLoss": 354,
+      "thesis": "",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 58,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 45,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "MSFT",
+      "openPrice": 550,
+      "highPrice": 553.72,
+      "lowPrice": 522.12,
+      "closePrice": 525.76,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.36,
+      "notes": "3-day window (2025-10-28, 2025-10-29, 2025-10-30). Open $550, High $553.72, Low $522.12, Close $525.76."
+    },
+    {
+      "symbol": "QCOM",
+      "openPrice": 183.93,
+      "highPrice": 185.91,
+      "lowPrice": 177.19,
+      "closePrice": 177.26,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -5.55,
+      "notes": "3-day window (2025-10-28, 2025-10-29, 2025-10-30). Open $183.93, High $185.91, Low $177.19, Close $177.26."
+    },
+    {
+      "symbol": "NVDA",
+      "openPrice": 193.05,
+      "highPrice": 212.19,
+      "lowPrice": 191.91,
+      "closePrice": 202.89,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 5.95,
+      "notes": "3-day window (2025-10-28, 2025-10-29, 2025-10-30). Open $193.05, High $212.19, Low $191.91, Close $202.89."
+    },
+    {
+      "symbol": "WBD",
+      "openPrice": 21.37,
+      "highPrice": 21.84,
+      "lowPrice": 20.82,
+      "closePrice": 21.62,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.76,
+      "notes": "3-day window (2025-10-28, 2025-10-29, 2025-10-30). Open $21.37, High $21.84, Low $20.82, Close $21.62."
+    },
+    {
+      "symbol": "LMT",
+      "openPrice": 486.37,
+      "highPrice": 494.46,
+      "lowPrice": 483.62,
+      "closePrice": 489.72,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.58,
+      "notes": "3-day window (2025-10-28, 2025-10-29, 2025-10-30). Open $486.37, High $494.46, Low $483.62, Close $489.72."
+    },
+    {
+      "symbol": "V",
+      "openPrice": 348.58,
+      "highPrice": 350.98,
+      "lowPrice": 339,
+      "closePrice": 345.03,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.14,
+      "notes": "3-day window (2025-10-28, 2025-10-29, 2025-10-30). Open $348.58, High $350.98, Low $339, Close $345.03."
+    }
+  ],
   "scores": {
-    "directionAccuracy": 0,
-    "targetHitRate": 0,
-    "stopHitRate": 0,
-    "avgReturnPercent": 0,
-    "profitFactor": 0,
-    "winRate": 0,
-    "totalScore": 50,
+    "directionAccuracy": 66.7,
+    "targetHitRate": 50,
+    "stopHitRate": 33.3,
+    "avgReturnPercent": 0.59,
+    "profitFactor": 1.51,
+    "winRate": 66.7,
+    "totalScore": 67.7,
     "benchmarkReturn": 0,
-    "alpha": 0
+    "alpha": 0.59
   },
-  "dimensionAnalysis": {},
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 74,
+      "avgScoreLosers": 93.5,
+      "predictivePower": 30.5
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 67,
+      "avgScoreLosers": 75,
+      "predictivePower": 42
+    },
+    "riskReward": {
+      "avgScoreWinners": 70.5,
+      "avgScoreLosers": 75,
+      "predictivePower": 45.5
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 78.8,
+      "avgScoreLosers": 87,
+      "predictivePower": 41.8
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 68.5,
+      "avgScoreLosers": 81.5,
+      "predictivePower": 37
+    },
+    "informationEdge": {
+      "avgScoreWinners": 65.3,
+      "avgScoreLosers": 81.5,
+      "predictivePower": 33.8
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 58.3,
+      "avgScoreLosers": 75,
+      "predictivePower": 33.3
+    }
+  },
   "weights": {
     "catalystClarity": 0.22,
     "technicalSetup": 0.15,
