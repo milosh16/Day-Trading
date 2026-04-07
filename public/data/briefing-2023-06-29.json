@@ -1,0 +1,283 @@
+{
+  "id": "briefing-2023-06-29-1775602590602",
+  "date": "2023-06-29",
+  "generatedAt": "2026-04-07T22:56:30.582Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG NKE @ $113.03",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $117.57",
+          "implication": "+4.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $110.51",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG MU @ $67.07",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $70.1",
+          "implication": "+4.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $65.36",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG JPM @ $138.59",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $142.92",
+          "implication": "+3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $135.7",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG BAC @ $28.07",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $29.09",
+          "implication": "+3.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $27.39",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CAT @ $241.87",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $250.68",
+          "implication": "+3.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $235.99",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 56,
+  "recommendations": [
+    {
+      "ticker": "NKE",
+      "company": "Nike Inc",
+      "direction": "long",
+      "sector": "Consumer Discretionary",
+      "entryPrice": 113.03,
+      "targetPrice": 117.57,
+      "stopPrice": 110.51,
+      "thesis": "Q4 FY23 earnings blowout: EPS $0.66 vs $0.51, revenue $12.83B vs $12.59B. Strong DTC growth and inventory normalization. Pre-market up ~6%. Gap-and-go setup with strong volume. Wait for opening range confirmation above $111.50.",
+      "catalyst": "Earnings beat + gross margin expansion + China recovery narrative.",
+      "risk": "Gap may partially fill in first 15 min. Use opening range breakout entry.",
+      "riskRewardRatio": 1.8,
+      "stopPercent": 2.23,
+      "rewardPercent": 4.02
+    },
+    {
+      "ticker": "MU",
+      "company": "Micron Technology",
+      "direction": "long",
+      "sector": "Technology",
+      "entryPrice": 67.07,
+      "targetPrice": 70.1,
+      "stopPrice": 65.36,
+      "thesis": "Earnings beat June 28 after-hours with better guidance on AI/HBM memory demand. Semiconductor cycle trough thesis. Post-earnings momentum continuing into June 29 pre-market.",
+      "catalyst": "AI memory demand narrative. Revenue beat and improved forward guidance.",
+      "risk": "Non-AI memory segments still weak. Broader semi sector could weigh.",
+      "riskRewardRatio": 1.76,
+      "stopPercent": 2.56,
+      "rewardPercent": 4.51
+    },
+    {
+      "ticker": "JPM",
+      "company": "JPMorgan Chase",
+      "direction": "long",
+      "sector": "Financials",
+      "entryPrice": 138.59,
+      "targetPrice": 142.92,
+      "stopPrice": 135.7,
+      "thesis": "Strongest capital position among big banks post-stress test. Largest buyback announcement likely (historically $30B+). Strong GDP/employment data supports NII. After-hours rally continuing.",
+      "catalyst": "Buyback/dividend announcement expected June 29-30.",
+      "risk": "Buyback size partially priced in. End-of-quarter flows may create intraday noise.",
+      "riskRewardRatio": 1.5,
+      "stopPercent": 2.08,
+      "rewardPercent": 3.12
+    },
+    {
+      "ticker": "BAC",
+      "company": "Bank of America",
+      "direction": "long",
+      "sector": "Financials",
+      "entryPrice": 28.07,
+      "targetPrice": 29.09,
+      "stopPrice": 27.39,
+      "thesis": "Stress test passage with solid CET1 ratio. Most rate-sensitive among big banks — benefits directly from higher-for-longer narrative. Buyback announcement catalyst. Strong GDP/claims support NII growth.",
+      "catalyst": "Capital return announcement. Rising rate environment supports NII.",
+      "risk": "Consumer credit quality concerns; correlated with JPM trade.",
+      "riskRewardRatio": 1.5,
+      "stopPercent": 2.43,
+      "rewardPercent": 3.65
+    },
+    {
+      "ticker": "CAT",
+      "company": "Caterpillar Inc",
+      "direction": "long",
+      "sector": "Industrials",
+      "entryPrice": 241.87,
+      "targetPrice": 250.68,
+      "stopPrice": 235.99,
+      "thesis": "GDP revised to 2.0% validates resilient industrial economy. Infrastructure Investment and Jobs Act spending ramping into summer. Rotation into cyclicals on strong macro data.",
+      "catalyst": "GDP beat. Cyclical rotation narrative. Summer construction season.",
+      "risk": "ISM PMI still contractionary. Global industrial slowdown risk.",
+      "riskRewardRatio": 1.5,
+      "stopPercent": 2.43,
+      "rewardPercent": 3.64
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10236,
+    "outcomes": [
+      {
+        "symbol": "NKE",
+        "openPrice": 113.6,
+        "highPrice": 114.27,
+        "lowPrice": 109.11,
+        "closePrice": 109.11,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.47,
+        "notes": "3-day window (2023-06-29, 2023-06-30, 2023-07-03). Open $113.6, High $114.27, Low $109.11, Close $109.11."
+      },
+      {
+        "symbol": "MU",
+        "openPrice": 67.84,
+        "highPrice": 67.95,
+        "lowPrice": 62.9,
+        "closePrice": 63.9,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -4.73,
+        "notes": "3-day window (2023-06-29, 2023-06-30, 2023-07-03). Open $67.84, High $67.95, Low $62.9, Close $63.9."
+      },
+      {
+        "symbol": "JPM",
+        "openPrice": 140.07,
+        "highPrice": 147.48,
+        "lowPrice": 139.85,
+        "closePrice": 146.61,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.79,
+        "notes": "3-day window (2023-06-29, 2023-06-30, 2023-07-03). Open $140.07, High $147.48, Low $139.85, Close $146.61."
+      },
+      {
+        "symbol": "BAC",
+        "openPrice": 28.5,
+        "highPrice": 29.35,
+        "lowPrice": 28.4,
+        "closePrice": 29.2,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.03,
+        "notes": "3-day window (2023-06-29, 2023-06-30, 2023-07-03). Open $28.5, High $29.35, Low $28.4, Close $29.2."
+      },
+      {
+        "symbol": "CAT",
+        "openPrice": 241.94,
+        "highPrice": 248.39,
+        "lowPrice": 241.37,
+        "closePrice": 247.33,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.26,
+        "notes": "3-day window (2023-06-29, 2023-06-30, 2023-07-03). Open $241.94, High $248.39, Low $241.37, Close $247.33."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 60,
+      "targetHitRate": 40,
+      "stopHitRate": 40,
+      "avgReturnPercent": 0.78,
+      "profitFactor": 1.47,
+      "winRate": 60,
+      "totalScore": 61.9,
+      "benchmarkReturn": 0.49,
+      "alpha": 0.29
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.49,
+    "alpha": 0.29,
+    "fullDepth": true
+  }
+}
