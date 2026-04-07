@@ -1,0 +1,313 @@
+{
+  "id": "briefing-2025-01-08-1775582195700",
+  "date": "2025-01-08",
+  "generatedAt": "2026-04-07T17:16:35.689Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG XOM @ $108.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $110.75",
+          "implication": "+2.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $107",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GS @ $580.12",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $592.29",
+          "implication": "+2.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $572.01",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $140.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $146",
+          "implication": "+3.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $137",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NUE @ $121.28",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $125.68",
+          "implication": "+3.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $118.35",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT XLRE @ $39.98",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $38.69",
+          "implication": "+-3.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $40.8",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 32,
+  "recommendations": [
+    {
+      "ticker": "XOM",
+      "direction": "long",
+      "entryPrice": 108.5,
+      "targetPrice": 110.75,
+      "stopPrice": 107,
+      "positionSize": "standard",
+      "timeframe": "intraday",
+      "rationale": "Cold snap boosting energy demand. Oil prices firm at $74+. XOM holding above 50-DMA with relative strength. Energy is the top-ranked sector. Strong dollar partially offset by volume and geopolitical premium. Tight stop below recent intraday support at $106.80.",
+      "riskRewardRatio": 1.5,
+      "conviction": {
+        "overall": 72,
+        "catalystClarity": 78,
+        "technicalSetup": 70,
+        "riskReward": 68,
+        "volumeLiquidity": 85,
+        "marketAlignment": 75,
+        "informationEdge": 65,
+        "timingUrgency": 68
+      }
+    },
+    {
+      "ticker": "GS",
+      "direction": "long",
+      "entryPrice": 580.12,
+      "targetPrice": 592.29,
+      "stopPrice": 572.01,
+      "positionSize": "standard",
+      "timeframe": "intraday",
+      "rationale": "Rising Treasury yields directly benefit financials through NII expansion. Goldman's capital markets business benefits from increased volatility and M&A pipeline. Bank earnings season starting Jan 15 creates anticipation bid. Yield curve steepening is the dominant macro theme and financials are the direct beneficiary. Strong momentum into earnings.",
+      "riskRewardRatio": 1.5,
+      "conviction": {
+        "overall": 74,
+        "catalystClarity": 80,
+        "technicalSetup": 72,
+        "riskReward": 70,
+        "volumeLiquidity": 80,
+        "marketAlignment": 82,
+        "informationEdge": 60,
+        "timingUrgency": 72
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "entryPrice": 140.5,
+      "targetPrice": 146,
+      "stopPrice": 137,
+      "positionSize": "reduced",
+      "timeframe": "intraday",
+      "rationale": "CES 2025 keynote on Jan 6 delivered multiple product announcements: RTX 5090, Project DIGITS ($3K personal AI supercomputer), Cosmos robotics platform. Post-keynote momentum could carry into Jan 8 as analysts digest announcements. Counter-trend trade in a rate-pressured tech environment but catalyst-specific. Reduced size given headwind from rising yields.",
+      "riskRewardRatio": 1.57,
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 82,
+        "technicalSetup": 58,
+        "riskReward": 65,
+        "volumeLiquidity": 90,
+        "marketAlignment": 45,
+        "informationEdge": 72,
+        "timingUrgency": 75
+      }
+    },
+    {
+      "ticker": "NUE",
+      "direction": "long",
+      "entryPrice": 121.28,
+      "targetPrice": 125.68,
+      "stopPrice": 118.35,
+      "positionSize": "standard",
+      "timeframe": "intraday",
+      "rationale": "Domestic steel producer is a direct beneficiary of Trump tariff expectations. CNN reported Jan 7 on potential universal tariff plan. Infrastructure spending tailwind. Stock has been oversold and is due for a bounce on tariff catalyst. Domestic revenue base means strong dollar is not a headwind.",
+      "riskRewardRatio": 1.5,
+      "conviction": {
+        "overall": 66,
+        "catalystClarity": 72,
+        "technicalSetup": 62,
+        "riskReward": 68,
+        "volumeLiquidity": 70,
+        "marketAlignment": 70,
+        "informationEdge": 58,
+        "timingUrgency": 65
+      }
+    },
+    {
+      "ticker": "XLRE",
+      "direction": "short",
+      "entryPrice": 39.98,
+      "targetPrice": 38.69,
+      "stopPrice": 40.8,
+      "positionSize": "standard",
+      "timeframe": "intraday",
+      "rationale": "Real estate ETF under direct pressure from rising 10Y yields approaching 4.70%. REITs are bond proxies that suffer most in rising rate environments. FOMC minutes release at 2pm could add further hawkish pressure. Ranked #10 of 11 sectors. Clear negative catalyst alignment. Target the Jan 3 support level at $37.60.",
+      "riskRewardRatio": 1.56,
+      "conviction": {
+        "overall": 64,
+        "catalystClarity": 75,
+        "technicalSetup": 65,
+        "riskReward": 65,
+        "volumeLiquidity": 72,
+        "marketAlignment": 78,
+        "informationEdge": 50,
+        "timingUrgency": 60
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10037,
+    "outcomes": [
+      {
+        "symbol": "XOM",
+        "openPrice": 107.31,
+        "highPrice": 110.1,
+        "lowPrice": 105.78,
+        "closePrice": 109.29,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.73,
+        "notes": "3-day window (2025-01-08, 2025-01-10, 2025-01-13). Open $107.31, High $110.1, Low $105.78, Close $109.29."
+      },
+      {
+        "symbol": "GS",
+        "openPrice": 581.04,
+        "highPrice": 581.2,
+        "lowPrice": 556.76,
+        "closePrice": 562.95,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.96,
+        "notes": "3-day window (2025-01-08, 2025-01-10, 2025-01-13). Open $581.04, High $581.2, Low $556.76, Close $562.95."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 142.58,
+        "highPrice": 143.95,
+        "lowPrice": 129.51,
+        "closePrice": 133.23,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -5.17,
+        "notes": "3-day window (2025-01-08, 2025-01-10, 2025-01-13). Open $142.58, High $143.95, Low $129.51, Close $133.23."
+      },
+      {
+        "symbol": "NUE",
+        "openPrice": 120.53,
+        "highPrice": 123.55,
+        "lowPrice": 116.24,
+        "closePrice": 122.88,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.32,
+        "notes": "3-day window (2025-01-08, 2025-01-10, 2025-01-13). Open $120.53, High $123.55, Low $116.24, Close $122.88."
+      },
+      {
+        "symbol": "XLRE",
+        "openPrice": 40.01,
+        "highPrice": 40.17,
+        "lowPrice": 39.05,
+        "closePrice": 39.68,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.75,
+        "notes": "3-day window (2025-01-08, 2025-01-10, 2025-01-13). Open $40.01, High $40.17, Low $39.05, Close $39.68."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 60,
+      "targetHitRate": 0,
+      "stopHitRate": 80,
+      "avgReturnPercent": -1.07,
+      "profitFactor": 0.34,
+      "winRate": 60,
+      "totalScore": 43.9,
+      "benchmarkReturn": 0.13,
+      "alpha": -1.2
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 75,
+        "avgScoreLosers": 81,
+        "predictivePower": 44
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 65.7,
+        "avgScoreLosers": 65,
+        "predictivePower": 50.7
+      },
+      "riskReward": {
+        "avgScoreWinners": 67,
+        "avgScoreLosers": 67.5,
+        "predictivePower": 49.5
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 75.7,
+        "avgScoreLosers": 85,
+        "predictivePower": 40.7
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 74.3,
+        "avgScoreLosers": 63.5,
+        "predictivePower": 60.8
+      },
+      "informationEdge": {
+        "avgScoreWinners": 57.7,
+        "avgScoreLosers": 66,
+        "predictivePower": 41.7
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 64.3,
+        "avgScoreLosers": 73.5,
+        "predictivePower": 40.8
+      }
+    },
+    "benchmarkReturn": 0.13,
+    "alpha": -1.2,
+    "fullDepth": true
+  }
+}
