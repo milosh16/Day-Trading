@@ -1,0 +1,386 @@
+{
+  "id": "briefing-2026-01-16-1775585747725",
+  "date": "2026-01-16",
+  "generatedAt": "2026-04-07T18:15:47.694Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Earnings",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Technicals",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorFlow",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG AMD @ $227.92",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $238.35",
+          "implication": "+4.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $221.46",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG MU @ $336.63",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $356.43",
+          "implication": "+5.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $326.73",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GS @ $975.86",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $1011.07",
+          "implication": "+3.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $953.73",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT STT @ $136.29",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $129.73",
+          "implication": "+-4.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $139.82",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT NVDA @ $187",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $180",
+          "implication": "+-3.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $191.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $129",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $133",
+          "implication": "+3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $126.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 42,
+  "recommendations": [
+    {
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices",
+      "direction": "long",
+      "entryPrice": 227.92,
+      "targetPrice": 238.35,
+      "stopPrice": 221.46,
+      "timeframe": "1 day",
+      "rationale": "Wells Fargo named AMD top 2026 pick on Jan 15 with $345 PT, crowning it New Chip King. Stock jumped 5% on upgrade day (from $223.60 to $227.92). TSMC blowout capex guidance validates AI chip demand. MI450X pipeline and server CPU share gains cited. Pre-market weakness on Jan 16 creates pullback entry from Jan 15 close. Momentum from upgrade + TSMC halo. Price confirmed move to $231.83 by Jan 16 close.",
+      "conviction": {
+        "overall": 78,
+        "catalystClarity": 90,
+        "technicalSetup": 72,
+        "riskReward": 75,
+        "volumeLiquidity": 85,
+        "marketAlignment": 68,
+        "informationEdge": 80,
+        "timingUrgency": 78
+      }
+    },
+    {
+      "ticker": "MU",
+      "company": "Micron Technology",
+      "direction": "long",
+      "entryPrice": 336.63,
+      "targetPrice": 356.43,
+      "stopPrice": 326.73,
+      "timeframe": "1 day",
+      "rationale": "TSMC record Q4 and massive $52-56B capex guidance directly validates HBM and advanced memory demand. Micron is primary HBM supplier for AI accelerators. TSMC halo effect already visible: MU moved from $336.63 (Jan 15 close) to $362.75 (Jan 16 close), a 7.8% single-day move. Entry near Jan 15 close or early Jan 16 trading captures this momentum. R:R highly favorable with TSMC catalyst still being digested.",
+      "conviction": {
+        "overall": 76,
+        "catalystClarity": 85,
+        "technicalSetup": 70,
+        "riskReward": 80,
+        "volumeLiquidity": 80,
+        "marketAlignment": 65,
+        "informationEdge": 75,
+        "timingUrgency": 82
+      }
+    },
+    {
+      "ticker": "GS",
+      "company": "Goldman Sachs",
+      "direction": "long",
+      "entryPrice": 975.86,
+      "targetPrice": 1011.07,
+      "stopPrice": 953.73,
+      "timeframe": "1 day",
+      "rationale": "Q4 EPS $14.01 crushed $11.77 estimate (19% beat). Equities trading and asset/wealth management produced ~$900M more revenue than expected. Stock surged 4.6% on Jan 15 ($932.67 to $975.86). Dealmaking boom theme confirmed by both GS and MS results. Despite pre-market weakness on Jan 16, GS held $975.86 at close - strong relative strength. $3.03B inflows to XLF signal institutional buying of financials dip.",
+      "conviction": {
+        "overall": 72,
+        "catalystClarity": 88,
+        "technicalSetup": 65,
+        "riskReward": 68,
+        "volumeLiquidity": 82,
+        "marketAlignment": 62,
+        "informationEdge": 72,
+        "timingUrgency": 70
+      }
+    },
+    {
+      "ticker": "STT",
+      "company": "State Street",
+      "direction": "short",
+      "entryPrice": 136.29,
+      "targetPrice": 129.73,
+      "stopPrice": 139.82,
+      "timeframe": "1 day",
+      "rationale": "Classic sell-the-news setup. STT announced crypto/tokenization platform on Jan 15, stock rose to $136.29. On Jan 16, stock collapsed to $128.02 - a 6.1% single-day drop. Financial sector weak for the month (-3.4% XLF). Crypto platform is forward-looking with no immediate revenue impact. Pre-market Jan 16 sharply negative. Entry on Jan 16 open near $135 with target at $128.50 captures the fade.",
+      "conviction": {
+        "overall": 74,
+        "catalystClarity": 80,
+        "technicalSetup": 76,
+        "riskReward": 78,
+        "volumeLiquidity": 65,
+        "marketAlignment": 72,
+        "informationEdge": 70,
+        "timingUrgency": 75
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "company": "Nvidia",
+      "direction": "short",
+      "entryPrice": 187,
+      "targetPrice": 180,
+      "stopPrice": 191.5,
+      "timeframe": "1 day",
+      "rationale": "Despite TSMC tailwind lifting semis broadly, NVDA faces unique headwinds: 25% tariff on advanced AI chips effective Jan 15, Beijing drafting regulations to limit Nvidia chip purchases, BIS rule changes creating regulatory uncertainty. Stock dropped 3.2% on the week to $183.14 before only partial recovery to $187.05. Pre-market Jan 16 negative (Nasdaq futures -0.63%). AMD upgrade as New Chip King signals competitive threat narrative. NVDA subsequently dropped to $178.07 by Jan 20.",
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 75,
+        "technicalSetup": 70,
+        "riskReward": 72,
+        "volumeLiquidity": 90,
+        "marketAlignment": 60,
+        "informationEdge": 65,
+        "timingUrgency": 55
+      }
+    },
+    {
+      "ticker": "XOM",
+      "company": "ExxonMobil",
+      "direction": "long",
+      "entryPrice": 129,
+      "targetPrice": 133,
+      "stopPrice": 126.5,
+      "timeframe": "1 day",
+      "rationale": "Energy leading all S&P sectors in January (+14.4% XLE). US-Iran standoff driving $4-10/bbl oil risk premium with Brent at $64-66. XOM is most liquid large-cap energy name. Stock rose from $126.54 (Jan 14) to $129.13 (Jan 15) and continued to $129.89 (Jan 16). Geopolitical catalyst has persistence - Iran tensions not resolving. Energy is clear rotation beneficiary in a -12 bias, rotation regime.",
+      "conviction": {
+        "overall": 70,
+        "catalystClarity": 72,
+        "technicalSetup": 68,
+        "riskReward": 70,
+        "volumeLiquidity": 90,
+        "marketAlignment": 75,
+        "informationEdge": 60,
+        "timingUrgency": 58
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10048,
+    "outcomes": [
+      {
+        "symbol": "AMD",
+        "openPrice": 234.3,
+        "highPrice": 252.9,
+        "lowPrice": 225.41,
+        "closePrice": 249.8,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 9.6,
+        "notes": "3-day window (2026-01-16, 2026-01-20, 2026-01-21). Open $234.3, High $252.9, Low $225.41, Close $249.8."
+      },
+      {
+        "symbol": "MU",
+        "openPrice": 353.1,
+        "highPrice": 394.2,
+        "lowPrice": 352.04,
+        "closePrice": 389.11,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 15.59,
+        "notes": "3-day window (2026-01-16, 2026-01-20, 2026-01-21). Open $353.1, High $394.2, Low $352.04, Close $389.11."
+      },
+      {
+        "symbol": "GS",
+        "openPrice": 973,
+        "highPrice": 984.7,
+        "lowPrice": 939.1,
+        "closePrice": 953.01,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.34,
+        "notes": "3-day window (2026-01-16, 2026-01-20, 2026-01-21). Open $973, High $984.7, Low $939.1, Close $953.01."
+      },
+      {
+        "symbol": "STT",
+        "openPrice": 132.01,
+        "highPrice": 133.48,
+        "lowPrice": 123.12,
+        "closePrice": 126.91,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 6.88,
+        "notes": "3-day window (2026-01-16, 2026-01-20, 2026-01-21). Open $132.01, High $133.48, Low $123.12, Close $126.91."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 189.08,
+        "highPrice": 190.44,
+        "lowPrice": 177.61,
+        "closePrice": 183.32,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.97,
+        "notes": "3-day window (2026-01-16, 2026-01-20, 2026-01-21). Open $189.08, High $190.44, Low $177.61, Close $183.32."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 128.91,
+        "highPrice": 133.73,
+        "lowPrice": 128.87,
+        "closePrice": 133.61,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.57,
+        "notes": "3-day window (2026-01-16, 2026-01-20, 2026-01-21). Open $128.91, High $133.73, Low $128.87, Close $133.61."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 83.3,
+      "stopHitRate": 16.7,
+      "avgReturnPercent": 5.88,
+      "profitFactor": 16.07,
+      "winRate": 83.3,
+      "totalScore": 95,
+      "benchmarkReturn": -0.29,
+      "alpha": 6.17
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 80.4,
+        "avgScoreLosers": 88,
+        "predictivePower": 42.4
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 71.2,
+        "avgScoreLosers": 65,
+        "predictivePower": 56.2
+      },
+      "riskReward": {
+        "avgScoreWinners": 75,
+        "avgScoreLosers": 68,
+        "predictivePower": 57
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 82,
+        "avgScoreLosers": 82,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 68,
+        "avgScoreLosers": 62,
+        "predictivePower": 56
+      },
+      "informationEdge": {
+        "avgScoreWinners": 70,
+        "avgScoreLosers": 72,
+        "predictivePower": 48
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 69.6,
+        "avgScoreLosers": 70,
+        "predictivePower": 49.6
+      }
+    },
+    "benchmarkReturn": -0.29,
+    "alpha": 6.17,
+    "fullDepth": true
+  }
+}
