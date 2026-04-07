@@ -1,0 +1,524 @@
+{
+  "id": "briefing-2025-03-14-1775526819919",
+  "date": "2025-03-14",
+  "generatedAt": "2026-04-07T01:53:39.890Z",
+  "model": "claude-opus-4-6-max",
+  "summary": {
+    "regime": "Risk-on (cautious)",
+    "confidence": 0.77,
+    "directionalBias": 47,
+    "biasLabel": "Strongly bullish — correction bounce day",
+    "stressIndex": 23,
+    "riskAppetite": 64,
+    "narrative": "S&P 500 entered correction territory on Thursday 3/13 (down 10.1% from Feb 19 record high of ~6,144). The correction was driven by tariff escalation (200% EU alcohol tariff threat, 25% steel/aluminum tariffs effective 3/12) and deteriorating consumer sentiment. However, Friday 3/14 pre-market futures bounced sharply on absence of new tariff headlines from the White House. The University of Michigan consumer sentiment released at 10am will print 57.9 (worst since Nov 2022) with 1yr inflation expectations at 4.9%, but the market had already priced in significant pessimism. The government shutdown was averted — Senate passed full-year CR on 3/14 (54-46). Russia rejected the 30-day ceasefire proposal on 3/13 but this was expected. Overall setup: oversold bounce in a volatile tape. Mag 7 in aggregate bear market territory (down 20%), creating entry opportunities for quality names.",
+    "keyDataPoints": {
+      "sp500_prior_close": 5521.52,
+      "sp500_prior_change_pct": -1.39,
+      "nasdaq_prior_close": 17303.01,
+      "nasdaq_prior_change_pct": -1.96,
+      "dow_prior_close": 40813.57,
+      "dow_prior_change_pct": -1.3,
+      "vix_range": "20-24",
+      "brent_crude_approx": 70,
+      "umich_sentiment_actual": 57.9,
+      "umich_sentiment_expected": 63.2,
+      "umich_1yr_inflation": 4.9,
+      "government_shutdown_averted": true,
+      "fed_next_meeting": "2025-03-18"
+    }
+  },
+  "marketCondition": "bullish",
+  "sections": [
+    {
+      "title": "GeopoliticsAndWar",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "MacroAndCentralBanks",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "CorporateAndEarnings",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "TechAndAIAndSupplyChain",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "EnergyAndCommodities",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "PolicyAndRegulation",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG NVDA @ $115.58",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $118.47",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $113.85",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG META @ $590.64",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $605.41",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $581.78",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ADBE @ $377.84",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $387.29",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $372.17",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NUE @ $129.56",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $132.8",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $127.62",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG TSLA @ $240.68",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $246.7",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $237.07",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG S @ $18.23",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $18.69",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $17.96",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "risk-on",
+  "regimeConfidence": 77,
+  "recommendations": [
+    {
+      "id": 1,
+      "ticker": "NVDA",
+      "direction": "LONG",
+      "thesis": "Oversold Mag 7 bounce leader. NVDA is the most liquid large-cap tech name and the AI infrastructure bellwether. Down 20%+ from Feb highs as part of the Mag 7 bear market. Pre-market indicated +5% on no new tariff headlines. Friday correction bounces historically strong. Ride the momentum into close.",
+      "timeframe": "Intraday (day trade)",
+      "entryZone": "Pre-market / open — exact price to be set via Yahoo Finance",
+      "targetPct": 4,
+      "stopPct": 2,
+      "riskReward": "2.0:1",
+      "positionSizePct": 20,
+      "conviction": {
+        "catalystClarity": 82,
+        "technicalSetup": 85,
+        "riskReward": 78,
+        "volumeLiquidity": 95,
+        "marketAlignment": 88,
+        "informationEdge": 65,
+        "timingUrgency": 90,
+        "composite": 83
+      },
+      "risks": [
+        "10am UMich sentiment print (57.9) could briefly cap bounce",
+        "Weekend risk if Trump tweets new tariffs",
+        "Fed meeting next week creates uncertainty"
+      ],
+      "entryPrice": 115.58,
+      "targetPrice": 118.47,
+      "stopPrice": 113.85
+    },
+    {
+      "id": 2,
+      "ticker": "META",
+      "direction": "LONG",
+      "thesis": "Strong fundamentals deeply oversold in Mag 7 selloff. Meta has the best risk-adjusted setup among Mag 7 — advertising revenue resilient, AI investment productive, lower tariff exposure than hardware names. Pre-market indicated +3%. Less volatile than TSLA, more predictable bounce.",
+      "timeframe": "Intraday (day trade)",
+      "entryZone": "Pre-market / open",
+      "targetPct": 3.5,
+      "stopPct": 2,
+      "riskReward": "1.75:1",
+      "positionSizePct": 18,
+      "conviction": {
+        "catalystClarity": 78,
+        "technicalSetup": 80,
+        "riskReward": 75,
+        "volumeLiquidity": 92,
+        "marketAlignment": 85,
+        "informationEdge": 62,
+        "timingUrgency": 82,
+        "composite": 79
+      },
+      "risks": [
+        "Ad spending could slow if tariff uncertainty persists",
+        "Regulatory overhang",
+        "Broad market reversal if UMich data shocks"
+      ],
+      "entryPrice": 590.64,
+      "targetPrice": 605.41,
+      "stopPrice": 581.78
+    },
+    {
+      "id": 3,
+      "ticker": "ADBE",
+      "direction": "LONG",
+      "thesis": "Post-earnings overreaction bounce. Adobe dropped 14% on 3/13 despite beating on revenue ($5.71B vs $5.66B) and EPS ($5.08 vs $4.97). The selloff was driven by AI competitive fears, but $125M AI ARR doubling by year-end shows real traction. Classic gap-down overreaction in a bouncing market. Higher R:R than Mag 7 plays.",
+      "timeframe": "Intraday (day trade)",
+      "entryZone": "Open — likely gapping up from Thursday's panic close",
+      "targetPct": 5,
+      "stopPct": 3,
+      "riskReward": "1.67:1",
+      "positionSizePct": 15,
+      "conviction": {
+        "catalystClarity": 88,
+        "technicalSetup": 75,
+        "riskReward": 72,
+        "volumeLiquidity": 82,
+        "marketAlignment": 80,
+        "informationEdge": 78,
+        "timingUrgency": 85,
+        "composite": 80
+      },
+      "risks": [
+        "AI competitive narrative could persist",
+        "Broad tech selloff resumes",
+        "14% gap may not fill in one day"
+      ],
+      "entryPrice": 377.84,
+      "targetPrice": 387.29,
+      "stopPrice": 372.17
+    },
+    {
+      "id": 4,
+      "ticker": "NUE",
+      "direction": "LONG",
+      "thesis": "Direct tariff beneficiary play. 25% steel tariffs effective 3/12 removed all prior exemptions. HRC futures rising to $945/ton as buyers scramble for domestic supply. Nucor is the largest US steelmaker — pure domestic play. Down 11% MTD creating entry. UBS will upgrade to Buy on 3/24 (PT $160). Fundamentals strong with pricing power locked in.",
+      "timeframe": "Intraday (day trade)",
+      "entryZone": "Open",
+      "targetPct": 3.5,
+      "stopPct": 2,
+      "riskReward": "1.75:1",
+      "positionSizePct": 15,
+      "conviction": {
+        "catalystClarity": 90,
+        "technicalSetup": 72,
+        "riskReward": 75,
+        "volumeLiquidity": 78,
+        "marketAlignment": 75,
+        "informationEdge": 82,
+        "timingUrgency": 70,
+        "composite": 77
+      },
+      "risks": [
+        "Broad market reversal pulls industrials down",
+        "Steel price gains could be temporary",
+        "Trade war escalation creates uncertainty even for domestic players"
+      ],
+      "entryPrice": 129.56,
+      "targetPrice": 132.8,
+      "stopPrice": 127.62
+    },
+    {
+      "id": 5,
+      "ticker": "TSLA",
+      "direction": "LONG",
+      "thesis": "Highest-beta Mag 7 bounce play. Tesla is the most volatile name in the group — if the market bounces (which pre-market indicates), TSLA will move the most. Pre-market indicated +4%. Retail momentum and short squeeze potential. Risk-on regime favors high-beta longs.",
+      "timeframe": "Intraday (day trade)",
+      "entryZone": "Open — momentum entry",
+      "targetPct": 5,
+      "stopPct": 3,
+      "riskReward": "1.67:1",
+      "positionSizePct": 12,
+      "conviction": {
+        "catalystClarity": 70,
+        "technicalSetup": 80,
+        "riskReward": 72,
+        "volumeLiquidity": 95,
+        "marketAlignment": 85,
+        "informationEdge": 55,
+        "timingUrgency": 88,
+        "composite": 78
+      },
+      "risks": [
+        "Extremely volatile — can reverse sharply",
+        "Elon headline risk",
+        "No fundamental catalyst beyond bounce",
+        "Wider stop needed (3%)"
+      ],
+      "entryPrice": 240.68,
+      "targetPrice": 246.7,
+      "stopPrice": 237.07
+    },
+    {
+      "id": 6,
+      "ticker": "S",
+      "direction": "LONG",
+      "thesis": "Cybersecurity momentum after strong earnings. SentinelOne reported 29% revenue growth, first positive operating margin, and is on track for $1B ARR milestone on 3/12. Cybersecurity demand is recession-resistant and tariff-immune. The stock should benefit from both sector-specific strength and the broader market bounce.",
+      "timeframe": "Intraday (day trade)",
+      "entryZone": "Open",
+      "targetPct": 4,
+      "stopPct": 2.5,
+      "riskReward": "1.6:1",
+      "positionSizePct": 10,
+      "conviction": {
+        "catalystClarity": 85,
+        "technicalSetup": 70,
+        "riskReward": 68,
+        "volumeLiquidity": 65,
+        "marketAlignment": 78,
+        "informationEdge": 75,
+        "timingUrgency": 72,
+        "composite": 73
+      },
+      "risks": [
+        "Lower liquidity than mega-caps",
+        "Small-cap / growth names can underperform in volatile tapes",
+        "Cybersecurity budget scrutiny in recession fears"
+      ],
+      "entryPrice": 18.23,
+      "targetPrice": 18.69,
+      "stopPrice": 17.96
+    }
+  ],
+  "watchlist": [
+    {
+      "ticker": "STLD",
+      "reason": "Steel tariff beneficiary like NUE. If NUE runs, STLD follows. Watch for break above resistance."
+    },
+    {
+      "ticker": "LMT",
+      "reason": "Defense budget increase + PAC-3 missile deal. Less volatile — better as swing trade than day trade."
+    },
+    {
+      "ticker": "GOOGL",
+      "reason": "Part of Mag 7 oversold bounce. Lower conviction than NVDA/META but could run if broad tech bounces hard."
+    },
+    {
+      "ticker": "AMZN",
+      "reason": "AWS + retail. Part of Mag 7 bounce. Tariff risk on retail side tempers conviction."
+    },
+    {
+      "ticker": "RTX",
+      "reason": "Raytheon — defense prime beneficiary. Less volatile than market, good for conservative bounce positioning."
+    },
+    {
+      "ticker": "CLF",
+      "reason": "Cleveland-Cliffs — steel tariff play, higher beta than NUE/STLD. Watch for momentum entry."
+    }
+  ],
+  "avoidList": [
+    {
+      "ticker": "DKS",
+      "reason": "Dick's Sporting Goods — weak guidance, consumer sentiment collapsing, discretionary retail headwinds."
+    },
+    {
+      "ticker": "ULTA",
+      "reason": "Ulta Beauty — missed expectations, cautious guidance, same consumer headwinds as DKS."
+    },
+    {
+      "ticker": "XOM",
+      "reason": "Exxon Mobil — Brent at 3-year lows, OPEC+ unwinding cuts, trade war crushing demand outlook."
+    },
+    {
+      "ticker": "CVX",
+      "reason": "Chevron — same energy headwinds as XOM. Avoid oil longs with crude at $70."
+    },
+    {
+      "ticker": "BUD",
+      "reason": "AB InBev — 200% tariff threat on EU alcohol imports. Direct target of Trump's EU retaliation."
+    },
+    {
+      "ticker": "DEO",
+      "reason": "Diageo — EU spirits maker directly exposed to 200% alcohol tariff threat."
+    },
+    {
+      "ticker": "STZ",
+      "reason": "Constellation Brands — imports beer/spirits from Mexico/EU. Tariff crossfire victim."
+    }
+  ],
+  "trainingData": {
+    "trialId": 10026,
+    "outcomes": [
+      {
+        "symbol": "NVDA",
+        "openPrice": 118.61,
+        "highPrice": 122.89,
+        "lowPrice": 114.54,
+        "closePrice": 115.43,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.13,
+        "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $118.61, High $122.89, Low $114.54, Close $115.43."
+      },
+      {
+        "symbol": "META",
+        "openPrice": 602.8,
+        "highPrice": 613.1,
+        "lowPrice": 574.66,
+        "closePrice": 582.36,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.4,
+        "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $602.8, High $613.1, Low $574.66, Close $582.36."
+      },
+      {
+        "symbol": "ADBE",
+        "openPrice": 379.75,
+        "highPrice": 399.94,
+        "lowPrice": 377.8,
+        "closePrice": 391.37,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.58,
+        "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $379.75, High $399.94, Low $377.8, Close $391.37."
+      },
+      {
+        "symbol": "NUE",
+        "openPrice": 131.88,
+        "highPrice": 133.09,
+        "lowPrice": 127.6,
+        "closePrice": 129.81,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.19,
+        "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $131.88, High $133.09, Low $127.6, Close $129.81."
+      },
+      {
+        "symbol": "TSLA",
+        "openPrice": 247.31,
+        "highPrice": 251.58,
+        "lowPrice": 222.28,
+        "closePrice": 225.31,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 6.39,
+        "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $247.31, High $251.58, Low $222.28, Close $225.31."
+      },
+      {
+        "symbol": "S",
+        "openPrice": 18.65,
+        "highPrice": 19.38,
+        "lowPrice": 17.53,
+        "closePrice": 19.37,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -6.25,
+        "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $18.65, High $19.38, Low $17.53, Close $19.37."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 50,
+      "targetHitRate": 100,
+      "stopHitRate": 100,
+      "avgReturnPercent": -0.35,
+      "profitFactor": 0.79,
+      "winRate": 50,
+      "totalScore": 49,
+      "benchmarkReturn": 1.2,
+      "alpha": -1.55
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 76.7,
+        "avgScoreLosers": 87.7,
+        "predictivePower": 39
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 81.7,
+        "avgScoreLosers": 72.3,
+        "predictivePower": 59.3
+      },
+      "riskReward": {
+        "avgScoreWinners": 75,
+        "avgScoreLosers": 71.7,
+        "predictivePower": 53.3
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 94,
+        "avgScoreLosers": 75,
+        "predictivePower": 69
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 86,
+        "avgScoreLosers": 77.7,
+        "predictivePower": 58.3
+      },
+      "informationEdge": {
+        "avgScoreWinners": 60.7,
+        "avgScoreLosers": 78.3,
+        "predictivePower": 32.3
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 86.7,
+        "avgScoreLosers": 75.7,
+        "predictivePower": 61
+      }
+    },
+    "benchmarkReturn": 1.2,
+    "alpha": -1.55,
+    "fullDepth": true
+  }
+}

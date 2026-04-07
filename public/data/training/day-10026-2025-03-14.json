@@ -1,0 +1,566 @@
+{
+  "trialId": 10026,
+  "date": "2025-03-14",
+  "dateDisplay": "Friday, March 14, 2025",
+  "generatedAt": "2026-04-07T01:53:39.890Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 2.13,
+      "nasdaqFuturesChange": 2.61,
+      "dowFuturesChange": 1.65,
+      "russellFuturesChange": 2.53,
+      "vixFuturesChange": -11.72,
+      "vix": 21.77,
+      "vixChange": -11.72,
+      "vixTermStructure": "flat",
+      "vix9d": 0,
+      "vix3m": 22.17,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.31,
+      "tenYearYieldChange": 0.8,
+      "twoYearYield": 4.11,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.61,
+      "threeMonthYield": 4.19,
+      "twoTenSpread": 0.2,
+      "threeMoTenYrSpread": 0.12,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 103.72,
+      "dollarIndexChange": -0.11,
+      "eurUsd": 1.09,
+      "eurUsdChange": -0.28,
+      "usdJpy": 147.95,
+      "usdJpyChange": -0.22,
+      "usdCny": 7.24,
+      "usdCnyChange": 0,
+      "oilWTI": 67.18,
+      "oilChange": 0.95,
+      "brentOil": 70.58,
+      "brentOilChange": 1,
+      "natGasChange": -0.17,
+      "goldPrice": 2994.5,
+      "goldChange": 0.34,
+      "silverChange": 0.4,
+      "copperChange": -0.59,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.72,
+      "daxChange": 1.86,
+      "ftseChange": 1.05,
+      "shanghaiChange": 1.81,
+      "hangSengChange": 2.12,
+      "kospiChange": -0.28,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 105.60000000000001,
+      "spreadChange": -0.46,
+      "igSpread": -15.9,
+      "igSpreadChange": 0.05,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.98,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 3.02,
+      "xlfChange": 2.32,
+      "xleChange": 2.96,
+      "xlvChange": 0.76,
+      "xlpChange": 0.23,
+      "xluChange": 1.95,
+      "xlreChange": 1.94,
+      "xliChange": 1.82,
+      "xlbChange": 1.31,
+      "xlcChange": 1.83,
+      "xlyChange": 2.13,
+      "smhChange": 3.2,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 0.45,
+      "ethereumChange": 1.46,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 5,
+      "daysToNextCPI": 27,
+      "daysToNextNFP": 21,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": -2.27,
+      "sp20DayReturn": -7.79,
+      "nasdaqVsRussell5d": -0.92,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "risk-on",
+      "confidence": 77,
+      "directionalBias": "47",
+      "volatilityRegime": "normal",
+      "stressIndex": 23,
+      "riskAppetiteIndex": 64,
+      "sectorTilts": {
+        "tech": "overweight",
+        "consumer-discretionary": "overweight",
+        "utilities": "underweight",
+        "semiconductors": "overweight",
+        "materials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": {
+        "regime": "Risk-on (cautious)",
+        "confidence": 0.77,
+        "directionalBias": 47,
+        "biasLabel": "Strongly bullish — correction bounce day",
+        "stressIndex": 23,
+        "riskAppetite": 64,
+        "narrative": "S&P 500 entered correction territory on Thursday 3/13 (down 10.1% from Feb 19 record high of ~6,144). The correction was driven by tariff escalation (200% EU alcohol tariff threat, 25% steel/aluminum tariffs effective 3/12) and deteriorating consumer sentiment. However, Friday 3/14 pre-market futures bounced sharply on absence of new tariff headlines from the White House. The University of Michigan consumer sentiment released at 10am will print 57.9 (worst since Nov 2022) with 1yr inflation expectations at 4.9%, but the market had already priced in significant pessimism. The government shutdown was averted — Senate passed full-year CR on 3/14 (54-46). Russia rejected the 30-day ceasefire proposal on 3/13 but this was expected. Overall setup: oversold bounce in a volatile tape. Mag 7 in aggregate bear market territory (down 20%), creating entry opportunities for quality names.",
+        "keyDataPoints": {
+          "sp500_prior_close": 5521.52,
+          "sp500_prior_change_pct": -1.39,
+          "nasdaq_prior_close": 17303.01,
+          "nasdaq_prior_change_pct": -1.96,
+          "dow_prior_close": 40813.57,
+          "dow_prior_change_pct": -1.3,
+          "vix_range": "20-24",
+          "brent_crude_approx": 70,
+          "umich_sentiment_actual": 57.9,
+          "umich_sentiment_expected": 63.2,
+          "umich_1yr_inflation": 4.9,
+          "government_shutdown_averted": true,
+          "fed_next_meeting": "2025-03-18"
+        }
+      },
+      "marketCondition": "bullish",
+      "sections": [
+        {
+          "title": "GeopoliticsAndWar",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "MacroAndCentralBanks",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "CorporateAndEarnings",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "TechAndAIAndSupplyChain",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "EnergyAndCommodities",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "PolicyAndRegulation",
+          "content": "[object Object]",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "NVDA",
+      "direction": "LONG",
+      "entryPrice": 115.58,
+      "targetPrice": 118.47,
+      "stopLoss": 113.85,
+      "thesis": "Oversold Mag 7 bounce leader. NVDA is the most liquid large-cap tech name and the AI infrastructure bellwether. Down 20%+ from Feb highs as part of the Mag 7 bear market. Pre-market indicated +5% on no new tariff headlines. Friday correction bounces historically strong. Ride the momentum into close.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 90,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "META",
+      "direction": "LONG",
+      "entryPrice": 590.64,
+      "targetPrice": 605.41,
+      "stopLoss": 581.78,
+      "thesis": "Strong fundamentals deeply oversold in Mag 7 selloff. Meta has the best risk-adjusted setup among Mag 7 — advertising revenue resilient, AI investment productive, lower tariff exposure than hardware names. Pre-market indicated +3%. Less volatile than TSLA, more predictable bounce.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 82,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "ADBE",
+      "direction": "LONG",
+      "entryPrice": 377.84,
+      "targetPrice": 387.29,
+      "stopLoss": 372.17,
+      "thesis": "Post-earnings overreaction bounce. Adobe dropped 14% on 3/13 despite beating on revenue ($5.71B vs $5.66B) and EPS ($5.08 vs $4.97). The selloff was driven by AI competitive fears, but $125M AI ARR doubling by year-end shows real traction. Classic gap-down overreaction in a bouncing market. Higher R:R than Mag 7 plays.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 85,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NUE",
+      "direction": "LONG",
+      "entryPrice": 129.56,
+      "targetPrice": 132.8,
+      "stopLoss": 127.62,
+      "thesis": "Direct tariff beneficiary play. 25% steel tariffs effective 3/12 removed all prior exemptions. HRC futures rising to $945/ton as buyers scramble for domestic supply. Nucor is the largest US steelmaker — pure domestic play. Down 11% MTD creating entry. UBS will upgrade to Buy on 3/24 (PT $160). Fundamentals strong with pricing power locked in.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 70,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "TSLA",
+      "direction": "LONG",
+      "entryPrice": 240.68,
+      "targetPrice": 246.7,
+      "stopLoss": 237.07,
+      "thesis": "Highest-beta Mag 7 bounce play. Tesla is the most volatile name in the group — if the market bounces (which pre-market indicates), TSLA will move the most. Pre-market indicated +4%. Retail momentum and short squeeze potential. Risk-on regime favors high-beta longs.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 95,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 88,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "S",
+      "direction": "LONG",
+      "entryPrice": 18.23,
+      "targetPrice": 18.69,
+      "stopLoss": 17.96,
+      "thesis": "Cybersecurity momentum after strong earnings. SentinelOne reported 29% revenue growth, first positive operating margin, and is on track for $1B ARR milestone on 3/12. Cybersecurity demand is recession-resistant and tariff-immune. The stock should benefit from both sector-specific strength and the broader market bounce.",
+      "catalyst": "",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 72,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "NVDA",
+      "openPrice": 118.61,
+      "highPrice": 122.89,
+      "lowPrice": 114.54,
+      "closePrice": 115.43,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.13,
+      "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $118.61, High $122.89, Low $114.54, Close $115.43."
+    },
+    {
+      "symbol": "META",
+      "openPrice": 602.8,
+      "highPrice": 613.1,
+      "lowPrice": 574.66,
+      "closePrice": 582.36,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 1.4,
+      "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $602.8, High $613.1, Low $574.66, Close $582.36."
+    },
+    {
+      "symbol": "ADBE",
+      "openPrice": 379.75,
+      "highPrice": 399.94,
+      "lowPrice": 377.8,
+      "closePrice": 391.37,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.58,
+      "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $379.75, High $399.94, Low $377.8, Close $391.37."
+    },
+    {
+      "symbol": "NUE",
+      "openPrice": 131.88,
+      "highPrice": 133.09,
+      "lowPrice": 127.6,
+      "closePrice": 129.81,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.19,
+      "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $131.88, High $133.09, Low $127.6, Close $129.81."
+    },
+    {
+      "symbol": "TSLA",
+      "openPrice": 247.31,
+      "highPrice": 251.58,
+      "lowPrice": 222.28,
+      "closePrice": 225.31,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.39,
+      "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $247.31, High $251.58, Low $222.28, Close $225.31."
+    },
+    {
+      "symbol": "S",
+      "openPrice": 18.65,
+      "highPrice": 19.38,
+      "lowPrice": 17.53,
+      "closePrice": 19.37,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -6.25,
+      "notes": "3-day window (2025-03-14, 2025-03-17, 2025-03-18). Open $18.65, High $19.38, Low $17.53, Close $19.37."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 50,
+    "targetHitRate": 100,
+    "stopHitRate": 100,
+    "avgReturnPercent": -0.35,
+    "profitFactor": 0.79,
+    "winRate": 50,
+    "totalScore": 49,
+    "benchmarkReturn": 1.2,
+    "alpha": -1.55
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 76.7,
+      "avgScoreLosers": 87.7,
+      "predictivePower": 39
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 81.7,
+      "avgScoreLosers": 72.3,
+      "predictivePower": 59.3
+    },
+    "riskReward": {
+      "avgScoreWinners": 75,
+      "avgScoreLosers": 71.7,
+      "predictivePower": 53.3
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 94,
+      "avgScoreLosers": 75,
+      "predictivePower": 69
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 86,
+      "avgScoreLosers": 77.7,
+      "predictivePower": 58.3
+    },
+    "informationEdge": {
+      "avgScoreWinners": 60.7,
+      "avgScoreLosers": 78.3,
+      "predictivePower": 32.3
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 86.7,
+      "avgScoreLosers": 75.7,
+      "predictivePower": 61
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
