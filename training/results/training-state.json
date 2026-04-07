@@ -72479,6 +72479,513 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10053,
+      "date": "2024-07-22",
+      "generatedAt": "2026-04-07T18:47:28.579Z",
+      "signals": {
+        "spFuturesChange": 1.08,
+        "nasdaqFuturesChange": 1.58,
+        "dowFuturesChange": 0.32,
+        "russellFuturesChange": 1.66,
+        "vixFuturesChange": -1.27,
+        "vix": 14.72,
+        "vixChange": -1.27,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 16.09,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.26,
+        "tenYearYieldChange": 0.5,
+        "twoYearYield": 4.48,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.48,
+        "threeMonthYield": 5.19,
+        "twoTenSpread": -0.22,
+        "threeMoTenYrSpread": -0.93,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 104.45,
+        "dollarIndexChange": 0.13,
+        "eurUsd": 1.09,
+        "eurUsdChange": -0.09,
+        "usdJpy": 156.89,
+        "usdJpyChange": -0.34,
+        "usdCny": 7.27,
+        "usdCnyChange": 0.05,
+        "oilWTI": 76.96,
+        "oilChange": -3.53,
+        "brentOil": 81.01,
+        "brentOilChange": -1.69,
+        "natGasChange": -2.84,
+        "goldPrice": 2404.6,
+        "goldChange": 0.53,
+        "silverChange": 0.03,
+        "copperChange": -0.83,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -0.01,
+        "daxChange": 0.82,
+        "ftseChange": -0.38,
+        "shanghaiChange": -1.65,
+        "hangSengChange": -0.94,
+        "kospiChange": 0.39,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 108.65,
+        "spreadChange": -0.37,
+        "igSpread": -16.64,
+        "igSpreadChange": 0.06,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.97,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 2.37,
+        "xlfChange": 0.56,
+        "xleChange": -0.63,
+        "xlvChange": 0.57,
+        "xlpChange": 0.06,
+        "xluChange": 0.84,
+        "xlreChange": 0.99,
+        "xliChange": 1.02,
+        "xlbChange": 0.33,
+        "xlcChange": 0.42,
+        "xlyChange": 1.1,
+        "smhChange": 3.86,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -2.45,
+        "ethereumChange": 1.21,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 9,
+        "daysToNextCPI": 23,
+        "daysToNextNFP": 11,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 1,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": -1.19,
+        "sp20DayReturn": 0,
+        "nasdaqVsRussell5d": -4.05,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "rotation",
+        "confidence": 50,
+        "directionalBias": "20",
+        "volatilityRegime": "normal",
+        "stressIndex": 13,
+        "riskAppetiteIndex": 62,
+        "sectorTilts": {
+          "airlines": "overweight",
+          "consumer-discretionary": "overweight",
+          "semiconductors": "overweight"
+        }
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "PANW",
+          "direction": "long",
+          "entryPrice": 165.45,
+          "targetPrice": 170.9,
+          "stopLoss": 161.98,
+          "thesis": "",
+          "catalyst": "CrowdStrike outage displacement — Palo Alto is the #1 alternative for enterprise cybersecurity. Premarket interest surging. PANW closed at $166.85 Friday (up from $165.45 intraday). Expect continued inflows as CrowdStrike customers evaluate alternatives.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "S",
+          "direction": "long",
+          "entryPrice": 21.72,
+          "targetPrice": 23.85,
+          "stopLoss": 20.8,
+          "thesis": "",
+          "catalyst": "SentinelOne is the direct endpoint security competitor to CrowdStrike. Already up 6.7% from prior close on Friday. Management ready to capitalize on CrowdStrike fallout. Trades at significant P/S discount to CRWD — cheaper way to play cybersecurity displacement.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "CRWD",
+          "direction": "short",
+          "entryPrice": 304.96,
+          "targetPrice": 280.11,
+          "stopLoss": 318.51,
+          "thesis": "",
+          "catalyst": "Continued fallout from Jul 19 global outage. Stock gapped down from $305 Friday close to ~$264 Monday open — expect dead cat bounce to $270 area then further selling. Delta Airlines damages threat. Reputational damage will weigh for weeks. Institutional downgrades likely this week.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "IWM",
+          "direction": "long",
+          "entryPrice": 216.5,
+          "targetPrice": 222,
+          "stopLoss": 213,
+          "thesis": "",
+          "catalyst": "Small-cap rotation accelerating on rate-cut expectations. Russell 2000 up 10% for July — breakout from 4-year range. Biden exit mildly bullish for domestic-focused small caps. Fed September cut nearly priced in. Momentum continuation trade.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "direction": "long",
+          "entryPrice": 117.93,
+          "targetPrice": 125.3,
+          "stopLoss": 114.49,
+          "thesis": "",
+          "catalyst": "Oversold bounce setup after pullback from $140 to $117. Closed $117.87 Friday, futures pointing higher Monday. Alphabet earnings Tuesday — if Google reports strong AI capex, NVDA benefits as primary GPU supplier. Technical support at $115-118 zone holding.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "TSLA",
+          "direction": "long",
+          "entryPrice": 239.2,
+          "targetPrice": 250.77,
+          "stopLoss": 232.45,
+          "thesis": "",
+          "catalyst": "Pre-earnings run-up ahead of Tuesday Jul 23 after-hours report. Closed $239.20 Friday, futures up 5% Monday. Despite expected 30% earnings decline, stock has already priced in weakness. Robotaxi narrative and Trump-alignment (Musk) providing sentiment lift. Momentum entry on gap-up open.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "PANW",
+          "openPrice": 167.23,
+          "highPrice": 170.45,
+          "lowPrice": 161.5,
+          "closePrice": 162.12,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -2.01,
+          "notes": "3-day window (2024-07-22, 2024-07-23, 2024-07-24). Open $167.23, High $170.45, Low $161.5, Close $162.12."
+        },
+        {
+          "symbol": "S",
+          "openPrice": 22.87,
+          "highPrice": 24.8,
+          "lowPrice": 22.75,
+          "closePrice": 23.41,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.78,
+          "notes": "3-day window (2024-07-22, 2024-07-23, 2024-07-24). Open $22.87, High $24.8, Low $22.75, Close $23.41."
+        },
+        {
+          "symbol": "CRWD",
+          "openPrice": 285.01,
+          "highPrice": 285.01,
+          "lowPrice": 257.36,
+          "closePrice": 258.14,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 15.35,
+          "notes": "3-day window (2024-07-22, 2024-07-23, 2024-07-24). Open $285.01, High $285.01, Low $257.36, Close $258.14."
+        },
+        {
+          "symbol": "IWM",
+          "openPrice": 217.68,
+          "highPrice": 223.86,
+          "lowPrice": 215.38,
+          "closePrice": 217.85,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.62,
+          "notes": "3-day window (2024-07-22, 2024-07-23, 2024-07-24). Open $217.68, High $223.86, Low $215.38, Close $217.85."
+        },
+        {
+          "symbol": "NVDA",
+          "openPrice": 120.35,
+          "highPrice": 124.69,
+          "lowPrice": 113.44,
+          "closePrice": 114.25,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -3.12,
+          "notes": "3-day window (2024-07-22, 2024-07-23, 2024-07-24). Open $120.35, High $124.69, Low $113.44, Close $114.25."
+        },
+        {
+          "symbol": "TSLA",
+          "openPrice": 244.21,
+          "highPrice": 255.76,
+          "lowPrice": 214.71,
+          "closePrice": 215.99,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -9.7,
+          "notes": "3-day window (2024-07-22, 2024-07-23, 2024-07-24). Open $244.21, High $255.76, Low $214.71, Close $215.99."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 50,
+        "targetHitRate": 66.7,
+        "stopHitRate": 50,
+        "avgReturnPercent": 1.49,
+        "profitFactor": 1.6,
+        "winRate": 50,
+        "totalScore": 62.6,
+        "benchmarkReturn": 0.3,
+        "alpha": 1.19
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -72492,7 +72999,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T18:42:59.118Z",
+  "lastUpdatedAt": "2026-04-07T18:47:28.610Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -72938,7 +73445,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 52,
+  "fullDepthCurrentTrial": 53,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -73094,7 +73601,8 @@
     "2025-10-14",
     "2024-06-17",
     "2025-10-20",
-    "2025-09-18"
+    "2025-09-18",
+    "2024-07-22"
   ],
   "dateSequence": [
     "2025-09-09",
