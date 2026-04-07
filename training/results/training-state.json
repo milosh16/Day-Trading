@@ -56329,6 +56329,546 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10021,
+      "date": "2024-12-16",
+      "generatedAt": "2026-04-07T00:59:55.117Z",
+      "signals": {
+        "spFuturesChange": 0.38,
+        "nasdaqFuturesChange": 1.24,
+        "dowFuturesChange": -0.25,
+        "russellFuturesChange": 0.64,
+        "vixFuturesChange": 8.03,
+        "vix": 15.87,
+        "vixChange": 8.03,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 17.57,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.4,
+        "tenYearYieldChange": -0.05,
+        "twoYearYield": 4.24,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.61,
+        "threeMonthYield": 4.23,
+        "twoTenSpread": 0.16,
+        "threeMoTenYrSpread": 0.17,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 106.96,
+        "dollarIndexChange": 0.09,
+        "eurUsd": 1.05,
+        "eurUsdChange": 0.07,
+        "usdJpy": 154.09,
+        "usdJpyChange": 0.41,
+        "usdCny": 7.28,
+        "usdCnyChange": 0.1,
+        "oilWTI": 70.08,
+        "oilChange": -0.89,
+        "brentOil": 73.19,
+        "brentOilChange": -0.97,
+        "natGasChange": 2.92,
+        "goldPrice": 2644.4,
+        "goldChange": -0.26,
+        "silverChange": -0.4,
+        "copperChange": -1.25,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -0.24,
+        "daxChange": -0.33,
+        "ftseChange": -0.81,
+        "shanghaiChange": -0.73,
+        "hangSengChange": -0.48,
+        "kospiChange": -1.29,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 102.2,
+        "spreadChange": -0.19,
+        "igSpread": -17.72,
+        "igSpreadChange": -0.13,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.93,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 1,
+        "xlfChange": -0.18,
+        "xleChange": -2.2,
+        "xlvChange": -1.19,
+        "xlpChange": -0.52,
+        "xluChange": -0.8,
+        "xlreChange": -0.51,
+        "xliChange": 0.09,
+        "xlbChange": -0.89,
+        "xlcChange": 0.39,
+        "xlyChange": 1.35,
+        "smhChange": 1.51,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 0.1,
+        "ethereumChange": -2.53,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": true,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 2,
+        "daysToNextCPI": 30,
+        "daysToNextNFP": 25,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 1,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 0.35,
+        "sp20DayReturn": 0,
+        "nasdaqVsRussell5d": 3.5,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "range-bound",
+        "confidence": 37,
+        "directionalBias": "7",
+        "volatilityRegime": "normal",
+        "stressIndex": 16,
+        "riskAppetiteIndex": 56,
+        "sectorTilts": {}
+      },
+      "briefing": {
+        "summary": {
+          "summary": "Nasdaq momentum continues post-Broadcom blowout earnings while breadth deterioration intensifies. S&P 500 snapped 3-week win streak on Dec 13 with 10 consecutive days of negative breadth. FOMC meeting Dec 17-18 looms as dominant risk event — 96% probability of 25bp cut priced in, but hawkish dot plot risk is elevated. Tech mega-caps and AI/quantum/drone thematic plays dominate volume while cyclicals (Energy -2%, Materials 10-day decline) are under sustained pressure. Bitcoin above $105K supporting crypto-adjacent names. MicroStrategy Nasdaq-100 inclusion (effective Dec 23) announced Dec 13, creating forced passive buying setup. Honeywell announced aerospace breakup exploration on Dec 16 pre-market. Key risk: breadth divergence from index levels signals fragile underpinnings.",
+          "spx_prior_close": 6051.09,
+          "nasdaq_prior_close": 19926.72,
+          "vix_estimate": 14.5,
+          "bitcoin": 105984
+        },
+        "marketCondition": "neutral",
+        "sections": [
+          {
+            "title": "Geopolitics",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Macro",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Corporate",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "TechAI",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Energy",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "Policy",
+            "content": "[object Object]",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "AVGO",
+          "direction": "LONG",
+          "entryPrice": 225,
+          "targetPrice": 237,
+          "stopLoss": 218.5,
+          "thesis": "Broadcom delivered the most important AI earnings since Nvidia breakout. The $60-90B TAM for custom AI chips from just 3 hyperscaler customers fundamentally rerates the company. Weekend analyst notes will upgrade estimates. Institutional buyers who missed Friday move will chase Monday. Market cap nearing $1T milestone provides psychological pull.",
+          "catalyst": "Post-earnings momentum continuation. Q4 AI revenue up 220%, $60-90B TAM projection for custom AI chips by 2027. Stock surged 14%+ after-hours on Dec 12. Dec 13 was first reaction day. Dec 16 is momentum continuation with broader market catching up on analyst upgrades over the weekend.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 95,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 75,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MRVL",
+          "direction": "LONG",
+          "entryPrice": 120.77,
+          "targetPrice": 128.82,
+          "stopLoss": 117.15,
+          "thesis": "Marvell is the purest secondary beneficiary of Broadcom custom AI ASIC narrative. If the market is repricing AVGO AI opportunity at $60-90B TAM, MRVL share of that market also gets repriced. Analyst upgrades ongoing — Benchmark raised to $135. Custom silicon for 3 hyperscalers provides revenue visibility. Lower market cap than AVGO means higher beta on the same theme.",
+          "catalyst": "Broadcom $60-90B custom AI chip TAM is a direct read-through for Marvell — the other major custom ASIC player. Marvell makes custom chips for Google, Amazon, Microsoft. Already surged 23% on its own Dec 4 earnings. Broadcom numbers validate and extend the thesis.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 70,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "HON",
+          "direction": "LONG",
+          "entryPrice": 214.53,
+          "targetPrice": 222.41,
+          "stopLoss": 208.51,
+          "thesis": "Activist breakup announcements in mega-cap industrials historically generate 5-10% upside as the conglomerate discount gets priced out. Elliott is one of the most successful activists. Aerospace is a premium business (defense + commercial aviation demand). The announcement creates a floor under the stock as the market prices in sum-of-parts valuation. HON hit ATH last month on Elliott stake news — this is the next catalyst in the arc.",
+          "catalyst": "Announced Dec 16 pre-market it is considering separating aerospace business (40% of revenue). Elliott Investment Management holds $5B activist stake pushing for breakup. Classic conglomerate-discount-unlocking event.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 60,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 82,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "GOOGL",
+          "direction": "LONG",
+          "entryPrice": 189.82,
+          "targetPrice": 197.73,
+          "stopLoss": 184.88,
+          "thesis": "Alphabet has dual tailwinds: the Willow quantum chip provides a narrative catalyst (even if commercial application is years away), while the $185B capex commitment signals aggressive AI infrastructure buildout that benefits the entire AI supply chain. Stock jumped 6% on Willow announcement — still digesting. Sector leadership (Communication Services positive last week) confirms institutional rotation into the name.",
+          "catalyst": "Willow quantum chip breakthrough (Dec 9) still generating momentum. AI infrastructure capex projected at $185B — nearly double prior year. Dual catalyst: quantum narrative + AI infrastructure spend leadership. Communication Services was one of only 2 positive sectors last week.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 92,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 62,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 55,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MSTR",
+          "direction": "LONG",
+          "entryPrice": 408,
+          "targetPrice": 440,
+          "stopLoss": 388,
+          "thesis": "Index inclusion is one of the most mechanically reliable catalysts in equities. $2.1B in estimated passive buying equals ~20% of daily volume. ETFs that track Nasdaq-100 (QQQ alone is massive) MUST buy shares before Dec 23. Monday Dec 16 is when smart money front-runs this forced buying. Bitcoin above $105K provides fundamental tailwind. MSTR will be 40th largest holding at 0.47% weight.",
+          "catalyst": "Nasdaq-100 inclusion announced Dec 13, effective Dec 23. Expected $2.1B in forced passive ETF buying over next 7 trading days. Bitcoin at $105K+ provides support. First Monday after announcement — institutional positioning begins.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 50,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 60,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 55,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 80,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SLB",
+          "direction": "SHORT",
+          "entryPrice": 40.22,
+          "targetPrice": 38.3,
+          "stopLoss": 41.42,
+          "thesis": "When the energy sector enters a multi-day selling cascade, oilfield services stocks like SLB amplify the move because they have operational leverage to oil prices and E&P capex expectations. The 5.5M barrel inventory build signals oversupply. OPEC+ demand forecasts are being revised down. Fund flows actively rotating out of energy into tech/AI. SLB is the highest-volume oilfield services name, providing liquidity for the short. Materials also deeply weak (10-day decline) confirming cyclical sector rotation.",
+          "catalyst": "Energy sector in sustained decline — XLE falling for 7th time in 8 days. Crude inventory builds (5.5M barrel unexpected surplus). Oil rangebound at $71-74 with no upside catalyst. Oilfield services names lever energy weakness.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 50,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 55,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "AVGO",
+          "openPrice": 231.79,
+          "highPrice": 251.88,
+          "lowPrice": 219.22,
+          "closePrice": 223.62,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.61,
+          "notes": "3-day window (2024-12-16, 2024-12-17, 2024-12-18). Open $231.79, High $251.88, Low $219.22, Close $223.62."
+        },
+        {
+          "symbol": "MRVL",
+          "openPrice": 122.5,
+          "highPrice": 126.15,
+          "lowPrice": 104.38,
+          "closePrice": 105.28,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 12.83,
+          "notes": "3-day window (2024-12-16, 2024-12-17, 2024-12-18). Open $122.5, High $126.15, Low $104.38, Close $105.28."
+        },
+        {
+          "symbol": "HON",
+          "openPrice": 219.1,
+          "highPrice": 224.61,
+          "lowPrice": 213.39,
+          "closePrice": 213.82,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.33,
+          "notes": "3-day window (2024-12-16, 2024-12-17, 2024-12-18). Open $219.1, High $224.61, Low $213.39, Close $213.82."
+        },
+        {
+          "symbol": "GOOGL",
+          "openPrice": 192.87,
+          "highPrice": 201.42,
+          "lowPrice": 187.74,
+          "closePrice": 188.4,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.75,
+          "notes": "3-day window (2024-12-16, 2024-12-17, 2024-12-18). Open $192.87, High $201.42, Low $187.74, Close $188.4."
+        },
+        {
+          "symbol": "MSTR",
+          "openPrice": 424.87,
+          "highPrice": 437.61,
+          "lowPrice": 338,
+          "closePrice": 349.64,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 14.3,
+          "notes": "3-day window (2024-12-16, 2024-12-17, 2024-12-18). Open $424.87, High $437.61, Low $338, Close $349.64."
+        },
+        {
+          "symbol": "SLB",
+          "openPrice": 40.1,
+          "highPrice": 41.02,
+          "lowPrice": 37.28,
+          "closePrice": 37.33,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.19,
+          "notes": "3-day window (2024-12-16, 2024-12-17, 2024-12-18). Open $40.1, High $41.02, Low $37.28, Close $37.33."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 100,
+        "targetHitRate": 100,
+        "stopHitRate": 83.3,
+        "avgReturnPercent": 6,
+        "profitFactor": 10,
+        "winRate": 100,
+        "totalScore": 94.7,
+        "benchmarkReturn": 0.13,
+        "alpha": 5.87
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 81.2,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 68.3,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "riskReward": {
+          "avgScoreWinners": 72,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 84.5,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 71.8,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "informationEdge": {
+          "avgScoreWinners": 67.5,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 69.5,
+          "avgScoreLosers": 0,
+          "predictivePower": 100
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -56342,7 +56882,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T00:52:50.254Z",
+  "lastUpdatedAt": "2026-04-07T00:59:55.144Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -56788,7 +57328,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 20,
+  "fullDepthCurrentTrial": 21,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -56912,7 +57452,8 @@
     "2025-03-03",
     "2025-09-29",
     "2025-08-13",
-    "2025-04-01"
+    "2025-04-01",
+    "2024-12-16"
   ],
   "dateSequence": [
     "2025-09-09",
