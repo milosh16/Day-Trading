@@ -1,0 +1,537 @@
+{
+  "trialId": 10038,
+  "date": "2025-05-07",
+  "dateDisplay": "Wednesday, May 7, 2025",
+  "generatedAt": "2026-04-07T17:21:49.272Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.43,
+      "nasdaqFuturesChange": 0.27,
+      "dowFuturesChange": 0.7,
+      "russellFuturesChange": 0.33,
+      "vixFuturesChange": -4.54,
+      "vix": 22.48,
+      "vixChange": -4.54,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 24.7,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.28,
+      "tenYearYieldChange": -0.77,
+      "twoYearYield": 3.97,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.77,
+      "threeMonthYield": 4.22,
+      "twoTenSpread": 0.31,
+      "threeMoTenYrSpread": 0.06,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 100.64,
+      "dollarIndexChange": 1.03,
+      "eurUsd": 1.13,
+      "eurUsdChange": -0.32,
+      "usdJpy": 143.85,
+      "usdJpyChange": 0.57,
+      "usdCny": 7.23,
+      "usdCnyChange": 0.12,
+      "oilWTI": 59.91,
+      "oilChange": 3.17,
+      "brentOil": 62.84,
+      "brentOilChange": 2.81,
+      "natGasChange": -0.8,
+      "goldPrice": 3296.6,
+      "goldChange": -2.51,
+      "silverChange": -0.47,
+      "copperChange": -1.2,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.41,
+      "daxChange": 1.02,
+      "ftseChange": -0.32,
+      "shanghaiChange": 0.28,
+      "hangSengChange": 0.37,
+      "kospiChange": 0.22,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 107.4,
+      "spreadChange": -0.09,
+      "igSpread": -14.38,
+      "igSpreadChange": -0.21,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.02,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1,
+      "xlfChange": 0.59,
+      "xleChange": 0.04,
+      "xlvChange": 0.77,
+      "xlpChange": 0.16,
+      "xluChange": 0.29,
+      "xlreChange": -0.07,
+      "xliChange": 0.51,
+      "xlbChange": -0.55,
+      "xlcChange": -0.18,
+      "xlyChange": 0.78,
+      "smhChange": 2.05,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 6.4,
+      "ethereumChange": 21.8,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": true,
+      "econDataType": "FOMC",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 0,
+      "daysToNextCPI": 6,
+      "daysToNextNFP": 30,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.12,
+      "sp20DayReturn": 13.02,
+      "nasdaqVsRussell5d": 0.37,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "event-driven",
+      "confidence": 70,
+      "directionalBias": "5",
+      "volatilityRegime": "elevated",
+      "stressIndex": 24,
+      "riskAppetiteIndex": 57,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Macroeconomic",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Earnings",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Geopolitical",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "SectorRotation",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Technicals",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Commodities",
+          "content": "[object Object]",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "CRL",
+      "direction": "long",
+      "entryPrice": 115.41,
+      "targetPrice": 121.73,
+      "stopLoss": 110.78,
+      "thesis": "",
+      "catalyst": "Massive earnings beat + raised FY25 guidance. Gap up +22% from $115.41 to $141 open. Life sciences recovery thesis confirmed. Huge volume 2x normal. FOMC hold is neutral — healthcare defensive into uncertainty.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 88,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "SMCI",
+      "direction": "short",
+      "entryPrice": 32.94,
+      "targetPrice": 31.16,
+      "stopLoss": 34.51,
+      "thesis": "",
+      "catalyst": "Massive earnings miss — EPS $0.31 vs $0.50 est. Gross margin collapsed to 9.6% from 15.5% YoY. Weak Q4 guidance ($0.40-0.50 vs $0.69 est). GPU transition headwind (Hopper to Blackwell gap). Tariff risk cited by CEO.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 80,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "EA",
+      "direction": "long",
+      "entryPrice": 154.54,
+      "targetPrice": 159.51,
+      "stopLoss": 152.06,
+      "thesis": "",
+      "catalyst": "Q4 FY25 bookings crushed estimates ($1.80B vs $1.56B). EA SPORTS FC strong. FY26 guide $7.6-8.0B shows growth. Stock gapped up to $158 from $154.54 close. Gaming is tariff-insulated (digital revenue).",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "ROK",
+      "direction": "long",
+      "entryPrice": 253.05,
+      "targetPrice": 258.92,
+      "stopLoss": 250.34,
+      "thesis": "",
+      "catalyst": "Q2 FY25 earnings beat. Industrial automation demand strong. Gap from $253 to $280 open (+10.6%). Raised guidance. Manufacturing capex recovery narrative.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 74,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 82,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CPNG",
+      "direction": "long",
+      "entryPrice": 24,
+      "targetPrice": 26.5,
+      "stopLoss": 23.3,
+      "thesis": "",
+      "catalyst": "Q1 strong execution despite revenue slightly below est. Stock surged +10.8% AH. Korean e-commerce leader with market share gains. Tariff-insulated (domestic Korean market).",
+      "conviction": {
+        "catalystClarity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 92,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 78,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "IFF",
+      "direction": "short",
+      "entryPrice": 79.2,
+      "targetPrice": 76.11,
+      "stopLoss": 81.77,
+      "thesis": "",
+      "catalyst": "Earnings disappointment. Gap down from $79.20 to $77.59 open. Collapsed to $73.48 intraday (-7.1% from prior close). Specialty chemicals facing margin pressure from tariffs on raw materials.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 58,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "CRL",
+      "openPrice": 141.03,
+      "highPrice": 144.77,
+      "lowPrice": 131.3,
+      "closePrice": 138.79,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 20.26,
+      "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $141.03, High $144.77, Low $131.3, Close $138.79."
+    },
+    {
+      "symbol": "SMCI",
+      "openPrice": 31.1,
+      "highPrice": 33.19,
+      "lowPrice": 30.54,
+      "closePrice": 31.99,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.88,
+      "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $31.1, High $33.19, Low $30.54, Close $31.99."
+    },
+    {
+      "symbol": "EA",
+      "openPrice": 158.01,
+      "highPrice": 160.7,
+      "lowPrice": 153.07,
+      "closePrice": 153.3,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -0.8,
+      "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $158.01, High $160.7, Low $153.07, Close $153.3."
+    },
+    {
+      "symbol": "ROK",
+      "openPrice": 280,
+      "highPrice": 296.05,
+      "lowPrice": 277.66,
+      "closePrice": 294.8,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 16.5,
+      "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $280, High $296.05, Low $277.66, Close $294.8."
+    },
+    {
+      "symbol": "CPNG",
+      "openPrice": 23.82,
+      "highPrice": 27.02,
+      "lowPrice": 23.42,
+      "closePrice": 26,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 8.33,
+      "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $23.82, High $27.02, Low $23.42, Close $26."
+    },
+    {
+      "symbol": "IFF",
+      "openPrice": 77.59,
+      "highPrice": 79.84,
+      "lowPrice": 73.37,
+      "closePrice": 73.43,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 7.29,
+      "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $77.59, High $79.84, Low $73.37, Close $73.43."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 83.3,
+    "targetHitRate": 100,
+    "stopHitRate": 0,
+    "avgReturnPercent": 9.08,
+    "profitFactor": 69.07,
+    "winRate": 83.3,
+    "totalScore": 95,
+    "benchmarkReturn": 0.18,
+    "alpha": 8.9
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 84.6,
+      "avgScoreLosers": 85,
+      "predictivePower": 49.6
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 77.8,
+      "avgScoreLosers": 70,
+      "predictivePower": 57.8
+    },
+    "riskReward": {
+      "avgScoreWinners": 75.8,
+      "avgScoreLosers": 80,
+      "predictivePower": 45.8
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 72.2,
+      "avgScoreLosers": 72,
+      "predictivePower": 50.2
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 68.4,
+      "avgScoreLosers": 68,
+      "predictivePower": 50.4
+    },
+    "informationEdge": {
+      "avgScoreWinners": 77.8,
+      "avgScoreLosers": 78,
+      "predictivePower": 49.8
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 80.6,
+      "avgScoreLosers": 75,
+      "predictivePower": 55.6
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

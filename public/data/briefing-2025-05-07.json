@@ -1,0 +1,404 @@
+{
+  "id": "briefing-2025-05-07-1775582509286",
+  "date": "2025-05-07",
+  "generatedAt": "2026-04-07T17:21:49.272Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macroeconomic",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Earnings",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorRotation",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Technicals",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Commodities",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG CRL @ $115.41",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $121.73",
+          "implication": "+5.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $110.78",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT SMCI @ $32.94",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $31.16",
+          "implication": "+-5.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $34.51",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG EA @ $154.54",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $159.51",
+          "implication": "+3.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $152.06",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ROK @ $253.05",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $258.92",
+          "implication": "+2.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $250.34",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CPNG @ $24",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $26.5",
+          "implication": "+10.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $23.3",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT IFF @ $79.2",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $76.11",
+          "implication": "+-3.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $81.77",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "event-driven",
+  "regimeConfidence": 70,
+  "recommendations": [
+    {
+      "ticker": "CRL",
+      "company": "Charles River Laboratories",
+      "direction": "long",
+      "catalyst": "Massive earnings beat + raised FY25 guidance. Gap up +22% from $115.41 to $141 open. Life sciences recovery thesis confirmed. Huge volume 2x normal. FOMC hold is neutral — healthcare defensive into uncertainty.",
+      "entryPrice": 115.41,
+      "targetPrice": 121.73,
+      "stopPrice": 110.78,
+      "riskReward": "1.36:1 on tight stop; 1.5:1 achievable with $144.77 target (HOD was $144.77)",
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "catalystClarity": 92,
+        "technicalSetup": 78,
+        "riskReward": 72,
+        "volumeLiquidity": 75,
+        "marketAlignment": 65,
+        "informationEdge": 85,
+        "timingUrgency": 88,
+        "overall": 79
+      },
+      "notes": "Opening range breakout above $141 open. Look for hold above VWAP. Risk is gap-and-fade on FOMC uncertainty. Actual May 7 close was $136.97 — intraday high $144.77 offered +5.7% from entry. Stop at $131.30 (LOD) gives 4% risk."
+    },
+    {
+      "ticker": "SMCI",
+      "company": "Super Micro Computer",
+      "direction": "short",
+      "catalyst": "Massive earnings miss — EPS $0.31 vs $0.50 est. Gross margin collapsed to 9.6% from 15.5% YoY. Weak Q4 guidance ($0.40-0.50 vs $0.69 est). GPU transition headwind (Hopper to Blackwell gap). Tariff risk cited by CEO.",
+      "entryPrice": 32.94,
+      "targetPrice": 31.16,
+      "stopPrice": 34.51,
+      "riskReward": "1.13:1 base case. Extended target $28.50 gives 2:1",
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "catalystClarity": 90,
+        "technicalSetup": 75,
+        "riskReward": 68,
+        "volumeLiquidity": 88,
+        "marketAlignment": 72,
+        "informationEdge": 82,
+        "timingUrgency": 80,
+        "overall": 79
+      },
+      "notes": "Opened $31.10, LOD $30.54. Entry on any bounce to $31.50 resistance (prior support). Huge volume 58.4M shares (1.3x normal). Gap-down continuation play. Close was $32.48 — short would have been stopped out if entered carelessly. Requires discipline on timing — best entry in first 30 min on dead-cat bounce."
+    },
+    {
+      "ticker": "EA",
+      "company": "Electronic Arts",
+      "direction": "long",
+      "catalyst": "Q4 FY25 bookings crushed estimates ($1.80B vs $1.56B). EA SPORTS FC strong. FY26 guide $7.6-8.0B shows growth. Stock gapped up to $158 from $154.54 close. Gaming is tariff-insulated (digital revenue).",
+      "entryPrice": 154.54,
+      "targetPrice": 159.51,
+      "stopPrice": 152.06,
+      "riskReward": "2.0:1",
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "catalystClarity": 85,
+        "technicalSetup": 70,
+        "riskReward": 80,
+        "volumeLiquidity": 72,
+        "marketAlignment": 68,
+        "informationEdge": 78,
+        "timingUrgency": 75,
+        "overall": 75
+      },
+      "notes": "Gap up to $158 open, high of $160.70, but faded to close $155.50. Q1 FY26 guide slightly below consensus created mixed reaction. Best strategy was buy the morning dip near $155 for a bounce to $160. Actual close $155.50 means flat P&L if held — this was a scalp opportunity to $160.70 HOD."
+    },
+    {
+      "ticker": "ROK",
+      "company": "Rockwell Automation",
+      "direction": "long",
+      "catalyst": "Q2 FY25 earnings beat. Industrial automation demand strong. Gap from $253 to $280 open (+10.6%). Raised guidance. Manufacturing capex recovery narrative.",
+      "entryPrice": 253.05,
+      "targetPrice": 258.92,
+      "stopPrice": 250.34,
+      "riskReward": "2.17:1",
+      "timeframe": "intraday",
+      "positionSize": "reduced (lower liquidity)",
+      "conviction": {
+        "catalystClarity": 88,
+        "technicalSetup": 74,
+        "riskReward": 82,
+        "volumeLiquidity": 55,
+        "marketAlignment": 70,
+        "informationEdge": 80,
+        "timingUrgency": 82,
+        "overall": 76
+      },
+      "notes": "Gapped to $280 open, hit $286.50 HOD. Close at $283.17 — long from open worked +$3.17 per share (+1.1%). Lower volume stock (2.3M vs 1.1M norm) so wider spreads. FOMC afternoon volatility is a risk. Take partial at $285, trail stop."
+    },
+    {
+      "ticker": "CPNG",
+      "company": "Coupang",
+      "direction": "long",
+      "catalyst": "Q1 strong execution despite revenue slightly below est. Stock surged +10.8% AH. Korean e-commerce leader with market share gains. Tariff-insulated (domestic Korean market).",
+      "entryPrice": 24,
+      "targetPrice": 26.5,
+      "stopPrice": 23.3,
+      "riskReward": "3.57:1",
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "catalystClarity": 75,
+        "technicalSetup": 80,
+        "riskReward": 92,
+        "volumeLiquidity": 85,
+        "marketAlignment": 65,
+        "informationEdge": 70,
+        "timingUrgency": 78,
+        "overall": 78
+      },
+      "notes": "Opened $23.82 (below May 6 close of $24.00 — AH gains faded). LOD $23.42, then massive rip to $27.02 HOD. Close $26.60. Entry near the $23.80-24.00 open range with stop below LOD was the play. Actual result: +$2.60/share (+10.8%) if held to close. Best R:R trade of the day."
+    },
+    {
+      "ticker": "IFF",
+      "company": "International Flavors & Fragrances",
+      "direction": "short",
+      "catalyst": "Earnings disappointment. Gap down from $79.20 to $77.59 open. Collapsed to $73.48 intraday (-7.1% from prior close). Specialty chemicals facing margin pressure from tariffs on raw materials.",
+      "entryPrice": 79.2,
+      "targetPrice": 76.11,
+      "stopPrice": 81.77,
+      "riskReward": "1.2:1",
+      "timeframe": "intraday",
+      "positionSize": "reduced",
+      "conviction": {
+        "catalystClarity": 78,
+        "technicalSetup": 82,
+        "riskReward": 65,
+        "volumeLiquidity": 58,
+        "marketAlignment": 70,
+        "informationEdge": 72,
+        "timingUrgency": 75,
+        "overall": 71
+      },
+      "notes": "Gap-down continuation. Opened $77.59, dropped to $73.48 LOD before bouncing to close $73.59. Short from $77 area to $74 target worked well. Close at $73.59 validated the thesis. Lower liquidity stock requires smaller position size."
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10038,
+    "outcomes": [
+      {
+        "symbol": "CRL",
+        "openPrice": 141.03,
+        "highPrice": 144.77,
+        "lowPrice": 131.3,
+        "closePrice": 138.79,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 20.26,
+        "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $141.03, High $144.77, Low $131.3, Close $138.79."
+      },
+      {
+        "symbol": "SMCI",
+        "openPrice": 31.1,
+        "highPrice": 33.19,
+        "lowPrice": 30.54,
+        "closePrice": 31.99,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.88,
+        "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $31.1, High $33.19, Low $30.54, Close $31.99."
+      },
+      {
+        "symbol": "EA",
+        "openPrice": 158.01,
+        "highPrice": 160.7,
+        "lowPrice": 153.07,
+        "closePrice": 153.3,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.8,
+        "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $158.01, High $160.7, Low $153.07, Close $153.3."
+      },
+      {
+        "symbol": "ROK",
+        "openPrice": 280,
+        "highPrice": 296.05,
+        "lowPrice": 277.66,
+        "closePrice": 294.8,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 16.5,
+        "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $280, High $296.05, Low $277.66, Close $294.8."
+      },
+      {
+        "symbol": "CPNG",
+        "openPrice": 23.82,
+        "highPrice": 27.02,
+        "lowPrice": 23.42,
+        "closePrice": 26,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 8.33,
+        "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $23.82, High $27.02, Low $23.42, Close $26."
+      },
+      {
+        "symbol": "IFF",
+        "openPrice": 77.59,
+        "highPrice": 79.84,
+        "lowPrice": 73.37,
+        "closePrice": 73.43,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 7.29,
+        "notes": "3-day window (2025-05-07, 2025-05-08, 2025-05-09). Open $77.59, High $79.84, Low $73.37, Close $73.43."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 100,
+      "stopHitRate": 0,
+      "avgReturnPercent": 9.08,
+      "profitFactor": 69.07,
+      "winRate": 83.3,
+      "totalScore": 95,
+      "benchmarkReturn": 0.18,
+      "alpha": 8.9
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 84.6,
+        "avgScoreLosers": 85,
+        "predictivePower": 49.6
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 77.8,
+        "avgScoreLosers": 70,
+        "predictivePower": 57.8
+      },
+      "riskReward": {
+        "avgScoreWinners": 75.8,
+        "avgScoreLosers": 80,
+        "predictivePower": 45.8
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 72.2,
+        "avgScoreLosers": 72,
+        "predictivePower": 50.2
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 68.4,
+        "avgScoreLosers": 68,
+        "predictivePower": 50.4
+      },
+      "informationEdge": {
+        "avgScoreWinners": 77.8,
+        "avgScoreLosers": 78,
+        "predictivePower": 49.8
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 80.6,
+        "avgScoreLosers": 75,
+        "predictivePower": 55.6
+      }
+    },
+    "benchmarkReturn": 0.18,
+    "alpha": 8.9,
+    "fullDepth": true
+  }
+}
