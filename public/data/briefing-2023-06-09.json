@@ -1,0 +1,338 @@
+{
+  "id": "briefing-2023-06-09-1775590179873",
+  "date": "2023-06-09",
+  "generatedAt": "2026-04-07T19:29:39.860Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Earnings",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sectors",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Commodities",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Flows",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG NVDA @ $38.51",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $39.35",
+          "implication": "+2.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $38.07",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $121.05",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $124.47",
+          "implication": "+2.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $119.1",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG TCOM @ $36.15",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $37.79",
+          "implication": "+4.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $35.07",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT COIN @ $54.9",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $51.5",
+          "implication": "+-6.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $56.84",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT DOCU @ $58.48",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $55.43",
+          "implication": "+-5.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $60.26",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG CAT @ $234.45",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $239.89",
+          "implication": "+2.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $231.48",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 31,
+  "recommendations": [
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Semiconductors",
+      "thesis": "AI momentum continuation. NVDA consolidating after massive May breakout. Bull market confirmation + low VIX support continuation. Intraday dip toward support buyable. Range-bound day = tight consolidation with upside bias from AI tailwinds.",
+      "entryPrice": 38.51,
+      "targetPrice": 39.35,
+      "stopPrice": 38.07,
+      "riskRewardRatio": 1.89,
+      "maxStopPct": 1.16
+    },
+    {
+      "ticker": "AMD",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Semiconductors",
+      "thesis": "AI second-mover beneficiary. AMD ~$124, riding NVDA coattails. MI300 AI chip narrative building. Lower beta AI play. Bull market confirmation supports risk-on.",
+      "entryPrice": 121.05,
+      "targetPrice": 124.47,
+      "stopPrice": 119.1,
+      "riskRewardRatio": 1.75,
+      "maxStopPct": 1.61
+    },
+    {
+      "ticker": "TCOM",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Travel/Leisure",
+      "thesis": "Post-earnings momentum. Trip.com beat EPS ($0.45 vs $0.27) and revenue (+13.9%). China reopening travel demand + summer season catalyst. Gap-up continuation with strong fundamental backing.",
+      "entryPrice": 36.15,
+      "targetPrice": 37.79,
+      "stopPrice": 35.07,
+      "riskRewardRatio": 1.52,
+      "maxStopPct": 2.99
+    },
+    {
+      "ticker": "COIN",
+      "direction": "short",
+      "conviction": "high",
+      "sector": "Crypto/Fintech",
+      "thesis": "SEC lawsuit overhang. Sued Jun 6 as unregistered broker. Significant exchange outflows. BTC under pressure at $26,500. Regulatory uncertainty = persistent selling. Range-bound regime means no broad market rescue for crypto. COIN ~$56 area.",
+      "entryPrice": 54.9,
+      "targetPrice": 51.5,
+      "stopPrice": 56.84,
+      "riskRewardRatio": 1.75,
+      "maxStopPct": 3.54
+    },
+    {
+      "ticker": "DOCU",
+      "direction": "short",
+      "conviction": "medium",
+      "sector": "Software",
+      "thesis": "Post-earnings fade. Jun 8 after close — EPS missed significantly ($0.15 vs $0.55 est). Revenue beat won't offset. Gap-down open expected Jun 9. Range-bound regime with narrow breadth punishes weak software names.",
+      "entryPrice": 58.48,
+      "targetPrice": 55.43,
+      "stopPrice": 60.26,
+      "riskRewardRatio": 1.71,
+      "maxStopPct": 3.04
+    },
+    {
+      "ticker": "CAT",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Industrials",
+      "thesis": "Broadening rally beneficiary. Industrials posting strong June gains as rotation from mega-cap tech begins. Weaker dollar supports multinationals. Infrastructure spending tailwind. CAT ~$237. Range-bound regime favors quality cyclicals at support.",
+      "entryPrice": 234.45,
+      "targetPrice": 239.89,
+      "stopPrice": 231.48,
+      "riskRewardRatio": 1.83,
+      "maxStopPct": 1.27
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10223,
+    "outcomes": [
+      {
+        "symbol": "NVDA",
+        "openPrice": 39.04,
+        "highPrice": 41.1,
+        "lowPrice": 38.57,
+        "closePrice": 41.02,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 6.52,
+        "notes": "3-day window (2023-06-09, 2023-06-12, 2023-06-13). Open $39.04, High $41.1, Low $38.57, Close $41.02."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 123.57,
+        "highPrice": 132.83,
+        "lowPrice": 122.45,
+        "closePrice": 124.53,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.87,
+        "notes": "3-day window (2023-06-09, 2023-06-12, 2023-06-13). Open $123.57, High $132.83, Low $122.45, Close $124.53."
+      },
+      {
+        "symbol": "TCOM",
+        "openPrice": 36.37,
+        "highPrice": 37.91,
+        "lowPrice": 36.1,
+        "closePrice": 36.18,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.08,
+        "notes": "3-day window (2023-06-09, 2023-06-12, 2023-06-13). Open $36.37, High $37.91, Low $36.1, Close $36.18."
+      },
+      {
+        "symbol": "COIN",
+        "openPrice": 55,
+        "highPrice": 57.42,
+        "lowPrice": 50.1,
+        "closePrice": 52.4,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.55,
+        "notes": "3-day window (2023-06-09, 2023-06-12, 2023-06-13). Open $55, High $57.42, Low $50.1, Close $52.4."
+      },
+      {
+        "symbol": "DOCU",
+        "openPrice": 64.31,
+        "highPrice": 64.71,
+        "lowPrice": 54.29,
+        "closePrice": 55.28,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.47,
+        "notes": "3-day window (2023-06-09, 2023-06-12, 2023-06-13). Open $64.31, High $64.71, Low $54.29, Close $55.28."
+      },
+      {
+        "symbol": "CAT",
+        "openPrice": 235.7,
+        "highPrice": 246.68,
+        "lowPrice": 231.43,
+        "closePrice": 245.44,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.69,
+        "notes": "3-day window (2023-06-09, 2023-06-12, 2023-06-13). Open $235.7, High $246.68, Low $231.43, Close $245.44."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 100,
+      "targetHitRate": 100,
+      "stopHitRate": 50,
+      "avgReturnPercent": 4.03,
+      "profitFactor": 10,
+      "winRate": 100,
+      "totalScore": 100,
+      "benchmarkReturn": -0.01,
+      "alpha": 4.04
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": -0.01,
+    "alpha": 4.04,
+    "fullDepth": true
+  }
+}
