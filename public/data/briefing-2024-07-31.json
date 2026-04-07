@@ -1,0 +1,319 @@
+{
+  "id": "briefing-2024-07-31-1775588167351",
+  "date": "2024-07-31",
+  "generatedAt": "2026-04-07T18:56:07.331Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "SHORT MSFT @ $422.92",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $411.79",
+          "implication": "+-2.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $430",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT AMD @ $138.44",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $132.15",
+          "implication": "+-4.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $141.83",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG LMT @ $537.66",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $550.58",
+          "implication": "+2.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $529.71",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $118.17",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $121.69",
+          "implication": "+3.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $116.16",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NEM @ $47.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $49.5",
+          "implication": "+4.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $46.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT DAL @ $43.23",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $41.34",
+          "implication": "+-4.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $44.46",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "crisis",
+  "regimeConfidence": 90,
+  "recommendations": [
+    {
+      "ticker": "MSFT",
+      "direction": "short",
+      "conviction": "HIGH",
+      "sector": "Cloud/Software",
+      "catalyst": "Azure growth miss (29% vs 31% whisper) reported July 30 AH. Stock down ~3% after hours. Cloud spending scrutiny theme. Pre-market selling likely to continue as analysts digest. FOMC uncertainty adds pressure.",
+      "entryPrice": 422.92,
+      "targetPrice": 411.79,
+      "stopPrice": 430,
+      "riskRewardRatio": 1.57,
+      "riskPercent": 1.67,
+      "timeframe": "intraday",
+      "keyLevels": "Support at $410, $405. Resistance at $422, $428. 50-day MA around $430."
+    },
+    {
+      "ticker": "AMD",
+      "direction": "short",
+      "conviction": "MEDIUM",
+      "sector": "Semiconductors",
+      "catalyst": "Q2 beat but AI GPU revenue run-rate guidance underwhelmed some investors. Down ~3% AH July 30. Semi rotation ongoing. SOX index weakness. Yen carry unwind pressuring momentum names.",
+      "entryPrice": 138.44,
+      "targetPrice": 132.15,
+      "stopPrice": 141.83,
+      "riskRewardRatio": 1.86,
+      "riskPercent": 2.45,
+      "timeframe": "intraday",
+      "keyLevels": "Support at $140, $136. Resistance at $148. Gap fill zone from July earnings run-up."
+    },
+    {
+      "ticker": "LMT",
+      "direction": "long",
+      "conviction": "HIGH",
+      "sector": "Defense",
+      "catalyst": "Haniyeh assassination in Tehran overnight. Iran vowing retaliation. Major Middle East escalation. Defense stocks are direct beneficiaries of geopolitical risk premium. LMT already reported solid Q2 July 23. Defensive positioning fits CRISIS regime.",
+      "entryPrice": 537.66,
+      "targetPrice": 550.58,
+      "stopPrice": 529.71,
+      "riskRewardRatio": 1.63,
+      "riskPercent": 1.48,
+      "timeframe": "intraday",
+      "keyLevels": "Support at $535, $530. Resistance at $550, $558. Near 52-week highs."
+    },
+    {
+      "ticker": "XOM",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "sector": "Energy",
+      "catalyst": "WTI crude spiking on Middle East escalation and Iran retaliation risk. Supply disruption premium building. XOM well-positioned with upstream exposure. Defensive sector in CRISIS regime.",
+      "entryPrice": 118.17,
+      "targetPrice": 121.69,
+      "stopPrice": 116.16,
+      "riskRewardRatio": 1.75,
+      "riskPercent": 1.7,
+      "timeframe": "intraday",
+      "keyLevels": "Support at $116, $114.50. Resistance at $120, $122. Oil correlation key."
+    },
+    {
+      "ticker": "NEM",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "sector": "Gold Miners",
+      "catalyst": "Gold rallying on dual tailwinds: geopolitical safe haven (Haniyeh assassination) + rate cut expectations (FOMC today likely signals Sept cut). NEM as largest gold miner gets leveraged upside. Defensive positioning.",
+      "entryPrice": 47.5,
+      "targetPrice": 49.5,
+      "stopPrice": 46.5,
+      "riskRewardRatio": 2,
+      "riskPercent": 2.11,
+      "timeframe": "intraday",
+      "keyLevels": "Support at $46.50, $45.80. Resistance at $49, $50.50. Gold price correlation critical."
+    },
+    {
+      "ticker": "DAL",
+      "direction": "short",
+      "conviction": "MEDIUM",
+      "sector": "Airlines",
+      "catalyst": "Oil price spike directly compresses airline margins. Middle East escalation raises travel disruption fears. DAL already gave soft Q3 guidance. Consumer spending fatigue narrative. Airlines are high-beta losers in geopolitical crises.",
+      "entryPrice": 43.23,
+      "targetPrice": 41.34,
+      "stopPrice": 44.46,
+      "riskRewardRatio": 1.54,
+      "riskPercent": 2.84,
+      "timeframe": "intraday",
+      "keyLevels": "Support at $44.50, $43. Resistance at $47, $48. Jet fuel correlation inverse."
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10055,
+    "outcomes": [
+      {
+        "symbol": "MSFT",
+        "openPrice": 420.5,
+        "highPrice": 427.46,
+        "lowPrice": 404.34,
+        "closePrice": 408.49,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.41,
+        "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $420.5, High $427.46, Low $404.34, Close $408.49."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 150.73,
+        "highPrice": 153.6,
+        "lowPrice": 130.24,
+        "closePrice": 132.5,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.29,
+        "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $150.73, High $153.6, Low $130.24, Close $132.5."
+      },
+      {
+        "symbol": "LMT",
+        "openPrice": 543,
+        "highPrice": 561.12,
+        "lowPrice": 538.18,
+        "closePrice": 548.77,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.07,
+        "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $543, High $561.12, Low $538.18, Close $548.77."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 119.64,
+        "highPrice": 119.76,
+        "lowPrice": 115.42,
+        "closePrice": 116.88,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.09,
+        "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $119.64, High $119.76, Low $115.42, Close $116.88."
+      },
+      {
+        "symbol": "NEM",
+        "openPrice": 48.23,
+        "highPrice": 50.72,
+        "lowPrice": 47.5,
+        "closePrice": 48.51,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.13,
+        "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $48.23, High $50.72, Low $47.5, Close $48.51."
+      },
+      {
+        "symbol": "DAL",
+        "openPrice": 43.25,
+        "highPrice": 43.94,
+        "lowPrice": 39.59,
+        "closePrice": 39.83,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 7.86,
+        "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $43.25, High $43.94, Low $39.59, Close $39.83."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 83.3,
+      "stopHitRate": 33.3,
+      "avgReturnPercent": 3.11,
+      "profitFactor": 18.13,
+      "winRate": 83.3,
+      "totalScore": 95,
+      "benchmarkReturn": 0.33,
+      "alpha": 2.78
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.33,
+    "alpha": 2.78,
+    "fullDepth": true
+  }
+}

@@ -73489,6 +73489,514 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10055,
+      "date": "2024-07-31",
+      "generatedAt": "2026-04-07T18:56:07.331Z",
+      "signals": {
+        "spFuturesChange": 1.58,
+        "nasdaqFuturesChange": 2.64,
+        "dowFuturesChange": 0.24,
+        "russellFuturesChange": 0.51,
+        "vixFuturesChange": 13.63,
+        "vix": 18.59,
+        "vixChange": 13.63,
+        "vixTermStructure": "backwardation",
+        "vix9d": 0,
+        "vix3m": 16.97,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.11,
+        "tenYearYieldChange": -0.82,
+        "twoYearYield": 4.34,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.37,
+        "threeMonthYield": 5.14,
+        "twoTenSpread": -0.23,
+        "threeMoTenYrSpread": -1.03,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 104.42,
+        "dollarIndexChange": 0.31,
+        "eurUsd": 1.08,
+        "eurUsdChange": 0.07,
+        "usdJpy": 149.74,
+        "usdJpyChange": -1.92,
+        "usdCny": 7.22,
+        "usdCnyChange": -0.46,
+        "oilWTI": 76.31,
+        "oilChange": -2.05,
+        "brentOil": 79.52,
+        "brentOilChange": -1.49,
+        "natGasChange": -3.34,
+        "goldPrice": 2435,
+        "goldChange": 0.35,
+        "silverChange": -1.55,
+        "copperChange": -2.25,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -2.49,
+        "daxChange": -2.3,
+        "ftseChange": -1.01,
+        "shanghaiChange": -0.22,
+        "hangSengChange": -0.23,
+        "kospiChange": 0.25,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 107.30000000000001,
+        "spreadChange": -0.36,
+        "igSpread": -19.12,
+        "igSpreadChange": -0.58,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.89,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 4.24,
+        "xlfChange": -0.25,
+        "xleChange": 0.42,
+        "xlvChange": -0.37,
+        "xlpChange": -0.18,
+        "xluChange": 1.29,
+        "xlreChange": -0.24,
+        "xliChange": 1.12,
+        "xlbChange": 1.04,
+        "xlcChange": 1.19,
+        "xlyChange": 1.55,
+        "smhChange": 7.63,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 1.14,
+        "ethereumChange": -0.92,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": true,
+        "econDataType": "FOMC",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": true,
+        "isQuarterEnd": false,
+        "daysToFOMC": 0,
+        "daysToNextCPI": 14,
+        "daysToNextNFP": 2,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 1,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 1.75,
+        "sp20DayReturn": 0.24,
+        "nasdaqVsRussell5d": -1.21,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "crisis",
+        "confidence": 90,
+        "directionalBias": "-60",
+        "volatilityRegime": "normal",
+        "stressIndex": 30,
+        "riskAppetiteIndex": 47,
+        "sectorTilts": {
+          "tech": "underweight",
+          "utilities": "overweight",
+          "healthcare": "overweight",
+          "financials": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "MSFT",
+          "direction": "short",
+          "entryPrice": 422.92,
+          "targetPrice": 411.79,
+          "stopLoss": 430,
+          "thesis": "",
+          "catalyst": "Azure growth miss (29% vs 31% whisper) reported July 30 AH. Stock down ~3% after hours. Cloud spending scrutiny theme. Pre-market selling likely to continue as analysts digest. FOMC uncertainty adds pressure.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AMD",
+          "direction": "short",
+          "entryPrice": 138.44,
+          "targetPrice": 132.15,
+          "stopLoss": 141.83,
+          "thesis": "",
+          "catalyst": "Q2 beat but AI GPU revenue run-rate guidance underwhelmed some investors. Down ~3% AH July 30. Semi rotation ongoing. SOX index weakness. Yen carry unwind pressuring momentum names.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "LMT",
+          "direction": "long",
+          "entryPrice": 537.66,
+          "targetPrice": 550.58,
+          "stopLoss": 529.71,
+          "thesis": "",
+          "catalyst": "Haniyeh assassination in Tehran overnight. Iran vowing retaliation. Major Middle East escalation. Defense stocks are direct beneficiaries of geopolitical risk premium. LMT already reported solid Q2 July 23. Defensive positioning fits CRISIS regime.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XOM",
+          "direction": "long",
+          "entryPrice": 118.17,
+          "targetPrice": 121.69,
+          "stopLoss": 116.16,
+          "thesis": "",
+          "catalyst": "WTI crude spiking on Middle East escalation and Iran retaliation risk. Supply disruption premium building. XOM well-positioned with upstream exposure. Defensive sector in CRISIS regime.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NEM",
+          "direction": "long",
+          "entryPrice": 47.5,
+          "targetPrice": 49.5,
+          "stopLoss": 46.5,
+          "thesis": "",
+          "catalyst": "Gold rallying on dual tailwinds: geopolitical safe haven (Haniyeh assassination) + rate cut expectations (FOMC today likely signals Sept cut). NEM as largest gold miner gets leveraged upside. Defensive positioning.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "DAL",
+          "direction": "short",
+          "entryPrice": 43.23,
+          "targetPrice": 41.34,
+          "stopLoss": 44.46,
+          "thesis": "",
+          "catalyst": "Oil price spike directly compresses airline margins. Middle East escalation raises travel disruption fears. DAL already gave soft Q3 guidance. Consumer spending fatigue narrative. Airlines are high-beta losers in geopolitical crises.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "MSFT",
+          "openPrice": 420.5,
+          "highPrice": 427.46,
+          "lowPrice": 404.34,
+          "closePrice": 408.49,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.41,
+          "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $420.5, High $427.46, Low $404.34, Close $408.49."
+        },
+        {
+          "symbol": "AMD",
+          "openPrice": 150.73,
+          "highPrice": 153.6,
+          "lowPrice": 130.24,
+          "closePrice": 132.5,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.29,
+          "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $150.73, High $153.6, Low $130.24, Close $132.5."
+        },
+        {
+          "symbol": "LMT",
+          "openPrice": 543,
+          "highPrice": 561.12,
+          "lowPrice": 538.18,
+          "closePrice": 548.77,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.07,
+          "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $543, High $561.12, Low $538.18, Close $548.77."
+        },
+        {
+          "symbol": "XOM",
+          "openPrice": 119.64,
+          "highPrice": 119.76,
+          "lowPrice": 115.42,
+          "closePrice": 116.88,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.09,
+          "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $119.64, High $119.76, Low $115.42, Close $116.88."
+        },
+        {
+          "symbol": "NEM",
+          "openPrice": 48.23,
+          "highPrice": 50.72,
+          "lowPrice": 47.5,
+          "closePrice": 48.51,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.13,
+          "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $48.23, High $50.72, Low $47.5, Close $48.51."
+        },
+        {
+          "symbol": "DAL",
+          "openPrice": 43.25,
+          "highPrice": 43.94,
+          "lowPrice": 39.59,
+          "closePrice": 39.83,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.86,
+          "notes": "3-day window (2024-07-31, 2024-08-01, 2024-08-02). Open $43.25, High $43.94, Low $39.59, Close $39.83."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 83.3,
+        "targetHitRate": 83.3,
+        "stopHitRate": 33.3,
+        "avgReturnPercent": 3.11,
+        "profitFactor": 18.13,
+        "winRate": 83.3,
+        "totalScore": 95,
+        "benchmarkReturn": 0.33,
+        "alpha": 2.78
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -73502,7 +74010,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T18:54:20.357Z",
+  "lastUpdatedAt": "2026-04-07T18:56:07.352Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -73948,7 +74456,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 54,
+  "fullDepthCurrentTrial": 55,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -74106,7 +74614,8 @@
     "2025-10-20",
     "2025-09-18",
     "2024-07-22",
-    "2025-01-22"
+    "2025-01-22",
+    "2024-07-31"
   ],
   "dateSequence": [
     "2025-09-09",
