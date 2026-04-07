@@ -1,0 +1,343 @@
+{
+  "id": "briefing-2024-12-13-1775583135022",
+  "date": "2024-12-13",
+  "generatedAt": "2026-04-07T17:32:14.996Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG AVGO @ $180.66",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $191.95",
+          "implication": "+6.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $175.42",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG MRVL @ $109.01",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $115.01",
+          "implication": "+5.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $106.24",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT ADBE @ $474.63",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $456.72",
+          "implication": "+-3.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $485.38",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ARM @ $148",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $156.81",
+          "implication": "+6.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $143.6",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ANET @ $106.88",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $110.79",
+          "implication": "+3.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $104.27",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 42,
+  "recommendations": [
+    {
+      "ticker": "AVGO",
+      "direction": "long",
+      "thesis": "Broadcom AI revenue tripled YoY to $12.2B run rate. Stock gapping up 14%+ pre-market on massive volume. Custom AI chip narrative validated — Google, Meta custom silicon programs all route through AVGO. This is a momentum continuation trade on the gap. Buy the first consolidation after the open, ride the wave as institutional re-rating occurs through the day.",
+      "entryPrice": 180.66,
+      "targetPrice": 191.95,
+      "stopPrice": 175.42,
+      "riskReward": 2.15,
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 82,
+        "catalystClarity": 95,
+        "technicalSetup": 72,
+        "riskReward": 78,
+        "volumeLiquidity": 95,
+        "marketAlignment": 80,
+        "informationEdge": 75,
+        "timingUrgency": 85
+      },
+      "keyRisks": [
+        "Gap fade risk on profit-taking",
+        "Broad market weakness from PPI overhang",
+        "Position sizing critical on gap-up entry"
+      ],
+      "managementPlan": "Enter on first 5-min consolidation above VWAP after open. Trail stop to breakeven once +$5. Take 50% at $232, let rest ride to $238 with trailing stop."
+    },
+    {
+      "ticker": "MRVL",
+      "direction": "long",
+      "thesis": "Marvell is the #2 custom AI chip company behind Broadcom. AVGO's AI revenue tripling validates the entire custom silicon TAM. MRVL has its own earnings Dec 3 (already reported — beat on AI guidance). This is a sympathy momentum trade — AVGO's move will pull MRVL higher as investors reprice the custom AI chip market.",
+      "entryPrice": 109.01,
+      "targetPrice": 115.01,
+      "stopPrice": 106.24,
+      "riskReward": 2.17,
+      "timeframe": "intraday",
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 76,
+        "catalystClarity": 82,
+        "technicalSetup": 74,
+        "riskReward": 78,
+        "volumeLiquidity": 80,
+        "marketAlignment": 75,
+        "informationEdge": 70,
+        "timingUrgency": 72
+      },
+      "keyRisks": [
+        "Sympathy trades can fade faster than primary",
+        "Already run up post own earnings",
+        "Rotation could still favor AVGO over peers"
+      ],
+      "managementPlan": "Enter within first 30 min if MRVL holds above $117. Stop tight at $115. Take profits at $122 (50%) and $124.50 (remainder)."
+    },
+    {
+      "ticker": "ADBE",
+      "direction": "short",
+      "thesis": "Adobe guided FY2025 below consensus despite Q4 beat. Digital Media ARR guidance light — market interpreting this as AI cannibalization of creative tools. Stock down 5%+ AH. Software sector already under rotation pressure (money moving to semis). ADBE gap-down will attract selling from funds repositioning out of software into AI infrastructure. Short the bounce failure.",
+      "entryPrice": 474.63,
+      "targetPrice": 456.72,
+      "stopPrice": 485.38,
+      "riskReward": 1.67,
+      "timeframe": "intraday",
+      "positionSize": "reduced",
+      "conviction": {
+        "overall": 74,
+        "catalystClarity": 88,
+        "technicalSetup": 70,
+        "riskReward": 65,
+        "volumeLiquidity": 85,
+        "marketAlignment": 78,
+        "informationEdge": 72,
+        "timingUrgency": 75
+      },
+      "keyRisks": [
+        "Gap-down can reverse sharply on dip-buyers",
+        "Broad market rally could lift all boats",
+        "Adobe has strong brand — institutional support on dips"
+      ],
+      "managementPlan": "Wait for failed bounce attempt in first hour. Short on rejection of VWAP. Cover 50% at $518, remainder at $510. Stop above $542."
+    },
+    {
+      "ticker": "ARM",
+      "direction": "long",
+      "thesis": "Arm Holdings benefits from the AVGO custom AI chip validation. Every custom chip (Google TPU, Meta MTIA, Amazon Graviton) uses Arm architecture. More custom silicon = more Arm royalties. ARM is the high-beta way to play the AVGO sympathy trade with direct business model leverage.",
+      "entryPrice": 148,
+      "targetPrice": 156.81,
+      "stopPrice": 143.6,
+      "riskReward": 2,
+      "timeframe": "intraday",
+      "positionSize": "reduced",
+      "conviction": {
+        "overall": 71,
+        "catalystClarity": 75,
+        "technicalSetup": 68,
+        "riskReward": 74,
+        "volumeLiquidity": 72,
+        "marketAlignment": 72,
+        "informationEdge": 65,
+        "timingUrgency": 68
+      },
+      "keyRisks": [
+        "High valuation means any broader selloff hits hard",
+        "Sympathy move may not extend to ARM specifically",
+        "Low float creates volatility both ways"
+      ],
+      "managementPlan": "Enter on strength above $167 with volume confirmation. Stop at $163. Scale out at $173 and $178."
+    },
+    {
+      "ticker": "ANET",
+      "direction": "long",
+      "thesis": "Arista Networks supplies AI data center networking infrastructure. AVGO's AI revenue surge confirms hyperscalers are spending aggressively on AI infrastructure. Arista benefits from network fabric buildout alongside compute scaling. Less crowded than direct chip plays.",
+      "entryPrice": 106.88,
+      "targetPrice": 110.79,
+      "stopPrice": 104.27,
+      "riskReward": 1.5,
+      "timeframe": "intraday",
+      "positionSize": "reduced",
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 70,
+        "technicalSetup": 65,
+        "riskReward": 62,
+        "volumeLiquidity": 75,
+        "marketAlignment": 72,
+        "informationEdge": 60,
+        "timingUrgency": 65
+      },
+      "keyRisks": [
+        "Second-order sympathy — weaker link to catalyst",
+        "Could lag if rotation stays narrow to chips only",
+        "Approaching resistance levels"
+      ],
+      "managementPlan": "Enter if ANET breaks above $408 with semi sector confirming strength. Tight stop at $400. Single target at $425."
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10041,
+    "outcomes": [
+      {
+        "symbol": "AVGO",
+        "openPrice": 213.9,
+        "highPrice": 251.88,
+        "lowPrice": 211.11,
+        "closePrice": 240.23,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 32.97,
+        "notes": "3-day window (2024-12-13, 2024-12-16, 2024-12-17). Open $213.9, High $251.88, Low $211.11, Close $240.23."
+      },
+      {
+        "symbol": "MRVL",
+        "openPrice": 117.99,
+        "highPrice": 126.15,
+        "lowPrice": 111.9,
+        "closePrice": 112.25,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.97,
+        "notes": "3-day window (2024-12-13, 2024-12-16, 2024-12-17). Open $117.99, High $126.15, Low $111.9, Close $112.25."
+      },
+      {
+        "symbol": "ADBE",
+        "openPrice": 473.98,
+        "highPrice": 474.91,
+        "lowPrice": 452.48,
+        "closePrice": 455.23,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.09,
+        "notes": "3-day window (2024-12-13, 2024-12-16, 2024-12-17). Open $473.98, High $474.91, Low $452.48, Close $455.23."
+      },
+      {
+        "symbol": "ARM",
+        "openPrice": 151.51,
+        "highPrice": 156.4,
+        "lowPrice": 137.82,
+        "closePrice": 142.8,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.51,
+        "notes": "3-day window (2024-12-13, 2024-12-16, 2024-12-17). Open $151.51, High $156.4, Low $137.82, Close $142.8."
+      },
+      {
+        "symbol": "ANET",
+        "openPrice": 111.37,
+        "highPrice": 116.94,
+        "lowPrice": 109.88,
+        "closePrice": 112.95,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.68,
+        "notes": "3-day window (2024-12-13, 2024-12-16, 2024-12-17). Open $111.37, High $116.94, Low $109.88, Close $112.95."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 80,
+      "targetHitRate": 80,
+      "stopHitRate": 20,
+      "avgReturnPercent": 8.44,
+      "profitFactor": 13.02,
+      "winRate": 80,
+      "totalScore": 93.3,
+      "benchmarkReturn": -0.36,
+      "alpha": 8.8
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 83.8,
+        "avgScoreLosers": 75,
+        "predictivePower": 58.8
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 70.3,
+        "avgScoreLosers": 68,
+        "predictivePower": 52.3
+      },
+      "riskReward": {
+        "avgScoreWinners": 70.8,
+        "avgScoreLosers": 74,
+        "predictivePower": 46.8
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 83.8,
+        "avgScoreLosers": 72,
+        "predictivePower": 61.8
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 76.3,
+        "avgScoreLosers": 72,
+        "predictivePower": 54.3
+      },
+      "informationEdge": {
+        "avgScoreWinners": 69.3,
+        "avgScoreLosers": 65,
+        "predictivePower": 54.3
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 74.3,
+        "avgScoreLosers": 68,
+        "predictivePower": 56.3
+      }
+    },
+    "benchmarkReturn": -0.36,
+    "alpha": 8.8,
+    "fullDepth": true
+  }
+}
