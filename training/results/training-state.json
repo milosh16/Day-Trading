@@ -87366,6 +87366,513 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10242,
+      "date": "2023-07-10",
+      "generatedAt": "2026-04-07T23:38:49.088Z",
+      "signals": {
+        "spFuturesChange": 0.24,
+        "nasdaqFuturesChange": 0.18,
+        "dowFuturesChange": 0.62,
+        "russellFuturesChange": 1.64,
+        "vixFuturesChange": -1.53,
+        "vix": 14.84,
+        "vixChange": -1.53,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 17.25,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.01,
+        "tenYearYieldChange": -1.09,
+        "twoYearYield": 4.54,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.04,
+        "threeMonthYield": 5.22,
+        "twoTenSpread": -0.53,
+        "threeMoTenYrSpread": -1.21,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 101.73,
+        "dollarIndexChange": -0.24,
+        "eurUsd": 1.1,
+        "eurUsdChange": 0.33,
+        "usdJpy": 141.3,
+        "usdJpyChange": -0.64,
+        "usdCny": 7.23,
+        "usdCnyChange": 0.27,
+        "oilWTI": 74.83,
+        "oilChange": 2.52,
+        "brentOil": 79.4,
+        "brentOilChange": 2.2,
+        "natGasChange": 2.32,
+        "goldPrice": 1931.3,
+        "goldChange": 0.33,
+        "silverChange": -0.28,
+        "copperChange": -0.48,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": 0.04,
+        "daxChange": 0.75,
+        "ftseChange": 0.12,
+        "shanghaiChange": 0.55,
+        "hangSengChange": 0.97,
+        "kospiChange": 1.66,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 128.9,
+        "spreadChange": -0.5,
+        "igSpread": -12.18,
+        "igSpreadChange": -0.52,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1.07,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 0.26,
+        "xlfChange": 0.45,
+        "xleChange": 0.78,
+        "xlvChange": 0.79,
+        "xlpChange": -0.03,
+        "xluChange": -0.43,
+        "xlreChange": 0.34,
+        "xliChange": 1.42,
+        "xlbChange": -0.02,
+        "xlcChange": -0.26,
+        "xlyChange": 0.31,
+        "smhChange": 1.42,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": 0.68,
+        "ethereumChange": -0.12,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 205,
+        "daysToNextCPI": 185,
+        "daysToNextNFP": 179,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 1,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": -0.92,
+        "sp20DayReturn": 0,
+        "nasdaqVsRussell5d": -1.09,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "range-bound",
+        "confidence": 42,
+        "directionalBias": "12",
+        "volatilityRegime": "normal",
+        "stressIndex": 12,
+        "riskAppetiteIndex": 58,
+        "sectorTilts": {
+          "energy": "overweight",
+          "airlines": "underweight",
+          "semiconductors": "overweight"
+        }
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "XOM",
+          "direction": "long",
+          "entryPrice": 103.16,
+          "targetPrice": 105.66,
+          "stopLoss": 101.91,
+          "thesis": "Saudi and Russia extended production cuts through August. WTI crude rallied to $73.50. XOM broke above its 50-day MA on Friday with strong volume. Energy sector showing relative strength. DXY weakness is a tailwind for commodity-linked names. Pre-CPI positioning favors real assets.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "NVDA",
+          "direction": "long",
+          "entryPrice": 42.5,
+          "targetPrice": 43.72,
+          "stopLoss": 41.69,
+          "thesis": "AI mega-theme still in full force. NVDA consolidating after massive H1 run but holding above key support at $410. Softer NFP means less hawkish Fed path — growth stocks benefit. DXY weakness is a tailwind. Range-bound market favors momentum leaders on breakout attempts. Volume pattern shows accumulation during consolidation.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "AAPL",
+          "direction": "long",
+          "entryPrice": 191.5,
+          "targetPrice": 194.5,
+          "stopLoss": 189.8,
+          "thesis": "AAPL hit $3T market cap milestone in late June and pulled back slightly. Friday saw +1.6% bounce showing buying interest. Holding above $190 support. iPhone 15 production ramp expectations building. Services revenue growth narrative intact. Relative strength vs broader market on Friday's down session.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "DVN",
+          "direction": "long",
+          "entryPrice": 48.85,
+          "targetPrice": 51.09,
+          "stopLoss": 47.78,
+          "thesis": "Devon Energy benefiting from same Saudi/Russia cut catalyst as XOM but with higher beta to oil prices. Trading near $50 support with upside to $52.50 resistance. Variable dividend model means rising oil = rising payouts. Relative strength in energy sector confirmed Friday. Tighter range than XOM offers cleaner risk/reward.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "META",
+          "direction": "long",
+          "entryPrice": 290.53,
+          "targetPrice": 297.4,
+          "stopLoss": 285.62,
+          "thesis": "META in strong uptrend, rallied ~140% YTD by this point on efficiency narrative. Threads launched July 5 and hit 100M users in 5 days — massive engagement catalyst. Stock pulled back slightly Friday to $295 area after initial Threads euphoria. Dip-buy setup with Threads momentum still building. DXY weakness supports large-cap tech.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "JPM",
+          "direction": "short",
+          "entryPrice": 144.8,
+          "targetPrice": 141.5,
+          "stopLoss": 146.6,
+          "thesis": "Financials weak ahead of earnings Friday July 14. Softer NFP raises concerns about loan growth and economic deceleration. JPM trading near $145 resistance — failed breakout on Friday. Yield curve still deeply inverted pressuring NIM expectations. Pre-earnings anxiety typically weighs on bank stocks in the days leading up to reports. Range-bound market with slight negative bias supports mean-reversion short from resistance.",
+          "catalyst": "",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "XOM",
+          "openPrice": 102.97,
+          "highPrice": 107.65,
+          "lowPrice": 102.75,
+          "closePrice": 106.49,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.23,
+          "notes": "3-day window (2023-07-10, 2023-07-11, 2023-07-12). Open $102.97, High $107.65, Low $102.75, Close $106.49."
+        },
+        {
+          "symbol": "NVDA",
+          "openPrice": 42.66,
+          "highPrice": 43.94,
+          "lowPrice": 41.65,
+          "closePrice": 43.9,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 3.29,
+          "notes": "3-day window (2023-07-10, 2023-07-11, 2023-07-12). Open $42.66, High $43.94, Low $41.65, Close $43.9."
+        },
+        {
+          "symbol": "AAPL",
+          "openPrice": 189.26,
+          "highPrice": 191.7,
+          "lowPrice": 186.6,
+          "closePrice": 189.77,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -0.9,
+          "notes": "3-day window (2023-07-10, 2023-07-11, 2023-07-12). Open $189.26, High $191.7, Low $186.6, Close $189.77."
+        },
+        {
+          "symbol": "DVN",
+          "openPrice": 48.56,
+          "highPrice": 51.57,
+          "lowPrice": 48.4,
+          "closePrice": 51.09,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.59,
+          "notes": "3-day window (2023-07-10, 2023-07-11, 2023-07-12). Open $48.56, High $51.57, Low $48.4, Close $51.09."
+        },
+        {
+          "symbol": "META",
+          "openPrice": 295.55,
+          "highPrice": 309.45,
+          "lowPrice": 287.05,
+          "closePrice": 309.34,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 6.47,
+          "notes": "3-day window (2023-07-10, 2023-07-11, 2023-07-12). Open $295.55, High $309.45, Low $287.05, Close $309.34."
+        },
+        {
+          "symbol": "JPM",
+          "openPrice": 144.5,
+          "highPrice": 149.87,
+          "lowPrice": 144.5,
+          "closePrice": 148.15,
+          "hitTarget": false,
+          "hitStop": true,
+          "directionCorrect": false,
+          "actualReturnPercent": -2.31,
+          "notes": "3-day window (2023-07-10, 2023-07-11, 2023-07-12). Open $144.5, High $149.87, Low $144.5, Close $148.15."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 66.7,
+        "targetHitRate": 66.7,
+        "stopHitRate": 50,
+        "avgReturnPercent": 2.4,
+        "profitFactor": 5.48,
+        "winRate": 66.7,
+        "totalScore": 80.4,
+        "benchmarkReturn": 0.34,
+        "alpha": 2.06
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -87379,11 +87886,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-<<<<<<< HEAD
-  "lastUpdatedAt": "2026-04-07T23:08:57.624Z",
-=======
-  "lastUpdatedAt": "2026-04-07T23:04:53.933Z",
->>>>>>> c3aa5afb0788f07927c395d3f52ec7a879aa070a
+  "lastUpdatedAt": "2026-04-07T23:38:49.099Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -87842,7 +88345,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 82,
+  "fullDepthCurrentTrial": 83,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -88028,7 +88531,8 @@
     "2023-07-03",
     "2023-07-05",
     "2023-07-06",
-    "2023-07-07"
+    "2023-07-07",
+    "2023-07-10"
   ],
   "dateSequence": [
     "2025-09-09",
