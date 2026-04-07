@@ -1,0 +1,508 @@
+{
+  "trialId": 10052,
+  "date": "2025-09-18",
+  "dateDisplay": "Thursday, September 18, 2025",
+  "generatedAt": "2026-04-07T18:42:59.103Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 0.48,
+      "nasdaqFuturesChange": 0.94,
+      "dowFuturesChange": 0.27,
+      "russellFuturesChange": 2.51,
+      "vixFuturesChange": -1.59,
+      "vix": 15.45,
+      "vixChange": -1.59,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 18.52,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 4.1,
+      "tenYearYieldChange": 0.69,
+      "twoYearYield": 3.73,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.72,
+      "threeMonthYield": 3.88,
+      "twoTenSpread": 0.37,
+      "threeMoTenYrSpread": 0.22,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 97.64,
+      "dollarIndexChange": 0.3,
+      "eurUsd": 1.18,
+      "eurUsdChange": -0.3,
+      "usdJpy": 147.95,
+      "usdJpyChange": 0.72,
+      "usdCny": 7.11,
+      "usdCnyChange": 0.14,
+      "oilWTI": 62.68,
+      "oilChange": -1.4,
+      "brentOil": 66.68,
+      "brentOilChange": -1.13,
+      "natGasChange": -1.74,
+      "goldPrice": 3671.5,
+      "goldChange": 0.76,
+      "silverChange": 1.99,
+      "copperChange": 0.62,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.57,
+      "daxChange": -0.15,
+      "ftseChange": -0.12,
+      "shanghaiChange": -0.3,
+      "hangSengChange": 0,
+      "kospiChange": -0.46,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 93.85,
+      "spreadChange": -0.22,
+      "igSpread": -23.66,
+      "igSpreadChange": 0.21,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 1.02,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1.73,
+      "xlfChange": 0.09,
+      "xleChange": -0.31,
+      "xlvChange": 0.2,
+      "xlpChange": -0.87,
+      "xluChange": 0.07,
+      "xlreChange": 0.07,
+      "xliChange": 1.07,
+      "xlbChange": 0,
+      "xlcChange": 0.08,
+      "xlyChange": -0.45,
+      "smhChange": 3.84,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -1.24,
+      "ethereumChange": -2.59,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": true,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 41,
+      "daysToNextCPI": 26,
+      "daysToNextNFP": 15,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 1,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 0.68,
+      "sp20DayReturn": 3.69,
+      "nasdaqVsRussell5d": 0.03,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 50,
+      "directionalBias": "20",
+      "volatilityRegime": "normal",
+      "stressIndex": 14,
+      "riskAppetiteIndex": 62,
+      "sectorTilts": {
+        "semiconductors": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "DHI",
+      "direction": "long",
+      "entryPrice": 169.98,
+      "targetPrice": 176.85,
+      "stopLoss": 165.69,
+      "thesis": "",
+      "catalyst": "Rate cut directly benefits homebuilders through lower mortgage rates. Fed signaling 2 more cuts in 2025 extends the runway. DHI is the largest US homebuilder by volume. Housing starts at 5-year low means pent-up demand. Mortgage rate relief = demand catalyst. DHI up ~25% YTD showing strong momentum.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 70,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "JPM",
+      "direction": "long",
+      "entryPrice": 311.75,
+      "targetPrice": 320.41,
+      "stopLoss": 305.56,
+      "thesis": "",
+      "catalyst": "Financials sector surged +1.7% on rate cut. Banks benefit from steepening yield curve (short rates cut, long rates stable at 4%). JPM is the highest-quality large bank. Strong economy (jobless claims, Philly Fed) reduces credit risk fears. Dow component at record high.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 65,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "IWM",
+      "direction": "long",
+      "entryPrice": 238.89,
+      "targetPrice": 244.26,
+      "stopLoss": 234.98,
+      "thesis": "",
+      "catalyst": "Russell 2000 hit intraday ATH at 2,470 on Sep 18 then faded -0.7%. Rate cut + blowout Philly Fed + jobless claims drop all favor small-caps. Dip-buy on intraday record-break pullback. Historical precedent: small-caps outperform for weeks after first rate cut in a cycle.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 60,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CAT",
+      "direction": "long",
+      "entryPrice": 450.66,
+      "targetPrice": 464.35,
+      "stopLoss": 439.25,
+      "thesis": "",
+      "catalyst": "Industrials sector led the day (+3%). Rate cut benefits capex-intensive cyclicals. Philly Fed manufacturing surged to +23.2 (highest since Jan) signaling manufacturing expansion. CAT is the bellwether industrial name. Tariff pause on China reduces input cost fears. Dow component riding record-high index momentum.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 50,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 60,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "DRI",
+      "direction": "short",
+      "entryPrice": 208.79,
+      "targetPrice": 201.46,
+      "stopLoss": 213.67,
+      "thesis": "",
+      "catalyst": "Missed EPS ($1.97 vs $2.00 est), stock cratered -9% on Sep 18 morning. Fine dining segment weak. Despite raising revenue guidance, EPS guidance only reiterated — market wanted a raise. The -9% drop has momentum for further selling as analysts downgrade. Rotation-day environment means earnings disappointments get punished harder.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 70,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "AAPL",
+      "direction": "long",
+      "entryPrice": 238.99,
+      "targetPrice": 246.2,
+      "stopLoss": 233.7,
+      "thesis": "",
+      "catalyst": "iPhone 17 went on sale globally Sep 19 (next day). Stock rallied +3.2% on Sep 18 on early demand signals and pre-order data. Wedbush raised target to $310. Stock turning positive YTD after being down — momentum shift. Launch-day adjacency creates buzz.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 50,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 45,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 55,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "DHI",
+      "openPrice": 169.6,
+      "highPrice": 170.65,
+      "lowPrice": 162.82,
+      "closePrice": 164.23,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -3.38,
+      "notes": "3-day window (2025-09-18, 2025-09-19, 2025-09-22). Open $169.6, High $170.65, Low $162.82, Close $164.23."
+    },
+    {
+      "symbol": "JPM",
+      "openPrice": 311.79,
+      "highPrice": 315.8,
+      "lowPrice": 309.12,
+      "closePrice": 312.44,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.22,
+      "notes": "3-day window (2025-09-18, 2025-09-19, 2025-09-22). Open $311.79, High $315.8, Low $309.12, Close $312.44."
+    },
+    {
+      "symbol": "IWM",
+      "openPrice": 240.8,
+      "highPrice": 245.57,
+      "lowPrice": 240.13,
+      "closePrice": 244.39,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.3,
+      "notes": "3-day window (2025-09-18, 2025-09-19, 2025-09-22). Open $240.8, High $245.57, Low $240.13, Close $244.39."
+    },
+    {
+      "symbol": "CAT",
+      "openPrice": 450.96,
+      "highPrice": 473.24,
+      "lowPrice": 448.87,
+      "closePrice": 472.1,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 4.76,
+      "notes": "3-day window (2025-09-18, 2025-09-19, 2025-09-22). Open $450.96, High $473.24, Low $448.87, Close $472.1."
+    },
+    {
+      "symbol": "DRI",
+      "openPrice": 193.67,
+      "highPrice": 195.07,
+      "lowPrice": 182.76,
+      "closePrice": 185.21,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 11.29,
+      "notes": "3-day window (2025-09-18, 2025-09-19, 2025-09-22). Open $193.67, High $195.07, Low $182.76, Close $185.21."
+    },
+    {
+      "symbol": "AAPL",
+      "openPrice": 239.97,
+      "highPrice": 256.64,
+      "lowPrice": 236.65,
+      "closePrice": 256.08,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 7.15,
+      "notes": "3-day window (2025-09-18, 2025-09-19, 2025-09-22). Open $239.97, High $256.64, Low $236.65, Close $256.08."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 83.3,
+    "targetHitRate": 66.7,
+    "stopHitRate": 16.7,
+    "avgReturnPercent": 3.72,
+    "profitFactor": 7.61,
+    "winRate": 83.3,
+    "totalScore": 95,
+    "benchmarkReturn": 0.06,
+    "alpha": 3.66
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 78.6,
+      "avgScoreLosers": 85,
+      "predictivePower": 43.6
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 65,
+      "avgScoreLosers": 72,
+      "predictivePower": 43
+    },
+    "riskReward": {
+      "avgScoreWinners": 56,
+      "avgScoreLosers": 70,
+      "predictivePower": 36
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 82.6,
+      "avgScoreLosers": 75,
+      "predictivePower": 57.6
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 69.4,
+      "avgScoreLosers": 80,
+      "predictivePower": 39.4
+    },
+    "informationEdge": {
+      "avgScoreWinners": 58,
+      "avgScoreLosers": 60,
+      "predictivePower": 48
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 62,
+      "avgScoreLosers": 70,
+      "predictivePower": 42
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
