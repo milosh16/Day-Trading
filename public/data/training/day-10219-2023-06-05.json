@@ -1,0 +1,500 @@
+{
+  "trialId": 10219,
+  "date": "2023-06-05",
+  "dateDisplay": "Monday, June 5, 2023",
+  "generatedAt": "2026-04-07T19:20:10.754Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.2,
+      "nasdaqFuturesChange": -0.09,
+      "dowFuturesChange": -0.59,
+      "russellFuturesChange": -1.32,
+      "vixFuturesChange": -5.23,
+      "vix": 13.96,
+      "vixChange": -5.23,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 17.9,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.69,
+      "tenYearYieldChange": 0.05,
+      "twoYearYield": 4.22,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.89,
+      "threeMonthYield": 5.14,
+      "twoTenSpread": -0.53,
+      "threeMoTenYrSpread": -1.45,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 104.13,
+      "dollarIndexChange": 0.12,
+      "eurUsd": 1.07,
+      "eurUsdChange": 0.12,
+      "usdJpy": 139.38,
+      "usdJpyChange": -0.59,
+      "usdCny": 7.11,
+      "usdCnyChange": 0.3,
+      "oilWTI": 71.74,
+      "oilChange": -0.57,
+      "brentOil": 76.29,
+      "brentOilChange": -0.55,
+      "natGasChange": 0.76,
+      "goldPrice": 1965.5,
+      "goldChange": 0.38,
+      "silverChange": 0.17,
+      "copperChange": 0.12,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.9,
+      "daxChange": 0.18,
+      "ftseChange": 0.37,
+      "shanghaiChange": -1.15,
+      "hangSengChange": -0.05,
+      "kospiChange": 0.54,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 127.4,
+      "spreadChange": 0.08,
+      "igSpread": -14.16,
+      "igSpreadChange": 0.21,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.99,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.58,
+      "xlfChange": -0.52,
+      "xleChange": -0.66,
+      "xlvChange": 0.36,
+      "xlpChange": -0.37,
+      "xluChange": 0.48,
+      "xlreChange": -0.46,
+      "xliChange": -0.69,
+      "xlbChange": -0.08,
+      "xlcChange": 0.25,
+      "xlyChange": 0.3,
+      "smhChange": -1.25,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": 5.74,
+      "ethereumChange": 4.01,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 240,
+      "daysToNextCPI": 220,
+      "daysToNextNFP": 214,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": 1.63,
+      "sp20DayReturn": 0,
+      "nasdaqVsRussell5d": 0.06,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "range-bound",
+      "confidence": 36,
+      "directionalBias": "-6",
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 46,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": {
+        "openingBias": "gap-up, bullish",
+        "rationale": "Debt ceiling signed (weekend), Saudi oil cut (Sunday), strong Friday close with momentum. Pre-market futures expected solidly green. AI momentum persists. Low VIX supports continuation.",
+        "keyRisks": [
+          "Extended market — VIX at 14.6 suggests complacency; any shock amplified",
+          "SPX approaching 4300-4325 resistance zone — potential intraday reversal level",
+          "Gap-up exhaustion: catalysts already known, buy-the-rumor-sell-the-news risk on debt ceiling",
+          "China weakness could resurface if PMIs continue disappointing"
+        ],
+        "keyLevels": {
+          "SPX_support": 4260,
+          "SPX_resistance": 4325,
+          "VIX_watch": 15.5
+        }
+      },
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Macro",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Geopolitical",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "FedCentralBank",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "SectorRotation",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Technicals",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "EarningsCorporate",
+          "content": "[object Object]",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "MDB",
+      "direction": "long",
+      "entryPrice": 375,
+      "targetPrice": 395,
+      "stopLoss": 364,
+      "thesis": "",
+      "catalyst": "Massive Q1 beat with 29% revenue growth, raised FY guidance significantly. Atlas consumption accelerating on AI workload demand. Stock up ~25% AH Friday. Gap-up Monday with post-earnings drift momentum.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "LULU",
+      "direction": "long",
+      "entryPrice": 364,
+      "targetPrice": 378,
+      "stopLoss": 355,
+      "thesis": "",
+      "catalyst": "Beat Q1 on top and bottom line, raised full-year guidance. China expansion accelerating. Gapped up ~11% AH Friday. Consumer discretionary strength in risk-on tape.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "OXY",
+      "direction": "long",
+      "entryPrice": 59.5,
+      "targetPrice": 61.5,
+      "stopLoss": 58.2,
+      "thesis": "",
+      "catalyst": "Saudi Arabia voluntary 1M bpd cut announced Sunday June 4, effective July. WTI expected to gap up $1-2 Monday. OXY heavily levered to oil price with Buffett backing (Berkshire ~25% stake).",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CRWD",
+      "direction": "long",
+      "entryPrice": 152,
+      "targetPrice": 158.5,
+      "stopLoss": 148.5,
+      "thesis": "",
+      "catalyst": "Beat Q1 with $693M revenue (+42% YoY), raised ARR guidance. Module adoption expanding. Cybersecurity spending resilient. Up ~5% AH Friday — measured gap means room to run.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "IWM",
+      "direction": "long",
+      "entryPrice": 181.5,
+      "targetPrice": 184.5,
+      "stopLoss": 179.5,
+      "thesis": "",
+      "catalyst": "Debt ceiling resolution removes biggest tail risk for small caps. Strong NFP supports domestic economy. Russell lagging SPX/NDX by wide margin — mean reversion setup.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "MDB",
+      "openPrice": 379.22,
+      "highPrice": 398.89,
+      "lowPrice": 366.11,
+      "closePrice": 368.56,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.72,
+      "notes": "3-day window (2023-06-05, 2023-06-06, 2023-06-07). Open $379.22, High $398.89, Low $366.11, Close $368.56."
+    },
+    {
+      "symbol": "LULU",
+      "openPrice": 363,
+      "highPrice": 363.64,
+      "lowPrice": 352.54,
+      "closePrice": 353.93,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -2.77,
+      "notes": "3-day window (2023-06-05, 2023-06-06, 2023-06-07). Open $363, High $363.64, Low $352.54, Close $353.93."
+    },
+    {
+      "symbol": "OXY",
+      "openPrice": 60.79,
+      "highPrice": 60.79,
+      "lowPrice": 58.49,
+      "closePrice": 60.04,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.91,
+      "notes": "3-day window (2023-06-05, 2023-06-06, 2023-06-07). Open $60.79, High $60.79, Low $58.49, Close $60.04."
+    },
+    {
+      "symbol": "CRWD",
+      "openPrice": 151.05,
+      "highPrice": 155.9,
+      "lowPrice": 148.24,
+      "closePrice": 149.23,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.82,
+      "notes": "3-day window (2023-06-05, 2023-06-06, 2023-06-07). Open $151.05, High $155.9, Low $148.24, Close $149.23."
+    },
+    {
+      "symbol": "IWM",
+      "openPrice": 181.26,
+      "highPrice": 187.77,
+      "lowPrice": 178.44,
+      "closePrice": 187.24,
+      "hitTarget": true,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 3.16,
+      "notes": "3-day window (2023-06-05, 2023-06-06, 2023-06-07). Open $181.26, High $187.77, Low $178.44, Close $187.24."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 40,
+    "targetHitRate": 40,
+    "stopHitRate": 60,
+    "avgReturnPercent": -0.45,
+    "profitFactor": 0.65,
+    "winRate": 40,
+    "totalScore": 45.4,
+    "benchmarkReturn": -0.28,
+    "alpha": -0.17
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
