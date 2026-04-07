@@ -1,0 +1,508 @@
+{
+  "trialId": 10051,
+  "date": "2025-10-20",
+  "dateDisplay": "Monday, October 20, 2025",
+  "generatedAt": "2026-04-07T18:34:32.954Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": 1.07,
+      "nasdaqFuturesChange": 1.37,
+      "dowFuturesChange": 1.12,
+      "russellFuturesChange": 1.95,
+      "vixFuturesChange": -1.97,
+      "vix": 17.87,
+      "vixChange": -1.97,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 20.31,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.99,
+      "tenYearYieldChange": -0.52,
+      "twoYearYield": 3.65,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 4.58,
+      "threeMonthYield": 3.8,
+      "twoTenSpread": 0.34,
+      "threeMoTenYrSpread": 0.19,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 98.93,
+      "dollarIndexChange": 0.34,
+      "eurUsd": 1.16,
+      "eurUsdChange": -0.11,
+      "usdJpy": 150.77,
+      "usdJpyChange": -0.08,
+      "usdCny": 7.12,
+      "usdCnyChange": -0.1,
+      "oilWTI": 57.82,
+      "oilChange": 0.52,
+      "brentOil": 61.32,
+      "brentOilChange": 0.51,
+      "natGasChange": 2.27,
+      "goldPrice": 4087.7,
+      "goldChange": -5.74,
+      "silverChange": -7.18,
+      "copperChange": -1.36,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": 0.27,
+      "daxChange": 0.29,
+      "ftseChange": 0.25,
+      "shanghaiChange": 1.36,
+      "hangSengChange": 0.65,
+      "kospiChange": 0.24,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 95.60000000000001,
+      "spreadChange": -0.2,
+      "igSpread": -25.08,
+      "igSpreadChange": -0.3,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.99,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": 1.12,
+      "xlfChange": 1.17,
+      "xleChange": 1.06,
+      "xlvChange": 1.06,
+      "xlpChange": -0.09,
+      "xluChange": -0.03,
+      "xlreChange": 1.05,
+      "xliChange": 1.18,
+      "xlbChange": 1.19,
+      "xlcChange": 1.13,
+      "xlyChange": 0.79,
+      "smhChange": 1.28,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -1.91,
+      "ethereumChange": -2.61,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 9,
+      "daysToNextCPI": 23,
+      "daysToNextNFP": 18,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 2,
+      "spConsecutiveDownDays": 0,
+      "sp5DayReturn": 1.21,
+      "sp20DayReturn": 0.62,
+      "nasdaqVsRussell5d": -0.26,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 51,
+      "directionalBias": "21",
+      "volatilityRegime": "normal",
+      "stressIndex": 16,
+      "riskAppetiteIndex": 61,
+      "sectorTilts": {
+        "materials": "overweight"
+      }
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "KO",
+      "direction": "long",
+      "entryPrice": 68.44,
+      "targetPrice": 71.18,
+      "stopLoss": 66.92,
+      "thesis": "",
+      "catalyst": "Q3 earnings report Tuesday Oct 21 pre-market. Defensive consumer staples name benefiting from rotation into safety amid government shutdown. Strong pricing power, consistent beat history. XLP sector led Friday +1.3%. Expected to beat on both EPS and revenue.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 82,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 80,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "MP",
+      "direction": "short",
+      "entryPrice": 80.79,
+      "targetPrice": 73.99,
+      "stopLoss": 84.83,
+      "thesis": "",
+      "catalyst": "Rare earth stock surged 36% on China export controls announced Oct 9, hit ATH $100.25 on Oct 14. Massive run now extended and vulnerable to profit-taking. Trump's Friday de-escalation rhetoric on China tariffs creates risk of mean reversion. Stock ran too far too fast. DOD $400M investment provides floor but not at these levels.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 68,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 74,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 70,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "NFLX",
+      "direction": "short",
+      "entryPrice": 119.94,
+      "targetPrice": 107.79,
+      "stopLoss": 123.74,
+      "thesis": "",
+      "catalyst": "Reports Tuesday Oct 21 after close. Expectations elevated after strong subscriber growth narrative. Stock at all-time area with high implied volatility. Brazil tax charge of $619M will crater EPS to $5.87 vs $6.94 consensus - a massive miss. Stock dropped 12% post-earnings. Entry on Monday strength ahead of report.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 88,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 90,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 88,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "CLF",
+      "direction": "short",
+      "entryPrice": 13.32,
+      "targetPrice": 12.3,
+      "stopLoss": 14,
+      "thesis": "",
+      "catalyst": "Reports pre-market Monday Oct 20. Consensus EPS -$0.48 - company expected to report a loss. Steel margins pressured by high energy and labor costs. Revenue declining y/y (full year 2025 revenue -3%). Tariff uncertainty on steel imports creates headwind.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 60,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 75,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 62,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 72,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XLF",
+      "direction": "long",
+      "entryPrice": 52.18,
+      "targetPrice": 53.7,
+      "stopLoss": 51.17,
+      "thesis": "",
+      "catalyst": "Financials led the rotation on Friday (+0.8%) and Monday continuation expected. Banks stabilizing after recent turmoil. Q3 earnings season strong with 86.2% beat rate. Rate cut expectations support bank lending margins. Risk-on sentiment from Trump China de-escalation. Rotation regime with mildly bullish bias favors cyclicals gaining momentum.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 65,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 85,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 62,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "SMMT",
+      "direction": "long",
+      "entryPrice": 20.99,
+      "targetPrice": 23.79,
+      "stopLoss": 19.96,
+      "thesis": "",
+      "catalyst": "Announced Oct 17 expansion of ivonescimab Phase III program into colorectal cancer (HARMONi-GI3) - 4th global Phase III study and first beyond NSCLC. Reports earnings pre-market Oct 20. Pipeline expansion catalyst creates positive sentiment. Bispecific antibody is potential first-in-class. Healthcare sector getting defensive bid from shutdown uncertainty.",
+      "conviction": {
+        "catalystClarity": {
+          "score": 78,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 58,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 80,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 55,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 70,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 72,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 75,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "KO",
+      "openPrice": 68.43,
+      "highPrice": 71.62,
+      "lowPrice": 67.92,
+      "closePrice": 70.81,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 3.46,
+      "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $68.43, High $71.62, Low $67.92, Close $70.81."
+    },
+    {
+      "symbol": "MP",
+      "openPrice": 83.5,
+      "highPrice": 83.99,
+      "lowPrice": 66.31,
+      "closePrice": 69.8,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 13.6,
+      "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $83.5, High $83.99, Low $66.31, Close $69.8."
+    },
+    {
+      "symbol": "NFLX",
+      "openPrice": 120.79,
+      "highPrice": 124.86,
+      "lowPrice": 111.25,
+      "closePrice": 111.64,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 6.92,
+      "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $120.79, High $124.86, Low $111.25, Close $111.64."
+    },
+    {
+      "symbol": "CLF",
+      "openPrice": 15.62,
+      "highPrice": 16.7,
+      "lowPrice": 12.99,
+      "closePrice": 13,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.4,
+      "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $15.62, High $16.7, Low $12.99, Close $13."
+    },
+    {
+      "symbol": "XLF",
+      "openPrice": 52.36,
+      "highPrice": 53.13,
+      "lowPrice": 52.12,
+      "closePrice": 52.43,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 0.48,
+      "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $52.36, High $53.13, Low $52.12, Close $52.43."
+    },
+    {
+      "symbol": "SMMT",
+      "openPrice": 18.85,
+      "highPrice": 20.98,
+      "lowPrice": 18.08,
+      "closePrice": 19.16,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -8.72,
+      "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $18.85, High $20.98, Low $18.08, Close $19.16."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 83.3,
+    "targetHitRate": 33.3,
+    "stopHitRate": 50,
+    "avgReturnPercent": 3.02,
+    "profitFactor": 3.08,
+    "winRate": 83.3,
+    "totalScore": 84.3,
+    "benchmarkReturn": 0.6,
+    "alpha": 2.42
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 77,
+      "avgScoreLosers": 78,
+      "predictivePower": 49
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 70.4,
+      "avgScoreLosers": 58,
+      "predictivePower": 62.4
+    },
+    "riskReward": {
+      "avgScoreWinners": 71,
+      "avgScoreLosers": 80,
+      "predictivePower": 41
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 80.6,
+      "avgScoreLosers": 55,
+      "predictivePower": 75.6
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 73.8,
+      "avgScoreLosers": 70,
+      "predictivePower": 53.8
+    },
+    "informationEdge": {
+      "avgScoreWinners": 69.2,
+      "avgScoreLosers": 72,
+      "predictivePower": 47.2
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 74.4,
+      "avgScoreLosers": 75,
+      "predictivePower": 49.4
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}

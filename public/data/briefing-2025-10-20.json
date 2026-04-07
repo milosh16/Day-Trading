@@ -1,0 +1,361 @@
+{
+  "id": "briefing-2025-10-20-1775586872981",
+  "date": "2025-10-20",
+  "generatedAt": "2026-04-07T18:34:32.954Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG KO @ $68.44",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $71.18",
+          "implication": "+4.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $66.92",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT MP @ $80.79",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $73.99",
+          "implication": "+-8.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $84.83",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT NFLX @ $119.94",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $107.79",
+          "implication": "+-10.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $123.74",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT CLF @ $13.32",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $12.3",
+          "implication": "+-7.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $14",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XLF @ $52.18",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $53.7",
+          "implication": "+2.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $51.17",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG SMMT @ $20.99",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $23.79",
+          "implication": "+13.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $19.96",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 51,
+  "recommendations": [
+    {
+      "ticker": "KO",
+      "company": "Coca-Cola",
+      "direction": "long",
+      "catalyst": "Q3 earnings report Tuesday Oct 21 pre-market. Defensive consumer staples name benefiting from rotation into safety amid government shutdown. Strong pricing power, consistent beat history. XLP sector led Friday +1.3%. Expected to beat on both EPS and revenue.",
+      "entryPrice": 68.44,
+      "targetPrice": 71.18,
+      "stopPrice": 66.92,
+      "timeframe": "1-2 days (hold into earnings Tuesday AM)",
+      "riskReward": 1.8,
+      "conviction": {
+        "overall": 78,
+        "catalystClarity": 85,
+        "technicalSetup": 72,
+        "riskReward": 75,
+        "volumeLiquidity": 90,
+        "marketAlignment": 82,
+        "informationEdge": 70,
+        "timingUrgency": 80
+      }
+    },
+    {
+      "ticker": "MP",
+      "company": "MP Materials",
+      "direction": "short",
+      "catalyst": "Rare earth stock surged 36% on China export controls announced Oct 9, hit ATH $100.25 on Oct 14. Massive run now extended and vulnerable to profit-taking. Trump's Friday de-escalation rhetoric on China tariffs creates risk of mean reversion. Stock ran too far too fast. DOD $400M investment provides floor but not at these levels.",
+      "entryPrice": 80.79,
+      "targetPrice": 73.99,
+      "stopPrice": 84.83,
+      "timeframe": "1-3 days",
+      "riskReward": 1.68,
+      "conviction": {
+        "overall": 71,
+        "catalystClarity": 75,
+        "technicalSetup": 70,
+        "riskReward": 65,
+        "volumeLiquidity": 68,
+        "marketAlignment": 72,
+        "informationEdge": 74,
+        "timingUrgency": 70
+      }
+    },
+    {
+      "ticker": "NFLX",
+      "company": "Netflix",
+      "direction": "short",
+      "catalyst": "Reports Tuesday Oct 21 after close. Expectations elevated after strong subscriber growth narrative. Stock at all-time area with high implied volatility. Brazil tax charge of $619M will crater EPS to $5.87 vs $6.94 consensus - a massive miss. Stock dropped 12% post-earnings. Entry on Monday strength ahead of report.",
+      "entryPrice": 119.94,
+      "targetPrice": 107.79,
+      "stopPrice": 123.74,
+      "timeframe": "1-2 days (hold through earnings)",
+      "riskReward": 3.2,
+      "conviction": {
+        "overall": 82,
+        "catalystClarity": 88,
+        "technicalSetup": 78,
+        "riskReward": 90,
+        "volumeLiquidity": 85,
+        "marketAlignment": 72,
+        "informationEdge": 85,
+        "timingUrgency": 88
+      }
+    },
+    {
+      "ticker": "CLF",
+      "company": "Cleveland-Cliffs",
+      "direction": "short",
+      "catalyst": "Reports pre-market Monday Oct 20. Consensus EPS -$0.48 - company expected to report a loss. Steel margins pressured by high energy and labor costs. Revenue declining y/y (full year 2025 revenue -3%). Tariff uncertainty on steel imports creates headwind.",
+      "entryPrice": 13.32,
+      "targetPrice": 12.3,
+      "stopPrice": 14,
+      "timeframe": "Intraday to 1 day",
+      "riskReward": 1.5,
+      "conviction": {
+        "overall": 65,
+        "catalystClarity": 72,
+        "technicalSetup": 60,
+        "riskReward": 60,
+        "volumeLiquidity": 75,
+        "marketAlignment": 65,
+        "informationEdge": 62,
+        "timingUrgency": 72
+      }
+    },
+    {
+      "ticker": "XLF",
+      "company": "Financial Select Sector SPDR Fund",
+      "direction": "long",
+      "catalyst": "Financials led the rotation on Friday (+0.8%) and Monday continuation expected. Banks stabilizing after recent turmoil. Q3 earnings season strong with 86.2% beat rate. Rate cut expectations support bank lending margins. Risk-on sentiment from Trump China de-escalation. Rotation regime with mildly bullish bias favors cyclicals gaining momentum.",
+      "entryPrice": 52.18,
+      "targetPrice": 53.7,
+      "stopPrice": 51.17,
+      "timeframe": "1-3 days",
+      "riskReward": 1.5,
+      "conviction": {
+        "overall": 69,
+        "catalystClarity": 65,
+        "technicalSetup": 72,
+        "riskReward": 65,
+        "volumeLiquidity": 85,
+        "marketAlignment": 78,
+        "informationEdge": 55,
+        "timingUrgency": 62
+      }
+    },
+    {
+      "ticker": "SMMT",
+      "company": "Summit Therapeutics",
+      "direction": "long",
+      "catalyst": "Announced Oct 17 expansion of ivonescimab Phase III program into colorectal cancer (HARMONi-GI3) - 4th global Phase III study and first beyond NSCLC. Reports earnings pre-market Oct 20. Pipeline expansion catalyst creates positive sentiment. Bispecific antibody is potential first-in-class. Healthcare sector getting defensive bid from shutdown uncertainty.",
+      "entryPrice": 20.99,
+      "targetPrice": 23.79,
+      "stopPrice": 19.96,
+      "timeframe": "1-3 days",
+      "riskReward": 2.73,
+      "conviction": {
+        "overall": 67,
+        "catalystClarity": 78,
+        "technicalSetup": 58,
+        "riskReward": 80,
+        "volumeLiquidity": 55,
+        "marketAlignment": 70,
+        "informationEdge": 72,
+        "timingUrgency": 75
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10051,
+    "outcomes": [
+      {
+        "symbol": "KO",
+        "openPrice": 68.43,
+        "highPrice": 71.62,
+        "lowPrice": 67.92,
+        "closePrice": 70.81,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.46,
+        "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $68.43, High $71.62, Low $67.92, Close $70.81."
+      },
+      {
+        "symbol": "MP",
+        "openPrice": 83.5,
+        "highPrice": 83.99,
+        "lowPrice": 66.31,
+        "closePrice": 69.8,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 13.6,
+        "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $83.5, High $83.99, Low $66.31, Close $69.8."
+      },
+      {
+        "symbol": "NFLX",
+        "openPrice": 120.79,
+        "highPrice": 124.86,
+        "lowPrice": 111.25,
+        "closePrice": 111.64,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 6.92,
+        "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $120.79, High $124.86, Low $111.25, Close $111.64."
+      },
+      {
+        "symbol": "CLF",
+        "openPrice": 15.62,
+        "highPrice": 16.7,
+        "lowPrice": 12.99,
+        "closePrice": 13,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.4,
+        "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $15.62, High $16.7, Low $12.99, Close $13."
+      },
+      {
+        "symbol": "XLF",
+        "openPrice": 52.36,
+        "highPrice": 53.13,
+        "lowPrice": 52.12,
+        "closePrice": 52.43,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.48,
+        "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $52.36, High $53.13, Low $52.12, Close $52.43."
+      },
+      {
+        "symbol": "SMMT",
+        "openPrice": 18.85,
+        "highPrice": 20.98,
+        "lowPrice": 18.08,
+        "closePrice": 19.16,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -8.72,
+        "notes": "3-day window (2025-10-20, 2025-10-21, 2025-10-22). Open $18.85, High $20.98, Low $18.08, Close $19.16."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 33.3,
+      "stopHitRate": 50,
+      "avgReturnPercent": 3.02,
+      "profitFactor": 3.08,
+      "winRate": 83.3,
+      "totalScore": 84.3,
+      "benchmarkReturn": 0.6,
+      "alpha": 2.42
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 77,
+        "avgScoreLosers": 78,
+        "predictivePower": 49
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 70.4,
+        "avgScoreLosers": 58,
+        "predictivePower": 62.4
+      },
+      "riskReward": {
+        "avgScoreWinners": 71,
+        "avgScoreLosers": 80,
+        "predictivePower": 41
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 80.6,
+        "avgScoreLosers": 55,
+        "predictivePower": 75.6
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 73.8,
+        "avgScoreLosers": 70,
+        "predictivePower": 53.8
+      },
+      "informationEdge": {
+        "avgScoreWinners": 69.2,
+        "avgScoreLosers": 72,
+        "predictivePower": 47.2
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 74.4,
+        "avgScoreLosers": 75,
+        "predictivePower": 49.4
+      }
+    },
+    "benchmarkReturn": 0.6,
+    "alpha": 2.42,
+    "fullDepth": true
+  }
+}
