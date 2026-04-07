@@ -1,0 +1,384 @@
+{
+  "id": "briefing-2026-01-06-1775583790362",
+  "date": "2026-01-06",
+  "generatedAt": "2026-04-07T17:43:10.338Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sectors",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Technicals",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Commodities",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG AMZN @ $232.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $240",
+          "implication": "+3.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $227.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT HAL @ $31.92",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $30.71",
+          "implication": "+-3.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $32.83",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $188.12",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $192.07",
+          "implication": "+2.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $184.17",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT SLB @ $43.8",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $42.61",
+          "implication": "+-2.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $44.89",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $125",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $127.5",
+          "implication": "+2.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $122.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "range-bound",
+  "regimeConfidence": 31,
+  "recommendations": [
+    {
+      "id": 1,
+      "ticker": "AMZN",
+      "company": "Amazon",
+      "direction": "long",
+      "thesis": "CES 2026 AI enthusiasm driving Nasdaq futures +1.05% pre-market. Amazon is the highest-conviction AI beneficiary with AWS reacceleration, Trainium chips, and analyst upgrades (Evercore top pick, consensus PT $295 vs ~$233 price). Jan 5 close at $233.06 with strong momentum. Jan 6 opens near $232 — gap fill gives clean entry. CES AI news flow (Nvidia Vera Rubin, DeepSeek efficiency, Baidu IPO filing) creates broad AI tailwind without AMZN being directly at risk of sell-the-news like NVDA.",
+      "entryPrice": 232.5,
+      "targetPrice": 240,
+      "stopPrice": 227.5,
+      "riskRewardRatio": 1.5,
+      "positionSize": "standard",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 74,
+        "catalystClarity": 80,
+        "technicalSetup": 72,
+        "riskReward": 68,
+        "volumeLiquidity": 90,
+        "marketAlignment": 82,
+        "informationEdge": 65,
+        "timingUrgency": 75
+      },
+      "keyRisks": [
+        "Broad market sell-off overrides sector rotation into tech",
+        "CES announcements underwhelm, Nasdaq reverses from pre-market gains",
+        "Range-bound regime caps upside"
+      ],
+      "actualClose": 240.93
+    },
+    {
+      "id": 2,
+      "ticker": "HAL",
+      "company": "Halliburton",
+      "direction": "short",
+      "thesis": "Halliburton surged 7.84% on Jan 5 hitting 52-week high of $33.03, then faded to close at $31.92. Classic gap-and-fade overextension on Venezuela headline. Oil prices actually FELL despite the military action (WTI ~$57). The Venezuela rebuild is a decade-long project — oilfield services won't see revenue for years. Jan 6 opens at $31.76 (below prior close), signaling profit-taking. Short the continuation of the fade as momentum traders exit. HAL was trading at $28-29 just two sessions ago — mean reversion in play.",
+      "entryPrice": 31.92,
+      "targetPrice": 30.71,
+      "stopPrice": 32.83,
+      "riskRewardRatio": 1.33,
+      "positionSize": "reduced",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 66,
+        "catalystClarity": 72,
+        "technicalSetup": 70,
+        "riskReward": 58,
+        "volumeLiquidity": 75,
+        "marketAlignment": 55,
+        "informationEdge": 68,
+        "timingUrgency": 70
+      },
+      "keyRisks": [
+        "Venezuela headline intensifies — new Trump statements on oil infrastructure spending",
+        "Oil prices reverse higher, lifting all energy names",
+        "Short squeeze on heavily shorted oilfield services"
+      ],
+      "actualClose": 30.83
+    },
+    {
+      "id": 3,
+      "ticker": "NVDA",
+      "company": "Nvidia",
+      "direction": "long",
+      "thesis": "Nvidia CES keynote unveiled Vera Rubin platform (5x Blackwell performance, 1/10th token generation cost). Analysts enthusiastic — BofA PT $275. Stock paradoxically fell -0.45% on Jan 5 to $188.12 during the keynote day, but Jan 6 pre-market shows Nasdaq futures +1.05% with AI stocks leading. Opening at $190.52 (above prior close) suggests the market digested the Vera Rubin news overnight and is now buying. DeepSeek efficiency paper is a tailwind — proves demand for more efficient inference chips (Nvidia's sweet spot). The Jan 5 dip was sell-the-rumor; Jan 6 is buy-the-news.",
+      "entryPrice": 188.12,
+      "targetPrice": 192.07,
+      "stopPrice": 184.17,
+      "riskRewardRatio": 1,
+      "positionSize": "reduced",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 62,
+        "catalystClarity": 78,
+        "technicalSetup": 55,
+        "riskReward": 50,
+        "volumeLiquidity": 92,
+        "marketAlignment": 70,
+        "informationEdge": 60,
+        "timingUrgency": 65
+      },
+      "keyRisks": [
+        "Sell-the-news continues after CES keynote fully digested",
+        "DeepSeek paper interpreted as threat to GPU demand (efficiency = fewer chips needed)",
+        "Stock closed at $187.24 — failed to hold above $190 entry, would stop out"
+      ],
+      "actualClose": 187.24
+    },
+    {
+      "id": 4,
+      "ticker": "SLB",
+      "company": "SLB (Schlumberger)",
+      "direction": "short",
+      "thesis": "SLB gapped up 8.9% on Jan 5 from $40.20 to close $43.80 on Venezuela oilfield services speculation. Opening Jan 6 at $44.28 — above prior close, but the oil price decline (WTI falling despite Venezuela) undermines the fundamental case. Venezuela oil rebuild requires billions in capex over a decade — no near-term revenue impact. SLB was $38.41 just two sessions ago. The gap needs to fill. Similar to HAL, profit-taking is the dominant force on day 2 of a headline-driven move. Target partial gap fill.",
+      "entryPrice": 43.8,
+      "targetPrice": 42.61,
+      "stopPrice": 44.89,
+      "riskRewardRatio": 1.09,
+      "positionSize": "reduced",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 60,
+        "catalystClarity": 68,
+        "technicalSetup": 65,
+        "riskReward": 50,
+        "volumeLiquidity": 70,
+        "marketAlignment": 52,
+        "informationEdge": 62,
+        "timingUrgency": 65
+      },
+      "keyRisks": [
+        "Venezuela news flow continues positive, supporting energy stocks",
+        "Broader energy sector rotation continues from financials/tech",
+        "Short squeeze risk on elevated volume"
+      ],
+      "actualClose": 43.63
+    },
+    {
+      "id": 5,
+      "ticker": "XOM",
+      "company": "ExxonMobil",
+      "direction": "long",
+      "thesis": "ExxonMobil rallied only 2.2% on Jan 5 vs HAL/SLB's 8-10%, making it a less extended energy play. Opening Jan 6 at $125.35 — a clean gap above prior close of $122.65. Exxon has historical claims on Venezuelan assets (Cerro Negro) and is the most likely major to benefit from long-term Venezuela reopening. The stock is less overbought than oilfield services names and has stronger fundamental backing. With the Dow at record highs and energy leading January, XOM offers a more measured participation in the Venezuela theme.",
+      "entryPrice": 125,
+      "targetPrice": 127.5,
+      "stopPrice": 122.5,
+      "riskRewardRatio": 1,
+      "positionSize": "standard",
+      "timeframe": "intraday",
+      "conviction": {
+        "overall": 58,
+        "catalystClarity": 65,
+        "technicalSetup": 55,
+        "riskReward": 48,
+        "volumeLiquidity": 88,
+        "marketAlignment": 62,
+        "informationEdge": 52,
+        "timingUrgency": 55
+      },
+      "keyRisks": [
+        "Oil prices continue falling despite Venezuela narrative",
+        "Broader profit-taking in energy after massive Jan 5 moves",
+        "Gap-up fades as day 2 sellers emerge"
+      ],
+      "actualClose": 125.36
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10043,
+    "outcomes": [
+      {
+        "symbol": "AMZN",
+        "openPrice": 232.1,
+        "highPrice": 246.41,
+        "lowPrice": 232.07,
+        "closePrice": 246.29,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.93,
+        "notes": "3-day window (2026-01-06, 2026-01-07, 2026-01-08). Open $232.1, High $246.41, Low $232.07, Close $246.29."
+      },
+      {
+        "symbol": "HAL",
+        "openPrice": 31.76,
+        "highPrice": 32.3,
+        "lowPrice": 30.17,
+        "closePrice": 32.17,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.78,
+        "notes": "3-day window (2026-01-06, 2026-01-07, 2026-01-08). Open $31.76, High $32.3, Low $30.17, Close $32.17."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 190.52,
+        "highPrice": 192.17,
+        "lowPrice": 183.71,
+        "closePrice": 185.04,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.64,
+        "notes": "3-day window (2026-01-06, 2026-01-07, 2026-01-08). Open $190.52, High $192.17, Low $183.71, Close $185.04."
+      },
+      {
+        "symbol": "SLB",
+        "openPrice": 44.28,
+        "highPrice": 44.57,
+        "lowPrice": 42.2,
+        "closePrice": 44.43,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.44,
+        "notes": "3-day window (2026-01-06, 2026-01-07, 2026-01-08). Open $44.28, High $44.57, Low $42.2, Close $44.43."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 125.35,
+        "highPrice": 125.8,
+        "lowPrice": 118.27,
+        "closePrice": 122.91,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.67,
+        "notes": "3-day window (2026-01-06, 2026-01-07, 2026-01-08). Open $125.35, High $125.8, Low $118.27, Close $122.91."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 20,
+      "targetHitRate": 80,
+      "stopHitRate": 40,
+      "avgReturnPercent": 0.08,
+      "profitFactor": 1.07,
+      "winRate": 20,
+      "totalScore": 57.4,
+      "benchmarkReturn": 0.56,
+      "alpha": -0.48
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 80,
+        "avgScoreLosers": 70.8,
+        "predictivePower": 59.3
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 72,
+        "avgScoreLosers": 61.3,
+        "predictivePower": 60.8
+      },
+      "riskReward": {
+        "avgScoreWinners": 68,
+        "avgScoreLosers": 51.5,
+        "predictivePower": 66.5
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 90,
+        "avgScoreLosers": 81.3,
+        "predictivePower": 58.8
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 82,
+        "avgScoreLosers": 59.8,
+        "predictivePower": 72.3
+      },
+      "informationEdge": {
+        "avgScoreWinners": 65,
+        "avgScoreLosers": 60.5,
+        "predictivePower": 54.5
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 75,
+        "avgScoreLosers": 63.8,
+        "predictivePower": 61.3
+      }
+    },
+    "benchmarkReturn": 0.56,
+    "alpha": -0.48,
+    "fullDepth": true
+  }
+}
