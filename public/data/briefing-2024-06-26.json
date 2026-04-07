@@ -1,0 +1,367 @@
+{
+  "id": "briefing-2024-06-26-1775582641753",
+  "date": "2024-06-26",
+  "generatedAt": "2026-04-07T17:24:01.739Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG FDX @ $256.38",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $264.26",
+          "implication": "+3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $250.69",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XOM @ $114.37",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $117.72",
+          "implication": "+2.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $112.34",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT ARM @ $160.61",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $151.05",
+          "implication": "+-6.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $166.35",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG VST @ $89.41",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $94.61",
+          "implication": "+5.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $86.81",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT SMCI @ $84.31",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $79.04",
+          "implication": "+-6.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $88",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG JPM @ $199",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $204",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $195.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 30,
+  "recommendations": [
+    {
+      "ticker": "FDX",
+      "direction": "long",
+      "rationale": "FedEx beat Q4 earnings and raised FY25 guidance after close Jun 25. Stock expected to gap up at open ~$290-295 from ~$280 prior close. Economic bellwether confirming resilience. Transports leading in rotation regime. Play the gap-up momentum with tight stop below gap fill level.",
+      "entryPrice": 256.38,
+      "targetPrice": 264.26,
+      "stopPrice": 250.69,
+      "riskRewardRatio": 1.38,
+      "positionSize": "3% of portfolio",
+      "timeframe": "intraday",
+      "conviction": {
+        "catalystClarity": 88,
+        "technicalSetup": 72,
+        "riskReward": 62,
+        "volumeLiquidity": 85,
+        "marketAlignment": 78,
+        "informationEdge": 75,
+        "timingUrgency": 82,
+        "composite": 77
+      },
+      "notes": "Post-earnings gap plays can be volatile. Wait for first 15-min candle to confirm direction. Risk is gap-and-fade if broader market sells off. R:R below 1.5 threshold - compensated by high catalyst clarity."
+    },
+    {
+      "ticker": "XOM",
+      "direction": "long",
+      "rationale": "Exxon Mobil benefiting from rotation out of tech into energy/value. WTI oil steady at $81, summer driving season demand. Strong buyback program supports price. In a rotation regime with flat bias, energy is the top-ranked sector. Technical support near $111, resistance at $117.",
+      "entryPrice": 114.37,
+      "targetPrice": 117.72,
+      "stopPrice": 112.34,
+      "riskRewardRatio": 1.65,
+      "positionSize": "4% of portfolio",
+      "timeframe": "intraday",
+      "conviction": {
+        "catalystClarity": 65,
+        "technicalSetup": 70,
+        "riskReward": 72,
+        "volumeLiquidity": 90,
+        "marketAlignment": 82,
+        "informationEdge": 55,
+        "timingUrgency": 60,
+        "composite": 71
+      },
+      "notes": "Steady rotation trade rather than event-driven. Lower urgency but good sector alignment. Use VWAP for intraday entries."
+    },
+    {
+      "ticker": "ARM",
+      "direction": "short",
+      "rationale": "ARM Holdings massively overextended after H1 AI rally. Trading near $170+ with stretched valuation. NVDA weakness creating contagion across AI chip names. In rotation regime, high-beta AI names face continued profit-taking. Elevated short interest adds squeeze risk but momentum is clearly negative.",
+      "entryPrice": 160.61,
+      "targetPrice": 151.05,
+      "stopPrice": 166.35,
+      "riskRewardRatio": 1.67,
+      "positionSize": "2.5% of portfolio",
+      "timeframe": "intraday",
+      "conviction": {
+        "catalystClarity": 70,
+        "technicalSetup": 68,
+        "riskReward": 70,
+        "volumeLiquidity": 75,
+        "marketAlignment": 78,
+        "informationEdge": 60,
+        "timingUrgency": 72,
+        "composite": 70
+      },
+      "notes": "SHORT - rotation regime calls for both sides. AI profit-taking has momentum. Risk is snapback rally if NVDA stabilizes. Keep position smaller due to squeeze risk. Stop at 3.6% - within 5% max for shorts."
+    },
+    {
+      "ticker": "VST",
+      "direction": "long",
+      "rationale": "Vistra Energy riding the AI power demand narrative - data centers need massive electricity. Nuclear and natural gas power generation assets increasingly valued. Utility sector ranked #4 but VST trades more like a growth stock. Relative strength even during tech pullback. Rotation into power/infrastructure names from pure AI chip plays.",
+      "entryPrice": 89.41,
+      "targetPrice": 94.61,
+      "stopPrice": 86.81,
+      "riskRewardRatio": 2,
+      "positionSize": "3% of portfolio",
+      "timeframe": "intraday",
+      "conviction": {
+        "catalystClarity": 72,
+        "technicalSetup": 75,
+        "riskReward": 80,
+        "volumeLiquidity": 65,
+        "marketAlignment": 76,
+        "informationEdge": 68,
+        "timingUrgency": 65,
+        "composite": 72
+      },
+      "notes": "AI infrastructure rotation play - money flowing from NVDA/chips into power/utilities that enable AI. Best R:R of the set at 2.0. Lower liquidity than mega-caps so use limits."
+    },
+    {
+      "ticker": "SMCI",
+      "direction": "short",
+      "rationale": "Super Micro Computer down ~25% from highs, breaking key support levels. AI server maker facing margin concerns and accounting questions. NVDA contagion hitting AI infrastructure names hard. In rotation regime, the most extended AI names face the most profit-taking. Momentum clearly negative with increasing volume on down days.",
+      "entryPrice": 84.31,
+      "targetPrice": 79.04,
+      "stopPrice": 88,
+      "riskRewardRatio": 1.43,
+      "positionSize": "2% of portfolio",
+      "timeframe": "intraday",
+      "conviction": {
+        "catalystClarity": 68,
+        "technicalSetup": 72,
+        "riskReward": 60,
+        "volumeLiquidity": 80,
+        "marketAlignment": 80,
+        "informationEdge": 62,
+        "timingUrgency": 70,
+        "composite": 70
+      },
+      "notes": "SHORT - high beta AI name in freefall. Accounting concerns add fundamental catalyst beyond just rotation. R:R slightly below 1.5 threshold but momentum strongly supports direction. Very volatile - size conservatively."
+    },
+    {
+      "ticker": "JPM",
+      "direction": "long",
+      "rationale": "JPMorgan Chase as rotation target from tech into financials. Higher-for-longer rate environment supports net interest income. Bank passed stress tests (results due Jun 26 after close). Technically holding above 50-day MA. In rotation regime, mega-cap financials are natural destination for tech profits.",
+      "entryPrice": 199,
+      "targetPrice": 204,
+      "stopPrice": 195.5,
+      "riskRewardRatio": 1.43,
+      "positionSize": "3.5% of portfolio",
+      "timeframe": "intraday",
+      "conviction": {
+        "catalystClarity": 65,
+        "technicalSetup": 70,
+        "riskReward": 65,
+        "volumeLiquidity": 92,
+        "marketAlignment": 75,
+        "informationEdge": 60,
+        "timingUrgency": 58,
+        "composite": 69
+      },
+      "notes": "Fed stress test results after close Jun 26 could be catalyst (historically JPM passes easily). Rotation trade with excellent liquidity. Lower conviction individually but strong sector alignment."
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10039,
+    "outcomes": [
+      {
+        "symbol": "FDX",
+        "openPrice": 288.43,
+        "highPrice": 302.41,
+        "lowPrice": 284,
+        "closePrice": 299.84,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 16.95,
+        "notes": "3-day window (2024-06-26, 2024-06-27, 2024-06-28). Open $288.43, High $302.41, Low $284, Close $299.84."
+      },
+      {
+        "symbol": "XOM",
+        "openPrice": 114.39,
+        "highPrice": 116.54,
+        "lowPrice": 113.14,
+        "closePrice": 115.12,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.66,
+        "notes": "3-day window (2024-06-26, 2024-06-27, 2024-06-28). Open $114.39, High $116.54, Low $113.14, Close $115.12."
+      },
+      {
+        "symbol": "ARM",
+        "openPrice": 161.63,
+        "highPrice": 170.88,
+        "lowPrice": 159.51,
+        "closePrice": 163.62,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.87,
+        "notes": "3-day window (2024-06-26, 2024-06-27, 2024-06-28). Open $161.63, High $170.88, Low $159.51, Close $163.62."
+      },
+      {
+        "symbol": "VST",
+        "openPrice": 88.75,
+        "highPrice": 90.83,
+        "lowPrice": 83.34,
+        "closePrice": 85.98,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.84,
+        "notes": "3-day window (2024-06-26, 2024-06-27, 2024-06-28). Open $88.75, High $90.83, Low $83.34, Close $85.98."
+      },
+      {
+        "symbol": "SMCI",
+        "openPrice": 84.35,
+        "highPrice": 89.99,
+        "lowPrice": 80.83,
+        "closePrice": 81.93,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.82,
+        "notes": "3-day window (2024-06-26, 2024-06-27, 2024-06-28). Open $84.35, High $89.99, Low $80.83, Close $81.93."
+      },
+      {
+        "symbol": "JPM",
+        "openPrice": 197.45,
+        "highPrice": 202.6,
+        "lowPrice": 196.28,
+        "closePrice": 202.26,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.64,
+        "notes": "3-day window (2024-06-26, 2024-06-27, 2024-06-28). Open $197.45, High $202.6, Low $196.28, Close $202.26."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 66.7,
+      "targetHitRate": 16.7,
+      "stopHitRate": 50,
+      "avgReturnPercent": 2.73,
+      "profitFactor": 3.87,
+      "winRate": 66.7,
+      "totalScore": 73.2,
+      "benchmarkReturn": 0.33,
+      "alpha": 2.4
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 71.5,
+        "avgScoreLosers": 71,
+        "predictivePower": 50.5
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 71,
+        "avgScoreLosers": 71.5,
+        "predictivePower": 49.5
+      },
+      "riskReward": {
+        "avgScoreWinners": 64.8,
+        "avgScoreLosers": 75,
+        "predictivePower": 39.8
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 86.8,
+        "avgScoreLosers": 70,
+        "predictivePower": 66.8
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 78.8,
+        "avgScoreLosers": 77,
+        "predictivePower": 51.8
+      },
+      "informationEdge": {
+        "avgScoreWinners": 63,
+        "avgScoreLosers": 64,
+        "predictivePower": 49
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 67.5,
+        "avgScoreLosers": 68.5,
+        "predictivePower": 49
+      }
+    },
+    "benchmarkReturn": 0.33,
+    "alpha": 2.4,
+    "fullDepth": true
+  }
+}
