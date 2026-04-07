@@ -13,13 +13,26 @@ async function main() {
 
   const { getPriorClose } = await import("./lib/market-data.ts");
 
-  const recs = research.recommendations || [];
+  // Handle different key names agents might use
+  const recs = research.recommendations || research.trades || research.tradeRecommendations || [];
+  // Normalize back to recommendations key for downstream
+  if (!research.recommendations && recs.length > 0) {
+    research.recommendations = recs;
+  }
   let fixed = 0;
   let failed = 0;
 
   for (const rec of recs) {
     const ticker = rec.ticker || rec.symbol;
     if (!ticker) continue;
+
+    // Normalize snake_case to camelCase
+    if (rec.entry_price !== undefined && rec.entryPrice === undefined) rec.entryPrice = rec.entry_price;
+    if (rec.target_price !== undefined && rec.targetPrice === undefined) rec.targetPrice = rec.target_price;
+    if (rec.stop_loss !== undefined && rec.stopPrice === undefined) rec.stopPrice = rec.stop_loss;
+    if (rec.stop_price !== undefined && rec.stopPrice === undefined) rec.stopPrice = rec.stop_price;
+    // Normalize direction casing
+    if (rec.direction) rec.direction = rec.direction.toLowerCase();
 
     try {
       const realClose = await getPriorClose(ticker, date);

@@ -55,7 +55,7 @@ jobs:
           retention-days: 30
 
       - name: Trigger next
-        if: false  # DISABLED — training runs locally via Claude Code Max plan
+        if: success()
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

@@ -1,10 +1,9 @@
 name: Full-Depth Training Dispatcher
 
 on:
-  # push trigger disabled — training runs locally via Claude Code (Max plan)
-  # push:
-  #   branches: [main]
-  #   paths: ['training/**', '.github/workflows/training-full-*.yml']
+  push:
+    branches: [main]
+    paths: ['training/**', '.github/workflows/training-full-*.yml']
   workflow_dispatch:
     inputs:
       action:
