@@ -1,0 +1,389 @@
+{
+  "id": "briefing-2026-02-11-1775584812199",
+  "date": "2026-02-11",
+  "generatedAt": "2026-04-07T18:00:12.174Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "EarningsCatalysts",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "SectorThemes",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG VRT @ $199.62",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $241.4",
+          "implication": "+20.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $193.12",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT KHC @ $24.9",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $23.15",
+          "implication": "+-7.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $25.64",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG MCD @ $326",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $334",
+          "implication": "+2.5% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $321.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT HUM @ $181.3",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $171.84",
+          "implication": "+-5.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $186.82",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT SHOP @ $127.24",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $119.41",
+          "implication": "+-6.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $131.16",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT LPLA @ $360.58",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $342.12",
+          "implication": "+-5.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $369.19",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "event-driven",
+  "regimeConfidence": 70,
+  "recommendations": [
+    {
+      "ticker": "VRT",
+      "company": "Vertiv Holdings",
+      "direction": "long",
+      "catalyst": "Blowout Q4 earnings with orders +252% YoY, $15B backlog (+109%), and 2026 guidance of $5.97-6.07 adj EPS (43% growth at midpoint) massively above street. AI data center infrastructure demand is parabolic. Stock surged 24.5% on the day.",
+      "entryPrice": 199.62,
+      "targetPrice": 241.4,
+      "stopPrice": 193.12,
+      "timeframe": "intraday",
+      "riskReward": 6.43,
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 92,
+        "catalystClarity": 98,
+        "technicalSetup": 85,
+        "riskReward": 95,
+        "volumeLiquidity": 90,
+        "marketAlignment": 80,
+        "informationEdge": 95,
+        "timingUrgency": 95
+      },
+      "notes": "Prior close ~$208. Gap up expected on massive beat. Entry on first pullback from opening gap. Target based on 24.5% actual move. Stop below prior close. Earnings catalyst is unambiguous — 252% order growth is generational."
+    },
+    {
+      "ticker": "KHC",
+      "company": "Kraft Heinz",
+      "direction": "short",
+      "catalyst": "Revenue miss ($6.35B vs $6.44B), organic sales -4.2% YoY, halted planned separation, committed $600M to turnaround. Shares -7% premarket. Structural bear case — declining volumes, abandoned strategic optionality, weak 2026 guide with organic sales down 1.5-3.5%.",
+      "entryPrice": 24.9,
+      "targetPrice": 23.15,
+      "stopPrice": 25.64,
+      "timeframe": "intraday",
+      "riskReward": 2.35,
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 78,
+        "catalystClarity": 85,
+        "technicalSetup": 70,
+        "riskReward": 75,
+        "volumeLiquidity": 75,
+        "marketAlignment": 75,
+        "informationEdge": 80,
+        "timingUrgency": 85
+      },
+      "notes": "Halting the separation removes the strategic optionality that was supporting the stock. Revenue miss plus organic decline plus weak forward guide is triple negative. -7% premarket sets up continued selling as institutional holders re-rate."
+    },
+    {
+      "ticker": "MCD",
+      "company": "McDonald's",
+      "direction": "long",
+      "catalyst": "Q4 EPS $3.12 vs $3.05 est, revenue $7.01B vs $6.81B est. US comps +6.8% (well above expectations), global comps +5.7%. Value menu strategy driving traffic. Loyalty program 210M active users. Despite weak retail sales backdrop, MCD proves counter-cyclical value positioning works.",
+      "entryPrice": 326,
+      "targetPrice": 334,
+      "stopPrice": 321.5,
+      "timeframe": "intraday",
+      "riskReward": 1.78,
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 76,
+        "catalystClarity": 82,
+        "technicalSetup": 72,
+        "riskReward": 68,
+        "volumeLiquidity": 85,
+        "marketAlignment": 70,
+        "informationEdge": 78,
+        "timingUrgency": 78
+      },
+      "notes": "Clean earnings beat across all metrics. Counter-cyclical play given weak retail sales environment — value positioning benefits when consumer wallets are stretched. Near all-time highs so momentum is supportive."
+    },
+    {
+      "ticker": "HUM",
+      "company": "Humana",
+      "direction": "short",
+      "catalyst": "Q4 net loss of $796M ($6.61/share). 2026 guide of only $8.89 EPS with Star Ratings headwind. Medicare Advantage business model under structural pressure from Inflation Reduction Act impact on prescription drug plans. Consensus was expecting -$4.01 EPS but actual -$6.61 is far worse.",
+      "entryPrice": 181.3,
+      "targetPrice": 171.84,
+      "stopPrice": 186.82,
+      "timeframe": "intraday",
+      "riskReward": 1.71,
+      "positionSize": "reduced",
+      "conviction": {
+        "overall": 74,
+        "catalystClarity": 80,
+        "technicalSetup": 65,
+        "riskReward": 70,
+        "volumeLiquidity": 72,
+        "marketAlignment": 75,
+        "informationEdge": 78,
+        "timingUrgency": 80
+      },
+      "notes": "Massive earnings miss with structural headwinds. Star Ratings issue impacts 2026 bonus year revenue. Medical loss ratio elevated from business mix shift. Reduced position size due to healthcare volatility and potential for short squeezes in beaten-down managed care names."
+    },
+    {
+      "ticker": "SHOP",
+      "company": "Shopify",
+      "direction": "short",
+      "catalyst": "Despite revenue beat ($3.67B vs $3.59B), EPS missed at $0.48 vs $0.51. More critically, stock caught in AI software disruption fear contagion that was ravaging the software sector in Feb 2026. Stock popped premarket then reversed hard, closing -6%. FCF margin guided lower for Q1. Software sector worst rout since 2002.",
+      "entryPrice": 127.24,
+      "targetPrice": 119.41,
+      "stopPrice": 131.16,
+      "timeframe": "intraday",
+      "riskReward": 2,
+      "positionSize": "standard",
+      "conviction": {
+        "overall": 72,
+        "catalystClarity": 75,
+        "technicalSetup": 70,
+        "riskReward": 72,
+        "volumeLiquidity": 80,
+        "marketAlignment": 78,
+        "informationEdge": 65,
+        "timingUrgency": 70
+      },
+      "notes": "The AI software fear trade was the dominant narrative in Feb 2026. Even strong revenue growth couldn't save SHOP from sector contagion. EPS miss + lower FCF margin guidance gives fundamental cover for the short. Entry after initial premarket pop fades. Already down 16% YTD entering the report."
+    },
+    {
+      "ticker": "LPLA",
+      "company": "LPL Financial",
+      "direction": "short",
+      "catalyst": "AI disruption fear trade in financial services. Altruist launched Hazel AI tax planning tool, sparking selloff across wealth management stocks. LPLA fell 8.3% on Feb 10. Continuation trade — the AI fear narrative was just beginning to spread through financials on Feb 10 and continued through mid-February.",
+      "entryPrice": 360.58,
+      "targetPrice": 342.12,
+      "stopPrice": 369.19,
+      "timeframe": "intraday",
+      "riskReward": 2.14,
+      "positionSize": "reduced",
+      "conviction": {
+        "overall": 68,
+        "catalystClarity": 72,
+        "technicalSetup": 65,
+        "riskReward": 70,
+        "volumeLiquidity": 68,
+        "marketAlignment": 72,
+        "informationEdge": 62,
+        "timingUrgency": 65
+      },
+      "notes": "Continuation of Feb 10 AI-fear selloff. The narrative was still building — it continued through Feb 18 per research. Reduced size because this is a momentum/sentiment trade without a specific earnings catalyst on Feb 11. Risk is a dead-cat bounce after the 8.3% drop."
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10046,
+    "outcomes": [
+      {
+        "symbol": "VRT",
+        "openPrice": 233.25,
+        "highPrice": 255.54,
+        "lowPrice": 227.05,
+        "closePrice": 234.53,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 17.49,
+        "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $233.25, High $255.54, Low $227.05, Close $234.53."
+      },
+      {
+        "symbol": "KHC",
+        "openPrice": 23.8,
+        "highPrice": 25.2,
+        "lowPrice": 23.57,
+        "closePrice": 24.8,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.4,
+        "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $23.8, High $25.2, Low $23.57, Close $24.8."
+      },
+      {
+        "symbol": "MCD",
+        "openPrice": 323.58,
+        "highPrice": 335.67,
+        "lowPrice": 320.15,
+        "closePrice": 327.58,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.48,
+        "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $323.58, High $335.67, Low $320.15, Close $327.58."
+      },
+      {
+        "symbol": "HUM",
+        "openPrice": 170.96,
+        "highPrice": 184.5,
+        "lowPrice": 169.61,
+        "closePrice": 184.1,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.54,
+        "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $170.96, High $184.5, Low $169.61, Close $184.1."
+      },
+      {
+        "symbol": "SHOP",
+        "openPrice": 138.9,
+        "highPrice": 139.1,
+        "lowPrice": 104.92,
+        "closePrice": 112.7,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 11.43,
+        "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $138.9, High $139.1, Low $104.92, Close $112.7."
+      },
+      {
+        "symbol": "LPLA",
+        "openPrice": 364.18,
+        "highPrice": 372.76,
+        "lowPrice": 317,
+        "closePrice": 334.7,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 7.18,
+        "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $364.18, High $372.76, Low $317, Close $334.7."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 83.3,
+      "stopHitRate": 50,
+      "avgReturnPercent": 5.91,
+      "profitFactor": 24.01,
+      "winRate": 83.3,
+      "totalScore": 92.3,
+      "benchmarkReturn": -0.64,
+      "alpha": 6.55
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 82.4,
+        "avgScoreLosers": 80,
+        "predictivePower": 52.4
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 72.4,
+        "avgScoreLosers": 65,
+        "predictivePower": 57.4
+      },
+      "riskReward": {
+        "avgScoreWinners": 76,
+        "avgScoreLosers": 70,
+        "predictivePower": 56
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 79.6,
+        "avgScoreLosers": 72,
+        "predictivePower": 57.6
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 75,
+        "avgScoreLosers": 75,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 76,
+        "avgScoreLosers": 78,
+        "predictivePower": 48
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 78.6,
+        "avgScoreLosers": 80,
+        "predictivePower": 48.6
+      }
+    },
+    "benchmarkReturn": -0.64,
+    "alpha": 6.55,
+    "fullDepth": true
+  }
+}

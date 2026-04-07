@@ -68937,6 +68937,525 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10046,
+      "date": "2026-02-11",
+      "generatedAt": "2026-04-07T18:00:12.174Z",
+      "signals": {
+        "spFuturesChange": 0,
+        "nasdaqFuturesChange": -0.16,
+        "dowFuturesChange": -0.13,
+        "russellFuturesChange": -0.38,
+        "vixFuturesChange": 17.96,
+        "vix": 20.82,
+        "vixChange": 17.96,
+        "vixTermStructure": "flat",
+        "vix9d": 0,
+        "vix3m": 20.37,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 4.17,
+        "tenYearYieldChange": 0.6,
+        "twoYearYield": 3.7,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 4.81,
+        "threeMonthYield": 3.6,
+        "twoTenSpread": 0.47,
+        "threeMoTenYrSpread": 0.57,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 96.93,
+        "dollarIndexChange": 0.1,
+        "eurUsd": 1.19,
+        "eurUsdChange": -0.11,
+        "usdJpy": 153.27,
+        "usdJpyChange": -0.79,
+        "usdCny": 6.91,
+        "usdCnyChange": 0.03,
+        "oilWTI": 62.84,
+        "oilChange": -2.77,
+        "brentOil": 67.52,
+        "brentOilChange": -2.71,
+        "natGasChange": 1.84,
+        "goldPrice": 4923.7,
+        "goldChange": -2.92,
+        "silverChange": -9.8,
+        "copperChange": -2.99,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": -0.02,
+        "daxChange": -0.01,
+        "ftseChange": -0.67,
+        "shanghaiChange": 0.05,
+        "hangSengChange": -0.86,
+        "kospiChange": 3.13,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 95.85000000000001,
+        "spreadChange": 0.01,
+        "igSpread": -21.4,
+        "igSpreadChange": 0.11,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 1.02,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 0.29,
+        "xlfChange": -1.51,
+        "xleChange": 2.61,
+        "xlvChange": 0.59,
+        "xlpChange": 1.43,
+        "xluChange": 0.88,
+        "xlreChange": -0.09,
+        "xliChange": 0.53,
+        "xlbChange": 1.34,
+        "xlcChange": -0.71,
+        "xlyChange": -0.48,
+        "smhChange": 2.48,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -1.15,
+        "ethereumChange": 0.33,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": true,
+        "econDataType": "CPI",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": false,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 35,
+        "daysToNextCPI": 0,
+        "daysToNextNFP": 23,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 0,
+        "spConsecutiveDownDays": 2,
+        "sp5DayReturn": 0.85,
+        "sp20DayReturn": -0.32,
+        "nasdaqVsRussell5d": -1,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "event-driven",
+        "confidence": 70,
+        "directionalBias": "-1",
+        "volatilityRegime": "elevated",
+        "stressIndex": 29,
+        "riskAppetiteIndex": 36,
+        "sectorTilts": {}
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [
+          {
+            "title": "Macro",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "EarningsCatalysts",
+            "content": "[object Object]",
+            "importance": "medium"
+          },
+          {
+            "title": "SectorThemes",
+            "content": "[object Object]",
+            "importance": "medium"
+          }
+        ],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "VRT",
+          "direction": "long",
+          "entryPrice": 199.62,
+          "targetPrice": 241.4,
+          "stopLoss": 193.12,
+          "thesis": "",
+          "catalyst": "Blowout Q4 earnings with orders +252% YoY, $15B backlog (+109%), and 2026 guidance of $5.97-6.07 adj EPS (43% growth at midpoint) massively above street. AI data center infrastructure demand is parabolic. Stock surged 24.5% on the day.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 98,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 95,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 90,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 95,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 95,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "KHC",
+          "direction": "short",
+          "entryPrice": 24.9,
+          "targetPrice": 23.15,
+          "stopLoss": 25.64,
+          "thesis": "",
+          "catalyst": "Revenue miss ($6.35B vs $6.44B), organic sales -4.2% YoY, halted planned separation, committed $600M to turnaround. Shares -7% premarket. Structural bear case — declining volumes, abandoned strategic optionality, weak 2026 guide with organic sales down 1.5-3.5%.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 85,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "MCD",
+          "direction": "long",
+          "entryPrice": 326,
+          "targetPrice": 334,
+          "stopLoss": 321.5,
+          "thesis": "",
+          "catalyst": "Q4 EPS $3.12 vs $3.05 est, revenue $7.01B vs $6.81B est. US comps +6.8% (well above expectations), global comps +5.7%. Value menu strategy driving traffic. Loyalty program 210M active users. Despite weak retail sales backdrop, MCD proves counter-cyclical value positioning works.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 82,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 85,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 78,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "HUM",
+          "direction": "short",
+          "entryPrice": 181.3,
+          "targetPrice": 171.84,
+          "stopLoss": 186.82,
+          "thesis": "",
+          "catalyst": "Q4 net loss of $796M ($6.61/share). 2026 guide of only $8.89 EPS with Star Ratings headwind. Medicare Advantage business model under structural pressure from Inflation Reduction Act impact on prescription drug plans. Consensus was expecting -$4.01 EPS but actual -$6.61 is far worse.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 80,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SHOP",
+          "direction": "short",
+          "entryPrice": 127.24,
+          "targetPrice": 119.41,
+          "stopLoss": 131.16,
+          "thesis": "",
+          "catalyst": "Despite revenue beat ($3.67B vs $3.59B), EPS missed at $0.48 vs $0.51. More critically, stock caught in AI software disruption fear contagion that was ravaging the software sector in Feb 2026. Stock popped premarket then reversed hard, closing -6%. FCF margin guided lower for Q1. Software sector worst rout since 2002.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 75,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 80,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 78,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 70,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "LPLA",
+          "direction": "short",
+          "entryPrice": 360.58,
+          "targetPrice": 342.12,
+          "stopLoss": 369.19,
+          "thesis": "",
+          "catalyst": "AI disruption fear trade in financial services. Altruist launched Hazel AI tax planning tool, sparking selloff across wealth management stocks. LPLA fell 8.3% on Feb 10. Continuation trade — the AI fear narrative was just beginning to spread through financials on Feb 10 and continued through mid-February.",
+          "conviction": {
+            "catalystClarity": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 65,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 70,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 68,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 72,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 62,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 65,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "VRT",
+          "openPrice": 233.25,
+          "highPrice": 255.54,
+          "lowPrice": 227.05,
+          "closePrice": 234.53,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 17.49,
+          "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $233.25, High $255.54, Low $227.05, Close $234.53."
+        },
+        {
+          "symbol": "KHC",
+          "openPrice": 23.8,
+          "highPrice": 25.2,
+          "lowPrice": 23.57,
+          "closePrice": 24.8,
+          "hitTarget": false,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.4,
+          "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $23.8, High $25.2, Low $23.57, Close $24.8."
+        },
+        {
+          "symbol": "MCD",
+          "openPrice": 323.58,
+          "highPrice": 335.67,
+          "lowPrice": 320.15,
+          "closePrice": 327.58,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 0.48,
+          "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $323.58, High $335.67, Low $320.15, Close $327.58."
+        },
+        {
+          "symbol": "HUM",
+          "openPrice": 170.96,
+          "highPrice": 184.5,
+          "lowPrice": 169.61,
+          "closePrice": 184.1,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": false,
+          "actualReturnPercent": -1.54,
+          "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $170.96, High $184.5, Low $169.61, Close $184.1."
+        },
+        {
+          "symbol": "SHOP",
+          "openPrice": 138.9,
+          "highPrice": 139.1,
+          "lowPrice": 104.92,
+          "closePrice": 112.7,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 11.43,
+          "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $138.9, High $139.1, Low $104.92, Close $112.7."
+        },
+        {
+          "symbol": "LPLA",
+          "openPrice": 364.18,
+          "highPrice": 372.76,
+          "lowPrice": 317,
+          "closePrice": 334.7,
+          "hitTarget": true,
+          "hitStop": true,
+          "directionCorrect": true,
+          "actualReturnPercent": 7.18,
+          "notes": "3-day window (2026-02-11, 2026-02-12, 2026-02-13). Open $364.18, High $372.76, Low $317, Close $334.7."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 83.3,
+        "targetHitRate": 83.3,
+        "stopHitRate": 50,
+        "avgReturnPercent": 5.91,
+        "profitFactor": 24.01,
+        "winRate": 83.3,
+        "totalScore": 92.3,
+        "benchmarkReturn": -0.64,
+        "alpha": 6.55
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 82.4,
+          "avgScoreLosers": 80,
+          "predictivePower": 52.4
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 72.4,
+          "avgScoreLosers": 65,
+          "predictivePower": 57.4
+        },
+        "riskReward": {
+          "avgScoreWinners": 76,
+          "avgScoreLosers": 70,
+          "predictivePower": 56
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 79.6,
+          "avgScoreLosers": 72,
+          "predictivePower": 57.6
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 75,
+          "avgScoreLosers": 75,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 76,
+          "avgScoreLosers": 78,
+          "predictivePower": 48
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 78.6,
+          "avgScoreLosers": 80,
+          "predictivePower": 48.6
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -68950,7 +69469,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-07T17:56:45.944Z",
+  "lastUpdatedAt": "2026-04-07T18:00:12.201Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -69396,7 +69915,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 45,
+  "fullDepthCurrentTrial": 46,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -69545,7 +70064,8 @@
     "2025-12-30",
     "2026-01-06",
     "2024-12-12",
-    "2025-06-23"
+    "2025-06-23",
+    "2026-02-11"
   ],
   "dateSequence": [
     "2025-09-09",
