@@ -1,0 +1,294 @@
+{
+  "id": "briefing-2023-07-07-1775603337622",
+  "date": "2023-07-07",
+  "generatedAt": "2026-04-07T23:08:57.600Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG META @ $291.99",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $298.41",
+          "implication": "+2.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $286.06",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG TLT @ $99.68",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $101.42",
+          "implication": "+1.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $98.66",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XLU @ $32.94",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $33.6",
+          "implication": "+2.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $32.54",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG UNH @ $469.36",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $478.94",
+          "implication": "+2.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $462.65",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XLE @ $39.54",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $40.37",
+          "implication": "+2.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $38.9",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 47,
+  "recommendations": [
+    {
+      "ticker": "META",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Technology / Social Media",
+      "entryPrice": 291.99,
+      "targetPrice": 298.41,
+      "stopPrice": 286.06,
+      "riskRewardRatio": 1.08,
+      "rationale": "Threads launch is the dominant idiosyncratic catalyst. 30M+ users in 24 hours, accelerating to 70M+ over the weekend. META touched 17-month high near $298 on July 6 despite broad selloff. KeyBanc raised PT to $335. NFP miss provides modest tailwind to growth multiples. Threads revenue potential estimated at several billion in ad revenue.",
+      "catalyst": "Threads viral adoption, analyst upgrades, growth momentum insulated from macro",
+      "riskFactors": [
+        "Broader market weakness drags even strong names",
+        "Hot wages data keeps rate pressure on growth",
+        "Threads engagement may plateau quickly"
+      ],
+      "maxStopPercent": 2
+    },
+    {
+      "ticker": "TLT",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Bonds / Fixed Income",
+      "entryPrice": 99.68,
+      "targetPrice": 101.42,
+      "stopPrice": 98.66,
+      "riskRewardRatio": 1.7,
+      "rationale": "NFP miss at 209K vs 240K should drive a bond rally, reversing the July 6 selloff that pushed 10Y past 4.05%. Long duration benefits most from yield pullback. ADP shock on July 6 overpriced rate hike probability; NFP miss reprices it lower. Hot wages (4.4%) limit upside but headline miss dominates initial reaction.",
+      "catalyst": "Softer NFP reprices Fed expectations dovish, bond rally reverses yield spike",
+      "riskFactors": [
+        "Hot wages (4.4% YoY) reignite rate fears in afternoon",
+        "Fed speakers push back on dovish repricing"
+      ],
+      "maxStopPercent": 1
+    },
+    {
+      "ticker": "XLU",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Utilities",
+      "entryPrice": 32.94,
+      "targetPrice": 33.6,
+      "stopPrice": 32.54,
+      "riskRewardRatio": 1.63,
+      "rationale": "Mean reversion after July 6 yield-spike selloff. XLU was shorted on July 6 as 10Y broke 4% — that thesis reversed on softer NFP. If 10Y yields pull back 5-10bps on NFP reaction, XLU recovers 1-2%. Oversold on 1-day basis. Rotation regime supports defensive positioning.",
+      "catalyst": "10Y yield pullback on NFP miss, mean reversion from oversold",
+      "riskFactors": [
+        "Yields resume climb on hot wages data",
+        "Risk-on rotation away from defensives"
+      ],
+      "maxStopPercent": 1.2
+    },
+    {
+      "ticker": "UNH",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Healthcare",
+      "entryPrice": 469.36,
+      "targetPrice": 478.94,
+      "stopPrice": 462.65,
+      "riskRewardRatio": 1.43,
+      "rationale": "Defensive healthcare mega-cap in a rotation regime. Held relatively well during July 6 selloff. Cooling labor market narrative supports defensive positioning. Q2 earnings July 14 — buy-side pre-positions into largest managed care name. Floor from earnings proximity.",
+      "catalyst": "Defensive rotation, pre-earnings positioning (Q2 reports July 14), cooling labor market",
+      "riskFactors": [
+        "Broad market selloff continuation",
+        "Drug pricing legislation headlines"
+      ],
+      "maxStopPercent": 1.4
+    },
+    {
+      "ticker": "XLE",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Energy",
+      "entryPrice": 39.54,
+      "targetPrice": 40.37,
+      "stopPrice": 38.9,
+      "riskRewardRatio": 1.31,
+      "rationale": "Saudi extended 1M bpd voluntary cut through August, supporting crude near $72. Energy showed relative strength during July 6 selloff — held bid while tech/growth sold off. ISM Services at 53.9 confirms economic activity supporting energy demand. Rotation regime favors value/energy over growth.",
+      "catalyst": "OPEC+ supply discipline, relative strength, rotation into value",
+      "riskFactors": [
+        "NFP miss triggers recession fear hitting demand outlook",
+        "Dollar strength on hot wages pressures crude"
+      ],
+      "maxStopPercent": 1.6
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10241,
+    "outcomes": [
+      {
+        "symbol": "META",
+        "openPrice": 292.18,
+        "highPrice": 300.18,
+        "lowPrice": 287.05,
+        "closePrice": 298.29,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.16,
+        "notes": "3-day window (2023-07-07, 2023-07-10, 2023-07-11). Open $292.18, High $300.18, Low $287.05, Close $298.29."
+      },
+      {
+        "symbol": "TLT",
+        "openPrice": 99.18,
+        "highPrice": 99.97,
+        "lowPrice": 98.85,
+        "closePrice": 99.72,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.04,
+        "notes": "3-day window (2023-07-07, 2023-07-10, 2023-07-11). Open $99.18, High $99.97, Low $98.85, Close $99.72."
+      },
+      {
+        "symbol": "XLU",
+        "openPrice": 32.72,
+        "highPrice": 32.97,
+        "lowPrice": 32.29,
+        "closePrice": 32.96,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.06,
+        "notes": "3-day window (2023-07-07, 2023-07-10, 2023-07-11). Open $32.72, High $32.97, Low $32.29, Close $32.96."
+      },
+      {
+        "symbol": "UNH",
+        "openPrice": 465,
+        "highPrice": 468.61,
+        "lowPrice": 459.16,
+        "closePrice": 462.89,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.38,
+        "notes": "3-day window (2023-07-07, 2023-07-10, 2023-07-11). Open $465, High $468.61, Low $459.16, Close $462.89."
+      },
+      {
+        "symbol": "XLE",
+        "openPrice": 39.35,
+        "highPrice": 41.67,
+        "lowPrice": 39.32,
+        "closePrice": 41.6,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 5.21,
+        "notes": "3-day window (2023-07-07, 2023-07-10, 2023-07-11). Open $39.35, High $41.67, Low $39.32, Close $41.6."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 80,
+      "targetHitRate": 40,
+      "stopHitRate": 40,
+      "avgReturnPercent": 1.22,
+      "profitFactor": 5.41,
+      "winRate": 80,
+      "totalScore": 81,
+      "benchmarkReturn": -0.02,
+      "alpha": 1.24
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": -0.02,
+    "alpha": 1.24,
+    "fullDepth": true
+  }
+}
