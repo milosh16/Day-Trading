@@ -1,0 +1,338 @@
+{
+  "id": "briefing-2023-06-12-1775590344345",
+  "date": "2023-06-12",
+  "generatedAt": "2026-04-07T19:32:24.331Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "bullish",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Earnings",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sectors",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "TechnicalFlow",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG AMD @ $124.8",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $129.5",
+          "implication": "+3.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $121.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG META @ $264.95",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $273.72",
+          "implication": "+3.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $257.64",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ORCL @ $109.85",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $114.06",
+          "implication": "+3.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $106.58",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG NVDA @ $38.77",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $40.06",
+          "implication": "+3.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $37.78",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMZN @ $123.43",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $127.3",
+          "implication": "+3.1% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $120.04",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT COIN @ $53.28",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $49.44",
+          "implication": "+-7.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $55.92",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "risk-on",
+  "regimeConfidence": 61,
+  "recommendations": [
+    {
+      "ticker": "AMD",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Semiconductors",
+      "thesis": "AI second-mover beneficiary riding NVDA coattails. MI300 AI chip narrative building. Friday close ~$124.50. Technical breakout above $120 confirmed, holding above prior resistance. Risk-on regime with +31 bias strongly favors momentum semis. Next resistance $130.",
+      "entryPrice": 124.8,
+      "targetPrice": 129.5,
+      "stopPrice": 121.5,
+      "riskRewardRatio": 1.42,
+      "maxStopPct": 2.64
+    },
+    {
+      "ticker": "META",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Technology",
+      "thesis": "Year of Efficiency driving margins higher. AI integration across Instagram/WhatsApp. Friday close ~$271. Broken out of multi-week consolidation above $265. Risk-on + bullish bias supports continuation. CPI expected lower = growth/tech tailwind.",
+      "entryPrice": 264.95,
+      "targetPrice": 273.72,
+      "stopPrice": 257.64,
+      "riskRewardRatio": 1.2,
+      "maxStopPct": 2.76
+    },
+    {
+      "ticker": "ORCL",
+      "direction": "long",
+      "conviction": "medium-high",
+      "sector": "Software / Cloud",
+      "thesis": "Earnings catalyst Monday after close. Cloud growth acceleration expected with AI database narrative. Friday close ~$117. Risk-on regime favors playing for upside surprise. Implied move ~6%. Entry early, exit or hold before close based on price action.",
+      "entryPrice": 109.85,
+      "targetPrice": 114.06,
+      "stopPrice": 106.58,
+      "riskRewardRatio": 1.29,
+      "maxStopPct": 2.98
+    },
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Semiconductors",
+      "thesis": "AI momentum king. Past $1T market cap. Consolidating ~$390-395 after massive May run. Risk-on regime + bullish bias = buy the leader. Support at $385, target $405 continuation. Any morning dip is a gift.",
+      "entryPrice": 38.77,
+      "targetPrice": 40.06,
+      "stopPrice": 37.78,
+      "riskRewardRatio": 1.3,
+      "maxStopPct": 2.55
+    },
+    {
+      "ticker": "AMZN",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Consumer Discretionary / Cloud",
+      "thesis": "AWS AI narrative strengthening. Consumer resilience supporting retail segment. Friday close ~$127. Consolidating $125-128. Bull market confirmation + risk-on bias supports breakout above $128 targeting $132. Dual catalyst: AI cloud + resilient consumer.",
+      "entryPrice": 123.43,
+      "targetPrice": 127.3,
+      "stopPrice": 120.04,
+      "riskRewardRatio": 1.14,
+      "maxStopPct": 2.75
+    },
+    {
+      "ticker": "COIN",
+      "direction": "short",
+      "conviction": "medium",
+      "sector": "Crypto / Fintech",
+      "thesis": "SEC lawsuit overhang (sued June 6 as unregistered broker). BTC under pressure ~$26K. Regulatory uncertainty = persistent selling pressure. Even in risk-on regime, crypto is an outlier sector under enforcement action. Counter-trend short provides portfolio hedge.",
+      "entryPrice": 53.28,
+      "targetPrice": 49.44,
+      "stopPrice": 55.92,
+      "riskRewardRatio": 1.45,
+      "maxStopPct": 4.95
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10224,
+    "outcomes": [
+      {
+        "symbol": "AMD",
+        "openPrice": 128.52,
+        "highPrice": 132.83,
+        "lowPrice": 122.45,
+        "closePrice": 127.33,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.03,
+        "notes": "3-day window (2023-06-12, 2023-06-13, 2023-06-14). Open $128.52, High $132.83, Low $122.45, Close $127.33."
+      },
+      {
+        "symbol": "META",
+        "openPrice": 267.17,
+        "highPrice": 275.72,
+        "lowPrice": 265.33,
+        "closePrice": 273.35,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.17,
+        "notes": "3-day window (2023-06-12, 2023-06-13, 2023-06-14). Open $267.17, High $275.72, Low $265.33, Close $273.35."
+      },
+      {
+        "symbol": "ORCL",
+        "openPrice": 114.34,
+        "highPrice": 123.99,
+        "lowPrice": 114.34,
+        "closePrice": 122.27,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 11.31,
+        "notes": "3-day window (2023-06-12, 2023-06-13, 2023-06-14). Open $114.34, High $123.99, Low $114.34, Close $122.27."
+      },
+      {
+        "symbol": "NVDA",
+        "openPrice": 39.2,
+        "highPrice": 43,
+        "lowPrice": 38.62,
+        "closePrice": 43,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 10.91,
+        "notes": "3-day window (2023-06-12, 2023-06-13, 2023-06-14). Open $39.2, High $43, Low $38.62, Close $43."
+      },
+      {
+        "symbol": "AMZN",
+        "openPrice": 124.02,
+        "highPrice": 128.41,
+        "lowPrice": 123.53,
+        "closePrice": 126.42,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.42,
+        "notes": "3-day window (2023-06-12, 2023-06-13, 2023-06-14). Open $124.02, High $128.41, Low $123.53, Close $126.42."
+      },
+      {
+        "symbol": "COIN",
+        "openPrice": 52.53,
+        "highPrice": 54.79,
+        "lowPrice": 50.1,
+        "closePrice": 53.9,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.16,
+        "notes": "3-day window (2023-06-12, 2023-06-13, 2023-06-14). Open $52.53, High $54.79, Low $50.1, Close $53.9."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 83.3,
+      "targetHitRate": 83.3,
+      "stopHitRate": 0,
+      "avgReturnPercent": 4.78,
+      "profitFactor": 25.72,
+      "winRate": 83.3,
+      "totalScore": 95,
+      "benchmarkReturn": 0.67,
+      "alpha": 4.11
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.67,
+    "alpha": 4.11,
+    "fullDepth": true
+  }
+}
