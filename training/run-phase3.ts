@@ -207,14 +207,31 @@ async function main() {
   index.bestScore = Math.max(index.bestScore, scores.totalScore);
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2));
 
-  // Update state
+  // Update training state
   state.fullDepthCurrentTrial = (state.fullDepthCurrentTrial || 0) + 1;
   state.fullDepthCompletedDates = state.fullDepthCompletedDates || [];
   state.fullDepthCompletedDates.push(date);
   state.results.push(result);
   state.lastUpdatedAt = new Date().toISOString();
   fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-  log(`State updated: trial ${state.fullDepthCurrentTrial}/100`);
+
+  // Update backtest state (if it exists)
+  const BACKTEST_STATE = path.join(__dirname, "backtest-state.json");
+  if (fs.existsSync(BACKTEST_STATE)) {
+    const backtest = JSON.parse(fs.readFileSync(BACKTEST_STATE, "utf-8"));
+    backtest.pendingDates = (backtest.pendingDates || []).filter((d: string) => d !== date);
+    if (!backtest.completedDates.includes(date)) {
+      backtest.completedDates.push(date);
+    }
+    backtest.completedDays = backtest.completedDates.length;
+    backtest.remainingDays = backtest.pendingDates.length;
+    backtest.lastCompletedDate = date;
+    backtest.lastTrialId = trialId;
+    fs.writeFileSync(BACKTEST_STATE, JSON.stringify(backtest, null, 2));
+    log(`Backtest: ${backtest.completedDays}/${backtest.totalDays} done, ${backtest.remainingDays} remaining`);
+  } else {
+    log(`State updated: trial ${state.fullDepthCurrentTrial}`);
+  }
 
   // Git commit (local only — no push to avoid triggering workflows)
   try {
