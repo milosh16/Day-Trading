@@ -1113,6 +1113,63 @@
           "trend": "stable"
         }
       }
+    },
+    {
+      "trial": 174,
+      "timestamp": "2026-04-07T23:04:53.932Z",
+      "regimeChanges": [
+        {
+          "regime": "rotation",
+          "dimensionChanges": []
+        },
+        {
+          "regime": "range-bound",
+          "dimensionChanges": []
+        }
+      ],
+      "insightsAdded": [],
+      "insightsRetired": [],
+      "counterfactual": {
+        "improvement": 0,
+        "recommendation": "neutral"
+      },
+      "regimePerformance": {
+        "rotation": {
+          "trials": 15,
+          "avgScore": 78.65,
+          "avgWinRate": 70.93,
+          "avgAlpha": 1.61,
+          "trend": "stable"
+        },
+        "range-bound": {
+          "trials": 9,
+          "avgScore": 66.04,
+          "avgWinRate": 61.48,
+          "avgAlpha": 1.02,
+          "trend": "stable"
+        },
+        "crisis": {
+          "trials": 1,
+          "avgScore": 95,
+          "avgWinRate": 83.3,
+          "avgAlpha": 2.78,
+          "trend": "stable"
+        },
+        "risk-on": {
+          "trials": 4,
+          "avgScore": 82,
+          "avgWinRate": 68.68,
+          "avgAlpha": 3.34,
+          "trend": "stable"
+        },
+        "risk-off": {
+          "trials": 1,
+          "avgScore": 63.2,
+          "avgWinRate": 50,
+          "avgAlpha": 0.69,
+          "trend": "stable"
+        }
+      }
     }
   ]
 }

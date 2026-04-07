@@ -5519,3 +5519,30 @@
 
 ---
 
+# ========== MILESTONE: 174 TRIALS COMPLETE ==========
+
+### Last 10 Trials Performance
+
+| Metric | Value |
+|--------|-------|
+| Avg Composite Score | 70.0/100 |
+| Avg Win Rate | 65.9% |
+| Avg Direction Accuracy | 65.9% |
+| Avg Profit Factor | 5.96 |
+| Avg Return per Trade | +1.37% |
+| No-Trade Days | 0/10 |
+| Best Score (all time) | 100/100 |
+
+### Overall (174 trials, 108 with trades)
+
+- Overall avg composite: 70.8/100
+- Total tokens used: 3,648,955
+
+### Learnings & Weight Changes
+
+- No significant weight changes this round.
+
+**New weights:** catalystClarity: 22.0% | technicalSetup: 15.0% | riskReward: 12.0% | volumeLiquidity: 6.0% | marketAlignment: 10.0% | informationEdge: 18.0% | timingUrgency: 17.0%
+
+---
+
