@@ -1,0 +1,339 @@
+{
+  "id": "briefing-2023-06-14-1775599783070",
+  "date": "2023-06-14",
+  "generatedAt": "2026-04-07T22:09:43.042Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sectors",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "PriorDayPrices",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "EU formally classified China as 'systemic rival' in June 2023. South Korea-China diplomatic tensions over ambassador remarks. Chinese executive detained at Munich Airport. Ukraine counteroffensive in early stages. Japan Nikkei at 33-year highs. None were primary US equity movers.",
+      "importance": "medium"
+    },
+    {
+      "title": "Commodities",
+      "content": "WTI crude soft near $67-68, reflecting demand concerns and CPI energy deflation. Gold ~$1,945-1,960, supported by pause expectations but capped by resilient dollar. PBoC rate cut signals deeper China weakness. Copper under pressure at ~$3.78/lb.",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG NVDA @ $41.2",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $43",
+          "implication": "+4.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $40.07",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $124.53",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $127.51",
+          "implication": "+2.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $121.06",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG ORCL @ $116.68",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $118.67",
+          "implication": "+1.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $114.2",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT TSLA @ $260",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $254",
+          "implication": "+-2.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $263",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG MSFT @ $334.29",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $338.35",
+          "implication": "+1.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $330.23",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 31,
+  "recommendations": [
+    {
+      "ticker": "NVDA",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Semiconductors",
+      "entryPrice": 41.2,
+      "targetPrice": 43,
+      "stopPrice": 40.07,
+      "riskRewardRatio": "1.59:1",
+      "thesis": "AI momentum leader continuing post-earnings surge. Closed June 13 at $40.99 (+3.9%), firmly in an uptrend. FOMC pause at 2:00 PM is a direct tailwind for growth/tech names. NVDA is the consensus AI infrastructure play with no sign of momentum exhaustion. Entry on a pullback toward $41.20 (near prior day close), targeting $43.00 (round number + measured move). Stop at June 13 low of $40.07 respects intraday support.",
+      "catalyst": "FOMC rate pause announcement 2:00 PM ET; continued AI capex cycle narrative",
+      "risk": "Hawkish dot plot revision to 5.6% year-end rate could trigger growth selloff. Extended run-up leaves room for sharp reversal on any negative surprise. Consider taking half-profits before 2:00 PM FOMC.",
+      "june14Actual": {
+        "open": 41.48,
+        "high": 42.97,
+        "low": 41.34,
+        "close": 42.96,
+        "change": "+5.3%"
+      }
+    },
+    {
+      "ticker": "AMD",
+      "direction": "long",
+      "conviction": "high",
+      "sector": "Semiconductors",
+      "entryPrice": 124.53,
+      "targetPrice": 127.51,
+      "stopPrice": 121.06,
+      "riskRewardRatio": "1.57:1",
+      "thesis": "Oversold bounce after a dramatic -5.9% selloff on June 13 (opened $132.32, closed $124.53) while the broad market rallied. This was rotation/profit-taking, not fundamental deterioration — AMD remains a key AI/MI300 beneficiary. The selloff created a gap that dip buyers will target. FOMC pause supports semiconductor sector broadly. Entry near $125.50 (above prior close to confirm buying interest), target $128.50 (partial gap fill), stop $122.00 (below round number support).",
+      "catalyst": "Mean reversion from oversold June 13 selloff; FOMC pause supportive for semis; AI/MI300 narrative intact",
+      "risk": "If hawkish dots trigger broad growth selloff, AMD as high-beta could continue lower. The June 13 selloff may reflect something stock-specific. Volume and opening action critical to confirm the bounce.",
+      "june14Actual": {
+        "open": 126,
+        "high": 127.73,
+        "low": 124.52,
+        "close": 127.33,
+        "change": "+2.2%"
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Technology",
+      "entryPrice": 116.68,
+      "targetPrice": 118.67,
+      "stopPrice": 114.2,
+      "riskRewardRatio": "1.60:1",
+      "thesis": "Post-earnings dip-buy after sell-the-news reversal. ORCL reported strong Q4 FY23 on June 12 (revenue $13.8B +17% YoY, cloud +23%, full-year revenue hit record $50B). Stock gapped up to $120 on June 13 but reversed hard to close at $113.01 (-5.4%). The earnings were genuinely strong — the selloff was an overreaction. Dip buyers should re-engage on June 14. Entry around $117.50 (expecting gap-up open toward prior day's midrange), target $119.50 (approaching the June 13 open level), stop $115.00.",
+      "catalyst": "Dip-buying into objectively strong earnings; cloud growth narrative intact; FOMC pause supports tech",
+      "risk": "June 13 reversal from $120 to $113 shows heavy overhead supply. If market turns risk-off on hawkish FOMC, ORCL could retest $113 lows. Overhead resistance significant.",
+      "june14Actual": {
+        "open": 117.66,
+        "high": 118.64,
+        "low": 117.44,
+        "close": 118.42,
+        "change": "+4.8%"
+      }
+    },
+    {
+      "ticker": "TSLA",
+      "direction": "short",
+      "conviction": "medium",
+      "sector": "Consumer Discretionary",
+      "entryPrice": 260,
+      "targetPrice": 254,
+      "stopPrice": 263,
+      "riskRewardRatio": "2.00:1",
+      "thesis": "Mean reversion short after record 13-consecutive-day winning streak. TSLA closed June 13 at $258.71 — its longest-ever streak. Market cap added $240B over the run. Stock more than doubled YTD (+108%). Short sellers already lost $7B. Statistical probability of a 14th consecutive up day is very low. Exhaustion signals building. Entry on any early-session strength toward $260 (above prior close), targeting $254 (support from prior week), tight stop at $263 (above June 13 high of $259.19).",
+      "catalyst": "Streak exhaustion; FOMC hawkish dot plot risk could trigger rotation out of high-beta; mean reversion probability",
+      "risk": "Momentum can persist irrationally. If FOMC is dovish, TSLA could squeeze higher. Ford/GM NACS adoption catalysts still fresh. Tight stop limits downside to ~1.2%.",
+      "june14Actual": {
+        "open": 260.17,
+        "high": 261.57,
+        "low": 255.25,
+        "close": 256.79,
+        "change": "-1.3%"
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "direction": "long",
+      "conviction": "medium",
+      "sector": "Technology",
+      "entryPrice": 334.29,
+      "targetPrice": 338.35,
+      "stopPrice": 330.23,
+      "riskRewardRatio": "1.00:1",
+      "thesis": "Steady AI/Copilot beneficiary grinding higher. MSFT is the highest-quality mega-cap AI play — enterprise Copilot narrative, Azure cloud growth, OpenAI partnership. Less volatile than pure-play semis. FOMC pause directly supports growth. Entry near $329 (between prior close and expected open), target $333 (continuation toward round number). Lower conviction due to modest R:R in a single session.",
+      "catalyst": "FOMC pause; AI/Copilot enterprise demand; flight to quality within tech",
+      "risk": "Limited single-day upside. Already near highs. R:R marginal for a day trade. Best as a smaller position or swing hold.",
+      "june14Actual": {
+        "open": 330.26,
+        "high": 330.27,
+        "low": 328.1,
+        "close": 330.26,
+        "change": "+0.9%"
+      }
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10226,
+    "outcomes": [
+      {
+        "symbol": "NVDA",
+        "openPrice": 40.82,
+        "highPrice": 43.72,
+        "lowPrice": 40.55,
+        "closePrice": 42.69,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.62,
+        "notes": "3-day window (2023-06-14, 2023-06-15, 2023-06-16). Open $40.82, High $43.72, Low $40.55, Close $42.69."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 126.53,
+        "highPrice": 127.73,
+        "lowPrice": 119.9,
+        "closePrice": 120.08,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -3.57,
+        "notes": "3-day window (2023-06-14, 2023-06-15, 2023-06-16). Open $126.53, High $127.73, Low $119.9, Close $120.08."
+      },
+      {
+        "symbol": "ORCL",
+        "openPrice": 116.5,
+        "highPrice": 127.54,
+        "lowPrice": 115.74,
+        "closePrice": 125.46,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 7.52,
+        "notes": "3-day window (2023-06-14, 2023-06-15, 2023-06-16). Open $116.5, High $127.54, Low $115.74, Close $125.46."
+      },
+      {
+        "symbol": "TSLA",
+        "openPrice": 260.17,
+        "highPrice": 263.6,
+        "lowPrice": 247.29,
+        "closePrice": 260.54,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -0.21,
+        "notes": "3-day window (2023-06-14, 2023-06-15, 2023-06-16). Open $260.17, High $263.6, Low $247.29, Close $260.54."
+      },
+      {
+        "symbol": "MSFT",
+        "openPrice": 334.34,
+        "highPrice": 351.47,
+        "lowPrice": 332.81,
+        "closePrice": 342.33,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.41,
+        "notes": "3-day window (2023-06-14, 2023-06-15, 2023-06-16). Open $334.34, High $351.47, Low $332.81, Close $342.33."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 60,
+      "targetHitRate": 100,
+      "stopHitRate": 40,
+      "avgReturnPercent": 1.95,
+      "profitFactor": 3.58,
+      "winRate": 60,
+      "totalScore": 80.9,
+      "benchmarkReturn": 0.04,
+      "alpha": 1.91
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.04,
+    "alpha": 1.91,
+    "fullDepth": true
+  }
+}
