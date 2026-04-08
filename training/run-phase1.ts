@@ -47,6 +47,9 @@ function loadSignalHistory(): import("../src/lib/leading-indicators.ts").DailySi
 }
 
 async function main() {
+  // Support DATE env var for parallel workers (bypasses backtest-state queue)
+  const envDate = process.env.DATE;
+
   // Read backtest state
   if (!fs.existsSync(BACKTEST_STATE)) {
     console.error("FATAL: backtest-state.json not found. Run init-backtest.ts first.");
@@ -59,13 +62,18 @@ async function main() {
     process.exit(1);
   }
 
-  if (backtest.pendingDates.length === 0) {
-    log("All trading days complete!");
-    process.exit(0);
+  let date: string;
+  if (envDate) {
+    date = envDate;
+    log(`Using DATE env var: ${date}`);
+  } else {
+    if (backtest.pendingDates.length === 0) {
+      log("All trading days complete!");
+      process.exit(0);
+    }
+    date = backtest.pendingDates[0];
   }
 
-  // Pop the next date
-  const date = backtest.pendingDates[0];
   const trialId = backtest.lastTrialId + 1;
   const tradingDate = new Date(date + "T12:00:00Z");
   const dateStr = tradingDate.toLocaleDateString("en-US", {
@@ -136,8 +144,9 @@ async function main() {
     sectorTilts: regimeResult.sectorTilts,
   };
 
-  fs.writeFileSync("/tmp/trial-signals.json", JSON.stringify(output, null, 2));
-  log(`Wrote /tmp/trial-signals.json`);
+  const signalsPath = `/tmp/trial-signals-${date}.json`;
+  fs.writeFileSync(signalsPath, JSON.stringify(output, null, 2));
+  log(`Wrote ${signalsPath}`);
   log(`\nReady for Phase 2: Agent generates trades for ${dateStr}`);
   log(`Regime: ${regime.regime} | Bias: ${regime.directionalBias} | Stress: ${stressIndex}/100 | Appetite: ${riskAppetiteIndex}/100`);
 }

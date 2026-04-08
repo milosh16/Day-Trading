@@ -22,9 +22,14 @@ function log(msg: string) {
 }
 
 async function main() {
+  // Support DATE env var for parallel workers (date-specific temp files)
+  const envDate = process.env.DATE;
+  const signalsPath = envDate ? `/tmp/trial-signals-${envDate}.json` : "/tmp/trial-signals.json";
+  const researchPath = envDate ? `/tmp/trial-research-${envDate}.json` : "/tmp/trial-research.json";
+
   // Read intermediate data
-  const signalData = JSON.parse(fs.readFileSync("/tmp/trial-signals.json", "utf-8"));
-  const researchData = JSON.parse(fs.readFileSync("/tmp/trial-research.json", "utf-8"));
+  const signalData = JSON.parse(fs.readFileSync(signalsPath, "utf-8"));
+  const researchData = JSON.parse(fs.readFileSync(researchPath, "utf-8"));
   const state: TrainingState = JSON.parse(fs.readFileSync(STATE_FILE, "utf-8"));
 
   const date = signalData.date;
@@ -209,43 +214,78 @@ async function main() {
   index.bestScore = Math.max(index.bestScore, scores.totalScore);
   fs.writeFileSync(indexPath, JSON.stringify(index, null, 2));
 
-  // Update training state
-  state.fullDepthCurrentTrial = (state.fullDepthCurrentTrial || 0) + 1;
-  state.fullDepthCompletedDates = state.fullDepthCompletedDates || [];
-  state.fullDepthCompletedDates.push(date);
-  state.results.push(result);
-  state.lastUpdatedAt = new Date().toISOString();
-  fs.writeFileSync(STATE_FILE, JSON.stringify(state, null, 2));
-
-  // Update backtest state (if it exists)
+  // Update training state (with file lock for parallel safety)
+  const LOCK_FILE = STATE_FILE + ".lock";
   const BACKTEST_STATE = path.join(__dirname, "backtest-state.json");
-  if (fs.existsSync(BACKTEST_STATE)) {
-    const backtest = JSON.parse(fs.readFileSync(BACKTEST_STATE, "utf-8"));
-    backtest.pendingDates = (backtest.pendingDates || []).filter((d: string) => d !== date);
-    if (!backtest.completedDates.includes(date)) {
-      backtest.completedDates.push(date);
+
+  // Retry loop for lock acquisition (parallel workers may contend)
+  for (let lockAttempt = 0; lockAttempt < 10; lockAttempt++) {
+    try {
+      // Atomic lock: O_EXCL fails if file exists
+      fs.writeFileSync(LOCK_FILE, String(process.pid), { flag: "wx" });
+      try {
+        // Re-read state inside lock (another worker may have updated it)
+        const freshState: TrainingState = JSON.parse(fs.readFileSync(STATE_FILE, "utf-8"));
+        freshState.fullDepthCurrentTrial = (freshState.fullDepthCurrentTrial || 0) + 1;
+        freshState.fullDepthCompletedDates = freshState.fullDepthCompletedDates || [];
+        if (!freshState.fullDepthCompletedDates.includes(date)) {
+          freshState.fullDepthCompletedDates.push(date);
+        }
+        freshState.results.push(result);
+        freshState.lastUpdatedAt = new Date().toISOString();
+        fs.writeFileSync(STATE_FILE, JSON.stringify(freshState, null, 2));
+
+        // Update backtest state
+        if (fs.existsSync(BACKTEST_STATE)) {
+          const backtest = JSON.parse(fs.readFileSync(BACKTEST_STATE, "utf-8"));
+          backtest.pendingDates = (backtest.pendingDates || []).filter((d: string) => d !== date);
+          if (!backtest.completedDates.includes(date)) {
+            backtest.completedDates.push(date);
+          }
+          backtest.completedDays = backtest.completedDates.length;
+          backtest.remainingDays = backtest.pendingDates.length;
+          backtest.lastCompletedDate = date;
+          backtest.lastTrialId = trialId;
+          fs.writeFileSync(BACKTEST_STATE, JSON.stringify(backtest, null, 2));
+          log(`Backtest: ${backtest.completedDays}/${backtest.totalDays} done, ${backtest.remainingDays} remaining`);
+        }
+      } finally {
+        fs.unlinkSync(LOCK_FILE);
+      }
+      break;
+    } catch (e: any) {
+      if (e.code === "EEXIST") {
+        // Lock held by another worker — wait and retry
+        log(`State lock held by another worker, waiting... (attempt ${lockAttempt + 1})`);
+        await new Promise(r => setTimeout(r, 500 + Math.random() * 1000));
+        // Clean up stale locks (older than 30s)
+        try {
+          const stat = fs.statSync(LOCK_FILE);
+          if (Date.now() - stat.mtimeMs > 30000) {
+            fs.unlinkSync(LOCK_FILE);
+            log("Removed stale lock file");
+          }
+        } catch { /* lock already released */ }
+      } else {
+        log(`State update error: ${e.message}`);
+        break;
+      }
     }
-    backtest.completedDays = backtest.completedDates.length;
-    backtest.remainingDays = backtest.pendingDates.length;
-    backtest.lastCompletedDate = date;
-    backtest.lastTrialId = trialId;
-    fs.writeFileSync(BACKTEST_STATE, JSON.stringify(backtest, null, 2));
-    log(`Backtest: ${backtest.completedDays}/${backtest.totalDays} done, ${backtest.remainingDays} remaining`);
-  } else {
-    log(`State updated: trial ${state.fullDepthCurrentTrial}`);
   }
 
-  // Git commit (local only — no push to avoid triggering workflows)
-  try {
-    execSync(
-      `git add training/results/ public/data/ 2>/dev/null; ` +
-      `git diff --staged --quiet || ` +
-      `git commit -m "Training trial ${trialId}: ${date} (score: ${scores.totalScore})"`,
-      { stdio: "pipe", timeout: 60000, cwd: PROJECT_ROOT }
-    );
-    log("Committed locally (push deferred)");
-  } catch (e) {
-    log(`Git commit skipped: ${e}`);
+  // Git commit skipped in parallel mode — reconcile script handles batch commits
+  if (!envDate) {
+    try {
+      execSync(
+        `git add training/results/ public/data/ 2>/dev/null; ` +
+        `git diff --staged --quiet || ` +
+        `git commit -m "Training trial ${trialId}: ${date} (score: ${scores.totalScore})"`,
+        { stdio: "pipe", timeout: 60000, cwd: PROJECT_ROOT }
+      );
+      log("Committed locally (push deferred)");
+    } catch (e) {
+      log(`Git commit skipped: ${e}`);
+    }
   }
 
   log(`\n=== Trial ${trialId} complete: ${date} | Score: ${scores.totalScore} | ${verifiedRecs.length} trades ===\n`);
