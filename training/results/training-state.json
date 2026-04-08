@@ -89880,6 +89880,461 @@
         "timingUrgency": 0.17
       },
       "totalTokensUsed": 0
+    },
+    {
+      "trialId": 10247,
+      "date": "2023-07-17",
+      "generatedAt": "2026-04-08T01:40:40.747Z",
+      "signals": {
+        "spFuturesChange": 0.39,
+        "nasdaqFuturesChange": 0.93,
+        "dowFuturesChange": 0.22,
+        "russellFuturesChange": 1.05,
+        "vixFuturesChange": -1.34,
+        "vix": 13.3,
+        "vixChange": -1.34,
+        "vixTermStructure": "contango",
+        "vix9d": 0,
+        "vix3m": 16.27,
+        "skewIndex": 0,
+        "putCallRatio": 0,
+        "spxGammaExposure": "neutral",
+        "tenYearYield": 3.8,
+        "tenYearYieldChange": -0.58,
+        "twoYearYield": 4.37,
+        "twoYearYieldChange": 0,
+        "thirtyYearYield": 3.92,
+        "threeMonthYield": 5.23,
+        "twoTenSpread": -0.57,
+        "threeMoTenYrSpread": -1.43,
+        "realYield10Y": 0,
+        "fedFundsRate": 0,
+        "fedFundsExpected": 0,
+        "dollarIndex": 99.94,
+        "dollarIndexChange": 0.1,
+        "eurUsd": 1.12,
+        "eurUsdChange": 0.09,
+        "usdJpy": 138.73,
+        "usdJpyChange": 0.03,
+        "usdCny": 7.17,
+        "usdCnyChange": 0.42,
+        "oilWTI": 75.75,
+        "oilChange": 2.16,
+        "brentOil": 79.63,
+        "brentOilChange": 1.44,
+        "natGasChange": 4.66,
+        "goldPrice": 1977.2,
+        "goldChange": 1.27,
+        "silverChange": 0.97,
+        "copperChange": -0.42,
+        "ironOreChange": 0,
+        "wheatChange": 0,
+        "uraniumChange": 0,
+        "balticDryIndex": 0,
+        "balticDryChange": 0,
+        "nikkeiChange": 0.32,
+        "daxChange": 0.35,
+        "ftseChange": 0.64,
+        "shanghaiChange": -0.37,
+        "hangSengChange": -2.05,
+        "kospiChange": -0.43,
+        "emChange": 0,
+        "euroStoxx50Change": 0,
+        "highYieldSpread": 123.80000000000001,
+        "spreadChange": -0.19,
+        "igSpread": -15.26,
+        "igSpreadChange": -0.17,
+        "cdsIndex": 0,
+        "tedSpread": 0,
+        "mbs30YrSpread": 0,
+        "advanceDeclineRatio": 0.98,
+        "newHighsNewLows": 0,
+        "percentAbove200DMA": 0,
+        "percentAbove50DMA": 0,
+        "mcclellanOscillator": 0,
+        "xlkChange": 1.28,
+        "xlfChange": 0.96,
+        "xleChange": -0.2,
+        "xlvChange": -0.46,
+        "xlpChange": -0.3,
+        "xluChange": -1.15,
+        "xlreChange": -0.85,
+        "xliChange": 0.38,
+        "xlbChange": 0.1,
+        "xlcChange": -0.36,
+        "xlyChange": 0.41,
+        "smhChange": 1.86,
+        "aaiiBullBear": 0,
+        "cnnFearGreed": 0,
+        "naaim": 0,
+        "marginDebt": "flat",
+        "etfFlows": "flat",
+        "bitcoinChange": -0.96,
+        "ethereumChange": -0.73,
+        "btcDominance": 0,
+        "cryptoTotalMarketCapChange": 0,
+        "sofr": 0,
+        "repoRate": 0,
+        "fedBalanceSheet": "flat",
+        "tgaBalance": "flat",
+        "hasMajorEconData": false,
+        "econDataType": "",
+        "hasEarningsOfNote": false,
+        "earningsNames": "",
+        "isOpexWeek": true,
+        "isOpexDay": false,
+        "isMonthEnd": false,
+        "isQuarterEnd": false,
+        "daysToFOMC": 198,
+        "daysToNextCPI": 178,
+        "daysToNextNFP": 172,
+        "isExDividendHeavy": false,
+        "geopoliticalRisk": "low",
+        "geopoliticalEvents": "",
+        "spConsecutiveUpDays": 1,
+        "spConsecutiveDownDays": 0,
+        "sp5DayReturn": 2.57,
+        "sp20DayReturn": 0,
+        "nasdaqVsRussell5d": 1.13,
+        "sp52WeekRange": 0,
+        "spDistanceFrom200DMA": 0,
+        "spDistanceFrom50DMA": 0
+      },
+      "regime": {
+        "regime": "range-bound",
+        "confidence": 40,
+        "directionalBias": "10",
+        "volatilityRegime": "normal",
+        "stressIndex": 13,
+        "riskAppetiteIndex": 63,
+        "sectorTilts": {
+          "energy": "overweight",
+          "airlines": "underweight"
+        }
+      },
+      "briefing": {
+        "summary": "",
+        "marketCondition": "neutral",
+        "sections": [],
+        "scenarios": []
+      },
+      "recommendations": [
+        {
+          "symbol": "GS",
+          "direction": "long",
+          "entryPrice": 326.19,
+          "targetPrice": 337.6,
+          "stopLoss": 318.58,
+          "thesis": "Reporting Q2 pre-market Jul 17. JPM and WFC set a strong tone — massive NII beats and guidance raises. GS has trading revenue exposure (strong markets in Q2), asset/wealth management growth, and expectations are already lowered after weak Q1. Consensus EPS ~$3.18 — bar is low. Financial sector momentum from Fri bank earnings rally provides tailwind. If GS beats, sector leadership confirmed.",
+          "catalyst": "Q2 earnings pre-market Jul 17",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "SCHW",
+          "direction": "long",
+          "entryPrice": 58.52,
+          "targetPrice": 62.08,
+          "stopLoss": 56.79,
+          "thesis": "Also reporting pre-market Jul 17. Client asset growth likely strong given market rally. Net new asset concerns from SVB fallout should be easing — 3+ months of stability. Stock down ~30% YTD entering report — low bar. Regional bank fears fading as JPM/WFC showed deposit stability. If SCHW shows deposit stabilization, significant short squeeze potential.",
+          "catalyst": "Q2 earnings pre-market Jul 17",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "IWM",
+          "direction": "long",
+          "entryPrice": 191.53,
+          "targetPrice": 194.92,
+          "stopLoss": 189.59,
+          "thesis": "Small-cap catch-up trade in full force. IWM up 3.5% prior week, breaking out of multi-month range. Breadth expansion narrative dominant. Soft CPI + strong consumer sentiment = goldilocks for small caps (more domestic revenue, more rate-sensitive). Systematic/CTA flows flipping long. Weak dollar tailwind for domestically-oriented companies. Continuation momentum trade.",
+          "catalyst": "Breadth expansion + soft landing rotation",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "WEAT",
+          "direction": "long",
+          "entryPrice": 32.8,
+          "targetPrice": 34.48,
+          "stopLoss": 32.07,
+          "thesis": "Black Sea grain deal expires Jul 17 with Russia signaling non-renewal. This removes safe corridor for Ukrainian grain exports (~50% of global wheat trade transits Black Sea). Wheat futures spiked on prior deal lapses. WEAT is the direct wheat futures ETF. Binary catalyst — if Russia confirms non-renewal, wheat could gap 3-5%. Tight stop below pre-weekend levels.",
+          "catalyst": "Black Sea grain deal expiration Jul 17",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        },
+        {
+          "symbol": "XLF",
+          "direction": "long",
+          "entryPrice": 34.25,
+          "targetPrice": 35.04,
+          "stopLoss": 33.76,
+          "thesis": "Sector momentum play. JPM/WFC/BLK/UNH all beat Fri Jul 14. GS and SCHW report Mon pre-market — if both beat, financial sector gets another leg up. XLF broke above 50-day MA last week. Rotation into value/cyclicals from mega-cap tech supports financials. Lower volatility way to play the bank earnings theme vs single-stock risk.",
+          "catalyst": "GS + SCHW earnings + sector rotation momentum",
+          "conviction": {
+            "catalystClarity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "technicalSetup": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "riskReward": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "volumeLiquidity": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "marketAlignment": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "informationEdge": {
+              "score": 0,
+              "reasoning": ""
+            },
+            "timingUrgency": {
+              "score": 0,
+              "reasoning": ""
+            }
+          }
+        }
+      ],
+      "outcomes": [
+        {
+          "symbol": "GS",
+          "openPrice": 325.89,
+          "highPrice": 345.88,
+          "lowPrice": 324.36,
+          "closePrice": 340.55,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 4.4,
+          "notes": "3-day window (2023-07-17, 2023-07-18, 2023-07-19). Open $325.89, High $345.88, Low $324.36, Close $340.55."
+        },
+        {
+          "symbol": "SCHW",
+          "openPrice": 58.38,
+          "highPrice": 68.8,
+          "lowPrice": 58.1,
+          "closePrice": 66.04,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 12.85,
+          "notes": "3-day window (2023-07-17, 2023-07-18, 2023-07-19). Open $58.38, High $68.8, Low $58.1, Close $66.04."
+        },
+        {
+          "symbol": "IWM",
+          "openPrice": 191.34,
+          "highPrice": 197.66,
+          "lowPrice": 191.14,
+          "closePrice": 196.8,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.75,
+          "notes": "3-day window (2023-07-17, 2023-07-18, 2023-07-19). Open $191.34, High $197.66, Low $191.14, Close $196.8."
+        },
+        {
+          "symbol": "WEAT",
+          "openPrice": 33.8,
+          "highPrice": 35.9,
+          "lowPrice": 32.35,
+          "closePrice": 35.55,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 8.38,
+          "notes": "3-day window (2023-07-17, 2023-07-18, 2023-07-19). Open $33.8, High $35.9, Low $32.35, Close $35.55."
+        },
+        {
+          "symbol": "XLF",
+          "openPrice": 34.21,
+          "highPrice": 35.26,
+          "lowPrice": 34.21,
+          "closePrice": 35.12,
+          "hitTarget": true,
+          "hitStop": false,
+          "directionCorrect": true,
+          "actualReturnPercent": 2.54,
+          "notes": "3-day window (2023-07-17, 2023-07-18, 2023-07-19). Open $34.21, High $35.26, Low $34.21, Close $35.12."
+        }
+      ],
+      "scores": {
+        "directionAccuracy": 100,
+        "targetHitRate": 100,
+        "stopHitRate": 0,
+        "avgReturnPercent": 6.18,
+        "profitFactor": 10,
+        "winRate": 100,
+        "totalScore": 100,
+        "benchmarkReturn": 0.38,
+        "alpha": 5.8
+      },
+      "dimensionAnalysis": {
+        "catalystClarity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "technicalSetup": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "riskReward": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "volumeLiquidity": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "marketAlignment": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "informationEdge": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        },
+        "timingUrgency": {
+          "avgScoreWinners": 0,
+          "avgScoreLosers": 0,
+          "predictivePower": 50
+        }
+      },
+      "weights": {
+        "catalystClarity": 0.22,
+        "technicalSetup": 0.15,
+        "riskReward": 0.12,
+        "volumeLiquidity": 0.06,
+        "marketAlignment": 0.1,
+        "informationEdge": 0.18,
+        "timingUrgency": 0.17
+      },
+      "totalTokensUsed": 0
     }
   ],
   "bestScore": 100,
@@ -89893,7 +90348,7 @@
     "timingUrgency": 0.1
   },
   "startedAt": "2026-04-05T00:00:00.000Z",
-  "lastUpdatedAt": "2026-04-08T01:21:13.789Z",
+  "lastUpdatedAt": "2026-04-08T01:40:40.769Z",
   "totalTokensUsed": 3648955,
   "weightHistory": [
     {
@@ -90352,7 +90807,7 @@
       "timingUrgency": 0.17
     }
   },
-  "fullDepthCurrentTrial": 87,
+  "fullDepthCurrentTrial": 88,
   "fullDepthTotalTrials": 100,
   "fullDepthDateSequence": [
     "2025-03-18",
@@ -90543,7 +90998,8 @@
     "2023-07-11",
     "2023-07-12",
     "2023-07-13",
-    "2023-07-14"
+    "2023-07-14",
+    "2023-07-17"
   ],
   "dateSequence": [
     "2025-09-09",
