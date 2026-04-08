@@ -1,0 +1,344 @@
+{
+  "id": "briefing-2023-07-14-1775611273787",
+  "date": "2023-07-14",
+  "generatedAt": "2026-04-08T01:21:13.766Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [
+    {
+      "title": "Macro",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Earnings",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Geopolitical",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sentiment",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Sectors",
+      "content": "[object Object]",
+      "importance": "medium"
+    },
+    {
+      "title": "Technicals",
+      "content": "[object Object]",
+      "importance": "medium"
+    }
+  ],
+  "scenarios": [
+    {
+      "event": "LONG JPM @ $148.87",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $152.29",
+          "implication": "+2.3% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $146.67",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG WFC @ $43.8",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $45.3",
+          "implication": "+3.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $42.8",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT WBD @ $13.1",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $12.47",
+          "implication": "+-4.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $13.47",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "SHORT PARA @ $15.2",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $14.5",
+          "implication": "+-4.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $15.65",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG UNH @ $447.75",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $455",
+          "implication": "+1.6% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $442.76",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG XLE @ $41.83",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $42.58",
+          "implication": "+1.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $41.33",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 39,
+  "recommendations": [
+    {
+      "ticker": "JPM",
+      "company": "JPMorgan Chase",
+      "direction": "long",
+      "conviction": "HIGH",
+      "thesis": "Massive Q2 beat — revenue +34% YoY to $41.3B, EPS $4.75 (+72%). First Republic accretion adding $2.4B net income. NII $22.9B crushed estimates. Stock +3% pre-market. Buy gap-up for continuation as analysts upgrade targets through the day.",
+      "entryPrice": 148.87,
+      "targetPrice": 152.29,
+      "stopPrice": 146.67,
+      "riskRewardRatio": "1.6:1",
+      "timeframe": "intraday",
+      "catalyst": "Q2 earnings beat + First Republic accretion + raised guidance"
+    },
+    {
+      "ticker": "WFC",
+      "company": "Wells Fargo",
+      "direction": "long",
+      "conviction": "HIGH",
+      "thesis": "Strong Q2 beat — EPS $1.25 vs $1.17 est, revenue $20.5B (+20% YoY). NII surged 29% YoY. Raised FY NII guidance from +10% to +14%. Cheaper than JPM with similar NII tailwinds. Asset cap removal narrative building.",
+      "entryPrice": 43.8,
+      "targetPrice": 45.3,
+      "stopPrice": 42.8,
+      "riskRewardRatio": "1.5:1",
+      "timeframe": "intraday",
+      "catalyst": "Q2 earnings beat + raised FY NII guidance"
+    },
+    {
+      "ticker": "WBD",
+      "company": "Warner Bros Discovery",
+      "direction": "short",
+      "conviction": "HIGH",
+      "thesis": "SAG-AFTRA strike begins midnight — dual strike with WGA first since 1960. WBD most exposed: heavy content spend, streaming losses, weak ad market. Already dropped 5% on strike vote Jul 13. Short the open for continuation selling as production halt reality sets in.",
+      "entryPrice": 13.1,
+      "targetPrice": 12.47,
+      "stopPrice": 13.47,
+      "riskRewardRatio": "1.7:1",
+      "timeframe": "intraday",
+      "catalyst": "SAG-AFTRA strike officially begins + unprecedented dual strike"
+    },
+    {
+      "ticker": "PARA",
+      "company": "Paramount Global",
+      "direction": "short",
+      "conviction": "MEDIUM",
+      "thesis": "Most vulnerable legacy media name. Already fell 4.6% on Jul 13 strike news. Weakest balance sheet, streaming unprofitable, content pipeline now frozen. Continuation short as institutional selling accelerates.",
+      "entryPrice": 15.2,
+      "targetPrice": 14.5,
+      "stopPrice": 15.65,
+      "riskRewardRatio": "1.6:1",
+      "timeframe": "intraday",
+      "catalyst": "SAG-AFTRA strike + weakest balance sheet in media"
+    },
+    {
+      "ticker": "UNH",
+      "company": "UnitedHealth Group",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "thesis": "Solid Q2 beat — revenue $92.9B (+16% YoY), EPS $6.14 vs $6.06 est. Raised FY guidance. Defensive growth in rotation regime. Healthcare worst sector in July (+0.85% MTD), creating catch-up potential on earnings catalyst.",
+      "entryPrice": 447.75,
+      "targetPrice": 455,
+      "stopPrice": 442.76,
+      "riskRewardRatio": "1.5:1",
+      "timeframe": "intraday",
+      "catalyst": "Q2 earnings beat + raised FY guidance + defensive rotation"
+    },
+    {
+      "ticker": "XLE",
+      "company": "Energy Select Sector SPDR",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "thesis": "Energy best sector in July (+7.4%). Dollar crash to 15-month low bullish for commodities. WTI in uptrend toward $80. Rotation regime favors cyclical/value. Diversified ETF exposure for energy rotation day trade.",
+      "entryPrice": 41.83,
+      "targetPrice": 42.58,
+      "stopPrice": 41.33,
+      "riskRewardRatio": "1.5:1",
+      "timeframe": "intraday",
+      "catalyst": "Dollar weakness + oil uptrend + sector rotation into cyclicals"
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10246,
+    "outcomes": [
+      {
+        "symbol": "JPM",
+        "openPrice": 151.55,
+        "highPrice": 154.4,
+        "lowPrice": 148.41,
+        "closePrice": 153.66,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.22,
+        "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $151.55, High $154.4, Low $148.41, Close $153.66."
+      },
+      {
+        "symbol": "WFC",
+        "openPrice": 44.75,
+        "highPrice": 45.7,
+        "lowPrice": 43.3,
+        "closePrice": 45.6,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.11,
+        "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $44.75, High $45.7, Low $43.3, Close $45.6."
+      },
+      {
+        "symbol": "WBD",
+        "openPrice": 13.05,
+        "highPrice": 13.09,
+        "lowPrice": 12.14,
+        "closePrice": 12.77,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.52,
+        "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $13.05, High $13.09, Low $12.14, Close $12.77."
+      },
+      {
+        "symbol": "PARA",
+        "openPrice": 0,
+        "highPrice": 0,
+        "lowPrice": 0,
+        "closePrice": 0,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": false,
+        "actualReturnPercent": 0,
+        "notes": "data unavailable"
+      },
+      {
+        "symbol": "UNH",
+        "openPrice": 462.55,
+        "highPrice": 504.42,
+        "lowPrice": 460.11,
+        "closePrice": 500,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 11.67,
+        "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $462.55, High $504.42, Low $460.11, Close $500."
+      },
+      {
+        "symbol": "XLE",
+        "openPrice": 41.56,
+        "highPrice": 41.6,
+        "lowPrice": 40.46,
+        "closePrice": 41.06,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -1.84,
+        "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $41.56, High $41.6, Low $40.46, Close $41.06."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 80,
+      "targetHitRate": 80,
+      "stopHitRate": 20,
+      "avgReturnPercent": 3.94,
+      "profitFactor": 11.7,
+      "winRate": 80,
+      "totalScore": 93.3,
+      "benchmarkReturn": -0.27,
+      "alpha": 4.21
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": -0.27,
+    "alpha": 4.21,
+    "fullDepth": true
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "trialId": 10246,
+  "date": "2023-07-14",
+  "dateDisplay": "Friday, July 14, 2023",
+  "generatedAt": "2026-04-08T01:21:13.766Z",
+  "pipeline": {
+    "signals": {
+      "spFuturesChange": -0.1,
+      "nasdaqFuturesChange": -0.18,
+      "dowFuturesChange": 0.33,
+      "russellFuturesChange": -1.01,
+      "vixFuturesChange": -1.98,
+      "vix": 13.34,
+      "vixChange": -1.98,
+      "vixTermStructure": "contango",
+      "vix9d": 0,
+      "vix3m": 16.04,
+      "skewIndex": 0,
+      "putCallRatio": 0,
+      "spxGammaExposure": "neutral",
+      "tenYearYield": 3.82,
+      "tenYearYieldChange": 1.54,
+      "twoYearYield": 4.39,
+      "twoYearYieldChange": 0,
+      "thirtyYearYield": 3.92,
+      "threeMonthYield": 5.22,
+      "twoTenSpread": -0.57,
+      "threeMoTenYrSpread": -1.4,
+      "realYield10Y": 0,
+      "fedFundsRate": 0,
+      "fedFundsExpected": 0,
+      "dollarIndex": 99.91,
+      "dollarIndexChange": 0.14,
+      "eurUsd": 1.12,
+      "eurUsdChange": 0.71,
+      "usdJpy": 138.07,
+      "usdJpyChange": -0.17,
+      "usdCny": 7.15,
+      "usdCnyChange": -0.21,
+      "oilWTI": 75.42,
+      "oilChange": -1.91,
+      "brentOil": 79.87,
+      "brentOilChange": -1.83,
+      "natGasChange": -0.24,
+      "goldPrice": 1960.1,
+      "goldChange": 0.05,
+      "silverChange": 0.99,
+      "copperChange": -0.19,
+      "ironOreChange": 0,
+      "wheatChange": 0,
+      "uraniumChange": 0,
+      "balticDryIndex": 0,
+      "balticDryChange": 0,
+      "nikkeiChange": -0.09,
+      "daxChange": -0.22,
+      "ftseChange": -0.08,
+      "shanghaiChange": 0.04,
+      "hangSengChange": 0.33,
+      "kospiChange": 1.43,
+      "emChange": 0,
+      "euroStoxx50Change": 0,
+      "highYieldSpread": 124.5,
+      "spreadChange": 0.73,
+      "igSpread": -14.9,
+      "igSpreadChange": 0.78,
+      "cdsIndex": 0,
+      "tedSpread": 0,
+      "mbs30YrSpread": 0,
+      "advanceDeclineRatio": 0.95,
+      "newHighsNewLows": 0,
+      "percentAbove200DMA": 0,
+      "percentAbove50DMA": 0,
+      "mcclellanOscillator": 0,
+      "xlkChange": -0.15,
+      "xlfChange": -0.67,
+      "xleChange": -2.64,
+      "xlvChange": 1.5,
+      "xlpChange": 0.34,
+      "xluChange": -0.39,
+      "xlreChange": 0,
+      "xliChange": -0.29,
+      "xlbChange": -0.59,
+      "xlcChange": -0.94,
+      "xlyChange": 0.26,
+      "smhChange": -0.83,
+      "aaiiBullBear": 0,
+      "cnnFearGreed": 0,
+      "naaim": 0,
+      "marginDebt": "flat",
+      "etfFlows": "flat",
+      "bitcoinChange": -0.13,
+      "ethereumChange": -0.41,
+      "btcDominance": 0,
+      "cryptoTotalMarketCapChange": 0,
+      "sofr": 0,
+      "repoRate": 0,
+      "fedBalanceSheet": "flat",
+      "tgaBalance": "flat",
+      "hasMajorEconData": false,
+      "econDataType": "",
+      "hasEarningsOfNote": false,
+      "earningsNames": "",
+      "isOpexWeek": false,
+      "isOpexDay": false,
+      "isMonthEnd": false,
+      "isQuarterEnd": false,
+      "daysToFOMC": 201,
+      "daysToNextCPI": 181,
+      "daysToNextNFP": 175,
+      "isExDividendHeavy": false,
+      "geopoliticalRisk": "low",
+      "geopoliticalEvents": "",
+      "spConsecutiveUpDays": 0,
+      "spConsecutiveDownDays": 1,
+      "sp5DayReturn": 2.42,
+      "sp20DayReturn": 3.04,
+      "nasdaqVsRussell5d": -0.25,
+      "sp52WeekRange": 0,
+      "spDistanceFrom200DMA": 0,
+      "spDistanceFrom50DMA": 0
+    },
+    "regime": {
+      "regime": "rotation",
+      "confidence": 39,
+      "directionalBias": "-9",
+      "volatilityRegime": "normal",
+      "stressIndex": 11,
+      "riskAppetiteIndex": 42,
+      "sectorTilts": {}
+    },
+    "briefing": {
+      "summary": "",
+      "marketCondition": "neutral",
+      "sections": [
+        {
+          "title": "Macro",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Earnings",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Geopolitical",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Sentiment",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Sectors",
+          "content": "[object Object]",
+          "importance": "medium"
+        },
+        {
+          "title": "Technicals",
+          "content": "[object Object]",
+          "importance": "medium"
+        }
+      ],
+      "scenarios": []
+    }
+  },
+  "recommendations": [
+    {
+      "symbol": "JPM",
+      "direction": "long",
+      "entryPrice": 148.87,
+      "targetPrice": 152.29,
+      "stopLoss": 146.67,
+      "thesis": "Massive Q2 beat — revenue +34% YoY to $41.3B, EPS $4.75 (+72%). First Republic accretion adding $2.4B net income. NII $22.9B crushed estimates. Stock +3% pre-market. Buy gap-up for continuation as analysts upgrade targets through the day.",
+      "catalyst": "Q2 earnings beat + First Republic accretion + raised guidance",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "WFC",
+      "direction": "long",
+      "entryPrice": 43.8,
+      "targetPrice": 45.3,
+      "stopLoss": 42.8,
+      "thesis": "Strong Q2 beat — EPS $1.25 vs $1.17 est, revenue $20.5B (+20% YoY). NII surged 29% YoY. Raised FY NII guidance from +10% to +14%. Cheaper than JPM with similar NII tailwinds. Asset cap removal narrative building.",
+      "catalyst": "Q2 earnings beat + raised FY NII guidance",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "WBD",
+      "direction": "short",
+      "entryPrice": 13.1,
+      "targetPrice": 12.47,
+      "stopLoss": 13.47,
+      "thesis": "SAG-AFTRA strike begins midnight — dual strike with WGA first since 1960. WBD most exposed: heavy content spend, streaming losses, weak ad market. Already dropped 5% on strike vote Jul 13. Short the open for continuation selling as production halt reality sets in.",
+      "catalyst": "SAG-AFTRA strike officially begins + unprecedented dual strike",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "PARA",
+      "direction": "short",
+      "entryPrice": 15.2,
+      "targetPrice": 14.5,
+      "stopLoss": 15.65,
+      "thesis": "Most vulnerable legacy media name. Already fell 4.6% on Jul 13 strike news. Weakest balance sheet, streaming unprofitable, content pipeline now frozen. Continuation short as institutional selling accelerates.",
+      "catalyst": "SAG-AFTRA strike + weakest balance sheet in media",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "UNH",
+      "direction": "long",
+      "entryPrice": 447.75,
+      "targetPrice": 455,
+      "stopLoss": 442.76,
+      "thesis": "Solid Q2 beat — revenue $92.9B (+16% YoY), EPS $6.14 vs $6.06 est. Raised FY guidance. Defensive growth in rotation regime. Healthcare worst sector in July (+0.85% MTD), creating catch-up potential on earnings catalyst.",
+      "catalyst": "Q2 earnings beat + raised FY guidance + defensive rotation",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    },
+    {
+      "symbol": "XLE",
+      "direction": "long",
+      "entryPrice": 41.83,
+      "targetPrice": 42.58,
+      "stopLoss": 41.33,
+      "thesis": "Energy best sector in July (+7.4%). Dollar crash to 15-month low bullish for commodities. WTI in uptrend toward $80. Rotation regime favors cyclical/value. Diversified ETF exposure for energy rotation day trade.",
+      "catalyst": "Dollar weakness + oil uptrend + sector rotation into cyclicals",
+      "conviction": {
+        "catalystClarity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "technicalSetup": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "riskReward": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "volumeLiquidity": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "marketAlignment": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "informationEdge": {
+          "score": 0,
+          "reasoning": ""
+        },
+        "timingUrgency": {
+          "score": 0,
+          "reasoning": ""
+        }
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "symbol": "JPM",
+      "openPrice": 151.55,
+      "highPrice": 154.4,
+      "lowPrice": 148.41,
+      "closePrice": 153.66,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 3.22,
+      "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $151.55, High $154.4, Low $148.41, Close $153.66."
+    },
+    {
+      "symbol": "WFC",
+      "openPrice": 44.75,
+      "highPrice": 45.7,
+      "lowPrice": 43.3,
+      "closePrice": 45.6,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 4.11,
+      "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $44.75, High $45.7, Low $43.3, Close $45.6."
+    },
+    {
+      "symbol": "WBD",
+      "openPrice": 13.05,
+      "highPrice": 13.09,
+      "lowPrice": 12.14,
+      "closePrice": 12.77,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 2.52,
+      "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $13.05, High $13.09, Low $12.14, Close $12.77."
+    },
+    {
+      "symbol": "PARA",
+      "openPrice": 0,
+      "highPrice": 0,
+      "lowPrice": 0,
+      "closePrice": 0,
+      "hitTarget": false,
+      "hitStop": false,
+      "directionCorrect": false,
+      "actualReturnPercent": 0,
+      "notes": "data unavailable"
+    },
+    {
+      "symbol": "UNH",
+      "openPrice": 462.55,
+      "highPrice": 504.42,
+      "lowPrice": 460.11,
+      "closePrice": 500,
+      "hitTarget": true,
+      "hitStop": false,
+      "directionCorrect": true,
+      "actualReturnPercent": 11.67,
+      "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $462.55, High $504.42, Low $460.11, Close $500."
+    },
+    {
+      "symbol": "XLE",
+      "openPrice": 41.56,
+      "highPrice": 41.6,
+      "lowPrice": 40.46,
+      "closePrice": 41.06,
+      "hitTarget": false,
+      "hitStop": true,
+      "directionCorrect": false,
+      "actualReturnPercent": -1.84,
+      "notes": "3-day window (2023-07-14, 2023-07-17, 2023-07-18). Open $41.56, High $41.6, Low $40.46, Close $41.06."
+    }
+  ],
+  "scores": {
+    "directionAccuracy": 80,
+    "targetHitRate": 80,
+    "stopHitRate": 20,
+    "avgReturnPercent": 3.94,
+    "profitFactor": 11.7,
+    "winRate": 80,
+    "totalScore": 93.3,
+    "benchmarkReturn": -0.27,
+    "alpha": 4.21
+  },
+  "dimensionAnalysis": {
+    "catalystClarity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "technicalSetup": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "riskReward": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "volumeLiquidity": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "marketAlignment": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "informationEdge": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    },
+    "timingUrgency": {
+      "avgScoreWinners": 0,
+      "avgScoreLosers": 0,
+      "predictivePower": 50
+    }
+  },
+  "weights": {
+    "catalystClarity": 0.22,
+    "technicalSetup": 0.15,
+    "riskReward": 0.12,
+    "volumeLiquidity": 0.06,
+    "marketAlignment": 0.1,
+    "informationEdge": 0.18,
+    "timingUrgency": 0.17
+  },
+  "fullDepth": true
+}
