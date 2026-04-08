@@ -136,7 +136,8 @@ export function calculateScores(
   const avgReturn = validOutcomes.reduce((s, o) => s + o.actualReturnPercent, 0) / n;
   const grossProfit = validOutcomes.filter((o) => o.actualReturnPercent > 0).reduce((s, o) => s + o.actualReturnPercent, 0);
   const grossLoss = Math.abs(validOutcomes.filter((o) => o.actualReturnPercent < 0).reduce((s, o) => s + o.actualReturnPercent, 0));
-  const profitFactor = grossLoss > 0 ? grossProfit / grossLoss : grossProfit > 0 ? 10 : 0;
+  // Floor grossLoss at 0.1 to avoid PF explosion from a single tiny loss
+  const profitFactor = grossLoss > 0.1 ? grossProfit / grossLoss : grossProfit > 0 ? Math.min(10, grossProfit) : 0;
 
   const directionAccuracy = (directionCorrect / n) * 100;
   const targetHitRate = (targetHits / n) * 100;

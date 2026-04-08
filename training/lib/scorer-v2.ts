@@ -22,12 +22,12 @@ import type { TrialResult, TrainingState } from "./types.ts";
  *
  * Components (points added to a base of 50):
  *   Direction Score  : (directionAccuracy - 50) * 0.3, range 0 to 15
- *   Profit Factor    : log2(max(1, PF)) * 8, range 0 to 12
+ *   Profit Factor    : log2(max(1, PF)) * 6, range 0 to 10
  *   Target/Stop Net  : (targetHitRate - stopHitRate) * 0.16, range -8 to +8
- *   Return Score     : avgReturnPercent * 3, range -8 to +8
+ *   Return Score     : avgReturnPercent * 1.5, range -12 to +12
  *   Win Rate Score   : (winRate - 50) * 0.21, range 0 to 7
  *
- * Max theoretical = 50 + 15 + 12 + 8 + 8 + 7 = 100 (requires perfection)
+ * Max theoretical = 50 + 15 + 10 + 8 + 12 + 7 = 102 (clamped to 100)
  * Typical good    = 70-80
  * Random/no edge  = 50
  *
@@ -54,17 +54,17 @@ export function calculateCompositeScore(metrics: {
   // 50% → 0, 75% → 7.5, 100% → 15
   const directionPts = Math.max(0, Math.min(15, (directionAccuracy - 50) * 0.3));
 
-  // Profit Factor Score (max 12 pts, log-scaled so diminishing returns)
-  // PF 1.0 → 0, PF 2.0 → 8, PF 4.0 → 12
-  const pfPts = Math.min(12, Math.max(0, Math.log2(Math.max(1, profitFactor)) * 8));
+  // Profit Factor Score (max 10 pts, log-scaled so diminishing returns)
+  // PF 1.0 → 0, PF 2.0 → 6, PF 4.0 → 10 (redistributed pts to return score)
+  const pfPts = Math.min(10, Math.max(0, Math.log2(Math.max(1, profitFactor)) * 6));
 
   // Target/Stop Net Score (range -8 to +8)
   const targetStopRaw = (targetHitRate - stopHitRate) * 0.16;
   const targetStopPts = Math.max(-8, Math.min(8, targetStopRaw));
 
-  // Return Score (range -8 to +8)
-  const returnRaw = avgReturnPercent * 3;
-  const returnPts = Math.max(-8, Math.min(8, returnRaw));
+  // Return Score (range -12 to +12) — wider cap preserves gradient for high-alpha days
+  const returnRaw = avgReturnPercent * 1.5;
+  const returnPts = Math.max(-12, Math.min(12, returnRaw));
 
   // Win Rate Score (max 7 pts)
   // 50% → 0, 75% → 5.25, 90% → 7 (capped)

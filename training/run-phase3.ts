@@ -33,7 +33,8 @@ async function main() {
 
   log(`=== Phase 3: Scoring trial ${trialId} (${date}) ===`);
 
-  // Parse recommendations from research output
+  // Parse all evaluated trades (new format) + recommendations (legacy fallback)
+  const rawAllEvaluated: any[] = researchData.allEvaluated || [];
   const rawRecs: any[] = researchData.recommendations || researchData.trades || researchData.tradeRecommendations || [];
   const recs: TradeRecommendation[] = rawRecs
     .filter((r: any) => (r.ticker || r.symbol) && (r.ticker || r.symbol) !== "NO_TRADE_RECOMMENDED" && (r.entryPrice || r.entry))
@@ -151,6 +152,7 @@ async function main() {
     trialId, date, dateDisplay,
     generatedAt: result.generatedAt,
     pipeline: { signals: signalData.signals, regime: signalData.regime, briefing: result.briefing },
+    allEvaluated: rawAllEvaluated,
     recommendations: result.recommendations,
     outcomes, scores, dimensionAnalysis: dimAnalysis,
     weights: state.weights,

@@ -669,9 +669,14 @@ For the top 10-12 highest-conviction candidates from Task 1, use web_search to f
 - Any unusual options or volume activity
 - Upcoming catalysts (earnings, ex-div, FDA, etc.)
 
-**TASK 3 — CONVICTION SCORING:**
-Select the BEST 3-7 trades with full entry/target/stop prices and conviction scores.
-Be selective — 2 great trades > 7 mediocre ones. "No trade" is valid if nothing meets our bar.
+**TASK 3 — CONVICTION SCORING (ALL candidates):**
+Score EVERY candidate from Task 2 (all 10-12) with full conviction dimensions and entry/target/stop.
+Output ALL of them in "allEvaluated" — even the ones you would NOT recommend trading.
+Then separately list ONLY the trades that pass your conviction gate in "recommendations".
+
+CONVICTION GATE: A trade needs a composite conviction score of 70+ to be recommended.
+On range-bound or low-conviction days, it is COMPLETELY VALID to recommend ZERO trades.
+2 great trades > 7 mediocre ones. Sitting out preserves capital.
 
 Return ALL results in a single <json> block:
 <json>{
@@ -682,6 +687,56 @@ Return ALL results in a single <json> block:
   "tradeResearch": [{"ticker": "XYZ", "price": 100.00, "change1d": -2.5, "change5d": -8.0, "support": [95, 90], "resistance": [105, 110], "analystConsensus": "buy", "priceTarget": 120, "upcomingCatalyst": "...", "optionsActivity": "..."}],
   "marketOutlook": "1-2 sentence overall view",
   "riskLevel": "low|moderate|elevated|high",
+  "allEvaluated": [
+    {
+      "ticker": "XYZ",
+      "direction": "long",
+      "entryPrice": 100.00,
+      "targetPrice": 104.00,
+      "stopPrice": 97.50,
+      "riskRewardRatio": 1.6,
+      "positionSize": "3% of portfolio",
+      "catalyst": "Specific catalyst",
+      "reasoning": "Full reasoning chain",
+      "bearCase": "What could go wrong",
+      "recommended": true,
+      "rejectionReason": null,
+      "conviction": {
+        "catalystClarity": 85,
+        "technicalSetup": 70,
+        "riskReward": 80,
+        "volumeLiquidity": 90,
+        "marketAlignment": 75,
+        "informationEdge": 65,
+        "timingUrgency": 70
+      },
+      "compositeScore": 76
+    },
+    {
+      "ticker": "ABC",
+      "direction": "long",
+      "entryPrice": 50.00,
+      "targetPrice": 52.00,
+      "stopPrice": 48.50,
+      "riskRewardRatio": 1.3,
+      "positionSize": "2% of portfolio",
+      "catalyst": "Weak catalyst",
+      "reasoning": "Reasoning chain",
+      "bearCase": "What could go wrong",
+      "recommended": false,
+      "rejectionReason": "Low catalyst clarity, weak R:R in range-bound regime",
+      "conviction": {
+        "catalystClarity": 40,
+        "technicalSetup": 55,
+        "riskReward": 50,
+        "volumeLiquidity": 80,
+        "marketAlignment": 35,
+        "informationEdge": 30,
+        "timingUrgency": 45
+      },
+      "compositeScore": 48
+    }
+  ],
   "recommendations": [
     {
       "ticker": "XYZ",
@@ -730,6 +785,7 @@ Return ALL results in a single <json> block:
     recommendations = {
       marketOutlook: parsed.marketOutlook,
       riskLevel: parsed.riskLevel,
+      allEvaluated: parsed.allEvaluated || [],
       recommendations: parsed.recommendations,
       watchlist: parsed.watchlist,
       avoidList: parsed.avoidList,
@@ -738,7 +794,8 @@ Return ALL results in a single <json> block:
     log(`  Sectors ranked: ${impactAnalysis.sectorRankings?.length || 0}`);
     log(`  High-impact companies: ${impactAnalysis.highImpactCompanies?.length || 0}`);
     log(`  Market outlook: ${recommendations.marketOutlook}`);
-    log(`  Recommendations: ${recommendations.recommendations?.length || 0}`);
+    log(`  All evaluated: ${recommendations.allEvaluated?.length || 0}`);
+    log(`  Recommended (passed gate): ${recommendations.recommendations?.length || 0}`);
     if (recommendations.recommendations) {
       for (const r of recommendations.recommendations) {
         const avg =
@@ -1007,6 +1064,7 @@ function writeOutputs(
       sectorRankings: impactAnalysis.sectorRankings,
       topCompanies: (impactAnalysis.highImpactCompanies || []).slice(0, 10),
     },
+    allEvaluated: recommendations.allEvaluated || [],
     recommendations: recommendations.recommendations || [],
     watchlist: recommendations.watchlist || [],
     avoidList: recommendations.avoidList || [],
@@ -1045,6 +1103,7 @@ function writeOutputs(
     },
     researchDomains: researchResults,
     impactAnalysis,
+    allEvaluated: recommendations.allEvaluated || [],
     recommendations: verifiedRecs,
     outcomes,
     scores,
