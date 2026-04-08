@@ -1,0 +1,278 @@
+{
+  "id": "briefing-2023-07-12-1775607383641",
+  "date": "2023-07-12",
+  "generatedAt": "2026-04-08T00:16:23.629Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "bullish",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG IWM @ $189.8",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $194.4",
+          "implication": "+2.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $187.06",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMD @ $111.32",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $115.73",
+          "implication": "+4.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $108.38",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG META @ $298.29",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $309.23",
+          "implication": "+3.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $291.33",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG JPM @ $147.42",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $151.89",
+          "implication": "+3.0% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $144.44",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG COIN @ $89.15",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $96.15",
+          "implication": "+7.9% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $84.95",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "risk-on",
+  "regimeConfidence": 65,
+  "recommendations": [
+    {
+      "ticker": "IWM",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 189.8,
+      "targetPrice": 194.4,
+      "stopPrice": 187.06,
+      "riskRewardRatio": 1.68,
+      "stopPercent": 1.4,
+      "targetPercent": 2.4,
+      "thesis": "Small caps are the highest-beta play on a CPI downside surprise. R2K already showing relative strength on July 11 (+1.27%). A 3.0% or lower headline CPI triggers aggressive rotation into rate-sensitive small caps. Entry at July 11 close area, stop below July 11 low, target at resistance zone near $198.50.",
+      "timeframe": "intraday to 1-2 days",
+      "positionSize": "full"
+    },
+    {
+      "ticker": "AMD",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 111.32,
+      "targetPrice": 115.73,
+      "stopPrice": 108.38,
+      "riskRewardRatio": 1.5,
+      "stopPercent": 2.6,
+      "targetPercent": 4,
+      "thesis": "AI/semi leader with strong technical momentum. Lower CPI supports growth multiple expansion. SOX near highs - breakout continuation likely on bullish macro. AMD has room to re-rate toward NVDA-type AI premium.",
+      "timeframe": "intraday to 1-2 days",
+      "positionSize": "full"
+    },
+    {
+      "ticker": "META",
+      "direction": "long",
+      "conviction": "high",
+      "entryPrice": 298.29,
+      "targetPrice": 309.23,
+      "stopPrice": 291.33,
+      "riskRewardRatio": 1.57,
+      "stopPercent": 2.3,
+      "targetPercent": 3.7,
+      "thesis": "Year of Efficiency + Threads momentum + ad recovery. Still reasonably valued on forward earnings. Mega-cap quality with growth characteristics. CPI beat extends the broad tech rally. Threads launch provides additional narrative catalyst.",
+      "timeframe": "intraday to 1-2 days",
+      "positionSize": "full"
+    },
+    {
+      "ticker": "JPM",
+      "direction": "long",
+      "conviction": "medium-high",
+      "entryPrice": 147.42,
+      "targetPrice": 151.89,
+      "stopPrice": 144.44,
+      "riskRewardRatio": 1.5,
+      "stopPercent": 2,
+      "targetPercent": 3,
+      "thesis": "Pre-earnings positioning for July 14 report. Best-in-class bank benefiting from soft landing narrative. Cooler CPI eases credit quality fears. First Republic integration accretive. NII guidance expected strong. Enter ahead of earnings momentum.",
+      "timeframe": "intraday to 2 days (exit before earnings if needed)",
+      "positionSize": "standard"
+    },
+    {
+      "ticker": "COIN",
+      "direction": "long",
+      "conviction": "medium",
+      "entryPrice": 89.15,
+      "targetPrice": 96.15,
+      "stopPrice": 84.95,
+      "riskRewardRatio": 1.67,
+      "stopPercent": 4.7,
+      "targetPercent": 7.9,
+      "thesis": "High-beta risk-on play. DXY breaking below 101 is powerful crypto tailwind. BTC holding above $30k. COIN acts as leveraged Bitcoin proxy with equity market liquidity. SEC worst case appears priced in. Wider stop reflects higher vol but R:R compelling.",
+      "timeframe": "intraday to 1-2 days",
+      "positionSize": "reduced (high vol name)"
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10244,
+    "outcomes": [
+      {
+        "symbol": "IWM",
+        "openPrice": 192.76,
+        "highPrice": 193.69,
+        "lowPrice": 190.29,
+        "closePrice": 191.53,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.91,
+        "notes": "3-day window (2023-07-12, 2023-07-13, 2023-07-14). Open $192.76, High $193.69, Low $190.29, Close $191.53."
+      },
+      {
+        "symbol": "AMD",
+        "openPrice": 112.89,
+        "highPrice": 122.12,
+        "lowPrice": 112.31,
+        "closePrice": 115.94,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 4.15,
+        "notes": "3-day window (2023-07-12, 2023-07-13, 2023-07-14). Open $112.89, High $122.12, Low $112.31, Close $115.94."
+      },
+      {
+        "symbol": "META",
+        "openPrice": 301.75,
+        "highPrice": 316.24,
+        "lowPrice": 300.1,
+        "closePrice": 308.87,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.55,
+        "notes": "3-day window (2023-07-12, 2023-07-13, 2023-07-14). Open $301.75, High $316.24, Low $300.1, Close $308.87."
+      },
+      {
+        "symbol": "JPM",
+        "openPrice": 147.45,
+        "highPrice": 152.89,
+        "lowPrice": 147,
+        "closePrice": 149.77,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.59,
+        "notes": "3-day window (2023-07-12, 2023-07-13, 2023-07-14). Open $147.45, High $152.89, Low $147, Close $149.77."
+      },
+      {
+        "symbol": "COIN",
+        "openPrice": 89,
+        "highPrice": 114.43,
+        "lowPrice": 83.42,
+        "closePrice": 105.31,
+        "hitTarget": true,
+        "hitStop": true,
+        "directionCorrect": true,
+        "actualReturnPercent": 18.13,
+        "notes": "3-day window (2023-07-12, 2023-07-13, 2023-07-14). Open $89, High $114.43, Low $83.42, Close $105.31."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 100,
+      "targetHitRate": 80,
+      "stopHitRate": 20,
+      "avgReturnPercent": 5.67,
+      "profitFactor": 10,
+      "winRate": 100,
+      "totalScore": 100,
+      "benchmarkReturn": -0.08,
+      "alpha": 5.75
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": -0.08,
+    "alpha": 5.75,
+    "fullDepth": true
+  }
+}
