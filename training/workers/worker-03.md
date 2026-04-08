@@ -3,7 +3,7 @@
 You are backtest worker #03 for the SIGNAL day-trading algorithm. Process every date in your queue sequentially.
 
 ## Your Queue
-23 dates: ["2023-07-20", "2023-08-17", "2023-09-15", "2023-10-13", "2023-11-10", "2023-12-11", "2024-01-10", "2024-02-08", "2024-03-08", "2024-04-08", "2024-05-06", "2024-06-05", "2024-07-29", "2024-09-25", "2024-11-14", "2025-01-02", "2025-02-14", "2025-04-21", "2025-06-11", "2025-08-19", "2025-10-08", "2025-12-04", "2026-01-30"]
+84 dates: ["2023-08-23", "2023-09-13", "2023-09-27", "2023-10-06", "2023-10-13", "2023-10-23", "2023-10-30", "2023-11-07", "2023-11-14", "2023-11-21", "2023-11-29", "2023-12-06", "2023-12-13", "2023-12-20", "2023-12-28", "2024-01-05", "2024-01-12", "2024-01-22", "2024-01-29", "2024-02-05", "2024-02-12", "2024-02-20", "2024-02-27", "2024-03-05", "2024-03-12", "2024-03-19", "2024-03-26", "2024-04-03", "2024-04-10", "2024-04-17", "2024-04-24", "2024-05-01", "2024-05-08", "2024-05-15", "2024-05-22", "2024-05-30", "2024-06-14", "2024-06-27", "2024-07-10", "2024-07-18", "2024-08-05", "2024-08-19", "2024-09-04", "2024-09-16", "2024-09-27", "2024-10-17", "2024-10-28", "2024-11-11", "2024-11-19", "2024-11-26", "2024-12-09", "2024-12-23", "2025-01-09", "2025-01-23", "2025-02-03", "2025-02-10", "2025-02-19", "2025-03-07", "2025-03-28", "2025-04-07", "2025-04-23", "2025-05-06", "2025-05-23", "2025-06-03", "2025-06-17", "2025-07-01", "2025-07-21", "2025-08-11", "2025-08-27", "2025-09-05", "2025-09-16", "2025-10-01", "2025-10-22", "2025-11-04", "2025-11-13", "2025-12-01", "2025-12-10", "2025-12-18", "2025-12-31", "2026-01-22", "2026-02-03", "2026-02-13", "2026-02-26", "2026-03-24"]
 
 ## Working Directory
 ```
@@ -36,7 +36,7 @@ Search for what was happening as of the PRIOR trading day (the day before {date}
 Search for the prior day's date specifically. Do NOT include any information from {date} itself or later.
 
 **B) Impact Analysis:**
-Rank sectors bullish→bearish. Identify 15-20 high-impact companies. Find contrarian opportunities.
+Rank sectors bullish to bearish. Identify 15-20 high-impact companies. Find contrarian opportunities.
 
 **C) Trade Evaluation (ALL candidates):**
 For the top 10-12 candidates, search for their prices/technicals as of the prior day. Score EVERY candidate on 7 conviction dimensions (0-100):
@@ -99,7 +99,7 @@ cd /tmp/day-trading && DATE={date} npx tsx training/run-phase3.ts
 
 ### Then move to the next date.
 
-Log progress every 5 dates: "Worker 03: completed X/23 dates."
+Log progress every 5 dates: "Worker 03: completed X/84 dates."
 
 ## Critical Rules
 - **TEMPORAL**: Only use information from BEFORE market open on {date}. Search the prior day.

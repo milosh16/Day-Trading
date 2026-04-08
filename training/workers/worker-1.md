@@ -1,9 +1,9 @@
-# SIGNAL Backtest Worker 04
+# SIGNAL Backtest Worker 1
 
-You are backtest worker #04 for the SIGNAL day-trading algorithm. Process every date in your queue sequentially.
+You are backtest worker #1 for the SIGNAL day-trading algorithm. Process every date in your queue sequentially.
 
 ## Your Queue
-84 dates: ["2023-08-25", "2023-09-19", "2023-09-29", "2023-10-09", "2023-10-17", "2023-10-24", "2023-11-01", "2023-11-08", "2023-11-15", "2023-11-22", "2023-11-30", "2023-12-07", "2023-12-14", "2023-12-21", "2023-12-29", "2024-01-08", "2024-01-16", "2024-01-23", "2024-01-30", "2024-02-06", "2024-02-13", "2024-02-21", "2024-02-28", "2024-03-06", "2024-03-13", "2024-03-20", "2024-03-27", "2024-04-04", "2024-04-11", "2024-04-18", "2024-04-25", "2024-05-02", "2024-05-09", "2024-05-16", "2024-05-23", "2024-05-31", "2024-06-18", "2024-06-28", "2024-07-12", "2024-07-19", "2024-08-08", "2024-08-21", "2024-09-06", "2024-09-19", "2024-09-30", "2024-10-21", "2024-10-29", "2024-11-12", "2024-11-20", "2024-11-27", "2024-12-11", "2024-12-30", "2025-01-14", "2025-01-24", "2025-02-04", "2025-02-11", "2025-02-20", "2025-03-10", "2025-03-31", "2025-04-10", "2025-04-24", "2025-05-09", "2025-05-27", "2025-06-06", "2025-06-18", "2025-07-03", "2025-07-29", "2025-08-14", "2025-08-28", "2025-09-08", "2025-09-19", "2025-10-03", "2025-10-29", "2025-11-06", "2025-11-19", "2025-12-02", "2025-12-11", "2025-12-19", "2026-01-02", "2026-01-23", "2026-02-05", "2026-02-20", "2026-03-05", "2026-03-25"]
+ dates: 
 
 ## Working Directory
 ```
@@ -36,7 +36,7 @@ Search for what was happening as of the PRIOR trading day (the day before {date}
 Search for the prior day's date specifically. Do NOT include any information from {date} itself or later.
 
 **B) Impact Analysis:**
-Rank sectors bullish to bearish. Identify 15-20 high-impact companies. Find contrarian opportunities.
+Rank sectors bullish→bearish. Identify 15-20 high-impact companies. Find contrarian opportunities.
 
 **C) Trade Evaluation (ALL candidates):**
 For the top 10-12 candidates, search for their prices/technicals as of the prior day. Score EVERY candidate on 7 conviction dimensions (0-100):
@@ -99,7 +99,7 @@ cd /tmp/day-trading && DATE={date} npx tsx training/run-phase3.ts
 
 ### Then move to the next date.
 
-Log progress every 5 dates: "Worker 04: completed X/84 dates."
+Log progress every 5 dates: "Worker 1: completed X/ dates."
 
 ## Critical Rules
 - **TEMPORAL**: Only use information from BEFORE market open on {date}. Search the prior day.
