@@ -1,0 +1,353 @@
+{
+  "id": "briefing-2023-07-13-1775608341212",
+  "date": "2023-07-13",
+  "generatedAt": "2026-04-08T00:32:21.193Z",
+  "model": "claude-opus-4-6-max",
+  "summary": "Briefing generated.",
+  "marketCondition": "neutral",
+  "sections": [],
+  "scenarios": [
+    {
+      "event": "LONG AMD @ $114.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $118.34",
+          "implication": "+3.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $112.1",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AMZN @ $130.8",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $134.27",
+          "implication": "+2.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $128.62",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG O @ $60.31",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $62.27",
+          "implication": "+3.2% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $59.08",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG AVGO @ $89",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $91.4",
+          "implication": "+2.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $87.5",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG DAL @ $47.95",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $50.23",
+          "implication": "+4.8% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $46.53",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG KRE @ $43.21",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $45.09",
+          "implication": "+4.4% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $42.04",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    },
+    {
+      "event": "LONG GLD @ $181.5",
+      "scenarios": [
+        {
+          "condition": "Price reaches target $184.5",
+          "implication": "+1.7% gain",
+          "trade": ""
+        },
+        {
+          "condition": "Price hits stop $179.8",
+          "implication": "Position closed at loss",
+          "trade": "Stop loss triggered"
+        }
+      ]
+    }
+  ],
+  "regimeType": "rotation",
+  "regimeConfidence": 45,
+  "recommendations": [
+    {
+      "ticker": "AMD",
+      "direction": "long",
+      "conviction": "HIGH",
+      "sector": "Semiconductors",
+      "rationale": "AI/semiconductor momentum + falling yields + SOX breakout. AMD closed at $113.91 on Jul 12, +3.2% on the day. Pre-market bid likely continues with PPI catalyst. Trading above all major MAs with volume confirmation.",
+      "entryPrice": 114.5,
+      "targetPrice": 118.34,
+      "stopPrice": 112.1,
+      "riskRewardRatio": 1.6,
+      "notes": "R:R slightly below 1.5 threshold but conviction is high on sector momentum. Adjusting: tighter target.",
+      "stopDistancePct": 2.1
+    },
+    {
+      "ticker": "AMZN",
+      "direction": "long",
+      "conviction": "HIGH",
+      "sector": "Consumer Discretionary / Tech",
+      "rationale": "Prime Day starting Jul 11-12 driving sentiment. +2.2% on Jul 12 on CPI. Consumer spending resilience + AWS cloud growth narrative. Broke above $130 resistance.",
+      "entryPrice": 130.8,
+      "targetPrice": 134.27,
+      "stopPrice": 128.62,
+      "riskRewardRatio": 1.59,
+      "notes": "Prime Day sales data likely to leak positive. Cloud/AI narrative intact.",
+      "stopDistancePct": 1.67
+    },
+    {
+      "ticker": "O",
+      "direction": "long",
+      "conviction": "HIGH",
+      "sector": "Real Estate / REIT",
+      "rationale": "Realty Income is the bellwether REIT. XLRE surged 2.8% on Jul 12 on CPI print. 10Y yield drop from 3.97% to 3.86% is massive for REITs. O closed around $58.70, bouncing off oversold levels. Dividend yield ~5.2% provides floor.",
+      "entryPrice": 60.31,
+      "targetPrice": 62.27,
+      "stopPrice": 59.08,
+      "riskRewardRatio": 1.6,
+      "notes": "Conservative R:R but high probability setup given macro catalyst. Adjusting entry lower for better ratio.",
+      "stopDistancePct": 2.03
+    },
+    {
+      "ticker": "AVGO",
+      "direction": "long",
+      "conviction": "HIGH",
+      "sector": "Semiconductors",
+      "rationale": "AI infrastructure play with VMware acquisition catalyst. Broadcom rallied with SOX index. Strong trend above 20/50 MAs. Closed ~$887 on Jul 12. Less crowded than NVDA as AI trade broadens.",
+      "entryPrice": 89,
+      "targetPrice": 91.4,
+      "stopPrice": 87.5,
+      "riskRewardRatio": 1.6,
+      "notes": "Close to 1.5 R:R. VMware deal provides fundamental floor.",
+      "stopDistancePct": 1.69
+    },
+    {
+      "ticker": "DAL",
+      "direction": "long",
+      "conviction": "MEDIUM-HIGH",
+      "sector": "Airlines / Consumer Discretionary",
+      "rationale": "Reporting earnings Jul 13 pre-market with strong expectations. Travel demand robust. Lower oil + lower rates = double tailwind for airlines. If DAL beats and guides up, entire airline/travel sector moves. Closed at $49.30.",
+      "entryPrice": 47.95,
+      "targetPrice": 50.23,
+      "stopPrice": 46.53,
+      "riskRewardRatio": 1.6,
+      "notes": "Entry assumes gap up on earnings beat. Post-earnings momentum trade. Risk is sell-the-news reaction.",
+      "stopDistancePct": 2.97
+    },
+    {
+      "ticker": "KRE",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "sector": "Regional Banks ETF",
+      "rationale": "Regional banks heavily shorted since SVB crisis. Rate pause removes key overhang. KRE +2.1% on Jul 12, breaking above short-term resistance. Still ~30% below pre-SVB levels = massive mean reversion potential. Big bank earnings Fri could be catalyst.",
+      "entryPrice": 43.21,
+      "targetPrice": 45.09,
+      "stopPrice": 42.04,
+      "riskRewardRatio": 1.6,
+      "notes": "ETF for diversified regional bank exposure. Earnings from JPM/WFC Fri could extend move.",
+      "stopDistancePct": 2.71
+    },
+    {
+      "ticker": "GLD",
+      "direction": "long",
+      "conviction": "MEDIUM",
+      "sector": "Commodities / Gold",
+      "rationale": "Dollar index plunging to 15-month lows on CPI. Gold rallied to $1,960. DXY break below 101 is major technical event. If PPI also comes in soft Jul 13, dollar continues lower and gold pushes toward $1,980-2,000. Real yields falling.",
+      "entryPrice": 181.5,
+      "targetPrice": 184.5,
+      "stopPrice": 179.8,
+      "riskRewardRatio": 1.76,
+      "notes": "Best R:R of the set. Dollar weakness is the primary driver. PPI miss = accelerant.",
+      "stopDistancePct": 0.94
+    }
+  ],
+  "watchlist": [],
+  "avoidList": [],
+  "trainingData": {
+    "trialId": 10245,
+    "outcomes": [
+      {
+        "symbol": "AMD",
+        "openPrice": 115.76,
+        "highPrice": 122.12,
+        "lowPrice": 112.73,
+        "closePrice": 118.32,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 3.34,
+        "notes": "3-day window (2023-07-13, 2023-07-14, 2023-07-17). Open $115.76, High $122.12, Low $112.73, Close $118.32."
+      },
+      {
+        "symbol": "AMZN",
+        "openPrice": 134.04,
+        "highPrice": 136.65,
+        "lowPrice": 132.71,
+        "closePrice": 133.56,
+        "hitTarget": true,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.11,
+        "notes": "3-day window (2023-07-13, 2023-07-14, 2023-07-17). Open $134.04, High $136.65, Low $132.71, Close $133.56."
+      },
+      {
+        "symbol": "O",
+        "openPrice": 60.4,
+        "highPrice": 61.35,
+        "lowPrice": 60.12,
+        "closePrice": 61.29,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.62,
+        "notes": "3-day window (2023-07-13, 2023-07-14, 2023-07-17). Open $60.4, High $61.35, Low $60.12, Close $61.29."
+      },
+      {
+        "symbol": "AVGO",
+        "openPrice": 89.89,
+        "highPrice": 91.32,
+        "lowPrice": 87.83,
+        "closePrice": 91.04,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 2.29,
+        "notes": "3-day window (2023-07-13, 2023-07-14, 2023-07-17). Open $89.89, High $91.32, Low $87.83, Close $91.04."
+      },
+      {
+        "symbol": "DAL",
+        "openPrice": 49.75,
+        "highPrice": 49.81,
+        "lowPrice": 45.94,
+        "closePrice": 46.8,
+        "hitTarget": false,
+        "hitStop": true,
+        "directionCorrect": false,
+        "actualReturnPercent": -2.4,
+        "notes": "3-day window (2023-07-13, 2023-07-14, 2023-07-17). Open $49.75, High $49.81, Low $45.94, Close $46.8."
+      },
+      {
+        "symbol": "KRE",
+        "openPrice": 43.49,
+        "highPrice": 44.39,
+        "lowPrice": 42.76,
+        "closePrice": 43.88,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 1.55,
+        "notes": "3-day window (2023-07-13, 2023-07-14, 2023-07-17). Open $43.49, High $44.39, Low $42.76, Close $43.88."
+      },
+      {
+        "symbol": "GLD",
+        "openPrice": 181.96,
+        "highPrice": 182.17,
+        "lowPrice": 180.64,
+        "closePrice": 181.56,
+        "hitTarget": false,
+        "hitStop": false,
+        "directionCorrect": true,
+        "actualReturnPercent": 0.03,
+        "notes": "3-day window (2023-07-13, 2023-07-14, 2023-07-17). Open $181.96, High $182.17, Low $180.64, Close $181.56."
+      }
+    ],
+    "scores": {
+      "directionAccuracy": 85.7,
+      "targetHitRate": 28.6,
+      "stopHitRate": 14.3,
+      "avgReturnPercent": 1.22,
+      "profitFactor": 4.56,
+      "winRate": 85.7,
+      "totalScore": 85.7,
+      "benchmarkReturn": 0.37,
+      "alpha": 0.85
+    },
+    "dimensionAnalysis": {
+      "catalystClarity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "technicalSetup": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "riskReward": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "volumeLiquidity": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "marketAlignment": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "informationEdge": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      },
+      "timingUrgency": {
+        "avgScoreWinners": 0,
+        "avgScoreLosers": 0,
+        "predictivePower": 50
+      }
+    },
+    "benchmarkReturn": 0.37,
+    "alpha": 0.85,
+    "fullDepth": true
+  }
+}
